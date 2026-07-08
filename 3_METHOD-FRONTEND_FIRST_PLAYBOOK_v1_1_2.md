@@ -1,8 +1,9 @@
 # FRONTEND_FIRST_PLAYBOOK.md
 
-**Version:** 1.1.2
-**Last Updated:** June 28, 2026
-**Born from:** Cyberize Run 001 lessons (Lesson 2 redundant authService, Lesson 4/7 component blindness, Lesson 7 page composition) + v1.1.1 correction (Lesson 9 — over-merged sections relocated to FRONTEND_BUILD_PHASE_PLAYBOOK)
+> **Version:** 1.1.3 · **Date:** 2026-07-07 · **Status:** Active
+> **Tier:** 3 — Build Methodology · **Pairs with:** FRONTEND_BUILD_PHASE_PLAYBOOK, STARTER_KIT_HANDBOOK, COMPONENT_REGISTRY, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK
+
+> **Born from:** Cyberize Run 001 lessons (Lesson 2 redundant authService, Lesson 4/7 component blindness, Lesson 7 page composition) + v1.1.1 correction (Lesson 9 — over-merged sections relocated to FRONTEND_BUILD_PHASE_PLAYBOOK)
 
 > **Purpose:**
 > This document defines **how and when we build UI before backend** in this engineering factory.
@@ -20,15 +21,17 @@ It applies to *all apps* built using this factory.
 
 Before authoring ANY service, component, page, or layout — perform the Kit Audit. This is a non-negotiable step. Skipping it produces the Lesson 2 family of failures (redundant authoring of capabilities the kit already provides).
 
+> The Kit Audit is the build-time cousin of the lifecycle's Phase 0 recon gate: a current Recon Report (RECON_QUESTIONNAIRE / stark-recon) should already exist before any authoring began — the audit re-verifies at the moment of writing.
+
 ### The Audit (Three Questions)
 
 Before authoring, answer:
 
 1. **Does the kit already provide this?**
-   Check `STARTER_KIT_HANDBOOK_v1.0.md` Section "Quick Reference — Should I Author This?". If the answer is 🛑 DO NOT BUILD, you do not build. You consume the kit's primitive directly.
+   Check `STARTER_KIT_HANDBOOK.md` Section "Quick Reference — Should I Author This?". If the answer is 🛑 DO NOT BUILD, you do not build. You consume the kit's primitive directly.
 
 2. **Does a kit primitive cover this UI need?**
-   Check `COMPONENT_REGISTRY_v1.0.md` Quick Decision Tree. If a primitive exists, use it. If close-but-not-quite, surface a Kit Improvement Proposal — do NOT silently fork.
+   Check `COMPONENT_REGISTRY.md` Quick Decision Tree. If a primitive exists, use it. If close-but-not-quite, surface a Kit Improvement Proposal — do NOT silently fork.
 
 3. **Does the running code in the kit already implement this pattern?**
    When the kit's running code conflicts with stale doctrine, the running code wins. Surface the conflict to the operator; do not silently "correct" the kit.
@@ -82,7 +85,7 @@ Frontend-first is **not** allowed for:
 
 Before writing UI code with mock data, **all of the following must exist**:
 
-### Gate 1 "” App Brief
+### Gate 1 — App Brief
 
 A short document describing:
 
@@ -90,7 +93,7 @@ A short document describing:
 * who the users are
 * what problem it solves
 
-### Gate 2 "” Data Contract (REQUIRED)
+### Gate 2 — Data Contract (REQUIRED)
 
 A data contract document must exist that defines:
 
@@ -102,7 +105,7 @@ A data contract document must exist that defines:
 
 UI must not invent fields outside the data contract.
 
-### Gate 3 "” Service Layer Skeleton
+### Gate 3 — Service Layer Skeleton
 
 A service layer must exist, even if:
 
@@ -128,7 +131,7 @@ If UI needs something not in the contract:
 
 ### Related Documents
 
-* `CYBERBUGS_DATA_CONTRACT.md` "” defines entities, fields, and relationships for CyberBugs
+* `CYBERBUGS_DATA_CONTRACT.md` — defines entities, fields, and relationships for CyberBugs
 * Future apps will have their own `{APPNAME}_DATA_CONTRACT.md`
 
 ---
@@ -178,7 +181,7 @@ export const bugService = {
 };
 ```
 
-UI components call `bugService.getAll()` "” they never know if it's mock or real.
+UI components call `bugService.getAll()` — they never know if it's mock or real.
 
 ---
 
@@ -188,19 +191,19 @@ Mock data exists to support UI development only.
 
 ### Allowed Mock Strategies (Ranked)
 
-**Option 1 "” In-code typed mocks (Preferred)**
+**Option 1 — In-code typed mocks (Preferred)**
 
 * mock data as plain objects
 * returned by service functions
 * disposable and easy to remove
 
-**Option 2 "” Mock Service Worker (MSW)**
+**Option 2 — Mock Service Worker (MSW)**
 
 * intercepts API calls
 * simulates real backend
 * useful for realistic demos
 
-**Option 3 "” JSON Server (Use With Discipline)**
+**Option 3 — JSON Server (Use With Discipline)**
 
 * allowed only behind service layer
 * must mirror data contract exactly
@@ -405,7 +408,7 @@ If you cannot answer all four, do not author the file. Surface to the operator.
 
 ## 14. Stage Execution Doctrine — See FRONTEND_BUILD_PHASE_PLAYBOOK
 
-> **Doctrine relocated.** Stage-level execution discipline (Pre-Phase Doctrine Refresh, Kit Improvement Proposals, Stage-level Pre-Write Checks) lives in its proper home: `FRONTEND_BUILD_PHASE_PLAYBOOK_v1.2.md`.
+> **Doctrine relocated.** Stage-level execution discipline (Pre-Phase Doctrine Refresh, Kit Improvement Proposals, Stage-level Pre-Write Checks) lives in its proper home: `FRONTEND_BUILD_PHASE_PLAYBOOK.md`.
 
 This playbook (`FRONTEND_FIRST_PLAYBOOK`) answers **when and why** to use frontend-first.
 
@@ -421,7 +424,7 @@ The sibling playbook (`FRONTEND_BUILD_PHASE_PLAYBOOK`) answers **how to execute*
 
 In v1.1 of these playbooks, doctrine was initially duplicated across both files. Operator caught the duplication in retrospective. Stage execution doctrine belongs in the build-phase playbook (which describes stages); methodology selection doctrine belongs here (which describes when to choose frontend-first).
 
-This split is also v1.1's first explicit application of the **Doctrine Pairing Principle** (see `SOFTWARE_FACTORY_PLAYBOOK_v1.1.md` Section 1.5) — playbooks paired with each other and with worked examples, not bloated into a single mega-doc.
+This split is also v1.1's first explicit application of the **Doctrine Pairing Principle** (see `SOFTWARE_FACTORY_PLAYBOOK.md` Section 1.5) — playbooks paired with each other and with worked examples, not bloated into a single mega-doc.
 
 ---
 
@@ -429,6 +432,7 @@ This split is also v1.1's first explicit application of the **Doctrine Pairing P
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 1.1.3 | 2026-07-07 | **Wave 3 micro-patch (audit sync).** Standard header block (F-018). Cross-references stripped of version suffixes — §0 STARTER_KIT_HANDBOOK + COMPONENT_REGISTRY, §14 FRONTEND_BUILD_PHASE_PLAYBOOK + SOFTWARE_FACTORY_PLAYBOOK (F-032/F-011, the zero-hour same-campaign drift record). 8× broken em-dash artifacts repaired (quote-mark residue restored to em-dashes: §3 gate headers ×3, §4, §5, §6 ×3) — the corruption class the a-circumflex grep cannot see (F-012). One-line recon pointer added to §0 (F-024 coordination). Footer suite label de-versioned. |
 | 1.1.2 | 2026-06-28 | Re-pointed the §12 co-location Reference Example from the deleted `/demo` route to the live `(admin)/admin-portal` page+content pair (preserve lesson, swap actor). Kit Hardening Gate 10. |
 | 1.1.1 | 2026-06-02 | Sections 14 and 15 trimmed to cross-references. Stage execution doctrine (Pre-Phase Doctrine Refresh, Kit Improvement Proposals) relocated to its proper home in FRONTEND_BUILD_PHASE_PLAYBOOK_v1.2.md. Doctrine de-duplication. Born from Lesson 9 (speculative authoring caught in v1.1 retrospective). |
 | 1.1 | 2026-05-31 | Added Section 0 (Kit Audit), Section 12 (Page Composition), Section 13 (Pre-Write Check), Section 14 (Phase Doctrine Refresh), Section 15 (Kit Improvement Proposals). Born from Cyberize Run 001 lessons 2, 4, 5, 7. Fixed UTF-8 encoding artifacts. |
@@ -440,4 +444,4 @@ This split is also v1.1's first explicit application of the **Doctrine Pairing P
 
 ---
 
-🥄 *Part of Stark Industries — App Factory v1.1 doctrine.*
+🥄 *Part of Stark Industries — App Factory doctrine.*

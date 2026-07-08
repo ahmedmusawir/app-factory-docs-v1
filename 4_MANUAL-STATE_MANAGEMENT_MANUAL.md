@@ -1,6 +1,9 @@
 # STATE MANAGEMENT MANUAL
 
-> **Stark Industries Software Factory**  
+> **Version:** 1.1 · **Date:** 2026-07-08 · **Status:** Active
+> **Tier:** 4 — Reference Manuals · **Pairs with:** STARTER_KIT_HANDBOOK, AUTH_MANUAL, FRONTEND_FIRST_PLAYBOOK, APP_ARCHITECTURE_MANUAL
+
+> **Stark Industries Software Factory**
 > *The definitive guide to managing client-side state with Zustand in Next.js applications.*
 
 ---
@@ -1521,6 +1524,24 @@ const unsubscribe = useCartStore.subscribe(
   (items) => console.log('Cart changed:', items)
 );
 ```
+
+---
+
+## Cross-References (Factory Doctrine)
+
+- **`STARTER_KIT_HANDBOOK.md`** — the kit's shipped `useAuthStore` is the auth-state ground truth (verify shape on disk — recon Q3.6; do not assume derived flags).
+- **`AUTH_MANUAL.md`** — auth state ownership: client store = display hints; authorization = server-side from `user_roles`.
+- **`FRONTEND_FIRST_PLAYBOOK.md`** — §5 service-layer law: server state enters stores ONLY through services (this manual's three-layer model, enforced).
+- **`APP_ARCHITECTURE_MANUAL.md`** — §6 data-flow patterns these stores participate in.
+
+---
+
+## Version History
+
+| Version | Date | Changes |
+|---|---|---|
+| 1.0 | (original, date unknown) | Initial manual: three-layer state model, when-to-use table, store architecture, core patterns, persistence, SSR hydration, templates, integration patterns, common stores, best practices. Unversioned until the 2026-07 audit. |
+| 1.1 | 2026-07-08 | **Wave 4 metadata patch (audit sync).** Standard header block — this doc was the F-018 worst-case specimen (no version, date, or history anywhere). Cross-References section added — outbound isolation ended (F-035). This history table (D-018). ZERO content changes — the audit verified the doctrine clean (no derived-flag fictions, no `: any`, service-layer-consistent). |
 
 ---
 

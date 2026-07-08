@@ -1,6 +1,9 @@
 # API AND SERVICES MANUAL
 
-> **Stark Industries Software Factory**  
+> **Version:** 1.1 · **Date:** 2026-07-08 · **Status:** Active
+> **Tier:** 4 — Reference Manuals · **Pairs with:** FRONTEND_FIRST_PLAYBOOK, STARTER_KIT_HANDBOOK, DATABASE_MANUAL, ECOMMERCE_AND_PAYMENTS_MANUAL, TESTING_PLAYBOOK
+
+> **Stark Industries Software Factory**
 > *The definitive guide to building scalable, maintainable service layers for any external API integration.*
 
 ---
@@ -27,6 +30,9 @@
 The Service Layer is the **single most important architectural decision** in this codebase. It enforces a strict separation between UI components and data-fetching logic.
 
 **The Rule:** Components render. Services fetch.
+
+> 🛑 **THE KIT EXCEPTION (Run 001, Lesson 2 — read before authoring ANY service):**
+> **Kit primitives are consumed directly — the kit's auth IS the service layer.** The rule above governs *project-specific domain logic*; it does NOT license wrapping capabilities the starter kit already provides complete (the Run 001 near-miss: an `authService.ts` wrapper specced around the kit's finished Supabase SSR auth). Before authoring any service, run the **Kit Audit** (`FRONTEND_FIRST_PLAYBOOK.md` §0) against `STARTER_KIT_HANDBOOK.md`'s "Should I Author This?" verdict table — if the kit provides it, consume the primitive; do not wrap it. (Full doctrine: `AUTH_MANUAL.md` §0.)
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -990,6 +996,13 @@ export default async function ProfilePage() {
 ---
 
 ## 7. Data Transformation
+
+### Wire-Format Conventions (Factory Standard)
+
+- **Wire shapes are `snake_case`** (matches FastAPI/Pydantic and most REST payloads — e.g. `regular_price`, `stock_status`).
+- **UI-internal types are `camelCase`** (e.g. `regularPrice`, `inStock`).
+- **The service layer owns the translation** — the normalize functions below are where the case boundary lives. UI code never sees wire casing; wire payloads never see UI casing.
+- These conventions are the DATA_CONTRACT discipline (`HANDOFF_PACKAGE_PLAYBOOK.md` §5.2) — the contract documents both shapes; both mock and real backends satisfy it.
 
 ### Normalizing External Responses
 
@@ -2053,6 +2066,26 @@ export async function POST(request: NextRequest) {
 | Field Mapping | External system integration | `crm_field_mappings` table |
 | Upsert Sync | Data synchronization | `onConflict: 'external_id'` |
 | Fire-and-Forget | Non-blocking async tasks | Background sync after webhook |
+
+---
+
+## Cross-References (Factory Doctrine)
+
+- **`FRONTEND_FIRST_PLAYBOOK.md`** — §0 Kit Audit (MANDATORY before authoring any service — see the Kit Exception in §1) + §5 service-layer law + mock strategy.
+- **`STARTER_KIT_HANDBOOK.md`** — the "Should I Author This?" verdict table + the kit's shipped auth (the thing you must not wrap).
+- **`AUTH_MANUAL.md`** — §0: the anti-authService doctrine in full.
+- **`DATABASE_MANUAL.md`** — the schemas these services consume; RLS interplay.
+- **`ECOMMERCE_AND_PAYMENTS_MANUAL.md`** — the WooCommerce/Stripe integration patterns built on this manual's service rules.
+- **`TESTING_PLAYBOOK.md`** — unit/integration testing of services (mock-at-the-boundary patterns).
+
+---
+
+## Version History
+
+| Version | Date | Changes |
+|---|---|---|
+| 1.0 | (original, date unknown) | Initial manual: service-layer philosophy, folder structure, implementation, API route patterns, external integration, Supabase pattern, transformation, error handling, performance, quick reference, webhooks, CRM integration, data sync. Unversioned until the 2026-07 audit. |
+| 1.1 | 2026-07-08 | **Wave 4 (audit sync).** THE KIT EXCEPTION box added at §1 — the Lesson-2 antibody at its root: kit primitives consumed directly, the kit's auth IS the service layer, Kit Audit before authoring any service (F-039 — the blanket rule that produced the Run 001 authService near-miss is now amended at the source). §7 gained the factory wire-format conventions (snake_case wire / camelCase UI; service layer owns the boundary — HANDOFF DATA_CONTRACT discipline). Cross-References section added — outbound-zero ended (F-035). Standard header (F-018) + this history table (D-018). |
 
 ---
 

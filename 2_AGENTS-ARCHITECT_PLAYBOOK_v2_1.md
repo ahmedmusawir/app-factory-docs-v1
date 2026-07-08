@@ -1,6 +1,9 @@
 # ARCHITECT AGENT PLAYBOOK
 
-> **AI App Factory — Stark Industries**  
+> **Version:** 2.2 · **Date:** 2026-07-07 · **Status:** Active
+> **Tier:** 2 — Pipeline Agents · **Pairs with:** ARCHITECT_QUESTIONNAIRE, RECON_QUESTIONNAIRE, DESIGNER_PLAYBOOK, APP_FACTORY_BLUEPRINT
+
+> **App Factory — Stark Industries**  
 > *The definitive manual for the Architect Agent to produce bulletproof APP_BRIEF documents for ANY application type.*
 
 ---
@@ -29,12 +32,13 @@ The Architect is the **first agent** in the 3-Agent Council. It transforms a raw
 ### Position in the Factory Pipeline
 
 ```
-┌─────────────┐     ┌─────────────┐     ┌─────────────┐
-│  ARCHITECT  │ ──► │  DESIGNER   │ ──► │  ENGINEER   │
-│             │     │             │     │             │
-│ APP_BRIEF   │     │ UI_SPEC     │     │ DATA_CONTRACT│
-│             │     │ + Stitch    │     │ + Claude Code│
-└─────────────┘     └─────────────┘     └─────────────┘
+┌─────────────┐     ┌──────────────────────┐     ┌─────────────┐
+│  ARCHITECT  │ ──► │       DESIGNER        │ ──► │   ENGINEER  │
+│             │     │                       │     │             │
+│ APP_BRIEF   │     │ Token file (primary)  │     │ DATA_CONTRACT│
+│             │     │ + HTML/PNG artifacts  │     │ + Claudy     │
+│             │     │ + UI_SPEC + Manifest  │     │   (Claude Code)│
+└─────────────┘     └──────────────────────┘     └─────────────┘
 ```
 
 ### Core Responsibilities
@@ -86,6 +90,8 @@ The rule:
 - **Re-run when stale.** If a phase closed, a kit was upgraded, or branches merged since the last recon, the report is stale — recon again before authoring the next brief/FFM.
 - **Applies to every project, every kit, every phase** — not just the first.
 
+> **Instrument + law:** the `stark-recon` skill executes `RECON_QUESTIONNAIRE.md` — that doc is the questionnaire's single source; this section is the law that makes it mandatory. Recon is **Phase 0 of the APP_FACTORY_BLUEPRINT lifecycle** and Stage 0 of FFM authoring.
+
 ### No Recon Report? Stop.
 
 If no current Recon Report exists for the repo:
@@ -103,7 +109,7 @@ The human may explicitly override for a trivial case (with acknowledgment), but 
 | **Recon Report** | Current `stark-recon` ground-truth report for the repo | The Architect authors from verified disk state, never from docs alone |
 | **Hero Statement** | One paragraph describing what we're building | Anchors the entire scope |
 | **User Persona** | Who will use this? Technical level? Context? | Drives UX and complexity decisions |
-| **Vibe Design** | Screenshot, Stitch output, sketch, or reference app | Visual anchor prevents misalignment |
+| **Vibe Design** | Screenshot, style tile, sketch, or reference app | Visual anchor prevents misalignment |
 | **Constraints** | Deadlines, tech restrictions, budget, environment | Defines the solution space |
 
 ### Optional Inputs
@@ -119,7 +125,7 @@ The human may explicitly override for a trivial case (with acknowledgment), but 
 
 If the human cannot provide a visual anchor:
 1. Request a napkin sketch
-2. Suggest using Google Stitch to generate one
+2. Ask the Designer for a quick style tile (token-driven HTML — see DESIGNER_PLAYBOOK)
 3. Find a reference app screenshot
 4. **Do NOT proceed without visual alignment**
 
@@ -127,114 +133,20 @@ If the human cannot provide a visual anchor:
 
 ## 3. The Ignition Questionnaire
 
-The Architect asks these questions to extract all needed information. Questions are grouped by phase.
+> **Doctrine relocated (F-017).** The Ignition Questionnaire lives in its single source: `ARCHITECT_QUESTIONNAIRE.md`. The 15-question variant that used to live here has been merged into that instrument — its unique questions (app type, tech constraints, deadline, integrations, security/compliance, risks/unknowns) became the questionnaire's optional **Phase 4 — Constraints Deep-Dive**.
 
-### Phase 1: Identity (The "What")
+What the single source provides:
 
-```
-1. What are we building? (One sentence max)
+- **Phase 1 — Quick Ignition** — 5 mandatory questions, incl. the ⛔ Hard Gate on Out-of-Scope
+- **Phase 2 — Data Reality** — 4 questions when AI/Agents are in play, incl. the 📌 Reality Rule
+- **Phase 3 — Constraints & Success** — 3 questions before handoff
+- **Phase 4 — Constraints Deep-Dive** — 5 OPTIONAL questions for projects that warrant depth; unresolved answers route into the APP_BRIEF Planning State as ❓
 
-2. Who is the primary user?
-   - Name/Role: ___________
-   - Technical level: Non-technical / Semi-technical / Technical
-   - Environment: ___________
+Run the questionnaire there, then classify with the App Type Router below (§4) — Phase 4's Q13 (App Type) feeds it directly.
 
-3. What problem does this solve for them?
+### Why This Split
 
-4. What does "done" look like? (Concrete success criteria)
-```
-
-### Phase 2: Type Classification (The "How")
-
-```
-5. What type of application is this?
-
-   □ FULL-STACK WEB APP
-     - Browser-based UI
-     - Cloud database (Supabase, Firebase, etc.)
-     - Authentication required
-     - Deployed to cloud (Vercel, Cloud Run, etc.)
-     - Examples: SaaS apps, dashboards, e-commerce
-
-   □ BACKEND BUNDLE
-     - API service, pipeline, or automation
-     - Minimal or no UI (CLI, admin panel, or headless)
-     - May include workers, cron jobs, webhooks
-     - Examples: Data pipelines, API services, bots
-
-   □ LOCAL-FIRST TOOL
-     - Runs on user's machine (desktop/laptop)
-     - No cloud dependency for core functionality
-     - File-based or local database
-     - Examples: Desktop apps, CLI tools, local utilities
-```
-
-### Phase 3: Tech Stack (The "With What")
-
-```
-6. Is the tech stack predetermined? If yes:
-
-   Frontend: ___________ (React, Next.js, Streamlit, None, etc.)
-   Backend: ___________ (Node, Python, Go, None, etc.)
-   Database: ___________ (Supabase, Firebase, SQLite, File-based, etc.)
-   Auth: ___________ (Supabase Auth, Firebase Auth, None, etc.)
-   Hosting: ___________ (Vercel, Cloud Run, Local, etc.)
-   AI/ML: ___________ (Vertex AI, OpenAI, Local models, None, etc.)
-
-7. Any tech constraints?
-   - Must use: ___________
-   - Cannot use: ___________
-   - Prefer: ___________
-```
-
-### Phase 4: Scope Boundaries (The "How Much")
-
-```
-8. List 3-5 MUST-HAVE features for v1 (non-negotiables):
-   1. ___________
-   2. ___________
-   3. ___________
-   4. ___________
-   5. ___________
-
-9. List features explicitly OUT OF SCOPE for v1:
-   1. ___________
-   2. ___________
-   3. ___________
-
-10. Hard deadline? ___________
-
-11. Any external integrations required?
-    - APIs: ___________
-    - Services: ___________
-    - Data sources: ___________
-```
-
-### Phase 5: Risks & Unknowns
-
-```
-12. What could go wrong?
-    - Technical risks: ___________
-    - Dependency risks: ___________
-    - Timeline risks: ___________
-
-13. What don't we know yet that we need to know?
-    ___________
-
-14. Any security/compliance requirements?
-    ___________
-```
-
-### Phase 6: Visual Anchor
-
-```
-15. Visual anchor provided?
-    □ Screenshot attached
-    □ Stitch output attached
-    □ Sketch/wireframe attached
-    □ Reference app URL: ___________
-    □ None (STOP - get one before proceeding)
-```
+Two homes for one instrument guaranteed divergence — and produced it: the audit found the two copies had structurally diverged into different instruments (F-017). The questionnaire doc is the instrument; this playbook is the operating manual around it. Same relocation pattern as FRONTEND_FIRST §14; an application of the Doctrine Pairing Principle (SOFTWARE_FACTORY_PLAYBOOK §1.5): single source + pointers, not copies.
 
 ---
 
@@ -299,198 +211,9 @@ Based on the questionnaire, classify the app into one of three types. This class
 
 ## 5. APP_BRIEF Template
 
-This is the universal template. Sections marked with [TYPE-SPECIFIC] have variations based on app type.
+> **Doctrine relocated (F-017).** The canonical APP_BRIEF template lives in `ARCHITECT_QUESTIONNAIRE.md`, alongside the questionnaire that fills it. It carries the **Planning State** table (🔒 Decision / ⚠️ Assumption / ❓ Open Question) — the epistemic core the old embedded template here lacked — plus the Phase-4-fed sections (Integrations, Constraints & Deadline, Risks & Unknowns) and the Deployment Class line that records the §4 router verdict.
 
-```markdown
-# APP_BRIEF: [Project Name]
-
-> **Version:** 1.0  
-> **Date:** [Date]  
-> **Status:** DRAFT | REVIEW | APPROVED  
-> **App Type:** [Full-Stack Web | Backend Bundle | Local-First Tool]  
-> **Author:** Architect Agent
-
----
-
-## 1. Hero Statement
-
-[One paragraph: What are we building, for whom, and why?]
-
----
-
-## 2. User Persona
-
-| Attribute | Value |
-|-----------|-------|
-| **Name/Role** | [Primary user identifier] |
-| **Technical Level** | Non-technical / Semi-technical / Technical |
-| **Environment** | [OS, browser, device, network context] |
-| **Primary Goal** | [What they want to accomplish] |
-| **Pain Point** | [What problem this solves] |
-
----
-
-## 3. App Classification
-
-**Type:** [Full-Stack Web App | Backend Bundle | Local-First Tool]
-
-**Rationale:** [Why this classification?]
-
-**Implications:**
-- UI: [What this means for UI approach]
-- Data: [What this means for data storage]
-- Deployment: [What this means for deployment]
-
----
-
-## 4. Tech Stack
-
-| Layer | Technology | Rationale |
-|-------|------------|-----------|
-| **Language** | [e.g., TypeScript, Python] | [Why] |
-| **Frontend** | [e.g., Next.js, Streamlit, None] | [Why] |
-| **Backend** | [e.g., Next.js API, FastAPI, None] | [Why] |
-| **Database** | [e.g., Supabase, SQLite, File-based] | [Why] |
-| **Auth** | [e.g., Supabase Auth, None] | [Why] |
-| **AI/ML** | [e.g., Vertex AI, OpenAI, None] | [Why] |
-| **Hosting** | [e.g., Vercel, Cloud Run, Local] | [Why] |
-
----
-
-## 5. Core Features (v1 Scope)
-
-| # | Feature | Priority | Description |
-|---|---------|----------|-------------|
-| 1 | [Feature] | P0 | [What it does] |
-| 2 | [Feature] | P0 | [What it does] |
-| 3 | [Feature] | P1 | [What it does] |
-
-**Priority Key:**
-- **P0** = Must have for v1 launch (blockers if missing)
-- **P1** = Should have, include if time permits
-- **P2** = Nice to have, defer to v2
-
----
-
-## 6. Out of Scope (v1)
-
-| Feature | Reason | Planned For |
-|---------|--------|-------------|
-| [Feature] | [Why excluded] | v2 / Never / TBD |
-| [Feature] | [Why excluded] | v2 / Never / TBD |
-
----
-
-## 7. User Flows (High-Level)
-
-[Describe the primary user journeys]
-
-### Flow 1: [Name]
-```
-Step 1 → Step 2 → Step 3 → Outcome
-```
-
-### Flow 2: [Name]
-```
-Step 1 → Step 2 → Step 3 → Outcome
-```
-
----
-
-## 8. System Pipeline / Data Flow
-
-[TYPE-SPECIFIC: Describe how data moves through the system]
-
-```
-[ASCII diagram showing data flow]
-
-Example for Backend Bundle:
-Input Source → Processor A → Processor B → Output/Storage
-                    ↓
-               Side Effect (logging, notifications)
-
-Example for Full-Stack Web:
-User Action → API Route → Service → Database
-                              ↓
-                         External API
-```
-
----
-
-## 9. Integrations
-
-| System | Type | Purpose |
-|--------|------|---------|
-| [System name] | API / SDK / Webhook | [What it's used for] |
-
-**If none:** "No external integrations required for v1."
-
----
-
-## 10. Constraints
-
-### Hard Constraints (Non-negotiable)
-- [e.g., Must run on Windows 10]
-- [e.g., Must deploy to Vercel]
-- [e.g., Must ship by Friday]
-
-### Soft Constraints (Preferences)
-- [e.g., Prefer Gemini over OpenAI]
-- [e.g., Minimize dependencies]
-
----
-
-## 11. Risks & Unknowns
-
-| Risk | Impact | Likelihood | Mitigation |
-|------|--------|------------|------------|
-| [Risk] | High/Med/Low | High/Med/Low | [Strategy] |
-
-### Open Questions
-- [Question that needs answering before/during build]
-
----
-
-## 12. Success Criteria
-
-**v1 is successful when:**
-- [ ] [Measurable criterion 1]
-- [ ] [Measurable criterion 2]
-- [ ] [Measurable criterion 3]
-
----
-
-## 13. Handoff Checklist
-
-**Ready for Designer when:**
-- [ ] Hero statement approved
-- [ ] User persona confirmed
-- [ ] App type classified
-- [ ] Tech stack locked
-- [ ] P0 features agreed
-- [ ] Out of scope documented
-- [ ] Visual anchor attached
-
----
-
-## Appendix A: Visual Anchor
-
-[Attach or embed: screenshot, Stitch output, sketch, or reference URL]
-
----
-
-## Appendix B: References
-
-- [Links to relevant docs, APIs, design systems, prior art]
-
----
-
-## Appendix C: Glossary
-
-| Term | Definition |
-|------|------------|
-| [Term] | [What it means in this project's context] |
-```
+Use it as-is; do not fork it. What stays in this playbook: which sections to **emphasize per app type** (§6 below) and the approval flow (§7).
 
 ---
 
@@ -614,7 +337,7 @@ When APP_BRIEF reaches APPROVED status, Architect hands off to Designer.
 📦 ARCHITECT → DESIGNER HANDOFF
 │
 ├── APP_BRIEF.md (APPROVED status)
-├── Visual Anchor (screenshot/Stitch/sketch)
+├── Visual Anchor (screenshot/style tile/sketch)
 └── Verbal Brief (structured summary)
 ```
 
@@ -745,7 +468,7 @@ Before Designer begins, they must confirm:
 **Type:** Full-Stack Web App
 
 **Hero Statement:**  
-"A reference agentic application demonstrating AI App Factory patterns: authenticated users select AI agents, chat with citations, upload documents for context, and track usage—all deployed on Google Cloud."
+"A reference agentic application demonstrating App Factory patterns: authenticated users select AI agents, chat with citations, upload documents for context, and track usage—all deployed on Google Cloud."
 
 **User Persona:**  
 | Attribute | Value |
@@ -756,7 +479,7 @@ Before Designer begins, they must confirm:
 | Primary Goal | Test and demonstrate agentic AI patterns |
 
 **Tech Stack:**  
-- Frontend: Next.js 14 (App Router)
+- Frontend: Next.js (App Router — verify version per repo, recon Q1.1)
 - Backend: Next.js API Routes
 - Database: Supabase (PostgreSQL)
 - Auth: Supabase Auth (Google OAuth)
@@ -881,8 +604,12 @@ The Architect Agent's mission is to **freeze intent before code**.
 
 ---
 
-*This playbook is part of the AI App Factory documentation suite.*
+*This playbook is part of the App Factory documentation suite.*
 
-**Version:** 2.1
-**Last Updated:** June 2026
-**v2.1 changes:** Recon Mode added as a non-negotiable precondition (§2) — the Architect's Plan Mode. No APP_BRIEF/FFM authored without a current `stark-recon` Recon Report. Added Ground-Truth Verification as the first Core Responsibility (§1), the recon clause to the Mantra, the "Authoring Against Stale Docs" anti-pattern (§9, #1), and recon as Step 0 of the checklist. Promoted from the Cyber Pharma v1 Phase 1 run (six handbook bugs caught a posteriori; Recon Mode catches them a priori).
+## Version History
+
+| Version | Date | Change |
+|---|---|---|
+| 2.2 | 2026-07-07 | **Wave 2A (audit sync).** §3 Ignition Questionnaire + §5 APP_BRIEF template relocated to ARCHITECT_QUESTIONNAIRE as the single source — summaries + pointers remain here (F-017; FRONTEND_FIRST §14 relocation pattern; Doctrine Pairing Principle, SOFTWARE_FACTORY_PLAYBOOK §1.5). §1 pipeline diagram redrawn to the Designer v2.0 model: token file primary, HTML/PNG as QC artifacts (F-002; pattern from DESIGNER_PLAYBOOK §1). De-Stitched §2 inputs table + No-Vibe-Design step + §8 handoff package (F-002). §2 Recon Mode now cross-references RECON_QUESTIONNAIRE (the skill's instrument) and Blueprint Phase 0 (F-024). Internal version aligned to 2.2; filename/version mismatch resolves at MANIFEST rename, Wave 6 (F-016). Standard header block (F-018); canonical-name refs (F-011). |
+| 2.1 | Jun 2026 | Recon Mode added as a non-negotiable precondition (§2) — the Architect's Plan Mode. No APP_BRIEF/FFM authored without a current `stark-recon` Recon Report. Ground-Truth Verification added as the first Core Responsibility (§1), the recon clause to the Mantra, the "Authoring Against Stale Docs" anti-pattern (§9, #1), and recon as Step 0 of the checklist. Promoted from the Cyber Pharma v1 Phase 1 run (six handbook bugs caught a posteriori; Recon Mode catches them a priori). |
+| 2.0 | — | Baseline as audited (REVIEW_004): role definition, Ignition Questionnaire (then embedded), App Type Router, APP_BRIEF template (then embedded), type-specific considerations, approval criteria, Designer handoff protocol, anti-patterns, worked examples. |

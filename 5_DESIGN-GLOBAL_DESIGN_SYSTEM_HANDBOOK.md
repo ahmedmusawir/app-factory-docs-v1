@@ -1,5 +1,8 @@
 # GLOBAL DESIGN SYSTEM HANDBOOK
 
+> **Version:** 1.1 · **Date:** 2026-07-08 · **Status:** Active
+> **Tier:** 5 — Design System · **Pairs with:** THEME_LIBRARY, TOKEN_FILE, THEMING_MANUAL, DESIGNER_PLAYBOOK, UI_UX_BUILDING_MANUAL, COMPONENT_REGISTRY
+
 > **What this is:** the stable doctrine for how the factory designs apps. It rarely changes. It pairs with two fast-moving companions — the **Theme Library** (named theme value-sets) and each project's **token file** (`globals.css`). Cyber Pharma is the worked example throughout; the rules are app-agnostic.
 > **Who reads it:** the Designer agent (to know the method and deliverables) and Claudy (to know the contract). 
 > **Core thesis:** *concrete artifacts survive, abstract intentions decay.* The design system is **code that runs**, not a picture of a brand.
@@ -25,7 +28,7 @@ If a layer hardcodes a value the layer below should own (e.g. a component using 
 
 Every project defines **this canonical set** — no more, no less, unless the app earns an addition (resist sprawl):
 
-`--background` `--foreground` · `--card(-foreground)` · `--popover(-foreground)` · `--primary(-foreground)` · `--secondary(-foreground)` · `--muted(-foreground)` · `--accent(-foreground)` · `--border` · `--input` · `--ring` · `--destructive(-foreground)` · `--success(-foreground)` · `--warning(-foreground)` · `--info(-foreground)` · `--chart-1..5` · `--radius`
+`--background` `--foreground` · `--card(-foreground)` · `--popover(-foreground)` · `--primary(-foreground)` · `--secondary(-foreground)` · `--muted(-foreground)` · `--accent(-foreground)` · `--border` · `--input` · `--ring` · `--destructive(-foreground)` · `--success(-foreground)` · `--warning(-foreground)` · `--info(-foreground)` · `--chart-1..5` · `--role-superadmin(-foreground)` · `--role-admin(-foreground)` · `--role-member(-foreground)` · `--radius`
 
 Rules:
 - **Light + dark are both mandatory** from day one (`:root` + `.dark`).
@@ -34,6 +37,7 @@ Rules:
   - **Tailwind 4:** `@theme inline` block, usually OKLCH, `--color-*` naming.
   - *(Cyber Pharma = TW 3.4 → HSL.)*
 - **Semantic tokens carry fixed meaning across every theme.** `success` = good/recovered, `destructive` = bad/lost, `info` = neutral, `warning` = attention. The **brand `--primary` is never used for a status** — that's the orange/red collision trap; keep brand and meaning on separate tokens.
+- **Role identity tokens** (`--role-superadmin` `--role-admin` `--role-member`, added v1.1 — F-013a/F-043): roles are **identities, not statuses** — each holds its hue across all modes just like the semantic four. `--role-admin` must never read as the destructive red (an admin badge is not an error); `--role-member` may align with `--success`. Contrast-check every role as small text on `--card` per mode (AA — verify on the style tile). Multi-tenant theming swaps brand tokens only — **never** the semantic four or the role tokens. Rules detail: Theme Library §2 · minted reference values: TOKEN_FILE.
 - **`--radius` is one knob** for the whole app's corner language (`0` = flat/Metro).
 - Add `--success`/`--warning`/`--info`/`--chart-*` whenever the app shows status or data (shadcn ships only `destructive`).
 
@@ -149,3 +153,12 @@ If anything's missing to start, the Designer says exactly what — usually just 
 ## 12. The one-paragraph version
 
 Tokens are the system. They live in `globals.css`, map through Tailwind, and components read them semantically — never numbered colors. Light + dark are mandatory; semantic colors hold their meaning across every theme while brand and neutrals swap freely. Build from the kit's shadcn primitives, compose rather than invent, and flag genuine gaps as KIPs. Design mobile-first from 375, with the sidebar-to-drawer and table-to-cards transforms as standard. Prove it all on a token-driven style tile, and hand Claudy HTML to build from plus PNGs to check against. Do this once per project and the next one starts here, not from scratch.
+
+---
+
+## Version History
+
+| Version | Date | Changes |
+|---|---|---|
+| 1.0 | (original, date unknown) | Initial handbook: four-layer model, canonical token contract, theming method, component vocabulary + KIPs, Rule Zero + canonical transforms, AA bar with per-mode tuning, style-tile method (D-017), deliverables, Canonical Page workflow, anti-patterns, one-paragraph version. Unversioned until the 2026-07 audit. |
+| 1.1 | 2026-07-08 | **Wave 5 — the contract gains role identity tokens (F-013a confirmed / F-043 closed).** §2 canonical set now includes `--role-superadmin(-foreground)`, `--role-admin(-foreground)`, `--role-member(-foreground)` with the rules from THEME_LIBRARY §2: identities-not-statuses, hue holds across modes, admin ≠ destructive red, member may align with success, AA on `--card` per mode, multi-tenant never swaps them. Reference values minted in TOKEN_FILE v1.2 (Metro Warm). The Library's v1.1 one-sided reconciliation is now two-sided. Standard header block (F-018); this history table (D-018). Everything else untouched (MODEL doc). |

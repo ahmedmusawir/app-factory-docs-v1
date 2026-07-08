@@ -1,10 +1,14 @@
-# THEME LIBRARY — Cyber Pharma (and the factory pattern)
+# THEME LIBRARY — the factory theme catalog
 
+> **Version:** 1.2 · **Date:** 2026-07-08 · **Status:** Active
+> **Tier:** 5 — Design System · **Pairs with:** GLOBAL_DESIGN_SYSTEM_HANDBOOK, TOKEN_FILE, THEMING_MANUAL, DESIGNER_PLAYBOOK
+
+> **Scope:** first family — **Metro Warm** (Cyber Pharma: Mist / Slate / Bright / Dark-deep). Further theme families append here as new projects derive them; the pattern is app-agnostic.
 > **Reader:** Designer (me, in future labs) + Claudy.
 > **Pairs with:** the **Global Design System Handbook** (defines the token *contract*) and each project's **token file** (`globals.css` — the live values). This doc is the *catalog*: named themes that each satisfy the contract.
 > **Mental model:** the Handbook says *which tokens must exist*; `globals.css` holds *the active values*; this library is the *menu* of complete value-sets you can drop in. Adding a theme never touches the contract — only values.
 >
-> **v1.1 reconciliation note (2026-06-08):** Two changes only. (1) The live token file is **`globals.css`**, not `TOKEN_FILE.md` — references corrected throughout (the Global Design System Handbook §8 names `globals.css` as the primary deliverable; this aligns to it). (2) The contract now includes **role identity tokens** (`--role-*`) — see §2. Theme content is otherwise unchanged.
+> **v1.1 reconciliation note (2026-06-08):** Two changes only. (1) The live token file is **`globals.css`**, not `TOKEN_FILE.md` — references corrected throughout (the Global Design System Handbook §8 names `globals.css` as the primary deliverable; this aligns to it). (2) Role identity tokens (`--role-*`): the RULES were written here (§2). *(v1.2 note: they are now **defined in the contract** — GDSH §2 — with **reference values minted in TOKEN_FILE**; the reconciliation this note started is complete on both sides, F-043.)*
 
 ---
 
@@ -121,6 +125,7 @@ Full token values: `globals.css`. Visual proof of all modes: the style tile + th
 | Version | Date | Changes |
 |---|---|---|
 | 1.1 | 2026-06-08 | Corrected `TOKEN_FILE.md` → `globals.css` as the live token file (aligns with GDSH §8); added `--role-*` tokens to the Metro Warm family + the add-a-theme contrast step + the multi-tenant rule; folded the L16 Slate readability fix into the Slate entry; added cross-references. Theme values unchanged. |
+| 1.2 | 2026-07-08 | **Wave 5 (audit sync).** The v1.1 one-sided reconciliation is now two-sided: `--role-*` tokens are DEFINED in the contract (GDSH §2 gained them, F-043 closed) with reference values MINTED in TOKEN_FILE (Metro Warm, both modes, AA-computed per this doc's §2 rules — admin teal ≠ destructive red; member aligns w/ success; superadmin purple); the v1.1 note annotated accordingly. Standard header block added (F-018); title scope generalized (first family: Metro Warm; further families append). Theme values and all content otherwise untouched — cleanest doc in the audit stays that way. |
 | (prior) | — | Initial Theme Library (Mist / Slate / Bright / Dark-deep). |
 
 ---

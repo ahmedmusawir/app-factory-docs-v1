@@ -1,7 +1,11 @@
 # DATABASE MANUAL
 
-> **Stark Industries Software Factory**  
+> **Version:** 1.1 · **Date:** 2026-07-08 · **Status:** Active
+> **Tier:** 4 — Reference Manuals · **Pairs with:** STARTER_KIT_HANDBOOK, AUTH_MANUAL, API_AND_SERVICES_MANUAL, FRONTEND_FIRST_PLAYBOOK, TESTING_PLAYBOOK
+
+> **Stark Industries Software Factory**
 > *The definitive guide to Supabase PostgreSQL database design, schema patterns, and data management.*
+> **Role doctrine (v1.1):** roles live in the `user_roles` table — one doctrine, aligned with AUTH_MANUAL v1.3 (F-041/F-042).
 
 ---
 
@@ -34,6 +38,8 @@
 4. Generate TypeScript types
 5. THEN build service layer and UI
 
+> **When Schema-First Applies:** schema-first is the law for **backend phases and conversions** (the data shape is known or extracted). For **discovery builds the factory runs frontend-first**: UI against a mock DATA_CONTRACT first, schema authored at the backend transition — see `FRONTEND_FIRST_PLAYBOOK.md` §2 (when frontend-first is allowed) and §8 (the transition point). Both orders are legitimate; the pipeline you're in decides.
+
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                        SCHEMA-FIRST WORKFLOW                                 │
@@ -65,7 +71,7 @@
 
 | Element | Convention | Example |
 |---------|------------|---------|
-| Tables | `snake_case`, plural or prefixed | `orders`, `ghl_qr_orders` |
+| Tables | `snake_case`, plural or prefixed | `orders`, `customer_orders` |
 | Columns | `snake_case` | `order_id`, `created_at` |
 | Primary Keys | `id` or `{entity}_id` | `id`, `order_id` |
 | Foreign Keys | `{referenced_table}_id` | `user_id`, `order_id` |
@@ -129,56 +135,74 @@ CREATE TABLE order_items (
 CREATE INDEX idx_order_items_order_id ON order_items(order_id);
 ```
 
-### User Mirror Table Pattern
+### Roles Table Pattern (the kit pattern — roles have ONE home)
+
+Authorization roles live in a dedicated **`user_roles`** table — never in `user_metadata`, never as a column on a profile mirror.
+
+```sql
+-- PATTERN SQL — the kit's supabase/setup.sql is the ground truth.
+-- Verify on disk before building (recon Q5.2/Q5.3); do not treat this as a kit copy.
+
+-- Roles: one row per user, the single source of truth for authorization
+CREATE TABLE user_roles (
+  user_id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
+  role TEXT NOT NULL DEFAULT 'member',
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+```
+
+**How the row gets there:** the kit's `handle_new_user()` trigger fires at user creation and applies the creation-time role transport (carried in `user_metadata` via the protected admin channel) INTO `user_roles`. After the trigger fires, the table row is the only authority; post-creation role changes go through the locked admin path. Server-side resolution is via the kit's `get_user_role()` / `src/utils/get-user-role.ts`.
+
+> ⛔ **FORBIDDEN:** never store — or READ — roles for authorization from `user_metadata` (the recon Q3.4 smell), and never mirror a `role` column onto a profile table. Two homes for a role guarantees privilege drift. This aligns with AUTH_MANUAL v1.3 ("Where Roles Live").
+
+### User Mirror Table Pattern (profile data — NO role column)
 
 When you need custom user data beyond Supabase Auth:
 
 ```sql
--- Mirror table for Supabase Auth users
+-- Mirror table for Supabase Auth users: display/profile data ONLY
 CREATE TABLE app_users (
   -- Same UUID as Supabase Auth
   id UUID PRIMARY KEY,
-  
-  -- Additional user data
+
+  -- Additional user data (roles live in user_roles — see above)
   display_name TEXT,
   avatar_url TEXT,
-  role TEXT DEFAULT 'member',
   preferences JSONB DEFAULT '{}',
-  
+
   -- Timestamps
   created_at TIMESTAMPTZ DEFAULT NOW(),
   updated_at TIMESTAMPTZ DEFAULT NOW()
 );
-
--- Index for common queries
-CREATE INDEX idx_app_users_role ON app_users(role);
 ```
 
 **Synchronization Logic:**
 
 ```typescript
-// When creating a user in Supabase Auth
+// When creating a user in Supabase Auth (protected admin channel)
 const createUserWithProfile = async (email: string, password: string, profile: UserProfile) => {
-  // 1. Create in Supabase Auth
+  // 1. Create in Supabase Auth. The role rides user_metadata ONLY as the
+  //    creation-time transport — the kit's handle_new_user() trigger applies
+  //    it into user_roles. It is never read back for authorization.
   const { data: authData, error: authError } = await supabase.auth.admin.createUser({
     email,
     password,
     email_confirm: true,
     user_metadata: {
       display_name: profile.displayName,
-      role: profile.role,
+      role: profile.role, // transport for the trigger, not storage
     },
   });
 
   if (authError) throw authError;
 
-  // 2. Create in mirror table with SAME ID
+  // 2. Create the profile mirror row with the SAME ID — no role column here;
+  //    user_roles was populated by the trigger in step 1.
   const { error: profileError } = await supabase
     .from('app_users')
     .insert({
       id: authData.user.id, // Same UUID
       display_name: profile.displayName,
-      role: profile.role,
     });
 
   if (profileError) {
@@ -206,7 +230,7 @@ CREATE TABLE external_field_mappings (
   field_name TEXT,
   
   -- Metadata
-  system_name TEXT DEFAULT 'ghl', -- 'ghl', 'stripe', 'hubspot', etc.
+  system_name TEXT DEFAULT 'crm', -- 'crm', 'stripe', 'hubspot', etc.
   created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
@@ -267,7 +291,7 @@ USING (is_deleted = FALSE);
 id UUID PRIMARY KEY DEFAULT gen_random_uuid()
 
 -- TEXT for external IDs (from other systems)
-external_order_id TEXT PRIMARY KEY  -- GHL/Stripe ID
+external_order_id TEXT PRIMARY KEY  -- external CRM/Stripe ID
 
 -- NUMERIC for money (never use FLOAT!)
 price NUMERIC(10, 2)  -- Up to 99,999,999.99
@@ -352,13 +376,13 @@ For external systems where you can't create a true foreign key:
 -- No FK constraint (external system manages the data)
 CREATE TABLE orders (
   order_id TEXT PRIMARY KEY,
-  external_contact_id TEXT,  -- GHL contact ID (logical relationship)
-  external_product_id TEXT   -- GHL product ID (logical relationship)
+  external_contact_id TEXT,  -- external CRM contact ID (logical relationship)
+  external_product_id TEXT   -- external CRM product ID (logical relationship)
 );
 
 -- Document the relationship in comments
 COMMENT ON COLUMN orders.external_contact_id IS 
-  'GoHighLevel contact ID. Logical FK - no constraint.';
+  'External CRM contact ID. Logical FK - no constraint.';
 ```
 
 ---
@@ -398,18 +422,7 @@ USING (auth.uid() = user_id);
 #### Role-Based Access
 
 ```sql
--- Admins can see all records
-CREATE POLICY "Admins see all"
-ON orders FOR SELECT
-USING (
-  EXISTS (
-    SELECT 1 FROM auth.users
-    WHERE auth.uid() = id
-    AND (raw_user_meta_data->>'is_admin')::int = 1
-  )
-);
-
--- Or using a custom roles table
+-- Admins can see all records — roles resolve from the user_roles table (THE pattern)
 CREATE POLICY "Admins see all"
 ON orders FOR SELECT
 USING (
@@ -420,6 +433,8 @@ USING (
   )
 );
 ```
+
+> ⛔ **Do NOT write policies that read roles from `raw_user_meta_data`** (e.g. `raw_user_meta_data->>'is_admin'`) — that is an authorization read from user metadata, the recon Q3.4 smell (F-041). A prior edition of this manual showed that variant as a peer option; it is not one. Roles resolve from `user_roles` — everywhere, including inside RLS.
 
 #### Public Read, Authenticated Write
 
@@ -1200,6 +1215,25 @@ supabase.from('table').select('*').range(0, 9)
 .in('col', [1, 2, 3])  // In array
 .is('col', null)       // Is null
 ```
+
+---
+
+## Cross-References (Factory Doctrine)
+
+- **`STARTER_KIT_HANDBOOK.md`** — the kit's shipped schema (`setup.sql`: `user_roles`, `handle_new_user()`, RLS baseline) — the ground truth this manual's patterns extend (verify on disk, recon Q5.1–Q5.4).
+- **`AUTH_MANUAL.md`** — "Where Roles Live" — the role doctrine this manual's §2/§5 align to (F-041/F-042).
+- **`API_AND_SERVICES_MANUAL.md`** — the service layer that consumes these schemas.
+- **`FRONTEND_FIRST_PLAYBOOK.md`** — §2/§8: when schema-first defers to mock-first (see the note in §1).
+- **`TESTING_PLAYBOOK.md`** — testing the schema's service layer (integration tests, RLS-aware patterns).
+
+---
+
+## Version History
+
+| Version | Date | Changes |
+|---|---|---|
+| 1.0 | (original, date unknown) | Initial manual: schema-first philosophy, design patterns, data types, relationships, RLS, indexing, JSONB, type generation, query patterns, migrations, integrity, performance. Unversioned until the 2026-07 audit. |
+| 1.1 | 2026-07-08 | **Wave 4 — role-doctrine surgery (F-041, security-classed).** §2: new "Roles Table Pattern" — `user_roles` as the single authorization home (labeled PATTERN SQL; kit `setup.sql` = ground truth), `handle_new_user()` creation-time transport explained, ⛔ forbidden box (no role storage OR authz reads from `user_metadata` — recon Q3.4; no role columns on profile mirrors); mirror-table pattern stripped of its `role` column + sync example rewritten to the transport model. §5: the `raw_user_meta_data` RLS policy variant REMOVED (it was shown as a peer option — it is the forbidden pattern); `user_roles` policy stands alone + ⛔ marker (ruling: reconcile BOTH examples). Doc now speaks ONE role doctrine, aligned with AUTH_MANUAL v1.3 (F-042 outcome). "When Schema-First Applies" note + FRONTEND_FIRST pointers added (F-040). GHL/QR fossil examples neutralized (naming table, mapping-table default, comments — recon Q8.5 class). Standard header (F-018); Cross-References section (F-035); this history table (D-018). |
 
 ---
 

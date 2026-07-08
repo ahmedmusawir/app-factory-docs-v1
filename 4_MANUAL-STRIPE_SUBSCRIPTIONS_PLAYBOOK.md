@@ -1,11 +1,13 @@
 # STRIPE SUBSCRIPTIONS PLAYBOOK
 
-> **Version:** 1.0
-> **Date:** 2026-04-28
+> **Version:** 1.1 · **Date:** 2026-07-08 · **Status:** Active
+> **Tier:** 4 — Reference Manuals · **Pairs with:** ECOMMERCE_AND_PAYMENTS_MANUAL, API_AND_SERVICES_MANUAL, TESTING_PLAYBOOK, AUTH_MANUAL
+
 > **Author:** Architect (Claude) for Tony Stark
 > **Origin:** Distilled from the StarkReads Subscription v1 build (Phase 1 + Phase 2)
 > **Purpose:** Reusable recipe for adding Stripe subscription billing to any Next.js + Supabase application
 > **Prerequisite:** A working Next.js App Router app with Supabase Auth already integrated
+> **Territory:** RECURRING billing only. One-time payments / WooCommerce commerce → `ECOMMERCE_AND_PAYMENTS_MANUAL.md` (the territory pair — zero overlap by design).
 
 ---
 
@@ -888,4 +890,22 @@ Replace Stripe's built-in emails with branded transactional emails (welcome, ren
 
 ---
 
-**END OF STRIPE SUBSCRIPTIONS PLAYBOOK v1.0**
+## Cross-References (Factory Doctrine)
+
+- **`ECOMMERCE_AND_PAYMENTS_MANUAL.md`** — the territory pair: one-time payments, WooCommerce commerce, carts/checkout.
+- **`API_AND_SERVICES_MANUAL.md`** — the service-layer law behind §8's swap pattern (incl. the Kit Exception).
+- **`TESTING_PLAYBOOK.md`** — §12's testing strategy in full: the StarkReads provenance sibling (Stripe boundary-stop, webhook tests, four layers).
+- **`AUTH_MANUAL.md`** — the auth/role side of the gate helpers (`requireUser`/`requireRole` compose with `requireSubscriptionTier`; roles ⊥ tiers — never implement tiers as roles).
+
+---
+
+## Version History
+
+| Version | Date | Changes |
+|---|---|---|
+| 1.0 | 2026-04-28 | Initial playbook, distilled from StarkReads Subscription v1: object model, setup + schema recipes, checkout flow, webhook handler, tier upgrades, service-layer swap, success polling, customer portal, gotchas, testing, deployment, roadmap. |
+| 1.1 | 2026-07-08 | **Wave 4 micro (audit sync).** Territory declaration added (recurring only; one-time/WooCommerce → ECOMMERCE_AND_PAYMENTS_MANUAL — completes the pair's two-way declaration). Cross-References section added — island ended: §8 ↔ API_AND_SERVICES, §12 ↔ TESTING_PLAYBOOK (provenance siblings introduced at last), gate helpers ↔ AUTH_MANUAL (F-035). Standard header (F-018); this history table (D-018). Content untouched — the D-016 money-truth model + RBAC ⊥ subscriptions doctrine is promoted gold. |
+
+---
+
+**END OF STRIPE SUBSCRIPTIONS PLAYBOOK**

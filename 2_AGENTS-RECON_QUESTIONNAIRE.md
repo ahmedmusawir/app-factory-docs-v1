@@ -1,9 +1,11 @@
 # RECON QUESTIONNAIRE — Ground-Truth Verification Before FFM Authoring
 
-> **Status:** v0.4 (living document — grows with every FFM run's lessons)
+> **Version:** 0.5 · **Date:** 2026-07-07 · **Status:** Active (living document — grows with every FFM run's lessons)
+> **Tier:** 2 — Pipeline Agents · **Pairs with:** ARCHITECT_PLAYBOOK, FFM_PLAYBOOK, APP_FACTORY_BLUEPRINT, STARTER_KIT_HANDBOOK
+
 > **Purpose:** Catch repo-vs-doctrine drift BEFORE the Architect authors an FFM, not after the Engineer surfaces it at Discovery.
-> **Owner:** Stark Industries — AI App Factory
-> **Pairs with:** `FFM_PLAYBOOK.md` (the recon pass becomes Stage 0 of the four-role pattern)
+> **Owner:** Stark Industries — App Factory
+> **Where this sits:** Recon is **Phase 0 of the APP_FACTORY_BLUEPRINT lifecycle** and **Stage 0 of the FFM four-role pattern**. ARCHITECT_PLAYBOOK §2 (Recon Mode) is the law that makes it mandatory; the `stark-recon` skill automates it — **this questionnaire is the skill's source content.**
 
 ---
 
@@ -204,6 +206,8 @@ grep -n "isAdmin\|isMember\|isSuperadmin\|isAuthenticated\|role" src/store/useAu
 grep -n ": any\|as any" src/store/useAuthStore.ts src/utils/get-user-role.ts 2>/dev/null
 ```
 
+> **Q3.4 nuance (F-042 resolution, RECON_WAVE0 Q1, 2026-07-07):** the kit is **TABLE-BASED** — `user_roles` is the source of truth and `get-user-role.ts` is the canonical read path. The live smell is (a) any **authorization READ** from `user_metadata`, or (b) any **client-writable role write path** (e.g. anon-key `signUp` with `options.data.role` honored by a trigger). Metadata MAY carry a role ONLY as a **creation-time transport** written via the protected channel (admin API / `app_metadata` preferred). Creation-time transport alone is not the smell — reading it for authz, or letting the client write it, is.
+
 **Architect uses this to:** decide whether DATA_CONTRACT needs ANY service contracts. If the kit provides auth complete (it usually does), DATA_CONTRACT says "consume the kit's primitives directly — no wrapper." Service layer is reserved for project-specific domain logic only. Also: write the FFM's `_project/CLAUDE.md` against the store's ACTUAL shape (Q3.6) — if the handbook claims derived flags the store doesn't have, schedule adding them (or correcting the handbook) as a kit-reconciliation task, and don't write FFM code that reads flags that return `undefined`. Type smells (Q3.7) like `user: any` become reconciliation tasks (replace with the project's `User` type).
 
 ---
@@ -302,6 +306,12 @@ ls -la CLAUDE.md AGENTS.md GEMINI.md PROJECT_POINTER.md 2>/dev/null
 
 ---
 
+## SECTION 7 — (Retired Number)
+
+> Intentionally vacant. Section numbers in this doc are **stable IDs, not positions** — the audit trail, F-042's resolution, and the repo-side `stark-recon` skill all cite Q-numbers (Q3.4, Q8.x, Q9.1…), so retired numbers are never reused and existing sections are never renumbered. The original §7 (Open-Ended Sweep) moved to §10 at v0.2, then to §13 at v0.4. New sections append at the end.
+
+---
+
 ## SECTION 8 — Demo / Tutorial Scaffolding (The Cascade Trap)
 
 Starter kits ship tutorial filler — example features demonstrating patterns — that is NOT product code. Phase 1 found a whole "posts" demo cascade: 2 services → 2 stores → 1 types file → 2 components → 3 routes → 1 util, all inherited and all dead weight. Find the WHOLE cascade up front so the Architect can scope its deletion into the FFM from the start.
@@ -356,6 +366,12 @@ find agent_docs -name "*.ts" -o -name "*.tsx" 2>/dev/null | grep -v node_modules
 ```
 
 **Architect uses this to:** ship the FFM with the right packaging — either (a) instruct the operator to add `agent_docs/**` to tsconfig `exclude`, or (b) name the FFM's template stubs with a non-compiled extension (`.ts.txt`) so they never enter compile scope. This is a self-inflicted conflict the FFM author can prevent entirely.
+
+---
+
+## SECTION 10 — (Retired Number)
+
+> Intentionally vacant — see the §7 note. The Open-Ended Sweep held this number from v0.2 until v0.4 moved it to §13.
 
 ---
 
@@ -434,17 +450,17 @@ Each gate passed in isolation; the continuous SP5 walk caught a real bug no gate
 The questions above are the known traps. This section catches the unknown ones.
 
 ```bash
-# Q10.1 — Full src/ tree (2 levels) so the Architect sees the actual shape
+# Q13.1 — Full src/ tree (2 levels) so the Architect sees the actual shape
 find src -maxdepth 2 -type d | sort
 
-# Q10.2 — Anything in the repo that contradicts what the operator described?
+# Q13.2 — Anything in the repo that contradicts what the operator described?
 #         (Claudy reports any surprise: stale scaffolding, unexpected dirs,
 #          vestigial template strings, half-finished features)
 
-# Q10.3 — Vestigial template residue (starter kits leave these)
+# Q13.3 — Vestigial template residue (starter kits leave these)
 grep -rn "Your Company\|Acme\|TODO\|FIXME\|placeholder\|lorem ipsum" src/ | grep -v node_modules | head -20
 
-# Q10.4 — The cn() helper every component depends on
+# Q13.4 — The cn() helper every component depends on
 cat src/lib/utils.ts 2>/dev/null | grep -A5 "export.*cn"
 ```
 
@@ -507,7 +523,7 @@ Claudy answers in this structure:
 - Test runner excludes agent_docs: <yes/no>
 - .ts files under agent_docs that would compile: <list>
 
-### Section 10 — Surprises
+### Section 13 — Surprises
 - <anything unexpected — this is the highest-value section>
 - cn() helper present + standard: <yes/no>
 
@@ -525,6 +541,7 @@ Claudy answers in this structure:
 | 0.2 | 2026-06-05 | Folded in mid-Phase-1 Sub-Phase 2/3 findings. NEW §8 (demo/tutorial scaffolding cascade — the posts demo fan-out), NEW §9 (FFM packaging / tsconfig compile scope — phantom tsc errors from template stubs). Added Q3.6 (auth store actual shape), Q3.7 (type-safety smells like user:any), Q10.4 (cn() helper check). Elevated the **"handbook is aspirational, not literal"** meta-lesson to the opening — FOUR handbook claims proven false by end of Phase 1. Open-ended sweep renumbered §7→§10. |
 | 0.3 | 2026-06-05 | Mid-Cluster-3 additions. Q1.7 (test runner check, Jest vs doctrine Vitest). Q8.5 (inherited cross-project residue, the year-old QR-project GHL hooktest fossil riding along through clones). Q8.6 (full route-table inventory day 1, surfaces /demo /template /api/ghl /profile cruft). |
 | 0.4 | 2026-06-07 | Full Run 001 integration (34 lessons). NEW Section 0 (Day-1 Ground-Truth Sweep — the meta-lesson: handbook is aspirational, verify everything on disk first; consolidates L1/L5/L6/L7/L8/L9/L24/L32). NEW Section 11 (Nav & Auth-State Patterns — marketing-vs-portal nav L19, every-navbar-theme-toggle L20, auth-state region L22, split-hero lg: L18, controls-outside-menu L21). NEW Section 12 (Verification Rituals — grep-at-close L17, process-status check L28, SP5 seam-check L29, rm .next between batches L25, fresh test baseline L26). Section 4 gained CSS-extension match (L14) + dark-mode real-screen check (L16). Open-Ended Sweep renumbered to Section 13. |
+| 0.5 | 2026-07-07 | **Wave 2A (audit sync).** Standard header block (F-018); recon's place stated: Blueprint lifecycle Phase 0 + FFM Stage 0; mutual pointers with ARCHITECT_PLAYBOOK §2 Recon Mode and the `stark-recon` skill — this doc named as the skill's source content (F-024). Numbering repaired without renumbering (F-023): §7 and §10 marked as retired numbers with the stable-ID rule stated (numbers are IDs, not positions — external citations of Q3.4/Q8.x/Q9.1 stay valid); §13's questions relabeled Q10.x → Q13.1–Q13.4; Recon Report Format "Section 10 — Surprises" → "Section 13 — Surprises". Q3.4 gained the F-042-resolution nuance box (kit is table-based; smell = authz read from user_metadata or client-writable role write path; metadata = creation-time transport only, via protected channel). Content otherwise untouched — scars preserved. |
 ```
 
 ---

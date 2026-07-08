@@ -1,9 +1,10 @@
 # UI/UX BUILDING MANUAL
 
-**Project:** Stark SaaS Starter Kit  
-**Version:** 1.3  
-**Last Updated:** June 28, 2026  
-**Purpose:** Standardized guide for building pages and components consistently across all projects
+> **Version:** 1.4 · **Date:** 2026-07-08 · **Status:** Active
+> **Tier:** 5 — Design System · **Pairs with:** STARTER_KIT_HANDBOOK, COMPONENT_REGISTRY, THEMING_MANUAL, FRONTEND_BUILD_PHASE_PLAYBOOK, GLOBAL_DESIGN_SYSTEM_HANDBOOK
+
+> **Project:** Stark SaaS Starter Kit
+> **Purpose:** Standardized guide for building pages and components consistently across all projects
 
 ---
 
@@ -70,9 +71,9 @@ If you cannot answer all four, STOP — surface to the operator. The file is not
 
 ### Cross-Reference
 
-- **`STARTER_KIT_HANDBOOK_v1.0.md`** — kit primitives that are already mobile-first (AppShellPage, Sheet, etc.)
-- **`COMPONENT_REGISTRY_v1.0.md`** — per-primitive mobile behavior reference
-- **`FRONTEND_BUILD_PHASE_PLAYBOOK_v1.2.md`** — phase preambles that re-inject mobile-first at execution moments
+- **`STARTER_KIT_HANDBOOK.md`** — kit primitives that are already mobile-first (AppShellPage, Sheet, etc.)
+- **`COMPONENT_REGISTRY.md`** — per-primitive mobile behavior reference
+- **`FRONTEND_BUILD_PHASE_PLAYBOOK.md`** — phase preambles that re-inject mobile-first at execution moments
 
 ### Why Rule Zero Supersedes Other Doctrine
 
@@ -121,9 +122,9 @@ Before authoring any UI component, page, or layout:
 
 ### Cross-Reference
 
-- **`THEMING_MANUAL_v1.0.md`** — the deep dive on token architecture, designer deliverable format, and quick-swap workflow
-- **`APP_ARCHITECTURE_MANUAL_v1.2.md`** §Theming Files — where the token files live in the repo
-- **`HANDOFF_PACKAGE_PLAYBOOK_v1.1.md`** §Designer Handoff — the designer engagement spec
+- **`THEMING_MANUAL.md`** — the deep dive on token architecture, designer deliverable format, and quick-swap workflow
+- **`APP_ARCHITECTURE_MANUAL.md`** §Theming Files — where the token files live in the repo
+- **`HANDOFF_PACKAGE_PLAYBOOK.md`** §Designer Handoff — the designer engagement spec
 - **Cyberize Run 001 `_project/CLAUDE.md`** — the canonical worked example of a Locked Palette table
 
 ### Why Rule Zero-B Supersedes Other Color Doctrine
@@ -1417,7 +1418,7 @@ npm run create:page admin/users
 
 This manual captures the **proven patterns** from the starter kit. The approach is:
 
-**Simple â†’ Composable â†’ Consistent â†’ Fast**
+**Simple → Composable → Consistent → Fast**
 
 By following these patterns, we can:
 - ✅ Build pages in 10-15 minutes
@@ -2115,6 +2116,7 @@ This manual is a **living document**. Updates happen at three triggers:
 
 | Version | Date | Changes |
 |---|---|---|
+| 1.4 | 2026-07-08 | **Wave 5 micro (audit sync).** Cross-references canonical-name only: the PHANTOM `HANDOFF_PACKAGE_PLAYBOOK_v1.1.md` reference killed (that version never existed — the audit's forward-dated collector's item) plus the stale handbook/registry/theming/build-phase versioned refs (F-032/F-011). Three broken-arrow mojibake sequences repaired in the component-approach line (F-012 — review counted 1; scan found 3). Standard header block adopted (F-018). Nothing else — MODEL doc; Rule Zero, Rule Zero-B, teaching examples, and the D-018 Update Discipline appendix untouched. |
 | 1.3 | 2026-06-28 | Renamed `ThemeToggler` → `ThemeToggle` (the real shipped component) throughout; dropped deleted-orphan references; re-pointed deleted-demo teaching examples to live files (Example 1 → public home, Example 2 → illustrative); replaced `next/head` (Pages Router) with the App-Router `export const metadata` API in all page examples + the VS Code snippet. Kit Hardening Gate 10. |
 | 1.2 | 2026-06-02 | Added Rule Zero-B (theming as the second foundational posture). Added TOC entries for Rule Zero and Rule Zero-B. Authored companion `THEMING_MANUAL_v1.0.md`. Added Lesson 9 appendix. Born from Cyber Pharma Run 002. |
 | 1.1 | 2026-05-31 | Added Rule Zero (mobile-first foundational posture) at top. Added Lesson 5 appendix. Fixed UTF-8 encoding artifacts throughout. Born from Cyberize Run 001. |
@@ -2122,4 +2124,4 @@ This manual is a **living document**. Updates happen at three triggers:
 
 ---
 
-🥄 *Part of Stark Industries — App Factory v1.3 doctrine.*
+🥄 *Part of Stark Industries — App Factory doctrine.*

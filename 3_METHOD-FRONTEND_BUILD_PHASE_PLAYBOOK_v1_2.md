@@ -1,8 +1,9 @@
 # FRONTEND_BUILD_PHASE_PLAYBOOK.md
 
-**Version:** 1.1
-**Last Updated:** June 2, 2026
-**Born from:** Cyberize Run 001 lessons (Lessons 2, 4, 5, 7 + Lesson 9 — speculative authoring discovered during v1.1 retrospective)
+> **Version:** 1.2.1 · **Date:** 2026-07-08 · **Status:** Active
+> **Tier:** 3 — Build Methodology · **Pairs with:** FRONTEND_FIRST_PLAYBOOK, STARTER_KIT_HANDBOOK, COMPONENT_REGISTRY, UI-UX-BUILDING-MANUAL, FFM_PLAYBOOK, TESTING_PLAYBOOK
+
+> **Born from:** Cyberize Run 001 lessons (Lessons 2, 4, 5, 7 + Lesson 9 — speculative authoring discovered during v1.1 retrospective); Lesson 10 added at v1.2 (Cyber Pharma v1 Phase 2.2)
 
 > **Purpose**
 > This document defines how the Frontend Build Phase is executed in this factory.
@@ -20,18 +21,20 @@ It applies to all frontend-first builds unless an alternative strategy is explic
 
 ## 1. Position in the Factory
 
-This playbook is used when
+This playbook is used when:
 
- Frontend-First has been selected as the execution strategy
- A Data Contract already exists for the app
- Backend implementation is intentionally deferred
+- Frontend-First has been selected as the execution strategy
+- A Data Contract already exists for the app
+- Backend implementation is intentionally deferred
 
 This playbook does not decide whether frontend-first is used.
 It defines how to execute it correctly once chosen.
 
-Related Documents
- `FRONTEND_FIRST_PLAYBOOK.md` — Defines when and why to use frontend-first
- `{APPNAME}_DATA_CONTRACT.md` — Defines the data shape for the specific app
+Related Documents:
+
+- `FRONTEND_FIRST_PLAYBOOK.md` — Defines when and why to use frontend-first
+- `{APPNAME}_DATA_CONTRACT.md` — Defines the data shape for the specific app
+- `TESTING_PLAYBOOK.md` — The factory's testing bible (verification stages draw on it)
 
 ---
 
@@ -39,7 +42,9 @@ Related Documents
 
 > **Born from Run 001 Lesson 5 (mobile-first violation) and Pattern One (doctrine load decay).**
 
-Doctrine read in Phase 0 decays by Stage 5. To prevent this, every stage opens with a mandatory re-read of relevant doctrine sources.
+Doctrine read at build Stage 0 (Discovery) decays by Stage 5. To prevent this, every stage opens with a mandatory re-read of relevant doctrine sources.
+
+> **Naming note:** build **Stage 0 = Discovery** (the FFM's "Sub-Phase 0") is distinct from lifecycle **Phase 0 = Recon** (APP_FACTORY_BLUEPRINT). Phase vocabulary map: SOFTWARE_FACTORY_PLAYBOOK §2.
 
 ### The Refresh Protocol
 
@@ -100,11 +105,11 @@ In Run 001, the agent nearly authored `authService.ts` as a wrapper around the k
 
 The Frontend Build Phase is broken into six ordered stages.
 
-Each stage has
+Each stage has:
 
- a clear goal
- defined outputs
- explicit stop conditions
+- a clear goal
+- defined outputs
+- explicit stop conditions
 
 Stages must be completed in order.
 
@@ -138,24 +143,24 @@ No functionality. No real data behavior.
 
 ### Activities
 
- Implement global layout (sidebar, header, footer)
- Set up route groups (member  admin  superadmin)
- Create main pages from design (placeholders allowed)
- Add navigation links
- Add access-denied and not-found pages
- Verify RBAC redirects work
+- Implement global layout (sidebar, header, footer)
+- Set up route groups (member → admin → superadmin)
+- Create main pages from design (placeholders allowed)
+- Add navigation links
+- Add access-denied and not-found pages
+- Verify RBAC redirects work
 
 ### Rules
 
- No business logic
- No service calls
- No mock data beyond placeholders
+- No business logic
+- No service calls
+- No mock data beyond placeholders
 
 ### Output
 
- Clickable navigation
- All primary routes exist
- Pages render without errors
+- Clickable navigation
+- All primary routes exist
+- Pages render without errors
 
 ### Stop Condition
 
@@ -207,21 +212,21 @@ If you cannot answer all four, do not author the file. Surface to the operator.
 
 ### Activities
 
- Implement Page  Row  Box layout consistently
- Build tables, cards, forms based on design
- Ensure responsive behavior is acceptable
- Replace placeholders with real UI components
- Reference Stitch designs (or equivalent) for layout
+- Implement Page → Row → Box layout consistently
+- Build tables, cards, forms based on design
+- Ensure responsive behavior is acceptable
+- Replace placeholders with real UI components
+- Reference the Designer's screen HTML/PNG (or equivalent) for layout
 
 ### Rules
 
- Still no real functionality
- Focus is visual structure, not behavior
+- Still no real functionality
+- Focus is visual structure, not behavior
 
 ### Output
 
- Pages visually resemble final product
- Layout feels consistent across the app
+- Pages visually resemble final product
+- Layout feels consistent across the app
 
 ### Stop Condition
 
@@ -239,26 +244,26 @@ This stage includes manual human judgment. AI output is corrected and refined.
 
 ### Activities
 
- Fix spacing inconsistencies
- Improve typography hierarchy
- Normalize button styles and variants
- Add loading states
- Add empty states
- Add error states
- Add confirmation dialogs and toasts
- Improve form validation messaging
- Fix breadcrumbs (if applicable)
- Update documentation if Cascade deviated from standards
+- Fix spacing inconsistencies
+- Improve typography hierarchy
+- Normalize button styles and variants
+- Add loading states
+- Add empty states
+- Add error states
+- Add confirmation dialogs and toasts
+- Improve form validation messaging
+- Fix breadcrumbs (if applicable)
+- Update documentation if the build agent deviated from standards
 
 ### Rules
 
- This is a human-driven stage
- Do not skip — AI misses polish details
+- This is a human-driven stage
+- Do not skip — AI misses polish details
 
 ### Output
 
- App feels usable even without real data
- No obvious rough edges in common flows
+- App feels usable even without real data
+- No obvious rough edges in common flows
 
 ### Stop Condition
 
@@ -274,24 +279,24 @@ Eliminate unfinished app gaps.
 
 ### Activities
 
- Detail pages (view single item)
- Edit pages (edit single item)
- Create pages (new item forms)
- Settings pages
- Profile pages
- Error screens (404, 500, access denied)
- Empty state screens
- Breadcrumb implementation (decision must be recorded)
+- Detail pages (view single item)
+- Edit pages (edit single item)
+- Create pages (new item forms)
+- Settings pages
+- Profile pages
+- Error screens (404, 500, access denied)
+- Empty state screens
+- Breadcrumb implementation (decision must be recorded)
 
 ### Rules
 
- No new primary features introduced here
- This stage completes navigation coverage
+- No new primary features introduced here
+- This stage completes navigation coverage
 
 ### Output
 
- All navigation paths terminate cleanly
- No dead buttons or placeholder routes
+- All navigation paths terminate cleanly
+- No dead buttons or placeholder routes
 
 ### Stop Condition
 
@@ -311,63 +316,63 @@ This stage makes the app feel usable using demo data.
 
 ### Allowed Functionality (UI Phase)
 
- Feature  Notes 
-----------------
- Create items  In-memory only, lost on refresh 
- Edit items  In-memory only 
- Delete items  In-memory only 
- Change statusseverity  In-memory only 
- Filters  Client-side filtering of mock data 
- Search  Client-side search of mock data 
- Sorting  Client-side sorting 
- Pagination  Client-side (service returns paginated results) 
- Role-based UI gating  Hideshow actions based on role 
- Form validation  Client-side validation 
- Successerror toasts  Feedback for user actions 
+| Feature | Notes |
+|---|---|
+| Create items | In-memory only, lost on refresh |
+| Edit items | In-memory only |
+| Delete items | In-memory only |
+| Change status/severity | In-memory only |
+| Filters | Client-side filtering of mock data |
+| Search | Client-side search of mock data |
+| Sorting | Client-side sorting |
+| Pagination | Client-side (service returns paginated results) |
+| Role-based UI gating | Hide/show actions based on role |
+| Form validation | Client-side validation |
+| Success/error toasts | Feedback for user actions |
 
 ---
 
 ### Explicitly Forbidden (Backend Phase Only)
 
- Feature  Why 
---------------
- localStorage persistence  Adds complexity, no real value for demo 
- Real concurrency simulation  Backend concern 
- Audithistory systems  Backend concern 
- File uploads to storage  Backend concern (show UI only) 
- Background jobs  Backend concern 
- WebSockets  real-time sync  Backend concern 
- Multi-user permission enforcement  RLS concern 
- DB-level pagination logic  Backend concern 
- Data integrity enforcement  Backend concern 
- Fake auth or fake permissions  Use real auth with mock data 
+| Feature | Why |
+|---|---|
+| localStorage persistence | Adds complexity, no real value for demo |
+| Real concurrency simulation | Backend concern |
+| Audit/history systems | Backend concern |
+| File uploads to storage | Backend concern (show UI only) |
+| Background jobs | Backend concern |
+| WebSockets / real-time sync | Backend concern |
+| Multi-user permission enforcement | RLS concern |
+| DB-level pagination logic | Backend concern |
+| Data integrity enforcement | Backend concern |
+| Fake auth or fake permissions | Use real auth with mock data |
 
 ---
 
 ### Mock Discipline Rules (Non-Negotiable)
 
- UI never talks directly to mock data files
- All data access goes through the service layer
- Mock data must follow the Data Contract exactly
- Mock behavior must be deterministic (same input = same output)
- No fake auth or fake permissions systems — use real auth
- If mocking becomes complex → simplify or stop
+- UI never talks directly to mock data files
+- All data access goes through the service layer
+- Mock data must follow the Data Contract exactly
+- Mock behavior must be deterministic (same input = same output)
+- No fake auth or fake permissions systems — use real auth
+- If mocking becomes complex → simplify or stop
 
 ---
 
 ### The Golden Rule
 
- Demo data exists to prove the UI works. It should be simple enough to delete entirely when backend is ready.
+> Demo data exists to prove the UI works. It should be simple enough to delete entirely when backend is ready.
 
- If you find yourself debugging mock data logic or building complex state management for mocks — STOP. You've gone too far. Simplify.
+> If you find yourself debugging mock data logic or building complex state management for mocks — STOP. You've gone too far. Simplify.
 
 ---
 
 ### Output
 
- End-to-end flows work with demo data
- Stakeholders can use the app
- UI reveals missing requirements clearly
+- End-to-end flows work with demo data
+- Stakeholders can use the app
+- UI reveals missing requirements clearly
 
 ### Stop Condition
 
@@ -383,35 +388,37 @@ Produce a stable, reviewable demo environment.
 
 ### Activities
 
- Seed demo data (representative, not exhaustive)
- Verify RBAC behavior (app-layer redirects)
- Test all user flows end-to-end
- Fix broken flows
- Remove debug UI and console logs
- Document known limitations (e.g., data resets on refresh, RLS not implemented yet)
- Deploy to staging (Vercel or equivalent)
+- Seed demo data (representative, not exhaustive)
+- Verify RBAC behavior (app-layer redirects)
+- Test all user flows end-to-end
+- Fix broken flows
+- Remove debug UI and console logs
+- Document known limitations (e.g., data resets on refresh, RLS not implemented yet)
+- Deploy to staging (Vercel or equivalent)
 
 ### Rules
 
- This is not production
- Stability matters more than completeness
- Communicate limitations clearly to stakeholders
+- This is not production
+- Stability matters more than completeness
+- Communicate limitations clearly to stakeholders
 
 ### Output
 
- Deployed demo app at staging URL
- Stakeholders can review and give feedback
- UI requirements are effectively frozen
+- Deployed demo app at staging URL
+- Stakeholders can review and give feedback
+- UI requirements are effectively frozen
 
 ### Stop Condition
 
-Feedback shifts from UX changes to datasecurity concerns.
+Feedback shifts from UX changes to data/security concerns.
 
 ---
 
 ## 9. UI Phase Completion Checklist
 
-Before declaring Frontend Build Phase complete
+Before declaring Frontend Build Phase complete:
+
+> Verification doctrine for this checklist (test layers, rituals, diagnostic order) lives in `TESTING_PLAYBOOK.md` — the factory's testing bible.
 
 ### Navigation & Structure
 - [ ] All routes exist and render
@@ -453,39 +460,40 @@ If any item is unchecked, the phase is not complete.
 
 ## 10. Things That Should Just Work
 
-These components should be built into every app by default. If Cascade misses any, flag it in Stage 3 (Polish).
+These components should be built into every app by default. If the build agent misses any, flag it in Stage 3 (Polish).
 
- Component  Purpose 
---------------------
- Pagination component  Reusable across all tables 
- Breadcrumbs  Auto-generated from route (if decided yes) 
- Loading spinner  Global and inline variants 
- Empty state component  Reusable No data message 
- Error boundary  Catches React errors gracefully 
- Toast notifications  Successerror feedback 
- Mobile responsive nav  Sidebar collapses on mobile 
- Dark mode toggle  Respects system preference 
- Confirmation dialog  Are you sure for destructive actions 
+| Component | Purpose |
+|---|---|
+| Pagination component | Reusable across all tables |
+| Breadcrumbs | Auto-generated from route (if decided yes) |
+| Loading spinner | Global and inline variants |
+| Empty state component | Reusable "No data" message |
+| Error boundary | Catches React errors gracefully |
+| Toast notifications | Success/error feedback |
+| Mobile responsive nav | Sidebar collapses on mobile |
+| Dark mode toggle | Respects system preference |
+| Confirmation dialog | "Are you sure" for destructive actions |
 
 ---
 
 ## 11. Transition to Backend Phase
 
-The Frontend Build Phase ends when
+The Frontend Build Phase ends when:
 
- UI flows are validated
- Data requirements are clear
- Demo feedback is incorporated
- Backend work is unblocked and justified
+- UI flows are validated
+- Data requirements are clear
+- Demo feedback is incorporated
+- Backend work is unblocked and justified
 
 Backend implementation should begin only after this point.
 
-The next phase will
- Create Supabase tables from Data Contract
- Implement RLS policies
- Swap mock services for real services
- Enable file uploads via Supabase Storage
- Deploy to production
+The next phase will:
+
+- Create Supabase tables from Data Contract
+- Implement RLS policies
+- Swap mock services for real services
+- Enable file uploads via Supabase Storage
+- Deploy to production
 
 ---
 
@@ -557,6 +565,7 @@ Fix in this playbook: Section 9 (UI Phase Completion Checklist) now carries a "R
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 1.2.1 | 2026-07-08 | **Wave 3 micro-patch (audit sync).** Standard header block adopted — the top header previously claimed v1.1/June 2 while history/content/filename were v1.2 (F-033, the header-lies case; corrected). F-034 character-loss repair: restored "- " bullets on ~20 de-bulleted lists, arrows (member → admin → superadmin; Page → Row → Box), slashes (status/severity, Hide/show, Success/error ×2, Audit/history, WebSockets / real-time sync, data/security), lost quotes ("No data", "Are you sure"), Golden Rule blockquote markers; REBUILT the three de-piped tables (§7 Allowed + Forbidden, §10) — cell content restored from the surviving words (evidence-based); separator glyphs standardized to markdown/ASCII (original glyph class unrecoverable — see 1.2.1 concerns note in audit trail). "Phase 0" → "build Stage 0 (Discovery)" + naming note distinguishing lifecycle Phase 0 Recon (F-010 coordination with SFP §2). "Cascade" → "the build agent" ×2 (tool-agnostic). Stage 2 activity de-Stitched — "Reference the Designer's screen HTML/PNG" (F-002, hit not listed in REVIEW_012). §1 Related Documents + §9 checklist gain TESTING_PLAYBOOK pointers (F-035 inbound). Footer de-versioned. |
 | 1.2 | 2026-06-25 | Added Lesson 10 (the mobile gate must check the desktop content frame — gutter + centered form max-width — not just 375 collapse) + the Section 9 "Responsive (Gate M)" checklist block. Born from Cyber Pharma v1 Phase 2.2 Admin Portal retrospective. |
 | 1.1 | 2026-06-02 | Added Section 1.5 (Pre-Phase Doctrine Refresh), Section 1.6 (Kit Audit), Stage 2 Pre-Write Check Protocol + anti-patterns, Section 12 (Kit Improvement Proposals), Section 13 (Run 001 Lessons appendix including new Lesson 9). Born from Cyberize Run 001 retrospective. |
 | 1.0 | 2026-01-02 | Initial playbook |
@@ -565,4 +574,4 @@ Fix in this playbook: Section 9 (UI Phase Completion Checklist) now carries a "R
 
 ### END OF DOCUMENT
 
-🥄 *Part of Stark Industries — App Factory v1.1 doctrine.*
+🥄 *Part of Stark Industries — App Factory doctrine.*

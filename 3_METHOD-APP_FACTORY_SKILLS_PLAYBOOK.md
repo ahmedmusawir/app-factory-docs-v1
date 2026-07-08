@@ -1,5 +1,8 @@
 # APP FACTORY SKILLS PLAYBOOK
 
+> **Version:** 1.1 · **Date:** 2026-07-08 · **Status:** Active
+> **Tier:** 3 — Build Methodology · **Pairs with:** FFM_PLAYBOOK, RECON_QUESTIONNAIRE, DESIGNER_PLAYBOOK
+
 > **Authoritative doctrine for skill authoring in the Stark Industries App Factory.**
 > Read by Generals (DevOps, Architects, Designers). Not read by Engineer agents (Claude Code, Windsurf, Cursor) — those are skill consumers, not authors.
 > This is an imperative manual. Rules are non-negotiable unless explicitly overridden by the operator with acknowledgment.
@@ -78,7 +81,7 @@ Examples of Agent Skills:
 
 - **Session memory file writer** — when working in the ADK Harness, the agent writes session memory files in a specific format; the skill defines that format and the discipline
 - **UI/UX specialization** — a skill that elevates a generalist Claude Code agent into a specialist designer for component work
-- **Stitch prompting** — a skill for the Designer Agent that codifies how to prompt Stitch effectively, with chunking rules and iteration patterns
+- **Token-driven HTML screen building** — a skill for the Designer Agent that codifies the Canonical Page Method: token file first, canonical screen as token-consuming HTML rendered to PNG via Playwright, then clone-and-adapt
 
 Agent Skills exist because some tasks are agent-side work, not operator-side work. The operator delegates the task; the agent performs it correctly because the skill teaches it the discipline.
 
@@ -409,6 +412,19 @@ This was a mistake made in early skills authored by this General. It's documente
 - Decision trees: prefix with the decision topic (`region-selection.md`, `cli-vs-web-ui.md`)
 
 The reasoning: family folders are LOUD because they're the umbrella; child skills are kebab because they're invoked by name; workflow files are numbered because they're sequential; references are named because they're random-access.
+
+### Where Skills Live + The Launch-CWD Rule
+
+Two locations, two purposes — don't conflate them:
+
+- **`_SKILLS/`** — the operator's skill LIBRARY: the authoring and distribution home where skills are built, versioned, and stored across projects.
+- **`.claude/skills/`** — the repo-side INSTALL location that Claude Code auto-discovers at runtime. This is what a recon pass checks (RECON_QUESTIONNAIRE Q6.1). Installing = copying/linking the skill folder from the library into the repo's `.claude/skills/`.
+
+**The Launch-CWD Rule (Run 001, Q6.5):** skills resolve relative to the directory Claude Code is LAUNCHED from, not the repo root the operator has in mind. A skill that activates perfectly from the repo root silently fails to load when the session starts one level up. Therefore:
+
+1. The activation contract presumes the correct launch CWD — state it in the skill's CLAUDE.md if it matters.
+2. Document the project's launch CWD in `RECOVERY.md` so every future session launches consistently.
+3. Recon verifies both (RECON_QUESTIONNAIRE Q6.1 skills-present + Q6.5 launch-CWD).
 
 ---
 
@@ -876,6 +892,19 @@ Read both before authoring:
 
 Both exemplars share the doctrine spine. The structural difference is single vs family. The doctrine difference is none — both follow the same Plan Mode, evidence discipline, operator override, evolution principle.
 
+### Exemplar 3 (June 2026 addition): stark-recon — A Shipped Stark Skill Case Study
+
+The June skill ecosystem produced living instances of this playbook's doctrine — `stark-recon`, `starter-kit-cleaner`, `repo-security` — described here as case studies, not imported (skill instances live repo-side and are audited against this playbook's activation contract, per the F-021 scope split).
+
+**stark-recon** is the cleanest post-playbook Stark Skill:
+
+- **Type test passes cleanly:** the agent guides a read-only ground-truth pass and the operator boots Claudy to execute it — operator stays in the driver's seat (Stark Skill).
+- **Source-content pairing:** the skill AUTOMATES a doctrine doc — `RECON_QUESTIONNAIRE.md` is its source content; the skill is that questionnaire's executable form. This is the Doctrine Pairing Principle applied to skills: doc = instruction set, skill = activation vehicle.
+- **Hard output contract:** a Recon Report at `agent_docs/recon/RECON_<project>_<phase>_<date>.md` in the questionnaire's return format — machine-consumable by the Architect.
+- **Discipline encoded:** read-only, verbatim findings, one pass, filesystem-wins — the skill enforces the doc's rules rather than paraphrasing them.
+
+**What it teaches authors:** when a skill automates a doctrine doc, keep the doc as the single source and make the skill consume it — never fork the content into the skill folder. (Sync obligation: when the doc bumps, the skill re-syncs — see the Evolution Principle.)
+
 ---
 
 ## 15. Authoring A New Skill — Step By Step
@@ -1079,15 +1108,15 @@ A skill that elevates a generalist Claude Code agent into a specialist designer.
 
 Activation may be operator-initiated when entering design work.
 
-**Stitch Prompting Discipline (for Designer Agents)**
+**Token-Driven HTML Screen Discipline (for Designer Agents)**
 
-A skill for prompting Stitch (or similar UI generation tools) effectively. Defines:
-- Chunking rules (how to break complex UIs into prompts Stitch can handle)
-- Iteration patterns (when to refine vs restart)
-- Output format expectations
-- Quality gates before showing operator
+A skill for building screens per the Canonical Page Method (DESIGNER_PLAYBOOK). Defines:
+- Token-inheritance rules (screens consume `globals.css`/`.scss` variables — zero hardcoded colors)
+- The Canonical Page Method (lock ONE canonical screen at an operator gate, then clone-and-adapt the rest)
+- The render loop (HTML → Playwright PNG, light + dark, at the required breakpoints)
+- Quality gates before showing operator (token-only markup verified by grep; both themes rendered; canonical parity)
 
-Activation triggered when the agent is asked to prompt Stitch for a UI.
+Activation triggered when the Designer Agent is asked to produce screens.
 
 ### Authoring An Agent Skill
 
@@ -1103,11 +1132,20 @@ The fundamentals — two-file core, v2 format, folder layout, evolution principl
 
 ---
 
+## Cross-References (Factory Doctrine)
+
+- **`FFM_PLAYBOOK.md` §11** — the FFM's `skills/` authoring guide; every FFM carries a `stark-frontend-first` skill instance governed by this playbook's contract.
+- **`RECON_QUESTIONNAIRE.md` §6** — recon-time skill checks: Q6.1 (skills present at `.claude/skills/`, resolved from the launch CWD) + Q6.5 (launch-CWD documentation).
+- **`DESIGNER_PLAYBOOK.md`** — the method behind the Token-Driven HTML Screen Discipline example (§2, §16).
+
+---
+
 ## 17. Version History
 
 | Version | Date | Change |
 |---------|------|--------|
 | 1.0 | 2026-05-05 | Initial Playbook. Defines Stark Skills and Agent Skills. Establishes two-file core (CLAUDE.md + SKILL.md). Mandates Anthropic Skills v2 format for SKILL.md. Specifies single skill and family skill structures. Names eight anti-patterns from prior authoring history. Identifies Cloud Deployment Skills (family) and Supabase Migration Skill (single, most complex) as structural exemplars. Includes inline excerpt of v2 format with reference to Anthropic's official spec. Codifies activation flow, Plan Mode, operator override, evidence discipline, evolution principle. Audience: Generals (DevOps, Architects, Designers). |
+| 1.1 | 2026-07-08 | **Wave 3 (audit sync).** "Stitch Prompting Discipline" example replaced with "Token-Driven HTML Screen Discipline" per the Canonical Page Method — §2 example bullet + the full §16 Agent Skill spec (F-002/F-037). §7 gained "Where Skills Live + The Launch-CWD Rule": `_SKILLS/` = authoring library vs `.claude/skills/` = repo-side install Claude Code auto-discovers; skills resolve from the LAUNCH directory (Run 001 Q6.5); launch CWD documented in RECOVERY.md; convention reconciled with RECON_QUESTIONNAIRE Q6.1/Q6.5 (F-037). §14 gained Exemplar 3: stark-recon case study + the June ecosystem (stark-recon, starter-kit-cleaner, repo-security) — described, not imported (F-021 scope split honored); teaches the doc-as-source / skill-as-vehicle pairing rule. Outbound Cross-References section added: FFM_PLAYBOOK §11, RECON_QUESTIONNAIRE §6, DESIGNER_PLAYBOOK (F-035 family — outbound-zero ended). Standard header block (F-018); closing label de-versioned. |
 
 ---
 
@@ -1125,4 +1163,4 @@ Skills are force multipliers. A bad skill is a force divider. The difference is 
 
 ---
 
-🛡️ *End of Playbook v1.0.*
+🛡️ *End of Playbook.*

@@ -1,7 +1,8 @@
 # TESTING PLAYBOOK
 
-> **Version:** 2.0
-> **Date:** 2026-05-11
+> **Version:** 2.1 · **Date:** 2026-07-08 · **Status:** Active
+> **Tier:** 3 — Build Methodology · **Pairs with:** STARTER_KIT_HANDBOOK, SOFTWARE_FACTORY_PLAYBOOK, FFM_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, RECON_QUESTIONNAIRE
+
 > **Author:** Architect (Claude) — synthesis of v1.0 (StarkReads, 2026-05-03) + Dockbloxx field notes (Blocks 2/3/4, May 8–11)
 > **Origin:** Distilled from two production Next.js apps:
 >
@@ -9,6 +10,23 @@
 > - Dockbloxx (Headless WooCommerce) — REST + Stripe + Playwright, 182 tests across 4 layers
 >   **Purpose:** Reusable recipe for adding a complete testing strategy to any Next.js application with **any** backend (SDK-mediated like Supabase, or REST-mediated like WooCommerce, or both)
 >   **Prerequisite:** A working Next.js App Router app. Stripe, Supabase, and external REST APIs are all optional — the patterns adapt.
+
+---
+
+## Where This Doc Sits (Factory Cross-References)
+
+This is the factory's **testing bible** — the single source for test doctrine. It connects to the rest of the stack as follows:
+
+**This doc consumes:**
+
+- `STARTER_KIT_HANDBOOK.md` — the kit's actual test runner, configs, and script wiring are the ground truth this playbook's patterns run on (and per recon doctrine: verify the runner on disk — RECON_QUESTIONNAIRE Q1.7 — never trust a doc's claim about it).
+- `RECON_QUESTIONNAIRE.md` — recon-time verification checks; see also §3.8 below for the run-verification rituals promoted from its §12.
+
+**This doc is executed by** (the factory's testing phases point here):
+
+- `SOFTWARE_FACTORY_PLAYBOOK.md` Phase 8 (Integration & Testing)
+- `FFM_PLAYBOOK.md` `verification/` guides (PHASE_GATES, BUILD_CHECKLIST)
+- `FRONTEND_BUILD_PHASE_PLAYBOOK.md` §9 (UI Phase Completion Checklist)
 
 ---
 
@@ -60,6 +78,7 @@ v1.0's specific patterns (Supabase chain mock, Stripe wrapper-mock, E2E user lif
 - 3.5 Limits of seed-and-wait
 - 3.6 Skip-and-document as a Factory pattern
 - 3.7 The strict-vs-lenient validator pair pattern
+- 3.8 Run-verification rituals (promoted from Run 001)
 
 **Part 4 — Backend Examples (deep appendix)**
 
@@ -798,6 +817,26 @@ This pattern appears in:
 - **API versions** — v2 (strict) vs v1 (legacy permissive).
 
 In every case, "one function with a flag" is the wrong shape. Two functions with a shared core is the right shape.
+
+---
+
+## 3.8 Run-verification rituals (promoted from Run 001)
+
+Three verification disciplines earned during Cyber Pharma v1 Run 001 (lessons L17, L25, L26). They were first codified as recon-time checks (RECON_QUESTIONNAIRE §12); their canonical doctrine home is here.
+
+### Grep-verifiable gates run their grep at close (L17)
+
+"Sample-check one file, then trust the rest" is brittle — in Run 001 it hid five numbered-color sites in shadcn primitives until close-out panic. For any gate with a grep-verifiable predicate (no numbered colors, no `user_metadata` authz reads, no forbidden imports), the grep RUNS as a standard step when the stage closes. Sample-then-trust is disallowed for these gates.
+
+### Clear derived caches between deletion batches (L25)
+
+Stale `.next/types/validator.ts` references to deleted routes produce false-failure noise indistinguishable from real orphaned imports. Between deletion batches, `rm -rf .next` before the `tsc` smoke check. Generalized: when a build tool derives state from source, clear the derived state before re-verifying a structural change.
+
+### Predict from a fresh baseline, not history (L26)
+
+Before a destructive change, run the test suite FRESH and predict the after-state from that run — a prior session's log was 3 tests behind reality in Run 001. Historical counts are hearsay; the baseline is whatever passes right now.
+
+> Seam-check note: these rituals complement Principle 1.3 (tests that pass for the wrong reason) — all three exist because a check that *appears* to pass on stale state is worse than no check.
 
 ---
 
@@ -1690,4 +1729,14 @@ await Promise.race([
 
 ---
 
-**END OF TESTING PLAYBOOK v2.0 DRAFT**
+## Version History
+
+| Version | Date | Changes |
+|---|---|---|
+| 1.0 | 2026-05-03 | Initial playbook — four-layer testing strategy codified from StarkReads (Subscription v1: Supabase + Stripe, 136 tests across 3 layers). |
+| 2.0 | 2026-05-11 | Backend-agnostic generalization: layered principles-then-appendices architecture, REST fetch-mock patterns alongside Supabase chain mocks, Stripe wrapper-vs-constructor decision tree, fixture discovery, diagnostic principles, companion artifacts (CHANGELOG / SECURITY_FINDINGS / CLEANUP_BACKLOG). Synthesized with Dockbloxx field notes (182 tests across 4 layers). Tail carried a stale "DRAFT" label despite operating as doctrine (F-036). |
+| 2.1 | 2026-07-08 | **Wave 3 (audit sync).** Status resolved: "DRAFT" tail label dropped — the doc has operated as doctrine since May (F-036); this Version History table added (D-018). Isolation ended (F-035): "Where This Doc Sits" section added — outbound refs to STARTER_KIT_HANDBOOK (runner/config ground truth) + RECON_QUESTIONNAIRE (Q1.7), inbound executors named (SFP Phase 8, FFM verification/, FRONTEND_BUILD_PHASE §9 — their pointers to here landed in SFP v1.2 / BUILD_PHASE v1.2.1; FFM verification-guide pointer queued). §3.8 added: run-verification rituals L17/L25/L26 promoted from RECON_QUESTIONNAIRE §12 — canonical doctrine home is now here, written at principle level (RECON keeps the recon-time executable form; its pointer-back is a queued touch). Standard header block (F-018). Content otherwise untouched. |
+
+---
+
+**END OF TESTING PLAYBOOK**

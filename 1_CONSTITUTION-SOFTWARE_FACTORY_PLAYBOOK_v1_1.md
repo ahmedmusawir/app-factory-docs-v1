@@ -1,11 +1,11 @@
 # SOFTWARE FACTORY PLAYBOOK
 
+> **Version:** 1.2 · **Date:** 2026-07-07 · **Status:** Active
+> **Tier:** 1 — Constitution · **Pairs with:** APP_FACTORY_BLUEPRINT, DESIGNER_PLAYBOOK, TESTING_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK
+
 > **Stark Industries Software Factory**
 > *The master guide to building production-ready applications with AI assistance.*
-
-**Version:** 1.1
-**Last Updated:** May 31, 2026
-**Born from:** Cyberize Run 001 — operator's strategic insight on instruction-plus-example pairing
+> **Born from:** Cyberize Run 001 — operator's strategic insight on instruction-plus-example pairing
 
 ---
 
@@ -40,11 +40,11 @@ This is a **disciplined factory** where:
 - **Manuals** provide the institutional knowledge and patterns
 
 ```
-┌─────────────────────────────────────────────────────────────────────────────┐
+┌─────────────────────────────────────────────────────────────────────────────┐
 │                    STARK SOFTWARE FACTORY MODEL                              │
 └─────────────────────────────────────────────────────────────────────────────┘
 
-    ┌──────────────────────────────────────────────────────────────────┐
+    ┌──────────────────────────────────────────────────────────────────┐
     │                        HUMAN (ARCHITECT)                          │
     │                                                                    │
     │   • Defines user stories and acceptance criteria                  │
@@ -55,8 +55,8 @@ This is a **disciplined factory** where:
     └────────────────────────────┬─────────────────────────────────────┘
                                  │
                                  │ SPEC + CONSTRAINTS
-                                 â–¼
-    ┌──────────────────────────────────────────────────────────────────┐
+                                 ▼
+    ┌──────────────────────────────────────────────────────────────────┐
     │                         AI (BUILDER)                              │
     │                                                                    │
     │   • Implements features according to spec                         │
@@ -67,8 +67,8 @@ This is a **disciplined factory** where:
     └────────────────────────────┬─────────────────────────────────────┘
                                  │
                                  │ REFERENCES
-                                 â–¼
-    ┌──────────────────────────────────────────────────────────────────┐
+                                 ▼
+    ┌──────────────────────────────────────────────────────────────────┐
     │                    MANUALS (KNOWLEDGE BASE)                       │
     │                                                                    │
     │   • UI-UX-BUILDING-MANUAL.md                                      │
@@ -109,11 +109,11 @@ This is true for human architects authoring docs and reading playbooks. It is ev
 | Playbook (Instruction) | Paired Example (Concrete) |
 |---|---|
 | `HANDOFF_PACKAGE_PLAYBOOK.md` | `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/` |
-| `FRONTEND_FIRST_PLAYBOOK_v1.1.md` | Cyberize Agentic Automation build (Run 001) |
-| `UI-UX-BUILDING-MANUAL_v1.1.md` | Cyberize screenshots in `_design/` + built screens |
-| `AUTH_MANUAL_v1.1.md` | Starter kit's working auth implementation |
-| `APP_ARCHITECTURE_MANUAL_v1.1.md` | Starter kit's actual folder structure + Run 001 module |
-| `SOFTWARE_FACTORY_PLAYBOOK_v1.1.md` | The Cyberize Run 001 retrospective + all surviving doctrine |
+| `FRONTEND_FIRST_PLAYBOOK.md` | Cyberize Agentic Automation build (Run 001) |
+| `UI-UX-BUILDING-MANUAL.md` | Cyberize screenshots in `_design/` + built screens |
+| `AUTH_MANUAL.md` | Starter kit's working auth implementation |
+| `APP_ARCHITECTURE_MANUAL.md` | Starter kit's actual folder structure + Run 001 module |
+| `SOFTWARE_FACTORY_PLAYBOOK.md` | The Cyberize Run 001 retrospective + all surviving doctrine |
 
 ### Discipline When Authoring New Playbooks
 
@@ -173,27 +173,27 @@ This keeps playbook and example in sync. They evolve together. The pairing stays
 Every feature follows this sequence:
 
 ```
-┌────────────────────────────────────────────────────────────────────────────┐
+┌────────────────────────────────────────────────────────────────────────────┐
 │                        BUILD PHASE SEQUENCE                                 │
 └────────────────────────────────────────────────────────────────────────────┘
 
   PHASE 1          PHASE 2          PHASE 3          PHASE 4
   ────────         ────────         ────────         ────────
-  Planning    ──â–º  Design      ──â–º  Database    ──â–º  API
+  Planning    ──►  Design      ──►  Database    ──►  API
   & Stories        System           Schema           Services
 
        │                                                  │
        │                                                  │
-       â–¼                                                  â–¼
+       ▼                                                  ▼
 
   PHASE 5          PHASE 6          PHASE 7          PHASE 8
   ────────         ────────         ────────         ────────
-  State       ──â–º  UI          ──â–º  Auth &      ──â–º  Integration
+  State       ──►  UI          ──►  Auth &      ──►  Integration
   Management       Implementation   RBAC             & Testing
 
                                                           │
                                                           │
-                                                          â–¼
+                                                          ▼
 
                                                      PHASE 9
                                                      ────────
@@ -212,6 +212,20 @@ Every feature follows this sequence:
 | UI | Can't add auth without having something to protect |
 | Auth | Can't test without all pieces in place |
 | Testing | Can't deploy untested code |
+
+### Phase Vocabulary — One Canonical Map
+
+The factory uses one canonical project-phase map: the **APP_FACTORY_BLUEPRINT lifecycle** (Phase 0 — Recon → Phase 5 — Deployment). This playbook's 9 phases are the **execution breakdown** within that lifecycle — they do not compete with it. FFM "Sub-Phases" nest inside individual build phases. Nothing is renumbered by this note.
+
+| This Playbook (execution breakdown) | Blueprint Lifecycle (canonical) |
+|---|---|
+| Phase 1 — Planning & User Stories | Phase 1 — Ignition |
+| Phase 2 — Design System | Phase 2 — Design |
+| Phase 3 — Database Schema | Phase 3 — Engineering (spec) → Phase 4 — Fabrication (build) |
+| Phases 4–8 — API / State / UI / Auth / Testing | Phase 4 — Fabrication |
+| Phase 9 — Deployment | Phase 5 — Deployment |
+
+> **Phase 0 — Recon precedes everything:** no Phase 1 planning until the target repo is ground-truthed per `RECON_QUESTIONNAIRE.md` and the Recon Report is consumed (see APP_FACTORY_BLUEPRINT, Phase 0).
 
 ---
 
@@ -302,63 +316,27 @@ Transform a feature idea into actionable user stories with clear acceptance crit
 
 ### Objective
 
-Create or collect UI designs that define the visual implementation.
+Lock the design system and screen set that define the visual implementation.
 
-### Design Workflow
+### Design Execution Is Owned By The Designer
 
-```
-┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│   User Story    │ ──â–º │  Google Stitch  │ ──â–º │  Design Output  │
-│                 │     │  or Figma       │     │  (Image + HTML) │
-└─────────────────┘     └─────────────────┘     └─────────────────┘
-                                                        │
-                                                        â–¼
-                                               ┌─────────────────┐
-                                               │  Design Spec    │
-                                               │  Document       │
-                                               └─────────────────┘
-```
+**Design execution is owned by `DESIGNER_PLAYBOOK.md`** — the token file (`globals.css`/`.scss`, all modes) is the PRIMARY deliverable, and screens are built as token-driven HTML rendered to PNG with Playwright via the **Canonical Page Method** (lock one canonical screen, clone-and-adapt the rest). This playbook does not define a competing design process.
 
-### Design Spec Document
+In summary, Phase 2 runs:
 
-For each screen/component:
-
-```markdown
-## Screen: [Name]
-
-### Layout
-- [Description of layout structure]
-- [Grid/flex usage]
-- [Responsive breakpoints]
-
-### Components Used
-- [ ] Card (shadcn)
-- [ ] Table (shadcn)
-- [ ] Button variants
-- [ ] Custom components needed
-
-### Colors & Typography
-- Background: `bg-slate-50`
-- Headers: `text-4xl font-extrabold`
-- Body: `text-base text-slate-600`
-
-### Interactions
-- Hover states
-- Loading states
-- Empty states
-- Error states
-
-### Reference Images
-- [Link to design image]
-- [Link to exported HTML if available]
-```
+1. Designer receives the approved stories/brief + Tailwind version + token well
+2. Designer locks the token file (all modes) — operator gate
+3. Designer builds the canonical screen: token-driven HTML → Playwright PNG (light + dark) — operator gate
+4. Designer clones-and-adapts the remaining screens; ships style tile + per-screen HTML/PNG + `UI_SPEC.md` + component manifest
 
 ### Deliverables
 
-- [ ] Screen designs for all user stories
-- [ ] Component inventory
-- [ ] Design spec documents
+- [ ] Token file locked (primary deliverable)
+- [ ] Canonical screen approved; full screen set shipped (HTML + PNG)
+- [ ] UI_SPEC.md + component manifest delivered
 - [ ] Responsive breakpoint decisions
+
+**Reference:** `DESIGNER_PLAYBOOK.md`
 
 ---
 
@@ -371,19 +349,19 @@ Design and implement the database schema before any application code.
 ### Schema Design Process
 
 ```
-┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│  User Stories   │ ──â–º │  Identify       │ ──â–º │  Design Tables  │
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│  User Stories   │ ──► │  Identify       │ ──► │  Design Tables  │
 │  + Designs      │     │  Entities       │     │  + Columns      │
 └─────────────────┘     └─────────────────┘     └─────────────────┘
                                                         │
-                                                        â–¼
-┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
-│  Run SQL in     │ â—„── │  Add Indexes    │ â—„── │  Define         │
+                                                        ▼
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│  Run SQL in     │ ◄── │  Add Indexes    │ ◄── │  Define         │
 │  Supabase       │     │  + RLS          │     │  Relationships  │
 └─────────────────┘     └─────────────────┘     └─────────────────┘
                                                         │
-                                                        â–¼
-                                               ┌─────────────────┐
+                                                        ▼
+                                               ┌─────────────────┐
                                                │  Generate TS    │
                                                │  Types          │
                                                └─────────────────┘
@@ -808,6 +786,8 @@ Verify all components work together and meet acceptance criteria.
 - [ ] Bug fixes applied
 - [ ] Performance acceptable
 
+**Reference:** `TESTING_PLAYBOOK.md` — the factory's testing bible: test doctrine, pytest/Jest patterns, verification gates. This phase executes what that playbook defines.
+
 ---
 
 ## 11. Phase 9: Deployment
@@ -914,9 +894,9 @@ Use this template when starting any new feature:
 - [ ] Dependencies identified
 
 ### Phase 2: Design
-- [ ] Screens designed
-- [ ] Components identified
-- [ ] Design spec documented
+- [ ] Token file locked (Designer)
+- [ ] Screen set shipped (HTML + PNG)
+- [ ] UI_SPEC + component manifest documented
 
 ### Phase 3: Database
 - [ ] Schema designed
@@ -1039,10 +1019,10 @@ Use this template when starting any new feature:
 
 The Stark Software Factory Playbook ensures:
 
-âœ… **Predictable** - Same process for every feature  
-âœ… **Maintainable** - Code follows documented patterns  
-âœ… **Scalable** - Architecture supports growth  
-âœ… **Collaborative** - Human architects, AI builders, shared knowledge
+✅ **Predictable** - Same process for every feature  
+✅ **Maintainable** - Code follows documented patterns  
+✅ **Scalable** - Architecture supports growth  
+✅ **Collaborative** - Human architects, AI builders, shared knowledge
 
 **Remember:**
 1. **Plan before you build**
@@ -1057,11 +1037,12 @@ The Stark Software Factory Playbook ensures:
 
 | Version | Date | Changes |
 |---|---|---|
-| 1.1 | 2026-05-31 | Added Section 1.5 (Doctrine Pairing Principle). Born from Cyberize Run 001 operator insight on instruction+example pairing. Fixed UTF-8 encoding artifacts. |
+| 1.2 | 2026-07-07 | **Wave 1 (audit sync).** Standard header block adopted, version/date moved to top (F-018). Phase 2 rewritten to defer to DESIGNER_PLAYBOOK — token file primary, Canonical Page Method; obsolete Stitch/Figma design-spec workflow deleted (F-009, F-002). "Phase Vocabulary" note + mapping table added to §2: Blueprint lifecycle (incl. Phase 0 Recon) is the canonical phase map, these 9 phases are the execution breakdown, FFM Sub-Phases nest inside build phases (F-010). Phase 8 now points to TESTING_PLAYBOOK (F-035). §1.5 pairing-table refs stripped of version suffixes — canonical names only (F-011). Full mojibake sweep incl. 16 invisible U+0090 control chars left behind by the v1.1 "encoding fix" (F-012). §13 Phase-2 checklist aligned to Designer deliverables. |
+| 1.1 | 2026-05-31 | Added Section 1.5 (Doctrine Pairing Principle). Born from Cyberize Run 001 operator insight on instruction+example pairing. Fixed UTF-8 encoding artifacts (incompletely — see 1.2). |
 | 1.0 | 2024-12 | Initial playbook |
 
 ---
 
 *This playbook is part of the Stark Industries Software Factory documentation suite.*
 
-🥄 *App Factory v1.1 doctrine.*
+🥄 *App Factory doctrine.*

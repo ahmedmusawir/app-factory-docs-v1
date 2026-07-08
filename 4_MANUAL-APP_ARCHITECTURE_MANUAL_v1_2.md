@@ -1,11 +1,12 @@
 # APP ARCHITECTURE MANUAL
 
-> **Stark Industries Software Factory**
-> *The definitive guide to building scalable Next.js 15 applications with the App Router.*
+> **Version:** 1.3 · **Date:** 2026-07-08 · **Status:** Active
+> **Tier:** 4 — Reference Manuals · **Pairs with:** STARTER_KIT_HANDBOOK, RECON_QUESTIONNAIRE, AUTH_MANUAL, API_AND_SERVICES_MANUAL, STATE_MANAGEMENT_MANUAL, ECOMMERCE_AND_PAYMENTS_MANUAL
 
-**Version:** 1.2
-**Last Updated:** June 28, 2026
-**Born from:** Cyberize Run 001 — Lesson 7 (page composition) + Lesson 8 (server/client boundary)
+> **Stark Industries Software Factory**
+> *The definitive guide to building scalable Next.js App Router applications.*
+> **Born from:** Cyberize Run 001 — Lesson 7 (page composition) + Lesson 8 (server/client boundary)
+> **Version rule (v1.3):** this manual does not pin the framework version — the repo's `package.json` is the only truth (recon Q1.1). Version-sensitive facts below are labeled with the version they apply to.
 
 ---
 
@@ -31,27 +32,27 @@
 This architecture follows a **monolithic frontend** pattern where a single Next.js application serves as the unified interface for multiple backend services.
 
 ```
-┌─────────────────────────────────────────────────────────────────────────────┐
+┌─────────────────────────────────────────────────────────────────────────────┐
 │                         NEXT.JS APPLICATION                                  │
 │                    (Monolithic Frontend)                                     │
 │                                                                              │
-│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐        │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐        │
 │  │   Public    │  │   Admin     │  │  Customer   │  │    API      │        │
 │  │   Routes    │  │   Portal    │  │   Portal    │  │   Routes    │        │
 │  └─────────────┘  └─────────────┘  └─────────────┘  └─────────────┘        │
 │                                                                              │
 └─────────────────────────────────────────────────────────────────────────────┘
                                     │
-                    ┌───────────────┼───────────────┐
+                    ┌───────────────┼───────────────┐
                     │               │               │
-                    â–¼               â–¼               â–¼
-            ┌─────────────┐ ┌─────────────┐ ┌─────────────┐
+                    ▼               ▼               ▼
+            ┌─────────────┐ ┌─────────────┐ ┌─────────────┐
             │  Supabase   │ │ WooCommerce │ │   Stripe    │
             │  (Auth/DB)  │ │  (Products) │ │ (Payments)  │
             └─────────────┘ └─────────────┘ └─────────────┘
                     │               │               │
-                    â–¼               â–¼               â–¼
-            ┌─────────────┐ ┌─────────────┐ ┌─────────────┐
+                    ▼               ▼               ▼
+            ┌─────────────┐ ┌─────────────┐ ┌─────────────┐
             │  WordPress  │ │  CRM APIs   │ │  Analytics  │
             │  (Content)  │ │ (Future)    │ │  (Future)   │
             └─────────────┘ └─────────────┘ └─────────────┘
@@ -80,7 +81,7 @@ This architecture follows a **monolithic frontend** pattern where a single Next.
 
 | Layer | Technology | Purpose |
 |-------|------------|---------|
-| Framework | Next.js 15 | App Router, SSR, API Routes |
+| Framework | Next.js App Router (verify version per repo — recon Q1.1) | App Router, SSR, API Routes |
 | Language | TypeScript 5 | Type safety |
 | Styling | Tailwind CSS 3.4 | Utility-first CSS |
 | Components | shadcn/ui | Accessible UI primitives |
@@ -290,7 +291,7 @@ src/constants/
 
 ### File-System Based Routing
 
-Next.js 15 App Router uses the file system to define routes:
+The Next.js App Router uses the file system to define routes:
 
 | File | Purpose |
 |------|---------|
@@ -338,7 +339,7 @@ interface Props {
 }
 
 export default async function ProductPage({ params }: Props) {
-  const { slug } = await params;  // Next.js 15: params is a Promise
+  const { slug } = await params;  // Next.js 15+: params is a Promise
   
   const product = await fetchProductBySlug(slug);
   
@@ -372,12 +373,12 @@ export async function generateStaticParams() {
 // etc.
 ```
 
-### Async Route Params (Next.js 15)
+### Async Route Params (Next.js 15+)
 
-**Critical:** In Next.js 15, route params are Promises:
+**Critical:** From Next.js 15 onward, route params are Promises:
 
 ```typescript
-// âœ… CORRECT: Next.js 15
+// ✅ CORRECT: Next.js 15+
 const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params;
   // ...
@@ -385,7 +386,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
 // ❌ WRONG: Old pattern (Next.js 14 and earlier)
 const Page = ({ params }: { params: { slug: string } }) => {
-  const { slug } = params;  // This will NOT work in Next.js 15
+  const { slug } = params;  // This will NOT work on Next.js 15+
   // ...
 };
 ```
@@ -593,22 +594,22 @@ export const AddToCartButton = ({ product }) => {
 ```
 START: What kind of data is this?
 │
-├─â–º Static content (rarely changes)
-│   └─â–º SSG with generateStaticParams()
+├─► Static content (rarely changes)
+│   └─► SSG with generateStaticParams()
 │       Example: Blog posts, product pages
 │
-├─â–º Dynamic but cacheable (changes occasionally)
-│   └─â–º ISR with revalidate
+├─► Dynamic but cacheable (changes occasionally)
+│   └─► ISR with revalidate
 │       Example: Product catalog, pricing
 │       fetch(url, { next: { revalidate: 3600 } })
 │
-├─â–º User-specific or real-time
-│   └─â–º SSR (no caching) or Client-side
+├─► User-specific or real-time
+│   └─► SSR (no caching) or Client-side
 │       Example: Cart, user dashboard
 │       fetch(url, { cache: 'no-store' })
 │
-└─â–º Highly interactive
-    └─â–º Client Component with client-side fetch
+└─► Highly interactive
+    └─► Client Component with client-side fetch
         Example: Search, filters, infinite scroll
 ```
 
@@ -720,10 +721,10 @@ Protect credentials by proxying through API routes:
 ```
 Client Component
       │
-      â–¼
+      ▼
 API Route (src/app/api/products/route.ts)
       │ (credentials added here)
-      â–¼
+      ▼
 External API (WooCommerce, Stripe, etc.)
 ```
 
@@ -753,24 +754,24 @@ export async function GET(request: NextRequest) {
 ### State Synchronization
 
 ```
-┌─────────────────────────────────────────────────────────────────┐
+┌─────────────────────────────────────────────────────────────────┐
 │                     SERVER STATE                                 │
 │   (Database, External APIs)                                      │
 │   Source of truth for persistent data                            │
 └─────────────────────────────────────────────────────────────────┘
                               │
-                    ┌─────────┴─────────┐
+                    ┌─────────┴─────────┐
                     │                   │
-                    â–¼                   â–¼
-        ┌───────────────────┐ ┌───────────────────┐
+                    ▼                   ▼
+        ┌───────────────────┐ ┌───────────────────┐
         │  Server Component │ │    API Route      │
         │  (Initial fetch)  │ │  (Mutations)      │
         └───────────────────┘ └───────────────────┘
                     │                   │
                     └─────────┬─────────┘
                               │
-                              â–¼
-┌─────────────────────────────────────────────────────────────────┐
+                              ▼
+┌─────────────────────────────────────────────────────────────────┐
 │                     CLIENT STATE                                 │
 │   (Zustand stores)                                               │
 │   Optimistic updates, UI state                                   │
@@ -1125,7 +1126,7 @@ revalidateTag('products');
 
 ```typescript
 // Import only what you need
-import { Button } from '@/components/ui/button';  // âœ…
+import { Button } from '@/components/ui/button';  // ✅
 import * as UI from '@/components/ui';            // ❌ Imports everything
 
 // Use barrel exports wisely
@@ -1158,8 +1159,10 @@ WOO_CONSUMER_SECRET=cs_xxx
 
 ### Route Protection
 
+> **File-name note (version-sensitive):** Next.js 16 kits wire this via **`src/proxy.ts`** (the kit's current convention — see AUTH_MANUAL's middleware section); earlier versions use `src/middleware.ts` as shown below. **Verify which file your repo uses on disk (recon Q2.5)** — the pattern is the same, the filename is not.
+
 ```typescript
-// src/middleware.ts
+// src/middleware.ts (src/proxy.ts on Next 16 kits — see note above)
 
 import { createServerClient } from '@supabase/ssr';
 import { NextResponse, type NextRequest } from 'next/server';
@@ -1479,7 +1482,7 @@ When designing utility modules:
 
 ### Cross-Reference
 
-- **`STARTER_KIT_HANDBOOK_v1.0.md` Section "Build & Framework Notes"** — server/client boundary details
+- **`STARTER_KIT_HANDBOOK.md` Section "Build & Framework Notes"** — server/client boundary details
 
 ---
 
@@ -1488,6 +1491,7 @@ When designing utility modules:
 | Version | Date | Changes |
 |---|---|---|
 | 1.2 | 2026-06-28 | Re-pointed the §11 co-location Reference Example from the deleted `/demo` route to the live `(admin)/admin-portal` page+content pair (preserve lesson, swap actor). Kit Hardening Gate 10. |
+| 1.3 | 2026-07-08 | **Wave 4 (audit sync).** Framework version de-pinned (F-038 — this manual was the exact offender RECON §1 was written about): subtitle + stack table + §3 intro now say "Next.js App Router"; version-sensitive facts labeled ("Next.js 15+" for params-as-Promise); header carries the version rule — `package.json` is the only truth (recon Q1.1). §10 Route Protection gains the `src/middleware.ts` vs `src/proxy.ts` (Next 16 kit convention) note with a verify-on-disk pointer (recon Q2.5). Encoding repaired: 21 mojibake sequences (▼/►/✅) + 17 invisible U+0090 C1 controls — a Gate-10 doc whose v1.1 changelog claimed the UTF-8 fix; F-012 systemic diagnosis reconfirmed a third time (the editing pipeline re-corrupts on save). Handbook cross-ref canonical (F-032). Standard header (F-018). |
 | 1.1 | 2026-05-31 | Added Section 11 (Page Composition Pattern), Section 12 (Server/Client Boundary). Born from Cyberize Run 001 Lessons 7, 8. Fixed UTF-8 encoding artifacts. |
 | 1.0 | (original) | Initial manual |
 

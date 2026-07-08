@@ -1,7 +1,21 @@
 # ECOMMERCE AND PAYMENTS MANUAL
 
-> **Stark Industries Software Factory**  
-> *The E-commerce Module: Stripe integration, WooCommerce backend, cart logic, and checkout flows.*
+> **Version:** 1.1 · **Date:** 2026-07-08 · **Status:** Active
+> **Tier:** 4 — Reference Manuals · **Pairs with:** STRIPE_SUBSCRIPTIONS_PLAYBOOK, STATE_MANAGEMENT_MANUAL, API_AND_SERVICES_MANUAL, APP_ARCHITECTURE_MANUAL
+
+> **Stark Industries Software Factory**
+> *E-commerce doctrine: Stripe integration, WooCommerce backend, cart logic, and checkout flows.*
+
+---
+
+## Scope Declaration (read first)
+
+**This manual covers ONE commerce shape: headless WooCommerce backend + Stripe ONE-TIME payments** (the Dockbloxx pattern — PaymentIntents, carts, checkout, orders, coupons).
+
+- **Recurring billing / subscriptions** → `STRIPE_SUBSCRIPTIONS_PLAYBOOK.md` (Next.js + Supabase; the territory pair — zero overlap by design).
+- **Supabase-native commerce** (products/orders in Supabase instead of WooCommerce) → not yet covered; extend this manual's service-layer patterns rather than assuming WooCommerce shapes apply.
+
+The architecture patterns (Order-First, webhook verification, checkout store) generalize; the WooCommerce API shapes do not.
 
 ---
 
@@ -155,7 +169,9 @@ if (!process.env.STRIPE_SECRET_KEY) {
 }
 
 export const stripe = new Stripe(process.env.STRIPE_SECRET_KEY, {
-  apiVersion: '2023-10-16', // Use latest stable version
+  // apiVersion: match the version your repo's Stripe SDK types expect —
+  // verify per repo (package.json + the kit's existing stripe.ts), never
+  // copy a pinned date from doctrine (F-038 stale-pin lesson).
   typescript: true,
 });
 ```
@@ -1768,6 +1784,24 @@ WOOCOM_CONSUMER_SECRET=cs_xxx                    # NEVER expose
 - [ ] Set up Stripe Radar rules
 - [ ] Configure email receipts
 - [ ] Set up dispute notifications
+
+---
+
+## Cross-References (Factory Doctrine)
+
+- **`STRIPE_SUBSCRIPTIONS_PLAYBOOK.md`** — the territory pair: recurring billing, tiers, webhooks-as-sync (D-016 money-truth model).
+- **`STATE_MANAGEMENT_MANUAL.md`** — the checkout store's Zustand doctrine.
+- **`API_AND_SERVICES_MANUAL.md`** — the service-layer rules these integrations run on (incl. wire-format conventions).
+- **`TESTING_PLAYBOOK.md`** — payment-flow testing (Stripe boundary-stop pattern, webhook tests).
+
+---
+
+## Version History
+
+| Version | Date | Changes |
+|---|---|---|
+| 1.0 | (original, date unknown) | Initial manual: payment architecture, Stripe setup, PaymentIntent flow, checkout, orders, cart logic, checkout store, coupons, webhooks, testing, security checklist. Unversioned until the 2026-07 audit. |
+| 1.1 | 2026-07-08 | **Wave 4 (audit sync).** Scope Declaration added at top — this manual = headless WooCommerce + Stripe ONE-TIME commerce; recurring → STRIPE_SUBSCRIPTIONS_PLAYBOOK; Supabase-native commerce = extend, don't assume (F-040 undeclared-jurisdiction fix; "THE E-commerce Module" framing dropped). Self-contradicting Stripe pin removed (`apiVersion: '2023-10-16' // Use latest`) → verify-per-repo note (F-038 pattern). Cross-References section (F-035); standard header (F-018); this history table (D-018). |
 
 ---
 

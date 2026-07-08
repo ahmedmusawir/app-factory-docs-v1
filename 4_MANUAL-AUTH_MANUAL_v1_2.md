@@ -1,11 +1,12 @@
 # AUTHENTICATION & SUPABASE INTEGRATION MANUAL
 
-**Project:** Stark SaaS Starter Kit
-**Version:** 1.2
-**Last Updated:** June 28, 2026
-**Born from:** Cyberize Run 001 — Lesson 2 (redundant authService)
-**Purpose:** Complete guide for authentication, authorization, and Supabase integration patterns
-**Changelog (1.2):** Removed the deleted `POST /api/auth/superadmin-add-user` route (creation is now via the `addMember`/`addUser` server actions); documented the Mark IV `handle_new_user` trigger that applies the metadata `role` + `full_name` at creation. Kit Hardening Gate 10.
+> **Version:** 1.3 · **Date:** 2026-07-08 · **Status:** Active
+> **Tier:** 4 — Reference Manuals · **Pairs with:** STARTER_KIT_HANDBOOK, DATABASE_MANUAL, API_AND_SERVICES_MANUAL, FRONTEND_FIRST_PLAYBOOK, RECON_QUESTIONNAIRE, STATE_MANAGEMENT_MANUAL
+
+> **Project:** Stark SaaS Starter Kit
+> **Born from:** Cyberize Run 001 — Lesson 2 (redundant authService)
+> **Purpose:** Complete guide for authentication, authorization, and Supabase integration patterns
+> **Role doctrine (v1.3):** the `user_roles` TABLE is the single source of truth for authorization. See "Role-Based Access Control" + the Version History for the F-042 correction.
 
 ---
 
@@ -103,9 +104,9 @@ If you're unsure whether a service is legitimate, surface to the operator BEFORE
 
 ### Cross-Reference
 
-- **`STARTER_KIT_HANDBOOK_v1.0.md` Section "Auth — Already Wired"** — full kit auth inventory
-- **`COMPONENT_REGISTRY_v1.0.md` Section "Auth Components"** — LoginForm, RegisterForm, AuthTabs primitives
-- **`FRONTEND_FIRST_PLAYBOOK_v1.1.md` Section "0. Pre-Authoring Kit Audit"** — the audit step that catches this
+- **`STARTER_KIT_HANDBOOK.md` Section "Auth — Already Wired"** — full kit auth inventory
+- **`COMPONENT_REGISTRY.md` Section "Auth Components"** — LoginForm, RegisterForm, AuthTabs primitives
+- **`FRONTEND_FIRST_PLAYBOOK.md` Section "0. Pre-Authoring Kit Audit"** — the audit step that catches this
 
 ---
 
@@ -151,7 +152,7 @@ If you're unsure whether a service is legitimate, surface to the operator BEFORE
 2. **Session persistence** - Middleware keeps sessions alive
 3. **Role-based access** - Three-tier role system (superadmin, admin, member)
 4. **Hard reloads** - Force full page reload after auth changes to sync server/client state
-5. **Metadata-driven roles** - Roles stored in `user_metadata`, not separate tables
+5. **Table-driven roles** - The `user_roles` table is the single source of truth for authorization (kit: `supabase/setup.sql`), resolved server-side via the kit's `get-user-role.ts`. `user_metadata` may carry a role ONLY as a creation-time transport through the protected admin channel — authorization is NEVER read from it.
 
 ---
 
@@ -407,7 +408,7 @@ window.location.reload();
    ↓
 4. API route calls supabase.auth.signUp() with user_metadata
    ↓
-5. Supabase creates user with default role (is_qr_member: 1)
+5. Supabase creates user; the `handle_new_user()` trigger applies the default role (member) INTO `user_roles` from the creation-time metadata transport
    ↓
 6. User receives confirmation email (if enabled)
    ↓
@@ -654,6 +655,8 @@ into `user_metadata` (`role`, `full_name`) and applied at creation by the **Mark
 
 **File:** `src/store/useAuthStore.ts`
 
+> ⚠️ **Legacy-shape advisory (v1.3):** the store snippets in this section (and in "Common Patterns" Pattern 4 + "Troubleshooting" below) show a **legacy shape** — `is_qr_*` flags read from `user_metadata`, QR-era naming. The current kit resolves roles from the **`user_roles` table** via `get-user-role.ts`, and the store's actual shape differs. **Verify the store on disk before consuming (recon Q3.6); do not copy these snippets into new code.** Client role flags are display hints only — never authorization (that is server-side, from the table). Full sample resync against the kit is a queued kit-verification touch.
+
 ### Store Structure
 
 ```typescript
@@ -878,56 +881,17 @@ await protectPage(["member", "admin", "superadmin"]);
 
 ### Role Definition
 
-**File:** `src/utils/get-user-role.ts`
+**File:** `src/utils/get-user-role.ts` — the kit's canonical role-resolution path.
 
 ```typescript
 export type AppRole = "superadmin" | "admin" | "member";
-
-export function getUserRole(user: any): AppRole | null {
-  if (!user?.user_metadata) return null;
-
-  const {
-    is_qr_superadmin,
-    is_qr_admin,
-    is_qr_member,
-  } = user.user_metadata;
-
-  // Check in priority order
-  if (
-    is_qr_superadmin === 1 ||
-    is_qr_superadmin === true ||
-    is_qr_superadmin === "1" ||
-    is_qr_superadmin === "true"
-  ) {
-    return "superadmin";
-  }
-
-  if (
-    is_qr_admin === 1 ||
-    is_qr_admin === true ||
-    is_qr_admin === "1" ||
-    is_qr_admin === "true"
-  ) {
-    return "admin";
-  }
-
-  if (
-    is_qr_member === 1 ||
-    is_qr_member === true ||
-    is_qr_member === "1" ||
-    is_qr_member === "true"
-  ) {
-    return "member";
-  }
-
-  return null;
-}
 ```
 
-**Supported Value Types:**
-- Numeric: `1` / `0`
-- Boolean: `true` / `false`
-- String: `"1"` / `"0"` / `"true"` / `"false"`
+**How resolution works (doctrine, not a code copy):** `get-user-role.ts` resolves the authenticated user's role **from the `user_roles` table** (server-side). One row per user; the row is written at creation by the Mark IV `handle_new_user()` trigger and is LOCKED to the admin path afterward.
+
+> 📁 **The kit file on disk is the ground truth.** Read `src/utils/get-user-role.ts` and `supabase/setup.sql` in the repo you are working on (recon Q3.2/Q5.3). This manual intentionally does not carry an implementation copy that can drift — an earlier edition of this section showed a `user_metadata`-reading implementation that no longer matches the kit (F-042; corrected v1.3).
+
+**⛔ FORBIDDEN:** any `getUserRole` variant (or ad-hoc check) that reads roles from `user_metadata` for authorization — that is the recon Q3.4 smell.
 
 ---
 
@@ -954,30 +918,17 @@ await protectPage(["admin", "superadmin"]);
 
 ---
 
-### User Metadata Schema
+### Where Roles Live (v1.3 — the F-042 correction)
 
-Stored in Supabase `auth.users.user_metadata`:
+**Source of truth: the `user_roles` table** (kit: `supabase/setup.sql`) — one row per user; authorization is resolved from it server-side via `get-user-role.ts`; post-creation role changes go through the locked admin path only.
 
-```typescript
-{
-  name: string;                    // User's display name
-  is_qr_superadmin: 0 | 1;        // Superadmin flag
-  is_qr_admin: 0 | 1;             // Admin flag
-  is_qr_member: 0 | 1;            // Member flag
-}
-```
+**Creation-time transport:** the admin creation flow (`addMember`/`addUser` server actions, service-role client) writes the intended role into `user_metadata` so the Mark IV `handle_new_user()` trigger can apply it INTO `user_roles` at creation. That is **transport, not storage** — after the trigger fires, the table row is the only thing that matters.
 
-**Best Practice:** Only one role flag should be `1`, others should be `0`.
+**⛔ FORBIDDEN:**
+- Reading `user_metadata` for ANY authorization decision, client or server (recon Q3.4 smell).
+- Writing role values to metadata outside the protected admin channel.
 
-**Default for new signups:**
-```typescript
-{
-  name: "John Doe",
-  is_qr_superadmin: 0,
-  is_qr_admin: 0,
-  is_qr_member: 1
-}
-```
+**Hardening note:** a kit-side hardening ticket exists for the creation-time transport channel; apply the kit's current hardening when building on it. This manual deliberately does not document the vector.
 
 ---
 
@@ -1272,6 +1223,8 @@ export default async function ProtectedPage() {
 
 ### Pattern 4: Role-Based UI (Client)
 
+> ⚠️ Legacy-shape snippet (`is_qr_*` store flags) — see the advisory in "Client-Side Auth". Client role flags are display hints only; authorization stays server-side (`user_roles` via `protectPage`).
+
 ```typescript
 "use client";
 
@@ -1464,7 +1417,7 @@ const supabase = await createClient();
 **Fixes:**
 1. Only use `protectPage()` in layouts, not in /auth routes
 2. Exclude /auth from middleware matcher
-3. Check user has correct role in metadata
+3. Check the user's row in `user_roles` (did the creation-time transport apply at signup?)
 
 ---
 
@@ -1488,14 +1441,14 @@ const supabase = await createClient();
 - Access denied despite correct metadata
 
 **Causes:**
-1. Metadata not set during signup
-2. Metadata format incorrect
-3. Role flag is string instead of number
+1. No row in `user_roles` for the user (the `handle_new_user()` trigger didn't fire, or the user pre-dates it)
+2. Creation-time metadata transport missing/malformed, so the trigger applied nothing
+3. Role value in the table not one of the expected values
 
 **Fixes:**
-1. Check user metadata in Supabase dashboard
-2. Ensure flags are numeric (0 or 1)
-3. `getUserRole()` handles multiple formats, but prefer numbers
+1. Check the user's row in the `user_roles` table in the Supabase dashboard
+2. Verify the `handle_new_user()` trigger exists (recon Q5.3) and the creation flow used the protected channel
+3. Read `src/utils/get-user-role.ts` on disk for the resolution behavior — the kit file is the ground truth
 
 ---
 
@@ -2218,6 +2171,17 @@ This authentication system provides:
 4. Add rate limiting
 5. Implement audit logging
 6. Consider OAuth providers
+
+---
+
+## Version History
+
+| Version | Date | Changes |
+|---|---|---|
+| 1.0 | (original, date unknown) | Initial manual: Supabase clients, auth flows, API routes, Zustand store, protectPage RBAC, session middleware, components, patterns, troubleshooting, security practices. |
+| 1.1 | Jun 2026 | Run 001 era updates (service-layer antibody groundwork). |
+| 1.2 | 2026-06-28 | Removed the deleted `POST /api/auth/superadmin-add-user` route (creation via `addMember`/`addUser` server actions); documented the Mark IV `handle_new_user` trigger applying the metadata `role` + `full_name` at creation. Kit Hardening Gate 10. |
+| 1.3 | 2026-07-08 | **Wave 4 — the F-042 role-doctrine correction.** Role storage doctrine corrected everywhere it lived: the `user_roles` TABLE is the single source of truth (kit `supabase/setup.sql`; server-side resolution via `get-user-role.ts`); the v1.2 "Metadata-driven roles — NOT separate tables" philosophy line was FALSE against the kit's own filesystem (RECON_WAVE0 Q1 ground-truth). Key Principle #5 rewritten; "User Metadata Schema" section → "Where Roles Live" (table home + creation-time-transport nuance + ⛔ never read authz from `user_metadata`, recon Q3.4); §8 metadata-reading `getUserRole` sample replaced with the canonical-path description + read-the-kit-on-disk pointer (no drifting code copies — D-015); legacy `is_qr_*` (QR-era) store/pattern snippets marked with advisories; troubleshooting realigned to the table model; registration flow wording corrected. Kit hardening ticket referenced without documenting the vector. Canonical cross-refs (F-032/F-011); standard header (F-018). Full code-sample resync vs the kit = queued kit-verification touch. |
 
 ---
 

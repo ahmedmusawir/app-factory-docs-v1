@@ -1,6 +1,9 @@
 # DESIGNER AGENT PLAYBOOK
 
-> **AI App Factory — Stark Industries**
+> **Version:** 2.1 · **Date:** 2026-07-07 · **Status:** Active
+> **Tier:** 2 — Pipeline Agents · **Pairs with:** GLOBAL_DESIGN_SYSTEM_HANDBOOK, THEME_LIBRARY, THEMING_MANUAL, COMPONENT_REGISTRY, ARCHITECT_PLAYBOOK, ENGINEER_PLAYBOOK
+
+> **App Factory — Stark Industries**
 > *The definitive manual for the Designer Agent to produce consistent, implementation-ready UI for ANY application type.*
 >
 > **Core thesis:** *concrete artifacts survive, abstract intentions decay.* The Designer's output is **code that runs** (token-driven HTML + a tokens file), not a picture of a brand and not a prompt for an external tool.
@@ -374,22 +377,20 @@ This playbook is the *how-to-be-the-Designer* manual. It sits on top of the stab
 
 - **GLOBAL_DESIGN_SYSTEM_HANDBOOK.md** — the token contract, theming method, responsive transforms, accessibility bar, deliverables, and the Canonical Page workflow.
 - **THEME_LIBRARY.md** — named, complete token value-sets (e.g. the Metro Warm family: Mist / Slate / Bright / Dark-deep).
-- **THEMING_MANUAL_v1.0.md** — token architecture, designer deliverable format, the quick-swap workflow.
-- **TOKEN_FILE.md** — the live token values for the current project.
+- **THEMING_MANUAL.md** — token architecture, designer deliverable format, the quick-swap workflow.
+- **TOKEN_FILE.md** — a **reference snapshot / drop-in template** (Cyber Pharma Metro Warm values) — NOT the live file. The live token values for the current project are **`globals.css`/`globals.scss`** in the project repo (ruling: GLOBAL_DESIGN_SYSTEM_HANDBOOK §8).
 - **COMPONENT_REGISTRY / manifest** — primitive mapping + KIPs.
 
 **Conflict rule:** if this playbook and a doctrine doc disagree on tokens or method, the doctrine doc wins — surface the conflict and update this playbook.
 
 ---
 
-*This playbook is part of the AI App Factory documentation suite.*
+*This playbook is part of the App Factory documentation suite.*
 
-**Version:** 2.0
-**Last Updated:** 9 June 2026
-
-### Changelog
+## Version History
 
 | Version | Date | Change |
 |---|---|---|
 | 1.4 | 5 Feb 2026 | Stitch "Batch Protocol", selection/utility patterns, media-player strategy integrated. |
 | 2.0 | 9 Jun 2026 | **Stitch retired.** §5 "Stitch Protocol" replaced by "The Production Method: Token-Driven HTML + Playwright." Designer now builds canonical screens directly as token-driven HTML and renders to PNG via Playwright; clone-and-adapt operates on HTML, not tool prompts. Deliverables aligned to the Handbook (token file primary; HTML+PNG artifacts; UI_SPEC; component manifest). Removed Batch & Order image protocol, "re-upload anchor" rule, `[CONTEXT][CONSTRAINTS]…` prompt format, and all Stitch keywords. Anti-patterns + field lessons reframed; doctrine cross-references added. |
+| 2.1 | 2026-07-07 | **Wave 2A micro-patch (audit sync).** §13 token-file reference corrected per the F-025 ruling: `TOKEN_FILE.md` = reference snapshot / drop-in template, NOT the live file — live token values are `globals.css`/`globals.scss` per GLOBAL_DESIGN_SYSTEM_HANDBOOK §8 (the doc's §5 was already correct; §13 was the stale outlier). THEMING_MANUAL reference de-versioned — canonical names only (F-011). Standard header block at top, version/date moved out of footer (F-018); "AI App Factory" → "App Factory". No structural or content changes — Tier 2 gold standard preserved. |

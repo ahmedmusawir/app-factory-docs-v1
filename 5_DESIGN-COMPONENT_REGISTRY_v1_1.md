@@ -1,5 +1,8 @@
 # COMPONENT REGISTRY
 
+> **Version:** 1.1 · **Date:** 2026-07-08 · **Status:** Active
+> **Tier:** 5 — Design System · **Pairs with:** STARTER_KIT_HANDBOOK, UI_UX_BUILDING_MANUAL, GLOBAL_DESIGN_SYSTEM_HANDBOOK
+
 > **Scannable primitive lookup. Decision-ready. The first stop before authoring any UI.**
 >
 > **🛑 BEFORE AUTHORING ANY COMPONENT, SCAN THIS REGISTRY.**
@@ -7,8 +10,6 @@
 > If a primitive exists, you USE it. You do not author a parallel one. If a primitive is close but not quite right, surface a Kit Improvement Proposal — don't fork silently.
 
 **Kit:** Stark SaaS Starter — Starter Kit v3 (post Kit-Perfection campaign)
-**Last Updated:** 2026-06-28
-**Pairs with:** `STARTER_KIT_HANDBOOK.md` (sibling file)
 
 ---
 
@@ -59,6 +60,8 @@ What are you trying to build?
 │   ├─ Error notification (persistent)? → Alert variant="destructive"
 │   ├─ Warning callout? → Alert variant="warning"
 │   ├─ Info callout? → Alert (default)
+│   ├─ Role badge (superadmin/admin/member)? → Badge styled with --role-* tokens
+│   │      (GDSH §2 — identities, not statuses; NEVER hardcoded role colors or destructive)
 │   └─ Loading? → Spinner (lucide Loader2) or Skeleton
 │
 ├─ A SELECTION control
@@ -782,9 +785,9 @@ If you find yourself needing any of these, you've found a Kit Improvement Propos
 
 | Version | Date | Changes |
 |---|---|---|
-| 1.1 | 2026-06-28 | Kit-Perfection reconciliation: `AppShellPage` + `Sheet` are REAL (built Gates 2–3); breakpoint `md`→`xl`, two-bar + render-fn sidebar + 4 CP scars; removed non-existent `NavbarHome`/`NavbarSuperadmin`; added real global components (`PublicNav`/`PublicNavAuthSection`/`NavbarLoginReg`/`PublicMobileNav`); re-pointed the page-composition cross-ref from the deleted `/demo` to the live home. |
+| 1.1 | 2026-06-28 | Kit-Perfection reconciliation: `AppShellPage` + `Sheet` are REAL (built Gates 2–3); breakpoint `md`→`xl`, two-bar + render-fn sidebar + 4 CP scars; removed non-existent `NavbarHome`/`NavbarSuperadmin`; added real global components (`PublicNav`/`PublicNavAuthSection`/`NavbarLoginReg`/`PublicMobileNav`); re-pointed the page-composition cross-ref from the deleted `/demo` to the live home. *(2026-07-08 Wave 5 content-tag, version unchanged: standard header block adopted with a formal Version line (F-018); "Role badge" row added to the Quick Decision Tree now that `--role-*` tokens exist in the contract (post-F-013a — GDSH §2 / TOKEN_FILE values). Nothing else — MODEL doc.)* |
 | 1.0 | 2026-05-31 | Initial registry authored from kit v0.4.1 + Run 001 lessons |
 
 ---
 
-🥄 *Part of Stark Industries — App Factory v1.1 doctrine.*
+🥄 *Part of Stark Industries — App Factory doctrine.*

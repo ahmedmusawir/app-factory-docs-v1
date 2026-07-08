@@ -1,5 +1,6 @@
 # Recovery State
 
-Last action: Wave 1 Doc 1 COMPLETE — Blueprint v2.1 edited and gate-verified (header F-018, rename F-008, Phase 0 Recon F-003, pipeline router F-030, DATA_CONTRACT ownership F-029). Suggested commit output; operator commits manually.
-Pending: Operator review + git commit of Doc 1. Then Doc 2 (SOFTWARE_FACTORY_PLAYBOOK → v1.2) and Doc 3 (HANDOFF_PACKAGE_PLAYBOOK → v1.1) per approved Wave 1 plan (see session_2026-07-07.md 10:21 entry; amendment: Stitch preserved in Version History rows).
-Next step: On operator go — execute Doc 2: SFP v1.2 (Phase 2 defers to Designer F-009, de-Stitch F-002, phase map F-010, TESTING pointer F-035, mojibake sweep F-012).
+Last action: WAVE 5 COMPLETE — all six Design Tier docs edited and gate-verified: GDSH v1.1 (contract + --role-*), TOKEN_FILE v1.2 (mint), THEMING v1.2 (v1.1 entry restored + phantom killed), UI-UX v1.4 (phantom extinct + arrows), THEME_LIBRARY v1.2 (two-sided reconciliation), COMPONENT_REGISTRY v1.1-tag (role-badge row) — first five committed, Registry awaiting operator commit.
+Pending: Operator review + commit of Doc 6 (suggested: "wave5(registry): header + role-badge tree row, F-013a/F-018").
+Next step: WAVES 1-5 DONE — Tiers 1-5 fully synced. Remaining per GRAND_AUDIT_SUMMARY §5: Wave 0 leftovers (REVIEW_003 redo/F-022 STARTER_KIT_HANDBOOK; F-012 editing-tool diagnosis; F-014 decision) + WAVE 6 (Doctrine Hub: app-factory-doctrine repo, MANIFEST, _ARCHIVE, renames, lints — 3-class encoding + retired-terms + versioned-refs + header presence). Operator eyeball queue: style-tile render of --role-* (superadmin-dark 4.7:1 FIRST).
+Queued (tracked): kit-verification touch (AUTH/DB samples, is_qr_ naming, user_roles DDL, TS/Tailwind pins — pairs w/ kit signup-vector ticket); API duplicate-§10 numbering; RECON §12→TESTING §3.8 pointer; stark-recon skill re-sync; RECON_WAVE0.md → _AUDIT/.

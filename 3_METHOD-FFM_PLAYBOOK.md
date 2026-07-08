@@ -1,10 +1,11 @@
 # FFM PLAYBOOK — Frontend-First Module Authoring Manual
 
+> **Version:** 1.2 · **Date:** 2026-07-07 · **Status:** Active
+> **Tier:** 3 — Build Methodology · **Pairs with:** HANDOFF_PACKAGE_PLAYBOOK, APP_FACTORY_SKILLS_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, ARCHITECT_PLAYBOOK, ENGINEER_PLAYBOOK, DESIGNER_PLAYBOOK, RECON_QUESTIONNAIRE
+
 > **Audience:** Future Architects (human or agent) authoring a Frontend-First Module (FFM) for any project's any phase.
 > **Purpose:** A self-contained, end-to-end guide so the reader can produce a complete, working FFM without hunting through old repos or scattered docs.
-> **Version:** v1.1 (2026-06-18) — added mandatory **Gate M (mobile shell)** to §13.1 + authoring checklist (Rule Zero as an enforced gate, not just spec advice; after RUN_002 missed shipping a mobile shell). Prev: v1.0 (June 2026).
-> **Owner:** Stark Industries — AI App Factory
-> **Pairs with:** `HANDOFF_PACKAGE_PLAYBOOK.md`, `APP_FACTORY_SKILLS_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`
+> **Owner:** Stark Industries — App Factory
 
 ---
 
@@ -64,6 +65,11 @@ The FFM lives inside a four-role pipeline. Understanding the pipeline matters be
 ### The Roles
 
 ```
+                    0. RECON (STAGE 0 — before all roles)
+                    Engineer (Claudy) answers RECON_QUESTIONNAIRE read-only
+                    → Recon Report → the Architect authors from verified facts
+                                       │
+                                       ▼
 ┌─────────────────────────────────────────────────────────────────────┐
 │                                                                     │
 │   1. DESIGNER       2. EXTRACTOR      3. ARCHITECT     4. ENGINEER  │
@@ -73,10 +79,12 @@ The FFM lives inside a four-role pipeline. Understanding the pipeline matters be
 │                     Operator          chat)            terminal)    │
 │                                                                     │
 │   PRODUCES:         PRODUCES:         PRODUCES:        PRODUCES:    │
-│   Brand tokens      Brain Drain       The FFM          Working code │
-│   Style tile        extracts          folder           per the FFM  │
-│   Wireframes        (11 evidence-                                   │
-│   Stitch output     labeled docs)                                   │
+│   Token file        Brain Drain       The FFM          Working code │
+│   (PRIMARY)         extracts          folder           per the FFM  │
+│   Style tile        (11 evidence-                                   │
+│   HTML+PNG          labeled docs)                                   │
+│   Screen HTML+PNG                                                   │
+│   Comp. manifest                                                    │
 │                                                                     │
 └─────────────────────────────────────────────────────────────────────┘
                 │                │                │
@@ -92,30 +100,33 @@ The FFM lives inside a four-role pipeline. Understanding the pipeline matters be
 
 ### Role 1 — Designer
 
-**Who:** A visual designer (human, or a Designer Agent with Stitch).
+**Who:** the Designer Agent per `DESIGNER_PLAYBOOK.md` (token-driven HTML + Playwright method).
 **With:** Operator (you).
-**Produces:** Design artifacts that become the visual ground truth.
+**Produces:** the Designer v2.0 package — the visual ground truth the build inherits.
 
-**Outputs:**
-- Brand tokens (primary color hex, accent colors, font choice)
+**Outputs (the complete Designer v2.0 package):**
+- **Token file** (`globals.css`/`globals.scss` + Tailwind map, all modes) — **THE PRIMARY DELIVERABLE**
+- **Style tile** (HTML + PNG)
+- **Per-screen HTML + PNG** — built via the **Canonical Page Method**: lock one canonical screen at an operator gate, then clone-and-adapt the remaining screens; rendered to PNG with Playwright (light + dark)
+- **Component manifest** (primitives per screen + KIPs to build first)
 - Logo files (color SVG, mono SVG, favicon)
-- Style tile (typography ramp, button styles, color samples — single image or Figma export)
-- Wireframes (for new screens — Stitch output or Figma frames)
-- High-fidelity screen designs (if available)
 - Reference screenshots of the prior version or competitor (if applicable)
 
 **Handoff target:** `_design/` folder inside the FFM.
 
 **Quality bar:**
-- Brand tokens are concrete (hex codes, not "brand-ish blue")
+- Tokens are concrete and complete (hex/OKLCH values, all modes; dark mode verified on real screens, not just the style tile)
+- Screen HTML consumes tokens only — no hardcoded colors
+- The canonical screen is locked at an operator gate BEFORE clone-out
+- The screen set covers every screen in the FFM's scope
 - Logo files are usable as-is (right dimensions, transparent background)
 - Style tile is current (not from a prior abandoned direction)
-- Wireframes cover every screen in the FFM's scope
 
 **Failure modes if Designer work is incomplete:**
 - AI defaults to shadcn zinc baseline — looks generic
 - Operator iterates on design AFTER components are built — rework
 - Style tile drifts from final result — debt
+- Screens hand-painted instead of token-driven — un-swappable debt
 
 ### Role 2 — Extractor
 
@@ -265,10 +276,12 @@ Every FFM follows the same folder structure. Names and content vary per project;
 │   ├── DATA_CONTRACT.md  ← types, service contracts, mock requirements
 │   └── UI_SPEC.md        ← screens, behavior, design system
 │
-├── _design/              ← visual reference (filled by Designer + Operator)
+├── _design/              ← visual ground truth (filled by Designer + Operator)
 │   ├── README.md         ← what goes here, what's expected
-│   ├── brand-tokens.md   ← summary of colors, fonts, logo refs (or stub)
-│   ├── style-tile.png    ← visual reference (when available)
+│   ├── tokens/           ← globals.css/.scss — THE token file (primary)
+│   ├── style-tile/       ← style tile HTML + PNG
+│   ├── screens/          ← per-screen HTML + PNG (Canonical Page Method)
+│   ├── COMPONENT_MANIFEST.md ← primitives per screen + KIPs
 │   ├── logo-color.svg    ← brand logo
 │   ├── logo-mono.svg     ← single-color variant
 │   └── reference/        ← optional screenshots from prior version, etc.
@@ -353,6 +366,8 @@ The doctrine inside is tool-agnostic. Tool-specific steps (like installing skill
 
 FFMs come in two flavors based on whether a source app exists to convert from.
 
+> **Router promoted upward:** the constitution-level version of this router lives in `APP_FACTORY_BLUEPRINT.md`, "Which Pipeline Am I In?" (and the HANDOFF_PACKAGE_PLAYBOOK preamble routes through it). This section remains the DETAILED source.
+
 ### Variant A — Conversion FFM
 
 **When to use:** A working prototype exists (Streamlit, Gradio, Python app, etc.) and the goal is to convert it to a production Next.js app.
@@ -371,10 +386,10 @@ FFMs come in two flavors based on whether a source app exists to convert from.
 
 **Examples:** Cyber Pharma v1 Phase 1 FFM (June 2026) — foundation skeleton with no source app.
 
-**`_design/` contains:** Brand tokens, style tile, wireframes (the visual ground truth replaces source app screenshots).
+**`_design/` contains:** the Designer v2.0 package — token file (PRIMARY), style tile HTML+PNG, per-screen HTML+PNG (Canonical Page Method), component manifest, logos (the visual ground truth replaces source app screenshots).
 **`_extraction/` contains:** Either (a) data-shape evidence from upstream/related repos that inform what the new build should look like, or (b) a `README.md` documenting "N/A — greenfield, no source to extract."
-**DATA_CONTRACT** is authored: From operator decisions, related repos' extracts, or the starter kit's existing schema.
-**UI_SPEC** is authored: From wireframes and brand tokens.
+**DATA_CONTRACT** is authored: From operator decisions, related repos' extracts, or the starter kit's existing schema (Engineer is the author of record in greenfield runs — see §7's ownership note).
+**UI_SPEC** is authored: From the Designer's screen HTML/PNG + token file (drafted by the Architect, revised by the Designer).
 **The "Known Discrepancies" section** may not apply or may be very thin.
 
 ### What Differs Between Variants
@@ -382,10 +397,10 @@ FFMs come in two flavors based on whether a source app exists to convert from.
 | Aspect | Conversion FFM | Greenfield FFM |
 |---|---|---|
 | Source app exists | Yes | No |
-| `_design/` contents | Source app screenshots | Brand tokens + style tile + wireframes |
+| `_design/` contents | Source app screenshots | Designer v2.0 package: token file (PRIMARY) + style tile HTML+PNG + screen HTML+PNG + component manifest |
 | `_extraction/` contents | 11 Brain Drain docs | Data-shape evidence from related repos OR N/A |
-| DATA_CONTRACT source | Brain Drain TOOL-SYSTEM doc | Operator decisions, related extracts |
-| UI_SPEC source | Brain Drain PROMPTS-AND-PERSONA + screenshots | Wireframes |
+| DATA_CONTRACT source | Brain Drain TOOL-SYSTEM doc | Operator decisions, related extracts (Engineer authors) |
+| UI_SPEC source | Brain Drain PROMPTS-AND-PERSONA + screenshots | Designer screen HTML/PNG (Architect drafts, Designer revises) |
 | Known Discrepancies relevance | High | Low / N/A |
 | Authoring time | Faster (evidence pre-extracted) | Slower (operator decisions take time) |
 | Failure mode | Inventing fields not in source | Operator decisions drift mid-build |
@@ -403,8 +418,8 @@ Ask the operator three questions:
    - No → Run Brain Drain first ([Section 14](#14-the-extractor-question--when-to-run-brain-drain))
 
 3. **If no source app, what's the design ground truth?**
-   - Wireframes / Stitch output → Goes in `_design/`
-   - Brand tokens only (UI improvised) → Style tile must land before screens; surface this risk
+   - Designer screen HTML/PNG (or wireframes) → Goes in `_design/`
+   - Token file only (screens not yet built) → Style tile + canonical screen must land before clone-out; surface this risk
    - Nothing yet → Designer work blocks. Surface to operator.
 
 ### A Note On Variant Hybrids
@@ -530,6 +545,10 @@ Some teams prefer to keep all FFMs in `current_app/` and use git tags / branches
 The Architect authors files in this order. Each step gets the previous step's outputs as inputs.
 
 ```
+0. RECON (STAGE 0) — confirm a CURRENT Recon Report exists for the target repo
+   (Engineer answers RECON_QUESTIONNAIRE read-only via stark-recon; the Architect
+   authors from the report — where any doc and the filesystem disagree, the
+   filesystem wins). No report → STOP; do not author a single FFM line.
 1. Scaffold the folder structure (mkdir, empty files)
 2. Author the root navigation files (CLAUDE.md, README.md, AGENTS.md, GEMINI.md)
 3. Author _project/APP_BRIEF.md FIRST (scope must be locked)
@@ -557,6 +576,8 @@ The Architect authors files in this order. Each step gets the previous step's ou
 If you author UI_SPEC before DATA_CONTRACT, you'll invent data shapes that don't match the source.
 If you author CLAUDE.md before the others, you won't know the conventions to encode.
 
+> **DATA_CONTRACT ownership is per-pipeline (consistent with APP_FACTORY_BLUEPRINT / HANDOFF_PACKAGE_PLAYBOOK / ENGINEER_PLAYBOOK):** in a CONVERSION FFM, the Architect pre-authors DATA_CONTRACT from Brain Drain evidence (step 4 above, as written). In a GREENFIELD FFM, the **Engineer is the author of record** — from the approved APP_BRIEF + UI_SPEC; step 4 then ships the contract shell + evidence pointers rather than the full contract. Same artifact name, different author and moment.
+
 ### Time Budget (Rough)
 
 | Step | Time (single FFM, by an experienced Architect) |
@@ -579,6 +600,7 @@ The first FFM is slower (you're building the patterns). Subsequent FFMs are fast
 
 Confirm these are in hand:
 
+- [ ] **Current Recon Report for the target repo (Stage 0 — RECON_QUESTIONNAIRE / stark-recon)**
 - [ ] Locked PHASE_ROADMAP (which phase is this FFM for?)
 - [ ] Locked MASTER_APP_BRIEF (whole project scope)
 - [ ] Designer outputs in hand (or operator decision: "use shadcn defaults, iterate later")
@@ -952,11 +974,12 @@ These two folders are **operator-filled**. The Architect's job is to author a `R
 - Optional: Annotated PDFs showing UX issues to preserve vs fix
 - Optional: A "Known UX Quirks" summary
 
-**For Greenfield FFMs:**
-- Required: Brand tokens summary (`brand-tokens.md`)
+**For Greenfield FFMs (the Designer v2.0 package — complete, per DESIGNER_PLAYBOOK §10):**
+- Required: **Token file** (`tokens/globals.css` or `.scss` + Tailwind map, all modes) — **THE PRIMARY DELIVERABLE**
+- Required: **Style tile** (HTML + PNG)
+- Required: **Per-screen HTML + PNG** — the locked set from the Canonical Page Method (canonical screen locked at an operator gate, remaining screens cloned-and-adapted; Playwright-rendered, light + dark)
+- Required: **Component manifest** (`COMPONENT_MANIFEST.md` — primitives per screen + KIPs)
 - Required: Logo files (`logo-color.svg`, `logo-mono.svg`, `favicon.ico`)
-- Required: Style tile (single image or Figma export)
-- Optional: Wireframes from designer
 - Optional: Reference screenshots from related apps for visual context (NOT to build now — context only)
 
 **Example `_design/` directory tree (greenfield):**
@@ -964,14 +987,23 @@ These two folders are **operator-filled**. The Architect's job is to author a `R
 ```
 _design/
 ├── README.md                     ← Architect authors
-├── brand-tokens.md               ← Operator fills: primary hex, font, etc.
-├── style-tile.png                ← Operator drops
+├── tokens/
+│   └── globals.css               ← Designer ships: THE token file (primary)
+├── style-tile/
+│   ├── style-tile.html           ← Designer ships
+│   └── style-tile.png            ← Designer ships (Playwright render)
+├── screens/
+│   ├── 01-dashboard.html         ← Designer ships (canonical, locked first)
+│   ├── 01-dashboard-light.png
+│   ├── 01-dashboard-dark.png
+│   ├── 02-settings.html          ← cloned-and-adapted from canonical
+│   └── 02-settings-light.png
+├── COMPONENT_MANIFEST.md         ← Designer ships
 ├── logo-color.svg                ← Operator drops
 ├── logo-mono.svg                 ← Operator drops
 ├── favicon.ico                   ← Operator drops
 └── reference/                    ← Optional context screenshots
     ├── prior-version-1.png
-    ├── prior-version-2.png
     └── competitor-reference.png
 ```
 
@@ -1799,6 +1831,7 @@ Use this checklist when authoring a new FFM. Walk it top to bottom. Don't skip s
 
 ### Pre-Authoring (Inputs Confirmation)
 
+- [ ] Current Recon Report exists for the target repo (Stage 0 — RECON_QUESTIONNAIRE / stark-recon)
 - [ ] PHASE_ROADMAP is locked; this FFM is for phase N
 - [ ] MASTER_APP_BRIEF is locked
 - [ ] Designer outputs in hand (or operator confirmed "use defaults")
@@ -2047,10 +2080,12 @@ The complete folder structure to scaffold, with file purposes:
 │   ├── DATA_CONTRACT.md               # Types, service contracts, mocks
 │   └── UI_SPEC.md                     # Screens, behavior, design system
 │
-├── _design/                           # OPERATOR-FILLED visual artifacts
+├── _design/                           # DESIGNER+OPERATOR-FILLED visual ground truth
 │   ├── README.md                      # What goes here (Architect authors)
-│   ├── brand-tokens.md                # (operator) primary hex, font, etc.
-│   ├── style-tile.png                 # (operator) visual reference
+│   ├── tokens/globals.css             # (designer) THE token file — primary
+│   ├── style-tile/                    # (designer) style tile HTML + PNG
+│   ├── screens/                       # (designer) per-screen HTML + PNG, locked set
+│   ├── COMPONENT_MANIFEST.md          # (designer) primitives per screen + KIPs
 │   ├── logo-color.svg                 # (operator) brand logo
 │   ├── logo-mono.svg                  # (operator) single-color variant
 │   ├── favicon.ico                    # (operator) favicon
@@ -2420,16 +2455,17 @@ When the operator stages this module into the <starter kit> and opens an AI tool
 
 ## What Goes Here
 
-### Required
+### Required (the Designer v2.0 package — DESIGNER_PLAYBOOK §10)
 
-1. **Brand tokens summary** — `brand-tokens.md` with primary hex, font, logo refs
-2. **Logo files** — color SVG, mono SVG, favicon
-3. **Style tile** — visual reference image
+1. **Token file** — `tokens/globals.css` (or `.scss`) + Tailwind map, all modes — THE PRIMARY DELIVERABLE
+2. **Style tile** — HTML + PNG
+3. **Per-screen HTML + PNG** — the locked set (Canonical Page Method; light + dark renders)
+4. **Component manifest** — `COMPONENT_MANIFEST.md` (primitives per screen + KIPs)
+5. **Logo files** — color SVG, mono SVG, favicon
 
 ### Optional
 
-4. **Reference screenshots** for visual context
-5. **Wireframes** from designer
+6. **Reference screenshots** for visual context
 
 ## How Claudy Uses This Folder
 
@@ -2592,4 +2628,16 @@ Use this playbook. Study the worked examples. Author the FFM with discipline. Te
 
 The factory compounds. Every FFM run sharpens the next. Every retrospective surfaces a lesson worth promoting. Every Architect who reads this playbook starts from a stronger baseline than the one before.
 
-🛡️ **End of FFM Playbook v1.0.**
+---
+
+## Version History
+
+| Version | Date | Changes |
+|---|---|---|
+| 1.0 | Jun 2026 | Initial playbook: FFM definition, four-role pattern, folder anatomy, two variants + router, phase scoping, authoring sequence, file-by-file guides, Brain Drain integration, kit bridging, stumbles, checklist, evolution rules, worked examples, appendices. |
+| 1.1 | 2026-06-18 | Added mandatory **Gate M (mobile shell)** to §13.1 + authoring checklist (Rule Zero as an enforced gate, not just spec advice; after RUN_002 missed shipping a mobile shell). |
+| 1.2 | 2026-07-07 | **Wave 3 (audit sync).** Step 0 — Recon added to §7 authoring sequence + the four-role diagram + both input checklists: current Recon Report required before authoring, per RECON_QUESTIONNAIRE / stark-recon (F-024 closure — the FFM side of the mutual pointer). Role 1 (Designer) + §4 Variant B + §10.1 `_design/` contract rewritten to the complete Designer v2.0 package: token file (PRIMARY), style tile HTML+PNG, per-screen HTML+PNG via the Canonical Page Method, component manifest (F-031); all 4 Stitch references removed (F-002). Per-pipeline DATA_CONTRACT ownership note added to §7, consistent with Blueprint/Handoff/Engineer (F-029). §4 marked as the DETAILED router source with a pointer to the Blueprint's constitution-level version (F-030 coordination). Standard header block (F-018); stale "v1.0" tail label corrected; canonical refs (F-011). Existing §7 step numbers and section numbers unchanged (D-019). |
+
+---
+
+🛡️ **End of FFM Playbook.**

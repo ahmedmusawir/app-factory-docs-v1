@@ -1,10 +1,11 @@
 # THEMING MANUAL
 
-**Project:** Stark Industries App Factory
-**Version:** 1.1
-**Born from:** Cyber Pharma Run 002 (June 2026)
-**Status:** Evergreen Factory doctrine — applies to ALL projects
-**Parent doctrine:** UI-UX-BUILDING-MANUAL v1.2 (Rule Zero — mobile-first), APP_ARCHITECTURE_MANUAL v1.2 (Theming Files section)
+> **Version:** 1.2 · **Date:** 2026-07-08 · **Status:** Active
+> **Tier:** 5 — Design System · **Pairs with:** GLOBAL_DESIGN_SYSTEM_HANDBOOK, TOKEN_FILE, THEME_LIBRARY, UI_UX_BUILDING_MANUAL, APP_ARCHITECTURE_MANUAL
+
+> **Project:** Stark Industries App Factory
+> **Born from:** Cyber Pharma Run 002 (June 2026) — evergreen doctrine, applies to ALL projects
+> **Parent doctrine:** UI-UX-BUILDING-MANUAL (Rule Zero — mobile-first), APP_ARCHITECTURE_MANUAL (Theming Files section)
 
 ---
 
@@ -12,9 +13,9 @@
 
 This manual is **standalone but interlocking**. It is referenced by three other Factory manuals:
 
-- **UI-UX-BUILDING-MANUAL v1.2** — mentions theming briefly, points here for depth
-- **APP_ARCHITECTURE_MANUAL v1.2** — mentions file locations, points here for the *why*
-- **HANDOFF_PACKAGE_PLAYBOOK v1.1** — mentions designer deliverable format, points here for the spec
+- **UI-UX-BUILDING-MANUAL** — mentions theming briefly, points here for depth
+- **APP_ARCHITECTURE_MANUAL** — mentions file locations, points here for the *why*
+- **HANDOFF_PACKAGE_PLAYBOOK** — mentions designer deliverable format, points here for the spec
 
 Read this manual when:
 1. Setting up a new project's visual identity (Phase 0 or Phase 1)
@@ -81,10 +82,16 @@ Every Stark project declares tokens in these categories. Names match shadcn conv
 | `--ring` | Focus ring color | `:focus-visible` outlines |
 | `--destructive` | Danger / error color | Delete buttons, error states |
 | `--destructive-foreground` | Text on destructive surfaces | Error button labels |
-| `--success` *(optional)* | Success state color | Confirmation toasts, success badges |
-| `--warning` *(optional)* | Warning state color | Caution callouts |
+| `--success(-foreground)` | Success state color — fixed meaning | Confirmation toasts, recovered/good values |
+| `--warning(-foreground)` | Warning state color — fixed meaning | Caution callouts, pending states |
+| `--info(-foreground)` | Neutral informational color | Neutral counts, info badges |
+| `--chart-1..5` | Data-viz / KPI series colors | Charts, KPI tiles |
+| `--role-superadmin(-foreground)` | Role identity (not a status) | Superadmin badges/labels |
+| `--role-admin(-foreground)` | Role identity — never the destructive red | Admin badges/labels |
+| `--role-member(-foreground)` | Role identity — may align with success | Member badges/labels |
+| `--radius` | One knob for corner language | `0` = Metro flat |
 
-**Discipline:** Only add tokens beyond this list if a real project need surfaces. Resist token sprawl. Most projects need exactly these.
+**Discipline:** Only add tokens beyond this list if a real project need surfaces. Resist token sprawl. *(This table matches the GLOBAL_DESIGN_SYSTEM_HANDBOOK §2 canonical contract — that doc is the contract authority; role rules detail in THEME_LIBRARY §2, minted values in TOKEN_FILE.)*
 
 ### 3.2 The Files — Where Tokens Live
 
@@ -123,6 +130,8 @@ For most projects, **light + dark is enough**. Brand themes are a Phase 2+ refin
 ### 4.1 Primary Deliverable — The Tokens File
 
 The designer's binding output is a **filled-in entry-stylesheet snippet** (`globals.css` _or_ `globals.scss` — match the kit; `/* */` comments only) with concrete hex (or HSL) values for every semantic token, for both `:root` (light) and `.dark` (dark).
+
+> **TW3/TW4 format fork:** the value format follows the kit's Tailwind major — confirm in `package.json` (GDSH §2): **TW3** = HSL triplets, no `hsl()` wrapper, mapped in `tailwind.config.ts` (the format shown below); **TW4** = `@theme inline` block, usually OKLCH, `--color-*` naming. The extension AND the format are per-kit facts, not doctrine.
 
 **Format:**
 
@@ -256,10 +265,10 @@ When setting up a new project, theming is sequenced as follows:
 
 ## 10. Cross-References
 
-- **UI-UX-BUILDING-MANUAL v1.2** §Theming and Design Tokens — the operating doctrine that points here
-- **APP_ARCHITECTURE_MANUAL v1.2** §Theming Files — the file location convention
-- **HANDOFF_PACKAGE_PLAYBOOK v1.1** §Designer Handoff — the designer engagement spec
-- **STARTER_KIT_HANDBOOK v1.0** §shadcn Defaults — what the kit provides out of the box
+- **UI-UX-BUILDING-MANUAL** §Theming and Design Tokens — the operating doctrine that points here
+- **APP_ARCHITECTURE_MANUAL** §Theming Files — the file location convention
+- **HANDOFF_PACKAGE_PLAYBOOK** §Designer Handoff — the designer engagement spec
+- **STARTER_KIT_HANDBOOK** §shadcn Defaults — what the kit provides out of the box
 - **Cyberize Run 001 `_project/CLAUDE.md`** — the canonical worked example of a Locked Palette table
 
 ---
@@ -285,7 +294,9 @@ Every future Stark Industries project inherits this doctrine. The Cyberize Locke
 | Version | Date | Changes |
 |---|---|---|
 | 1.0 | 2026-06-02 | Initial manual. Born from Cyber Pharma Run 002. Promotes the Cyberize Run 001 Locked Palette WIN into evergreen Factory doctrine. |
+| 1.1 | Jun 2026 | **(Entry restored 2026-07-08 — the bump was applied to the header/body but never logged here; F-033 inverse-symptom.)** Added the entry-stylesheet portability rule to §3.2: `globals.css` OR `globals.scss` per kit, extension-agnostic `/* */` comments, per-kit fact not doctrine (L14 institutionalized as verify-then-fork). |
+| 1.2 | 2026-07-08 | **Wave 5 (audit sync).** Missing v1.1 history entry restored above — metadata honesty (F-033). Cross-references canonical-name only, §0 + §10: the PHANTOM `HANDOFF_PACKAGE_PLAYBOOK v1.1` (a version that never existed) killed at both sites, plus the stale UI-UX/APP_ARCHITECTURE/handbook versioned refs (F-032/F-011). §3.1 token table aligned to the GDSH §2 canonical contract: success/warning no longer "optional", info/chart-1..5/radius added, the three `--role-*` identity tokens added with their rules one-liners (F-043 consumer alignment). §4.1 gains the TW3/TW4 format fork note (GDSH §2 model). Standard header block (F-018); footer suite label de-versioned. |
 
 ---
 
-🥄 *Part of Stark Industries — App Factory v1.2 doctrine.*
+🥄 *Part of Stark Industries — App Factory doctrine.*

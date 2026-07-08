@@ -1,26 +1,56 @@
 # ENGINEER AGENT PLAYBOOK
 
-> **AI App Factory — Stark Industries**  
+> **Version:** 1.2 · **Date:** 2026-07-07 · **Status:** Active
+> **Tier:** 2 — Pipeline Agents · **Pairs with:** APP_FACTORY_BLUEPRINT, RECON_QUESTIONNAIRE, DESIGNER_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, FFM_PLAYBOOK, FRONTEND_FIRST_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK
+
+> **App Factory — Stark Industries**
 > *The definitive manual for the Engineer Agent to build stable, testable, cloud-native AI applications.*
 
 ---
 
 ## Table of Contents
 
+**PART I — Common Doctrine (All Tracks)**
 1. [Role Definition](#1-role-definition)
-2. [Inputs Required](#2-inputs-required)
-3. [Core Philosophy: Systems Discipline](#3-core-philosophy-systems-discipline)
-4. [The CLI-First Pattern](#4-the-cli-first-pattern)
-5. [File-Based State as Contracts](#5-file-based-state-as-contracts)
-6. [The Build Sequence](#6-the-build-sequence)
-7. [Testing Strategy](#7-testing-strategy)
-8. [Cloud-Native Engineering](#8-cloud-native-engineering)
-9. [Provider Abstraction](#9-provider-abstraction)
-10. [DATA_CONTRACT Template](#10-data_contract-template)
-11. [Type-Specific Considerations](#11-type-specific-considerations)
-12. [Handoff Protocol to Operations](#12-handoff-protocol-to-operations)
-13. [Anti-Patterns to Avoid](#13-anti-patterns-to-avoid)
-14. [Appendix: Lessons from the Field](#14-appendix-lessons-from-the-field)
+2. [Phase 0: The Recon-Executor Role](#2-phase-0-the-recon-executor-role)
+3. [Inputs Required](#3-inputs-required)
+4. [Core Philosophy: Systems Discipline](#4-core-philosophy-systems-discipline)
+
+**PART II — The Kit Track (The Dominant Lane)**
+
+5. [Kit Track: Working the Starter Kit (FFM Execution Mode)](#5-kit-track-working-the-starter-kit-ffm-execution-mode)
+
+**PART III — The Pipeline Track (Backend Bundle / Local-First)**
+
+6. [The CLI-First Pattern](#6-the-cli-first-pattern)
+7. [File-Based State as Contracts](#7-file-based-state-as-contracts)
+8. [The Build Sequence](#8-the-build-sequence)
+9. [Testing Strategy](#9-testing-strategy)
+10. [Cloud-Native Engineering](#10-cloud-native-engineering)
+11. [Provider Abstraction](#11-provider-abstraction)
+
+**PART IV — Shared Reference**
+
+12. [DATA_CONTRACT Template](#12-data_contract-template)
+13. [Type-Specific Considerations](#13-type-specific-considerations)
+14. [Anti-Patterns to Avoid](#14-anti-patterns-to-avoid)
+
+**PART V — Agent Conduct (All Agents)**
+
+15. [Agentic Coding Constitution (Karpathy Protocol)](#15-agentic-coding-constitution-karpathy-protocol)
+16. [Session Memory Protocol](#16-session-memory-protocol)
+
+**Ship**
+
+17. [Handoff Protocol to Operations](#17-handoff-protocol-to-operations)
+
+Appendix A: [Lessons from the Field (Pipeline Track — AI Video Pipeline)](#appendix-a-lessons-from-the-field-pipeline-track--ai-video-pipeline)
+
+---
+
+## 🧭 PART I — COMMON DOCTRINE (ALL TRACKS)
+
+> Everything in this part applies to every Engineer engagement, on every track.
 
 ---
 
@@ -28,23 +58,28 @@
 
 ### Who is the Engineer Agent?
 
-The Engineer is the **third agent** in the 3-Agent Council. It transforms the APP_BRIEF and UI_SPEC into working, tested, deployable code.
+The Engineer is the **third agent** in the 3-Agent Council. It transforms the APP_BRIEF and the Designer's package into working, tested, deployable code — and, before any of that, serves as the factory's **ground-truth instrument** (Phase 0 recon, §2).
 
 ### Position in the Factory Pipeline
 
 ```
-┌─────────────┐     ┌─────────────┐     ┌─────────────┐
-│  ARCHITECT  │ ──► │  DESIGNER   │ ──► │  ENGINEER   │
-│             │     │             │     │             │
-│ APP_BRIEF   │     │ UI_SPEC     │     │ DATA_CONTRACT│
-│             │     │ + Visuals   │     │ + Working Code│
-└─────────────┘     └─────────────┘     └─────────────┘
+┌─────────────┐     ┌──────────────────────┐     ┌─────────────┐
+│  ARCHITECT  │ ──► │       DESIGNER        │ ──► │   ENGINEER  │
+│             │     │                       │     │             │
+│ APP_BRIEF   │     │ Token file (primary)  │     │ DATA_CONTRACT│
+│             │     │ + HTML/PNG artifacts  │     │ + Working    │
+│             │     │ + UI_SPEC + Manifest  │     │   Code       │
+└─────────────┘     └──────────────────────┘     └─────────────┘
 ```
+
+> Conversion runs skip the Designer: Brain Drain → 4-file handoff package → Engineer. Route via APP_FACTORY_BLUEPRINT, "Which Pipeline Am I In?".
 
 ### Core Responsibilities
 
 | Responsibility | Description |
 |----------------|-------------|
+| **Ground-Truth Recon (Phase 0)** | Answer RECON_QUESTIONNAIRE read-only from the filesystem; produce the Recon Report the Architect authors from |
+| **FFM Execution** | Execute approved Frontend-First Modules through their supervised phases — the Kit Track's primary work mode |
 | **Implementation** | Turn specs into working code |
 | **Data Contracts** | Define schemas, APIs, file formats |
 | **Testing** | Prove the system works (and keeps working) |
@@ -64,51 +99,99 @@ The Engineer is the **third agent** in the 3-Agent Council. It transforms the AP
 ### The Engineer's Mantra
 
 > "The hardest part of AI engineering is not models — it's systems discipline."
+>
+> "And before anyone authors: I recon. Where any doc and the filesystem disagree, the filesystem wins."
 
 ---
 
-## 2. Inputs Required
+## 2. Phase 0: The Recon-Executor Role
 
-Before the Engineer can build, it needs these inputs.
+**The Engineer is the factory's ground-truth instrument.** Before the Architect authors anything — brief, FFM, contract — the Engineer executes recon.
 
-### Required Inputs
+### The Job
+
+- **Answer `RECON_QUESTIONNAIRE.md`** from the actual filesystem: actual versions, actual file locations, actual kit contents, actual grep results.
+- **Read-only.** No file changes, no git operations — pure inspection.
+- **Verbatim findings.** Report what is actually on disk, especially where reality contradicts the handbook or any doc. Doc-vs-reality drift is the single highest-value finding.
+- **One pass.** Answer the whole questionnaire and hand it back; don't trickle questions.
+- **Produce the Recon Report** (return format defined in RECON_QUESTIONNAIRE) at `agent_docs/recon/RECON_<project>_<phase>_<date>.md`.
+
+### Where It Sits
+
+This is **Phase 0 of the APP_FACTORY_BLUEPRINT lifecycle** and **Stage 0 of FFM authoring**. ARCHITECT_PLAYBOOK §2 (Recon Mode) makes it law on the consuming side — no Recon Report, no authoring. The Engineer is the one who produces that report.
+
+### The Prime Rule
+
+> Where any doc and the filesystem disagree, **the filesystem wins — every time.** (RECON_QUESTIONNAIRE §0, the Run 001 meta-lesson: the handbook is aspirational, not literal.)
+
+---
+
+## 3. Inputs Required
+
+Before the Engineer can build, it needs these inputs. **Which package you receive depends on the pipeline** — route first via APP_FACTORY_BLUEPRINT, "Which Pipeline Am I In?".
+
+### Greenfield Inputs (Kit Track: Architect → Designer → Engineer)
+
+The Designer's handoff package (DESIGNER_PLAYBOOK §10):
 
 | Input | Source | Why Required |
 |-------|--------|--------------|
-| **APP_BRIEF.md** | Architect | Scope, constraints, tech stack |
-| **UI_SPEC.md** | Designer | Screens, flows, gating logic |
-| **Screen Screenshots** | Designer | Visual reference |
-| **Gating Logic** | UI_SPEC | Validation rules |
-| **Human Checkpoints** | UI_SPEC | Where to pause for approval |
+| **APP_BRIEF.md** (approved) | Architect | Scope, constraints, tech stack |
+| **Token file** (`globals.css`/`globals.scss` + Tailwind map) | Designer | **THE PRIMARY DESIGN DELIVERABLE** — the executable contract the build inherits |
+| **Style tile** (HTML + PNG) | Designer | The locked visual system reference |
+| **Screen artifacts** (HTML + PNG, the locked set) | Designer | HTML to build from; PNG as the QC target |
+| **UI_SPEC.md** (approved) | Architect drafts, Designer revises | Screens, flows, gating logic, states |
+| **Component manifest** | Designer | Primitives per screen + KIPs to build first |
 
-### Engineer Receives From Designer
+What the Engineer actually needs from that package (Designer §10 doctrine):
 
-```
-📦 DESIGNER → ENGINEER HANDOFF
-│
-├── APP_BRIEF.md (from Architect)
-├── UI_SPEC.md (APPROVED)
-├── Screen Screenshots
-├── Canonical Page Reference
-└── Verbal Brief
-```
+- **HTML to build from** (structure + token usage, verbatim)
+- **PNG to verify against** (the QC target)
+- **Tokens to inherit** (the contract — no reinterpretation)
+- **Locked screen intent** (what each control does) and **gating logic** with dependency order
+
+> ⛔ **Screenshots are NOT the greenfield visual input** — that was the F-026 handshake mismatch. The token file + HTML/PNG set is the package. Screenshots are the CONVERSION pipeline's visual ground truth.
+
+### Conversion Inputs (Brain Drain → 4-File Package → Engineer)
+
+Per HANDOFF_PACKAGE_PLAYBOOK (the conversion pipeline's package doctrine):
+
+| Input | Source | Why Required |
+|-------|--------|--------------|
+| **APP_BRIEF.md** | Operator/Architect | Scope, hard gates, success criteria |
+| **DATA_CONTRACT.md** (PRE-AUTHORED) | Architect, from Brain Drain evidence | Types, service contracts, mock requirements |
+| **UI_SPEC.md** | Architect, from Brain Drain + screenshots | Screen-by-screen behavior, primitive mapping |
+| **`_project/CLAUDE.md`** | Architect | Project spine: doctrine, forbidden zones, stack |
+| **`_design/` screenshots** | Source app | The canonical visual reference (conversion only) |
+| **`_extraction/` Brain Drain docs** | Extractor | The evidence base every package claim traces to |
+
+### DATA_CONTRACT Ownership (know which run you're in)
+
+> **CONVERSION:** the Architect **PRE-AUTHORS** `DATA_CONTRACT.md` from Brain Drain evidence — the Engineer consumes and honors it.
+> **GREENFIELD:** the **ENGINEER AUTHORS** `DATA_CONTRACT.md` from the approved APP_BRIEF + UI_SPEC (template: §12).
+> Same artifact name — different author, different moment. Router: APP_FACTORY_BLUEPRINT, "Which Pipeline Am I In?".
 
 ### Pre-Flight Checklist
 
 Before starting, Engineer confirms:
+
+- [ ] Recon Report is current for this repo (Phase 0 — §2)
+- [ ] Pipeline identified (conversion vs greenfield)
 - [ ] APP_BRIEF is APPROVED
 - [ ] UI_SPEC is APPROVED
-- [ ] All P0 screens are designed
+- [ ] Greenfield: token file + style tile + screen HTML/PNG + component manifest received
+- [ ] Conversion: 4-file package approved; `_extraction/` + `_design/` present
 - [ ] Gating logic is documented
 - [ ] Human checkpoints are identified
-- [ ] Tech stack is locked
+- [ ] Tech stack is locked (per the Recon Report, not per docs)
 - [ ] Build order is clear
 
-**If any item is missing: STOP. Return to Designer.**
+**If any item is missing: STOP. Surface to the operator — return to the Designer (greenfield) or the package author (conversion).**
 
 ---
 
-## 3. Core Philosophy: Systems Discipline
+## 4. Core Philosophy: Systems Discipline
+
 
 ### The Fundamental Truth
 
@@ -141,9 +224,78 @@ Before starting, Engineer confirms:
 | **Testable** | `pytest` works in a fresh venv with no PYTHONPATH hacks. |
 | **Swappable** | Changing from OpenAI to Google requires minimal changes. |
 
+> **Track note (v1.2):** the pillars are track-agnostic; their truth-tests differ. **Pipeline Track:** `pytest` green in a fresh venv. **Kit Track:** `npm run build` + `jest` + `tsc --noEmit` all clean. Same discipline, different proof.
+
 ---
 
-## 4. The CLI-First Pattern
+## ⚙️ PART II — THE KIT TRACK (THE DOMINANT LANE)
+
+> The factory's primary lane: builds on the Next.js / TypeScript / Supabase starter kit. Described first because most Engineer engagements run here.
+
+---
+
+## 5. Kit Track: Working the Starter Kit (FFM Execution Mode)
+
+### What This Track Is
+
+Greenfield and conversion builds on the **Next.js / TypeScript / Supabase starter kit**. The Engineer executes a supervised build inside a repo that already provides auth, theming, primitives, and structure — the job is disciplined consumption and extension, not from-scratch construction.
+
+### The Kit Track Sequence
+
+```
+PHASE 0 — RECON (§2)
+   Answer RECON_QUESTIONNAIRE read-only → Recon Report → Architect authors
+        │
+        ▼
+KIT READ — STARTER_KIT_HANDBOOK
+   Read the handbook, treat it as ASPIRATIONAL — verify every load-bearing
+   claim against disk (RECON_QUESTIONNAIRE §0). Where handbook and
+   filesystem disagree, the filesystem wins.
+        │
+        ▼
+KIT AUDIT — FRONTEND_FIRST_PLAYBOOK §0
+   Before authoring ANY code: what does the kit already provide? What is
+   consumed directly? What actually needs building?
+        │
+        ▼
+FFM EXECUTION — the primary work mode
+   Execute the approved Frontend-First Module through its supervised
+   phases with approval gates. FFM_PLAYBOOK owns the module's anatomy
+   (folders, activation contract, boot prompts);
+   FRONTEND_BUILD_PHASE_PLAYBOOK owns stage-by-stage execution discipline.
+```
+
+### The Kit-Consumption Rule (Run 001's Expensive Lesson)
+
+**Consume kit primitives directly — the kit's auth IS the service layer.** Do not author wrappers for what the kit already provides complete (the Run 001 `authService` trap: the contract specified a wrapper for auth the kit shipped finished). The service layer is reserved for project-specific domain logic only.
+
+### Systems Discipline, Kit Expression
+
+| Pillar | Kit Track expression |
+|---|---|
+| **Explicit** | Route table + file tree as ground truth; every claim verified on disk |
+| **Testable** | `npm run build` + `jest` + `tsc --noEmit` all clean; grep-verifiable gates run their grep at stage close |
+| **Swappable** | Tokens over hardcoded colors; service layer for domain logic only; mock-to-real swap per DATA_CONTRACT |
+
+### Kit Track References
+
+| Doc | What it owns |
+|---|---|
+| `FRONTEND_FIRST_PLAYBOOK.md` | When/why frontend-first + the mandatory Kit Audit (§0) + gates before UI work |
+| `FRONTEND_BUILD_PHASE_PLAYBOOK.md` | Stage-by-stage build execution: sub-phases, pre-write checks, KIPs |
+| `FFM_PLAYBOOK.md` | The module the Engineer executes: folder anatomy, activation contract, boot prompts |
+| `STARTER_KIT_HANDBOOK.md` | What the kit provides (aspirational — verify per §2) |
+| `TESTING_PLAYBOOK.md` | The factory's testing bible — test doctrine for this track's verification stages |
+
+---
+
+## 🐍 PART III — THE PIPELINE TRACK (BACKEND BUNDLE / LOCAL-FIRST)
+
+> The second track: Python/CLI, file-based pipelines — the right shape for Backend Bundle and Local-First app types. This material is the factory's original systems doctrine, retained in full.
+
+---
+
+## 6. The CLI-First Pattern
 
 ### The Most Important Architectural Decision
 
@@ -193,7 +345,7 @@ This is not a limitation — it's a **strategic advantage**.
 
 ---
 
-## 5. File-Based State as Contracts
+## 7. File-Based State as Contracts
 
 ### Files Are Not Just Storage — They're Contracts
 
@@ -235,7 +387,7 @@ Every file your pipeline produces is a **contract** between stages.
 
 ---
 
-## 6. The Build Sequence
+## 8. The Build Sequence
 
 ### The Non-Negotiable Order
 
@@ -338,7 +490,7 @@ def generate(input_file):
 
 ---
 
-## 7. Testing Strategy
+## 9. Testing Strategy
 
 ### The Testing Truth
 
@@ -420,7 +572,7 @@ def test_real_gemini_call():
 
 ---
 
-## 8. Cloud-Native Engineering
+## 10. Cloud-Native Engineering
 
 ### The Mindset Shift
 
@@ -493,7 +645,7 @@ gcloud auth application-default print-access-token
 
 ---
 
-## 9. Provider Abstraction
+## 11. Provider Abstraction
 
 ### The Goal
 
@@ -569,7 +721,15 @@ With:
 
 ---
 
-## 10. DATA_CONTRACT Template
+## 📚 PART IV — SHARED REFERENCE
+
+> Reference material both tracks consume.
+
+---
+
+## 12. DATA_CONTRACT Template
+
+> **Ownership (per-pipeline):** in **GREENFIELD** runs the Engineer authors `DATA_CONTRACT.md` from the approved APP_BRIEF + UI_SPEC — using this template. In **CONVERSION** runs it arrives **pre-authored** by the Architect from Brain Drain evidence — the Engineer consumes it (see HANDOFF_PACKAGE_PLAYBOOK §5.2).
 
 This is the output the Engineer produces alongside working code.
 
@@ -824,7 +984,9 @@ python -m src.cli.main
 
 ---
 
-## 11. Type-Specific Considerations
+## 13. Type-Specific Considerations
+
+> **Track routing:** Full-Stack Web App → Kit Track (PART II). Backend Bundle and Local-First Tool → Pipeline Track (PART III).
 
 ### Full-Stack Web App
 
@@ -892,63 +1054,7 @@ python -m src.cli.main
 
 ---
 
-## 12. Handoff Protocol to Operations
-
-When code is complete and tested, Engineer hands off to Operations/Deployment.
-
-### Handoff Package Contents
-
-```
-📦 ENGINEER → OPERATIONS HANDOFF
-│
-├── APP_BRIEF.md (from Architect)
-├── UI_SPEC.md (from Designer)
-├── DATA_CONTRACT.md
-├── Working Code (tested)
-├── README.md (setup instructions)
-└── Deployment Guide
-```
-
-### What Operations Needs
-
-| Need | Why |
-|------|-----|
-| Clear setup instructions | Can deploy without guessing |
-| Environment variable list | Knows what to configure |
-| Health check endpoints | Can monitor the system |
-| Logging configuration | Can debug issues |
-| Rollback procedure | Can recover from failures |
-
-### Verbal Brief Template
-
-```
-"Operations, here's your brief:
-
-PROJECT: [Name]
-TYPE: [App Type]
-DEPLOYMENT TARGET: [Cloud Run / Vercel / Local]
-
-SETUP:
-1. [Step 1]
-2. [Step 2]
-3. [Step 3]
-
-ENVIRONMENT VARIABLES:
-- [VAR_1]: [Purpose]
-- [VAR_2]: [Purpose]
-
-HEALTH CHECK: [Endpoint]
-
-MONITORING: [What to watch]
-
-KNOWN ISSUES: [Any gotchas]
-
-Questions?"
-```
-
----
-
-## 13. Anti-Patterns to Avoid
+## 14. Anti-Patterns to Avoid
 
 ### ❌ Orchestration First
 
@@ -1013,122 +1119,26 @@ Questions?"
 
 ---
 
-## 14. Appendix: Lessons from the Field
+### ❌ Wrapping What the Kit Provides / Building on Unverified Kit Claims
 
-### Real Experience: AI Video Generation Pipeline
+**Bad:** Author an `authService` wrapper because the contract names one; trust the handbook's file list without checking disk
+**Good:** Kit Audit first — consume the kit's complete primitives directly; verify every handbook claim on disk before building on it
 
-This section captures actual lessons from building a production AI pipeline.
+**Why:** Run 001 paid for this twice — the `authService` trap (a wrapper specced for auth the kit shipped complete) and the handbook lies (`app-role.ts` ghost file, phantom store flags). The kit's auth IS the service layer; the filesystem, not the handbook, is the contract.
 
-#### The Decision That Saved Us
+**Test:** Is there a current Recon Report + Kit Audit for this repo? Does every file you're about to import actually exist on disk?
 
-**CLI-first, file-based pipeline.**
+---
 
-We accidentally made the right call:
-- Every stage reads from disk
-- Every stage writes to disk
-- No hidden in-memory state
+## ⚖️ PART V — AGENT CONDUCT (ALL AGENTS)
 
-This gave us:
-- Natural checkpointing
-- Easy resumability
-- Simple debugging
-- Independent module testing
-- Freedom to change providers
-
-> A boring, explicit pipeline beats a clever one — especially in AI systems.
-
-#### Tests Failed — And That Was a Gift
-
-When we came back months later:
-- Tests exploded
-- Imports broke
-- MoviePy APIs changed
-- Python packaging assumptions were invalid
-
-**What broke:**
-- `src` wasn't treated as a package
-- Editable installs were missing
-- MoviePy 2.x removed `moviepy.editor`
-- Tests relied on implicit PYTHONPATH hacks
-
-**What we learned:**
-- Packaging is not optional
-- `__init__.py` matters
-- Editable installs are mandatory
-- Tests must reflect real import paths
-
-#### Manual Execution Is Strategy, Not Hack
-
-Claude suggested:
-```python
-python -c "from src.module import fn; fn(...)"
-```
-
-At first this felt wrong. It turned out to be **exactly right**.
-
-Why:
-- Proves modules are actually independent
-- Validates function contracts
-- Removes CLI complexity while debugging
-- Isolates failures cleanly
-
-#### Cloud Migration Reality
-
-**OpenAI vs Google Cloud is NOT apples-to-apples.**
-
-| OpenAI | Google Cloud |
-|--------|--------------|
-| Upload big files directly | Strict request limits |
-| API abstracts storage | Explicit storage required |
-| Simple mental model | More setup, more control |
-
-This isn't worse — it's **enterprise-grade**.
-
-The 10MB STT limit taught us:
-- Introduce temporary storage (GCS)
-- Handle lifecycle explicitly
-- Clean up artifacts
-- Think about cost and security
-
-#### Provider Swaps Were Easy
-
-Because of early decisions, we replaced:
-- Anthropic → Gemini
-- OpenAI TTS → Google TTS
-- OpenAI Whisper → Google STT
-
-With:
-- Minimal surface-area changes
-- Tests still passing
-- Same file artifacts
-- Same pipeline flow
-
-**This validates the factory idea.**
-
-#### The Emerging Factory Pattern
-
-Without planning it, we discovered:
-
-```
-Phase 1: CLI Reference App
-├── Manual, explicit, testable, boring (good)
-
-Phase 2: Operator UI (Streamlit)
-├── Same modules, same artifacts
-├── Just orchestration + UX
-
-Phase 3: Product App
-├── API-first, auth, multi-user, scalable
-├── Same core modules
-```
-
-> One good CLI app can birth three products.
-
-
+> Behavioral doctrine. Owned here, binding everywhere.
 
 ---
 
 ## 15. Agentic Coding Constitution (Karpathy Protocol)
+
+> **⚖️ ALL-AGENT DOCTRINE (D-011).** This protocol governs EVERY factory agent — Architect, Designer, and Engineer alike — not just this playbook's owner. This section is its canonical home; APP_FACTORY_BLUEPRINT reserves the constitution-level pointer to it (see the Blueprint's PLAYBOOK DOCS note). If any other doc's paraphrase and this section disagree, this section wins.
 
 When the Engineer Agent operates in an agentic coding environment (Claude Code, Windsurf, Cursor, Gemini CLI), it must follow these behaviors.
 
@@ -1360,21 +1370,197 @@ For projects spanning multiple days:
 
 ---
 
-## Summary (Updated)
+## 🚢 SHIP
 
-The Engineer Agent's mission is to **build systems that remain stable**.
+---
+
+## 17. Handoff Protocol to Operations
+
+When code is complete and tested, Engineer hands off to Operations/Deployment.
+
+### Handoff Package Contents
+
+```
+📦 ENGINEER → OPERATIONS HANDOFF
+│
+├── APP_BRIEF.md (from Architect)
+├── UI_SPEC.md (from Designer)
+├── DATA_CONTRACT.md
+├── Working Code (tested)
+├── README.md (setup instructions)
+└── Deployment Guide
+```
+
+### What Operations Needs
+
+| Need | Why |
+|------|-----|
+| Clear setup instructions | Can deploy without guessing |
+| Environment variable list | Knows what to configure |
+| Health check endpoints | Can monitor the system |
+| Logging configuration | Can debug issues |
+| Rollback procedure | Can recover from failures |
+
+### Verbal Brief Template
+
+```
+"Operations, here's your brief:
+
+PROJECT: [Name]
+TYPE: [App Type]
+DEPLOYMENT TARGET: [Cloud Run / Vercel / Local]
+
+SETUP:
+1. [Step 1]
+2. [Step 2]
+3. [Step 3]
+
+ENVIRONMENT VARIABLES:
+- [VAR_1]: [Purpose]
+- [VAR_2]: [Purpose]
+
+HEALTH CHECK: [Endpoint]
+
+MONITORING: [What to watch]
+
+KNOWN ISSUES: [Any gotchas]
+
+Questions?"
+```
+
+---
+
+## Appendix A: Lessons from the Field (Pipeline Track — AI Video Pipeline)
+
+### Real Experience: AI Video Generation Pipeline
+
+This section captures actual lessons from building a production AI pipeline.
+
+#### The Decision That Saved Us
+
+**CLI-first, file-based pipeline.**
+
+We accidentally made the right call:
+- Every stage reads from disk
+- Every stage writes to disk
+- No hidden in-memory state
+
+This gave us:
+- Natural checkpointing
+- Easy resumability
+- Simple debugging
+- Independent module testing
+- Freedom to change providers
+
+> A boring, explicit pipeline beats a clever one — especially in AI systems.
+
+#### Tests Failed — And That Was a Gift
+
+When we came back months later:
+- Tests exploded
+- Imports broke
+- MoviePy APIs changed
+- Python packaging assumptions were invalid
+
+**What broke:**
+- `src` wasn't treated as a package
+- Editable installs were missing
+- MoviePy 2.x removed `moviepy.editor`
+- Tests relied on implicit PYTHONPATH hacks
+
+**What we learned:**
+- Packaging is not optional
+- `__init__.py` matters
+- Editable installs are mandatory
+- Tests must reflect real import paths
+
+#### Manual Execution Is Strategy, Not Hack
+
+Claude suggested:
+```python
+python -c "from src.module import fn; fn(...)"
+```
+
+At first this felt wrong. It turned out to be **exactly right**.
+
+Why:
+- Proves modules are actually independent
+- Validates function contracts
+- Removes CLI complexity while debugging
+- Isolates failures cleanly
+
+#### Cloud Migration Reality
+
+**OpenAI vs Google Cloud is NOT apples-to-apples.**
+
+| OpenAI | Google Cloud |
+|--------|--------------|
+| Upload big files directly | Strict request limits |
+| API abstracts storage | Explicit storage required |
+| Simple mental model | More setup, more control |
+
+This isn't worse — it's **enterprise-grade**.
+
+The 10MB STT limit taught us:
+- Introduce temporary storage (GCS)
+- Handle lifecycle explicitly
+- Clean up artifacts
+- Think about cost and security
+
+#### Provider Swaps Were Easy
+
+Because of early decisions, we replaced:
+- Anthropic → Gemini
+- OpenAI TTS → Google TTS
+- OpenAI Whisper → Google STT
+
+With:
+- Minimal surface-area changes
+- Tests still passing
+- Same file artifacts
+- Same pipeline flow
+
+**This validates the factory idea.**
+
+#### The Emerging Factory Pattern
+
+Without planning it, we discovered:
+
+```
+Phase 1: CLI Reference App
+├── Manual, explicit, testable, boring (good)
+
+Phase 2: Operator UI (Streamlit)
+├── Same modules, same artifacts
+├── Just orchestration + UX
+
+Phase 3: Product App
+├── API-first, auth, multi-user, scalable
+├── Same core modules
+```
+
+> One good CLI app can birth three products.
+
+
+
+---
+
+## Summary
+
+The Engineer Agent's mission is to **build systems that remain stable** — and to be the factory's ground-truth instrument before anyone authors.
 
 ### The Engineer's Checklist
 
-1. ✅ Receive APPROVED APP_BRIEF and UI_SPEC
-2. ✅ Design file-based state contracts
+0. ✅ **Run recon: answer RECON_QUESTIONNAIRE read-only, deliver the Recon Report (Phase 0)**
+1. ✅ Identify the pipeline (Blueprint router) and receive the matching package — greenfield: token file (PRIMARY) + style tile + screen HTML/PNG + UI_SPEC + component manifest; conversion: the 4-file handoff package
+2. ✅ Kit Track: kit read → Kit Audit → FFM execution · Pipeline Track: design file-based state contracts
 3. ✅ Build modules one at a time
 4. ✅ Manual test before automated test
-5. ✅ Ensure clean-venv compatibility
+5. ✅ Ensure clean-venv compatibility (Pipeline) / clean `build` + `jest` + `tsc` (Kit)
 6. ✅ Abstract providers for swappability
 7. ✅ Respect cloud limits in design
-8. ✅ Wire CLI before UI
-9. ✅ Produce DATA_CONTRACT.md
+8. ✅ Wire CLI before UI (Pipeline Track)
+9. ✅ Produce DATA_CONTRACT.md (greenfield) / honor the pre-authored one (conversion)
 10. ✅ Hand off complete package
 11. ✅ **Follow Karpathy Protocol in agentic coding**
 12. ✅ **Maintain session files for context continuity**
@@ -1391,14 +1577,22 @@ The Engineer Agent's mission is to **build systems that remain stable**.
 
 > "Orchestration comes last, not first."
 
+> "The kit's auth IS the service layer. Consume, don't wrap." — Run 001
+
+> "Where any doc and the filesystem disagree, the filesystem wins." — Run 001 meta-lesson
+
 > "You are the hands; the human is the architect." — Karpathy
 
 > "Touch only what you're asked to touch." — Tony's Rule
 
 ---
 
-*This playbook is part of the AI App Factory documentation suite.*
+*This playbook is part of the App Factory documentation suite.*
 
-**Version:** 1.1  
-**Last Updated:** February 2026  
-**Changelog:** Added Karpathy Protocol (Section 15), Session Memory Protocol (Section 16)
+## Version History
+
+| Version | Date | Change |
+|---|---|---|
+| 1.2 | 2026-07-07 | **Wave 2B — two-track structural restructure (F-028).** Reorganized into PART I Common Doctrine / PART II Kit Track (dominant lane, described first) / PART III Pipeline Track (original Python/CLI doctrine retained verbatim) / PART IV Shared Reference / PART V Agent Conduct / Ship. NEW §2 Phase 0 Recon-Executor role — the Engineer answers RECON_QUESTIONNAIRE read-only and produces the Recon Report the Architect consumes (F-027). §3 inputs rewritten to match DESIGNER_PLAYBOOK §10 + HANDOFF_PACKAGE_PLAYBOOK: greenfield = token file (PRIMARY) + style tile/screen HTML+PNG + UI_SPEC + component manifest (screenshots removed as greenfield input — the F-026 mismatch); conversion = 4-file package + `_design/` + `_extraction/`; per-pipeline DATA_CONTRACT ownership stated in §3 and §12 (F-029). NEW §5 Kit Track: recon → kit read (aspirational, verify) → Kit Audit → FFM execution as the primary work mode, with pointers to FRONTEND_FIRST_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, FFM_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK (F-027; F-035 bridge). §15 Karpathy Protocol marked ALL-AGENT doctrine (D-011), Blueprint pointer connected; §15/§16 numbers PINNED as stable IDs. New anti-pattern: "Wrapping What the Kit Provides / Building on Unverified Kit Claims" (Run 001; F-039 antibody). Moves, all byte-faithful: old §4–§9 → §6–§11, §10 → §12, §11 → §13, §13 → §14, §12 → §17, §14 → Appendix A. §1 updated (Designer v2.0 diagram, recon + FFM responsibilities). Standard header (F-018); "AI App Factory" → "App Factory". |
+| 1.1 | Feb 2026 | Added Karpathy Protocol (Section 15), Session Memory Protocol (Section 16). |
+| 1.0 | — | Baseline: role, inputs, systems discipline, CLI-first pattern, file-state contracts, build sequence, testing strategy, cloud-native engineering, provider abstraction, DATA_CONTRACT template, type-specific considerations, operations handoff, anti-patterns, field lessons. |

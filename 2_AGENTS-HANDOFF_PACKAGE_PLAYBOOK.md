@@ -1,11 +1,22 @@
 # HANDOFF PACKAGE PLAYBOOK
 
+> **Version:** 1.1 · **Date:** 2026-07-07 · **Status:** Active
+> **Tier:** 2 — Pipeline Agents · **Pairs with:** APP_FACTORY_BLUEPRINT, DESIGNER_PLAYBOOK, ENGINEER_PLAYBOOK, FRONTEND_FIRST_PLAYBOOK, RECON_QUESTIONNAIRE
+
 > **The instruction set for authoring project handoff packages.**
 > Paired with the Cyberize Agentic Automation handoff as the canonical worked example.
+> **Born from:** Cyberize Agentic Automation Run 001 (May 2026) — first successful Factory frontend conversion
+> **Worked example:** `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/`
 
-**Version:** 1.0
-**Born from:** Cyberize Agentic Automation Run 001 (May 2026) — first successful Factory frontend conversion
-**Pairs with example:** `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/`
+---
+
+## Which Pipeline Am I In? (Read This First)
+
+This playbook is the **CONVERSION pipeline's package doctrine**: a source app exists, Brain Drain has extracted it, and the operator/Architect authors the 4-file package that Claudy executes. No Designer in the loop — visuals come from source-app screenshots in `_design/`.
+
+**Greenfield runs route differently:** Architect → Designer → Engineer, per the agent playbooks (`ARCHITECT_PLAYBOOK.md`, `DESIGNER_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`), with the token file as the primary design deliverable. The routing decision is made at the constitution level — see **`APP_FACTORY_BLUEPRINT.md`, "Which Pipeline Am I In?"** (the router promoted from FFM_PLAYBOOK §4). Route there before authoring anything here.
+
+Greenfield runs still use this playbook's package definition — with the additions in §5.5 (Greenfield Variant).
 
 ---
 
@@ -55,6 +66,7 @@ Before writing the handoff package, these inputs must exist:
 
 | Input | Source | Purpose |
 |---|---|---|
+| **Recon Report (current)** | Phase 0 recon per `RECON_QUESTIONNAIRE.md` (`stark-recon`) | Ground truth of the target repo/kit — package authoring presupposes it |
 | Project scope decision | Operator | Confirms this is worth building |
 | Source app (if conversion) | Existing app | Reference for behavior to preserve |
 | Brain Drain extraction (if conversion) | `_extraction/` folder | Evidence-labeled source code analysis |
@@ -115,6 +127,8 @@ If forbidden zones are vague, Claudy will drift. If they're explicit and numbere
 **Purpose:** Every data shape, every service contract, every mock requirement.
 
 **Canonical example:** `_project/DATA_CONTRACT.md` in the Cyberize module.
+
+**Ownership is per-pipeline:** in CONVERSION runs (this playbook's home case) the Architect pre-authors DATA_CONTRACT from Brain Drain evidence before handoff; in GREENFIELD runs the Engineer authors it from the approved APP_BRIEF + UI_SPEC — see `APP_FACTORY_BLUEPRINT.md`, "Which Pipeline Am I In?".
 
 **Required sections (in order):**
 
@@ -225,6 +239,19 @@ If forbidden zones are vague, Claudy will drift. If they're explicit and numbere
 - This file is INTENTIONALLY REDUNDANT with APP_BRIEF on forbidden zones. The redundancy is a feature — different docs are read in different contexts and the forbidden zones must be reinforced.
 - Mobile-first / Rule Zero language should be present here, not just in UI_SPEC.
 - The "Active Project Module" pointer must reference the module's location.
+
+---
+
+### 5.5 Greenfield Variant
+
+In a GREENFIELD run (no source app — see the pipeline preamble), the package carries the four canonical files PLUS the Designer deliverables per `DESIGNER_PLAYBOOK.md` §10:
+
+- **Token file** (`globals.css`/`.scss`, all modes) — the PRIMARY design deliverable
+- **Style tile** — HTML + PNG
+- **Per-screen HTML + PNG** — Playwright-rendered, light + dark
+- **Component manifest** (`COMPONENT_MANIFEST.md`)
+
+Authorship shifts with the pipeline: **UI_SPEC is drafted by the Architect and revised by the Designer** (in conversion runs it is authored from Brain Drain evidence + screenshots). The visual ground truth is the Designer's HTML/PNG set, not source-app screenshots — Claudy builds from the Designer's HTML and verifies against the PNG.
 
 ---
 
@@ -339,6 +366,7 @@ The playbook evolves through use. Each run leaves it sharper for the next.
 
 | Version | Date | Born From | Changes |
 |---|---|---|---|
+| 1.1 | 2026-07-07 | Wave 1 audit sync | **Pipeline duality made explicit.** Standard header block (F-018). "Which Pipeline Am I In?" preamble added: this playbook = the CONVERSION pipeline's package doctrine; greenfield routes via the agent playbooks; entry point = APP_FACTORY_BLUEPRINT router (F-030). §5.5 Greenfield Variant added: package additionally carries Designer deliverables per DESIGNER_PLAYBOOK §10 — token file (primary), style tile HTML+PNG, screen HTML+PNG, component manifest; UI_SPEC drafted by Architect, revised by Designer (F-026 closure). Per-pipeline DATA_CONTRACT ownership stated in §5.2 (F-029). Recon Report added to §4 prerequisites — package authoring presupposes Phase 0 recon (F-003 bridge). |
 | 1.0 | 2026-05-31 | Cyberize Run 001 | Initial playbook authored from Run 001 worked example |
 
 ---
@@ -354,4 +382,4 @@ The playbook evolves through use. Each run leaves it sharper for the next.
 
 ---
 
-🥄 *Part of Stark Industries — App Factory v1.1 doctrine.*
+🥄 *Part of Stark Industries — App Factory doctrine.*
