@@ -1,8 +1,6 @@
 # QA PLAYBOOK
 
-> **Version:** 0.1  
-> **Date:** 2026-08-04  
-> **Status:** DRAFT — Validate through real FFM, BIM, FIX, and FEAT runs before promotion to v1.0  
+> **Version:** 0.1 · **Date:** 2026-08-04 · **Status:** DRAFT — Validate through real FFM, BIM, FIX, and FEAT runs before promotion to v1.0
 > **Tier:** 3 — Build Methodology  
 > **Pairs with:** `BUG_FIX_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `RECON_QUESTIONNAIRE.md`  
 > **Owner:** Stark Industries App Factory  
