@@ -1,8 +1,6 @@
 # BUG FIX PLAYBOOK
 
-> **Version:** 0.1  
-> **Date:** 2026-08-04  
-> **Status:** DRAFT — Validate through real FIX modules before promotion to v1.0  
+> **Version:** 0.1 · **Date:** 2026-08-04 · **Status:** DRAFT — Validate through real FIX modules before promotion to v1.0
 > **Tier:** 3 — Build Methodology  
 > **Pairs with:** `QA_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `RECON_QUESTIONNAIRE.md`, `FFM_PLAYBOOK.md`  
 > **Owner:** Stark Industries App Factory  
