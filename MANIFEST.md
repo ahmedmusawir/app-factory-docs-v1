@@ -55,7 +55,7 @@ Regenerated from the doc header blocks on **every doc bump** (bump procedure: `_
 | AUTH_MANUAL | 1.3 | 2026-07-08 | Active | Kit auth authority: table-driven roles (user_roles), anti-authService antibody, RBAC patterns | STARTER_KIT_HANDBOOK, DATABASE_MANUAL, API_AND_SERVICES_MANUAL, FRONTEND_FIRST_PLAYBOOK, RECON_QUESTIONNAIRE, STATE_MANAGEMENT_MANUAL |
 | DATABASE_MANUAL | 1.1 | 2026-07-08 | Active | Supabase PostgreSQL doctrine: schema patterns, user_roles pattern, RLS, migrations | STARTER_KIT_HANDBOOK, AUTH_MANUAL, API_AND_SERVICES_MANUAL, FRONTEND_FIRST_PLAYBOOK, TESTING_PLAYBOOK |
 | ECOMMERCE_AND_PAYMENTS_MANUAL | 1.1 | 2026-07-08 | Active | One-time-payments commerce (headless WooCommerce + Stripe); recurring → STRIPE_SUBSCRIPTIONS_PLAYBOOK | STRIPE_SUBSCRIPTIONS_PLAYBOOK, STATE_MANAGEMENT_MANUAL, API_AND_SERVICES_MANUAL, APP_ARCHITECTURE_MANUAL |
-| STATE_MANAGEMENT_MANUAL | 1.1 | 2026-07-08 | Active | Zustand doctrine: three-layer state model, store patterns, persistence, SSR hydration | STARTER_KIT_HANDBOOK, AUTH_MANUAL, FRONTEND_FIRST_PLAYBOOK, APP_ARCHITECTURE_MANUAL |
+| STATE_MANAGEMENT_MANUAL | 1.2 | 2026-08-05 | Active | Zustand doctrine: three-layer state model, store patterns, persistence, SSR hydration | STARTER_KIT_HANDBOOK, AUTH_MANUAL, FRONTEND_FIRST_PLAYBOOK, APP_ARCHITECTURE_MANUAL |
 | STRIPE_SUBSCRIPTIONS_PLAYBOOK | 1.1 | 2026-07-08 | Active | Recurring billing recipe (Next.js + Supabase): money-truth model, RBAC ⊥ subscriptions | ECOMMERCE_AND_PAYMENTS_MANUAL, API_AND_SERVICES_MANUAL, TESTING_PLAYBOOK, AUTH_MANUAL |
 
 ### 05_DESIGN_SYSTEM

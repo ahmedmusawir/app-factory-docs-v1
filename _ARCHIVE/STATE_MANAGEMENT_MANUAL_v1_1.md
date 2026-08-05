@@ -1,6 +1,6 @@
 # STATE MANAGEMENT MANUAL
 
-> **Version:** 1.2 · **Date:** 2026-08-05 · **Status:** Active
+> **Version:** 1.1 · **Date:** 2026-07-08 · **Status:** Active
 > **Tier:** 4 — Reference Manuals · **Pairs with:** STARTER_KIT_HANDBOOK, AUTH_MANUAL, FRONTEND_FIRST_PLAYBOOK, APP_ARCHITECTURE_MANUAL
 
 > **Stark Industries Software Factory**
@@ -95,20 +95,6 @@ export const useCounterStore = create<CounterStore>((set) => ({
   decrement: () => set((state) => ({ count: state.count - 1 })),
 }));
 ```
-
-### Division of Labor: Server Props vs. Client Stores (HARD RULE)
-
-**The server tells the UI who you are; the store helps the UI react to what you do.**
-
-| Concern | Source | Why |
-|---|---|---|
-| Identity & role for RENDERING (nav links, role-gated UI, portal chrome) | Server-resolved by the route guard, passed as props | No client fetch window → no race, no empty state, no dev/deploy divergence. Re-verified server-side on every navigation. |
-| Session EVENT reactions (sign-out in another tab), interaction state, UI state, in-memory domain state | Client store (Zustand) | Lives and changes in the browser during use — that is what a client store is for. |
-
-Persisted auth state (e.g. a `role` written only at login into localStorage) is a
-SNAPSHOT, not truth: it goes stale across browsers/devices/cleared storage. Rendering
-from it produces "random" partial-UI bugs that dev latency hides (see AUTH_MANUAL —
-The Navbar Law; origin: 2026-08-04 staging nav bug).
 
 ---
 
@@ -1545,7 +1531,6 @@ const unsubscribe = useCartStore.subscribe(
 
 - **`STARTER_KIT_HANDBOOK.md`** — the kit's shipped `useAuthStore` is the auth-state ground truth (verify shape on disk — recon Q3.6; do not assume derived flags).
 - **`AUTH_MANUAL.md`** — auth state ownership: client store = display hints; authorization = server-side from `user_roles`.
-- **`AUTH_MANUAL.md`** — "Server-Resolved Identity for UI (The Navbar Law)": identity renders from server props, never from client stores.
 - **`FRONTEND_FIRST_PLAYBOOK.md`** — §5 service-layer law: server state enters stores ONLY through services (this manual's three-layer model, enforced).
 - **`APP_ARCHITECTURE_MANUAL.md`** — §6 data-flow patterns these stores participate in.
 
@@ -1557,7 +1542,6 @@ const unsubscribe = useCartStore.subscribe(
 |---|---|---|
 | 1.0 | (original, date unknown) | Initial manual: three-layer state model, when-to-use table, store architecture, core patterns, persistence, SSR hydration, templates, integration patterns, common stores, best practices. Unversioned until the 2026-07 audit. |
 | 1.1 | 2026-07-08 | **Wave 4 metadata patch (audit sync).** Standard header block — this doc was the F-018 worst-case specimen (no version, date, or history anywhere). Cross-References section added — outbound isolation ended (F-035). This history table (D-018). ZERO content changes — the audit verified the doctrine clean (no derived-flag fictions, no `: any`, service-layer-consistent). |
-| 1.2 | 2026-08-05 | **Navbar Saga promotion.** Division of Labor subsection appended to §1 (server props vs. client stores hard rule — identity renders from server, stores react to browser events). Cross-ref to AUTH_MANUAL Navbar Law added. | navbar-saga |
 
 ---
 
