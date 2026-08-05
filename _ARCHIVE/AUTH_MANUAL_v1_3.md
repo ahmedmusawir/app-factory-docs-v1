@@ -1,6 +1,6 @@
 # AUTHENTICATION & SUPABASE INTEGRATION MANUAL
 
-> **Version:** 1.4 · **Date:** 2026-08-05 · **Status:** Active
+> **Version:** 1.3 · **Date:** 2026-07-08 · **Status:** Active
 > **Tier:** 4 — Reference Manuals · **Pairs with:** STARTER_KIT_HANDBOOK, DATABASE_MANUAL, API_AND_SERVICES_MANUAL, FRONTEND_FIRST_PLAYBOOK, RECON_QUESTIONNAIRE, STATE_MANAGEMENT_MANUAL
 
 > **Project:** Stark SaaS Starter Kit
@@ -874,63 +874,6 @@ await protectPage(["admin", "superadmin"]);
 // Allow all authenticated users
 await protectPage(["member", "admin", "superadmin"]);
 ```
-
----
-
-## Server-Resolved Identity for UI (The Navbar Law)
-
-**Identity and authorization state that UI renders from is server-resolved and passed
-down as props. UI is never gated on client-resolved identity.**
-
-If a component's render output depends on WHO the user is (nav links, role-gated
-buttons, portal chrome), the answer must arrive WITH the component — resolved by the
-server layout's route guard and passed as props — not fetched after mount.
-
-### ❌ WRONG — client-resolved identity (the navbar race)
-
-```tsx
-"use client";
-const [user, setUser] = useState<SupabaseUser | null>(null);   // null window
-useEffect(() => {
-  supabase.auth.getUser().then(({ data }) => setUser(data.user)); // network race
-}, []);
-const navLinks = user ? [...] : [];   // renders EMPTY during the window
-```
-
-Failure mechanism: every mount opens a `null` window while a network round-trip
-resolves. Zero-latency dev masks it; deployed latency makes it visible and "random."
-A failed call renders logged-out UI to an authenticated user. This shipped, broke
-staging, and was invisible in dev — see BUG_FIX_PLAYBOOK (mechanism-naming) and the
-2026-08-04 fix.
-
-### ✅ CORRECT — server-resolved, props down
-
-```tsx
-// layout.tsx (SERVER component) — the guard already knows the answer
-const { user, role } = await protectPage([AppRole.ADMIN]);
-return <AuthedShell user={user} role={role}>{children}</AuthedShell>;
-
-// Navbar — born holding the card; no fetch, no window, no race
-const Navbar = ({ user, role }: { user: SupabaseUser; role: AppRole }) => {
-  const navLinks = buildLinks(role);   // unconditional — structurally never empty
-  ...
-};
-```
-
-`protectPage` returns `{ user, role }` — it already computed both to guard the route;
-returning them costs zero queries. The same server check that admits the user writes
-the user's menu: one source, one moment, correct in the first server-rendered paint.
-
-### Rules
-
-1. Route guards return what they resolve (`{ user, role }`) — never compute-and-discard.
-2. Client stores (Zustand) may REACT to session events (`onAuthStateChange` sign-out)
-   and own interaction state — they are never the SOURCE of identity for rendering.
-   (See STATE_MANAGEMENT_MANUAL §1 — Division of Labor.)
-3. Persisted client role state goes stale by design (written at login, survives in
-   localStorage). Any consumer treating it as truth inherits the race. (KIP-2.)
-4. Invariant-test the guarantee: an authed shell component must render its full
-   role-appropriate link set on FIRST render, synchronously (see Navbar.invariant).
 
 ---
 
@@ -2238,7 +2181,6 @@ This authentication system provides:
 | 1.0 | (original, date unknown) | Initial manual: Supabase clients, auth flows, API routes, Zustand store, protectPage RBAC, session middleware, components, patterns, troubleshooting, security practices. |
 | 1.1 | Jun 2026 | Run 001 era updates (service-layer antibody groundwork). |
 | 1.2 | 2026-06-28 | Removed the deleted `POST /api/auth/superadmin-add-user` route (creation via `addMember`/`addUser` server actions); documented the Mark IV `handle_new_user` trigger applying the metadata `role` + `full_name` at creation. Kit Hardening Gate 10. |
-| 1.4 | 2026-08-05 | **Navbar Saga promotion.** New § "Server-Resolved Identity for UI (The Navbar Law)" inserted after Server-Side Protection (RBAC): identity renders from server props, never from client stores. Four hard rules. | navbar-saga |
 | 1.3 | 2026-07-08 | **Wave 4 — the F-042 role-doctrine correction.** Role storage doctrine corrected everywhere it lived: the `user_roles` TABLE is the single source of truth (kit `supabase/setup.sql`; server-side resolution via `get-user-role.ts`); the v1.2 "Metadata-driven roles — NOT separate tables" philosophy line was FALSE against the kit's own filesystem (RECON_WAVE0 Q1 ground-truth). Key Principle #5 rewritten; "User Metadata Schema" section → "Where Roles Live" (table home + creation-time-transport nuance + ⛔ never read authz from `user_metadata`, recon Q3.4); §8 metadata-reading `getUserRole` sample replaced with the canonical-path description + read-the-kit-on-disk pointer (no drifting code copies — D-015); legacy `is_qr_*` (QR-era) store/pattern snippets marked with advisories; troubleshooting realigned to the table model; registration flow wording corrected. Kit hardening ticket referenced without documenting the vector. Canonical cross-refs (F-032/F-011); standard header (F-018). Full code-sample resync vs the kit = queued kit-verification touch. |
 
 ---
