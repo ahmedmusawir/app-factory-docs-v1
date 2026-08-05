@@ -21,6 +21,8 @@
 
 > On every doc bump, append: `| date | doc vX.Y | one-line change | finding/lesson IDs |` — and archive the outgoing version per `_ARCHIVE/README.md`.
 
+| 2026-08-05 | QA_PLAYBOOK v0.1 | New doc entering Hub: QA doctrine — evidence discipline, risk-based planning, Gate Q/D, defect routing, release-complete criteria | navbar-saga |
+
 ---
 
 🥄 *Part of Stark Industries — App Factory doctrine.*
