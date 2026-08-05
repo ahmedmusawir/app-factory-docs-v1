@@ -23,6 +23,7 @@
 
 | 2026-08-05 | QA_PLAYBOOK v0.1 | New doc entering Hub: QA doctrine — evidence discipline, risk-based planning, Gate Q/D, defect routing, release-complete criteria | navbar-saga |
 | 2026-08-05 | BUG_FIX_PLAYBOOK v0.1 | New doc entering Hub: bug-fix doctrine — evidence-first lifecycle, root-cause mechanism rule, regression protection, Gate Q/D, scope control | navbar-saga |
+| 2026-08-05 | STATE_MANAGEMENT_MANUAL v1.2 | Navbar Saga promotion — Division of Labor subsection appended to §1 (server props vs. client stores hard rule); cross-ref to AUTH_MANUAL Navbar Law added | navbar-saga |
 
 ---
 
