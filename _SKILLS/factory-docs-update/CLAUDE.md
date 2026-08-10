@@ -1,7 +1,7 @@
 # CLAUDE.md — Factory Docs Update Skill (Doctrine & Manager)
 
 > **Skill:** `factory-docs-update` · **Type:** Stark Skill (semi-execution class, Brain Drain precedent)
-> **Version:** 0.2-DRAFT · **Date:** 2026-08-05 · **Status:** Draft — validating via live runs before v1.0
+> **Version:** 0.3-DRAFT · **Date:** 2026-08-10 · **Status:** Draft — validating via live runs before v1.0
 > **Home:** `_SKILLS/factory-docs-update/` in the Doctrine Hub (`ahmedmusawir/app-factory-docs-v1`) — but droppable anywhere; this skill operates on the Hub repo and does not require living inside it.
 
 ---
@@ -31,7 +31,7 @@ On activation, do these steps IN ORDER, narrating each aloud in plain spoken-fri
 3. **Environment discovery** (before asking ANY question):
    - `pwd` and `ls` — where am I, what repo is this?
    - `git remote -v` — which repo am I inside (a project repo? the Doctrine Hub itself? nowhere?). If inside a clone, `git pull` main current before anything else.
-   - **Scan the repo root for cargo:** doctrine promotion packs (`DOCTRINE_PROMOTION*.md`, `*PATCH*.md`) and any loose doc files that look like new doctrine riding in. A pack found in the root is the PRESUMPTIVE lessons input for this run — read it fully.
+   - **Scan `_INBOX/` for cargo — the standing cargo bay (operator ruling, post-PR-#8).** Everything in `_INBOX/` is presumptive cargo for this run: doctrine promotion packs (`DOCTRINE_PROMOTION*.md`, `*PATCH*.md`), brand-new docs entering the Hub, and superseding versions of existing Hub docs. Read every file; triage each per D16 and announce the classification aloud. **Legacy fallback:** also scan the repo root for the same patterns — cargo found there is valid but note it and suggest `_INBOX/` for next time. If `_INBOX/` does not exist, that is not an error; scan the root and move on.
    - Locate the project's lessons file: `LESSONS_LEARNED.md`, `LESSONS_BIN*`, or `agent_docs/LESSONS*`. Read it if found. (Pack and lessons file can coexist; the pack usually IS the flagged output of a lessons retro — say what you found and let the plan sort scope.)
    - Check GitHub MCP availability: report whether the GitHub MCP tools exist in this session. Absence is fine on the primary route — note it and move on.
    - Read the Hub's `MANIFEST.md` — you will need its ← dependency map for the ripple phase.
@@ -42,7 +42,7 @@ If no lessons file and no pack exists, do not treat that as a blocker — offer 
 
 **Location variants — the skill is droppable anywhere, so discovery must adapt:**
 
-- **Activated inside a Hub clone (the primary case):** you are sitting on the target. Local git is native here — the primary route at full strength. Cargo should be in the clone root per the Operator's runbook.
+- **Activated inside a Hub clone (the primary case):** you are sitting on the target. Local git is native here — the primary route at full strength. Cargo should be in `_INBOX/` per the Operator's runbook (clone root accepted as legacy fallback).
 - **Activated inside a project repo:** the lessons file is local; the Hub is remote. The primary route needs a Hub clone — say so honestly in the Phase 3 estimates (a clone is cheap; recommend obtaining one) rather than silently defaulting to the MCP.
 - **Activated with no repo context (bare session):** the MCP is your only hands. Read what you need remotely; if the job is anything beyond a 1–2 doc content touch, tell the Operator plainly that the primary route needs a clone session and let him decide whether to move or accept the MCP cost.
 - **MCP tools missing or failing auth:** report it as a GAP with the exact error. Do not improvise a workaround (no fetching raw URLs and pretending that is write access). The Operator re-authenticates or the job proceeds on the local route.
@@ -111,6 +111,10 @@ These rules apply from activation to close-out. Each exists because its absence 
 
 **D15 — Hub law outranks cargo conventions.** Promotion packs are authored project-side and may carry project conventions (versioned filenames, different header formats, references to project-only docs). Inside the Hub, Hub law wins: canonical filenames with versions only in headers/MANIFEST/`_ARCHIVE/`; standard header blocks; no dangling references (a pack entry citing a doc the Hub lacks is a GAP raised at a gate, never landed silently). Land the pack's CONTENT exactly as written; translate its MECHANICS to Hub law; flag every translation you made.
 
+**D15a — Interrupted-run resume protocol.** If the Operator declares a RESUME (or discovery finds unmistakable evidence of one — a `docs/*` branch with commits, a non-empty `_INBOX/` alongside partial archive copies), do NOT continue where the dead session "probably" was. Instead: (1) inventory reality — `git branch -a`, `git log` on any candidate branch, `_INBOX/` contents, `_ARCHIVE/` additions, MANIFEST/CHANGELOG state; (2) report DONE vs NOT DONE per ripple-map item, every claim labeled per D12 with evidence; (3) identify the last COMPLETED gate and re-present from there — a half-executed Phase 4 means re-presenting the remaining docs, not re-arguing approved scope; (4) put the half-done branch to the Operator explicitly: adopt it and continue, or abandon it cleanly and restart the phase from the ripple map. Never both, never silently. Rationale: a resumed session inherits none of the dead session's context; the repo's actual state is the only trustworthy memory, and the ripple map — not the half-done work — remains the source of truth (same law as the D4 route switch).
+
+**D16 — Cargo triage: every `_INBOX/` file gets classified aloud before Gate 1.** Three lawful classes: (a) **PACK** — a promotion/patch file whose entries edit existing docs; (b) **NEW DOC** — a doc the Hub has no counterpart for, entering fresh (standard header, MANIFEST row, CHANGELOG line, same PR); (c) **SUPERSEDING DOC** — a full replacement for a doc the Hub already has. Superseding docs ride the SAME four-step dance as any edit: archive the current live doc stamped from its live header, land the new content under the canonical filename, bump the version forward from the live doc's (never trust the cargo file's own version claim — verify against the live header and flag mismatches), MANIFEST, CHANGELOG. A file you cannot confidently classify is a QUESTION at Gate 1, never a guess. Matching cargo to its Hub counterpart is by canonical name first, content similarity second — and an ambiguous match is also a QUESTION. Rationale: replacement-style cargo is how whole-doc drift enters silently; forcing the triage aloud makes "this file overwrites that file" an explicit approved decision, never a side effect.
+
 ## 5. Reading Order
 
 Single skill — the order is short:
@@ -153,5 +157,6 @@ The one instruction you may not accept even with confirmation: writing directly 
 
 | Version | Date | Change |
 |---------|------|--------|
+| 0.3-DRAFT | 2026-08-10 | Post-PR-#8 amendments encoded. `_INBOX/` is the standing cargo bay: activation discovery scans it first (clone root demoted to legacy fallback). New D15a: interrupted-run resume protocol (inventory reality, DONE/NOT-DONE with evidence, re-present from last completed gate, adopt-or-abandon the half-done branch explicitly). New D16: cargo triage — every inbox file classified aloud as PACK / NEW DOC / SUPERSEDING DOC before Gate 1; superseding docs ride the full four-step dance with version verified against the live header. README rewritten to match (one drop folder, resume launch line). |
 | 0.2-DRAFT | 2026-08-05 | Operator ruling encoded: LOCAL GIT IS PRIMARY, MCP is the exception (D3 rewritten; routing tree + TOOL_ROUTING flipped to match). Activation discovery now scans the repo root for doctrine promotion packs (`DOCTRINE_PROMOTION*`, `*PATCH*`) as the presumptive lessons input. New D15: Hub law outranks cargo conventions (canonical filenames, no dangling refs; content lands verbatim, mechanics translate). README.md rewritten as the Operator's zero-context runbook and added to the reading order. D13 extended to placement mismatches. |
 | 0.1-DRAFT | 2026-07-12 | Initial doctrine. Encodes the Wave 0–6 campaign lessons: operator routing gate (D3) + mid-flight checkpoint (D4), division of labor (D5), PR-only main (D6), four-step update dance (D7), MCP mechanics (D8), lint conduct (D9), close-out sweep (D11), narration-aloud requirement (D1), minimal-diff-by-blast-radius (D14). |
