@@ -30,6 +30,7 @@
 | 2026-08-10 | FEAT_PLAYBOOK v1.0 | New doc entering Hub: Feature Module doctrine — launch conditions, v1-now/v2-seeded, scope discipline, mode parity, accessibility gates; mechanics inherited from BIM_PLAYBOOK by reference | factory-module-doctrine |
 | 2026-08-10 | QA_PLAYBOOK v1.0 | Field-tested supersession of v0.1 (archived) — claim-package handoff, contract extraction, one-test-at-a-time protocol, environment triage, exploratory seam testing, finding classification, verdict model, scope protection, 10 field lessons. Header translated to Hub single-line; history reordered newest-last | factory-module-doctrine |
 | 2026-08-10 | QA_PLAYBOOK v1.1 | AC-numbering sync (Finalization F6): AC*/gate-ID distinct-families note at §7; legacy gate-ID labels on FIX-002 field-evidence examples (§7, §15); no renumbering — historical evidence stays historically true | factory-module-doctrine |
+| 2026-08-10 | BUG_FIX_PLAYBOOK v1.0 | Seamless merge of the field amendments kit (v0.1 archived): role additions (git-zero Engineer, QA verdict ownership, Architect-advises), cross-module repair commits, ACCEPTANCE_SPEC as required artifact, app-suffixed BUG_REPORT header, new §16 FIX Module Anatomy + §17 Module Identity + §22 Field Case Studies (FIX-001/002/003) | factory-module-doctrine |
 
 ---
 

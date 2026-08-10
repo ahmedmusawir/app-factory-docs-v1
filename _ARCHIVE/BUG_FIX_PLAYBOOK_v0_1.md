@@ -1,8 +1,8 @@
 # BUG FIX PLAYBOOK
 
-> **Version:** 1.0 · **Date:** 2026-08-10 · **Status:** Active — field-validated (FIX-001/002/003, ADK Harness)
+> **Version:** 0.1 · **Date:** 2026-08-04 · **Status:** DRAFT — Validate through real FIX modules before promotion to v1.0
 > **Tier:** 3 — Build Methodology  
-> **Pairs with:** `QA_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `RECON_QUESTIONNAIRE.md`, `FFM_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`  
+> **Pairs with:** `QA_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `RECON_QUESTIONNAIRE.md`, `FFM_PLAYBOOK.md`  
 > **Owner:** Stark Industries App Factory  
 > **Purpose:** Standardize how defects are investigated, corrected, verified, documented, and permanently retired.
 
@@ -57,8 +57,6 @@ This playbook defines the defect lifecycle that connects those documents.
 - Reviews whether the proposed fix addresses the real mechanism.
 - Identifies structural lessons that should move into factory doctrine.
 
-The Architect **advises** on QA findings — architectural classification and routing recommendations (amendment vs new FIX vs FEAT vs ledger) — while the **Operator holds final adjudication authority**. Rejected findings are answered with evidence and never land on the Engineer's desk. Multiple accepted findings sharing one surface region may bundle into a single FIX module with per-finding gates.
-
 ### Engineer
 
 - Performs ground-truth recon.
@@ -69,16 +67,12 @@ The Architect **advises** on QA findings — architectural classification and ro
 - Runs targeted and full regression suites.
 - Produces evidence.
 
-The Engineer runs zero git and zero cloud commands. He builds, tests, self-verifies, and hands the Coordinator suggested commit messages plus exact per-concern file lists. He finalizes the `ACCEPTANCE_SPEC.md` at handoff (see §18). Any step outside the enumerated writable surface is flagged for ratification, never silently taken.
-
 ### QA Lead
 
 - Reviews the reproduction, root-cause claim, test plan, and evidence independently.
 - Verifies the fix against acceptance criteria.
 - Issues Gate Q and Gate D verdicts under `QA_PLAYBOOK.md`.
 - Rejects closure when evidence is missing, ambiguous, or non-reproducible.
-
-QA receives the `ACCEPTANCE_SPEC.md` and independently authors the attack — the spec is Engineering's contract, never Engineering's test plan. **QA owns the verdict** (Factory vocabulary: PASS / PASS WITH FOLLOW-UP FINDINGS / PASS WITH KNOWN RISK / FAIL / BLOCKED). Findings route to the Operator for final adjudication where product/scope/risk decisions are required; they reach the Engineer only as approved module content. Exploratory, state-transition, and negative-path testing are first-class: the pilot campaign's most valuable defect (FIX-003's F09) was found by deliberately stressing state transitions, not by following the happy path.
 
 ### DevOps / Deployment Operator
 
@@ -321,8 +315,6 @@ Unrelated discoveries must be routed to:
 
 The smallest correct fix is preferred over the broadest elegant rewrite.
 
-When a FIX repairs a defect in another module's shipped work (e.g., a prior module's test pinning behavior its own gates promised to allow), the repair is executed but committed as its own clearly-labeled commit referencing the originating module — the history stays honest. (Field precedent: `BIM-003fix: manifest tests roster-agnostic` riding inside the BIM-004 run.)
-
 ---
 
 ## 10. Rule 6 — Every Bug Earns Regression Protection
@@ -487,8 +479,6 @@ A deployment is not complete until Gate D passes.
 
 > **Naming protection:** Gate M remains the existing FFM mobile-shell gate. This playbook does not redefine it.
 
-> **Clarification:** Gate Q evidence may cite the module's green board + `ACCEPTANCE_SPEC.md`; Gate D applies whenever the defect class is environment-sensitive (per §12's own rule — "Localhost Closure" remains an anti-pattern).
-
 ---
 
 ## 14. Rule 10 — Promote Lessons into the Right Home
@@ -558,43 +548,27 @@ Do not lower severity merely because a workaround exists.
 
 ---
 
-## 16. FIX Module Anatomy (the manager grammar)
-
-A FIX executes as a Factory module: one folder, one `CLAUDE.md` manager, frozen from Engineer launch to STOP. The manager carries: mission (one sentence) · the diagnosis ("why this module exists" — the named mechanism, so the Engineer builds the right thing) · verified ground with provenance · **TO VERIFY FIRST** (the plan opens with file:line evidence for every fact the diagnosis rests on) · per-fix design with rulings · forbidden zones · numbered gates mapped to the original reproduction · launch procedure (Plan Mode, ONE message) · definition of done · the Operator launch line. Multiple adjudicated findings sharing a surface may bundle (field: FIX-002 carried F01+F02+F03; FIX-003 carried F06+F09) — each finding keeps its own gate. Migration kindness is doctrine: when a fix changes persisted shapes or keys, it adopts existing user state rather than orphaning it.
-
----
-
-## 17. Module Identity
-
-FIX modules follow the Factory-level ID doctrine (`SOFTWARE_FACTORY_PLAYBOOK.md` › Module Identity & QA Handoff — inherited from the Factory, never from BIM): `FIX-<NNN>-<APP-SLUG>`, slug from the application's canonical identity in its project brief (central registry: proposed, pending Operator approval), uppercase canonical / lowercase-kebab branches, applied to folders, headers, specs, QA references, retrospectives, changelogs, and links. Legacy unsuffixed FIX IDs remain legacy; cite with the app parenthetically. Rationale (state it): FIX numbers collide across apps faster than any other module type.
-
----
-
-## 18. Required FIX Artifacts
+## 16. Required FIX Artifacts
 
 Every non-trivial FIX module should contain:
 
-1. `BUG_REPORT.md` (or the finding IDs + adjudication record when QA-born)
-2. `FIX_PLAN.md` (the Engineer's Plan-Mode output, opening with TO-VERIFY-FIRST evidence)
-3. **`ACCEPTANCE_SPEC.md` — mandatory handoff artifact** (exact filename locked Factory-wide; ownership per Factory doctrine: criteria seeded from the approved contract pre-implementation; the Engineer maintains and finalizes, never silently adds/removes/weakens/redefines a requirement): canonical module ID + owning app; objective; in/out of scope; numbered **`AC1, AC2, …`** acceptance requirements, testable and observable — a NEW Factory decision effective with this playbook; legacy handoffs used gate IDs (`X1–X7` etc.), which remain the convention for module-internal engineering gates, with a gates↔AC mapping table encouraged (never bare `A*` — reserved for recon assumption checklists); expected observable behavior per requirement; environment/setup prerequisites and every manual Coordinator step, called out FIRST; regression expectations; manual-only points; known limitations; follow-up work outside this contract. Established at planning, synchronized during implementation, finalized at handoff — never reverse-engineered afterward.
-4. Regression test or deterministic regression checklist
-5. Gate Q evidence
-6. Gate D evidence when deployed
-7. `RETROSPECTIVE.md` / lessons entry (lesson candidates flagged for repo-level `LESSONS/`)
-8. Changelog entry
-9. Doctrine/tracker updates when applicable
+1. `BUG_REPORT.md`
+2. `FIX_PLAN.md`
+3. regression test or deterministic regression checklist
+4. Gate Q evidence
+5. Gate D evidence when deployed
+6. retrospective / lessons entry
+7. changelog entry
+8. doctrine or tracker updates when applicable
 
 Small fixes may combine these into one document, but no required information may disappear.
 
 ---
 
-## 19. BUG_REPORT Template
+## 17. BUG_REPORT Template
 
 ```markdown
-# BUG REPORT: <TYPE>-<NNN>-<APP-SLUG> / [Finding ID] — [Title]
-
-## Owning application
-[slug per the application's canonical identity / APP_BRIEF]
+# BUG REPORT: [ID] — [Title]
 
 ## Status
 [UNCONFIRMED | CONFIRMED | IN FIX | GATE Q | DEPLOYED | GATE D | CLOSED]
@@ -641,9 +615,6 @@ What must not change.
 ## Regression Protection
 Test or deterministic check that catches recurrence.
 
-## Acceptance Contract
-Link to this FIX's ACCEPTANCE_SPEC.md; the AC-numbers covering this defect.
-
 ## Gate Q Evidence
 Pre-deployment results.
 
@@ -659,7 +630,7 @@ Who approved closure, when, and on what evidence.
 
 ---
 
-## 20. Definition of Done
+## 18. Definition of Done
 
 A confirmed bug is **DONE** only when:
 
@@ -683,7 +654,7 @@ A closed bug must be understandable by a future engineer without access to the o
 
 ---
 
-## 21. Anti-Patterns
+## 19. Anti-Patterns
 
 ### Symptom Patch
 
@@ -719,19 +690,8 @@ Testing a URL without proving which commit or Cloud Run revision is serving it.
 
 ---
 
-## 22. Field Case Studies (the validation record)
-
-**FIX-001 (ADK-HARNESS, legacy) — the pointer that lost the argument.** Symptom: chat history evaporated on reload. Mechanism chain: persisted session pointer restored correctly, then a mount-effect merge let a *mocked* service's seeded fake ids overwrite it ("fetched wins" applied to fiction). Lessons banked: the Engineer's CRITICAL-FINDING behavior (persistence alone was inert without the merge fix — surfaced, not silently handled) is the model for plan-stage honesty; merge precedence against mocked sources must favor persisted truth, with a comment scheduling re-evaluation when the source goes real; final disposition used **BLOCKED-UPSTREAM** honestly when the residual failure proved to live beyond the module's boundary — a FIX may PASS on its own contract while the symptom's remainder transfers to another module's gate (it did: the upstream history defect was confirmed and cured by the next BIM, post-mortem).
-
-**FIX-002 (ADK-HARNESS, legacy) — the QA-born triple.** Three adjudicated findings, one surface region, one module, per-finding gates; chatService deliberately unfrozen for exactly one string (scope stated, not smuggled). QA verdict PASS-WITH-FOLLOW-UP-FINDINGS produced four new findings — the lifecycle compounding exactly as designed.
-
-**FIX-003 (ADK-HARNESS, legacy) — found by deliberately stressing the product.** F09 (mock pointers poisoning live mode via a shared persistence namespace) was discovered through deliberate mode-switching — formal exploratory/state-transition/contamination testing. Fix: mode-namespaced keys + one-time legacy adoption (migration kindness). F06 (hydration flash) rode along with a store-level hydration gate. The engagement's factory lesson is now §3's QA-Lead doctrine.
-
----
-
-## 23. Version History
+## 20. Version History
 
 | Version | Date | Change |
 |---|---|---|
 | 0.1 | 2026-08-04 | Initial draft. Defines evidence-first bug lifecycle, root-cause mechanism rule, regression protection, Gate Q and Gate D, scope control, environment parity, severity, required artifacts, doctrine promotion, and closure criteria. |
-| 1.0 | 2026-08-10 | Field-validated against FIX-001/002/003 (ADK-HARNESS, legacy). Added: mandatory ACCEPTANCE_SPEC with Engineering/QA separation; app-suffixed module IDs; git-zero Engineer doctrine; QA-adjudication flow; FIX module anatomy; case studies. All v0.1 lifecycle rules confirmed by field use. Seamless merge of the v1.0 amendments kit (A1–A6, N1–N3). |
