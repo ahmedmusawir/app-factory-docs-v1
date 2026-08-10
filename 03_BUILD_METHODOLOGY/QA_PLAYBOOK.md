@@ -1,6 +1,6 @@
 # QA PLAYBOOK
 
-> **Version:** 1.0 · **Date:** 2026-08-10 · **Status:** Active — field-tested (ADK Harness BIM/FIX verification)
+> **Version:** 1.1 · **Date:** 2026-08-10 · **Status:** Active — field-tested (ADK Harness BIM/FIX verification)
 > **Tier:** 3 — Build Methodology  
 > **Pairs with:** `BUG_FIX_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `RECON_QUESTIONNAIRE.md`  
 > **Owner:** Stark Industries App Factory  
@@ -315,6 +315,8 @@ Example:
 | X5 | Mock mode still works | Regression manual | Local mock | Pending |
 | X6 | Automated suite remains green | Jest | Local | Pending |
 | X7 | TypeScript + build remain clean | CLI | Local | Pending |
+
+> The example above is historical field evidence from FIX-002 (ADK-HARNESS, legacy) — its `X*` identifiers are legacy/internal engineering gate IDs. Acceptance requirements (`AC*`, from ACCEPTANCE_SPEC.md) and module-internal engineering gates (`X*`/`V*`/`N*`/`P-G*`) are distinct ID families; specs are encouraged to carry a gates↔AC mapping table. New generic templates and examples use `AC1, AC2, …` per the Factory decision of 2026-08-10 (see SOFTWARE_FACTORY_PLAYBOOK › Module Identity & QA Handoff).
 
 If a requirement cannot be tested because the acceptance spec is ambiguous:
 
@@ -968,6 +970,8 @@ Operator:
 QA Lead:
 "X1 PASS. Now X2..."
 ```
+
+*(The `X*` identifiers above are legacy/internal engineering gate IDs from the ADK-HARNESS field run — see the ID-family note in §7.)*
 
 Rules:
 
@@ -1798,6 +1802,7 @@ That is the reason the QA seat exists.
 |---|---|---|
 | 0.1 | 2026-08-04 | Initial draft. Defined QA roles, evidence discipline, risk-based planning, Gate Q, Gate D, production confirmation, deliverables, defect routing, regression doctrine, security/privacy handling, and release-complete criteria. |
 | 1.0 | 2026-08-10 | Promoted after hands-on ADK Next.js Harness QA. Adds Engineer Handoff as Claim Package, Acceptance Spec contract extraction, one-test-at-a-time manual protocol, environment-readiness triage, exploratory seam testing, explicit finding classifications, PASS WITH FOLLOW-UP FINDINGS, scope-protection doctrine, browser-state testing, mock/live boundary testing, failure injection, final environment reset verification, field-tested FIX/BIM protocols, and 10 promoted field lessons. |
+| 1.1 | 2026-08-10 | AC* numbering synchronized with the Factory Module Identity & QA Handoff doctrine; legacy gate-ID citations labeled. |
 
 ---
 
