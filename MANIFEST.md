@@ -16,7 +16,7 @@ Regenerated from the doc header blocks on **every doc bump** (bump procedure: `_
 | Canonical Name | Version | Date | Status | Purpose | Pairs With → |
 |---|---|---|---|---|---|
 | APP_FACTORY_BLUEPRINT | 2.1 | 2026-07-07 | Active | The Stark Protocol — who does what, in what order, with human approval gates; owns the pipeline router | SOFTWARE_FACTORY_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, FFM_PLAYBOOK, ARCHITECT_PLAYBOOK, DESIGNER_PLAYBOOK, ENGINEER_PLAYBOOK, RECON_QUESTIONNAIRE |
-| SOFTWARE_FACTORY_PLAYBOOK | 1.2 | 2026-07-07 | Active | The process spine: 9-phase feature build sequence + Doctrine Pairing Principle | APP_FACTORY_BLUEPRINT, DESIGNER_PLAYBOOK, TESTING_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK |
+| SOFTWARE_FACTORY_PLAYBOOK | 1.3 | 2026-08-10 | Active | The process spine: 9-phase feature build sequence + Doctrine Pairing Principle + Module Identity & QA Handoff (Factory-wide, §2.5) | APP_FACTORY_BLUEPRINT, DESIGNER_PLAYBOOK, TESTING_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK |
 | STARTER_KIT_HANDBOOK | 1.1 | —¹ | —¹ | What the starter kit provides (aspirational — verify on disk per recon doctrine) | —¹ |
 
 ¹ *Pre-standard header; F-022 redo queued — fields not invented.*

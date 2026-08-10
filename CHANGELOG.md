@@ -31,6 +31,7 @@
 | 2026-08-10 | QA_PLAYBOOK v1.0 | Field-tested supersession of v0.1 (archived) — claim-package handoff, contract extraction, one-test-at-a-time protocol, environment triage, exploratory seam testing, finding classification, verdict model, scope protection, 10 field lessons. Header translated to Hub single-line; history reordered newest-last | factory-module-doctrine |
 | 2026-08-10 | QA_PLAYBOOK v1.1 | AC-numbering sync (Finalization F6): AC*/gate-ID distinct-families note at §7; legacy gate-ID labels on FIX-002 field-evidence examples (§7, §15); no renumbering — historical evidence stays historically true | factory-module-doctrine |
 | 2026-08-10 | BUG_FIX_PLAYBOOK v1.0 | Seamless merge of the field amendments kit (v0.1 archived): role additions (git-zero Engineer, QA verdict ownership, Architect-advises), cross-module repair commits, ACCEPTANCE_SPEC as required artifact, app-suffixed BUG_REPORT header, new §16 FIX Module Anatomy + §17 Module Identity + §22 Field Case Studies (FIX-001/002/003) | factory-module-doctrine |
+| 2026-08-10 | SOFTWARE_FACTORY_PLAYBOOK v1.3 | New §2.5 "Module Identity & QA Handoff" (Factory-wide — governs BIM, FIX, FEAT, and future module types): app-suffixed IDs, ACCEPTANCE_SPEC contract, AC* numbering, QA verdict ownership + Operator final authority. Fractional section number follows the file's own §1.5 precedent (v1.2 archived) | factory-module-doctrine |
 
 ---
 
