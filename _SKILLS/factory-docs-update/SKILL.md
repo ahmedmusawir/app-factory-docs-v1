@@ -5,8 +5,9 @@ description: >
   Doctrine Hub (ahmedmusawir/app-factory-docs-v1) when project lessons require it.
   Triggers on phrases like "update the factory docs", "push these lessons to the hub",
   "doctrine update", "the playbook needs a fix", "land this promotion pack", or the
-  operator pointing at this folder. Walks the operator through intake (promotion pack
-  and/or project lessons file), ripple analysis (MANIFEST dependency map), an explicit
+  operator pointing at this folder. Walks the operator through intake (the `_INBOX/`
+  cargo bay: promotion packs, new docs, and superseding replacement docs — plus any
+  project lessons file), ripple analysis (MANIFEST dependency map), an explicit
   routing decision the OPERATOR makes (local git is the standing PRIMARY route; the
   GitHub MCP is the exception), the four-step per-doc update dance, PR authoring, and
   close-out sweep. This skill does NOT merge PRs (operator-only), does NOT write to
@@ -27,9 +28,12 @@ You are the Doctrine Update Conductor (Engineer seat, "Claudy") in a three-role 
 **Goal:** Know what changed, why, and what the Operator wants, without asking a single question whose answer is on disk.
 
 1. Complete the CLAUDE.md activation sequence (environment discovery) if not already done.
-2. **Cargo scan:** check the repo root for doctrine promotion packs (`DOCTRINE_PROMOTION*.md`, `*PATCH*.md`) and loose new-doc files riding in.
-   - **Pack found:** it is the presumptive lessons input. Read it fully; summarize each entry aloud (target doc, placement, gist). Flag entries targeting files OUTSIDE the Hub (other repos, skill folders) as SPLIT CANDIDATES to park. Flag entries citing docs the Hub does not have as GAPs (options: the doc rides in this run if provided, or the entry lands flagged — never a silent dangling reference).
+2. **Cargo scan — `_INBOX/` first (the standing cargo bay), repo root as legacy fallback.** Read every cargo file, then **triage each aloud per CLAUDE.md D16** into one of three classes:
+   - **PACK** (`DOCTRINE_PROMOTION*.md`, `*PATCH*.md`): the presumptive lessons input. Read it fully; summarize each entry aloud (target doc, placement, gist). Flag entries targeting files OUTSIDE the Hub (other repos, skill folders) as SPLIT CANDIDATES to park. Flag entries citing docs the Hub does not have as GAPs (options: the doc rides in this run if provided, or the entry lands flagged — never a silent dangling reference).
+   - **NEW DOC:** no Hub counterpart exists — announce it as entering fresh.
+   - **SUPERSEDING DOC:** a Hub counterpart exists — announce the match (canonical name first, content similarity second), the live doc's current version, and that landing it means archive-and-replace. An ambiguous match or unclassifiable file is a QUESTION, never a guess.
    - **Multiple packs:** list them; ask which are in scope.
+   - **RESUME declared or evidenced** (existing `docs/*` branch with commits, partial archives): switch to CLAUDE.md D15a before anything else — inventory reality, report DONE vs NOT DONE with evidence, re-present from the last completed gate.
 3. Find and read the project's lessons file (`LESSONS_LEARNED.md` / `LESSONS_BIN*` / `agent_docs/LESSONS*`).
    - **Found:** summarize FLAGGED entries not already covered by a pack.
    - **Neither pack nor lessons file:** say so, offer to create a lessons file from `templates/LESSONS_LEARNED.md`, and help populate it from the conversation before proceeding.
@@ -88,7 +92,7 @@ You are the Doctrine Update Conductor (Engineer seat, "Claudy") in a three-role 
 For EACH doc in the ripple map, in blast-radius order (lightest first, heaviest last), narrating each step:
 
 1. **Archive:** copy the current live doc to `_ARCHIVE/<CANONICAL_NAME>_v<X_Y>.md`, version stamped FROM the doc's current header (never guessed). (New docs skip this step — nothing to archive yet.)
-2. **Edit + bump:** apply the approved changes EXACTLY as written in the pack — surgical additions at verified placements, no overwrites, no reflow of surrounding content; bump the header Version/Date; append a Version History row citing the lesson/pack origin. New docs get the standard Hub header instead.
+2. **Edit + bump:** apply the approved changes EXACTLY as written in the pack — surgical additions at verified placements, no overwrites, no reflow of surrounding content; bump the header Version/Date; append a Version History row citing the lesson/pack origin. New docs get the standard Hub header instead. **Superseding docs:** after the archive copy in step 1, the cargo file's content replaces the live doc wholesale under the canonical filename — version bumped forward FROM the live header (the cargo file's own version claim is verified, never trusted; mismatches were flagged at Gate 1), standard Hub header applied, Version History row noting the supersession and origin.
 3. **MANIFEST:** update the doc's row (version, date, status) — or add the row for a new doc.
 4. **CHANGELOG:** append the change entry.
 
@@ -125,7 +129,7 @@ Lint conduct throughout (D9): your changes must pass the lints; pre-existing fin
 
 After the Operator confirms the merge:
 
-1. Local route: `git checkout main && git pull` (PULL, never push, on main); delete the merged local branch; `git status` must be clean — cargo files (the pack, ridden-in docs) should have landed via the PR or be explicitly dispositioned, never left floating.
+1. Local route: `git checkout main && git pull` (PULL, never push, on main); delete the merged local branch; `git status` must be clean — cargo files (the pack, ridden-in docs) should have landed via the PR or be explicitly dispositioned, never left floating. **`_INBOX/` must end the run EMPTY:** every file in it either landed (announce where), was parked as a split (target repo restated), or is returned to the Operator with a stated reason. The bay itself stays — an empty `_INBOX/` is the "run complete" signal for the next session.
 2. MCP route: confirm the remote branch auto-deleted or request its deletion.
 3. Session artifacts (run notes, this run's summary) — commit into the records or an immediate housekeeping PR; announce where they landed.
 4. Mark the pack/lessons entries ENCODED with the PR number; parked splits restated with their target repo so they survive the session.
@@ -138,7 +142,7 @@ After the Operator confirms the merge:
 ## Worked Example (abridged)
 
 > **Operator:** Go read `_SKILLS/factory-docs-update/CLAUDE.md` and follow it.
-> **Agent:** Reading CLAUDE.md... done. Reading SKILL.md... done. Discovery: I'm at a Hub clone, main pulled current. Cargo scan: found `DOCTRINE_PROMOTION_2026-08-04_NAVBAR_SAGA.md` in the root — four entries. Entries 1, 2, 4 target Hub docs; Entry 3 targets a skill folder in another repo — split candidate, I'll park it. Entry 4 cites QA_PLAYBOOK.md, which the Hub doesn't have — but I found `QA_PLAYBOOK.md` in the root riding in, so that gap closes if you approve it entering the Hub. One question: shipping entries 1, 2, 4 plus the two new playbooks today? Awaiting your APPROVED on scope.
+> **Agent:** Reading CLAUDE.md... done. Reading SKILL.md... done. Discovery: I'm at a Hub clone, main pulled current. Cargo scan: `_INBOX/` holds three files. Triage: `DOCTRINE_PROMOTION_2026-08-04_NAVBAR_SAGA.md` — a PACK, four entries. Entries 1, 2, 4 target Hub docs; Entry 3 targets a skill folder in another repo — split candidate, I'll park it. `QA_PLAYBOOK.md` — NEW DOC, no Hub counterpart; it also closes the gap Entry 4's citation would otherwise leave. `AUTH_MANUAL.md` — SUPERSEDING DOC: the Hub's live copy is at v1.4, so landing this means archive v1.4 and replace, bumping to v1.5. One question: shipping entries 1, 2, 4 plus both riding docs today? Awaiting your APPROVED on scope.
 > **Operator:** Yes. Approved.
 > **Agent:** Phase 2. Reading MANIFEST... AUTH_MANUAL is ←6; STATE_MANAGEMENT_MANUAL ←4; FRONTEND_BUILD_PHASE_PLAYBOOK ←5. Verifying placements... Entry 1's anchor section exists as stated. Entry 4 says "the phase-close checklist" — the live doc calls it "Stage 7 Completion Checklist," same thing, I'll anchor there and flag the naming. The ripple map, doc by doc: ... Awaiting your APPROVED on the ripple map.
 > **Operator:** Approved.
@@ -165,5 +169,6 @@ All six phases complete; PR merged by the Operator; sweep clean; entries marked 
 
 | Version | Date | Change |
 |---------|------|--------|
+| 0.3-DRAFT | 2026-08-10 | Phase 1 cargo scan moved to `_INBOX/` (standing cargo bay; root demoted to legacy fallback) with mandatory D16 triage aloud: PACK / NEW DOC / SUPERSEDING DOC. Resume path added at intake per new D15a. Phase 4 dance gains superseding-doc mechanics (archive-and-replace under canonical name, version verified against live header). Phase 6 sweep requires `_INBOX/` empty at close — landed, parked, or returned, never floating. |
 | 0.2-DRAFT | 2026-08-05 | Phase 1 rebuilt around cargo scan: promotion packs (`DOCTRINE_PROMOTION*`, `*PATCH*`) discovered automatically as presumptive scope, with split-candidate and gap flagging. Phase 3 flipped to the standing ruling: local git PRIMARY, MCP exception. Phase 2 gains placement verification against live structure. New-doc entry mechanics added to the dance. Anti-patterns 7–8 added. Worked example updated to the promotion-pack flow. |
 | 0.1-DRAFT | 2026-07-12 | Initial methodology. Six phases, four stop gates, operator-owned Phase 3 route decision with mid-flight checkpoint. |

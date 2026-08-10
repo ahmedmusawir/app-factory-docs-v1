@@ -1,6 +1,6 @@
 # factory-docs-update — OPERATOR RUNBOOK
 
-> **Stark Skill · v0.2-DRAFT · Home:** `_SKILLS/factory-docs-update/` in the Doctrine Hub
+> **Stark Skill · v0.3-DRAFT · Home:** `_SKILLS/factory-docs-update/` in the Doctrine Hub
 > (`ahmedmusawir/app-factory-docs-v1`). Droppable anywhere.
 >
 > **THIS FILE IS FOR THE OPERATOR (Tony).** Read it cold after any amount of time away
@@ -35,12 +35,20 @@ just open a terminal there — Claudy pulls latest as part of his own discovery.
 **Step 2 — Check the skill is present** at `_SKILLS/factory-docs-update/`. If missing
 or outdated, drop the latest skill folder in (it ships as a zip; the folder lands as-is).
 
-**Step 3 — Drop the cargo in the clone ROOT:**
-- the promotion pack file itself
-- any NEW doc files the pack introduces to the Hub (e.g. a QA_PLAYBOOK the entries cite)
+**Step 3 — Drop ALL cargo in `_INBOX/` at the clone root.** This is the standing
+cargo bay — ONE folder, every run, nothing to remember. If `_INBOX/` doesn't exist
+yet, just create the folder and drop your files in. Cargo means any of:
 
-Claudy's intake scans the root for `DOCTRINE_PROMOTION*` and `*PATCH*` files
-automatically — in the root, the cargo cannot be missed.
+- **Promotion packs** (`DOCTRINE_PROMOTION_<date>_<name>.md` or `*PATCH*` files) —
+  entries that edit existing docs
+- **Brand-new docs** entering the Hub for the first time
+- **Superseding docs** — full replacement versions of docs the Hub already has
+  (Claudy archives the old one and lands yours via the standard dance)
+
+You do NOT need to label which is which. Claudy's intake scans `_INBOX/`, classifies
+every file aloud at Gate 1 (pack / new / supersedes X / unclear — asks), and nothing
+lands without your APPROVED. Loose cargo in the clone root still gets caught as a
+legacy fallback, but `_INBOX/` is the law.
 
 **Step 4 — Launch Claudy.** The activation line is always the same:
 
@@ -81,6 +89,14 @@ says the tree is clean.
   have named them. He fixes reds HIS change caused; he never touches the rest.
 - **He may stop mid-job and ask you to re-choose the route** (time overrun, repeated
   errors). Switching is normal — the ripple map, not the half-done work, is truth.
+- **Run died mid-flight?** (session crashed, you closed the laptop, branch half-pushed)
+  Resuming is one line — same activation as always, plus: "This is a RESUME — a prior
+  run was interrupted." Claudy runs the resume protocol (D15a): inventories what
+  actually landed (branches, commits, `_INBOX/` contents, archive copies), reports
+  DONE vs NOT DONE with evidence, and re-presents from the last completed gate. He
+  never assumes the old session's plan still holds — you re-approve from where the
+  evidence says you are. Half-done branches get adopted or cleanly abandoned at your
+  word, never silently continued.
 
 ## What you NEVER do
 
@@ -93,11 +109,15 @@ hand-copy doctrine between projects (everything flows through this process).
 
     Go read _SKILLS/factory-docs-update/CLAUDE.md and follow it.
 
-    Intake: the lessons input is [PACK_FILENAME] in the repo root.
-    Scope: [all entries | entries X,Y only — entry Z targets another repo, park it].
-    New docs riding in: [none | FILE1, FILE2 — in the repo root].
+    Intake: all cargo is in _INBOX/.
+    Scope: [all of it | entries X,Y only — entry Z targets another repo, park it].
     Route: local git (standing primary).
     Merge style: rebase-and-merge.
+
+Resuming a dead run? Same first line, plus:
+
+    This is a RESUME — a prior run was interrupted. Inventory what landed
+    and re-present from the last completed gate.
 
 ---
 
