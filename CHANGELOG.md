@@ -26,6 +26,7 @@
 | 2026-08-05 | STATE_MANAGEMENT_MANUAL v1.2 | Navbar Saga promotion — Division of Labor subsection appended to §1 (server props vs. client stores hard rule); cross-ref to AUTH_MANUAL Navbar Law added | navbar-saga |
 | 2026-08-05 | FRONTEND_BUILD_PHASE_PLAYBOOK v1.2.2 | Navbar Saga promotion — Gate Q/D checklist items appended to §9 (pointers to QA_PLAYBOOK + BUG_FIX_PLAYBOOK; never duplicated doctrine) | navbar-saga |
 | 2026-08-05 | AUTH_MANUAL v1.4 | Navbar Saga promotion — new § "Server-Resolved Identity for UI (The Navbar Law)" inserted after Server-Side Protection (RBAC); four hard rules | navbar-saga |
+| 2026-08-10 | BIM_PLAYBOOK v1.0 | New doc entering Hub: Backend Integration Module doctrine — module identity & package anatomy, stage-gate lifecycle, ACCEPTANCE_SPEC handoff, QA engagement, contracts/seams, anti-patterns. From the ADK Harness pilot campaign | factory-module-doctrine |
 
 ---
 
