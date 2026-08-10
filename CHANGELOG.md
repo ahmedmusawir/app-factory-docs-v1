@@ -28,6 +28,7 @@
 | 2026-08-05 | AUTH_MANUAL v1.4 | Navbar Saga promotion — new § "Server-Resolved Identity for UI (The Navbar Law)" inserted after Server-Side Protection (RBAC); four hard rules | navbar-saga |
 | 2026-08-10 | BIM_PLAYBOOK v1.0 | New doc entering Hub: Backend Integration Module doctrine — module identity & package anatomy, stage-gate lifecycle, ACCEPTANCE_SPEC handoff, QA engagement, contracts/seams, anti-patterns. From the ADK Harness pilot campaign | factory-module-doctrine |
 | 2026-08-10 | FEAT_PLAYBOOK v1.0 | New doc entering Hub: Feature Module doctrine — launch conditions, v1-now/v2-seeded, scope discipline, mode parity, accessibility gates; mechanics inherited from BIM_PLAYBOOK by reference | factory-module-doctrine |
+| 2026-08-10 | QA_PLAYBOOK v1.0 | Field-tested supersession of v0.1 (archived) — claim-package handoff, contract extraction, one-test-at-a-time protocol, environment triage, exploratory seam testing, finding classification, verdict model, scope protection, 10 field lessons. Header translated to Hub single-line; history reordered newest-last | factory-module-doctrine |
 
 ---
 
