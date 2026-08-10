@@ -1,6 +1,6 @@
 # SOFTWARE FACTORY PLAYBOOK
 
-> **Version:** 1.3 · **Date:** 2026-08-10 · **Status:** Active
+> **Version:** 1.2 · **Date:** 2026-07-07 · **Status:** Active
 > **Tier:** 1 — Constitution · **Pairs with:** APP_FACTORY_BLUEPRINT, DESIGNER_PLAYBOOK, TESTING_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK
 
 > **Stark Industries Software Factory**
@@ -226,29 +226,6 @@ The factory uses one canonical project-phase map: the **APP_FACTORY_BLUEPRINT li
 | Phase 9 — Deployment | Phase 5 — Deployment |
 
 > **Phase 0 — Recon precedes everything:** no Phase 1 planning until the target repo is ground-truthed per `RECON_QUESTIONNAIRE.md` and the Recon Report is consumed (see APP_FACTORY_BLUEPRINT, Phase 0).
-
----
-
-## 2.5 Module Identity & QA Handoff  *(Factory-wide — governs BIM, FIX, FEAT, and all future module types)*
-
-### Module Identity
-
-**Canonical ID format: `<TYPE>-<NNN>-<APP-SLUG>`** — e.g., `BIM-006-ADK-HARNESS`, `FIX-004-CYBER-PHARMA`, `FEAT-002-ADK-HARNESS`.
-
-1. The slug comes from the application's canonical identity in its project brief / APP_BRIEF. *(A central `APP_REGISTRY.md` is a proposed future addition, pending separate Operator approval; until it exists, no document may cite it as a source of truth.)*
-2. The ID appears on: the module folder name, every document header inside it, the `ACCEPTANCE_SPEC.md`, QA references, retrospectives, changelog entries, and cross-document links.
-3. Casing: canonical ID UPPERCASE in documents and folder names; git branches lowercase-kebab; commit tags carry the canonical ID.
-4. Rationale (stated, not assumed): module artifacts escape their folders — into QA reports, branches, search results, and handoffs. A naked `FIX-002` becomes ambiguous the day a second application mints one. Provenance travels with the artifact.
-5. Legacy: modules created before this doctrine keep their unsuffixed names as LEGACY IDs — no retroactive mass-renaming. New citations append the app parenthetically: "FIX-002 (ADK-HARNESS, legacy)."
-
-### QA Handoff — the `ACCEPTANCE_SPEC.md` Contract
-
-1. **Every code-bearing module handoff includes `ACCEPTANCE_SPEC.md`** (exact filename locked). It is the contract from Engineering to QA — **never the QA test plan.** Engineering states the claim; QA independently designs the attack.
-2. **Ownership:** acceptance criteria are **seeded from the approved module contract — Architect/Operator-defined — before implementation.** The Engineer maintains the spec in sync with approved scope and finalizes it at handoff, but may not silently add, remove, weaken, or redefine a requirement; scope changes require approval.
-3. **Numbering:** acceptance requirements use **`AC1, AC2, …`** — a Factory decision effective 2026-08-10. Module-internal engineering gates keep their own ID families (`X*`, `V*`, `N*`, `P-G*` …); a gates↔AC mapping table in the spec is encouraged. Bare `A*` is reserved for recon assumption checklists. Legacy specs using gate IDs stand as legacy.
-4. **Minimum contents:** canonical module ID + owning app · objective · in-scope / explicit out-of-scope · numbered ACs, testable and observable · expected behavior per AC incl. error surfaces · **environment/setup prerequisites and every manual Operator step, called out FIRST** · regression expectations · manual-only points · known limitations · follow-up work outside this contract.
-5. **Authority chain:** QA owns the verdict — Factory vocabulary exactly: **PASS / PASS WITH FOLLOW-UP FINDINGS / PASS WITH KNOWN RISK / FAIL / BLOCKED.** The **Operator holds final adjudication and release authority.** The Architect advises on architectural classification and routing. An in-scope acceptance failure needs no one's permission to be a FAIL. Accepted findings reach Engineering only as approved module content.
-6. **Gate Q is mandatory for all code-bearing modules.** Only documentation-only / non-runtime changes may receive a recorded Operator QA waiver.
 
 ---
 
@@ -1060,7 +1037,6 @@ The Stark Software Factory Playbook ensures:
 
 | Version | Date | Changes |
 |---|---|---|
-| 1.3 | 2026-08-10 | Added §2.5 "Module Identity & QA Handoff" Factory-wide section (app-suffixed module IDs; mandatory ACCEPTANCE_SPEC contract; QA verdict ownership + Operator final authority; AC* numbering decision). Promoted from the ADK Harness field campaign via R1/R2 QA review and finalization pass. |
 | 1.2 | 2026-07-07 | **Wave 1 (audit sync).** Standard header block adopted, version/date moved to top (F-018). Phase 2 rewritten to defer to DESIGNER_PLAYBOOK — token file primary, Canonical Page Method; obsolete Stitch/Figma design-spec workflow deleted (F-009, F-002). "Phase Vocabulary" note + mapping table added to §2: Blueprint lifecycle (incl. Phase 0 Recon) is the canonical phase map, these 9 phases are the execution breakdown, FFM Sub-Phases nest inside build phases (F-010). Phase 8 now points to TESTING_PLAYBOOK (F-035). §1.5 pairing-table refs stripped of version suffixes — canonical names only (F-011). Full mojibake sweep incl. 16 invisible U+0090 control chars left behind by the v1.1 "encoding fix" (F-012). §13 Phase-2 checklist aligned to Designer deliverables. |
 | 1.1 | 2026-05-31 | Added Section 1.5 (Doctrine Pairing Principle). Born from Cyberize Run 001 operator insight on instruction+example pairing. Fixed UTF-8 encoding artifacts (incompletely — see 1.2). |
 | 1.0 | 2024-12 | Initial playbook |
