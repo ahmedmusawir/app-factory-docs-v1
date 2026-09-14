@@ -1,6 +1,6 @@
 # factory-docs-update — OPERATOR RUNBOOK
 
-> **Skill family · v0.6-DRAFT (AWAITING INDEPENDENT VALIDATION) · Home:** `_SKILLS/factory-docs-update/` in the Doctrine Hub (`ahmedmusawir/app-factory-docs-v1`). Runs at a Hub clone.
+> **Skill family · v0.7-DRAFT (IMPLEMENTED — AWAITING INDEPENDENT VALIDATION) · Home:** `_SKILLS/factory-docs-update/` in the Doctrine Hub (`ahmedmusawir/app-factory-docs-v1`). Runs at a Hub clone.
 >
 > **THIS FILE IS FOR THE OPERATOR (Tony).** Read it cold after any time away and you can run a doctrine sync start to finish without a briefing. Agent doctrine lives in CLAUDE.md; methodology in the two children's SKILL.md — you never need to read those.
 
@@ -53,7 +53,10 @@ Optionally add scope rulings. Template at the bottom.
 - **Hub law beats cargo conventions.** Canonical filenames; single-line headers; versions only in headers, MANIFEST, and `_ARCHIVE/`; kit-internal references resolved on landing.
 - **New docs** get the standard header, a MANIFEST row, a CHANGELOG line — in the tier that owns the subject. If ownership is unclear he asks; canonical doctrine never lands in `_OTHERS/`.
 - **Images / diagrams** land in the owning tier's `_assets/` folder with a canonical name; the doc that uses one references it by relative path; replacements are archived by date.
-- **MANIFEST and CHANGELOG** get their content and date updated, never archived. Their computed fields (doc count, dependency map) are recomputed every run and checked.
+- **MANIFEST and CHANGELOG** get their content and date updated, never archived. Their computed fields (doc count, dependency map) are checked every run and recomputed when the run changes them. A value that was already wrong before the run (say, a stale doc count) is reported to you as baseline drift with a `DRIFT-…` ID and parked for its own job — he does not quietly fix it inside an unrelated sync, and it does not make a small job LARGE.
+- **The base commit is stated, not assumed.** Claudy names the commit the run starts from (BASE_SHA) at Gate 2; the sync branch starts there, which is not always main.
+- **Words he adds are shown to you.** Wording from the intake lands exactly; any heading, lead-in, or label he adds is marked ENGINEER-PROPOSED in the map so you can keep it or strike it at Gate 2.
+- **Conflict or just a question?** A real doctrine conflict comes to you BLOCKED. A small mechanical detail he cannot settle from disk comes as one short question and does not stop the run.
 - **Red ❌ on CI** from the recorded pre-existing findings: merge anyway — they are named in the map and the PR. He fixes reds HIS change caused; he never touches the rest and never silences a lint.
 - **A QA seat never edits doctrine.** Cody and Sol write only QA evidence in the run folder. If a QA session ever offers to "fix" a doc, that is a defect — say no.
 - **Run died mid-flight?** Same first line plus: "This is a RESUME." Any seat reads RECOVERY.md and the session file for where it stopped, then checks git and disk, and re-presents from the last completed gate. A resumed Cody re-checks the branch tip before trusting any earlier PASS.

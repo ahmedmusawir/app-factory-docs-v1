@@ -72,7 +72,7 @@ Run the family's check for each AC (`STANDING_INVARIANTS.md` gives the shape). P
 - **AC-C:** **re-run every approved propagation search verbatim** (terms, scope, command shape from map §B/§M) at this SHA; reconcile the hit list row-by-row against §B dispositions — a CHANGE hit still showing the old wording, a CONSISTENT hit now inconsistent, or any hit absent from §B = an Acceptance Failure; read each §F dependent's location. Zero undispositioned active hits is the bar. A deliberately or accidentally unpropagated dependent is exactly what this AC exists to catch.
 - **AC-R:** references, paths, section citations, and assets resolve case-exactly; no orphan under `<tier>/_assets/`; source vs rendered as the map states.
 - **AC-N:** canonical terms used; retired terms absent outside history sections (mirror the lint's section exemptions).
-- **AC-I:** MANIFEST rows equal headers; count on disk = rows = stated; ← map recomputed for changed docs; CHANGELOG rows complete with IDs; MANIFEST/CHANGELOG Date-bumped and NOT archived.
+- **AC-I:** MANIFEST rows equal headers for changed/new docs; derived fields the run changed (map §G) are correct — count on disk = rows = stated when a doc was added or removed; ← map recomputed for changed docs; every §G `DRIFT-…` value byte-unchanged from BASE (recorded as Pre-Existing, never failed, never demanded as a repair unless the map authorized it); CHANGELOG rows complete with IDs; MANIFEST/CHANGELOG Date-bumped and NOT archived.
 - **AC-A:** `git show <BASE>:<path> | diff - _ARCHIVE/<NAME>_v<X_Y>.md` empty for each; suffix equals archived header; live header bumped exactly once.
 - **AC-L:** lints at the SHA; zero findings on changed/new lines; baseline identical (count, paths, IDs); `lints/` and `.github/` untouched.
 - **AC-H:** commit shapes and trailers; no push before the Gate 4 record; `_INBOX/` dispositioned; no debris; tree clean; durable folder set present.
@@ -136,4 +136,5 @@ Sol: spec approved and frozen (S1); Gate Q report written and signed with a Fact
 
 | Version | Date | Change |
 |---------|------|--------|
+| 0.7-DRAFT | 2026-09-14 | TEST A hardening (bounded): AC-I verification distinguishes run-caused derived-field changes from map §G `DRIFT-…` baseline drift (drift must be unchanged from BASE_SHA; Pre-Existing, not a failure). No other QA-lane change. IMPLEMENTED — AWAITING INDEPENDENT VALIDATION. |
 | 0.6-DRAFT | 2026-09-14 | Initial QA child of the family (Stage B candidate). Seats Sol (QA Lead: derivation-only spec, finding routing, Gate Q) and Cody (QA executor: QA_START_SHA / QA_RETEST_SHA, preconditions, contract extraction, per-family verification incl. propagation re-run, bounded retest). Docs-only overlay on QA_PLAYBOOK; Factory verdict vocabulary; Follow-Up Finding scope protection; QA resume rule. AWAITING INDEPENDENT VALIDATION. |

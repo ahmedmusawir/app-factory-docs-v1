@@ -23,8 +23,8 @@ START: ledger drafted (Phase 1) / UPDATE MAP drafted (Phase 2)
 │      NO → LARGE                                                  subscriptions / QA verdict authority / merge & git
 │                                                                  governance / role authority chains; judged from the
 │                                                                  intent text and the target docs' subjects)
-├─ A7. No unresolved conflict?                                    (§K empty, or every §K row ruled by Tony)
-│      NO → LARGE (or BLOCKED until ruled)
+├─ A7. No unresolved conflict?                                    (no unruled §K CONFLICT row; mechanical CLARIFICATION
+│      NO → LARGE (or BLOCKED until ruled)                          rows are answered, not counted — D17)
 ├─ A8. No cross-boundary change required for success?            (§J has no BLOCKING item)
 │      NO → BLOCKED → Tony (then LARGE if it proceeds)
 ├─ A9. Propagation search bounded and complete before Gate 2?    (every §B term searched over the full live scope; every hit
@@ -35,6 +35,8 @@ START: ledger drafted (Phase 1) / UPDATE MAP drafted (Phase 2)
 │
 └─ ALL YES → TINY. Write the waiver line in §0/§O for Gate 2. Otherwise → LARGE.
 ```
+
+**Baseline drift is not a condition.** Derived, index, or infra values already stale at BASE_SHA that the intake does not authorize repairing are parked in map §G as `DRIFT-…` (D7). They are not touch-list docs (A2), not conflicts (A7), not cross-boundary items (A8), and never flip TINY to LARGE on their own.
 
 **Provisional vs final.** At Phase 1, A1, A3, A4 (from intent text), A5, A6, A8 are usually decidable; A2, A7, A9, A10 are confirmed after the Phase 2 search. Say which are provisional. If the final route differs from the provisional, announce it at Gate 2 with the condition that flipped.
 

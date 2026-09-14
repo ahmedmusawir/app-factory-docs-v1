@@ -7,7 +7,7 @@
 | Field | Value |
 |---|---|
 | Run ID | `SYNC_<YYYY-MM-DD>_<slug>` |
-| Derived from | UPDATE_MAP status `APPROVED (Gate 2, <date/time>)` at `<path>`; approved package `<path>`; STANDING_INVARIANTS.md (skill v0.6) |
+| Derived from | UPDATE_MAP status `APPROVED (Gate 2, <date/time>)` at `<path>`; approved package `<path>`; STANDING_INVARIANTS.md (skill v0.7) |
 | Author (Sol) | `<session / date>` |
 | Status | DRAFT → APPROVED (Gate 3, Operator, `<date/time>`) → FROZEN · Amendments: `<none / AMENDED-v1 re-approved <date/time>>` |
 | Verdict vocabulary | PASS / PASS WITH FOLLOW-UP FINDINGS / PASS WITH KNOWN RISK / FAIL / BLOCKED (Factory QA vocabulary; no other) |
@@ -16,7 +16,7 @@
 
 - **Objective:** prove that the candidate branch makes every approved intake item true in the DocSet, changes nothing else, and leaves the Hub's indexes, archives, references, lints, and working tree in the approved state.
 - **In scope:** the IDs in UPDATE_MAP §A with disposition CHANGE or NO-CHANGE; the touch list §C; new files §D; infra §G; assets §H; preservation §L.
-- **Explicitly out of scope (QA will not use these to fail the run):** items dispositioned SPLIT / DEFERRED / BLOCKED (listed by ID); pre-existing lint findings in the recorded baseline; any observation outside the approved scope — these become Follow-Up Findings, not failures (`QA_PLAYBOOK` §10 scope protection).
+- **Explicitly out of scope (QA will not use these to fail the run):** items dispositioned SPLIT / DEFERRED / BLOCKED (listed by ID); pre-existing lint findings in the recorded baseline; baseline drift recorded in map §G (`DRIFT-…`, graded only as "unchanged"); any observation outside the approved scope — these become Follow-Up Findings, not failures (`QA_PLAYBOOK` §10 scope protection).
 - **Preconditions (BLOCKED, not FAIL, if unmet):** CONTENT_SHA recorded in SYNC_HANDOFF and an ancestor of QA_START_SHA; only approved audit/handoff artifacts between them; map APPROVED and this spec APPROVED present in `<run>/` at the candidate; lint runner executes on the QA rig.
 
 ## 2. Acceptance criteria
@@ -32,7 +32,7 @@ One row per AC. Numbering `AC1, AC2, …` (Factory decision 2026-08-10); the fam
 | AC5 | AC-C | The approved wording for MAP §C#<n> is present at the verified placement in `<doc>` and no active guidance in scope contradicts invariant "<verbatim>" | CP-<id> invariant 1; MAP §C#<n> | read at placement; contradiction grep | Gate Q |
 | AC6 | AC-R | Every reference in MAP §H resolves case-exactly at the candidate; no orphan under `<tier>/_assets/` | STANDING AC-R; MAP §H | `test -f` / `git ls-files`; orphan cross-check | Gate Q |
 | AC7 | AC-N | Terms `<canonical list>` are used and `<retired list>` are absent from live scope outside history sections | STANDING AC-N; MAP §M term lists | grep with lint-mirroring exemptions | Gate Q |
-| AC8 | AC-I | MANIFEST rows equal headers for `<docs>`; live-doc count `<n>` = disk = rows; ← map recomputed for `<docs>`; CHANGELOG has `<n>` rows with IDs; MANIFEST/CHANGELOG not archived | STANDING AC-I; MAP §G | counts and header/row diffs | Gate Q |
+| AC8 | AC-I | MANIFEST rows equal headers for `<docs>`; derived fields this run changed are correct (live-doc count `<n>` = disk = rows, if a doc was added/removed; ← map recomputed for `<docs>`); baseline drift `<DRIFT IDs>` unchanged from BASE; CHANGELOG has `<n>` rows with IDs; MANIFEST/CHANGELOG not archived | STANDING AC-I; MAP §G | counts and header/row diffs | Gate Q |
 | AC9 | AC-A | `_ARCHIVE/<NAME>_v<X_Y>.md` byte-equal to `git show BASE:<path>` for each of `<docs>`; suffix = archived header version; live header bumped once | STANDING AC-A; MAP §C archive column | `git show … \| diff -` empty; header reads | Gate Q |
 | AC10 | AC-L | Lints at the candidate: zero new findings; baseline `<count>` unchanged; `lints/`, `.github/` untouched | STANDING AC-L; MAP §M baseline | lint output diffed against baseline | Gate Q |
 | AC11 | AC-H | Commit shape `docs(<DOC>): v<X.Y> - … [<IDs>]`, no Co-Authored-By, one bump per doc; no push before Gate 4; `_INBOX/` dispositioned; no debris; tree clean; durable folder contains exactly the required set | STANDING AC-H; MAP §N, §O | `git log` scan; timestamps; `git status`; `ls <run>/` | Gate Q |
