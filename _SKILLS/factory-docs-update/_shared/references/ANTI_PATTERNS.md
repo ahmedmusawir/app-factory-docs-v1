@@ -48,7 +48,11 @@
 
 ## AP-12 — Derived fields that drift while every row is "updated correctly"
 **Incident (observed 2026-09-13):** MANIFEST stated "29 live docs" in three places while 31 existed on disk and 31 rows sat in its own tables; two runs had each updated "the doc's row" faithfully and nobody recomputed the count. The appendix still said "27 bodies."
-**Rule:** D7 — infra documents' derived fields (count, ← map, appendix scope, CHANGELOG completeness) are recomputed from disk every run and proven by AC-I. "Update the row" is not "update the index."
+**Rule:** D7 — infra documents' derived fields (count, ← map, appendix scope, CHANGELOG completeness) are checked against disk every run; fields the run changes are recomputed and proven by AC-I. "Update the row" is not "update the index."
+
+## AP-18 — Absorbing baseline drift into an unrelated run
+**Risk pattern (named in the TEST A hardening pass, 2026-09-14):** a stale-at-BASE index value (the same MANIFEST count) is "fixed while in there" by a run whose approved intake only edits wording in one doc — the repair enters the diff without ever being approved, and a TINY run is inflated or escalated by drift it did not cause.
+**Rule:** D7 — pre-existing drift is detected, recorded as `DRIFT-…` in map §G, and parked; its repair is in scope only when the intake authorizes it or the run itself changes the underlying value.
 
 ## AP-13 — Self-certification on a campaign-scale sync
 **Risk pattern:** the seat that wrote twenty diffs is the seat that proves nothing was missed. `QA_PLAYBOOK` §34 names it; the v0.3 Gate 4 was exactly this for every run size.

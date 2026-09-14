@@ -7,8 +7,8 @@
 | Field | Value |
 |---|---|
 | Run ID | `SYNC_<YYYY-MM-DD>_<slug>` |
-| Branch | `docs/sync-<slug>-<YYYY-MM-DD>` (local; not yet pushed at the time of writing) |
-| BASE_SHA | `<sha>` |
+| Branch | `<run branch>` (local; not yet pushed at the time of writing) |
+| BASE_SHA | `<sha>` (approved in UPDATE_MAP §0) |
 | **CONTENT_SHA** | `<sha>` = last commit containing approved canonical content (`git rev-parse HEAD` immediately after that commit; recorded before any metadata commit) |
 | Approved artifacts | UPDATE_MAP `APPROVED (Gate 2 <date/time>)` [+ `AMENDED-v<n>`]; DOCSET_SYNC_ACCEPTANCE_SPEC `APPROVED (Gate 3 <date/time>)` |
 | Path | LARGE |
@@ -29,7 +29,7 @@
 
 - **Lints at CONTENT_SHA** — command: `<…>`; result: `<verbatim summary lines>`; new findings: `0`; baseline: `<count>` unchanged — `<paths>` [EVIDENCE: pasted output]
 - **Archive fidelity** — for each archived doc: `git show <BASE_SHA>:<path> | diff - _ARCHIVE/<NAME>_v<X_Y>.md` → empty [EVIDENCE per doc]
-- **MANIFEST derived fields** — live-doc count on disk `<n>` = MANIFEST rows `<n>` = stated `<n>`; rows for `<docs>` equal headers; ← map recomputed for `<docs>`; MANIFEST/CHANGELOG headers Date-bumped, not archived [EVIDENCE]
+- **MANIFEST derived fields** — fields this run changed (map §G): live-doc count on disk `<n>` = MANIFEST rows `<n>` = stated `<n>` (or: unchanged, no doc added/removed); rows for `<docs>` equal headers; ← map recomputed for `<docs>`; baseline drift `<DRIFT IDs / none>` unchanged from BASE_SHA; MANIFEST/CHANGELOG headers Date-bumped, not archived [EVIDENCE]
 - **CHANGELOG** — `<n>` rows added, IDs in last column [EVIDENCE: lines]
 - **Diff scope** — `git diff --name-status <BASE_SHA>..<CONTENT_SHA>` = `<list>`; equals map §C ∪ §D ∪ §E ∪ §G [EVIDENCE]
 - **Propagation** — the §B searches were re-run by Claudy at CONTENT_SHA: `<n>` active hits, all dispositioned [CLAIM — Cody re-runs independently]

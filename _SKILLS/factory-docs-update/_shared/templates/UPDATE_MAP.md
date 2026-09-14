@@ -9,14 +9,15 @@
 | Field | Value |
 |---|---|
 | Run ID | `SYNC_<YYYY-MM-DD>_<slug>` |
-| Branch | `docs/sync-<slug>-<YYYY-MM-DD>` |
-| BASE_SHA | `<origin/main at branch creation>` (filled at P4 branch creation; "pending" before) |
+| Run branch | `docs/sync-<slug>-<YYYY-MM-DD>` (default) — or the existing approved run branch, named as-is |
+| BASE_SHA | `<sha>` — the execution base every placement in this map is verified against; evidence: `<launch line / intake names it>` or `<clean discovered HEAD on <branch>>`. Recorded before Gate 2 and approved with the map; never assumed to be main; execution branches FROM it or reuses the run branch at it / a lawful descendant (D18). Change after Gate 2 = AMENDED-v<n>. |
+| Merge target | `main` (production sync) / `<branch>` — the compare-URL base in Phase 8 |
 | Execution route | Local git at a Hub clone (standing ruling 2026-08-05) — or the MCP exception with Operator choice recorded here |
 | **Path** | **TINY** / **LARGE** — decided by `sync-engineer/decision-trees/route-selection.md`; evidence in §P |
 | QA arrangement | TINY: "Docs-only QA waiver recorded per SOFTWARE_FACTORY_PLAYBOOK §2.5 item 6 — Operator, <date/time>" · LARGE: "Independent QA lane (Sol / Cody); spec at `<run>/DOCSET_SYNC_ACCEPTANCE_SPEC.md`" |
 | Status | DRAFT → APPROVED (Gate 2, <date/time>) → AMENDED-v<n> (Gate 2, <date/time>) |
 | Lint baseline (pre-existing) | `<count>` findings: `<path:line [LINT-ID]>` … (from discovery; also §M) |
-| Live-doc count on disk / MANIFEST rows / MANIFEST stated | `<n>` / `<n>` / `<n>` |
+| Live-doc count on disk / MANIFEST rows / MANIFEST stated (at BASE_SHA) | `<n>` / `<n>` / `<n>` — any mismatch not caused by this run → §G baseline drift |
 
 ## A. Intake ledger
 
@@ -48,7 +49,7 @@
 
 ## C. Touch list (execute lightest ← first, heaviest last)
 
-| # | Canonical doc (path) | ← count (MANIFEST) | Placement — VERIFIED against live structure (section heading / line anchor at BASE_SHA) | Proposed wording / exact edit intent (full text for new or replaced sentences; "delete L a–b" for removals; a precise intent line only for mechanical edits such as a rename) | Contributing IDs | Version: live → new | Archive expected | Structural (rename / move / new)? | Minimal-form note (D14) |
+| # | Canonical doc (path) | ← count (MANIFEST) | Placement — VERIFIED against live structure (section heading / line anchor at BASE_SHA) | Proposed wording / exact edit intent (full text for new or replaced sentences; "delete L a–b" for removals; a precise intent line only for mechanical edits such as a rename). Mark each span **INTAKE-VERBATIM** or **ENGINEER-PROPOSED** — every heading, wrapper, transition, label, explanation, or normalization Claudy adds is written out and marked ENGINEER-PROPOSED for Tony to approve or strike (D15) | Contributing IDs | Version: live → new | Archive expected | Structural (rename / move / new)? | Minimal-form note (D14) |
 |---|---|---|---|---|---|---|---|---|---|
 | 1 | | | | | | | YES / NO (new) | NO | |
 
@@ -75,10 +76,16 @@
 | Item | Expected change | Check at Gate 4 / AC-I |
 |---|---|---|
 | MANIFEST rows | rows for §C/§D docs updated FROM headers; Date in MANIFEST header bumped; NOT archived (Ruling 7) | header vs row equality |
-| MANIFEST live-doc count | recomputed from disk: `<n>` | count = disk = rows |
-| MANIFEST ← dependency map | recomputed for every doc whose Pairs-with changed; appendix scope note current | spot-check changed docs |
+| MANIFEST live-doc count | `<unchanged — no canonical doc added/removed>` or recomputed from disk: `<n>` (this run adds/removes `<docs>`) | if changed: count = disk = rows; if unchanged: byte-equal to BASE |
+| MANIFEST ← dependency map | recomputed for every doc whose Pairs-with this run changed; appendix scope note updated only if its scope changed | spot-check changed docs |
 | CHANGELOG | one row per bumped / new doc in the exact ledger format, IDs in last column; header Date bumped; NOT archived | row count = bumped docs |
 | README / index files | `<none>` or list | present |
+
+**Pre-existing / baseline drift (D7)** — derived, index, or infra values already stale at BASE_SHA that the approved intake does NOT authorize repairing. Detected and recorded here; parked for a follow-up job; NOT on the touch list; left exactly as at BASE. If this run changes the underlying value anyway (e.g. adds a doc), the derived field moves to the table above and this row says it is cleared by that recompute. Drift alone never fails a TINY condition.
+
+| ID (`DRIFT-…`) | Location (path:line at BASE_SHA) | Stale value vs disk truth (EVIDENCE) | Caused by this run? | Disposition (PARKED → follow-up / CLEARED by §G recompute / REPAIR authorized by `<intake ID>`) |
+|---|---|---|---|---|
+| | | | NO | PARKED |
 
 ## H. Paths, links, assets
 
@@ -98,11 +105,13 @@
 |---|---|---|---|---|
 | | | | | |
 
-## K. Unresolved Operator decisions (BLOCKED)
+## K. Unresolved Operator decisions
 
-| ID | Question (exact) | Evidence | What it blocks | Ruling (filled by Tony) |
-|---|---|---|---|---|
-| | | | | |
+Type **CONFLICT** = doctrine / authority conflict (incompatible governing requirements, or an approved request that cannot coexist with governing doctrine) → BLOCKED → Tony; counts against route condition A7. Type **CLARIFICATION** = a non-doctrinal mechanical detail that evidence could not settle (record what was checked) → the smallest question; not BLOCKED; does not affect the route (D17).
+
+| ID | Type (CONFLICT / CLARIFICATION) | Question (exact; smallest necessary) | Evidence (incl. what was checked on disk first) | What it blocks / affects | Ruling (filled by Tony) |
+|---|---|---|---|---|---|
+| | | | | | |
 
 ## L. Preservation constraints (all IDs, consolidated)
 
@@ -115,7 +124,7 @@
 - Lints: 4 lints; expected result on the candidate: zero new findings; baseline: `<count>` — `<path:line [LINT-ID]>` …
 - Propagation searches to re-run at the candidate (verbatim from §B): …
 - Canonical term list / retired-term list for AC-N (from the package or Tony): …
-- Derived-field assertions: MANIFEST count `<n>`, rows `<n>`, ← map recomputed for `<docs>`
+- Derived-field assertions: MANIFEST fields this run changes (§G) — count `<n>` / unchanged, rows `<n>`, ← map recomputed for `<docs>`; §G drift values byte-unchanged from BASE: `<DRIFT IDs / none>`
 - Archive fidelity: `<n>` archives expected; each byte-equal to `git show <BASE_SHA>:<path>`
 - References/assets to resolve (from §H): …
 
@@ -144,7 +153,7 @@
 | no Factory-wide terminology rename / change | | |
 | no cross-correction dependency | | |
 | no high-risk governing-rule change (security / authority / payment / tenant / PHI / git-merge governance / QA verdict authority) | | |
-| no unresolved conflict (§K empty) | | |
+| no unresolved conflict (no unruled §K CONFLICT row; CLARIFICATION rows and §G baseline drift do not count) | | |
 | no cross-boundary change required for success (§J blocking = none) | | |
 | propagation search bounded and complete before Gate 2 | | |
 | docs-only QA waiver eligible (changes confined to live-scope markdown + indexes; Tony has not disallowed) | | |

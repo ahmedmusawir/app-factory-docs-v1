@@ -10,7 +10,7 @@
 
 | Name | Definition | Recorded by | Recorded where |
 |---|---|---|---|
-| **BASE_SHA** | `origin/main` at branch creation | Claudy | UPDATE_MAP header; SYNC_HANDOFF |
+| **BASE_SHA** | The approved execution base: the commit the UPDATE MAP was planned and verified against, proposed from discovery (the Operator- or intake-named commit / tag / branch tip, else the clean discovered HEAD), approved at Gate 2. Never assumed to be `origin/main`. The run branch is created FROM it — or, when already on the approved run branch at BASE_SHA or a lawful descendant, reused (D18). A change after Gate 2 is a map amendment. | Claudy | UPDATE_MAP §0 (before Gate 2); SYNC_HANDOFF |
 | **CONTENT_SHA** | The exact commit containing the LAST approved canonical content change of the implementation phase (the last `docs(<DOC>): …` commit). Everything after it on the branch is durable-folder metadata, session, or RECOVERY. | Claudy | SYNC_HANDOFF (as content, after the commit exists); UPDATE_MAP §O |
 | **QA_START_SHA** | `git rev-parse origin/<branch>` at the moment Cody begins the first QA cycle — the actual remote tip Cody checks out. | Cody | QA_MATRIX header; GATE_Q_REPORT |
 | **REPAIR_CONTENT_SHA** (per cycle n) | The last repair commit touching canonical content in rework cycle n. | Claudy | SYNC_HANDOFF "Repair cycles" appendix (written after the commit exists) |

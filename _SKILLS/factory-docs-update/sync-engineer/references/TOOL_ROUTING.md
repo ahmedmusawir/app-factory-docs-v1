@@ -19,7 +19,7 @@ On 2026-07-12, Wave 6 Job 1 — renaming 27 doctrine docs into tier folders — 
 ## Local git mechanics (every run)
 
 - Discovery: `git fetch origin`; report distance from `origin/main`; **do not pull** during discovery (D9 of the review: a pull is a write and is ambiguous off-main).
-- Branch: `git checkout main && git pull && git checkout -b docs/sync-<slug>-<YYYY-MM-DD>`; record BASE_SHA = `git rev-parse origin/main`.
+- Branch: from the approved BASE_SHA (UPDATE MAP §0; D18), never blindly from main. Already on the approved run branch at BASE_SHA or a lawful descendant (`git merge-base --is-ancestor <BASE_SHA> HEAD`, only this run's commits in `git log <BASE_SHA>..HEAD`) → stay. Otherwise → `git switch -c <run-branch> <BASE_SHA>`.
 - One commit per canonical doc: `docs(<DOC>): v<X.Y> - <summary> [<IDs>]`; repairs: `docs(<DOC>): v<X.Y> - repair QA-F<nn> [<IDs>]`; metadata: `chore(sync): … [<run-id>]`. Plain hyphens. No `Co-Authored-By` trailer, ever — strip it if injected (D22).
 - Type commands by hand — a pasted invisible C1 control character and, later, an em-dash in a commit message each broke a command inexplicably (AP-10).
 - Archive fidelity per doc before commit: `git show <BASE_SHA>:<path> | diff - _ARCHIVE/<NAME>_v<X_Y>.md` → empty.
@@ -30,7 +30,7 @@ On 2026-07-12, Wave 6 Job 1 — renaming 27 doctrine docs into tier folders — 
 
 ## MCP mechanics & gotchas (exception route only)
 
-1. **Branch first, always.** `create_branch` before any write. Never write to main; never call `merge_pull_request`.
+1. **Branch first, always.** `create_branch` from the approved BASE_SHA before any write. Never write to main; never call `merge_pull_request`.
 2. **Existing-path updates need the current blob SHA.** Fetch before every `create_or_update_file` on an existing file.
 3. **`push_files` cannot delete.** Renames = two commits: `push_files` (new path) then `delete_file` (old path). Announce the compose.
 4. **Verify-after-write, always.** A call that errored may have partially succeeded server-side. Re-read; compare blob SHAs.
