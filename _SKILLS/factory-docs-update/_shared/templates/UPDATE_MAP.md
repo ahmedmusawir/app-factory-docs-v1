@@ -1,0 +1,151 @@
+# UPDATE MAP — <run slug> — <YYYY-MM-DD>
+
+> **The approved execution source of truth for this synchronization run** (supersedes RIPPLE_MAP since skill v0.6). Authored by Claudy (Engineer seat). Approved by Tony at Gate 2. Consumed by Sol (spec derivation), Cody (verification), and Claudy (execution, EXACTLY as approved). This file — not memory, not the branch — is what execution follows and what QA measures against. Lives at `_AUDIT/SYNC_<YYYY-MM-DD>_<slug>/UPDATE_MAP.md`.
+>
+> Evidence labels on every non-trivial cell: EVIDENCE (path:line / SHA / command output) · INFERENCE (from what) · CLAIM (package / Operator says) · GAP (looked where) · QUESTION (needs Tony).
+
+## 0. Run header
+
+| Field | Value |
+|---|---|
+| Run ID | `SYNC_<YYYY-MM-DD>_<slug>` |
+| Branch | `docs/sync-<slug>-<YYYY-MM-DD>` |
+| BASE_SHA | `<origin/main at branch creation>` (filled at P4 branch creation; "pending" before) |
+| Execution route | Local git at a Hub clone (standing ruling 2026-08-05) — or the MCP exception with Operator choice recorded here |
+| **Path** | **TINY** / **LARGE** — decided by `sync-engineer/decision-trees/route-selection.md`; evidence in §P |
+| QA arrangement | TINY: "Docs-only QA waiver recorded per SOFTWARE_FACTORY_PLAYBOOK §2.5 item 6 — Operator, <date/time>" · LARGE: "Independent QA lane (Sol / Cody); spec at `<run>/DOCSET_SYNC_ACCEPTANCE_SPEC.md`" |
+| Status | DRAFT → APPROVED (Gate 2, <date/time>) → AMENDED-v<n> (Gate 2, <date/time>) |
+| Lint baseline (pre-existing) | `<count>` findings: `<path:line [LINT-ID]>` … (from discovery; also §M) |
+| Live-doc count on disk / MANIFEST rows / MANIFEST stated | `<n>` / `<n>` / `<n>` |
+
+## A. Intake ledger
+
+| ID | Class (INTAKE_TAXONOMY #) | Source (file / package path) | Gist (one line) | Disposition (CHANGE / NO-CHANGE / SPLIT / BLOCKED / DEFERRED) | Gate state |
+|---|---|---|---|---|---|
+| | | | | | |
+
+## B. Per-ID sections (one per Correction ID or Intake ID with disposition CHANGE, NO-CHANGE, or BLOCKED)
+
+### <ID> — <title>
+
+- **Approved intent** (verbatim from package / entry): … [CLAIM: source path]
+- **Must-become-true invariants** (verbatim): 1. … 2. …
+- **Preservation constraints** (verbatim; also mirrored in §L): 1. …
+- **Likely affected files** (from the brief) + **MANIFEST ← rows** for each: …
+- **Propagation search** (D19):
+  - Terms: `"<old wording>"`, `<retired term>`, `<role/gate/module/artifact name>`, `<cited filename>`, `<cited section title>` …
+  - Scope: `01_CONSTITUTION 02_PIPELINE_AGENTS 03_BUILD_METHODOLOGY 04_REFERENCE_MANUALS 05_DESIGN_SYSTEM MANIFEST.md CHANGELOG.md` (+ `_SKILLS/`, `_OTHERS/` read-only for awareness)
+  - Command shape: `grep -rn -i -E "<term>" <scope>`
+  - Hit count: `<n>` (active) / `<n>` (history)
+
+  | # | Path:line | Hit (quoted) | Disposition (CHANGE / CONSISTENT / HISTORY / OUT-OF-SCOPE) | Drives §C row / §F row / §J item | Label |
+  |---|---|---|---|---|---|
+  | | | | | | |
+
+- **Touch-list rows implementing this ID:** §C #…
+- **NO-CHANGE proposal** (if any): the intent is already true at `<path:line>`: "<quoted>" — valid only on Gate 2 approval.
+- **CONFLICT / open questions** (→ §K): …
+
+## C. Touch list (execute lightest ← first, heaviest last)
+
+| # | Canonical doc (path) | ← count (MANIFEST) | Placement — VERIFIED against live structure (section heading / line anchor at BASE_SHA) | Proposed wording / exact edit intent (full text for new or replaced sentences; "delete L a–b" for removals; a precise intent line only for mechanical edits such as a rename) | Contributing IDs | Version: live → new | Archive expected | Structural (rename / move / new)? | Minimal-form note (D14) |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | | | | | | | YES / NO (new) | NO | |
+
+## D. New canonical files
+
+| File (path) | Owning tier + why | Header (single-line) | MANIFEST row + Pairs-with | CHANGELOG row | IDs |
+|---|---|---|---|---|---|
+| | | | | | |
+
+## E. Stale / superseded material
+
+| Path | Action (archive-and-replace / mark historical / delete — deletion needs explicit Gate 2 approval) | Evidence it is stale | IDs |
+|---|---|---|---|
+| | | | |
+
+## F. Dependents checked, unchanged
+
+| Doc / location (path:line) | Kind (example / checklist / template / quick reference / role instruction / summary) | Why checked (which ID / term) | Verdict: CONSISTENT (quote) — or moved to §C # |
+|---|---|---|---|
+| | | | |
+
+## G. Infra and index effects
+
+| Item | Expected change | Check at Gate 4 / AC-I |
+|---|---|---|
+| MANIFEST rows | rows for §C/§D docs updated FROM headers; Date in MANIFEST header bumped; NOT archived (Ruling 7) | header vs row equality |
+| MANIFEST live-doc count | recomputed from disk: `<n>` | count = disk = rows |
+| MANIFEST ← dependency map | recomputed for every doc whose Pairs-with changed; appendix scope note current | spot-check changed docs |
+| CHANGELOG | one row per bumped / new doc in the exact ledger format, IDs in last column; header Date bumped; NOT archived | row count = bumped docs |
+| README / index files | `<none>` or list | present |
+
+## H. Paths, links, assets
+
+| Reference (as written) | In doc | Resolves at BASE_SHA? | Resolves after? | Asset: canonical path `<tier>/_assets/…`, source vs rendered, replacement archived as `<name>_<date>.<ext>`? | IDs |
+|---|---|---|---|---|---|
+| | | | | | |
+
+## I. Skill references (read-only awareness)
+
+| Skill file (path) | What it cites that this run changes | Disposition (CONSISTENT / parked as §J item — never edited in this run, D21) |
+|---|---|---|
+| | | |
+
+## J. Parked cross-boundary / cross-repo items
+
+| ID (`XB-…`) | Target (repo / path) | Reason | Approved intent (verbatim) | Blocking this run? (YES → §K) |
+|---|---|---|---|---|
+| | | | | |
+
+## K. Unresolved Operator decisions (BLOCKED)
+
+| ID | Question (exact) | Evidence | What it blocks | Ruling (filled by Tony) |
+|---|---|---|---|---|
+| | | | | |
+
+## L. Preservation constraints (all IDs, consolidated)
+
+| Constraint (verbatim) | Source ID | Where it lives (path:line at BASE_SHA) | How QA will check (AC-P) |
+|---|---|---|---|
+| | | | |
+
+## M. Expected validation
+
+- Lints: 4 lints; expected result on the candidate: zero new findings; baseline: `<count>` — `<path:line [LINT-ID]>` …
+- Propagation searches to re-run at the candidate (verbatim from §B): …
+- Canonical term list / retired-term list for AC-N (from the package or Tony): …
+- Derived-field assertions: MANIFEST count `<n>`, rows `<n>`, ← map recomputed for `<docs>`
+- Archive fidelity: `<n>` archives expected; each byte-equal to `git show <BASE_SHA>:<path>`
+- References/assets to resolve (from §H): …
+
+## N. Write-load tally and commit plan
+
+- Docs edited `<n>` + archives `<n>` + new docs `<n>` + MANIFEST + CHANGELOG (+ assets `<n>`) = ~`<k>` writes
+- Commits, in order: `docs(<DOC>): v<X.Y> - <summary> [<IDs>]` × `<n>`; then `chore(sync): handoff for CONTENT_SHA <short> [<run-id>]`
+- Hygiene: plain hyphens; no Co-Authored-By; one version bump per doc per run (D22)
+
+## O. Approval and amendments
+
+- [ ] Gate 1 — scope + classification APPROVED by Operator at `<date/time>`
+- [ ] Gate 2 — this map APPROVED by Operator at `<date/time>` (route `<TINY/LARGE>` confirmed; NO-CHANGE rows approved: `<IDs>`; TINY waiver line: "<verbatim>"; LARGE → TINY downgrade ruling, if any: "<verbatim>")
+- [ ] Gate 3 — spec APPROVED at `<date/time>` (LARGE) / N/A (TINY, waiver)
+- Amendments: `AMENDED-v1 — <date/time> — <what changed, why, which finding or discovery> — re-approved at Gate 2 [and Gate 3]` …
+- Overrides logged (D-number, what, confirmation): …
+- CONTENT_SHA (filled after the last content commit exists): `<sha>` · Gate 4 APPROVED at `<date/time>` · pushed at `<date/time>`
+
+## P. Route evidence (TINY / LARGE decision record)
+
+| Fast-path condition (route-selection.md) | Evidence | Holds? |
+|---|---|---|
+| ≤ 3 intake IDs | | |
+| ≤ 3 canonical touch-list docs (after §B search) | | |
+| no new canonical document | | |
+| no Factory-wide terminology rename / change | | |
+| no cross-correction dependency | | |
+| no high-risk governing-rule change (security / authority / payment / tenant / PHI / git-merge governance / QA verdict authority) | | |
+| no unresolved conflict (§K empty) | | |
+| no cross-boundary change required for success (§J blocking = none) | | |
+| propagation search bounded and complete before Gate 2 | | |
+| docs-only QA waiver eligible (changes confined to live-scope markdown + indexes; Tony has not disallowed) | | |
+| **Route** | TINY only if ALL hold; else LARGE | **`<TINY/LARGE>`** — Operator escalation / downgrade ruling: `<none / verbatim>` |
