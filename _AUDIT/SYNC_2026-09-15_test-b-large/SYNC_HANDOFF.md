@@ -139,4 +139,16 @@ Process notes (not map deviations; for Tony and QA awareness):
 
 ## 8. Gate 4 record (filled by Claudy at the moment of approval; the push happens only after this line exists)
 
-- Gate 4 APPROVED by Operator at `<pending>` · pushed `<pending>` · (QA_START_SHA is Cody's to record — not here)
+- **Gate 4 APPROVED by Operator at 2026-09-15 20:52:06 Asia/Dhaka (UTC+06:00; 14:52:06 UTC)**. Operator instruction: "APPROVED — GATE 4. Authorize publication of the TEST B branch."
+- Pushed `<recorded in Operator report after push — this file cannot contain the SHA or time of the commit that contains it>` · (QA_START_SHA is Cody's to record — not here)
+- **Operator conditions for this publication:**
+  - The commit carries only this Gate 4 handoff metadata.
+  - No canonical doctrine, UPDATE_MAP.md, or DOCSET_SYNC_ACCEPTANCE_SPEC.md changes.
+  - CONTENT_SHA unchanged (`4971a6133a9b93a456726de0940add5ed7908b8d`).
+  - RECOVERY.md, session files, response logs, and `_INBOX/` cargo are excluded.
+  - Single push of the current branch.
+  - Merge target NONE: no PR, no merge.
+
+## 9. Validation findings recorded for later review (TEST B; do not repair the skill during this run)
+
+- **TESTB-F01** (Operator-recorded, 2026-09-15): UPDATE_MAP requires CONTENT_SHA to be recorded, but the map is frozen before CONTENT_SHA exists, and the acceptance spec relies on its fingerprint. During this run CONTENT_SHA was correctly recorded in SYNC_HANDOFF instead. Do not repair the skill during TEST B. (Cross-reference: §4 process note 1.)
