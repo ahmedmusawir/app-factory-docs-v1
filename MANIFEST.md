@@ -36,7 +36,7 @@ Regenerated from the doc header blocks on **every doc bump** (bump procedure: `_
 
 | Canonical Name | Version | Date | Status | Purpose | Pairs With → |
 |---|---|---|---|---|---|
-| APP_FACTORY_SKILLS_PLAYBOOK | 1.1 | 2026-07-08 | Active | Skill-authoring constitution: Stark vs Agent skills, two-file contract, activation flow, CWD rule | FFM_PLAYBOOK, RECON_QUESTIONNAIRE, DESIGNER_PLAYBOOK |
+| APP_FACTORY_SKILLS_PLAYBOOK | 1.2 | 2026-09-15 | Active | Skill-authoring constitution: Stark vs Agent skills, two-file contract, activation flow, CWD rule | FFM_PLAYBOOK, RECON_QUESTIONNAIRE, DESIGNER_PLAYBOOK |
 | FFM_PLAYBOOK | 1.2 | 2026-07-07 | Active | The FFM authoring manual: four-role pattern (recon Stage 0), folder anatomy, variants, worked examples | HANDOFF_PACKAGE_PLAYBOOK, APP_FACTORY_SKILLS_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, ARCHITECT_PLAYBOOK, ENGINEER_PLAYBOOK, DESIGNER_PLAYBOOK, RECON_QUESTIONNAIRE |
 | FRONTEND_BUILD_PHASE_PLAYBOOK | 1.2.2 | 2026-08-05 | Active | Frontend build execution: six stages, doctrine refresh, pre-write checks, KIP loop | FRONTEND_FIRST_PLAYBOOK, STARTER_KIT_HANDBOOK, COMPONENT_REGISTRY, UI_UX_BUILDING_MANUAL², FFM_PLAYBOOK, TESTING_PLAYBOOK |
 | FRONTEND_FIRST_PLAYBOOK | 1.1.3 | 2026-07-07 | Active | When/why to build UI before backend: Kit Audit, gates, service-layer law, mock strategy | FRONTEND_BUILD_PHASE_PLAYBOOK, STARTER_KIT_HANDBOOK, COMPONENT_REGISTRY, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |

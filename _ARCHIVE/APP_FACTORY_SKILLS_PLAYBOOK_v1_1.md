@@ -1,6 +1,6 @@
 # APP FACTORY SKILLS PLAYBOOK
 
-> **Version:** 1.2 · **Date:** 2026-09-15 · **Status:** Active
+> **Version:** 1.1 · **Date:** 2026-07-08 · **Status:** Active
 > **Tier:** 3 — Build Methodology · **Pairs with:** FFM_PLAYBOOK, RECON_QUESTIONNAIRE, DESIGNER_PLAYBOOK
 
 > **Authoritative doctrine for skill authoring in the Stark Industries App Factory.**
@@ -1146,7 +1146,6 @@ The fundamentals — two-file core, v2 format, folder layout, evolution principl
 |---------|------|--------|
 | 1.0 | 2026-05-05 | Initial Playbook. Defines Stark Skills and Agent Skills. Establishes two-file core (CLAUDE.md + SKILL.md). Mandates Anthropic Skills v2 format for SKILL.md. Specifies single skill and family skill structures. Names eight anti-patterns from prior authoring history. Identifies Cloud Deployment Skills (family) and Supabase Migration Skill (single, most complex) as structural exemplars. Includes inline excerpt of v2 format with reference to Anthropic's official spec. Codifies activation flow, Plan Mode, operator override, evidence discipline, evolution principle. Audience: Generals (DevOps, Architects, Designers). |
 | 1.1 | 2026-07-08 | **Wave 3 (audit sync).** "Stitch Prompting Discipline" example replaced with "Token-Driven HTML Screen Discipline" per the Canonical Page Method — §2 example bullet + the full §16 Agent Skill spec (F-002/F-037). §7 gained "Where Skills Live + The Launch-CWD Rule": `_SKILLS/` = authoring library vs `.claude/skills/` = repo-side install Claude Code auto-discovers; skills resolve from the LAUNCH directory (Run 001 Q6.5); launch CWD documented in RECOVERY.md; convention reconciled with RECON_QUESTIONNAIRE Q6.1/Q6.5 (F-037). §14 gained Exemplar 3: stark-recon case study + the June ecosystem (stark-recon, starter-kit-cleaner, repo-security) — described, not imported (F-021 scope split honored); teaches the doc-as-source / skill-as-vehicle pairing rule. Outbound Cross-References section added: FFM_PLAYBOOK §11, RECON_QUESTIONNAIRE §6, DESIGNER_PLAYBOOK (F-035 family — outbound-zero ended). Standard header block (F-018); closing label de-versioned. |
-| 1.2 | 2026-09-15 | **TEST B synthetic validation (TB-CP-001, IN-2026-09-15-01; TB-CP-003 verified — no change).** TEST-B-SYNTHETIC-01 — LARGE-path synchronization validation only. TEST-B-SYNTHETIC-03 — Content-first intake classification validation only. |
 
 ---
 
