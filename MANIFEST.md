@@ -1,6 +1,6 @@
 # MANIFEST — App Factory Doctrine Index
 
-> **Version:** 1.0 · **Date:** 2026-07-12 · **Status:** Active
+> **Version:** 1.0 · **Date:** 2026-09-15 · **Status:** Active
 > **Tier:** none — repository infrastructure · **Pairs with:** CHANGELOG, _ARCHIVE/README
 
 > **What this is:** the master index of all 29 live doctrine docs (F-004) and the factory's versioning record (F-007). Version/Date/Status below are **read from each doc's own header block — never invented**. Cross-references everywhere use canonical names; this file maps names → paths.
@@ -28,7 +28,7 @@ Regenerated from the doc header blocks on **every doc bump** (bump procedure: `_
 | ARCHITECT_PLAYBOOK | 2.2 | 2026-07-07 | Active | How to BE the Architect: recon mode, app-type router, approval flow, anti-patterns | ARCHITECT_QUESTIONNAIRE, RECON_QUESTIONNAIRE, DESIGNER_PLAYBOOK, APP_FACTORY_BLUEPRINT |
 | ARCHITECT_QUESTIONNAIRE | 2.2 | 2026-07-07 | Active | The ignition instrument (single source): 12-Q core + optional Phase 4 + APP_BRIEF template | ARCHITECT_PLAYBOOK, APP_FACTORY_BLUEPRINT, RECON_QUESTIONNAIRE |
 | DESIGNER_PLAYBOOK | 2.1 | 2026-07-07 | Active | How to BE the Designer: token-driven HTML + Playwright, Canonical Page Method, deliverables | GLOBAL_DESIGN_SYSTEM_HANDBOOK, THEME_LIBRARY, THEMING_MANUAL, COMPONENT_REGISTRY, ARCHITECT_PLAYBOOK, ENGINEER_PLAYBOOK |
-| ENGINEER_PLAYBOOK | 1.2 | 2026-07-07 | Active | How to BE the Engineer: recon executor (Phase 0), Kit Track + Pipeline Track, Karpathy Protocol home | APP_FACTORY_BLUEPRINT, RECON_QUESTIONNAIRE, DESIGNER_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, FFM_PLAYBOOK, FRONTEND_FIRST_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK |
+| ENGINEER_PLAYBOOK | 1.3 | 2026-09-15 | Active | How to BE the Engineer: recon executor (Phase 0), Kit Track + Pipeline Track, Karpathy Protocol home | APP_FACTORY_BLUEPRINT, RECON_QUESTIONNAIRE, DESIGNER_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, FFM_PLAYBOOK, FRONTEND_FIRST_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK |
 | HANDOFF_PACKAGE_PLAYBOOK | 1.1 | 2026-07-07 | Active | The conversion pipeline's 4-file package doctrine + greenfield variant | APP_FACTORY_BLUEPRINT, DESIGNER_PLAYBOOK, ENGINEER_PLAYBOOK, FRONTEND_FIRST_PLAYBOOK, RECON_QUESTIONNAIRE |
 | RECON_QUESTIONNAIRE | 0.5 | 2026-07-07 | Active (living) | The ground-truth gate: executable recon questions; Phase 0 / FFM Stage 0; the stark-recon skill's source content | ARCHITECT_PLAYBOOK, FFM_PLAYBOOK, APP_FACTORY_BLUEPRINT, STARTER_KIT_HANDBOOK |
 

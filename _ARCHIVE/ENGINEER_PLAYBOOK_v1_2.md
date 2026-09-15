@@ -1,6 +1,6 @@
 # ENGINEER AGENT PLAYBOOK
 
-> **Version:** 1.3 · **Date:** 2026-09-15 · **Status:** Active
+> **Version:** 1.2 · **Date:** 2026-07-07 · **Status:** Active
 > **Tier:** 2 — Pipeline Agents · **Pairs with:** APP_FACTORY_BLUEPRINT, RECON_QUESTIONNAIRE, DESIGNER_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, FFM_PLAYBOOK, FRONTEND_FIRST_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK
 
 > **App Factory — Stark Industries**
@@ -94,7 +94,6 @@ The Engineer is the **third agent** in the 3-Agent Council. It transforms the AP
 | Define app scope | Architect Agent |
 | Design UI/UX | Designer Agent |
 | Make product decisions | Human (Tony Stark) |
-| Self-approve a required human/Operator gate | Required human/Operator |
 | Operate production systems | Operations / SRE |
 
 ### The Engineer's Mantra
@@ -1594,7 +1593,6 @@ The Engineer Agent's mission is to **build systems that remain stable** — and 
 
 | Version | Date | Change |
 |---|---|---|
-| 1.3 | 2026-09-15 | **TEST B synthetic validation (TB-CP-002, TB-CP-004).** TEST-B-SYNTHETIC-02 — Independent Engineer-seat validation only. Clarified that a required human/Operator gate may not be self-approved by the Engineer. |
 | 1.2 | 2026-07-07 | **Wave 2B — two-track structural restructure (F-028).** Reorganized into PART I Common Doctrine / PART II Kit Track (dominant lane, described first) / PART III Pipeline Track (original Python/CLI doctrine retained verbatim) / PART IV Shared Reference / PART V Agent Conduct / Ship. NEW §2 Phase 0 Recon-Executor role — the Engineer answers RECON_QUESTIONNAIRE read-only and produces the Recon Report the Architect consumes (F-027). §3 inputs rewritten to match DESIGNER_PLAYBOOK §10 + HANDOFF_PACKAGE_PLAYBOOK: greenfield = token file (PRIMARY) + style tile/screen HTML+PNG + UI_SPEC + component manifest (screenshots removed as greenfield input — the F-026 mismatch); conversion = 4-file package + `_design/` + `_extraction/`; per-pipeline DATA_CONTRACT ownership stated in §3 and §12 (F-029). NEW §5 Kit Track: recon → kit read (aspirational, verify) → Kit Audit → FFM execution as the primary work mode, with pointers to FRONTEND_FIRST_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, FFM_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK (F-027; F-035 bridge). §15 Karpathy Protocol marked ALL-AGENT doctrine (D-011), Blueprint pointer connected; §15/§16 numbers PINNED as stable IDs. New anti-pattern: "Wrapping What the Kit Provides / Building on Unverified Kit Claims" (Run 001; F-039 antibody). Moves, all byte-faithful: old §4–§9 → §6–§11, §10 → §12, §11 → §13, §13 → §14, §12 → §17, §14 → Appendix A. §1 updated (Designer v2.0 diagram, recon + FFM responsibilities). Standard header (F-018); "AI App Factory" → "App Factory". |
 | 1.1 | Feb 2026 | Added Karpathy Protocol (Section 15), Session Memory Protocol (Section 16). |
 | 1.0 | — | Baseline: role, inputs, systems discipline, CLI-first pattern, file-state contracts, build sequence, testing strategy, cloud-native engineering, provider abstraction, DATA_CONTRACT template, type-specific considerations, operations handoff, anti-patterns, field lessons. |
