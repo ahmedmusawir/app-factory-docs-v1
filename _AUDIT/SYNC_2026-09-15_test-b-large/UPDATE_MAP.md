@@ -1,6 +1,6 @@
 # UPDATE MAP — test-b-large — 2026-09-15
 
-> **The approved execution source of truth for this synchronization run.** Authored by Claudy (Engineer seat), skill `factory-docs-update` v0.7-DRAFT. **APPROVED by Tony at Gate 2 on 2026-09-15, with the Operator rulings in §K/§O; AMENDED-v1 approved at Gate 2 on 2026-09-15 (TB-CP-004 wording consistency, §O). FROZEN.** Consumed by Sol (spec derivation), Cody (verification), and Claudy (execution, EXACTLY as approved).
+> **The approved execution source of truth for this synchronization run.** Authored by Claudy (Engineer seat), skill `factory-docs-update` v0.7-DRAFT. **APPROVED by Tony at Gate 2 on 2026-09-15, with the Operator rulings in §K/§O; AMENDED-v1 approved at Gate 2 on 2026-09-15 (TB-CP-004 wording consistency, §O); AMENDED-v2 approved at Gate 2 on 2026-09-25 (QA-F01 search-disposition repair, §O). FROZEN.** Consumed by Sol (spec derivation), Cody (verification), and Claudy (execution, EXACTLY as approved).
 >
 > **TEST B — synthetic LARGE-path validation on a disposable branch.** No production doctrine decision is implied (package INDEX).
 >
@@ -17,7 +17,7 @@
 | Execution route | Local git at Hub clone (standing ruling 2026-08-05) |
 | **Path** | **LARGE** (evidence §P) |
 | QA arrangement | Independent QA lane (Sol / Cody); spec at `_AUDIT/SYNC_2026-09-15_test-b-large/DOCSET_SYNC_ACCEPTANCE_SPEC.md` (not authored by Claudy) |
-| Status | **APPROVED (Gate 2, 2026-09-15) → AMENDED-v1 (Gate 2, 2026-09-15)** with Operator rulings K-1, K-2, K-3 and the TB-CP-004 wording amendment applied as written in §K / §O. FROZEN: any further change is AMENDED-v<n> and re-enters Gate 2 |
+| Status | **APPROVED (Gate 2, 2026-09-15) → AMENDED-v1 (Gate 2, 2026-09-15) → AMENDED-v2 (Gate 2 QA repair, 2026-09-25)** with Operator rulings K-1, K-2, K-3, the TB-CP-004 wording amendment, and the QA-F01 search-disposition repair recorded in §O. FROZEN: any further change is AMENDED-v<n> and re-enters Gate 2 |
 | Lint baseline (pre-existing) | **9** findings: `01_CONSTITUTION/STARTER_KIT_HANDBOOK.md` :258, :261, :688, :690, :692 [VERSIONED-REFS]; `04_REFERENCE_MANUALS/DATABASE_MANUAL.md` :8, :156 [VERSIONED-REFS]; `05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md` :2092 [VERSIONED-REFS]; `01_CONSTITUTION/STARTER_KIT_HANDBOOK.md` :1 [HEADER-PRESENCE]. ENCODING and RETIRED-TERMS pass (33 files = 31 tier docs + MANIFEST + CHANGELOG) |
 | Live-doc count on disk / MANIFEST rows / MANIFEST stated (at BASE_SHA) | **31 / 31 / 29.** The mismatch is not caused by this run → §G DRIFT-2026-09-15-01 |
 
@@ -63,13 +63,19 @@ In this map, invariants are read ONLY from each brief's own intent text, and not
   - Terms: `TEST-B-SYNTHETIC` · `Version History` (placement)
   - Scope: `01_CONSTITUTION 02_PIPELINE_AGENTS 03_BUILD_METHODOLOGY 04_REFERENCE_MANUALS 05_DESIGN_SYSTEM MANIFEST.md CHANGELOG.md` (+ `_SKILLS/`, `_OTHERS/` read-only)
   - Command shape: `grep -rn "TEST-B-SYNTHETIC" <scope>` · `grep -n "Version History" 03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md`
-  - Hit count: `TEST-B-SYNTHETIC` 0 in live scope, 0 in `_SKILLS/`/`_OTHERS/`. Outside scope, hits exist only in `_INBOX/` cargo and this run's `agent_docs/RESPONSES/` log. `Version History`: 3 in target.
+  - Hit count: `TEST-B-SYNTHETIC` 0 in live scope, 0 in `_SKILLS/`/`_OTHERS/`. Outside scope, hits exist only in `_INBOX/` cargo and this run's `agent_docs/RESPONSES/` log. `Version History`: 9 in target (BASE-existing; QA-F01 Gate 2 repair).
 
   | # | Path:line | Hit (quoted) | Disposition | Drives | Label |
   |---|---|---|---|---|---|
   | 1 | APP_FACTORY_SKILLS_PLAYBOOK.md:30 | "17. [Version History](#17-version-history)" | CONSISTENT (TOC; unchanged) | — | EVIDENCE |
-  | 2 | APP_FACTORY_SKILLS_PLAYBOOK.md:687 | "## Version History" | CONSISTENT. **Not a placement:** it sits inside a ```` ```markdown ```` example fence in §12 (L686–694) showing skill authors the table shape | — | EVIDENCE |
-  | 3 | APP_FACTORY_SKILLS_PLAYBOOK.md:1143 | "## 17. Version History" | CHANGE. Verified placement (history, lint-exempt per `lints/lint_common.py:33`, non-authority) | §C-1 | EVIDENCE |
+  | 2 | APP_FACTORY_SKILLS_PLAYBOOK.md:215 | "**Section 7: Version History**" | CONSISTENT (manager-file structure summary; unchanged; not the target doc's history placement) | — | EVIDENCE (BASE and candidate context; QA-F01) |
+  | 3 | APP_FACTORY_SKILLS_PLAYBOOK.md:684 | "Every CLAUDE.md and SKILL.md carries a Version History table at the bottom:" | CONSISTENT (authoring guidance introducing a fenced example; unchanged; not the target doc's history placement) | — | EVIDENCE (BASE and candidate context; QA-F01) |
+  | 4 | APP_FACTORY_SKILLS_PLAYBOOK.md:687 | "## Version History" | CONSISTENT. **Not a placement:** it sits inside a ```` ```markdown ```` example fence in §12 (L686–694) showing skill authors the table shape | — | EVIDENCE |
+  | 5 | APP_FACTORY_SKILLS_PLAYBOOK.md:714 | "The Version History also serves as a forensic tool." | CONSISTENT (explains version history's purpose; unchanged; not placement guidance for this edit) | — | EVIDENCE (BASE and candidate context; QA-F01) |
+  | 6 | APP_FACTORY_SKILLS_PLAYBOOK.md:980 | "7. Version History table" | CONSISTENT (CLAUDE.md authoring checklist; unchanged; not the target doc's history placement) | — | EVIDENCE (BASE and candidate context; QA-F01) |
+  | 7 | APP_FACTORY_SKILLS_PLAYBOOK.md:994 | "7. Version History table" | CONSISTENT (SKILL.md authoring checklist; unchanged; not the target doc's history placement) | — | EVIDENCE (BASE and candidate context; QA-F01) |
+  | 8 | APP_FACTORY_SKILLS_PLAYBOOK.md:1040 | "2. Update the skill's Version History if any refinements emerged" | CONSISTENT (first-run evolution instruction; unchanged; not the target doc's history placement) | — | EVIDENCE (BASE and candidate context; QA-F01) |
+  | 9 | APP_FACTORY_SKILLS_PLAYBOOK.md:1143 | "## 17. Version History" | CHANGE. Verified placement (history, lint-exempt per `lints/lint_common.py:33`, non-authority) | §C-1 | EVIDENCE |
 
 - **Touch-list rows:** §C-1 (row 1b).
 - **Placement rationale (D13/D14).** The doc's existing non-authority history location is §17 Version History, whose rows are ordered **newest-last** (1.0 at L1147, 1.1 at L1148). D7 already requires one new Version History row for this bump, so the sentence rides inside that row. That is zero extra lines beyond the mandatory row: the minimal form. The alternative, `## Cross-References (Factory Doctrine)` (L1135), holds outbound doctrine pointers and is less apt for a validation marker.
@@ -379,6 +385,10 @@ No CONFLICT rows.
     - *Effect on route / IDs / touch list:* none.
     - *Gate 3:* no spec exists yet (not affected); Sol derives from AMENDED-v1.
   - The Gate 2 concern is resolved by AMENDED-v1.
+  - **AMENDED-v2 — 2026-09-25 — Gate 2 QA repair amendment APPROVED by Operator (QA-F01 accepted).**
+    - *What changed:* TB-CP-001 §B `Version History` propagation-search count corrected from 3 to 9; BASE-existing hits at APP_FACTORY_SKILLS_PLAYBOOK.md:215, :684, :714, :980, :994, and :1040 added to the hit table with CONSISTENT dispositions after independent BASE/candidate context reads.
+    - *Evidence:* `git grep -n 'Version History' dd6d496 -- 03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md` and the same command at `4121c913` each return the same nine path:line hits. The six added lines are unchanged and concern version-history guidance, examples, or checklists; none conflicts with or relocates §C row 1b's actual history placement at :1143.
+    - *Effect:* QA-F01's missing-disposition evidence is addressed in the map only. No canonical wording, scope, touch-list row, intake ID/disposition, or acceptance requirement changed. The Gate 3 acceptance spec remains frozen and unmodified. This local amendment is uncommitted and unpushed pending the next authorized step.
 - Overrides logged: none (the Q1 test waiver is an Operator ruling on field completeness, recorded in §A; it overrides no D-rule)
 - CONTENT_SHA: `<pending Phase 4>` · Gate 4: `<pending>` · pushed: `<pending>`
 

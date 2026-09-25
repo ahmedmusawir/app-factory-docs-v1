@@ -1,6 +1,6 @@
 # DOCSET_SYNC_ACCEPTANCE_SPEC — test-b-large — 2026-09-15
 
-> **Gate 3 APPROVED — FROZEN.** Approved by Tony on **2026-09-15 at 20:22:59 Asia/Dhaka (UTC+06:00; 14:22:59 UTC)**. Phase 3 derivation only, authored by Jarvis acting as **Sol (QA Lead)**. Every acceptance criterion derives from approved intake, an approved UPDATE MAP row, or a standing sync invariant. This document records the contract for later independent verification; it does not report candidate PASS results or authorize Phase 4.
+> **Gate 3 RE-APPROVED — FROZEN.** Originally approved by Tony on **2026-09-15 at 20:22:59 Asia/Dhaka (UTC+06:00; 14:22:59 UTC)**; metadata alignment to AMENDED-v2 re-approved by the Operator on **2026-09-25**. Phase 3 derivation only, authored by Jarvis acting as **Sol (QA Lead)**. Every acceptance criterion derives from approved intake, an approved UPDATE MAP row, or a standing sync invariant. This document records the contract for later independent verification; it does not report candidate PASS results or authorize Phase 4.
 
 ## 0. Header and derivation sources
 
@@ -10,20 +10,21 @@
 | Repository / working copy | `app-factory-docs-v1`; the Operator-designated existing working copy |
 | Branch | `test/docset-sync-v07-large-001` — verified with `git rev-parse --abbrev-ref HEAD` |
 | BASE_SHA / verified HEAD at derivation | `dd6d496a3b269a6bf83ce4e85101d8e0e6e785b9` — verified with `git rev-parse HEAD` |
-| Approved map | [UPDATE_MAP.md](UPDATE_MAP.md), APPROVED at Gate 2 on 2026-09-15, **AMENDED-v1 APPROVED at Gate 2 on 2026-09-15**, frozen; approval record §O |
-| Map SHA-256 at derivation | `98a033eeddd7a00cf21e34dc986645c335b3234698079d35a7506724eced6cba` (local, uncommitted source bytes) |
+| Approved map | [UPDATE_MAP.md](UPDATE_MAP.md), APPROVED at Gate 2 on 2026-09-15, **AMENDED-v2 APPROVED at Gate 2 on 2026-09-25** for QA-F01 search-disposition repair; approval record §O |
+| Map SHA-256 at original derivation (AMENDED-v1) | `98a033eeddd7a00cf21e34dc986645c335b3234698079d35a7506724eced6cba` (historical local source bytes) |
+| Map SHA-256 at Gate 3 re-approval (AMENDED-v2) | `d59e1053174811d4c121323b7d179fd80156c8d1f94c645d1390ee27f79ad3e2` (local, uncommitted working-file bytes; `Get-FileHash -Algorithm SHA256`) |
 | Approved correction package | `_INBOX/TEST_B_CORRECTION_PACKAGE/INDEX.md` and `CORRECTION_001.md` through `CORRECTION_004.md`; TB-CP-001 through TB-CP-004 |
 | Approved lesson | `_INBOX/odd_payload.md`; `IN-2026-09-15-01`, classification and approval in MAP §A |
 | Standing source | `_SKILLS/factory-docs-update/_shared/references/STANDING_INVARIANTS.md`, the ten families supplied by skill v0.7-DRAFT |
 | Method | Family `CLAUDE.md` D20; `sync-qa/SKILL.md` Stage S1; shared acceptance-spec template |
 | Author / date | Jarvis acting as Sol, QA Lead; 2026-09-15 |
-| Status / amendments | **Gate 3 APPROVED; FROZEN** — Tony, 2026-09-15 20:22:59 Asia/Dhaka (UTC+06:00; 14:22:59 UTC); approved exactly as derived; no spec amendments |
+| Status / amendments | **Gate 3 RE-APPROVED; FROZEN** — original approval: Tony, 2026-09-15 20:22:59 Asia/Dhaka (UTC+06:00; 14:22:59 UTC); metadata-only alignment to AMENDED-v2 re-approved by Operator on 2026-09-25; all 23 AC rows unchanged |
 | AC count | **23**, numbered AC1–AC23; all ten standing families represented |
 | Verdict vocabulary for later QA | PASS / PASS WITH FOLLOW-UP FINDINGS / PASS WITH KNOWN RISK / FAIL / BLOCKED |
 
-**Source discipline.** Run-specific derivation inputs were limited to the approved package, `odd_payload.md`, and AMENDED-v1 UPDATE MAP. The skill reading path supplies methodology and standing invariants. No previous validation report, Astra review, unrelated reviewer artifact, or content under `fable-sync-review/` was read. Canonical anchors and baseline claims below are taken from the approved map for contract derivation; Cody must independently verify them later. Recovery/session narratives are not derivation evidence. The local intake and map remain valid sources despite being intentionally uncommitted.
+**Source discipline.** Run-specific derivation inputs were limited to the approved package, `odd_payload.md`, and AMENDED-v1 UPDATE MAP. The skill reading path supplies methodology and standing invariants. No previous validation report, Astra review, unrelated reviewer artifact, or content under `fable-sync-review/` was read. Canonical anchors and baseline claims below are taken from the approved map for contract derivation; Cody must independently verify them later. Recovery/session narratives are not derivation evidence. The local intake and map remain valid sources despite being intentionally uncommitted. AMENDED-v2 adds only the six BASE-existing `Version History` hit dispositions accepted under QA-F01; the current approved-map reference and fingerprint above are aligned to that repair.
 
-**Notation.** `MAP` means the approved AMENDED-v1 map above. `STANDING AC-X` means the corresponding row in STANDING_INVARIANTS.md. `SKILLS` means `03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md`; `ENGINEER` means `02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md`. Other filenames in MAP §B/§F retain their map locations. Line anchors below are **BASE_SHA anchors**, not a demand that candidate line numbers stay fixed. `<EXEC_DATE>` is the actual Phase 4 date in YYYY-MM-DD, consistently substituted as MAP §C requires. It is not fixed to this spec's authoring date.
+**Notation.** `MAP` means the approved AMENDED-v2 map above. `STANDING AC-X` means the corresponding row in STANDING_INVARIANTS.md. `SKILLS` means `03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md`; `ENGINEER` means `02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md`. Other filenames in MAP §B/§F retain their map locations. Line anchors below are **BASE_SHA anchors**, not a demand that candidate line numbers stay fixed. `<EXEC_DATE>` is the actual Phase 4 date in YYYY-MM-DD, consistently substituted as MAP §C requires. It is not fixed to this spec's authoring date.
 
 ## 1. Objective and scope
 
@@ -165,9 +166,10 @@ Remaining bounded limitations:
 
 - **Sol (QA Lead):** derivation complete, 2026-09-15. All **23/23 ACs traceable** to approved IDs/map rows or standing invariants. Ready for Tony's approval with the nonblocking mechanical notes in §6.
 - **Tony (Operator), Gate 3 APPROVED:** **2026-09-15 20:22:59 Asia/Dhaka (UTC+06:00; 14:22:59 UTC)**. Operator instruction: “APPROVED — GATE 3.” Approved exactly as currently derived; this spec is **FROZEN**. All 23 ACs are unchanged. The three mechanical notes in §6 remain nonblocking observations.
+- **Operator, Gate 3 RE-APPROVED (metadata only): 2026-09-25.** The Operator accepted QA-F01's Gate 2 map repair as AMENDED-v2 and instructed this acceptance-spec metadata alignment and Gate 3 re-approval. The approved-map reference and SHA-256 were refreshed. **AC1–AC23 are byte-unchanged; no criterion was added, removed, or reworded.** The spec remains frozen for Cody retest.
 - A later material change requires Gate 3 re-approval; an implementation scope change also requires the applicable Gate 2 amendment.
-- **Current action: STOP. Gate 3 APPROVED / SPEC FROZEN.** Approval recording only; no Engineer execution, commit, or push.
+- **Current action: STOP. Gate 3 RE-APPROVED / SPEC FROZEN.** Metadata alignment only; ready for Cody retest. No canonical edit, commit, or push.
 
 TEST B — LARGE VALIDATION  
 QA LEAD SEAT  
-CURRENT GATE: GATE 3 — APPROVED / SPEC FROZEN
+CURRENT GATE: GATE 3 — RE-APPROVED / SPEC FROZEN
