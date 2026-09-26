@@ -15,7 +15,8 @@
 | Execution route | Local git at a Hub clone (standing ruling 2026-08-05) — or the MCP exception with Operator choice recorded here |
 | **Path** | **TINY** / **LARGE** — decided by `sync-engineer/decision-trees/route-selection.md`; evidence in §P |
 | QA arrangement | TINY: "Docs-only QA waiver recorded per SOFTWARE_FACTORY_PLAYBOOK §2.5 item 6 — Operator, <date/time>" · LARGE: "Independent QA lane (Sol / Cody); spec at `<run>/DOCSET_SYNC_ACCEPTANCE_SPEC.md`" |
-| Status | DRAFT → APPROVED (Gate 2, <date/time>) → AMENDED-v<n> (Gate 2, <date/time>) |
+| Status | DRAFT → APPROVED (Gate 2, <date/time>) → AMENDED-v<n> (Gate 2, <date/time>). **Frozen at Gate 2:** after the Gate 2 line is written, nothing in this file changes except through an approved AMENDED-v<n>. CONTENT_SHA, Gate 3 / Gate 4 times, the push time and later overrides are recorded in SYNC_HANDOFF / RUN_SUMMARY, never here (D18). |
+| Intake snapshot | `_AUDIT/SYNC_<run>/INTAKE_SNAPSHOT/` — every in-scope cargo unit copied byte-for-byte as received at Gate 1; immutable thereafter; committed no later than the handoff commit (LARGE: mandatory, so a fresh QA workspace has the approved intake; D11). Units too large to snapshot: `INTAKE_SNAPSHOT/REFERENCE.md` with repo + commit SHA + path. |
 | Lint baseline (pre-existing) | `<count>` findings: `<path:line [LINT-ID]>` … (from discovery; also §M) |
 | Live-doc count on disk / MANIFEST rows / MANIFEST stated (at BASE_SHA) | `<n>` / `<n>` / `<n>` — any mismatch not caused by this run → §G baseline drift |
 
@@ -37,7 +38,7 @@
   - Terms: `"<old wording>"`, `<retired term>`, `<role/gate/module/artifact name>`, `<cited filename>`, `<cited section title>` …
   - Scope: `01_CONSTITUTION 02_PIPELINE_AGENTS 03_BUILD_METHODOLOGY 04_REFERENCE_MANUALS 05_DESIGN_SYSTEM MANIFEST.md CHANGELOG.md` (+ `_SKILLS/`, `_OTHERS/` read-only for awareness)
   - Command shape: `grep -rn -i -E "<term>" <scope>`
-  - Hit count: `<n>` (active) / `<n>` (history)
+  - Hits: enumerated in the table below — **the rows are the count.** No separately maintained total (a hand-kept total drifted from its rows in TEST B, AP-23); if a total is quoted aloud, it is counted from the rows at that moment.
 
   | # | Path:line | Hit (quoted) | Disposition (CHANGE / CONSISTENT / HISTORY / OUT-OF-SCOPE) | Drives §C row / §F row / §J item | Label |
   |---|---|---|---|---|---|
@@ -125,30 +126,32 @@ Type **CONFLICT** = doctrine / authority conflict (incompatible governing requir
 - Propagation searches to re-run at the candidate (verbatim from §B): …
 - Canonical term list / retired-term list for AC-N (from the package or Tony): …
 - Derived-field assertions: MANIFEST fields this run changes (§G) — count `<n>` / unchanged, rows `<n>`, ← map recomputed for `<docs>`; §G drift values byte-unchanged from BASE: `<DRIFT IDs / none>`
-- Archive fidelity: `<n>` archives expected; each byte-equal to `git show <BASE_SHA>:<path>`
+- Archive fidelity: one archive per §C row marked "Archive expected: YES" (count = those rows); each proven by the Git-object method — `git hash-object <archive>` / `git rev-parse :<archive>` / `git rev-parse <cand>:<archive>` equal to `git rev-parse <BASE_SHA>:<path>` (never `git show … | diff -`, AP-21)
 - References/assets to resolve (from §H): …
 
-## N. Write-load tally and commit plan
+## N. Write-load tally, expected run-state set, and commit plan
 
-- Docs edited `<n>` + archives `<n>` + new docs `<n>` + MANIFEST + CHANGELOG (+ assets `<n>`) = ~`<k>` writes
-- Commits, in order: `docs(<DOC>): v<X.Y> - <summary> [<IDs>]` × `<n>`; then `chore(sync): handoff for CONTENT_SHA <short> [<run-id>]`
+- **Tally (derived, not maintained):** docs edited = distinct docs enumerated in §C · archives = §C rows with "Archive expected: YES" · new docs = §D rows · assets = §H asset rows · + MANIFEST + CHANGELOG. Each figure is counted from its rows when this section is written; the rows are the authority and a figure that disagrees with them is a defect in the figure (AP-23).
+- **Expected run-state set (lawfully uncommitted before the checkpoint commit; the ONLY paths that may be dirty on a resume before canonical execution — D15a / D22):** `_AUDIT/SYNC_<run>/UPDATE_MAP.md` · `_AUDIT/SYNC_<run>/INTAKE_SNAPSHOT/**` · `_AUDIT/SYNC_<run>/RUN_SUMMARY.md` (draft) · `session_<date>.md` · `RECOVERY.md` · `agent_docs/RESPONSES/*` — `<add or strike per run>`. Any other dirty path at resume or at Phase 4 entry → STOP.
+- **Commits, in order:** `chore(sync): run-state checkpoint [<run-id>]` (the expected run-state set above; required before canonical execution when any of it is uncommitted) → `docs(<DOC>): v<X.Y> - <summary> [<IDs>]` × one per §C/§D doc → `chore(sync): handoff for CONTENT_SHA <short> [<run-id>]` (LARGE; `run metadata` on TINY — includes `INTAKE_SNAPSHOT/` if not yet committed) → ⛔ Gate 4 → `chore(sync): gate 4 approval record [<run-id>]` (metadata-only, deliberate, after CONTENT_SHA) → the one push.
 - Hygiene: plain hyphens; no Co-Authored-By; one version bump per doc per run (D22)
 
 ## O. Approval and amendments
 
-- [ ] Gate 1 — scope + classification APPROVED by Operator at `<date/time>`
-- [ ] Gate 2 — this map APPROVED by Operator at `<date/time>` (route `<TINY/LARGE>` confirmed; NO-CHANGE rows approved: `<IDs>`; TINY waiver line: "<verbatim>"; LARGE → TINY downgrade ruling, if any: "<verbatim>")
-- [ ] Gate 3 — spec APPROVED at `<date/time>` (LARGE) / N/A (TINY, waiver)
-- Amendments: `AMENDED-v1 — <date/time> — <what changed, why, which finding or discovery> — re-approved at Gate 2 [and Gate 3]` …
-- Overrides logged (D-number, what, confirmation): …
-- CONTENT_SHA (filled after the last content commit exists): `<sha>` · Gate 4 APPROVED at `<date/time>` · pushed at `<date/time>`
+This section is written up to and including the Gate 2 line; writing the Gate 2 line IS the freeze. Everything that happens later is recorded elsewhere so that this file never needs a post-freeze mutation (D18, AP-19).
+
+- [ ] Gate 1 — scope + classification APPROVED by Operator at `<date/time>`; `INTAKE_SNAPSHOT/` taken at `<date/time>`
+- Overrides logged before Gate 2 (D-number, what, confirmation): …
+- [ ] Gate 2 — this map APPROVED by Operator at `<date/time>` (route `<TINY/LARGE>` confirmed; NO-CHANGE rows approved: `<IDs>`; TINY waiver line: "<verbatim>"; LARGE → TINY downgrade ruling, if any: "<verbatim>") — **MAP FROZEN**
+- Amendments (the only lawful post-freeze write): `AMENDED-v1 — <date/time> — <what changed, why, which finding or discovery> — re-approved at Gate 2 [and Gate 3]` …
+- **Recorded elsewhere, by design:** Gate 3 approval → `DOCSET_SYNC_ACCEPTANCE_SPEC.md` §7 · CONTENT_SHA, Gate 4 approval time, push time, post-Gate-2 overrides → `SYNC_HANDOFF.md` §0 / §8 (LARGE) or `RUN_SUMMARY.md` (TINY) · QA_START_SHA → `QA_MATRIX.md` (Cody) · final per-ID disposition stamps → `RUN_SUMMARY.md`
 
 ## P. Route evidence (TINY / LARGE decision record)
 
 | Fast-path condition (route-selection.md) | Evidence | Holds? |
 |---|---|---|
-| ≤ 3 intake IDs | | |
-| ≤ 3 canonical touch-list docs (after §B search) | | |
+| ≤ 3 intake IDs (count = §A rows with CHANGE / NO-CHANGE, counted now) | | |
+| ≤ 3 canonical touch-list docs (count = distinct docs enumerated in §C after the §B search, counted now) | | |
 | no new canonical document | | |
 | no Factory-wide terminology rename / change | | |
 | no cross-correction dependency | | |

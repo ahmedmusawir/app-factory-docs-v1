@@ -16,6 +16,7 @@
 
 - Repo: `ahmedmusawir/app-factory-docs-v1` · Branch: `docs/sync-<…>` · BASE_SHA: `<sha>` · CONTENT_SHA: `<sha>`
 - QA_START_SHA: `<sha>` (`<date/time>`) · Repair cycles: `<n>` — REPAIR_CONTENT_SHA / QA_RETEST_SHA per cycle: `<table or "none">`
+- Intake verified from: `<run>/INTAKE_SNAPSHOT/` at QA_START_SHA (`<present / BLOCKED>`; never the Engineer's local `_INBOX/`)
 - **Final tested SHA:** `<sha>` = `origin/<branch>` at `<date/time>` (verified)
 - Mode: documentation-only synchronization; no runtime, no deployment · Date: `<…>`
 
@@ -31,7 +32,7 @@
 |---|---|---|---|
 | `lints/run_all.py` | | zero new; baseline `<count>` unchanged | |
 | propagation re-runs (AC-C) | | zero undispositioned active hits | |
-| archive fidelity (AC-A) | | `<n>` diffs empty | |
+| archive fidelity (AC-A, Git-object method) | | `<n>` archives: `git rev-parse cand:<archive>` = `git rev-parse BASE:<path>` for each | |
 | derived fields (AC-I) | | count = disk = rows | |
 
 ## Manual Evidence

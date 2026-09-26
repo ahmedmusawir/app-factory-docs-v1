@@ -22,7 +22,7 @@ On 2026-07-12, Wave 6 Job 1 — renaming 27 doctrine docs into tier folders — 
 - Branch: from the approved BASE_SHA (UPDATE MAP §0; D18), never blindly from main. Already on the approved run branch at BASE_SHA or a lawful descendant (`git merge-base --is-ancestor <BASE_SHA> HEAD`, only this run's commits in `git log <BASE_SHA>..HEAD`) → stay. Otherwise → `git switch -c <run-branch> <BASE_SHA>`.
 - One commit per canonical doc: `docs(<DOC>): v<X.Y> - <summary> [<IDs>]`; repairs: `docs(<DOC>): v<X.Y> - repair QA-F<nn> [<IDs>]`; metadata: `chore(sync): … [<run-id>]`. Plain hyphens. No `Co-Authored-By` trailer, ever — strip it if injected (D22).
 - Type commands by hand — a pasted invisible C1 control character and, later, an em-dash in a commit message each broke a command inexplicably (AP-10).
-- Archive fidelity per doc before commit: `git show <BASE_SHA>:<path> | diff - _ARCHIVE/<NAME>_v<X_Y>.md` → empty.
+- Archive fidelity per doc before commit, Git-object method (EOL-safe, D7): `git hash-object _ARCHIVE/<NAME>_v<X_Y>.md` = `git rev-parse <BASE_SHA>:<path>`; after `git add`, `git rev-parse :_ARCHIVE/<NAME>_v<X_Y>.md` = the same SHA. Do not use `git show … | diff -` — it falsely fails under `core.autocrlf=true` (TEST C2).
 - Lints per doc before commit: `py lints/run_all.py` (or the rig's Python) — new findings fixed, baseline untouched, no exemptions (D9).
 - **Push: only after Gate 4 approval** — `git push -u origin <branch>`; then report `git rev-parse origin/<branch>`. Repair pushes only inside Phase 6. Never before Gate 4, never on main.
 - On main: PULL, never push. Post-merge "ahead of origin" confusion = reset/pull, never force.
