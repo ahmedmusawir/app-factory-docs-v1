@@ -1,6 +1,6 @@
 # ANTI_PATTERNS.md — Named Failures From Live Doctrine Operation
 
-> Shared reference; load during Phase 1 (Claudy) and Stage 1 (Sol, Cody). Each entry is a real incident from the Wave 0–6 campaign (2026-07), the two v0.3 field runs (2026-08), or the Stage-A review (2026-09) — not a hypothetical. The family exists largely so these never recur.
+> Shared reference; load during Phase 1 (Claudy) and Stage 1 (Sol, Cody). Each entry is a real incident from the Wave 0–6 campaign (2026-07), the two v0.3 field runs (2026-08), the Stage-A review (2026-09), or the v0.7 validation campaign TEST A / B / C (2026-09) — not a hypothetical. The family exists largely so these never recur.
 
 ## AP-1 — Bulk work over the MCP
 **Incident:** 27-doc rename via per-file MCP calls; a minutes-job consumed a full working day before the Operator killed it.
@@ -24,7 +24,7 @@
 
 ## AP-6 — Guessed archive versions
 **Risk pattern:** stamping `_ARCHIVE/` copies with a remembered or assumed version number.
-**Rule:** D7 step 1 — the suffix is read from the live doc's header at execution time, and step 5 proves the archive byte-equal to the base-SHA file (AC-A).
+**Rule:** D7 step 1 — the suffix is read from the live doc's header at execution time, and step 5 proves the archive's blob equal to the BASE blob with the Git-object method (AC-A; see AP-21 for why not `diff`).
 
 ## AP-7 — Trusting a failed MCP call to have failed
 **Incident class:** GitHub 50x errors where the write partially landed server-side; a blind retry then double-writes or conflicts.
@@ -73,3 +73,23 @@
 ## AP-17 — The handoff that names its own commit
 **Risk pattern:** a handoff "containing the final SHA" cannot exist, because committing it moves the SHA; a contract built on it is unexecutable and invites a push before approval "to get the real SHA."
 **Rule:** D18 — CONTENT_SHA is recorded after the last content commit exists and before the handoff is committed; Cody records QA_START_SHA from the remote independently (`SHA_AND_PUSH_CONTRACT.md`).
+
+## AP-19 — Writing into the frozen map
+**Incident (TEST B, 2026-09):** v0.7 froze the UPDATE MAP at Gate 2 and, four phases later, asked for CONTENT_SHA to be written into map §O — a post-freeze mutation of the very text the acceptance spec was derived from.
+**Rule:** D18 / D10 — after Gate 2 the map changes only through an approved `AMENDED-v<n>`. CONTENT_SHA, Gate 3 / Gate 4 times, the push time and later overrides live in `SYNC_HANDOFF.md` (LARGE) / `RUN_SUMMARY.md` (TINY); §O holds a pre-freeze pointer only.
+
+## AP-20 — QA fed from the Engineer's local inbox
+**Incident (TEST B, 2026-09):** a fresh QA worktree had the pushed map, spec and handoff — and no intake, because the approved cargo sat only in the Engineer's local, uncommitted `_INBOX/`.
+**Rule:** D11 — `<run>/INTAKE_SNAPSHOT/` is copied as received at Gate 1, never edited, and committed no later than the handoff commit on LARGE. Cody's intake input is the snapshot; a missing snapshot at QA_START_SHA is BLOCKED, not "ask the Engineer for the files."
+
+## AP-21 — Fidelity by `diff` on a CRLF rig
+**Incident (TEST C2, 2026-09):** `git show <BASE>:<file> | diff - <archive>` reported a difference on a byte-faithful archive because `core.autocrlf=true` had checked the archive out with CRLF while the blob is LF.
+**Rule:** D7(5) / AC-A — compare Git objects, not working-tree bytes: `git hash-object <archive>` and, once staged or committed, `git rev-parse :<archive>` / `git rev-parse <cand>:<archive>` must equal `git rev-parse <BASE_SHA>:<source>`.
+
+## AP-22 — Trusting recovery prose, or demanding a clean tree from a lawful resume
+**Incidents (TEST C1 / C2, 2026-09):** a hard-crashed run left RECOVERY.md stale and the session file mid-sentence; and a graceful interruption left the approved map, snapshot, session state and response logs uncommitted — which a literal "Phase 4 begins with a clean tree" would have refused to resume.
+**Rule:** D15a / D22 — RECOVERY.md and session files are advisory; git, the working-tree diff, `_AUDIT/SYNC_*`, the approved map, the intake snapshot and disk are authoritative. The dirty set is compared against the approved expected run-state set (map §N): exact subset = lawful resume (checkpoint-commit it, then clean tree before the per-doc sequence); anything else = STOP.
+
+## AP-23 — A summary count that disagrees with its rows
+**Incident (TEST B, 2026-09):** an UPDATE MAP summary claimed six touch-list rows while five were enumerated; the count had been maintained by hand.
+**Rule:** the enumerated rows are the authority for every count in the map, handoff and spec; a stated total is derived from the rows at the moment of writing and a mismatch is a defect in the total, never in the rows (`_shared/templates/UPDATE_MAP.md` §B / §N / §P).

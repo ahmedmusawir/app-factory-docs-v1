@@ -11,7 +11,7 @@
 | BASE_SHA | `<sha>` (from map §0) |
 | CONTENT_SHA (from handoff) | `<sha>` |
 | **QA_START_SHA** (recorded by Cody from `git rev-parse origin/<branch>`) | `<sha>` at `<date/time>` |
-| Preconditions | ancestry `<PASS/BLOCKED>` · post-CONTENT diff only audit artifacts `<PASS/BLOCKED: paths>` · map APPROVED `<yes>` · spec APPROVED `<yes>` · lints execute `<yes>` |
+| Preconditions | ancestry `<PASS/BLOCKED>` · post-CONTENT diff only audit artifacts (handoff, INTAKE_SNAPSHOT/, Gate-4 record, session/recovery/responses) `<PASS/BLOCKED: paths>` · map APPROVED `<yes>` · spec APPROVED `<yes>` · `INTAKE_SNAPSHOT/` present at QA_START_SHA `<yes/BLOCKED>` · lints execute `<yes>` |
 | Spec version | APPROVED (Gate 3 `<date/time>`) [+ AMENDED-v<n>] |
 | Lint baseline (from map §M) | `<count>`: `<path:line [LINT-ID]>` … |
 

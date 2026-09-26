@@ -1,6 +1,6 @@
 # factory-docs-update — OPERATOR RUNBOOK
 
-> **Skill family · v0.7-DRAFT (IMPLEMENTED — AWAITING INDEPENDENT VALIDATION) · Home:** `_SKILLS/factory-docs-update/` in the Doctrine Hub (`ahmedmusawir/app-factory-docs-v1`). Runs at a Hub clone.
+> **Skill family · v0.8-DRAFT (IMPLEMENTED — VALIDATED / FINAL HARDENING CANDIDATE) · Home:** `_SKILLS/factory-docs-update/` in the Doctrine Hub (`ahmedmusawir/app-factory-docs-v1`). Runs at a Hub clone.
 >
 > **THIS FILE IS FOR THE OPERATOR (Tony).** Read it cold after any time away and you can run a doctrine sync start to finish without a briefing. Agent doctrine lives in CLAUDE.md; methodology in the two children's SKILL.md — you never need to read those.
 
@@ -37,8 +37,8 @@ Optionally add scope rulings. Template at the bottom.
 - **Gate 1 — Scope:** the intake ledger (every item with an ID and a class), parked items, blocked questions, the provisional route. Say APPROVED.
 - **Gate 2 — UPDATE MAP:** the exact docs to touch, the verified placements, the proposed wording, every search hit and what it means, any NO-CHANGE proposals, the final route. On TINY he also reads you the QA-waiver line for your approval. Say APPROVED.
 - **Gate 3 — Acceptance spec (LARGE only):** you launch **Sol** in a fresh session (line below); Sol derives the acceptance criteria from the approved map and package only, reads them to you. Say APPROVED. Then tell Claudy Gate 3 passed.
-- **Gate 4 — Publication:** per-doc changes, lint result against the baseline, archive fidelity, index counts, the CONTENT_SHA. **Nothing has been pushed yet.** Say APPROVED; he pushes the branch once.
-- **QA (LARGE only):** you launch **Cody** in a fresh session (line below). Cody verifies the pushed branch and reports to Sol; Sol routes any accepted finding back to Claudy for a bounded repair, Claudy pushes the repair, Cody retests. Sol issues **Gate Q** — PASS / PASS WITH FOLLOW-UP FINDINGS / PASS WITH KNOWN RISK / FAIL / BLOCKED. Anything BLOCKED comes to you.
+- **Gate 4 — Publication:** per-doc changes, lint result against the baseline, archive fidelity, index counts, the CONTENT_SHA. **Nothing has been pushed yet.** Say APPROVED; he records your approval in the run folder, commits that one small record, then pushes the branch once.
+- **QA (LARGE only):** you launch **Cody** in a fresh session (line below) — a fresh clone is fine, because the pushed branch carries everything Cody needs, including a copy of the cargo you approved at Gate 1. Cody verifies the pushed branch and reports to Sol; Sol routes any accepted finding back to Claudy for a bounded repair, Claudy pushes the repair, Cody retests. Sol issues **Gate Q** — PASS / PASS WITH FOLLOW-UP FINDINGS / PASS WITH KNOWN RISK / FAIL / BLOCKED. Anything BLOCKED comes to you.
 
 **Step 6 — YOUR move: the PR and the merge.** Click the compare URL Claudy gives you → Create pull request → review → **Merge via REBASE-AND-MERGE** (doctrine law — preserves per-doc history). Squash only for trivia. On LARGE, merge only on a PASS-family verdict.
 
@@ -59,7 +59,7 @@ Optionally add scope rulings. Template at the bottom.
 - **Conflict or just a question?** A real doctrine conflict comes to you BLOCKED. A small mechanical detail he cannot settle from disk comes as one short question and does not stop the run.
 - **Red ❌ on CI** from the recorded pre-existing findings: merge anyway — they are named in the map and the PR. He fixes reds HIS change caused; he never touches the rest and never silences a lint.
 - **A QA seat never edits doctrine.** Cody and Sol write only QA evidence in the run folder. If a QA session ever offers to "fix" a doc, that is a defect — say no.
-- **Run died mid-flight?** Same first line plus: "This is a RESUME." Any seat reads RECOVERY.md and the session file for where it stopped, then checks git and disk, and re-presents from the last completed gate. A resumed Cody re-checks the branch tip before trusting any earlier PASS.
+- **Run died mid-flight — even a hard crash?** Same first line plus: "This is a RESUME." Any seat glances at RECOVERY.md and the session file if they exist, then trusts git, the run folder in `_AUDIT/`, and the files on disk over anything those notes say; it tells you the run, the base commit, the route, which gates passed, where it is, and what it will do next, then re-presents from the last completed gate. Uncommitted files that belong to the run (the map, the cargo copy, session notes) are normal after an interruption and are committed first; anything else uncommitted stops the run and comes to you. A resumed Cody re-checks the branch tip before trusting any earlier PASS.
 - **He may stop and ask you to re-choose the execution route** only if no clone exists (the MCP exception). At a clone there is no route question.
 
 ## What you NEVER do

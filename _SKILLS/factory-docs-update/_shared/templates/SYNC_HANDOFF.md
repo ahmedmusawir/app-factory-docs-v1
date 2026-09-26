@@ -1,6 +1,6 @@
 # SYNC_HANDOFF — <run slug> — <YYYY-MM-DD>
 
-> **Engineering → QA claim package** (`QA_PLAYBOOK` §6: a handoff is claims to verify, never proof). Authored by Claudy AFTER the last approved content commit exists and BEFORE Gate 4. References **CONTENT_SHA**; never claims the SHA of the commit that will contain this file. Cody records **QA_START_SHA** independently from the remote after the Gate 4 push (`_shared/references/SHA_AND_PUSH_CONTRACT.md`). Lives at `_AUDIT/SYNC_<YYYY-MM-DD>_<slug>/SYNC_HANDOFF.md`. On the TINY path this file is not required; the equivalent fields go in UPDATE_MAP §O and RUN_SUMMARY.md.
+> **Engineering → QA claim package** (`QA_PLAYBOOK` §6: a handoff is claims to verify, never proof). Authored by Claudy AFTER the last approved content commit exists and BEFORE Gate 4. References **CONTENT_SHA**; never claims the SHA of the commit that will contain this file. Cody records **QA_START_SHA** independently from the remote after the Gate 4 push (`_shared/references/SHA_AND_PUSH_CONTRACT.md`). Lives at `_AUDIT/SYNC_<YYYY-MM-DD>_<slug>/SYNC_HANDOFF.md`. On the TINY path this file is not required; the equivalent fields (CONTENT_SHA, Gate 4 record, pushed tip) go in RUN_SUMMARY.md — never into the map, which is frozen at Gate 2.
 
 ## 0. Identity
 
@@ -9,8 +9,9 @@
 | Run ID | `SYNC_<YYYY-MM-DD>_<slug>` |
 | Branch | `<run branch>` (local; not yet pushed at the time of writing) |
 | BASE_SHA | `<sha>` (approved in UPDATE_MAP §0) |
-| **CONTENT_SHA** | `<sha>` = last commit containing approved canonical content (`git rev-parse HEAD` immediately after that commit; recorded before any metadata commit) |
+| **CONTENT_SHA** | `<sha>` = last commit containing approved canonical content (`git rev-parse HEAD` immediately after that commit; recorded before any metadata commit). **This row is the authoritative record of CONTENT_SHA** — the UPDATE MAP is frozen at Gate 2 and is never written to for it (D18). |
 | Approved artifacts | UPDATE_MAP `APPROVED (Gate 2 <date/time>)` [+ `AMENDED-v<n>`]; DOCSET_SYNC_ACCEPTANCE_SPEC `APPROVED (Gate 3 <date/time>)` |
+| Intake snapshot | `_AUDIT/SYNC_<run>/INTAKE_SNAPSHOT/` — committed in `<commit short SHA>` (this handoff commit at the latest); unmodified since Gate 1 (`git log --diff-filter=M -- <run>/INTAKE_SNAPSHOT` empty). Cody reads the intake from here, not from `_INBOX/`. |
 | Path | LARGE |
 
 ## 1. Candidate files
@@ -28,9 +29,9 @@
 ## 3. Claims (each labeled; QA verifies every one)
 
 - **Lints at CONTENT_SHA** — command: `<…>`; result: `<verbatim summary lines>`; new findings: `0`; baseline: `<count>` unchanged — `<paths>` [EVIDENCE: pasted output]
-- **Archive fidelity** — for each archived doc: `git show <BASE_SHA>:<path> | diff - _ARCHIVE/<NAME>_v<X_Y>.md` → empty [EVIDENCE per doc]
+- **Archive fidelity** — for each archived doc (one per §C "Archive expected: YES" row): `git rev-parse <CONTENT_SHA>:_ARCHIVE/<NAME>_v<X_Y>.md` = `git rev-parse <BASE_SHA>:<path>` (same blob SHA; Git-object method, EOL-safe — never `git show … | diff -`, AP-21) [EVIDENCE per doc: both SHAs pasted]
 - **MANIFEST derived fields** — fields this run changed (map §G): live-doc count on disk `<n>` = MANIFEST rows `<n>` = stated `<n>` (or: unchanged, no doc added/removed); rows for `<docs>` equal headers; ← map recomputed for `<docs>`; baseline drift `<DRIFT IDs / none>` unchanged from BASE_SHA; MANIFEST/CHANGELOG headers Date-bumped, not archived [EVIDENCE]
-- **CHANGELOG** — `<n>` rows added, IDs in last column [EVIDENCE: lines]
+- **CHANGELOG** — rows added = one per bumped / new doc in §1 above (count taken from those rows), IDs in last column [EVIDENCE: lines]
 - **Diff scope** — `git diff --name-status <BASE_SHA>..<CONTENT_SHA>` = `<list>`; equals map §C ∪ §D ∪ §E ∪ §G [EVIDENCE]
 - **Propagation** — the §B searches were re-run by Claudy at CONTENT_SHA: `<n>` active hits, all dispositioned [CLAIM — Cody re-runs independently]
 - **References / assets** — §H items resolve [CLAIM — Cody verifies]
@@ -55,6 +56,8 @@
 |---|---|---|---|---|---|
 | 1 | | | | | |
 
-## 8. Gate 4 record (filled by Claudy at the moment of approval; the push happens only after this line exists)
+## 8. Gate 4 record (filled by Claudy at the moment of approval; committed BEFORE the push)
 
-- Gate 4 APPROVED by Operator at `<date/time>` · pushed `<date/time>` · (QA_START_SHA is Cody's to record — not here)
+The sequence is deliberate and always the same (D18, `SHA_AND_PUSH_CONTRACT.md`): CONTENT_SHA → this handoff committed (`chore(sync): handoff for CONTENT_SHA <short> [<run-id>]`) → ⛔ Gate 4 → this section filled → **`chore(sync): gate 4 approval record [<run-id>]`** (a metadata-only commit; it is expected to sit after CONTENT_SHA and Cody's post-CONTENT diff allowance names it) → `git push -u origin <branch>` → Cody independently records QA_START_SHA.
+
+- Gate 4 APPROVED by Operator at `<date/time>` · approval record committed as `<short SHA>` · pushed `<date/time>` · (QA_START_SHA is Cody's to record — not here)
