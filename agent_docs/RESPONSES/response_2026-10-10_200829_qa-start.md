@@ -1,0 +1,1 @@
+I’ll verify the branch and main SHAs first, then audit the convergence artifact against the authorized evidence. I’ll write only the QA report and required bookkeeping, and stop for Sol and Director review when complete.

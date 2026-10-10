@@ -1,0 +1,1 @@
+Startup verification passed: the branch, both main SHAs, and 0/0 divergence match. The dirty paths fit the expected work. The baseline-to-main changes are confined to the Factory docs-update skill and later reports/bookkeeping; I’m checking how those changes affect each FC.

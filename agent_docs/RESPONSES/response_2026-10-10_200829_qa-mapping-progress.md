@@ -1,0 +1,1 @@
+The primary mappings and family assignments check out: 81 Astra IDs, 31 Fable IDs, 97 sequential FCs, and 17 families, with no omissions or duplicate primary assignments. Correction-required values also total 94 YES and 3 NO. I’m now comparing every severity to Sol’s rulings and verifying the 16 changed-source statuses.

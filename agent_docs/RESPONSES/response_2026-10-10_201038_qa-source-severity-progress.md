@@ -1,0 +1,1 @@
+All 81 FCs marked “OPEN — SOURCE UNCHANGED” pass the Git comparison, including source paths independently extracted from the reviews. Every baseline severity matches Sol’s applicable ruling, and the totals recompute to 6 BLOCKER, 36 HIGH, 44 MEDIUM, and 11 LOW. I’m finishing the changed-source evidence rows and the write-integrity check.
