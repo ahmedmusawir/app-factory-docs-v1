@@ -1,5 +1,24 @@
 # Recovery State
 
+## Current (2026-10-11 21:55 +0600): Part 2 Correction Package DRAFT delivered; STOP
+
+Last action: Claudy (Engineer) wrote the DRAFT Factory Doctrine Correction Package 001 in `factory-corrections/`: the index plus 7 briefs, all labeled DRAFT — CORRECTION INTAKE / NOT APPROVED FOR SYNC.
+- Coverage: 97/97 FCs, unique primary entries; 17 CFs; B6/H36/M44/L11; 94 corrections + 3 regression guards (FC-085/086/097).
+- Validation: 0 problems (scratchpad self-checks, not QA).
+- Report: `agent_docs/RESPONSES/response_2026-10-11_215527_part2-correction-package-draft.md`. Session: `session_2026-10-11.md`.
+
+Pending: Architect (Jarvis) and Director (Tony) review of the draft. The decisions are in index §9; DEC-01 … DEC-05 gate Wave 1 (the six BLOCKERs).
+Next step: **STOP.** No DocSet Sync, no `_INBOX/` drop, no doctrine edits until Tony approves the package (in whole or per wave). No Git writes by any agent.
+
+Git state: branch `factory-docs-review-astra-w-chunks` at HEAD `c6210c3` (unchanged). Working tree contains only the 8 package files plus bookkeeping, all uncommitted. main = origin/main = `9c17939`.
+
+## Session pointer (2026-10-11 21:25 +0600)
+
+Session: `session_2026-10-11.md` (bootstrap only; no task yet). Bootstrap report: `agent_docs/RESPONSES/response_2026-10-11_212534_session-bootstrap.md`.
+Git update: the operator committed everything in `c6210c3` "docs(review): certify Part 1 doctrine convergence" (2026-10-11 00:12). The review branch is now at `c6210c3` = origin, and the working tree is clean. main / origin/main are unchanged at `9c17939`. The entry below predates that commit. Still to confirm: whether Sol / Director has signed off.
+
+---
+
 Last action: (2026-10-10 20:16 +0600) Cody completed independent Part 1 convergence QA: **PASS**. QA-1 through QA-8 PASS; 0 failed / blocked checks, 0 failed FCs, 0 QA findings.
 
 QA report: `astra-review/run-002/synthesis/QA/PART1_CONVERGENCE_QA.md`
