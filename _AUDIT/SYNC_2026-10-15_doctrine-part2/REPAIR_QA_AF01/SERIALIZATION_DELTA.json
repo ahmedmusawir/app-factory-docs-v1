@@ -1,0 +1,9 @@
+{
+  "old_patch_sha256": "ce4528d8db1183699ea8a90aaed266e91c991fe59b01747d4aa51e70acb3d58c",
+  "new_patch_sha256": "cf6413c9340c80f5c1bf53a55385876470e9b3aad364bc8963f52a68580f2a6d",
+  "inserted_sequences": 2,
+  "bytes_added": 58,
+  "sequence_hex": "0a5c204e6f206e65776c696e6520617420656e64206f662066696c650a",
+  "removing_only_these_sequences_reproduces_old_patch": true,
+  "document_or_hunk_count_changes": false
+}

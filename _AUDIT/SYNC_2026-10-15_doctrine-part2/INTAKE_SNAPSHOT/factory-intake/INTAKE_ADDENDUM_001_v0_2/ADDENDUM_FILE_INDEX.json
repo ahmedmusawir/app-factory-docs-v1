@@ -1,0 +1,365 @@
+{
+  "addendum": "INTAKE_ADDENDUM_001_v0_2",
+  "version": "0.2",
+  "date": "2026-10-14",
+  "supersedes": "INTAKE_ADDENDUM_001_v0_1 (preserved; verified by Jarvis; CONSOLIDATED_INTAKE_001_2026-10-14_184845.zip sha256 4c9d8e5b9ee9de713acd188e136d21b4adc629ae38dc94dcfb33a735d0b12671)",
+  "template_set_version": "v0.2-draft",
+  "governing_playbook": "QAM_PLAYBOOK v1.0",
+  "decided_home": "03_BUILD_METHODOLOGY/_templates/QAM/ (AD-01; not installed)",
+  "status": "DRAFT — INTAKE ADDENDUM / NOT APPROVED FOR SYNC",
+  "prepared_by": "Claudy (documentation Engineer seat)",
+  "generated_at": "2026-10-14T19:20:19+06:00",
+  "hash_scope": "every file in this folder except ADDENDUM_FILE_INDEX.json (paths relative to the addendum folder), plus referenced in-place files (paths relative to the repository root)",
+  "repository": {
+    "branch": "factory-docs-review-astra-w-chunks",
+    "head": "626da8d70f4db22987dc7fcc86765492072360cd",
+    "main": "9c179392f79b70da099121fc357d3107ad3bb86e"
+  },
+  "addendum_files": [
+    {
+      "path": "00_ADDENDUM_INDEX.md",
+      "bytes": 18514,
+      "sha256": "646c40ca98c26da77d4989e26f81ea20a6f76f2d79442ec940475d9cbc6bf11f",
+      "purpose": "addendum index, read order, source-register addendum, status lists"
+    },
+    {
+      "path": "COMBINED_INTAKE_MANIFEST_001.md",
+      "bytes": 12527,
+      "sha256": "711b677b8785d48f443f2f0c48b8215a682ec20bfd56fa08e4d344e49d871d70",
+      "purpose": "proposed combined intake manifest and decision assessment"
+    },
+    {
+      "path": "QA_LEAD_REVIEW_ENTRY.md",
+      "bytes": 5788,
+      "sha256": "10e4f8dd0d778c64ed784ea114b06235f60d5c161431847a9356726f6f96d943",
+      "purpose": "indexed review entry for the QA Lead"
+    },
+    {
+      "path": "TEMPLATES/QAM/AC_EVIDENCE_MATRIX.md",
+      "bytes": 1712,
+      "sha256": "9031bac95f35229f4b3591f630c1a111d109bf1f7f018f7007ab0c0b2f496bab",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/AGENTS.md",
+      "bytes": 1237,
+      "sha256": "98a1c144723ffd509be3a38b019b9e7b1e798f52b4e9ca48b40ee2ee7831d5e1",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/AUTOMATION/README.md",
+      "bytes": 1734,
+      "sha256": "bbea068425c8416d6821e488ad2add0ee13cc1112c8a6d15f7c7635ff9b25ea3",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/CLAUDE.md",
+      "bytes": 1210,
+      "sha256": "4287ea5fe021fefc169fe50502511d82bf8ab3844aedfa8236af9c4da3fb97f7",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/FINDINGS.md",
+      "bytes": 4120,
+      "sha256": "186b73159d9c34dbbd1a10cd7b4065d8ac80834716bce057e3b06e14a76e4aa8",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/GOVERNING/README.md",
+      "bytes": 2145,
+      "sha256": "f4c56f4d9b4b8becba890d66e7aad7a3aa4d820d0ce305e382103f14c4e64001",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/HANDOFFS/ENGINEERING_HANDOFF.md",
+      "bytes": 2391,
+      "sha256": "673260d5e48aa1033e74276793c32d01ce79b32d52f0a1574cf7b4a6354b88dd",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/HANDOFFS/FILE_INDEX.template.json",
+      "bytes": 2088,
+      "sha256": "56b57beb6294785796f249d91c01b62e2ef621a17774ae560852844c481c9224",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/HANDOFFS/README.md",
+      "bytes": 1182,
+      "sha256": "6c4d09f11eb75c67b54a586b949e9594a3794a45b91425a17d65e678ce31713f",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/HANDOFFS/REVIEW_START_HERE.md",
+      "bytes": 2094,
+      "sha256": "376cd3f50b0e79414d11bbcbf178d3e9b7507628ba08505ebd39a409259eac79",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/PARENT_ENTRY_ROUTING.md",
+      "bytes": 2615,
+      "sha256": "e10d10b0208ce8700bed22c8f9e1c247b99637ceeea04ffc5974bda18728cd98",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_APPROVAL.md",
+      "bytes": 3569,
+      "sha256": "e88a46c76820846edae4cd7b2cbf39020cc41599e41622a9912dc910fa49e87c",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_CERTIFICATION.md",
+      "bytes": 3787,
+      "sha256": "6058d41d08912af7a40393a95471b33e0a66815e3223ea8fc078f4c56c1a10f5",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_CLEANUP_REPORT.md",
+      "bytes": 4113,
+      "sha256": "4e9aec1764a288153ad1c0e9f9f3de0de22764db831174ef2d21a60daafa6bda",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_ENTRY.md",
+      "bytes": 12000,
+      "sha256": "81c44c5700ecb283253fbfac29f5605efbe3a6e85a394db33585ce6ae89b45e8",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_EXECUTION_REPORT.md",
+      "bytes": 3882,
+      "sha256": "b32e6b30cec7b74f36eafb3011c1e1e63d3efbe1dac684f4e53eec4b826dd6ed",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_MANIFEST.md",
+      "bytes": 5109,
+      "sha256": "c30782b0fb27e561a8f7632db09623d51de176c40d5f91f55d4075e632ee6283",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_PACKAGING.md",
+      "bytes": 5085,
+      "sha256": "2d95d05e178dc67c2ad3efb234d18562d3ed0b815feeea9cbe61d74c9c7f655e",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_PREFLIGHT.md",
+      "bytes": 7037,
+      "sha256": "39a6737fae370688ad0bfe1b808cf3468892ed20316cf1f7610596eab26f4ef6",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_RECON_REPORT.md",
+      "bytes": 3658,
+      "sha256": "868ea7f83772925094f0ba3c397b98b9770d46a3ed269fb41db2b8e6494f2c41",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_RISK_REQUIREMENTS.md",
+      "bytes": 5956,
+      "sha256": "b7b9e3ce912bf567ea55414305b4b85c14c5cddae8537f9579320d95af8504b7",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_STATE.md",
+      "bytes": 6454,
+      "sha256": "131c8d7fdaf4233e65449821dde265e2d51dab7a11ca0795ff611ed37df6e11a",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_TEST_PLAN.md",
+      "bytes": 4305,
+      "sha256": "ef92c484ef4d91e8811172c4e8b543542f66f8fced618b3f795704d7dd39099e",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/README.md",
+      "bytes": 12161,
+      "sha256": "435aa21ea49f12052997d67a21d95ca56e76f7e243e7930064d6ba2c41763203",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/evidence/README.md",
+      "bytes": 2476,
+      "sha256": "6f6714872df80e8e979d2c68afe9146eb45d5355826f86ceef5758e353b6e36b",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATE_CORRECTION_RECORD_001.md",
+      "bytes": 8262,
+      "sha256": "96788240045cdba49f0ccc714a22ed331229c35783797dfded165aa23443fd5a",
+      "purpose": "concise correction record v0.1-draft -> v0.2-draft (C-1..C-12)"
+    },
+    {
+      "path": "TEMPLATE_PLACEMENT_RECOMMENDATION.md",
+      "bytes": 8280,
+      "sha256": "6e05329911147419d46cddd3357146b2a64c4a456e9cf3b32785a436eba5a4b2",
+      "purpose": "recommended Hub home for the template set"
+    }
+  ],
+  "referenced_in_place_files": [
+    {
+      "path": "factory-intake/QAM_PLAYBOOK_v1_0.md",
+      "bytes": 30650,
+      "sha256": "97e111e2a495f9a3fe65f50213e6f2ba68c8e5e963f3d23493b1ee99ad35c897",
+      "purpose": "SRC-A01 — Director-approved source (RUL-01); unchanged",
+      "expected_sha256": "97e111e2a495f9a3fe65f50213e6f2ba68c8e5e963f3d23493b1ee99ad35c897"
+    },
+    {
+      "path": "factory-intake/PLANNING_001/DIRECTOR_RULINGS_2026-10-14.md",
+      "bytes": 19931,
+      "sha256": "a9b51795eb48dd142dd356eae47c9e7a72dc55c677a4e483c5c7d72531317915",
+      "purpose": "ruling record R1.2"
+    },
+    {
+      "path": "factory-intake/PLANNING_001/ARCHITECT_DECISIONS_2026-10-14.md",
+      "bytes": 5915,
+      "sha256": "43817f32df50e53405ace62cd1ddd222ddda02f029e96b59d0586cdac87b9e7f",
+      "purpose": "Architect decision record (AD-00, AD-01)"
+    },
+    {
+      "path": "factory-intake/PLANNING_001/COMBINED_DECISIONS_001.md",
+      "bytes": 52846,
+      "sha256": "fc077f907d4451e71fdb77f743cff4891382c5dfb01c280caff6db3263609b68",
+      "purpose": "planning: decision list R3"
+    },
+    {
+      "path": "factory-intake/PLANNING_001/COMBINED_DEPENDENCY_MAP_001.md",
+      "bytes": 48741,
+      "sha256": "5e369cf8d61e57dd1d30c6c46b5f9bdb7dc005a8ff95e71afc9690192ec870e7",
+      "purpose": "planning: dependency map R3"
+    },
+    {
+      "path": "factory-intake/PLANNING_001/INTAKE_CLARIFICATIONS_001.md",
+      "bytes": 24449,
+      "sha256": "238ac0ffaf502fdb01fde1bd837ca84c4c52be49c1f6e7afe07771f0f37cf954",
+      "purpose": "planning: clarifications R3"
+    },
+    {
+      "path": "factory-corrections/FACTORY_DOCTRINE_CORRECTION_INDEX_001.md",
+      "bytes": 61628,
+      "sha256": "f9d290a561a0935fa5bd1d90131aecd10026aaa3b0f7486366595b9d32fb0fb3",
+      "purpose": "Correction Package 001 R3 (working tree over 626da8d); IDs and history untouched"
+    },
+    {
+      "path": "factory-corrections/DECISION_RECORD_001.md",
+      "bytes": 5028,
+      "sha256": "438bdab0bc0c841d1bd31f2fe99e95c260c56477d07ddf60f72f10c9a04b295e",
+      "purpose": "Correction Package 001 R3 (working tree over 626da8d); IDs and history untouched"
+    },
+    {
+      "path": "factory-corrections/01_governance_corrections.md",
+      "bytes": 34498,
+      "sha256": "78cf8bc765dbadfc609f17045113607a52f6aad2fe007c15a0af5ea14ff3c3e0",
+      "purpose": "Correction Package 001 R3 (working tree over 626da8d); IDs and history untouched"
+    },
+    {
+      "path": "factory-corrections/02_agents_handoffs_corrections.md",
+      "bytes": 20706,
+      "sha256": "65a61d7e2f7e56ab8c59be71d273347c1679ef08512c7da708dbfd98b8e0d8ae",
+      "purpose": "Correction Package 001 R3 (working tree over 626da8d); IDs and history untouched"
+    },
+    {
+      "path": "factory-corrections/03_build_method_corrections.md",
+      "bytes": 29379,
+      "sha256": "dd5d73de09842543e9af7350caa0973bed16825c3239245c4f5f7befa2d9a04f",
+      "purpose": "Correction Package 001 R3 (working tree over 626da8d); IDs and history untouched"
+    },
+    {
+      "path": "factory-corrections/04_auth_data_security_corrections.md",
+      "bytes": 34771,
+      "sha256": "75fbc63f62955276acbb259b93b6b728db8a41a4fa9f4bb8561564c3a2437a2b",
+      "purpose": "Correction Package 001 R3 (working tree over 626da8d); IDs and history untouched"
+    },
+    {
+      "path": "factory-corrections/05_api_commerce_corrections.md",
+      "bytes": 40959,
+      "sha256": "cdb05d32e1e7aa52b0309057156ca29fcc7ee73c03e0317971392aa7cf2760f8",
+      "purpose": "Correction Package 001 R3 (working tree over 626da8d); IDs and history untouched"
+    },
+    {
+      "path": "factory-corrections/06_design_frontend_corrections.md",
+      "bytes": 27515,
+      "sha256": "3dee764a4936329ee8680c8a50af9b341e570cccdc7c000b51df2b16c00875b5",
+      "purpose": "Correction Package 001 R3 (working tree over 626da8d); IDs and history untouched"
+    },
+    {
+      "path": "factory-corrections/07_skills_doc_governance_corrections.md",
+      "bytes": 32491,
+      "sha256": "9f6d04336c3f5330cfe7eee1aa26d56b4647475439d62259e8dd2a06dd8a76cb",
+      "purpose": "Correction Package 001 R3 (working tree over 626da8d); IDs and history untouched"
+    },
+    {
+      "path": "factory-intake/00_MASTER_INDEX.md",
+      "bytes": 13904,
+      "sha256": "120e1987fc56dc2b862a378b064f96ae6a7f114e371c20ab95bf8e16fa99ce72",
+      "purpose": "Harvest Package v0.1 (unchanged)"
+    },
+    {
+      "path": "factory-intake/01_FACTORY_WORKFLOWS_INTAKE.md",
+      "bytes": 15653,
+      "sha256": "6809ed9d53b937c383cd2f8b8034f2740e8587994b1e38725d21bf8569e17a6f",
+      "purpose": "Harvest Package v0.1 (unchanged)"
+    },
+    {
+      "path": "factory-intake/02_RRM_INTAKE.md",
+      "bytes": 14080,
+      "sha256": "c28a34addb1ce426701d186471147ac1a48a7a6f5a2b423d1db57a1068f37b9f",
+      "purpose": "Harvest Package v0.1 (unchanged)"
+    },
+    {
+      "path": "factory-intake/03_QAM_INTAKE.md",
+      "bytes": 19537,
+      "sha256": "9da9ca337bad192c703ad24e5fe7cb142aee5b21439d13fc3efd33bbad25bb1c",
+      "purpose": "Harvest Package v0.1 (unchanged)"
+    },
+    {
+      "path": "factory-intake/SOURCE_REGISTER.md",
+      "bytes": 12058,
+      "sha256": "7c7e6931b3398c852e5cc9f139c7450da03449e6965946201a7db3648fe25b2e",
+      "purpose": "Harvest Package v0.1 (unchanged)"
+    },
+    {
+      "path": "factory-intake/SOURCE_INVENTORY.json",
+      "bytes": 8253,
+      "sha256": "74bd3ce2bcb59188f7ae5d5d78261aa2b8a14bd0df558ca71a13b3da9b29ac1e",
+      "purpose": "Harvest Package v0.1 (unchanged)"
+    },
+    {
+      "path": "factory-intake/ARCHIVE_CONTENTS.json",
+      "bytes": 7990,
+      "sha256": "687c82d5b06c48644d2f368583d1824d8fd052d77517535edf7a1f3676b56955",
+      "purpose": "Harvest Package v0.1 (unchanged)"
+    },
+    {
+      "path": "factory-intake/FILE_INDEX.json",
+      "bytes": 14474,
+      "sha256": "831bcd3d9d08417a6640da71ffe4e26cc0627ebc103d5e80af6a258fbacc660c",
+      "purpose": "Harvest Package v0.1 (unchanged)"
+    },
+    {
+      "path": "factory-intake/README.md",
+      "bytes": 9197,
+      "sha256": "fc78e1e4abc1df770a2ba85059f6f8a02660482f4b733cecb32ad974bf036f67",
+      "purpose": "staging README (Claudy, 2026-10-13; unchanged)"
+    }
+  ],
+  "harvest_outer_zip": {
+    "path": "~/Downloads/ARCHIVE_OLD/FACTORY_PART2_NEW_DOCTRINE_INTAKE_v0_1.zip",
+    "recorded_path_2026-10-13": "~/Downloads/FACTORY_PART2_NEW_DOCTRINE_INTAKE_v0_1.zip",
+    "note": "Claudy's copy, relocated by the operator on 2026-10-14; byte-identical to the 2026-10-13 record. Jarvis reports a locally available copy with a different outer hash/member count; E-8 unconfirmed; neither copy replaced (CL-29).",
+    "exists": true,
+    "bytes": 1499871,
+    "sha256": "2b2b27e38848412143e472d98a2e4c4ffbc0ff760a95d245dab262e3837af782",
+    "expected_sha256": "2b2b27e38848412143e472d98a2e4c4ffbc0ff760a95d245dab262e3837af782"
+  },
+  "omitted_register_member": {
+    "archive": "factory-intake/SOURCES/RRM/SRC-R02_RRM004_ORIGINAL_PACK_v1_0.zip",
+    "archive_sha256": "c2a21b82ca4f6c1ec0e7d75dd5860ff2cf15c3a3615099c62272558db524ed2a",
+    "member": "RRM-004-CYBER-PHARMA/QA/REPAIR_PROPOSAL.md.template",
+    "bytes": 665,
+    "crc32": "5faaed7e",
+    "member_sha256": "49943f04ff46cfe8de8d557b038c12a97512cd9c5dcbcfd3ce77c0747b222224",
+    "note": "not extracted; verified read-only from the archive"
+  }
+}

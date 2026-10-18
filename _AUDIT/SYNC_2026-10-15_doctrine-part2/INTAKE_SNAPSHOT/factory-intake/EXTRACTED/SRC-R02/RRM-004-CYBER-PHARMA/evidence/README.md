@@ -1,0 +1,3 @@
+# RRM-004 evidence lane (Engineer)
+
+Expected: `PREFLIGHT_P1.txt` · `PREFLIGHT_P2.txt` · `S1_versions.txt` (BASELINE block from PF-16 at P1 and again at P2; AFTER block from S1) · `S1_audit_before.json` · `S1_audit_after.json` · `S1_lockfile_moves.txt` · `S2_config_diff.txt` · `S3_board.txt` · `S3_serve_before.txt` (from PF-19) · `S3_serve_after.txt` (includes the hex dump of the image probe's first 16 bytes; the binary body itself is never committed) · `repair.diff` · `changed_files.txt`. Plans and completion reports live in `agent_docs/RESPONSES/` per root `CLAUDE.md`. No secrets, no PHI, no real keys — placeholder env only. `node_modules/` and `.next/` never enter this lane.

@@ -1,0 +1,12 @@
+                     OPUS
+                bounded repairs
+                     │
+           ┌─────────┴─────────┐
+           │                   │
+           ▼                   ▼
+      RE-REVIEW          REGRESSION QA
+  "Did we fix it?"     "Did we break anything?"
+           │                   │
+           └─────────┬─────────┘
+                     ▼
+              PHASE CERTIFIED

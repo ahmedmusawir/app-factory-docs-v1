@@ -1,0 +1,52 @@
+{
+  "commands": [
+    {
+      "label": "frozen",
+      "command": [
+        "git",
+        "apply",
+        "--check",
+        "-p0",
+        "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_PROPOSAL.patch"
+      ],
+      "cwd": "/tmp/cody-qa-frozen-patch-wujll2ov",
+      "exit": 128,
+      "stdout": "",
+      "stderr": "error: patch fragment without header at line 29699: @@ -0,0 +1,447 @@\n"
+    },
+    {
+      "label": "amended",
+      "command": [
+        "git",
+        "apply",
+        "--check",
+        "-p0",
+        "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/EXECUTION_PROPOSAL.patch"
+      ],
+      "cwd": "/tmp/cody-qa-frozen-patch-wujll2ov",
+      "exit": 128,
+      "stdout": "",
+      "stderr": "error: patch fragment without header at line 29750: @@ -0,0 +1,447 @@\n"
+    },
+    {
+      "label": "frozen GNU patch",
+      "command": [
+        "patch",
+        "--batch",
+        "--fuzz=0",
+        "-p0",
+        "-i",
+        "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_PROPOSAL.patch"
+      ],
+      "cwd": "/tmp/cody-qa-frozen-patch-wujll2ov",
+      "exit": 0,
+      "stdout": "patching file 01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md\npatching file 01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md\npatching file 01_CONSTITUTION/STARTER_KIT_HANDBOOK.md\npatching file 02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md\npatching file 02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md\npatching file 02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md\npatching file 02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md\npatching file 02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md\npatching file 02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md\npatching file 03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md\npatching file 03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md\npatching file 03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md\npatching file 03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md\npatching file 03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md\npatching file 03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md\npatching file 03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md\npatching file 03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md\npatching file 03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md\npatching file 03_BUILD_METHODOLOGY/QA_PLAYBOOK.md\npatching file 03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md\npatching file 03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md\npatching file 03_BUILD_METHODOLOGY/_assets/workflows/BIM_WORKFLOW.svg\npatching file 03_BUILD_METHODOLOGY/_assets/workflows/FFM_CREATION.svg\npatching file 03_BUILD_METHODOLOGY/_assets/workflows/FFM_DEPLOYMENT.svg\npatching file 03_BUILD_METHODOLOGY/_assets/workflows/FFM_EXECUTION.svg\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/AC_EVIDENCE_MATRIX.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/AGENTS.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/AUTOMATION/README.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/CLAUDE.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/FINDINGS.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/GOVERNING/README.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/ENGINEERING_HANDOFF.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/FILE_INDEX.template.json\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/README.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/REVIEW_START_HERE.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/PARENT_ENTRY_ROUTING.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/QAM_APPROVAL.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/QAM_CERTIFICATION.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/QAM_CLEANUP_REPORT.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/QAM_ENTRY.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/QAM_EXECUTION_REPORT.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/QAM_MANIFEST.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/QAM_PACKAGING.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/QAM_PREFLIGHT.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/QAM_RECON_REPORT.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/QAM_RISK_REQUIREMENTS.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/QAM_STATE.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/QAM_TEST_PLAN.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/README.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/evidence/README.md\npatching file 03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md\npatching file 03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md\npatching file 03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md\npatching file 03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md\npatching file 04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md\npatching file 04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md\npatching file 04_REFERENCE_MANUALS/AUTH_MANUAL.md\npatching file 04_REFERENCE_MANUALS/DATABASE_MANUAL.md\npatching file 04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md\npatching file 04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md\npatching file 04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md\npatching file 05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md\npatching file 05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md\npatching file 05_DESIGN_SYSTEM/THEME_LIBRARY.md\npatching file 05_DESIGN_SYSTEM/THEMING_MANUAL.md\npatching file 05_DESIGN_SYSTEM/TOKEN_FILE.md\npatching file 05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md\npatching file CHANGELOG.md\npatching file MANIFEST.md\npatching file _ARCHIVE/API_AND_SERVICES_MANUAL_v1_1.md\npatching file _ARCHIVE/APP_ARCHITECTURE_MANUAL_v1_3.md\npatching file _ARCHIVE/APP_FACTORY_BLUEPRINT_v2_1.md\npatching file _ARCHIVE/APP_FACTORY_SKILLS_PLAYBOOK_v1_1.md\npatching file _ARCHIVE/ARCHITECT_PLAYBOOK_v2_2.md\npatching file _ARCHIVE/ARCHITECT_QUESTIONNAIRE_v2_2.md\npatching file _ARCHIVE/AUTH_MANUAL_v1_4.md\npatching file _ARCHIVE/BIM_PLAYBOOK_v1_0.md\npatching file _ARCHIVE/BUG_FIX_PLAYBOOK_v1_0.md\npatching file _ARCHIVE/COMPONENT_REGISTRY_v1_1.md\npatching file _ARCHIVE/DATABASE_MANUAL_v1_1.md\npatching file _ARCHIVE/DESIGNER_PLAYBOOK_v2_1.md\npatching file _ARCHIVE/ECOMMERCE_AND_PAYMENTS_MANUAL_v1_1.md\npatching file _ARCHIVE/ENGINEER_PLAYBOOK_v1_2.md\npatching file _ARCHIVE/FEAT_PLAYBOOK_v1_0.md\npatching file _ARCHIVE/FFM_PLAYBOOK_v1_2.md\npatching file _ARCHIVE/FRONTEND_BUILD_PHASE_PLAYBOOK_v1_2_2.md\npatching file _ARCHIVE/FRONTEND_FIRST_PLAYBOOK_v1_1_3.md\npatching file _ARCHIVE/GLOBAL_DESIGN_SYSTEM_HANDBOOK_v1_1.md\npatching file _ARCHIVE/HANDOFF_PACKAGE_PLAYBOOK_v1_1.md\npatching file _ARCHIVE/QA_PLAYBOOK_v1_0.md\npatching file _ARCHIVE/QA_PLAYBOOK_v1_1.md\npatching file _ARCHIVE/RECON_QUESTIONNAIRE_v0_5.md\npatching file _ARCHIVE/SOFTWARE_FACTORY_PLAYBOOK_v1_3.md\npatching file _ARCHIVE/STARTER_KIT_HANDBOOK_v1_1.md\npatching file _ARCHIVE/STATE_MANAGEMENT_MANUAL_v1_2.md\npatching file _ARCHIVE/STRIPE_SUBSCRIPTIONS_PLAYBOOK_v1_1.md\npatching file _ARCHIVE/TESTING_PLAYBOOK_v2_1.md\npatching file _ARCHIVE/THEME_LIBRARY_v1_2.md\npatching file _ARCHIVE/THEMING_MANUAL_v1_2.md\npatching file _ARCHIVE/TOKEN_FILE_v1_2.md\npatching file _ARCHIVE/UI_UX_BUILDING_MANUAL_v1_4.md\n",
+      "stderr": ""
+    }
+  ],
+  "frozen_patch_mismatches": [
+    "_ARCHIVE/FRONTEND_BUILD_PHASE_PLAYBOOK_v1_2_2.md",
+    "_ARCHIVE/FRONTEND_FIRST_PLAYBOOK_v1_1_3.md"
+  ],
+  "classification": "Existing in frozen proposal serialization; carried into AMENDED-v1. Not introduced by eight ownership edits."
+}

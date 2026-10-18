@@ -1,0 +1,51 @@
+command: git status --short
+ M RECOVERY.md
+ M factory-corrections/01_governance_corrections.md
+ M factory-corrections/02_agents_handoffs_corrections.md
+ M factory-corrections/03_build_method_corrections.md
+ M factory-corrections/04_auth_data_security_corrections.md
+ M factory-corrections/05_api_commerce_corrections.md
+ M factory-corrections/06_design_frontend_corrections.md
+ M factory-corrections/07_skills_doc_governance_corrections.md
+ M factory-corrections/FACTORY_DOCTRINE_CORRECTION_INDEX_001.md
+?? AGENTS.md
+?? _AUDIT/SYNC_2026-10-15_doctrine-part2/
+?? _INBOX/
+?? agent_docs/RESPONSES/response_2026-10-12_201815_part2-architect-review-export.md
+?? agent_docs/RESPONSES/response_2026-10-12_204137_part2-revision-plan.md
+?? agent_docs/RESPONSES/response_2026-10-12_204759_part2-bounded-revision.md
+?? agent_docs/RESPONSES/response_2026-10-12_204942_part2-r1-zip-delivery.md
+?? agent_docs/RESPONSES/response_2026-10-12_215553_scoped-approvals-recorded.md
+?? agent_docs/RESPONSES/response_2026-10-13_170824_part2-intake-drop-prepared.md
+?? agent_docs/RESPONSES/response_2026-10-13_174838_harvest-intake-review.md
+?? agent_docs/RESPONSES/response_2026-10-13_215914_combined-planning-001.md
+?? agent_docs/RESPONSES/response_2026-10-14_145435_rulings-reconciliation-001.md
+?? agent_docs/RESPONSES/response_2026-10-14_184845_consolidated-intake-001.md
+?? agent_docs/RESPONSES/response_2026-10-14_192151_qam-draft-corrected-qa-lead-review.md
+?? agent_docs/RESPONSES/response_2026-10-14_205037_qam-v0-3-amendments-applied.md
+?? agent_docs/RESPONSES/response_2026-10-15_120917_architect-verification-intake-brief.md
+?? agent_docs/RESPONSES/response_2026-10-15_182550_crash-recovery-findings.md
+?? agent_docs/RESPONSES/response_2026-10-15_192804_opencode-handoff.md
+?? agent_docs/RESPONSES/response_2026-10-15_200046_reporting-convention.md
+?? agent_docs/RESPONSES/response_2026-10-15_202954_cody-recovery.md
+?? agent_docs/RESPONSES/response_2026-10-15_205803_cody-update-map-review.md
+?? agent_docs/RESPONSES/response_2026-10-15_214007_update-map-review-zip.md
+?? agent_docs/RESPONSES/response_2026-10-16_143449_phase-1-scope-decisions.md
+?? factory-corrections/DECISION_RECORD_001.md
+?? factory-intake/
+?? session_2026-10-12.md
+?? session_2026-10-13.md
+?? session_2026-10-14.md
+?? session_2026-10-15.md
+?? session_2026-10-16.md
+
+command: git rev-parse HEAD main origin/main
+626da8d70f4db22987dc7fcc86765492072360cd
+9c179392f79b70da099121fc357d3107ad3bb86e
+9c179392f79b70da099121fc357d3107ad3bb86e
+
+command: git worktree list --porcelain
+worktree /home/moose/Documents/app-factory-docs-v1
+HEAD 626da8d70f4db22987dc7fcc86765492072360cd
+branch refs/heads/factory-docs-review-astra-w-chunks
+

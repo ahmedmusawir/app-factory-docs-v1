@@ -1,0 +1,775 @@
+{
+  "source": "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/05_DESIGN_SYSTEM/TOKEN_FILE.md",
+  "sha256": "b784dac7dc9e55b2d417a785211b4d18ae4b945ca63c62536096c55ad554ea9f",
+  "status": "ENGINEER numeric check; not rendering/accessibility certification",
+  "pairs": [
+    {
+      "mode": "Mist",
+      "foreground": "primary",
+      "background": "card",
+      "ratio": 5.829495183125957
+    },
+    {
+      "mode": "Mist",
+      "foreground": "primary",
+      "background": "background",
+      "ratio": 4.595882179936414
+    },
+    {
+      "mode": "Mist",
+      "foreground": "primary-foreground",
+      "background": "primary",
+      "ratio": 5.829495183125957
+    },
+    {
+      "mode": "Mist",
+      "foreground": "accent",
+      "background": "card",
+      "ratio": 5.829495183125957
+    },
+    {
+      "mode": "Mist",
+      "foreground": "accent",
+      "background": "background",
+      "ratio": 4.595882179936414
+    },
+    {
+      "mode": "Mist",
+      "foreground": "accent-foreground",
+      "background": "accent",
+      "ratio": 5.829495183125957
+    },
+    {
+      "mode": "Mist",
+      "foreground": "destructive",
+      "background": "card",
+      "ratio": 5.825280241757237
+    },
+    {
+      "mode": "Mist",
+      "foreground": "destructive",
+      "background": "background",
+      "ratio": 4.5925591865523465
+    },
+    {
+      "mode": "Mist",
+      "foreground": "destructive-foreground",
+      "background": "destructive",
+      "ratio": 5.825280241757237
+    },
+    {
+      "mode": "Mist",
+      "foreground": "success",
+      "background": "card",
+      "ratio": 5.976945366241353
+    },
+    {
+      "mode": "Mist",
+      "foreground": "success",
+      "background": "background",
+      "ratio": 4.712129581764616
+    },
+    {
+      "mode": "Mist",
+      "foreground": "success-foreground",
+      "background": "success",
+      "ratio": 5.976945366241353
+    },
+    {
+      "mode": "Mist",
+      "foreground": "warning",
+      "background": "card",
+      "ratio": 5.932670841420172
+    },
+    {
+      "mode": "Mist",
+      "foreground": "warning",
+      "background": "background",
+      "ratio": 4.6772242437792935
+    },
+    {
+      "mode": "Mist",
+      "foreground": "warning-foreground",
+      "background": "warning",
+      "ratio": 5.932670841420172
+    },
+    {
+      "mode": "Mist",
+      "foreground": "info",
+      "background": "card",
+      "ratio": 5.866500683185589
+    },
+    {
+      "mode": "Mist",
+      "foreground": "info",
+      "background": "background",
+      "ratio": 4.62505673329671
+    },
+    {
+      "mode": "Mist",
+      "foreground": "info-foreground",
+      "background": "info",
+      "ratio": 5.866500683185589
+    },
+    {
+      "mode": "Mist",
+      "foreground": "role-superadmin",
+      "background": "card",
+      "ratio": 7.363003970731554
+    },
+    {
+      "mode": "Mist",
+      "foreground": "role-superadmin",
+      "background": "background",
+      "ratio": 5.804876353245464
+    },
+    {
+      "mode": "Mist",
+      "foreground": "role-superadmin-foreground",
+      "background": "role-superadmin",
+      "ratio": 7.363003970731554
+    },
+    {
+      "mode": "Mist",
+      "foreground": "role-admin",
+      "background": "card",
+      "ratio": 5.776138910865953
+    },
+    {
+      "mode": "Mist",
+      "foreground": "role-admin",
+      "background": "background",
+      "ratio": 4.553816935320139
+    },
+    {
+      "mode": "Mist",
+      "foreground": "role-admin-foreground",
+      "background": "role-admin",
+      "ratio": 5.776138910865953
+    },
+    {
+      "mode": "Mist",
+      "foreground": "role-member",
+      "background": "card",
+      "ratio": 5.808497518907155
+    },
+    {
+      "mode": "Mist",
+      "foreground": "role-member",
+      "background": "background",
+      "ratio": 4.579327952207945
+    },
+    {
+      "mode": "Mist",
+      "foreground": "role-member-foreground",
+      "background": "role-member",
+      "ratio": 5.808497518907155
+    },
+    {
+      "mode": "Mist",
+      "foreground": "foreground",
+      "background": "background",
+      "ratio": 11.465600575821849
+    },
+    {
+      "mode": "Mist",
+      "foreground": "card-foreground",
+      "background": "card",
+      "ratio": 14.543162925322079
+    },
+    {
+      "mode": "Mist",
+      "foreground": "popover-foreground",
+      "background": "popover",
+      "ratio": 14.543162925322079
+    },
+    {
+      "mode": "Mist",
+      "foreground": "secondary-foreground",
+      "background": "secondary",
+      "ratio": 12.602947658431685
+    },
+    {
+      "mode": "Mist",
+      "foreground": "muted-foreground",
+      "background": "muted",
+      "ratio": 4.595275990494331
+    },
+    {
+      "mode": "Slate",
+      "foreground": "primary",
+      "background": "card",
+      "ratio": 4.5917063251297865
+    },
+    {
+      "mode": "Slate",
+      "foreground": "primary",
+      "background": "background",
+      "ratio": 6.010864997331251
+    },
+    {
+      "mode": "Slate",
+      "foreground": "primary-foreground",
+      "background": "primary",
+      "ratio": 6.196946028853367
+    },
+    {
+      "mode": "Slate",
+      "foreground": "accent",
+      "background": "card",
+      "ratio": 4.5917063251297865
+    },
+    {
+      "mode": "Slate",
+      "foreground": "accent",
+      "background": "background",
+      "ratio": 6.010864997331251
+    },
+    {
+      "mode": "Slate",
+      "foreground": "accent-foreground",
+      "background": "accent",
+      "ratio": 6.196946028853367
+    },
+    {
+      "mode": "Slate",
+      "foreground": "destructive",
+      "background": "card",
+      "ratio": 4.51125339717074
+    },
+    {
+      "mode": "Slate",
+      "foreground": "destructive",
+      "background": "background",
+      "ratio": 5.9055464829578
+    },
+    {
+      "mode": "Slate",
+      "foreground": "destructive-foreground",
+      "background": "destructive",
+      "ratio": 6.088367122206643
+    },
+    {
+      "mode": "Slate",
+      "foreground": "success",
+      "background": "card",
+      "ratio": 7.039097672661008
+    },
+    {
+      "mode": "Slate",
+      "foreground": "success",
+      "background": "background",
+      "ratio": 9.214671587734433
+    },
+    {
+      "mode": "Slate",
+      "foreground": "success-foreground",
+      "background": "success",
+      "ratio": 9.49993429034786
+    },
+    {
+      "mode": "Slate",
+      "foreground": "warning",
+      "background": "card",
+      "ratio": 5.552448525821733
+    },
+    {
+      "mode": "Slate",
+      "foreground": "warning",
+      "background": "background",
+      "ratio": 7.268543789634021
+    },
+    {
+      "mode": "Slate",
+      "foreground": "warning-foreground",
+      "background": "warning",
+      "ratio": 7.493559345072261
+    },
+    {
+      "mode": "Slate",
+      "foreground": "info",
+      "background": "card",
+      "ratio": 4.546901812070158
+    },
+    {
+      "mode": "Slate",
+      "foreground": "info",
+      "background": "background",
+      "ratio": 5.952212753436933
+    },
+    {
+      "mode": "Slate",
+      "foreground": "info-foreground",
+      "background": "info",
+      "ratio": 6.136478061257089
+    },
+    {
+      "mode": "Slate",
+      "foreground": "role-superadmin",
+      "background": "card",
+      "ratio": 4.646076997765024
+    },
+    {
+      "mode": "Slate",
+      "foreground": "role-superadmin",
+      "background": "background",
+      "ratio": 6.082040013737656
+    },
+    {
+      "mode": "Slate",
+      "foreground": "role-superadmin-foreground",
+      "background": "role-superadmin",
+      "ratio": 6.2703244420217
+    },
+    {
+      "mode": "Slate",
+      "foreground": "role-admin",
+      "background": "card",
+      "ratio": 6.030736576798134
+    },
+    {
+      "mode": "Slate",
+      "foreground": "role-admin",
+      "background": "background",
+      "ratio": 7.894656328347953
+    },
+    {
+      "mode": "Slate",
+      "foreground": "role-admin-foreground",
+      "background": "role-admin",
+      "ratio": 8.139054729201046
+    },
+    {
+      "mode": "Slate",
+      "foreground": "role-member",
+      "background": "card",
+      "ratio": 6.905832130328342
+    },
+    {
+      "mode": "Slate",
+      "foreground": "role-member",
+      "background": "background",
+      "ratio": 9.040217664282535
+    },
+    {
+      "mode": "Slate",
+      "foreground": "role-member-foreground",
+      "background": "role-member",
+      "ratio": 9.320079718895478
+    },
+    {
+      "mode": "Slate",
+      "foreground": "foreground",
+      "background": "background",
+      "ratio": 13.514308786597773
+    },
+    {
+      "mode": "Slate",
+      "foreground": "card-foreground",
+      "background": "card",
+      "ratio": 10.323595216783131
+    },
+    {
+      "mode": "Slate",
+      "foreground": "popover-foreground",
+      "background": "popover",
+      "ratio": 10.323595216783131
+    },
+    {
+      "mode": "Slate",
+      "foreground": "secondary-foreground",
+      "background": "secondary",
+      "ratio": 8.623495874833017
+    },
+    {
+      "mode": "Slate",
+      "foreground": "muted-foreground",
+      "background": "muted",
+      "ratio": 6.299046535203986
+    },
+    {
+      "mode": "Bright",
+      "foreground": "primary",
+      "background": "card",
+      "ratio": 5.829495183125957
+    },
+    {
+      "mode": "Bright",
+      "foreground": "primary",
+      "background": "background",
+      "ratio": 5.829495183125957
+    },
+    {
+      "mode": "Bright",
+      "foreground": "primary-foreground",
+      "background": "primary",
+      "ratio": 5.829495183125957
+    },
+    {
+      "mode": "Bright",
+      "foreground": "accent",
+      "background": "card",
+      "ratio": 5.829495183125957
+    },
+    {
+      "mode": "Bright",
+      "foreground": "accent",
+      "background": "background",
+      "ratio": 5.829495183125957
+    },
+    {
+      "mode": "Bright",
+      "foreground": "accent-foreground",
+      "background": "accent",
+      "ratio": 5.829495183125957
+    },
+    {
+      "mode": "Bright",
+      "foreground": "destructive",
+      "background": "card",
+      "ratio": 5.825280241757237
+    },
+    {
+      "mode": "Bright",
+      "foreground": "destructive",
+      "background": "background",
+      "ratio": 5.825280241757237
+    },
+    {
+      "mode": "Bright",
+      "foreground": "destructive-foreground",
+      "background": "destructive",
+      "ratio": 5.825280241757237
+    },
+    {
+      "mode": "Bright",
+      "foreground": "success",
+      "background": "card",
+      "ratio": 5.976945366241353
+    },
+    {
+      "mode": "Bright",
+      "foreground": "success",
+      "background": "background",
+      "ratio": 5.976945366241353
+    },
+    {
+      "mode": "Bright",
+      "foreground": "success-foreground",
+      "background": "success",
+      "ratio": 5.976945366241353
+    },
+    {
+      "mode": "Bright",
+      "foreground": "warning",
+      "background": "card",
+      "ratio": 5.932670841420172
+    },
+    {
+      "mode": "Bright",
+      "foreground": "warning",
+      "background": "background",
+      "ratio": 5.932670841420172
+    },
+    {
+      "mode": "Bright",
+      "foreground": "warning-foreground",
+      "background": "warning",
+      "ratio": 5.932670841420172
+    },
+    {
+      "mode": "Bright",
+      "foreground": "info",
+      "background": "card",
+      "ratio": 5.866500683185589
+    },
+    {
+      "mode": "Bright",
+      "foreground": "info",
+      "background": "background",
+      "ratio": 5.866500683185589
+    },
+    {
+      "mode": "Bright",
+      "foreground": "info-foreground",
+      "background": "info",
+      "ratio": 5.866500683185589
+    },
+    {
+      "mode": "Bright",
+      "foreground": "role-superadmin",
+      "background": "card",
+      "ratio": 7.363003970731554
+    },
+    {
+      "mode": "Bright",
+      "foreground": "role-superadmin",
+      "background": "background",
+      "ratio": 7.363003970731554
+    },
+    {
+      "mode": "Bright",
+      "foreground": "role-superadmin-foreground",
+      "background": "role-superadmin",
+      "ratio": 7.363003970731554
+    },
+    {
+      "mode": "Bright",
+      "foreground": "role-admin",
+      "background": "card",
+      "ratio": 5.776138910865953
+    },
+    {
+      "mode": "Bright",
+      "foreground": "role-admin",
+      "background": "background",
+      "ratio": 5.776138910865953
+    },
+    {
+      "mode": "Bright",
+      "foreground": "role-admin-foreground",
+      "background": "role-admin",
+      "ratio": 5.776138910865953
+    },
+    {
+      "mode": "Bright",
+      "foreground": "role-member",
+      "background": "card",
+      "ratio": 5.808497518907155
+    },
+    {
+      "mode": "Bright",
+      "foreground": "role-member",
+      "background": "background",
+      "ratio": 5.808497518907155
+    },
+    {
+      "mode": "Bright",
+      "foreground": "role-member-foreground",
+      "background": "role-member",
+      "ratio": 5.808497518907155
+    },
+    {
+      "mode": "Bright",
+      "foreground": "foreground",
+      "background": "background",
+      "ratio": 14.543162925322079
+    },
+    {
+      "mode": "Bright",
+      "foreground": "card-foreground",
+      "background": "card",
+      "ratio": 14.543162925322079
+    },
+    {
+      "mode": "Bright",
+      "foreground": "popover-foreground",
+      "background": "popover",
+      "ratio": 14.543162925322079
+    },
+    {
+      "mode": "Bright",
+      "foreground": "secondary-foreground",
+      "background": "secondary",
+      "ratio": 13.230602580948187
+    },
+    {
+      "mode": "Bright",
+      "foreground": "muted-foreground",
+      "background": "muted",
+      "ratio": 5.482658687303995
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "primary",
+      "background": "card",
+      "ratio": 5.679286959572106
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "primary",
+      "background": "background",
+      "ratio": 6.362115486389575
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "primary-foreground",
+      "background": "primary",
+      "ratio": 6.196946028853367
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "accent",
+      "background": "card",
+      "ratio": 5.679286959572106
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "accent",
+      "background": "background",
+      "ratio": 6.362115486389575
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "accent-foreground",
+      "background": "accent",
+      "ratio": 6.196946028853367
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "destructive",
+      "background": "card",
+      "ratio": 5.579778142530263
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "destructive",
+      "background": "background",
+      "ratio": 6.250642586632822
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "destructive-foreground",
+      "background": "destructive",
+      "ratio": 6.088367122206643
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "success",
+      "background": "card",
+      "ratio": 8.706361598238331
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "success",
+      "background": "background",
+      "ratio": 9.753139495954063
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "success-foreground",
+      "background": "success",
+      "ratio": 9.49993429034786
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "warning",
+      "background": "card",
+      "ratio": 6.867588271883527
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "warning",
+      "background": "background",
+      "ratio": 7.693287909154975
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "warning-foreground",
+      "background": "warning",
+      "ratio": 7.493559345072261
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "info",
+      "background": "card",
+      "ratio": 5.623870156159196
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "info",
+      "background": "background",
+      "ratio": 6.300035844049043
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "info-foreground",
+      "background": "info",
+      "ratio": 6.136478061257089
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "role-superadmin",
+      "background": "card",
+      "ratio": 5.746535740355519
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "role-superadmin",
+      "background": "background",
+      "ratio": 6.43744968110602
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "role-superadmin-foreground",
+      "background": "role-superadmin",
+      "ratio": 6.2703244420217
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "role-admin",
+      "background": "card",
+      "ratio": 7.459162492552496
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "role-admin",
+      "background": "background",
+      "ratio": 8.355987916648603
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "role-admin-foreground",
+      "background": "role-admin",
+      "ratio": 8.139054729201046
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "role-member",
+      "background": "card",
+      "ratio": 8.54153109664722
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "role-member",
+      "background": "background",
+      "ratio": 9.56849119516083
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "role-member-foreground",
+      "background": "role-member",
+      "ratio": 9.320079718895478
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "foreground",
+      "background": "background",
+      "ratio": 14.30402999522336
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "card-foreground",
+      "background": "card",
+      "ratio": 12.76881741536904
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "popover-foreground",
+      "background": "popover",
+      "ratio": 12.76881741536904
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "secondary-foreground",
+      "background": "secondary",
+      "ratio": 8.623495874833017
+    },
+    {
+      "mode": "Dark-deep",
+      "foreground": "muted-foreground",
+      "background": "muted",
+      "ratio": 6.299046535203986
+    }
+  ]
+}

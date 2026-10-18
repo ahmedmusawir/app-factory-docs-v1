@@ -1,0 +1,383 @@
+{
+  "version": "0.1",
+  "date": "2026-10-13",
+  "status": "DRAFT FOR INTAKE RECONCILIATION",
+  "hash_scope": "All packaged files except FILE_INDEX.json itself",
+  "files": [
+    {
+      "path": "00_MASTER_INDEX.md",
+      "bytes": 13904,
+      "sha256": "120e1987fc56dc2b862a378b064f96ae6a7f114e371c20ab95bf8e16fa99ce72"
+    },
+    {
+      "path": "01_FACTORY_WORKFLOWS_INTAKE.md",
+      "bytes": 15653,
+      "sha256": "6809ed9d53b937c383cd2f8b8034f2740e8587994b1e38725d21bf8569e17a6f"
+    },
+    {
+      "path": "02_RRM_INTAKE.md",
+      "bytes": 14080,
+      "sha256": "c28a34addb1ce426701d186471147ac1a48a7a6f5a2b423d1db57a1068f37b9f"
+    },
+    {
+      "path": "03_QAM_INTAKE.md",
+      "bytes": 19537,
+      "sha256": "9da9ca337bad192c703ad24e5fe7cb142aee5b21439d13fc3efd33bbad25bb1c"
+    },
+    {
+      "path": "ARCHIVE_CONTENTS.json",
+      "bytes": 7990,
+      "sha256": "687c82d5b06c48644d2f368583d1824d8fd052d77517535edf7a1f3676b56955"
+    },
+    {
+      "path": "EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/00_START_HERE.md",
+      "bytes": 3268,
+      "sha256": "102506c15ef1748d7c40f85647f2fb0ab35d37c3ca9eb13466571d7f3c6e732c"
+    },
+    {
+      "path": "EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/CYBER_PHARMA_RRM_ARCHITECT_HANDOFF.md",
+      "bytes": 6269,
+      "sha256": "ad85f528ca890cfe8240ab67f45c35333aef8c088e2e2b34237420879f420db7"
+    },
+    {
+      "path": "EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/JARVIS_MASTER_OPERATING_MODEL.md",
+      "bytes": 4690,
+      "sha256": "159a19b01062ba43dedd81163a9a088139417da99f1737be7da32c574d64bb1c"
+    },
+    {
+      "path": "EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/PACKAGE_MANIFEST.json",
+      "bytes": 2265,
+      "sha256": "8f239e00f56792d665bee944bf4b3f3446a3e93bdfda2b9989c31492477ae95c"
+    },
+    {
+      "path": "EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/REVIEWER_PLAYBOOK_RRM_PILOT_v0.1.md",
+      "bytes": 10451,
+      "sha256": "458989aa82c85df469061391c707bca8390c28bccb8062934501284440789ffe"
+    },
+    {
+      "path": "EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_FACTORY_DOCSET_CHANGE_MAP.md",
+      "bytes": 4908,
+      "sha256": "420c8c5e0aa59b35022691f9437f0b76c072f096e415c09627cb67d343d0567c"
+    },
+    {
+      "path": "EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/ACCEPTANCE_SPEC.md",
+      "bytes": 1488,
+      "sha256": "286b5a24c2ee9f97e0aa2eae9fa3ff8fff8a17157998335ed6d159cd9b6d5075"
+    },
+    {
+      "path": "EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/CLAUDE.md",
+      "bytes": 1269,
+      "sha256": "6169908a56ca51c533bf47c1e3ba09c38327fc95a85645330ca1dd1473fc8741"
+    },
+    {
+      "path": "EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/CLAUDY_PROMPTS.md",
+      "bytes": 1997,
+      "sha256": "fd8c86a166e1ed1c86363ac4001f4efaa1896ca8845c9e25fb6f04485798f469"
+    },
+    {
+      "path": "EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/CLOSEOUT_CHECKLIST.md",
+      "bytes": 1572,
+      "sha256": "330c7139afc2160538aac647c87c61717fcc84be1576a9f834f6bb168e43b85e"
+    },
+    {
+      "path": "EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/EXECUTION_LOG.md",
+      "bytes": 986,
+      "sha256": "aa0aa4c93ac14618685cfca2d69ad4e59201812c9cbc24fcc773a7d1edd5107c"
+    },
+    {
+      "path": "EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/FINDINGS_DISPOSITION_LEDGER.md",
+      "bytes": 1243,
+      "sha256": "76d7e63fc84d22b82eeac221ae7ea224b7653657be98a509a0dabcc18f198338"
+    },
+    {
+      "path": "EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/QA_CERTIFICATION.md",
+      "bytes": 1194,
+      "sha256": "c7c84b638e97332486c230aae74c3c634a35cc58cbe118a9fa3e155eb2ed7463"
+    },
+    {
+      "path": "EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/QA_HANDOFF.md",
+      "bytes": 981,
+      "sha256": "3602e55d17646208e5af9e4f419fd2f2b3dbe668cd0e2250bf5aa0f0e6e30f12"
+    },
+    {
+      "path": "EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/QA_TEST_PLAN.md",
+      "bytes": 1274,
+      "sha256": "55c1e2c61be4ff4029b0cabd237daa42fd531466e80b9051153d082e4da79978"
+    },
+    {
+      "path": "EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/README.md",
+      "bytes": 1889,
+      "sha256": "a936681e5165de41d73117d58365221df5cdcb71dcf856c1002b6178a39c1bd4"
+    },
+    {
+      "path": "EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/RRM_BRIEF.md",
+      "bytes": 1408,
+      "sha256": "312e7d63f7a9baab0526f9e25a564343f8b5e3dc4c8175bcd88a9890b4f6b5fe"
+    },
+    {
+      "path": "EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_PILOT_DOCTRINE_JOURNAL.md",
+      "bytes": 5446,
+      "sha256": "7ba6c0753abfaa6d70a358c418dd995914ee97b7507a8ae01ac507328c34542d"
+    },
+    {
+      "path": "EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_PLAYBOOK.md",
+      "bytes": 10700,
+      "sha256": "90684c967aca2502cd3e067c47067a9d735ea9f6397f56b5fa6295a97b7f7195"
+    },
+    {
+      "path": "EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/ACCEPTANCE_SPEC.md",
+      "bytes": 17505,
+      "sha256": "e9660b16f5a916568effa15a66568ac06312a7ff82f6717bf1bfc057aa60f85e"
+    },
+    {
+      "path": "EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/AUTHORITY_POINTER.md",
+      "bytes": 2489,
+      "sha256": "43b51a647382f4433f6d9871d6046b77bb82b31b73a0ca0d906de72a2d3f635a"
+    },
+    {
+      "path": "EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/CLAUDE.md",
+      "bytes": 9097,
+      "sha256": "4dd420a098efbc4d76421b09bf886872a0e6c499d4ead76f5e233169b75ae128"
+    },
+    {
+      "path": "EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/CLAUDY_PROMPTS.md",
+      "bytes": 20320,
+      "sha256": "3b26d2229072d84eba6d99948daccacfcf196bbc22fb6160f3f52cb595177901"
+    },
+    {
+      "path": "EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/DIRECTOR_ACTIONS.md",
+      "bytes": 5476,
+      "sha256": "fedaee603e37fd50303771ca94db29f80f0b8dfdbc18214520a5c3691bcc3b80"
+    },
+    {
+      "path": "EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/DIRECTOR_CHECKPOINTS.md",
+      "bytes": 3570,
+      "sha256": "d6bb5b64826636046ae6079247519418d3624ada76b632f95d6b84ace50a0eb8"
+    },
+    {
+      "path": "EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/ENVIRONMENT_PREFLIGHT.md",
+      "bytes": 6153,
+      "sha256": "1bce6ed90e96926980911cd156708d3d417cfb8d55769e4952fe921f10aca04f"
+    },
+    {
+      "path": "EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/EXECUTION_LOG.md",
+      "bytes": 4598,
+      "sha256": "d04cc13d6a667451e97ca30024300850d4158cb837d2e998d7667083513bdab0"
+    },
+    {
+      "path": "EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA/AC_EVIDENCE_MATRIX.md",
+      "bytes": 1611,
+      "sha256": "1924b7d7db1d925b54789591dfcf4716f320519de4cc5fe9fe4626f93953a7c0"
+    },
+    {
+      "path": "EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA/AGENTS.md",
+      "bytes": 5910,
+      "sha256": "ba66abd759246f5296f2607cf88e1b19ba071152189eae3fa09cc576828c8fb8"
+    },
+    {
+      "path": "EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA/QAM_MANIFEST.md",
+      "bytes": 6612,
+      "sha256": "2430058c4a441050409a20071f81f8454acbd7b7722c8d5788407df82afa01ca"
+    },
+    {
+      "path": "EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA/QAM_PILOT_CHARTER.md",
+      "bytes": 4985,
+      "sha256": "acb4e1021511da3e4fa10b2156e84971377b2ce176438e9ae53b34a097e1a9b7"
+    },
+    {
+      "path": "EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA/QAM_PILOT_RESULTS.md",
+      "bytes": 1649,
+      "sha256": "8a77570232c66b8fcc2a6726d4e631ad1f8ee1fcbcc5de21bbfbe714fed8fe9a"
+    },
+    {
+      "path": "EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA/QA_ENVIRONMENT_PREFLIGHT.md",
+      "bytes": 4454,
+      "sha256": "efb0ba18015063d07c4d64e7955bc0c168e1ec35edfb449047a2a33e24d79511"
+    },
+    {
+      "path": "EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA/QA_EXECUTION_REPORT.md",
+      "bytes": 1437,
+      "sha256": "c625a29192b4476ddef8b61726935f44da6e513a3949cdab1ba95474c451c30b"
+    },
+    {
+      "path": "EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA/QA_TEST_PLAN.md",
+      "bytes": 1669,
+      "sha256": "9e6adc3b6ff4657cd95b8ce0432e042452accac1984b79dacdd61cd0b82bdcc8"
+    },
+    {
+      "path": "EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA/README.md",
+      "bytes": 4195,
+      "sha256": "32da684f4a01915b3d1ec4888546ff91561769c326e400ec5a6f6463c5f14601"
+    },
+    {
+      "path": "EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA_HANDOFF.md",
+      "bytes": 3564,
+      "sha256": "4faea7d9846263db9d471ed04a821269a04ab095420c051a76181513bfad08c5"
+    },
+    {
+      "path": "EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/README.md",
+      "bytes": 1595,
+      "sha256": "7f7944d75ff2b67c8acc951b35c9033d9a46cbacc0f817a4e2184b75ee90e80f"
+    },
+    {
+      "path": "EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/RRM_BRIEF.md",
+      "bytes": 10390,
+      "sha256": "c628fcdadebb87c0653821af37f9610b22e0da46c4f7a31691baf3388f6ccc43"
+    },
+    {
+      "path": "EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/RULINGS_ADDENDUM.md",
+      "bytes": 850,
+      "sha256": "61739ae1292895d72105e7b30186e66fdb7d264e049c3054d5b29f4484e8ad5f"
+    },
+    {
+      "path": "EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/evidence/README.md",
+      "bytes": 699,
+      "sha256": "506c6cca9d059cf8c5ecd7791c771b7a5c21c352283f1e6850d707999f485f38"
+    },
+    {
+      "path": "EXTRACTED/SRC-R03/ARCHITECT_ENGINEERING_10X_LAB_REPORT_RRM_CAMPAIGN.md",
+      "bytes": 11803,
+      "sha256": "148f09c824045a40d35670d83009f0524f1818140e186c8c56b0eb68306e4673"
+    },
+    {
+      "path": "EXTRACTED/SRC-R03/ARCHITECT_OPINION_QAM_QA_MODULE.md",
+      "bytes": 11424,
+      "sha256": "ee9c596b43a54740e8a08e69c58a4a0f79df13630039e513e538168ba5a45b83"
+    },
+    {
+      "path": "EXTRACTED/SRC-R03/ONE_SHOT_ENGINEERING_ARCHITECT_FIELD_NOTE_RRM003.md",
+      "bytes": 19152,
+      "sha256": "85f7ed181de37f60c1e9739b247b46284594b1c63d7a21baf8fb6699d7ce9c47"
+    },
+    {
+      "path": "EXTRACTED/SRC-R03/QAM_OPERATING_MODEL_PROPOSAL_v0_1.md",
+      "bytes": 14646,
+      "sha256": "57ebdcd1111e767a3bfcb3604a9c7e26bfc74315da5050855256da6be3b956cc"
+    },
+    {
+      "path": "EXTRACTED/SRC-R03/QAM_PILOT_ARCHITECT_JOURNAL.md",
+      "bytes": 10717,
+      "sha256": "da020c5aa54164f509bfb8e2d9b8910d828dc0673f9eadff19baecd92d9ec1f2"
+    },
+    {
+      "path": "SOURCES/Context/SRC-C01_SCOPED_APPROVALS_ENGINEER_REPORT_2026_10_12.md",
+      "bytes": 2199,
+      "sha256": "e7787f6408c0b03277e1c4c846bcc9bdfd6e9074038a5548cffeefa542ddf8d3"
+    },
+    {
+      "path": "SOURCES/QAM/SRC-Q01_QAM_OPERATING_MODEL_PROPOSAL_v0_1.md",
+      "bytes": 14646,
+      "sha256": "57ebdcd1111e767a3bfcb3604a9c7e26bfc74315da5050855256da6be3b956cc"
+    },
+    {
+      "path": "SOURCES/QAM/SRC-Q02_QAM_PILOT_ARCHITECT_JOURNAL.md",
+      "bytes": 10717,
+      "sha256": "da020c5aa54164f509bfb8e2d9b8910d828dc0673f9eadff19baecd92d9ec1f2"
+    },
+    {
+      "path": "SOURCES/QAM/SRC-Q03_STARK_QAM_10X_LAB_MASTER_DRAFT_v0_1.md",
+      "bytes": 38663,
+      "sha256": "df084145954887674b47feb8b42cc179d90c9199e4f7281622084ac6add7379b"
+    },
+    {
+      "path": "SOURCES/QAM/SRC-Q04_RRM004_QAM_PILOT_PLAN_v0_1.md",
+      "bytes": 25700,
+      "sha256": "eabf7ecf7b676c412114d72c4541e08342dba9b167cf5d0ddc056db368ad767f"
+    },
+    {
+      "path": "SOURCES/QAM/SRC-Q05_QAM_DIRECTOR_DISCUSSION_1.txt",
+      "bytes": 2779,
+      "sha256": "4f1fa0ad26b3072270e5676bd56782589fe4b656185a595be1b9128d6a946a77"
+    },
+    {
+      "path": "SOURCES/RRM/SRC-R01_RRM_FACTORY_PILOT_v0_1.zip",
+      "bytes": 121409,
+      "sha256": "0379eb008475d9ab653d0bcdeb0bcb3e6f6a68f7dce38c9afcfc18be9172fac4"
+    },
+    {
+      "path": "SOURCES/RRM/SRC-R02_RRM004_ORIGINAL_PACK_v1_0.zip",
+      "bytes": 60680,
+      "sha256": "c2a21b82ca4f6c1ec0e7d75dd5860ff2cf15c3a3615099c62272558db524ed2a"
+    },
+    {
+      "path": "SOURCES/RRM/SRC-R03_ARCHITECT_10X_LAB_BUNDLE_RRM.zip",
+      "bytes": 29981,
+      "sha256": "191eb232430393cf247e35a453d6df0be51db0800a0b8a7d5db5dbff372ba3c2"
+    },
+    {
+      "path": "SOURCES/RRM/SRC-R04_QA_PRODUCTION_OBSERVATION_JOURNAL.md",
+      "bytes": 26893,
+      "sha256": "ba60e2be633a2347561426f5890a0b7b9f6d3735cff05f9a265fc732569f8675"
+    },
+    {
+      "path": "SOURCES/RRM/SRC-R05_RRM_CAMPAIGN_EMPTY_SCAFFOLD_v1_0.zip",
+      "bytes": 1244,
+      "sha256": "c9ef99f5d6189fff0785bc35dcf3d0be715e52afaec1efdd88d3e8b609743c93"
+    },
+    {
+      "path": "SOURCES/Workflow/SRC-W01_FFM_CREATION.png",
+      "bytes": 380705,
+      "sha256": "714287752cae394fe9a94bbf017253b58ca4791bb840c10708cbbc7569835c86"
+    },
+    {
+      "path": "SOURCES/Workflow/SRC-W02_FFM_EXECUTION.png",
+      "bytes": 192114,
+      "sha256": "327212a3b2e84b7c2607d9bd854f9e4c0ce2204c00f282be22e4296733c3ae04"
+    },
+    {
+      "path": "SOURCES/Workflow/SRC-W03_FFM_DEPLOYMENT.png",
+      "bytes": 331991,
+      "sha256": "743d7a2299ad2da746ed2648e2ea4415aabd2175b6deb86ea7ed1c0b3a1b2268"
+    },
+    {
+      "path": "SOURCES/Workflow/SRC-W04_BIM_WORKFLOW.png",
+      "bytes": 248154,
+      "sha256": "fb87367a23213c65fa76e447ecb7a9c4fae56ef8f1a33c516bce77c5c0ddf9e7"
+    },
+    {
+      "path": "SOURCES/Workflow/SRC-W05_FFM_OPERATING_MODEL_v1_0_R2.md",
+      "bytes": 28680,
+      "sha256": "168b8545dfd44ace0283adfb570561fb7c05a8d86cc63b7777d3ba03fc00012e"
+    },
+    {
+      "path": "SOURCES/Workflow/SRC-W06_BIM_OPERATING_MODEL_v1_0.md",
+      "bytes": 17893,
+      "sha256": "b6144b9bcd44631d0b137b8a4210039c6382d3ff226e1d7c036b408858c62d42"
+    },
+    {
+      "path": "SOURCES/Workflow/SRC-W07_DEVOPS_OPERATING_MODEL_v1_0.md",
+      "bytes": 13825,
+      "sha256": "66e2e35667b7ac73b9838fbc250d3363b3a4b3c90a994ba648c1211db06e9e7b"
+    },
+    {
+      "path": "SOURCES/Workflow/SRC-W08_CODE_REVIEW_CYCLE.txt",
+      "bytes": 2563,
+      "sha256": "feee30ff9f7772bae4e58c6d435c526f910ec91ee8d813681b2e086f5f4aa9e4"
+    },
+    {
+      "path": "SOURCES/Workflow/SRC-W09_BOUNDED_REPAIR.txt",
+      "bytes": 486,
+      "sha256": "11e1bc1eef5590c2c79403b0abc704c1b4c1451445431c3d5691696fc9b91821"
+    },
+    {
+      "path": "SOURCES/Workflow/SRC-W10_DOC_SET_SYNC_PROCESS.txt",
+      "bytes": 2905,
+      "sha256": "d6bd26470952b25f33707072760b759030f60078ac8ad61feeaed6b7bc9a5d19"
+    },
+    {
+      "path": "SOURCES/Workflow/SRC-W11_FACTORY_ENGINE_1_2_3.txt",
+      "bytes": 2563,
+      "sha256": "1ce3bd07ead54de33b750b3f08bbf0ad34347c5850c9f1e30dce75b02c8db831"
+    },
+    {
+      "path": "SOURCE_INVENTORY.json",
+      "bytes": 8253,
+      "sha256": "74bd3ce2bcb59188f7ae5d5d78261aa2b8a14bd0df558ca71a13b3da9b29ac1e"
+    },
+    {
+      "path": "SOURCE_REGISTER.md",
+      "bytes": 12058,
+      "sha256": "7c7e6931b3398c852e5cc9f139c7450da03449e6965946201a7db3648fe25b2e"
+    }
+  ]
+}

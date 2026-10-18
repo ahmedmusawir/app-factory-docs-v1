@@ -1,0 +1,320 @@
+[
+  {
+    "source_id": "SRC-R01",
+    "integrity": "CRC PASS",
+    "file_count": 21,
+    "members": [
+      {
+        "path": "RRM_FACTORY_PILOT_v0.1/00_START_HERE.md",
+        "bytes": 3268,
+        "directory": false
+      },
+      {
+        "path": "RRM_FACTORY_PILOT_v0.1/CYBER_PHARMA_RRM_ARCHITECT_HANDOFF.md",
+        "bytes": 6269,
+        "directory": false
+      },
+      {
+        "path": "RRM_FACTORY_PILOT_v0.1/JARVIS_MASTER_OPERATING_MODEL.md",
+        "bytes": 4690,
+        "directory": false
+      },
+      {
+        "path": "RRM_FACTORY_PILOT_v0.1/PACKAGE_MANIFEST.json",
+        "bytes": 2265,
+        "directory": false
+      },
+      {
+        "path": "RRM_FACTORY_PILOT_v0.1/REFERENCE_REVIEWS/astra-review.zip",
+        "bytes": 72537,
+        "directory": false
+      },
+      {
+        "path": "RRM_FACTORY_PILOT_v0.1/REFERENCE_REVIEWS/fable-review.zip",
+        "bytes": 28610,
+        "directory": false
+      },
+      {
+        "path": "RRM_FACTORY_PILOT_v0.1/REVIEWER_PLAYBOOK_RRM_PILOT_v0.1.md",
+        "bytes": 10451,
+        "directory": false
+      },
+      {
+        "path": "RRM_FACTORY_PILOT_v0.1/RRM_FACTORY_DOCSET_CHANGE_MAP.md",
+        "bytes": 4908,
+        "directory": false
+      },
+      {
+        "path": "RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/ACCEPTANCE_SPEC.md",
+        "bytes": 1488,
+        "directory": false
+      },
+      {
+        "path": "RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/CLAUDE.md",
+        "bytes": 1269,
+        "directory": false
+      },
+      {
+        "path": "RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/CLAUDY_PROMPTS.md",
+        "bytes": 1997,
+        "directory": false
+      },
+      {
+        "path": "RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/CLOSEOUT_CHECKLIST.md",
+        "bytes": 1572,
+        "directory": false
+      },
+      {
+        "path": "RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/EXECUTION_LOG.md",
+        "bytes": 986,
+        "directory": false
+      },
+      {
+        "path": "RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/FINDINGS_DISPOSITION_LEDGER.md",
+        "bytes": 1243,
+        "directory": false
+      },
+      {
+        "path": "RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/QA_CERTIFICATION.md",
+        "bytes": 1194,
+        "directory": false
+      },
+      {
+        "path": "RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/QA_HANDOFF.md",
+        "bytes": 981,
+        "directory": false
+      },
+      {
+        "path": "RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/QA_TEST_PLAN.md",
+        "bytes": 1274,
+        "directory": false
+      },
+      {
+        "path": "RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/README.md",
+        "bytes": 1889,
+        "directory": false
+      },
+      {
+        "path": "RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/RRM_BRIEF.md",
+        "bytes": 1408,
+        "directory": false
+      },
+      {
+        "path": "RRM_FACTORY_PILOT_v0.1/RRM_PILOT_DOCTRINE_JOURNAL.md",
+        "bytes": 5446,
+        "directory": false
+      },
+      {
+        "path": "RRM_FACTORY_PILOT_v0.1/RRM_PLAYBOOK.md",
+        "bytes": 10700,
+        "directory": false
+      }
+    ]
+  },
+  {
+    "source_id": "SRC-R02",
+    "integrity": "CRC PASS",
+    "file_count": 23,
+    "members": [
+      {
+        "path": "RRM-004-CYBER-PHARMA/",
+        "bytes": 0,
+        "directory": true
+      },
+      {
+        "path": "RRM-004-CYBER-PHARMA/RULINGS_ADDENDUM.md",
+        "bytes": 850,
+        "directory": false
+      },
+      {
+        "path": "RRM-004-CYBER-PHARMA/ENVIRONMENT_PREFLIGHT.md",
+        "bytes": 6153,
+        "directory": false
+      },
+      {
+        "path": "RRM-004-CYBER-PHARMA/DIRECTOR_ACTIONS.md",
+        "bytes": 5476,
+        "directory": false
+      },
+      {
+        "path": "RRM-004-CYBER-PHARMA/QA_HANDOFF.md",
+        "bytes": 3564,
+        "directory": false
+      },
+      {
+        "path": "RRM-004-CYBER-PHARMA/README.md",
+        "bytes": 1595,
+        "directory": false
+      },
+      {
+        "path": "RRM-004-CYBER-PHARMA/DIRECTOR_CHECKPOINTS.md",
+        "bytes": 3570,
+        "directory": false
+      },
+      {
+        "path": "RRM-004-CYBER-PHARMA/CLAUDE.md",
+        "bytes": 9097,
+        "directory": false
+      },
+      {
+        "path": "RRM-004-CYBER-PHARMA/RRM_BRIEF.md",
+        "bytes": 10390,
+        "directory": false
+      },
+      {
+        "path": "RRM-004-CYBER-PHARMA/CLAUDY_PROMPTS.md",
+        "bytes": 20320,
+        "directory": false
+      },
+      {
+        "path": "RRM-004-CYBER-PHARMA/QA/",
+        "bytes": 0,
+        "directory": true
+      },
+      {
+        "path": "RRM-004-CYBER-PHARMA/QA/QA_EXECUTION_REPORT.md",
+        "bytes": 1437,
+        "directory": false
+      },
+      {
+        "path": "RRM-004-CYBER-PHARMA/QA/QA_TEST_PLAN.md",
+        "bytes": 1669,
+        "directory": false
+      },
+      {
+        "path": "RRM-004-CYBER-PHARMA/QA/AC_EVIDENCE_MATRIX.md",
+        "bytes": 1611,
+        "directory": false
+      },
+      {
+        "path": "RRM-004-CYBER-PHARMA/QA/README.md",
+        "bytes": 4195,
+        "directory": false
+      },
+      {
+        "path": "RRM-004-CYBER-PHARMA/QA/QAM_MANIFEST.md",
+        "bytes": 6612,
+        "directory": false
+      },
+      {
+        "path": "RRM-004-CYBER-PHARMA/QA/QA_ENVIRONMENT_PREFLIGHT.md",
+        "bytes": 4454,
+        "directory": false
+      },
+      {
+        "path": "RRM-004-CYBER-PHARMA/QA/QAM_PILOT_RESULTS.md",
+        "bytes": 1649,
+        "directory": false
+      },
+      {
+        "path": "RRM-004-CYBER-PHARMA/QA/AGENTS.md",
+        "bytes": 5910,
+        "directory": false
+      },
+      {
+        "path": "RRM-004-CYBER-PHARMA/QA/REPAIR_PROPOSAL.md.template",
+        "bytes": 665,
+        "directory": false
+      },
+      {
+        "path": "RRM-004-CYBER-PHARMA/QA/QAM_PILOT_CHARTER.md",
+        "bytes": 4985,
+        "directory": false
+      },
+      {
+        "path": "RRM-004-CYBER-PHARMA/ACCEPTANCE_SPEC.md",
+        "bytes": 17505,
+        "directory": false
+      },
+      {
+        "path": "RRM-004-CYBER-PHARMA/AUTHORITY_POINTER.md",
+        "bytes": 2489,
+        "directory": false
+      },
+      {
+        "path": "RRM-004-CYBER-PHARMA/EXECUTION_LOG.md",
+        "bytes": 4598,
+        "directory": false
+      },
+      {
+        "path": "RRM-004-CYBER-PHARMA/evidence/",
+        "bytes": 0,
+        "directory": true
+      },
+      {
+        "path": "RRM-004-CYBER-PHARMA/evidence/README.md",
+        "bytes": 699,
+        "directory": false
+      }
+    ]
+  },
+  {
+    "source_id": "SRC-R03",
+    "integrity": "CRC PASS",
+    "file_count": 5,
+    "members": [
+      {
+        "path": "ARCHITECT_ENGINEERING_10X_LAB_REPORT_RRM_CAMPAIGN.md",
+        "bytes": 11803,
+        "directory": false
+      },
+      {
+        "path": "ARCHITECT_OPINION_QAM_QA_MODULE.md",
+        "bytes": 11424,
+        "directory": false
+      },
+      {
+        "path": "ONE_SHOT_ENGINEERING_ARCHITECT_FIELD_NOTE_RRM003.md",
+        "bytes": 19152,
+        "directory": false
+      },
+      {
+        "path": "QAM_OPERATING_MODEL_PROPOSAL_v0_1.md",
+        "bytes": 14646,
+        "directory": false
+      },
+      {
+        "path": "QAM_PILOT_ARCHITECT_JOURNAL.md",
+        "bytes": 10717,
+        "directory": false
+      }
+    ]
+  },
+  {
+    "source_id": "SRC-R05",
+    "integrity": "CRC PASS",
+    "file_count": 0,
+    "members": [
+      {
+        "path": "RRM_CAMPAIGN/",
+        "bytes": 0,
+        "directory": true
+      },
+      {
+        "path": "RRM_CAMPAIGN/ACTIONS/",
+        "bytes": 0,
+        "directory": true
+      },
+      {
+        "path": "RRM_CAMPAIGN/ACTIONS/RRM-001-CYBER-PHARMA/",
+        "bytes": 0,
+        "directory": true
+      },
+      {
+        "path": "RRM_CAMPAIGN/ACTIONS/RRM-001-CYBER-PHARMA/QA/",
+        "bytes": 0,
+        "directory": true
+      },
+      {
+        "path": "RRM_CAMPAIGN/ACTIONS/RRM-001-CYBER-PHARMA/QA/GOVERNING/",
+        "bytes": 0,
+        "directory": true
+      },
+      {
+        "path": "RRM_CAMPAIGN/ACTIONS/RRM-001-CYBER-PHARMA/evidence/",
+        "bytes": 0,
+        "directory": true
+      }
+    ]
+  }
+]

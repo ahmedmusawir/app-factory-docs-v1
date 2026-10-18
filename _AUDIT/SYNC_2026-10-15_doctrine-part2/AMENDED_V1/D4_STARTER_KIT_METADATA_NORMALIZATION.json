@@ -1,0 +1,16 @@
+{
+  "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+  "status": "ALREADY APPROVED AS BYTES at Gate 2 (index hash); recorded here explicitly; AMENDED-v1 adds NO content change to this document",
+  "source": "scratchpad/generators/cody_mc_metadata.py lines 26–28 (header insertion after the H1; replacement of the \"**Version:** v1.1 (Kit-Perfection campaign applied)\" line by the kit-campaign reference line); history row insertion as for every revised document",
+  "content_stage_sha256": "02289c07e3027d6f9ea3d0185a680170c28f3960ef227e3ef09d83857ae80dca",
+  "gate2_proposed_sha256": "29ce1d9f602696da3ed6241dd70e4a8f603626a962ca4f43de04edfde5a0d0ab",
+  "amended_proposed_sha256": "29ce1d9f602696da3ed6241dd70e4a8f603626a962ca4f43de04edfde5a0d0ab",
+  "exact_residual_lines": [
+    "+\n",
+    "+> **Version:** 1.2 · **Date:** 2026-10-16 · **Status:** Active\n",
+    "+> **Tier:** 1 — Constitution · **Pairs with:** AUTH_MANUAL, DATABASE_MANUAL, STATE_MANAGEMENT_MANUAL, UI_UX_BUILDING_MANUAL, COMPONENT_REGISTRY\n",
+    "-**Version:** v1.1 (Kit-Perfection campaign applied)\n",
+    "+**Kit campaign reference:** handbook v1.1 (historical reconciliation; verify current kit revision)\n",
+    "+| 1.2 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: DEC-04, FC-001, FC-003, FC-003/096, FC-005, FC-033, FC-034, FC-036, FC-038, FC-041, FC-042, FC-072, FC-073, FC-081, RUL-12, RUL-14 |\n"
+  ]
+}

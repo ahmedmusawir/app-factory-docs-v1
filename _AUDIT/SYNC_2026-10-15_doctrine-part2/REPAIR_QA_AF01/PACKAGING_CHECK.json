@@ -1,0 +1,9 @@
+{
+  "protected_sources_unchanged": 1148,
+  "changed_sources": [],
+  "corrected_patch_sha256": "cf6413c9340c80f5c1bf53a55385876470e9b3aad364bc8963f52a68580f2a6d",
+  "index_sha256": "69244f4edc347b30b81ed6a909bae4fbb5130864319e9f8cd84b5d5c22e59ba6",
+  "edits_sha256": "2675ffc148f49a95b688e9f252527950ce9c3f1fd61df3fb0ffb067fcc7ff687",
+  "complete_preservation_paths": 846,
+  "qa_acceptance": "PENDING"
+}

@@ -1,0 +1,20 @@
+{
+  "approved_at": "2026-10-17T19:23:09+06:00",
+  "recorded_at": "2026-10-18T17:39:26+06:00",
+  "authority": "Tony current assignment relaying his YES!! in the Jarvis Architect conversation; Gate2 then Gate3, same reported approval event",
+  "inputs": {
+    "UPDATE_MAP.md": "cd291270bb6c8e537bcb050685c6464d326254f0d2a703c21f7f304dfe286931",
+    "REPAIR_QA_AF01/EXECUTION_PROPOSAL.corrected.patch": "cf6413c9340c80f5c1bf53a55385876470e9b3aad364bc8963f52a68580f2a6d",
+    "QA_RETEST_AF01/DOCSET_SYNC_ACCEPTANCE_SPEC_AMENDED_V1_R1.md": "2a3867cacef11c6bb0419a4c71229479efe703cee9fbcc1e4f71c0ac8e63f0fc",
+    "AMENDED_V1/EXECUTION_PROPOSAL_INDEX.json": "69244f4edc347b30b81ed6a909bae4fbb5130864319e9f8cd84b5d5c22e59ba6",
+    "AMENDED_V1/SELECTED_EXACT_EDITS.json": "2675ffc148f49a95b688e9f252527950ce9c3f1fd61df3fb0ffb067fcc7ff687",
+    "AMENDED_V1/AMENDMENT_V1.md": "655e24edf2c53b8ca89563a66ada54ab6df09b930eb80a7a2743216dc1153764",
+    "QA_RETEST_AF01/QA_AF01_RETEST_VERDICT.md": "1ba9a2cb0f7f327f2294b29900c288c79c6cd6f4c73b53e6fd19b4d73ad60ee2"
+  },
+  "selected_spec": "QA_RETEST_AF01/DOCSET_SYNC_ACCEPTANCE_SPEC_AMENDED_V1_R1.md",
+  "older_self_reference": "retained historical text does not select the older spec",
+  "ordered_edits": 380,
+  "composed_paths_verified": 101,
+  "snapshot_files_verified": 189,
+  "phase3_release": "NOT RELEASED"
+}

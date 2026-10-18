@@ -1,0 +1,1065 @@
+{
+  "label": "ENGINEER-PROPOSED deterministic execution-date binding; no actual landing date exists yet",
+  "planned_review_date": "2026-10-16",
+  "actual_landing_date": null,
+  "instructions": "Before authorized implementation, bind only these declared current header/row fields to actual landing date, record the value in actual execution evidence and generate BOUND_EXECUTION_INDEX.json and BOUND_STATUS_TRANSITIONS.json with recomputed pre/post hashes; retain the reviewed/frozen map and review-time indexes unchanged. Historical approval/source dates remain untouched. If a span changed, stop and reconcile approved map identities; do not blanket-replace dates.",
+  "spans": [
+    {
+      "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+      "old": "> **Version:** 2.2 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 2.2 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+      "old": "| 2.2 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-004, FC-008, FC-017, FC-027, MC-04, MC-06, MC-07, RUL-01, RUL-05, RUL-07, RUL-09, RUL-10, RUL-12, RUL-14 |",
+      "new": "| 2.2 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-004, FC-008, FC-017, FC-027, MC-04, MC-06, MC-07, RUL-01, RUL-05, RUL-07, RUL-09, RUL-10, RUL-12, RUL-14 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+      "old": "> **Version:** 1.4 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 1.4 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+      "old": "| 1.4 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-002, FC-005, FC-006, FC-007, FC-009, FC-021, FC-033, FC-036, FC-063, FC-066, MC-01, MC-05, MC-06, MC-07, RUL-01, RUL-05, RUL-07, RUL-08, RUL-09, RUL-11, RUL-12, RUL-14, W01, W23 |",
+      "new": "| 1.4 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-002, FC-005, FC-006, FC-007, FC-009, FC-021, FC-033, FC-036, FC-063, FC-066, MC-01, MC-05, MC-06, MC-07, RUL-01, RUL-05, RUL-07, RUL-08, RUL-09, RUL-11, RUL-12, RUL-14, W01, W23 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+      "old": "> **Version:** 1.2 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 1.2 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+      "old": "| 1.2 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: DEC-04, FC-001, FC-003, FC-003/096, FC-005, FC-033, FC-034, FC-036, FC-038, FC-041, FC-042, FC-072, FC-073, FC-081, RUL-12, RUL-14 |",
+      "new": "| 1.2 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: DEC-04, FC-001, FC-003, FC-003/096, FC-005, FC-033, FC-034, FC-036, FC-038, FC-041, FC-042, FC-072, FC-073, FC-081, RUL-12, RUL-14 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+      "old": "> **Version:** 2.3 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 2.3 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+      "old": "| 2.3 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-004, FC-005, FC-008, FC-014, FC-017, FC-027, MC-06, RUL-01, RUL-05, RUL-09, RUL-12, W18, W23 |",
+      "new": "| 2.3 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-004, FC-005, FC-008, FC-014, FC-017, FC-027, MC-06, RUL-01, RUL-05, RUL-09, RUL-12, W18, W23 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md",
+      "old": "> **Version:** 2.3 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 2.3 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md",
+      "old": "| 2.3 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-016 |",
+      "new": "| 2.3 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-016 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+      "old": "> **Version:** 2.2 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 2.2 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+      "old": "| 2.2 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-004, FC-005, FC-008, FC-016, FC-017, FC-018, FC-027, FC-084, MC-06, MC-07, RUL-01, RUL-05, RUL-09, RUL-12, W23 |",
+      "new": "| 2.2 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-004, FC-005, FC-008, FC-016, FC-017, FC-018, FC-027, FC-084, MC-06, MC-07, RUL-01, RUL-05, RUL-09, RUL-12, W23 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "old": "> **Version:** 1.3 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 1.3 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "old": "| 1.3 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-004, FC-005, FC-008, FC-014, FC-015, FC-017, FC-018, FC-027, MC-06, MC-07, RUL-01, RUL-05, RUL-09, RUL-12, W19, W23 |",
+      "new": "| 1.3 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-004, FC-005, FC-008, FC-014, FC-015, FC-017, FC-018, FC-027, MC-06, MC-07, RUL-01, RUL-05, RUL-09, RUL-12, W19, W23 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+      "old": "> **Version:** 1.2 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 1.2 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+      "old": "| 1.2 | 2026-10-16 | doctrine-part2 sync | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-009, FC-017, FC-018, FC-019, FC-027, MC-01, RUL-09, W20 |",
+      "new": "| 1.2 | <<ACTUAL_LANDING_DATE>> | doctrine-part2 sync | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-009, FC-017, FC-018, FC-019, FC-027, MC-01, RUL-09, W20 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+      "old": "> **Version:** 0.6 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active (living document \u2014 grows with every FFM run's lessons)",
+      "new": "> **Version:** 0.6 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active (living document \u2014 grows with every FFM run's lessons)",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+      "old": "| 0.6 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-005, FC-007, FC-014, FC-033, FC-034, FC-069, MC-02, MC-04, MC-13, RUL-03, RUL-12, W17 |",
+      "new": "| 0.6 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-005, FC-007, FC-014, FC-033, FC-034, FC-069, MC-02, MC-04, MC-13, RUL-03, RUL-12, W17 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md",
+      "old": "> **Version:** 1.2 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 1.2 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md",
+      "old": "| 1.2 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-005, FC-006, FC-014, FC-021, FC-087 |",
+      "new": "| 1.2 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-005, FC-006, FC-014, FC-021, FC-087 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+      "old": "> **Version:** 1.1 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 1.1 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+      "old": "| 1.1 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-012, FC-014, MC-06, MC-07, RUL-01, RUL-02, RUL-03, RUL-04, RUL-05, RUL-07, RUL-12, RUL-15, W02, W03, W04, W05, W06, W07, W23 |",
+      "new": "| 1.1 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-012, FC-014, MC-06, MC-07, RUL-01, RUL-02, RUL-03, RUL-04, RUL-05, RUL-07, RUL-12, RUL-15, W02, W03, W04, W05, W06, W07, W23 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+      "old": "> **Version:** 1.1 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active \u2014 field-validated (FIX-001/002/003, ADK Harness)",
+      "new": "> **Version:** 1.1 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active \u2014 field-validated (FIX-001/002/003, ADK Harness)",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+      "old": "| 1.1 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-012, FC-014, RUL-12, W21 |",
+      "new": "| 1.1 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-012, FC-014, RUL-12, W21 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "old": "> **Version:** 1.0 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** DRAFT FOR EXECUTABLE-MAP REVIEW \u2014 NOT INSTALLED (sections marked OPEN are not doctrine until ruled)",
+      "new": "> **Version:** 1.0 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** DRAFT FOR EXECUTABLE-MAP REVIEW \u2014 NOT INSTALLED (sections marked OPEN are not doctrine until ruled)",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "old": "| 1.0 | 2026-10-16 | New doc entering Hub: owning document for deployment and Git / cloud authority (RUL-06; FC-011). Ruled content: seats and authority (\u00a72), the context \u00d7 action \u00d7 seat matrix's ruled rows (\u00a73; RUL-02; Hub D5 cited), deployment exclusion of `agent_docs/**` with three verified surfaces (\u00a74; RUL-03). Gate D pointer (\u00a75). Distribution and pinning (\u00a76, RUL-14). Platform profiles and the DevOps remainder recorded as OPEN (\u00a77\u2013\u00a78; DEC-18). [FC-011; FC-012; FC-088; IN-2026-10-15-08 \u2026 IN-2026-10-15-10 (WF-08, WF-09, WF-10); RUL-02; RUL-03; RUL-06]; current correction pass: MC-01\u202614; RUL-02, RUL-03, RUL-06, RUL-10 |",
+      "new": "| 1.0 | <<ACTUAL_LANDING_DATE>> | New doc entering Hub: owning document for deployment and Git / cloud authority (RUL-06; FC-011). Ruled content: seats and authority (\u00a72), the context \u00d7 action \u00d7 seat matrix's ruled rows (\u00a73; RUL-02; Hub D5 cited), deployment exclusion of `agent_docs/**` with three verified surfaces (\u00a74; RUL-03). Gate D pointer (\u00a75). Distribution and pinning (\u00a76, RUL-14). Platform profiles and the DevOps remainder recorded as OPEN (\u00a77\u2013\u00a78; DEC-18). [FC-011; FC-012; FC-088; IN-2026-10-15-08 \u2026 IN-2026-10-15-10 (WF-08, WF-09, WF-10); RUL-02; RUL-03; RUL-06]; current correction pass: MC-01\u202614; RUL-02, RUL-03, RUL-06, RUL-10 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md",
+      "old": "> **Version:** 1.1 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 1.1 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md",
+      "old": "| 1.1 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-014, RUL-12, W22 |",
+      "new": "| 1.1 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-014, RUL-12, W22 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+      "old": "> **Version:** 1.3 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 1.3 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+      "old": "| 1.3 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-003, FC-004, FC-005, FC-009, FC-014, FC-016, FC-017, FC-019, FC-025, FC-026, FC-027, FC-028, FC-029, FC-071, FC-072, FC-081, MC-01, MC-06, RUL-01, RUL-02, RUL-03, RUL-05, RUL-07, RUL-09, RUL-12, RUL-14, RUL-15, W08, W09, W10, W11, W12, W13, W23 |",
+      "new": "| 1.3 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-003, FC-004, FC-005, FC-009, FC-014, FC-016, FC-017, FC-019, FC-025, FC-026, FC-027, FC-028, FC-029, FC-071, FC-072, FC-081, MC-01, MC-06, RUL-01, RUL-02, RUL-03, RUL-05, RUL-07, RUL-09, RUL-12, RUL-14, RUL-15, W08, W09, W10, W11, W12, W13, W23 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+      "old": "> **Version:** 1.3.0 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 1.3.0 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+      "old": "| 1.3.0 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-032, FC-071, FC-072, FC-088, RUL-14 |",
+      "new": "| 1.3.0 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-032, FC-071, FC-072, FC-088, RUL-14 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+      "old": "> **Version:** 1.2.0 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 1.2.0 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+      "old": "| 1.2.0 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-009, MC-01 |",
+      "new": "| 1.2.0 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-009, MC-01 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+      "old": "> **Version:** 1.0 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** DRAFT FOR EXECUTABLE-MAP REVIEW \u2014 NOT INSTALLED",
+      "new": "> **Version:** 1.0 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** DRAFT FOR EXECUTABLE-MAP REVIEW \u2014 NOT INSTALLED",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+      "old": "| 1.0 | 2026-10-16 | New doc entering Hub: the Director-approved QAM playbook v1.0 (ruling RUL-01, 2026-10-14; source SHA-256 `97e111e2\u20265c897`) proposed with integration substitutions S1 (Hub header, provenance, Pairs-with), S2 (retroactivity: newly authored modules), S3 (canonical `QA_PLAYBOOK.md` name; journal citations replaced by Hub rules), S4 (template set home `03_BUILD_METHODOLOGY/_templates/QAM/`), S5 (cleanup policy citations), S6 (TRM placeholder; ABM/APBM one line; parent-module sentence generalized), S7 (synchronization statement), S8 (snapshot identity, DEC-17). Template set installation is proposed; verify the installed translations separately before recording completion. [IN-2026-10-15-23 \u2026 IN-2026-10-15-36 (QAM-01\u202614); WF-05; WF-07; RRM-05; RUL-01\u2026RUL-07; AD-01]; current correction pass: MC-01\u202614; RUL-01, RUL-04, RUL-06 |",
+      "new": "| 1.0 | <<ACTUAL_LANDING_DATE>> | New doc entering Hub: the Director-approved QAM playbook v1.0 (ruling RUL-01, 2026-10-14; source SHA-256 `97e111e2\u20265c897`) proposed with integration substitutions S1 (Hub header, provenance, Pairs-with), S2 (retroactivity: newly authored modules), S3 (canonical `QA_PLAYBOOK.md` name; journal citations replaced by Hub rules), S4 (template set home `03_BUILD_METHODOLOGY/_templates/QAM/`), S5 (cleanup policy citations), S6 (TRM placeholder; ABM/APBM one line; parent-module sentence generalized), S7 (synchronization statement), S8 (snapshot identity, DEC-17). Template set installation is proposed; verify the installed translations separately before recording completion. [IN-2026-10-15-23 \u2026 IN-2026-10-15-36 (QAM-01\u202614); WF-05; WF-07; RRM-05; RUL-01\u2026RUL-07; AD-01]; current correction pass: MC-01\u202614; RUL-01, RUL-04, RUL-06 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+      "old": "> **Version:** 1.2 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active \u2014 field-tested (ADK Harness BIM/FIX verification)",
+      "new": "> **Version:** 1.2 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active \u2014 field-tested (ADK Harness BIM/FIX verification)",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+      "old": "| 1.2 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-005, FC-025, RUL-03, RUL-12, W14, W15, W16 |",
+      "new": "| 1.2 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-005, FC-025, RUL-03, RUL-12, W14, W15, W16 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "old": "> **Version:** 1.0 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** DRAFT FOR EXECUTABLE-MAP REVIEW \u2014 NOT INSTALLED",
+      "new": "> **Version:** 1.0 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** DRAFT FOR EXECUTABLE-MAP REVIEW \u2014 NOT INSTALLED",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "old": "| 1.0 | 2026-10-16 | New doc entering Hub: Review Rework Module doctrine, authored from the RRM pilot playbook v0.1 (SRC-R01) and field results (SRC-R03) under the Director rulings of 2026-10-14. Departures from the pilot text: \u00a71 module identity per SFP \u00a72.5 and mandatory QAM (RUL-01/05); \u00a72 new \u2014 two review checkpoints, clean review \u2192 no RRM (RUL-05); \u00a74 lifecycle re-seated (Engineer / QA Lead / QA Executor / Director / Architect) with Q1/approval/release/Q2 and the RUL-03 sequence; \u00a76 frozen contract with writable lanes (RUL-04), kit reference replaced by the Hub template set and the module's `QAM/`; \u00a77 branch flow restated from RUL-02 (no `--no-ff` project policy as Hub policy); \u00a78 QAM interface; \u00a710 cleanup-before-closeout sequence (RUL-03) replacing the pilot's \"Gate Q then cleanup\" wording; \u00a711 reviewer guidance as a section; \u00a712 continuous execution within released scope (RUL-15); \u00a713 promotion via DocSet Sync. [IN-2026-10-15-13 \u2026 IN-2026-10-15-22 (RRM-01\u202610); WF-11; WF-07; RUL-01\u2026RUL-06]; current correction pass: MC-01\u202614; RUL-05, RUL-06, RUL-14, RUL-15 |",
+      "new": "| 1.0 | <<ACTUAL_LANDING_DATE>> | New doc entering Hub: Review Rework Module doctrine, authored from the RRM pilot playbook v0.1 (SRC-R01) and field results (SRC-R03) under the Director rulings of 2026-10-14. Departures from the pilot text: \u00a71 module identity per SFP \u00a72.5 and mandatory QAM (RUL-01/05); \u00a72 new \u2014 two review checkpoints, clean review \u2192 no RRM (RUL-05); \u00a74 lifecycle re-seated (Engineer / QA Lead / QA Executor / Director / Architect) with Q1/approval/release/Q2 and the RUL-03 sequence; \u00a76 frozen contract with writable lanes (RUL-04), kit reference replaced by the Hub template set and the module's `QAM/`; \u00a77 branch flow restated from RUL-02 (no `--no-ff` project policy as Hub policy); \u00a78 QAM interface; \u00a710 cleanup-before-closeout sequence (RUL-03) replacing the pilot's \"Gate Q then cleanup\" wording; \u00a711 reviewer guidance as a section; \u00a712 continuous execution within released scope (RUL-15); \u00a713 promotion via DocSet Sync. [IN-2026-10-15-13 \u2026 IN-2026-10-15-22 (RRM-01\u202610); WF-11; WF-07; RUL-01\u2026RUL-06]; current correction pass: MC-01\u202614; RUL-05, RUL-06, RUL-14, RUL-15 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+      "old": "> **Version:** 2.2 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 2.2 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+      "old": "| 2.2 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: DEC-03, FC-020, FC-021, FC-022, FC-023, FC-024, FC-030, FC-031, FC-040, FC-063, RUL-11, RUL-12, RUL-13 |",
+      "new": "| 2.2 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: DEC-03, FC-020, FC-021, FC-022, FC-023, FC-024, FC-030, FC-031, FC-040, FC-063, RUL-11, RUL-12, RUL-13 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+      "old": "> **Version:** 1.0 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Proposed \u2014 pending verified publication",
+      "new": "> **Version:** 1.0 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Proposed \u2014 pending verified publication",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+      "old": "| 1.0 | 2026-10-16 | Revised workflow and stick diagram; original retained; review checkpoints and seat boundaries reconciled | MC-06; W01\u2013W23; RUL-01\u2013RUL-15; Tony 2026-10-16 correction assignment |",
+      "new": "| 1.0 | <<ACTUAL_LANDING_DATE>> | Revised workflow and stick diagram; original retained; review checkpoints and seat boundaries reconciled | MC-06; W01\u2013W23; RUL-01\u2013RUL-15; Tony 2026-10-16 correction assignment |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+      "old": "> **Version:** 1.0 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Proposed \u2014 pending verified publication",
+      "new": "> **Version:** 1.0 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Proposed \u2014 pending verified publication",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+      "old": "| 1.0 | 2026-10-16 | Revised workflow and stick diagram; original retained; review checkpoints and seat boundaries reconciled | MC-06; W01\u2013W23; RUL-01\u2013RUL-15; Tony 2026-10-16 correction assignment |",
+      "new": "| 1.0 | <<ACTUAL_LANDING_DATE>> | Revised workflow and stick diagram; original retained; review checkpoints and seat boundaries reconciled | MC-06; W01\u2013W23; RUL-01\u2013RUL-15; Tony 2026-10-16 correction assignment |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+      "old": "> **Version:** 1.0 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Proposed \u2014 pending verified publication",
+      "new": "> **Version:** 1.0 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Proposed \u2014 pending verified publication",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+      "old": "| 1.0 | 2026-10-16 | Revised workflow and stick diagram; original retained; review checkpoints and seat boundaries reconciled | MC-06; W01\u2013W23; RUL-01\u2013RUL-15; Tony 2026-10-16 correction assignment |",
+      "new": "| 1.0 | <<ACTUAL_LANDING_DATE>> | Revised workflow and stick diagram; original retained; review checkpoints and seat boundaries reconciled | MC-06; W01\u2013W23; RUL-01\u2013RUL-15; Tony 2026-10-16 correction assignment |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+      "old": "> **Version:** 1.0 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Proposed \u2014 pending verified publication",
+      "new": "> **Version:** 1.0 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Proposed \u2014 pending verified publication",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+      "old": "| 1.0 | 2026-10-16 | Revised workflow and stick diagram; original retained; review checkpoints and seat boundaries reconciled | MC-06; W01\u2013W23; RUL-01\u2013RUL-15; Tony 2026-10-16 correction assignment |",
+      "new": "| 1.0 | <<ACTUAL_LANDING_DATE>> | Revised workflow and stick diagram; original retained; review checkpoints and seat boundaries reconciled | MC-06; W01\u2013W23; RUL-01\u2013RUL-15; Tony 2026-10-16 correction assignment |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+      "old": "> **Version:** 1.2 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 1.2 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+      "old": "| 1.2 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-021, FC-056, FC-057, FC-058, FC-059, FC-061, FC-063, FC-064, FC-066, FC-070, RUL-11 |",
+      "new": "| 1.2 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-021, FC-056, FC-057, FC-058, FC-059, FC-061, FC-063, FC-064, FC-066, FC-070, RUL-11 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+      "old": "> **Version:** 1.4 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 1.4 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+      "old": "| 1.4 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-009, FC-021, FC-028, FC-033, FC-035, FC-036, FC-041, FC-042, FC-063, FC-066, FC-071, MC-01, RUL-11 |",
+      "new": "| 1.4 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-009, FC-021, FC-028, FC-033, FC-035, FC-036, FC-041, FC-042, FC-063, FC-066, FC-071, MC-01, RUL-11 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+      "old": "> **Version:** 1.5 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 1.5 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+      "old": "| 1.5 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-021, FC-033, FC-034, FC-035, FC-036, FC-038, FC-039, FC-041, FC-042, FC-043, FC-044, FC-063, FC-066, RUL-11 |",
+      "new": "| 1.5 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-021, FC-033, FC-034, FC-035, FC-036, FC-038, FC-039, FC-041, FC-042, FC-043, FC-044, FC-063, FC-066, RUL-11 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+      "old": "> **Version:** 1.2 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 1.2 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+      "old": "| 1.2 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-003/096, FC-033, FC-034, FC-036, FC-037, FC-038, FC-039, FC-045, RUL-11 |",
+      "new": "| 1.2 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-003/096, FC-033, FC-034, FC-036, FC-037, FC-038, FC-039, FC-045, RUL-11 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+      "old": "> **Version:** 1.2 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 1.2 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+      "old": "| 1.2 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-047, FC-050, FC-051, FC-052, FC-053, FC-054, FC-055, FC-059, FC-060, FC-062, FC-063, FC-067, FC-068, RUL-11 |",
+      "new": "| 1.2 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-047, FC-050, FC-051, FC-052, FC-053, FC-054, FC-055, FC-059, FC-060, FC-062, FC-063, FC-067, FC-068, RUL-11 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+      "old": "> **Version:** 1.3 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 1.3 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+      "old": "| 1.3 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-035, FC-040, FC-046, FC-046-heading, FC-047, FC-048, FC-049, FC-055, FC-067, FC-068, RUL-11, RUL-13 |",
+      "new": "| 1.3 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-035, FC-040, FC-046, FC-046-heading, FC-047, FC-048, FC-049, FC-055, FC-067, FC-068, RUL-11, RUL-13 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+      "old": "> **Version:** 1.2 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 1.2 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+      "old": "| 1.2 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-047, FC-052, FC-053, FC-054, FC-055, FC-059, FC-063, FC-065, FC-065-confirmed, FC-065-timeout, FC-067, FC-068, RUL-11 |",
+      "new": "| 1.2 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-047, FC-052, FC-053, FC-054, FC-055, FC-059, FC-063, FC-065, FC-065-confirmed, FC-065-timeout, FC-067, FC-068, RUL-11 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+      "old": "> **Version:** 1.2 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 1.2 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+      "old": "| 1.2 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-003, FC-072, FC-073, FC-081, FC-082, RUL-14 |",
+      "new": "| 1.2 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-003, FC-072, FC-073, FC-081, FC-082, RUL-14 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+      "old": "> **Version:** 1.2 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 1.2 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+      "old": "| 1.2 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-017, FC-027, FC-071, FC-072, FC-077, RUL-09 |",
+      "new": "| 1.2 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-017, FC-027, FC-071, FC-072, FC-077, RUL-09 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "05_DESIGN_SYSTEM/THEME_LIBRARY.md",
+      "old": "> **Version:** 1.3 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 1.3 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "05_DESIGN_SYSTEM/THEME_LIBRARY.md",
+      "old": "| 1.3 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-003, FC-074, FC-081, RUL-14 |",
+      "new": "| 1.3 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-003, FC-074, FC-081, RUL-14 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+      "old": "> **Version:** 1.3 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 1.3 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+      "old": "| 1.3 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-009, FC-075, FC-083, MC-01 |",
+      "new": "| 1.3 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-009, FC-075, FC-083, MC-01 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "05_DESIGN_SYSTEM/TOKEN_FILE.md",
+      "old": "> **Version:** 1.3 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 1.3 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "05_DESIGN_SYSTEM/TOKEN_FILE.md",
+      "old": "| 1.3 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-074 |",
+      "new": "| 1.3 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-074 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+      "old": "> **Version:** 1.5 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 1.5 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+      "old": "| 1.5 | 2026-10-16 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-003/096, FC-009, FC-041, FC-071, FC-072, FC-073, FC-076, FC-077, FC-078, FC-079, FC-080, FC-082, FC-083, MC-01 |",
+      "new": "| 1.5 | <<ACTUAL_LANDING_DATE>> | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-003/096, FC-009, FC-041, FC-071, FC-072, FC-073, FC-076, FC-077, FC-078, FC-079, FC-080, FC-082, FC-083, MC-01 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "> **Version:** 1.0 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 1.0 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | APP_FACTORY_BLUEPRINT v2.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-004, FC-008, FC-017, FC-027, MC-04, MC-06, MC-07, RUL-01, RUL-05, RUL-07, RUL-09, RUL-10, RUL-12, RUL-14 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | APP_FACTORY_BLUEPRINT v2.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-004, FC-008, FC-017, FC-027, MC-04, MC-06, MC-07, RUL-01, RUL-05, RUL-07, RUL-09, RUL-10, RUL-12, RUL-14 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | SOFTWARE_FACTORY_PLAYBOOK v1.4 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-001, FC-002, FC-005, FC-006, FC-007, FC-009, FC-021, FC-033, FC-036, FC-063, FC-066, MC-01, MC-05, MC-06, MC-07, RUL-01, RUL-05, RUL-07, RUL-08, RUL-09, RUL-11, RUL-12, RUL-14, W01, W23 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | SOFTWARE_FACTORY_PLAYBOOK v1.4 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-001, FC-002, FC-005, FC-006, FC-007, FC-009, FC-021, FC-033, FC-036, FC-063, FC-066, MC-01, MC-05, MC-06, MC-07, RUL-01, RUL-05, RUL-07, RUL-08, RUL-09, RUL-11, RUL-12, RUL-14, W01, W23 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | STARTER_KIT_HANDBOOK v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | DEC-04, FC-001, FC-003, FC-003/096, FC-005, FC-033, FC-034, FC-036, FC-038, FC-041, FC-042, FC-072, FC-073, FC-081, RUL-12, RUL-14 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | STARTER_KIT_HANDBOOK v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | DEC-04, FC-001, FC-003, FC-003/096, FC-005, FC-033, FC-034, FC-036, FC-038, FC-041, FC-042, FC-072, FC-073, FC-081, RUL-12, RUL-14 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | ARCHITECT_PLAYBOOK v2.3 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-004, FC-005, FC-008, FC-014, FC-017, FC-027, MC-06, RUL-01, RUL-05, RUL-09, RUL-12, W18, W23 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | ARCHITECT_PLAYBOOK v2.3 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-004, FC-005, FC-008, FC-014, FC-017, FC-027, MC-06, RUL-01, RUL-05, RUL-09, RUL-12, W18, W23 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | ARCHITECT_QUESTIONNAIRE v2.3 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-016 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | ARCHITECT_QUESTIONNAIRE v2.3 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-016 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | DESIGNER_PLAYBOOK v2.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-004, FC-005, FC-008, FC-016, FC-017, FC-018, FC-027, FC-084, MC-06, MC-07, RUL-01, RUL-05, RUL-09, RUL-12, W23 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | DESIGNER_PLAYBOOK v2.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-004, FC-005, FC-008, FC-016, FC-017, FC-018, FC-027, FC-084, MC-06, MC-07, RUL-01, RUL-05, RUL-09, RUL-12, W23 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | ENGINEER_PLAYBOOK v1.3 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-004, FC-005, FC-008, FC-014, FC-015, FC-017, FC-018, FC-027, MC-06, MC-07, RUL-01, RUL-05, RUL-09, RUL-12, W19, W23 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | ENGINEER_PLAYBOOK v1.3 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-004, FC-005, FC-008, FC-014, FC-015, FC-017, FC-018, FC-027, MC-06, MC-07, RUL-01, RUL-05, RUL-09, RUL-12, W19, W23 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | HANDOFF_PACKAGE_PLAYBOOK v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-009, FC-017, FC-018, FC-019, FC-027, MC-01, RUL-09, W20 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | HANDOFF_PACKAGE_PLAYBOOK v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-009, FC-017, FC-018, FC-019, FC-027, MC-01, RUL-09, W20 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | RECON_QUESTIONNAIRE v0.6 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-001, FC-005, FC-007, FC-014, FC-033, FC-034, FC-069, MC-02, MC-04, MC-13, RUL-03, RUL-12, W17 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | RECON_QUESTIONNAIRE v0.6 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-001, FC-005, FC-007, FC-014, FC-033, FC-034, FC-069, MC-02, MC-04, MC-13, RUL-03, RUL-12, W17 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | APP_FACTORY_SKILLS_PLAYBOOK v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-005, FC-006, FC-014, FC-021, FC-087 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | APP_FACTORY_SKILLS_PLAYBOOK v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-005, FC-006, FC-014, FC-021, FC-087 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | BIM_PLAYBOOK v1.1 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-012, FC-014, MC-06, MC-07, RUL-01, RUL-02, RUL-03, RUL-04, RUL-05, RUL-07, RUL-12, RUL-15, W02, W03, W04, W05, W06, W07, W23 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | BIM_PLAYBOOK v1.1 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-012, FC-014, MC-06, MC-07, RUL-01, RUL-02, RUL-03, RUL-04, RUL-05, RUL-07, RUL-12, RUL-15, W02, W03, W04, W05, W06, W07, W23 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | BUG_FIX_PLAYBOOK v1.1 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-012, FC-014, RUL-12, W21 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | BUG_FIX_PLAYBOOK v1.1 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-012, FC-014, RUL-12, W21 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | FEAT_PLAYBOOK v1.1 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-014, RUL-12, W22 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | FEAT_PLAYBOOK v1.1 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-014, RUL-12, W22 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | FFM_PLAYBOOK v1.3 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-003, FC-004, FC-005, FC-009, FC-014, FC-016, FC-017, FC-019, FC-025, FC-026, FC-027, FC-028, FC-029, FC-071, FC-072, FC-081, MC-01, MC-06, RUL-01, RUL-02, RUL-03, RUL-05, RUL-07, RUL-09, RUL-12, RUL-14, RUL-15, W08, W09, W10, W11, W12, W13, W23 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | FFM_PLAYBOOK v1.3 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-003, FC-004, FC-005, FC-009, FC-014, FC-016, FC-017, FC-019, FC-025, FC-026, FC-027, FC-028, FC-029, FC-071, FC-072, FC-081, MC-01, MC-06, RUL-01, RUL-02, RUL-03, RUL-05, RUL-07, RUL-09, RUL-12, RUL-14, RUL-15, W08, W09, W10, W11, W12, W13, W23 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | FRONTEND_BUILD_PHASE_PLAYBOOK v1.3.0 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-032, FC-071, FC-072, FC-088, RUL-14 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | FRONTEND_BUILD_PHASE_PLAYBOOK v1.3.0 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-032, FC-071, FC-072, FC-088, RUL-14 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | FRONTEND_FIRST_PLAYBOOK v1.2.0 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-009, MC-01 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | FRONTEND_FIRST_PLAYBOOK v1.2.0 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-009, MC-01 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | QA_PLAYBOOK v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-005, FC-025, RUL-03, RUL-12, W14, W15, W16 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | QA_PLAYBOOK v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-005, FC-025, RUL-03, RUL-12, W14, W15, W16 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | TESTING_PLAYBOOK v2.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | DEC-03, FC-020, FC-021, FC-022, FC-023, FC-024, FC-030, FC-031, FC-040, FC-063, RUL-11, RUL-12, RUL-13 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | TESTING_PLAYBOOK v2.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | DEC-03, FC-020, FC-021, FC-022, FC-023, FC-024, FC-030, FC-031, FC-040, FC-063, RUL-11, RUL-12, RUL-13 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | API_AND_SERVICES_MANUAL v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-021, FC-056, FC-057, FC-058, FC-059, FC-061, FC-063, FC-064, FC-066, FC-070, RUL-11 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | API_AND_SERVICES_MANUAL v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-021, FC-056, FC-057, FC-058, FC-059, FC-061, FC-063, FC-064, FC-066, FC-070, RUL-11 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | APP_ARCHITECTURE_MANUAL v1.4 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-001, FC-009, FC-021, FC-028, FC-033, FC-035, FC-036, FC-041, FC-042, FC-063, FC-066, FC-071, MC-01, RUL-11 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | APP_ARCHITECTURE_MANUAL v1.4 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-001, FC-009, FC-021, FC-028, FC-033, FC-035, FC-036, FC-041, FC-042, FC-063, FC-066, FC-071, MC-01, RUL-11 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | AUTH_MANUAL v1.5 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-001, FC-021, FC-033, FC-034, FC-035, FC-036, FC-038, FC-039, FC-041, FC-042, FC-043, FC-044, FC-063, FC-066, RUL-11 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | AUTH_MANUAL v1.5 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-001, FC-021, FC-033, FC-034, FC-035, FC-036, FC-038, FC-039, FC-041, FC-042, FC-043, FC-044, FC-063, FC-066, RUL-11 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | DATABASE_MANUAL v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-001, FC-003/096, FC-033, FC-034, FC-036, FC-037, FC-038, FC-039, FC-045, RUL-11 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | DATABASE_MANUAL v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-001, FC-003/096, FC-033, FC-034, FC-036, FC-037, FC-038, FC-039, FC-045, RUL-11 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | ECOMMERCE_AND_PAYMENTS_MANUAL v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-047, FC-050, FC-051, FC-052, FC-053, FC-054, FC-055, FC-059, FC-060, FC-062, FC-063, FC-067, FC-068, RUL-11 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | ECOMMERCE_AND_PAYMENTS_MANUAL v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-047, FC-050, FC-051, FC-052, FC-053, FC-054, FC-055, FC-059, FC-060, FC-062, FC-063, FC-067, FC-068, RUL-11 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | STATE_MANAGEMENT_MANUAL v1.3 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-035, FC-040, FC-046, FC-046-heading, FC-047, FC-048, FC-049, FC-055, FC-067, FC-068, RUL-11, RUL-13 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | STATE_MANAGEMENT_MANUAL v1.3 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-035, FC-040, FC-046, FC-046-heading, FC-047, FC-048, FC-049, FC-055, FC-067, FC-068, RUL-11, RUL-13 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | STRIPE_SUBSCRIPTIONS_PLAYBOOK v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-047, FC-052, FC-053, FC-054, FC-055, FC-059, FC-063, FC-065, FC-065-confirmed, FC-065-timeout, FC-067, FC-068, RUL-11 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | STRIPE_SUBSCRIPTIONS_PLAYBOOK v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-047, FC-052, FC-053, FC-054, FC-055, FC-059, FC-063, FC-065, FC-065-confirmed, FC-065-timeout, FC-067, FC-068, RUL-11 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | COMPONENT_REGISTRY v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-003, FC-072, FC-073, FC-081, FC-082, RUL-14 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | COMPONENT_REGISTRY v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-003, FC-072, FC-073, FC-081, FC-082, RUL-14 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | GLOBAL_DESIGN_SYSTEM_HANDBOOK v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-017, FC-027, FC-071, FC-072, FC-077, RUL-09 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | GLOBAL_DESIGN_SYSTEM_HANDBOOK v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-017, FC-027, FC-071, FC-072, FC-077, RUL-09 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | THEME_LIBRARY v1.3 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-003, FC-074, FC-081, RUL-14 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | THEME_LIBRARY v1.3 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-003, FC-074, FC-081, RUL-14 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | THEMING_MANUAL v1.3 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-009, FC-075, FC-083, MC-01 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | THEMING_MANUAL v1.3 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-009, FC-075, FC-083, MC-01 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | TOKEN_FILE v1.3 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-074 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | TOKEN_FILE v1.3 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-074 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | UI_UX_BUILDING_MANUAL v1.5 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-003/096, FC-009, FC-041, FC-071, FC-072, FC-073, FC-076, FC-077, FC-078, FC-079, FC-080, FC-082, FC-083, MC-01 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | UI_UX_BUILDING_MANUAL v1.5 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-003/096, FC-009, FC-041, FC-071, FC-072, FC-073, FC-076, FC-077, FC-078, FC-079, FC-080, FC-082, FC-083, MC-01 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | QAM_PLAYBOOK v1.0 | New owning playbook; accepted template installation verified separately | RUL-01, RUL-04, RUL-06; RUL-01\u202615; AD-01 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | QAM_PLAYBOOK v1.0 | New owning playbook; accepted template installation verified separately | RUL-01, RUL-04, RUL-06; RUL-01\u202615; AD-01 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | RRM_PLAYBOOK v1.0 | New owning playbook | RUL-05, RUL-06, RUL-14, RUL-15; RUL-01\u202615; AD-01 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | RRM_PLAYBOOK v1.0 | New owning playbook | RUL-05, RUL-06, RUL-14, RUL-15; RUL-01\u202615; AD-01 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | DEPLOYMENT_PLAYBOOK v1.0 | New owning playbook | RUL-02, RUL-03, RUL-06, RUL-10; RUL-01\u202615; AD-01 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | DEPLOYMENT_PLAYBOOK v1.0 | New owning playbook | RUL-02, RUL-03, RUL-06, RUL-10; RUL-01\u202615; AD-01 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | Historical QA_PLAYBOOK v1.0 | Exact historical restoration; not active instructions | FC-089; RUL-14 |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | Historical QA_PLAYBOOK v1.0 | Exact historical restoration; not active instructions | FC-089; RUL-14 |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | FFM_CREATION workflow v1.0 | Revised reference and SVG stick diagram; original retained as superseded history | MC-06; W01\u2013W23; RUL-01\u2013RUL-15; Tony 2026-10-16 correction assignment |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | FFM_CREATION workflow v1.0 | Revised reference and SVG stick diagram; original retained as superseded history | MC-06; W01\u2013W23; RUL-01\u2013RUL-15; Tony 2026-10-16 correction assignment |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | FFM_EXECUTION workflow v1.0 | Revised reference and SVG stick diagram; original retained as superseded history | MC-06; W01\u2013W23; RUL-01\u2013RUL-15; Tony 2026-10-16 correction assignment |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | FFM_EXECUTION workflow v1.0 | Revised reference and SVG stick diagram; original retained as superseded history | MC-06; W01\u2013W23; RUL-01\u2013RUL-15; Tony 2026-10-16 correction assignment |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | FFM_DEPLOYMENT workflow v1.0 | Revised reference and SVG stick diagram; original retained as superseded history | MC-06; W01\u2013W23; RUL-01\u2013RUL-15; Tony 2026-10-16 correction assignment |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | FFM_DEPLOYMENT workflow v1.0 | Revised reference and SVG stick diagram; original retained as superseded history | MC-06; W01\u2013W23; RUL-01\u2013RUL-15; Tony 2026-10-16 correction assignment |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old": "| 2026-10-16 | BIM_WORKFLOW workflow v1.0 | Revised reference and SVG stick diagram; original retained as superseded history | MC-06; W01\u2013W23; RUL-01\u2013RUL-15; Tony 2026-10-16 correction assignment |",
+      "new": "| <<ACTUAL_LANDING_DATE>> | BIM_WORKFLOW workflow v1.0 | Revised reference and SVG stick diagram; original retained as superseded history | MC-06; W01\u2013W23; RUL-01\u2013RUL-15; Tony 2026-10-16 correction assignment |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "> **Version:** 1.0 \u00b7 **Date:** 2026-10-16 \u00b7 **Status:** Active",
+      "new": "> **Version:** 1.0 \u00b7 **Date:** <<ACTUAL_LANDING_DATE>> \u00b7 **Status:** Active",
+      "occurrences": 1,
+      "type": "header"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| APP_FACTORY_BLUEPRINT | 2.2 | 2026-10-16 | Active | The Stark Protocol \u2014 who does what, in what order, with human approval gates; owns the pipeline router | ARCHITECT_PLAYBOOK, DESIGNER_PLAYBOOK, ENGINEER_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, RECON_QUESTIONNAIRE, SOFTWARE_FACTORY_PLAYBOOK |",
+      "new": "| APP_FACTORY_BLUEPRINT | 2.2 | <<ACTUAL_LANDING_DATE>> | Active | The Stark Protocol \u2014 who does what, in what order, with human approval gates; owns the pipeline router | ARCHITECT_PLAYBOOK, DESIGNER_PLAYBOOK, ENGINEER_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, RECON_QUESTIONNAIRE, SOFTWARE_FACTORY_PLAYBOOK |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| SOFTWARE_FACTORY_PLAYBOOK | 1.4 | 2026-10-16 | Active | The process spine: 9-phase feature build sequence + Doctrine Pairing Principle + Module Identity & QA Handoff (Factory-wide, \u00a72.5) | APP_FACTORY_BLUEPRINT, DESIGNER_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, TESTING_PLAYBOOK |",
+      "new": "| SOFTWARE_FACTORY_PLAYBOOK | 1.4 | <<ACTUAL_LANDING_DATE>> | Active | The process spine: 9-phase feature build sequence + Doctrine Pairing Principle + Module Identity & QA Handoff (Factory-wide, \u00a72.5) | APP_FACTORY_BLUEPRINT, DESIGNER_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, TESTING_PLAYBOOK |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| STARTER_KIT_HANDBOOK | 1.2 | 2026-10-16 | Active | What the starter kit provides (aspirational \u2014 verify on disk per recon doctrine) | AUTH_MANUAL, COMPONENT_REGISTRY, DATABASE_MANUAL, STATE_MANAGEMENT_MANUAL, UI_UX_BUILDING_MANUAL |",
+      "new": "| STARTER_KIT_HANDBOOK | 1.2 | <<ACTUAL_LANDING_DATE>> | Active | What the starter kit provides (aspirational \u2014 verify on disk per recon doctrine) | AUTH_MANUAL, COMPONENT_REGISTRY, DATABASE_MANUAL, STATE_MANAGEMENT_MANUAL, UI_UX_BUILDING_MANUAL |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| ARCHITECT_PLAYBOOK | 2.3 | 2026-10-16 | Active | How to BE the Architect: recon mode, app-type router, approval flow, anti-patterns | APP_FACTORY_BLUEPRINT, ARCHITECT_QUESTIONNAIRE, DESIGNER_PLAYBOOK, RECON_QUESTIONNAIRE |",
+      "new": "| ARCHITECT_PLAYBOOK | 2.3 | <<ACTUAL_LANDING_DATE>> | Active | How to BE the Architect: recon mode, app-type router, approval flow, anti-patterns | APP_FACTORY_BLUEPRINT, ARCHITECT_QUESTIONNAIRE, DESIGNER_PLAYBOOK, RECON_QUESTIONNAIRE |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| ARCHITECT_QUESTIONNAIRE | 2.3 | 2026-10-16 | Active | The ignition instrument (single source): 12-Q core + optional Phase 4 + APP_BRIEF template | APP_FACTORY_BLUEPRINT, ARCHITECT_PLAYBOOK, RECON_QUESTIONNAIRE |",
+      "new": "| ARCHITECT_QUESTIONNAIRE | 2.3 | <<ACTUAL_LANDING_DATE>> | Active | The ignition instrument (single source): 12-Q core + optional Phase 4 + APP_BRIEF template | APP_FACTORY_BLUEPRINT, ARCHITECT_PLAYBOOK, RECON_QUESTIONNAIRE |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| DESIGNER_PLAYBOOK | 2.2 | 2026-10-16 | Active | How to BE the Designer: token-driven HTML + Playwright, Canonical Page Method, deliverables | ARCHITECT_PLAYBOOK, COMPONENT_REGISTRY, ENGINEER_PLAYBOOK, GLOBAL_DESIGN_SYSTEM_HANDBOOK, THEME_LIBRARY, THEMING_MANUAL |",
+      "new": "| DESIGNER_PLAYBOOK | 2.2 | <<ACTUAL_LANDING_DATE>> | Active | How to BE the Designer: token-driven HTML + Playwright, Canonical Page Method, deliverables | ARCHITECT_PLAYBOOK, COMPONENT_REGISTRY, ENGINEER_PLAYBOOK, GLOBAL_DESIGN_SYSTEM_HANDBOOK, THEME_LIBRARY, THEMING_MANUAL |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| ENGINEER_PLAYBOOK | 1.3 | 2026-10-16 | Active | How to BE the Engineer: recon executor (Phase 0), Kit Track + Pipeline Track, Karpathy Protocol home | APP_FACTORY_BLUEPRINT, DESIGNER_PLAYBOOK, FFM_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, FRONTEND_FIRST_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, RECON_QUESTIONNAIRE, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK |",
+      "new": "| ENGINEER_PLAYBOOK | 1.3 | <<ACTUAL_LANDING_DATE>> | Active | How to BE the Engineer: recon executor (Phase 0), Kit Track + Pipeline Track, Karpathy Protocol home | APP_FACTORY_BLUEPRINT, DESIGNER_PLAYBOOK, FFM_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, FRONTEND_FIRST_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, RECON_QUESTIONNAIRE, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| HANDOFF_PACKAGE_PLAYBOOK | 1.2 | 2026-10-16 | Active | The conversion pipeline's 4-file package doctrine + greenfield variant | APP_FACTORY_BLUEPRINT, DESIGNER_PLAYBOOK, ENGINEER_PLAYBOOK, FRONTEND_FIRST_PLAYBOOK, RECON_QUESTIONNAIRE |",
+      "new": "| HANDOFF_PACKAGE_PLAYBOOK | 1.2 | <<ACTUAL_LANDING_DATE>> | Active | The conversion pipeline's 4-file package doctrine + greenfield variant | APP_FACTORY_BLUEPRINT, DESIGNER_PLAYBOOK, ENGINEER_PLAYBOOK, FRONTEND_FIRST_PLAYBOOK, RECON_QUESTIONNAIRE |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| RECON_QUESTIONNAIRE | 0.6 | 2026-10-16 | Active (living document \u2014 grows with every FFM run's lessons) | The ground-truth gate: executable recon questions; Phase 0 / FFM Stage 0; the stark-recon skill's source content | APP_FACTORY_BLUEPRINT, ARCHITECT_PLAYBOOK, FFM_PLAYBOOK, STARTER_KIT_HANDBOOK |",
+      "new": "| RECON_QUESTIONNAIRE | 0.6 | <<ACTUAL_LANDING_DATE>> | Active (living document \u2014 grows with every FFM run's lessons) | The ground-truth gate: executable recon questions; Phase 0 / FFM Stage 0; the stark-recon skill's source content | APP_FACTORY_BLUEPRINT, ARCHITECT_PLAYBOOK, FFM_PLAYBOOK, STARTER_KIT_HANDBOOK |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| APP_FACTORY_SKILLS_PLAYBOOK | 1.2 | 2026-10-16 | Active | Skill-authoring constitution: Stark vs Agent skills, two-file contract, activation flow, CWD rule | DESIGNER_PLAYBOOK, FFM_PLAYBOOK, RECON_QUESTIONNAIRE |",
+      "new": "| APP_FACTORY_SKILLS_PLAYBOOK | 1.2 | <<ACTUAL_LANDING_DATE>> | Active | Skill-authoring constitution: Stark vs Agent skills, two-file contract, activation flow, CWD rule | DESIGNER_PLAYBOOK, FFM_PLAYBOOK, RECON_QUESTIONNAIRE |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| BIM_PLAYBOOK | 1.1 | 2026-10-16 | Active | Backend Integration Module doctrine: module identity, one-folder package + manager grammar, stage-gate lifecycle, ACCEPTANCE_SPEC handoff, QA engagement, contracts & seams | ARCHITECT_PLAYBOOK, BUG_FIX_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, QA_PLAYBOOK, RECON_QUESTIONNAIRE, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |",
+      "new": "| BIM_PLAYBOOK | 1.1 | <<ACTUAL_LANDING_DATE>> | Active | Backend Integration Module doctrine: module identity, one-folder package + manager grammar, stage-gate lifecycle, ACCEPTANCE_SPEC handoff, QA engagement, contracts & seams | ARCHITECT_PLAYBOOK, BUG_FIX_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, QA_PLAYBOOK, RECON_QUESTIONNAIRE, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| BUG_FIX_PLAYBOOK | 1.1 | 2026-10-16 | Active \u2014 field-validated (FIX-001/002/003, ADK Harness) | Bug-fix doctrine (field-validated): evidence-first lifecycle, root-cause mechanism rule, regression protection, Gate Q/D, scope control, environment parity, FIX module anatomy, module identity, ACCEPTANCE_SPEC artifact, field case studies | ENGINEER_PLAYBOOK, FFM_PLAYBOOK, QA_PLAYBOOK, RECON_QUESTIONNAIRE, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |",
+      "new": "| BUG_FIX_PLAYBOOK | 1.1 | <<ACTUAL_LANDING_DATE>> | Active \u2014 field-validated (FIX-001/002/003, ADK Harness) | Bug-fix doctrine (field-validated): evidence-first lifecycle, root-cause mechanism rule, regression protection, Gate Q/D, scope control, environment parity, FIX module anatomy, module identity, ACCEPTANCE_SPEC artifact, field case studies | ENGINEER_PLAYBOOK, FFM_PLAYBOOK, QA_PLAYBOOK, RECON_QUESTIONNAIRE, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| DEPLOYMENT_PLAYBOOK | 1.0 | 2026-10-16 | DRAFT FOR EXECUTABLE-MAP REVIEW \u2014 NOT INSTALLED (sections marked OPEN are not doctrine until ruled) | Common identity, exclusion, verification and recovery; context-specific permissions retained | APP_FACTORY_SKILLS_PLAYBOOK, BIM_PLAYBOOK, FFM_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, RECON_QUESTIONNAIRE, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK |",
+      "new": "| DEPLOYMENT_PLAYBOOK | 1.0 | <<ACTUAL_LANDING_DATE>> | DRAFT FOR EXECUTABLE-MAP REVIEW \u2014 NOT INSTALLED (sections marked OPEN are not doctrine until ruled) | Common identity, exclusion, verification and recovery; context-specific permissions retained | APP_FACTORY_SKILLS_PLAYBOOK, BIM_PLAYBOOK, FFM_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, RECON_QUESTIONNAIRE, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| FEAT_PLAYBOOK | 1.1 | 2026-10-16 | Active | Feature Module doctrine: adding capability to working systems \u2014 launch conditions, v1-now/v2-seeded versioning, scope discipline vs feature gravity, mode parity, accessibility-first gates (deltas over BIM mechanics) | BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, QA_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |",
+      "new": "| FEAT_PLAYBOOK | 1.1 | <<ACTUAL_LANDING_DATE>> | Active | Feature Module doctrine: adding capability to working systems \u2014 launch conditions, v1-now/v2-seeded versioning, scope discipline vs feature gravity, mode parity, accessibility-first gates (deltas over BIM mechanics) | BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, QA_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| FFM_PLAYBOOK | 1.3 | 2026-10-16 | Active | Module preparation, artifact ownership, prepared QAM, engineering and post-FFM review; revised workflow references | APP_FACTORY_SKILLS_PLAYBOOK, ARCHITECT_PLAYBOOK, DESIGNER_PLAYBOOK, ENGINEER_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, RECON_QUESTIONNAIRE, SOFTWARE_FACTORY_PLAYBOOK |",
+      "new": "| FFM_PLAYBOOK | 1.3 | <<ACTUAL_LANDING_DATE>> | Active | Module preparation, artifact ownership, prepared QAM, engineering and post-FFM review; revised workflow references | APP_FACTORY_SKILLS_PLAYBOOK, ARCHITECT_PLAYBOOK, DESIGNER_PLAYBOOK, ENGINEER_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, RECON_QUESTIONNAIRE, SOFTWARE_FACTORY_PLAYBOOK |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| FRONTEND_BUILD_PHASE_PLAYBOOK | 1.3.0 | 2026-10-16 | Active | Frontend build execution: six stages, doctrine refresh, pre-write checks, KIP loop | COMPONENT_REGISTRY, FFM_PLAYBOOK, FRONTEND_FIRST_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK |",
+      "new": "| FRONTEND_BUILD_PHASE_PLAYBOOK | 1.3.0 | <<ACTUAL_LANDING_DATE>> | Active | Frontend build execution: six stages, doctrine refresh, pre-write checks, KIP loop | COMPONENT_REGISTRY, FFM_PLAYBOOK, FRONTEND_FIRST_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| FRONTEND_FIRST_PLAYBOOK | 1.2.0 | 2026-10-16 | Active | When/why to build UI before backend: Kit Audit, gates, service-layer law, mock strategy | COMPONENT_REGISTRY, FRONTEND_BUILD_PHASE_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK |",
+      "new": "| FRONTEND_FIRST_PLAYBOOK | 1.2.0 | <<ACTUAL_LANDING_DATE>> | Active | When/why to build UI before backend: Kit Audit, gates, service-layer law, mock strategy | COMPONENT_REGISTRY, FRONTEND_BUILD_PHASE_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| QAM_PLAYBOOK | 1.0 | 2026-10-16 | DRAFT FOR EXECUTABLE-MAP REVIEW \u2014 NOT INSTALLED | Mandatory module QAM and accepted _templates/QAM set | ARCHITECT_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QA_PLAYBOOK, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |",
+      "new": "| QAM_PLAYBOOK | 1.0 | <<ACTUAL_LANDING_DATE>> | DRAFT FOR EXECUTABLE-MAP REVIEW \u2014 NOT INSTALLED | Mandatory module QAM and accepted _templates/QAM set | ARCHITECT_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QA_PLAYBOOK, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| QA_PLAYBOOK | 1.2 | 2026-10-16 | Active \u2014 field-tested (ADK Harness BIM/FIX verification) | QA doctrine (field-tested): independent verification seat \u2014 claim-package handoff, acceptance-spec contract extraction, evidence discipline, Gate Q/Gate D, one-test-at-a-time manual protocol, exploratory seam testing, verdict model, scope protection | BUG_FIX_PLAYBOOK, ENGINEER_PLAYBOOK, FFM_PLAYBOOK, RECON_QUESTIONNAIRE, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |",
+      "new": "| QA_PLAYBOOK | 1.2 | <<ACTUAL_LANDING_DATE>> | Active \u2014 field-tested (ADK Harness BIM/FIX verification) | QA doctrine (field-tested): independent verification seat \u2014 claim-package handoff, acceptance-spec contract extraction, evidence discipline, Gate Q/Gate D, one-test-at-a-time manual protocol, exploratory seam testing, verdict model, scope protection | BUG_FIX_PLAYBOOK, ENGINEER_PLAYBOOK, FFM_PLAYBOOK, RECON_QUESTIONNAIRE, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| RRM_PLAYBOOK | 1.0 | 2026-10-16 | DRAFT FOR EXECUTABLE-MAP REVIEW \u2014 NOT INSTALLED | Approved review repairs with QAM; post-FFM and Engine 2 checkpoints | ARCHITECT_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |",
+      "new": "| RRM_PLAYBOOK | 1.0 | <<ACTUAL_LANDING_DATE>> | DRAFT FOR EXECUTABLE-MAP REVIEW \u2014 NOT INSTALLED | Approved review repairs with QAM; post-FFM and Engine 2 checkpoints | ARCHITECT_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| TESTING_PLAYBOOK | 2.2 | 2026-10-16 | Active | The testing bible: four layers, diagnostic principles, backend appendices, run-verification rituals | FFM_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, RECON_QUESTIONNAIRE, SOFTWARE_FACTORY_PLAYBOOK, STARTER_KIT_HANDBOOK |",
+      "new": "| TESTING_PLAYBOOK | 2.2 | <<ACTUAL_LANDING_DATE>> | Active | The testing bible: four layers, diagnostic principles, backend appendices, run-verification rituals | FFM_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, RECON_QUESTIONNAIRE, SOFTWARE_FACTORY_PLAYBOOK, STARTER_KIT_HANDBOOK |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| API_AND_SERVICES_MANUAL | 1.2 | 2026-10-16 | Active | Service-layer law (\"components render, services fetch\") + the Kit Exception; integration patterns | DATABASE_MANUAL, ECOMMERCE_AND_PAYMENTS_MANUAL, FRONTEND_FIRST_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK |",
+      "new": "| API_AND_SERVICES_MANUAL | 1.2 | <<ACTUAL_LANDING_DATE>> | Active | Service-layer law (\"components render, services fetch\") + the Kit Exception; integration patterns | DATABASE_MANUAL, ECOMMERCE_AND_PAYMENTS_MANUAL, FRONTEND_FIRST_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| APP_ARCHITECTURE_MANUAL | 1.4 | 2026-10-16 | Active | Next.js App Router architecture reference (de-pinned; verify versions per repo) | API_AND_SERVICES_MANUAL, AUTH_MANUAL, ECOMMERCE_AND_PAYMENTS_MANUAL, RECON_QUESTIONNAIRE, STARTER_KIT_HANDBOOK, STATE_MANAGEMENT_MANUAL |",
+      "new": "| APP_ARCHITECTURE_MANUAL | 1.4 | <<ACTUAL_LANDING_DATE>> | Active | Next.js App Router architecture reference (de-pinned; verify versions per repo) | API_AND_SERVICES_MANUAL, AUTH_MANUAL, ECOMMERCE_AND_PAYMENTS_MANUAL, RECON_QUESTIONNAIRE, STARTER_KIT_HANDBOOK, STATE_MANAGEMENT_MANUAL |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| AUTH_MANUAL | 1.5 | 2026-10-16 | Active | Kit auth authority: table-driven roles (user_roles), anti-authService antibody, RBAC patterns | API_AND_SERVICES_MANUAL, DATABASE_MANUAL, FRONTEND_FIRST_PLAYBOOK, RECON_QUESTIONNAIRE, STARTER_KIT_HANDBOOK, STATE_MANAGEMENT_MANUAL |",
+      "new": "| AUTH_MANUAL | 1.5 | <<ACTUAL_LANDING_DATE>> | Active | Kit auth authority: table-driven roles (user_roles), anti-authService antibody, RBAC patterns | API_AND_SERVICES_MANUAL, DATABASE_MANUAL, FRONTEND_FIRST_PLAYBOOK, RECON_QUESTIONNAIRE, STARTER_KIT_HANDBOOK, STATE_MANAGEMENT_MANUAL |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| DATABASE_MANUAL | 1.2 | 2026-10-16 | Active | Supabase PostgreSQL doctrine: schema patterns, user_roles pattern, RLS, migrations | API_AND_SERVICES_MANUAL, AUTH_MANUAL, FRONTEND_FIRST_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK |",
+      "new": "| DATABASE_MANUAL | 1.2 | <<ACTUAL_LANDING_DATE>> | Active | Supabase PostgreSQL doctrine: schema patterns, user_roles pattern, RLS, migrations | API_AND_SERVICES_MANUAL, AUTH_MANUAL, FRONTEND_FIRST_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| ECOMMERCE_AND_PAYMENTS_MANUAL | 1.2 | 2026-10-16 | Active | One-time-payments commerce (headless WooCommerce + Stripe); recurring \u2192 STRIPE_SUBSCRIPTIONS_PLAYBOOK | API_AND_SERVICES_MANUAL, APP_ARCHITECTURE_MANUAL, STATE_MANAGEMENT_MANUAL, STRIPE_SUBSCRIPTIONS_PLAYBOOK |",
+      "new": "| ECOMMERCE_AND_PAYMENTS_MANUAL | 1.2 | <<ACTUAL_LANDING_DATE>> | Active | One-time-payments commerce (headless WooCommerce + Stripe); recurring \u2192 STRIPE_SUBSCRIPTIONS_PLAYBOOK | API_AND_SERVICES_MANUAL, APP_ARCHITECTURE_MANUAL, STATE_MANAGEMENT_MANUAL, STRIPE_SUBSCRIPTIONS_PLAYBOOK |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| STATE_MANAGEMENT_MANUAL | 1.3 | 2026-10-16 | Active | Zustand doctrine: three-layer state model, store patterns, persistence, SSR hydration | APP_ARCHITECTURE_MANUAL, AUTH_MANUAL, FRONTEND_FIRST_PLAYBOOK, STARTER_KIT_HANDBOOK |",
+      "new": "| STATE_MANAGEMENT_MANUAL | 1.3 | <<ACTUAL_LANDING_DATE>> | Active | Zustand doctrine: three-layer state model, store patterns, persistence, SSR hydration | APP_ARCHITECTURE_MANUAL, AUTH_MANUAL, FRONTEND_FIRST_PLAYBOOK, STARTER_KIT_HANDBOOK |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| STRIPE_SUBSCRIPTIONS_PLAYBOOK | 1.2 | 2026-10-16 | Active | Recurring billing recipe (Next.js + Supabase): money-truth model, RBAC \u22a5 subscriptions | API_AND_SERVICES_MANUAL, AUTH_MANUAL, ECOMMERCE_AND_PAYMENTS_MANUAL, TESTING_PLAYBOOK |",
+      "new": "| STRIPE_SUBSCRIPTIONS_PLAYBOOK | 1.2 | <<ACTUAL_LANDING_DATE>> | Active | Recurring billing recipe (Next.js + Supabase): money-truth model, RBAC \u22a5 subscriptions | API_AND_SERVICES_MANUAL, AUTH_MANUAL, ECOMMERCE_AND_PAYMENTS_MANUAL, TESTING_PLAYBOOK |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| COMPONENT_REGISTRY | 1.2 | 2026-10-16 | Active | Scannable primitive lookup: decision tree, per-primitive entries, KIP escape hatch | GLOBAL_DESIGN_SYSTEM_HANDBOOK, STARTER_KIT_HANDBOOK, UI_UX_BUILDING_MANUAL |",
+      "new": "| COMPONENT_REGISTRY | 1.2 | <<ACTUAL_LANDING_DATE>> | Active | Scannable primitive lookup: decision tree, per-primitive entries, KIP escape hatch | GLOBAL_DESIGN_SYSTEM_HANDBOOK, STARTER_KIT_HANDBOOK, UI_UX_BUILDING_MANUAL |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| GLOBAL_DESIGN_SYSTEM_HANDBOOK | 1.2 | 2026-10-16 | Active | The design contract owner: canonical token set (incl. --role-*), theming method, Rule Zero transforms | COMPONENT_REGISTRY, DESIGNER_PLAYBOOK, THEME_LIBRARY, THEMING_MANUAL, TOKEN_FILE, UI_UX_BUILDING_MANUAL |",
+      "new": "| GLOBAL_DESIGN_SYSTEM_HANDBOOK | 1.2 | <<ACTUAL_LANDING_DATE>> | Active | The design contract owner: canonical token set (incl. --role-*), theming method, Rule Zero transforms | COMPONENT_REGISTRY, DESIGNER_PLAYBOOK, THEME_LIBRARY, THEMING_MANUAL, TOKEN_FILE, UI_UX_BUILDING_MANUAL |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| THEME_LIBRARY | 1.3 | 2026-10-16 | Active | The theme catalog (the menu): Metro Warm family, add-a-theme process, role-token rules | DESIGNER_PLAYBOOK, GLOBAL_DESIGN_SYSTEM_HANDBOOK, THEMING_MANUAL, TOKEN_FILE |",
+      "new": "| THEME_LIBRARY | 1.3 | <<ACTUAL_LANDING_DATE>> | Active | The theme catalog (the menu): Metro Warm family, add-a-theme process, role-token rules | DESIGNER_PLAYBOOK, GLOBAL_DESIGN_SYSTEM_HANDBOOK, THEMING_MANUAL, TOKEN_FILE |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| THEMING_MANUAL | 1.3 | 2026-10-16 | Active | Token-architecture deep dive: tokens-before-pixels, quick-swap workflow, phase gates | APP_ARCHITECTURE_MANUAL, GLOBAL_DESIGN_SYSTEM_HANDBOOK, THEME_LIBRARY, TOKEN_FILE, UI_UX_BUILDING_MANUAL |",
+      "new": "| THEMING_MANUAL | 1.3 | <<ACTUAL_LANDING_DATE>> | Active | Token-architecture deep dive: tokens-before-pixels, quick-swap workflow, phase gates | APP_ARCHITECTURE_MANUAL, GLOBAL_DESIGN_SYSTEM_HANDBOOK, THEME_LIBRARY, TOKEN_FILE, UI_UX_BUILDING_MANUAL |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| TOKEN_FILE | 1.3 | 2026-10-16 | Active | Reference token values (Cyber Pharma / Metro Warm, incl. minted --role-*) \u2014 live file = each project's globals.css | DESIGNER_PLAYBOOK, GLOBAL_DESIGN_SYSTEM_HANDBOOK, THEME_LIBRARY, THEMING_MANUAL |",
+      "new": "| TOKEN_FILE | 1.3 | <<ACTUAL_LANDING_DATE>> | Active | Reference token values (Cyber Pharma / Metro Warm, incl. minted --role-*) \u2014 live file = each project's globals.css | DESIGNER_PLAYBOOK, GLOBAL_DESIGN_SYSTEM_HANDBOOK, THEME_LIBRARY, THEMING_MANUAL |",
+      "occurrences": 1,
+      "type": "current row"
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| UI_UX_BUILDING_MANUAL | 1.5 | 2026-10-16 | Active | The UI/UX operating standard: Rule Zero (mobile-first) + Rule Zero-B (theming), page/component guides | COMPONENT_REGISTRY, FRONTEND_BUILD_PHASE_PLAYBOOK, GLOBAL_DESIGN_SYSTEM_HANDBOOK, STARTER_KIT_HANDBOOK, THEMING_MANUAL |",
+      "new": "| UI_UX_BUILDING_MANUAL | 1.5 | <<ACTUAL_LANDING_DATE>> | Active | The UI/UX operating standard: Rule Zero (mobile-first) + Rule Zero-B (theming), page/component guides | COMPONENT_REGISTRY, FRONTEND_BUILD_PHASE_PLAYBOOK, GLOBAL_DESIGN_SYSTEM_HANDBOOK, STARTER_KIT_HANDBOOK, THEMING_MANUAL |",
+      "occurrences": 1,
+      "type": "current row"
+    }
+  ]
+}

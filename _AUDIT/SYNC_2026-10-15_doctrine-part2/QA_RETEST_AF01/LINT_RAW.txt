@@ -1,0 +1,17 @@
+cwd: /tmp/claude-1000/-home-moose-Documents-app-factory-docs-v1/b36e8853-a40c-4925-98ea-6cc06bc99f20/scratchpad/qa_af01/gnu_patch
+exit: 0
+[ENCODING] PASS — 0 hits across 36 live docs
+[RETIRED-TERMS] PASS — 0 hits across 36 live docs
+[VERSIONED-REFS] PASS — 0 hits across 36 live docs (34 canonical names loaded)
+[HEADER-PRESENCE] PASS — all 36 live docs carry the standard header
+=== DOCTRINE LINTS ===
+
+--- encoding_lint.py ---
+
+--- retired_terms_lint.py ---
+
+--- versioned_refs_lint.py ---
+
+--- header_lint.py ---
+
+=== RESULT: PASS ===

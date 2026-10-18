@@ -1,0 +1,102 @@
+[
+  {
+    "artifact": "EXECUTION_PROPOSAL.patch",
+    "label": "frozen_execution",
+    "old_sha256": "c82c98b60bfa54d7b8ea7db60bb35103e4bffc27ccbdd2a2f3a08663d8a748c0",
+    "corrected_sha256": "998b35bdc979fd5b4e947dbb1406372c3166ab8f8991090d428ab16c02575545",
+    "old_bytes": 1904681,
+    "corrected_bytes": 1904739,
+    "repair_required": true,
+    "corrected_artifact": "REPAIR_QA_AF01/frozen_execution.corrected.patch",
+    "no_newline_markers": 2,
+    "patch_headers_strip": 0,
+    "verification": {
+      "label": "frozen_execution",
+      "git_apply_check": 0,
+      "GNU_patch": 0,
+      "verified_outputs": 101,
+      "unplanned_files": 0
+    },
+    "status": "historical comparison only"
+  },
+  {
+    "artifact": "SELECTED_CONTENT_DIFF.patch",
+    "label": "frozen_selected_content",
+    "old_sha256": "13f5aab0611b11ec3c3adff08594c0c87861cd4e02055931664ac966e302b668",
+    "corrected_sha256": "13f5aab0611b11ec3c3adff08594c0c87861cd4e02055931664ac966e302b668",
+    "old_bytes": 418171,
+    "corrected_bytes": 418171,
+    "repair_required": false,
+    "corrected_artifact": "SELECTED_CONTENT_DIFF.patch",
+    "no_newline_markers": 0,
+    "patch_headers_strip": 1,
+    "verification": {
+      "label": "frozen_selected_content",
+      "git_apply_check": 0,
+      "GNU_patch": 0,
+      "verified_outputs": 31,
+      "unplanned_files": 0
+    },
+    "status": "historical comparison only"
+  },
+  {
+    "artifact": "AMENDED_V1/EXECUTION_PROPOSAL.patch",
+    "label": "amended_execution",
+    "old_sha256": "ce4528d8db1183699ea8a90aaed266e91c991fe59b01747d4aa51e70acb3d58c",
+    "corrected_sha256": "cf6413c9340c80f5c1bf53a55385876470e9b3aad364bc8963f52a68580f2a6d",
+    "old_bytes": 1906863,
+    "corrected_bytes": 1906921,
+    "repair_required": true,
+    "corrected_artifact": "REPAIR_QA_AF01/EXECUTION_PROPOSAL.corrected.patch",
+    "no_newline_markers": 2,
+    "patch_headers_strip": 0,
+    "verification": {
+      "label": "amended_execution",
+      "git_apply_check": 0,
+      "GNU_patch": 0,
+      "verified_outputs": 101,
+      "unplanned_files": 0
+    },
+    "status": "active replacement proposed"
+  },
+  {
+    "artifact": "AMENDED_V1/SELECTED_CONTENT_DIFF.patch",
+    "label": "amended_selected_content",
+    "old_sha256": "1e30d8b33900f34f2271d5065fbd6475344c6b7762dfede91cf17535c1f6e878",
+    "corrected_sha256": "1e30d8b33900f34f2271d5065fbd6475344c6b7762dfede91cf17535c1f6e878",
+    "old_bytes": 420353,
+    "corrected_bytes": 420353,
+    "repair_required": false,
+    "corrected_artifact": "AMENDED_V1/SELECTED_CONTENT_DIFF.patch",
+    "no_newline_markers": 0,
+    "patch_headers_strip": 1,
+    "verification": {
+      "label": "amended_selected_content",
+      "git_apply_check": 0,
+      "GNU_patch": 0,
+      "verified_outputs": 31,
+      "unplanned_files": 0
+    },
+    "status": "unchanged existing artifact"
+  },
+  {
+    "artifact": "POST_VERIFICATION_PROPOSAL.patch",
+    "label": "conditional_closeout",
+    "old_sha256": "bbe65465bad50cf7ec11abc43ab46e7a3a050d400caf496de0a70d6c6f7f54dc",
+    "corrected_sha256": "bbe65465bad50cf7ec11abc43ab46e7a3a050d400caf496de0a70d6c6f7f54dc",
+    "old_bytes": 16671,
+    "corrected_bytes": 16671,
+    "repair_required": false,
+    "corrected_artifact": "POST_VERIFICATION_PROPOSAL.patch",
+    "no_newline_markers": 0,
+    "patch_headers_strip": 0,
+    "verification": {
+      "label": "conditional_closeout",
+      "git_apply_check": 0,
+      "GNU_patch": 0,
+      "verified_outputs": 9,
+      "unplanned_files": 0
+    },
+    "status": "unchanged existing artifact"
+  }
+]

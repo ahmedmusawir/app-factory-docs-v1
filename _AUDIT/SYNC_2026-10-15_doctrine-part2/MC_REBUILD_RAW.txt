@@ -1,0 +1,29 @@
+command: python3 /home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_mc_correct.py
+cwd: /home/moose/Documents/app-factory-docs-v1
+exit code: 0
+372 ordered content edits; 31 revised existing documents; 4 workflow references + 4 SVG stick diagrams proposed.
+
+command: python3 /home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_mc_metadata.py
+cwd: /home/moose/Documents/app-factory-docs-v1
+exit code: 0
+31 header/status/history proposals; 34 tier rows; 39 in-table CHANGELOG rows; 101 proposed paths; unchanged lints PASS.
+
+command: python3 /home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_mc_records.py
+cwd: /home/moose/Documents/app-factory-docs-v1
+exit code: 0
+12 conditional closeout edits /9 paths; required evidence explicitly PENDING; date binding 151 spans; W23/RUL15/AD01 coverage; obsolete template plan marked HISTORICAL.
+
+command: python3 /home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_mc_correct.py
+cwd: /home/moose/Documents/app-factory-docs-v1
+exit code: 0
+372 ordered content edits; 31 revised existing documents; 4 workflow references + 4 SVG stick diagrams proposed.
+
+command: python3 /home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_mc_metadata.py
+cwd: /home/moose/Documents/app-factory-docs-v1
+exit code: 0
+31 header/status/history proposals; 34 tier rows; 39 in-table CHANGELOG rows; 101 proposed paths; unchanged lints PASS.
+
+command: python3 /home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_mc_records.py
+cwd: /home/moose/Documents/app-factory-docs-v1
+exit code: 0
+12 conditional closeout edits /9 paths; required evidence explicitly PENDING; date binding 151 spans; W23/RUL15/AD01 coverage; obsolete template plan marked HISTORICAL.

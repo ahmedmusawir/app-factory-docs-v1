@@ -1,0 +1,13 @@
+{
+  "status": "DELIVERED \u2014 Downloads copy, ZIP integrity, all 510 payload hashes and current payload bytes verified",
+  "source": "/tmp/FACTORY_PHASE2_MC_CORRECTED_REVIEW_2026-10-16_184920.zip",
+  "target": "/home/moose/Downloads/FACTORY_PHASE2_MC_CORRECTED_REVIEW_2026-10-16_184920.zip",
+  "sha256": "29a835c18aa517d354bf49f39203013b0a772a15ee5c72556d201ea2d01b8b3f",
+  "payload_files": 510,
+  "zip_members": 512,
+  "bytes": 7210103,
+  "response": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-16_184920_phase-2-mc-corrections.md",
+  "supersedes": "FACTORY_PHASE2_FABLE_HANDOFF_2026-10-16_164712.zip",
+  "prior_sha256": "87d37eb0cde8130c3730c23fb132234bb24f7181c771b8947daa2505a70f9973",
+  "delivered_at": "2026-10-16T18:50:12+06:00"
+}

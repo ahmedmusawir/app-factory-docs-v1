@@ -1,0 +1,953 @@
+{
+  "created_at": "2026-10-16T16:14:02+06:00",
+  "authority": "Tony Phase 2 assignment / RUL-08\u202615",
+  "snapshot": "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT",
+  "files": [
+    {
+      "path": "DIRECTOR_RULINGS_2026-10-16.md",
+      "bytes": 6119,
+      "sha256": "74c361fa6be07f1ab269a28e1a57100bca8e3dfa80e27d84f777991976b03356"
+    },
+    {
+      "path": "factory-corrections/01_governance_corrections.md",
+      "bytes": 34498,
+      "sha256": "78cf8bc765dbadfc609f17045113607a52f6aad2fe007c15a0af5ea14ff3c3e0"
+    },
+    {
+      "path": "factory-corrections/02_agents_handoffs_corrections.md",
+      "bytes": 20706,
+      "sha256": "65a61d7e2f7e56ab8c59be71d273347c1679ef08512c7da708dbfd98b8e0d8ae"
+    },
+    {
+      "path": "factory-corrections/03_build_method_corrections.md",
+      "bytes": 29379,
+      "sha256": "dd5d73de09842543e9af7350caa0973bed16825c3239245c4f5f7befa2d9a04f"
+    },
+    {
+      "path": "factory-corrections/04_auth_data_security_corrections.md",
+      "bytes": 34771,
+      "sha256": "75fbc63f62955276acbb259b93b6b728db8a41a4fa9f4bb8561564c3a2437a2b"
+    },
+    {
+      "path": "factory-corrections/05_api_commerce_corrections.md",
+      "bytes": 40959,
+      "sha256": "cdb05d32e1e7aa52b0309057156ca29fcc7ee73c03e0317971392aa7cf2760f8"
+    },
+    {
+      "path": "factory-corrections/06_design_frontend_corrections.md",
+      "bytes": 27515,
+      "sha256": "3dee764a4936329ee8680c8a50af9b341e570cccdc7c000b51df2b16c00875b5"
+    },
+    {
+      "path": "factory-corrections/07_skills_doc_governance_corrections.md",
+      "bytes": 32491,
+      "sha256": "9f6d04336c3f5330cfe7eee1aa26d56b4647475439d62259e8dd2a06dd8a76cb"
+    },
+    {
+      "path": "factory-corrections/DECISION_RECORD_001.md",
+      "bytes": 5028,
+      "sha256": "438bdab0bc0c841d1bd31f2fe99e95c260c56477d07ddf60f72f10c9a04b295e"
+    },
+    {
+      "path": "factory-corrections/FACTORY_DOCTRINE_CORRECTION_INDEX_001.md",
+      "bytes": 61628,
+      "sha256": "f9d290a561a0935fa5bd1d90131aecd10026aaa3b0f7486366595b9d32fb0fb3"
+    },
+    {
+      "path": "factory-intake/00_MASTER_INDEX.md",
+      "bytes": 13904,
+      "sha256": "120e1987fc56dc2b862a378b064f96ae6a7f114e371c20ab95bf8e16fa99ce72"
+    },
+    {
+      "path": "factory-intake/01_FACTORY_WORKFLOWS_INTAKE.md",
+      "bytes": 15653,
+      "sha256": "6809ed9d53b937c383cd2f8b8034f2740e8587994b1e38725d21bf8569e17a6f"
+    },
+    {
+      "path": "factory-intake/02_RRM_INTAKE.md",
+      "bytes": 14080,
+      "sha256": "c28a34addb1ce426701d186471147ac1a48a7a6f5a2b423d1db57a1068f37b9f"
+    },
+    {
+      "path": "factory-intake/03_QAM_INTAKE.md",
+      "bytes": 19537,
+      "sha256": "9da9ca337bad192c703ad24e5fe7cb142aee5b21439d13fc3efd33bbad25bb1c"
+    },
+    {
+      "path": "factory-intake/ARCHIVE_CONTENTS.json",
+      "bytes": 7990,
+      "sha256": "687c82d5b06c48644d2f368583d1824d8fd052d77517535edf7a1f3676b56955"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/00_START_HERE.md",
+      "bytes": 3268,
+      "sha256": "102506c15ef1748d7c40f85647f2fb0ab35d37c3ca9eb13466571d7f3c6e732c"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/CYBER_PHARMA_RRM_ARCHITECT_HANDOFF.md",
+      "bytes": 6269,
+      "sha256": "ad85f528ca890cfe8240ab67f45c35333aef8c088e2e2b34237420879f420db7"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/JARVIS_MASTER_OPERATING_MODEL.md",
+      "bytes": 4690,
+      "sha256": "159a19b01062ba43dedd81163a9a088139417da99f1737be7da32c574d64bb1c"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/PACKAGE_MANIFEST.json",
+      "bytes": 2265,
+      "sha256": "8f239e00f56792d665bee944bf4b3f3446a3e93bdfda2b9989c31492477ae95c"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/REVIEWER_PLAYBOOK_RRM_PILOT_v0.1.md",
+      "bytes": 10451,
+      "sha256": "458989aa82c85df469061391c707bca8390c28bccb8062934501284440789ffe"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_FACTORY_DOCSET_CHANGE_MAP.md",
+      "bytes": 4908,
+      "sha256": "420c8c5e0aa59b35022691f9437f0b76c072f096e415c09627cb67d343d0567c"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/ACCEPTANCE_SPEC.md",
+      "bytes": 1488,
+      "sha256": "286b5a24c2ee9f97e0aa2eae9fa3ff8fff8a17157998335ed6d159cd9b6d5075"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/CLAUDE.md",
+      "bytes": 1269,
+      "sha256": "6169908a56ca51c533bf47c1e3ba09c38327fc95a85645330ca1dd1473fc8741"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/CLAUDY_PROMPTS.md",
+      "bytes": 1997,
+      "sha256": "fd8c86a166e1ed1c86363ac4001f4efaa1896ca8845c9e25fb6f04485798f469"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/CLOSEOUT_CHECKLIST.md",
+      "bytes": 1572,
+      "sha256": "330c7139afc2160538aac647c87c61717fcc84be1576a9f834f6bb168e43b85e"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/EXECUTION_LOG.md",
+      "bytes": 986,
+      "sha256": "aa0aa4c93ac14618685cfca2d69ad4e59201812c9cbc24fcc773a7d1edd5107c"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/FINDINGS_DISPOSITION_LEDGER.md",
+      "bytes": 1243,
+      "sha256": "76d7e63fc84d22b82eeac221ae7ea224b7653657be98a509a0dabcc18f198338"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/QA_CERTIFICATION.md",
+      "bytes": 1194,
+      "sha256": "c7c84b638e97332486c230aae74c3c634a35cc58cbe118a9fa3e155eb2ed7463"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/QA_HANDOFF.md",
+      "bytes": 981,
+      "sha256": "3602e55d17646208e5af9e4f419fd2f2b3dbe668cd0e2250bf5aa0f0e6e30f12"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/QA_TEST_PLAN.md",
+      "bytes": 1274,
+      "sha256": "55c1e2c61be4ff4029b0cabd237daa42fd531466e80b9051153d082e4da79978"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/README.md",
+      "bytes": 1889,
+      "sha256": "a936681e5165de41d73117d58365221df5cdcb71dcf856c1002b6178a39c1bd4"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/RRM_BRIEF.md",
+      "bytes": 1408,
+      "sha256": "312e7d63f7a9baab0526f9e25a564343f8b5e3dc4c8175bcd88a9890b4f6b5fe"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_PILOT_DOCTRINE_JOURNAL.md",
+      "bytes": 5446,
+      "sha256": "7ba6c0753abfaa6d70a358c418dd995914ee97b7507a8ae01ac507328c34542d"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_PLAYBOOK.md",
+      "bytes": 10700,
+      "sha256": "90684c967aca2502cd3e067c47067a9d735ea9f6397f56b5fa6295a97b7f7195"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/ACCEPTANCE_SPEC.md",
+      "bytes": 17505,
+      "sha256": "e9660b16f5a916568effa15a66568ac06312a7ff82f6717bf1bfc057aa60f85e"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/AUTHORITY_POINTER.md",
+      "bytes": 2489,
+      "sha256": "43b51a647382f4433f6d9871d6046b77bb82b31b73a0ca0d906de72a2d3f635a"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/CLAUDE.md",
+      "bytes": 9097,
+      "sha256": "4dd420a098efbc4d76421b09bf886872a0e6c499d4ead76f5e233169b75ae128"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/CLAUDY_PROMPTS.md",
+      "bytes": 20320,
+      "sha256": "3b26d2229072d84eba6d99948daccacfcf196bbc22fb6160f3f52cb595177901"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/DIRECTOR_ACTIONS.md",
+      "bytes": 5476,
+      "sha256": "fedaee603e37fd50303771ca94db29f80f0b8dfdbc18214520a5c3691bcc3b80"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/DIRECTOR_CHECKPOINTS.md",
+      "bytes": 3570,
+      "sha256": "d6bb5b64826636046ae6079247519418d3624ada76b632f95d6b84ace50a0eb8"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/ENVIRONMENT_PREFLIGHT.md",
+      "bytes": 6153,
+      "sha256": "1bce6ed90e96926980911cd156708d3d417cfb8d55769e4952fe921f10aca04f"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/EXECUTION_LOG.md",
+      "bytes": 4598,
+      "sha256": "d04cc13d6a667451e97ca30024300850d4158cb837d2e998d7667083513bdab0"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA/AC_EVIDENCE_MATRIX.md",
+      "bytes": 1611,
+      "sha256": "1924b7d7db1d925b54789591dfcf4716f320519de4cc5fe9fe4626f93953a7c0"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA/AGENTS.md",
+      "bytes": 5910,
+      "sha256": "ba66abd759246f5296f2607cf88e1b19ba071152189eae3fa09cc576828c8fb8"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA/QAM_MANIFEST.md",
+      "bytes": 6612,
+      "sha256": "2430058c4a441050409a20071f81f8454acbd7b7722c8d5788407df82afa01ca"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA/QAM_PILOT_CHARTER.md",
+      "bytes": 4985,
+      "sha256": "acb4e1021511da3e4fa10b2156e84971377b2ce176438e9ae53b34a097e1a9b7"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA/QAM_PILOT_RESULTS.md",
+      "bytes": 1649,
+      "sha256": "8a77570232c66b8fcc2a6726d4e631ad1f8ee1fcbcc5de21bbfbe714fed8fe9a"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA/QA_ENVIRONMENT_PREFLIGHT.md",
+      "bytes": 4454,
+      "sha256": "efb0ba18015063d07c4d64e7955bc0c168e1ec35edfb449047a2a33e24d79511"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA/QA_EXECUTION_REPORT.md",
+      "bytes": 1437,
+      "sha256": "c625a29192b4476ddef8b61726935f44da6e513a3949cdab1ba95474c451c30b"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA/QA_TEST_PLAN.md",
+      "bytes": 1669,
+      "sha256": "9e6adc3b6ff4657cd95b8ce0432e042452accac1984b79dacdd61cd0b82bdcc8"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA/README.md",
+      "bytes": 4195,
+      "sha256": "32da684f4a01915b3d1ec4888546ff91561769c326e400ec5a6f6463c5f14601"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA_HANDOFF.md",
+      "bytes": 3564,
+      "sha256": "4faea7d9846263db9d471ed04a821269a04ab095420c051a76181513bfad08c5"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/README.md",
+      "bytes": 1595,
+      "sha256": "7f7944d75ff2b67c8acc951b35c9033d9a46cbacc0f817a4e2184b75ee90e80f"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/RRM_BRIEF.md",
+      "bytes": 10390,
+      "sha256": "c628fcdadebb87c0653821af37f9610b22e0da46c4f7a31691baf3388f6ccc43"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/RULINGS_ADDENDUM.md",
+      "bytes": 850,
+      "sha256": "61739ae1292895d72105e7b30186e66fdb7d264e049c3054d5b29f4484e8ad5f"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/evidence/README.md",
+      "bytes": 699,
+      "sha256": "506c6cca9d059cf8c5ecd7791c771b7a5c21c352283f1e6850d707999f485f38"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R03/ARCHITECT_ENGINEERING_10X_LAB_REPORT_RRM_CAMPAIGN.md",
+      "bytes": 11803,
+      "sha256": "148f09c824045a40d35670d83009f0524f1818140e186c8c56b0eb68306e4673"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R03/ARCHITECT_OPINION_QAM_QA_MODULE.md",
+      "bytes": 11424,
+      "sha256": "ee9c596b43a54740e8a08e69c58a4a0f79df13630039e513e538168ba5a45b83"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R03/ONE_SHOT_ENGINEERING_ARCHITECT_FIELD_NOTE_RRM003.md",
+      "bytes": 19152,
+      "sha256": "85f7ed181de37f60c1e9739b247b46284594b1c63d7a21baf8fb6699d7ce9c47"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R03/QAM_OPERATING_MODEL_PROPOSAL_v0_1.md",
+      "bytes": 14646,
+      "sha256": "57ebdcd1111e767a3bfcb3604a9c7e26bfc74315da5050855256da6be3b956cc"
+    },
+    {
+      "path": "factory-intake/EXTRACTED/SRC-R03/QAM_PILOT_ARCHITECT_JOURNAL.md",
+      "bytes": 10717,
+      "sha256": "da020c5aa54164f509bfb8e2d9b8910d828dc0673f9eadff19baecd92d9ec1f2"
+    },
+    {
+      "path": "factory-intake/FILE_INDEX.json",
+      "bytes": 14474,
+      "sha256": "831bcd3d9d08417a6640da71ffe4e26cc0627ebc103d5e80af6a258fbacc660c"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/00_ADDENDUM_INDEX.md",
+      "bytes": 15271,
+      "sha256": "3d6fa6f41f3636cdb02a811b10432eb65ff2da6e71f3b12011d4705981a6297e"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/ADDENDUM_FILE_INDEX.json",
+      "bytes": 14151,
+      "sha256": "c12415bdab29945d918c323311c96e4eac0b6f5cdd40f914a656ae980d62922e"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/COMBINED_INTAKE_MANIFEST_001.md",
+      "bytes": 11940,
+      "sha256": "a6b05c3d02c71148ae8d994896b500404d128a5adae54e24a8aea78882c113b5"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/AC_EVIDENCE_MATRIX.md",
+      "bytes": 1712,
+      "sha256": "c945a3ad4d96f98067d1dfeb2a94927f5bc0149ac31bd5720571952f854fdb59"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/AGENTS.md",
+      "bytes": 1237,
+      "sha256": "309a0e0b01659abd50cca8601951347695381e42225b8a0b84cd62acd58c7cc1"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/AUTOMATION/README.md",
+      "bytes": 1734,
+      "sha256": "b4f7d5900d4de1a9b9f8cdf6ae8e6d282ab1fbd6169815bc8343d4510da20b4e"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/CLAUDE.md",
+      "bytes": 1210,
+      "sha256": "d39628584e091cfc593517ed4470982abca55843a682870f5910371a0d99941a"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/FINDINGS.md",
+      "bytes": 3698,
+      "sha256": "2a0d93c268c87b12ab5b6e838fc4fd9beefa1ee50d37dc40270e352e3ffea012"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/GOVERNING/README.md",
+      "bytes": 2145,
+      "sha256": "44b03e40561127235b5aa52cb39f11aad523fe7259951284b7af75f38322766b"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/HANDOFFS/ENGINEERING_HANDOFF.md",
+      "bytes": 2180,
+      "sha256": "9e6a91396c06676bca863247c507349737cf38df62e0f991b544cd9231ec77fb"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/HANDOFFS/FILE_INDEX.template.json",
+      "bytes": 1817,
+      "sha256": "0ab86a671ab6aad877d2ccf67f0125cc1f4a60913ba5d870a4ef5c11c2258702"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/HANDOFFS/README.md",
+      "bytes": 936,
+      "sha256": "b611daad1597e931c93d023b706424718d2bfcc95906e934e51f1ba38eb9529b"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/HANDOFFS/REVIEW_START_HERE.md",
+      "bytes": 1900,
+      "sha256": "f4e605a65b3ee59da1ffbbf168e4fa4af1be02b0c6bbe7fef45c231dab4bb428"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/PARENT_ENTRY_ROUTING.md",
+      "bytes": 2615,
+      "sha256": "c150d15139e90e041162601577095ab318d005be6e3fb9e2fdd4228462094799"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/QAM_APPROVAL.md",
+      "bytes": 2613,
+      "sha256": "e0b4215f67847f0f358fb04b7fa6904c1bcfe8d8e383b465295fcfeaf1fa3434"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/QAM_CERTIFICATION.md",
+      "bytes": 3028,
+      "sha256": "2f538a253587e6e92be09ada4ddeca80f7f663fcc5cbb9bcaecdd41c8a6fca5d"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/QAM_CLEANUP_REPORT.md",
+      "bytes": 3615,
+      "sha256": "e009156855def8fa6125b27dfc0fa29af3a3cf69516565016f12782c184a99d4"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/QAM_ENTRY.md",
+      "bytes": 6997,
+      "sha256": "64fdccfb027af83ee88d9b2a2186ce00fff913fc1f059a66ed3972100fbb07fa"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/QAM_EXECUTION_REPORT.md",
+      "bytes": 3567,
+      "sha256": "944ab9d5fa6577c91471163528caaff281924a20dd49768858f2410bf13024bd"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/QAM_MANIFEST.md",
+      "bytes": 3876,
+      "sha256": "eb9600169d9ad6bc6bb703e8b7d1d7609f5a2ef47aaf79f5deb15eb458dfa3f5"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/QAM_PACKAGING.md",
+      "bytes": 4033,
+      "sha256": "cd0da4336e5f065af1a978710a07fa7c05f0ef39a4fdfcc2c4edd1e1abb6a419"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/QAM_PREFLIGHT.md",
+      "bytes": 6311,
+      "sha256": "bd81642f0a96f34ff673dd27747a97dca79579e6e4909a9591ec8b8b1c877beb"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/QAM_RECON_REPORT.md",
+      "bytes": 3442,
+      "sha256": "76e0e60a33124fca16b8e94d4868fb9bccefdf5d87d014553b40d0c838d3a270"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/QAM_RISK_REQUIREMENTS.md",
+      "bytes": 5585,
+      "sha256": "53fad66bb499ec8e3b3f6f933231bcd18303fc07dc6eff3a12456944c9888b8b"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/QAM_STATE.md",
+      "bytes": 3585,
+      "sha256": "f3518652f21d4a1f7f7d58c6abc76b41d07ff634616d46b51b3d56474eb30824"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/QAM_TEST_PLAN.md",
+      "bytes": 4146,
+      "sha256": "65d871a413de8ec219cccbd6e15d85973dbc1c7f6b4da3c3d328988aece5c350"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/README.md",
+      "bytes": 9521,
+      "sha256": "f8bce794c14f2faf6eea082a3765b397060c0c739a628f23fbf6927d04adaf08"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/evidence/README.md",
+      "bytes": 2132,
+      "sha256": "db56dc52dd12c8590bbce63c374490bff00fd7e9900a2ac77892acb22c2b5f57"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATE_PLACEMENT_RECOMMENDATION.md",
+      "bytes": 7951,
+      "sha256": "48333fe9b392dc9b728f72fb399f7633513d55a1df28b5c6b1daebc883790fea"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/00_ADDENDUM_INDEX.md",
+      "bytes": 18514,
+      "sha256": "646c40ca98c26da77d4989e26f81ea20a6f76f2d79442ec940475d9cbc6bf11f"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/ADDENDUM_FILE_INDEX.json",
+      "bytes": 15776,
+      "sha256": "cb242c1e24ac1cfbfc16f36278def07a935f4db8e4140675486447a82ba65cff"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/COMBINED_INTAKE_MANIFEST_001.md",
+      "bytes": 12527,
+      "sha256": "711b677b8785d48f443f2f0c48b8215a682ec20bfd56fa08e4d344e49d871d70"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/QA_LEAD_REVIEW_ENTRY.md",
+      "bytes": 5788,
+      "sha256": "10e4f8dd0d778c64ed784ea114b06235f60d5c161431847a9356726f6f96d943"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/AC_EVIDENCE_MATRIX.md",
+      "bytes": 1712,
+      "sha256": "9031bac95f35229f4b3591f630c1a111d109bf1f7f018f7007ab0c0b2f496bab"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/AGENTS.md",
+      "bytes": 1237,
+      "sha256": "98a1c144723ffd509be3a38b019b9e7b1e798f52b4e9ca48b40ee2ee7831d5e1"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/AUTOMATION/README.md",
+      "bytes": 1734,
+      "sha256": "bbea068425c8416d6821e488ad2add0ee13cc1112c8a6d15f7c7635ff9b25ea3"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/CLAUDE.md",
+      "bytes": 1210,
+      "sha256": "4287ea5fe021fefc169fe50502511d82bf8ab3844aedfa8236af9c4da3fb97f7"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/FINDINGS.md",
+      "bytes": 4120,
+      "sha256": "186b73159d9c34dbbd1a10cd7b4065d8ac80834716bce057e3b06e14a76e4aa8"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/GOVERNING/README.md",
+      "bytes": 2145,
+      "sha256": "f4c56f4d9b4b8becba890d66e7aad7a3aa4d820d0ce305e382103f14c4e64001"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/HANDOFFS/ENGINEERING_HANDOFF.md",
+      "bytes": 2391,
+      "sha256": "673260d5e48aa1033e74276793c32d01ce79b32d52f0a1574cf7b4a6354b88dd"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/HANDOFFS/FILE_INDEX.template.json",
+      "bytes": 2088,
+      "sha256": "56b57beb6294785796f249d91c01b62e2ef621a17774ae560852844c481c9224"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/HANDOFFS/README.md",
+      "bytes": 1182,
+      "sha256": "6c4d09f11eb75c67b54a586b949e9594a3794a45b91425a17d65e678ce31713f"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/HANDOFFS/REVIEW_START_HERE.md",
+      "bytes": 2094,
+      "sha256": "376cd3f50b0e79414d11bbcbf178d3e9b7507628ba08505ebd39a409259eac79"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/PARENT_ENTRY_ROUTING.md",
+      "bytes": 2615,
+      "sha256": "e10d10b0208ce8700bed22c8f9e1c247b99637ceeea04ffc5974bda18728cd98"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/QAM_APPROVAL.md",
+      "bytes": 3569,
+      "sha256": "e88a46c76820846edae4cd7b2cbf39020cc41599e41622a9912dc910fa49e87c"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/QAM_CERTIFICATION.md",
+      "bytes": 3787,
+      "sha256": "6058d41d08912af7a40393a95471b33e0a66815e3223ea8fc078f4c56c1a10f5"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/QAM_CLEANUP_REPORT.md",
+      "bytes": 4113,
+      "sha256": "4e9aec1764a288153ad1c0e9f9f3de0de22764db831174ef2d21a60daafa6bda"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/QAM_ENTRY.md",
+      "bytes": 12000,
+      "sha256": "81c44c5700ecb283253fbfac29f5605efbe3a6e85a394db33585ce6ae89b45e8"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/QAM_EXECUTION_REPORT.md",
+      "bytes": 3882,
+      "sha256": "b32e6b30cec7b74f36eafb3011c1e1e63d3efbe1dac684f4e53eec4b826dd6ed"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/QAM_MANIFEST.md",
+      "bytes": 5109,
+      "sha256": "c30782b0fb27e561a8f7632db09623d51de176c40d5f91f55d4075e632ee6283"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/QAM_PACKAGING.md",
+      "bytes": 5085,
+      "sha256": "2d95d05e178dc67c2ad3efb234d18562d3ed0b815feeea9cbe61d74c9c7f655e"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/QAM_PREFLIGHT.md",
+      "bytes": 7037,
+      "sha256": "39a6737fae370688ad0bfe1b808cf3468892ed20316cf1f7610596eab26f4ef6"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/QAM_RECON_REPORT.md",
+      "bytes": 3658,
+      "sha256": "868ea7f83772925094f0ba3c397b98b9770d46a3ed269fb41db2b8e6494f2c41"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/QAM_RISK_REQUIREMENTS.md",
+      "bytes": 5956,
+      "sha256": "b7b9e3ce912bf567ea55414305b4b85c14c5cddae8537f9579320d95af8504b7"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/QAM_STATE.md",
+      "bytes": 6454,
+      "sha256": "131c8d7fdaf4233e65449821dde265e2d51dab7a11ca0795ff611ed37df6e11a"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/QAM_TEST_PLAN.md",
+      "bytes": 4305,
+      "sha256": "ef92c484ef4d91e8811172c4e8b543542f66f8fced618b3f795704d7dd39099e"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/README.md",
+      "bytes": 12161,
+      "sha256": "435aa21ea49f12052997d67a21d95ca56e76f7e243e7930064d6ba2c41763203"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/evidence/README.md",
+      "bytes": 2476,
+      "sha256": "6f6714872df80e8e979d2c68afe9146eb45d5355826f86ceef5758e353b6e36b"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATE_CORRECTION_RECORD_001.md",
+      "bytes": 8262,
+      "sha256": "96788240045cdba49f0ccc714a22ed331229c35783797dfded165aa23443fd5a"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATE_PLACEMENT_RECOMMENDATION.md",
+      "bytes": 8280,
+      "sha256": "6e05329911147419d46cddd3357146b2a64c4a456e9cf3b32785a436eba5a4b2"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/00_ADDENDUM_INDEX.md",
+      "bytes": 21452,
+      "sha256": "96a79693cff4965956e6f3388858d3d5785949c93e0b9657bb04e800f102fea5"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/ADDENDUM_FILE_INDEX.json",
+      "bytes": 20891,
+      "sha256": "ca77f3e57eaa744a8338cccd921724707350074907ac0412477ec2c5e3ee005a"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/ARCHITECT_IMPLEMENTATION_INSTRUCTION_2026-10-14.md",
+      "bytes": 4399,
+      "sha256": "f7b9bef22fb70b4eb4179aa8e1cc723effbaae0053c6ee91f4b09378e4b19465"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/ARCHITECT_VERIFICATION_2026-10-14.md",
+      "bytes": 4330,
+      "sha256": "d40391eda38efb4982501e5127540e0b345e5384d480cf8c47a648f7c71814db"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/COMBINED_INTAKE_MANIFEST_001.md",
+      "bytes": 13547,
+      "sha256": "35a6631132e2bc1231add2f001bc4e21664ff4defbd4e43f1a86d8e4886482bf"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/ENGINEER_VERIFICATION_v0_3.md",
+      "bytes": 10262,
+      "sha256": "04068d2805e80ac326777c152bea0b83236bea1e3e4d1ebd49ab5fb28c074604"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/QA_LEAD_DECISION_2026-10-14.md",
+      "bytes": 6384,
+      "sha256": "7b3578e03f6f49f699b28af3e6c05ae7d30bbbc452d329e958e0e264540fb637"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/QA_LEAD_REVIEW_ENTRY.md",
+      "bytes": 6416,
+      "sha256": "323ac232ecce57cae0d92baf1db124aeca3e5bfaae012c5450bcba4e5ea929c3"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/AC_EVIDENCE_MATRIX.md",
+      "bytes": 1930,
+      "sha256": "ce619971ec58604e09f768de64337367cafec29ca30367b019e475c7ebf70883"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/AGENTS.md",
+      "bytes": 1346,
+      "sha256": "13c5be461a00bd6239da3b5a247bd91130c85dcf519da59b231fcc421e62eced"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/AUTOMATION/README.md",
+      "bytes": 1952,
+      "sha256": "76d5fb29a0f2ee90e7281f091894e1f04c394a3cacea9606a5aa51438d5fcc45"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/CLAUDE.md",
+      "bytes": 1319,
+      "sha256": "bf7d4ff22b5d8c14d8f370cc128bc23553a1d95ddb41545700e64a9d080ad535"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/FINDINGS.md",
+      "bytes": 4338,
+      "sha256": "c17a149be9a6bea8aaac720c3de47ea9e7b5402bb86792b466c8e5a6f2156385"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/GOVERNING/README.md",
+      "bytes": 2363,
+      "sha256": "b11da26e2793bd9bf816b51840f007922b3e4028a6298be7494e834ce28aee20"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/HANDOFFS/ENGINEERING_HANDOFF.md",
+      "bytes": 2609,
+      "sha256": "ccb15192ecccfd1dceae95fa2e7f0b2fa6bd9e19f4956e1295964a89eaa7391f"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/HANDOFFS/FILE_INDEX.template.json",
+      "bytes": 2197,
+      "sha256": "fa5705561225dc1b108c2e2173121f6949f0d9141d6b5010b577cb5d15e5e2fb"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/HANDOFFS/README.md",
+      "bytes": 1400,
+      "sha256": "82876906ba38d2d57506e934e645c38675768d5d76a66089b343d31273ecaba0"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/HANDOFFS/REVIEW_START_HERE.md",
+      "bytes": 2312,
+      "sha256": "a7dc1fcac42b30ce6dd270078f5e9202d22aa011e2e531871acb0f5086d37633"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/PARENT_ENTRY_ROUTING.md",
+      "bytes": 2833,
+      "sha256": "769345f5dc96fd52a654b65f663d51cacfa2ac65dd5b4f275afba01be9c38eb1"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_APPROVAL.md",
+      "bytes": 3787,
+      "sha256": "caa2c0f8080bfdecdd48a5c11830ad3ea162c1dd309d87738045a63b58fa6538"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_CERTIFICATION.md",
+      "bytes": 4005,
+      "sha256": "b2e7db8d3b27c064914bb30f269bd7ab46276eaef92ed3cfeb973c0abe144d19"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_CLEANUP_REPORT.md",
+      "bytes": 4410,
+      "sha256": "0a2eb83607a81870031d96190263531afed26745fffc8218a3a004293c92a4c1"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_ENTRY.md",
+      "bytes": 12218,
+      "sha256": "bc15f3c613a144be5a50c811752f00905a9585c6c4eb87300b7ee105da2c01fa"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_EXECUTION_REPORT.md",
+      "bytes": 4100,
+      "sha256": "723afabf776deddae595dfda5f1bca70dfc2c5616da32fe63de9dcf45e5b7177"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_MANIFEST.md",
+      "bytes": 5327,
+      "sha256": "2dc5ebb4dd8d257047b4f72b53122ad67953372106ddb7f2662a6858c5948c62"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_PACKAGING.md",
+      "bytes": 5347,
+      "sha256": "1a9a61ae19b2ee98cc481368d46ec0403895225f51afaec293e440d3ccc84ea7"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_PREFLIGHT.md",
+      "bytes": 7255,
+      "sha256": "a887e728a817b51944583c30d89a285820fb680c80c2568459ba32ea374f97c6"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_RECON_REPORT.md",
+      "bytes": 3876,
+      "sha256": "977fb2630ac38727936abc0770e748a705d377b31850a875beb841563eb9b764"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_RISK_REQUIREMENTS.md",
+      "bytes": 6689,
+      "sha256": "6e8cfb4e2df064b5eb8c2402654b66dec774b10c173a76134c04c65e854a4d76"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_STATE.md",
+      "bytes": 6672,
+      "sha256": "487b60e8bb7c45f1f246fa9d22e276a6498b1fdd2ddb90fd99d847e8a6d78a1e"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_TEST_PLAN.md",
+      "bytes": 4523,
+      "sha256": "2df20cbd259a76d4bb58759478c30ce21e2774cfff64e8a796b142c1e7020dc7"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/README.md",
+      "bytes": 12831,
+      "sha256": "8ccc80f3f2f89549bd4a29260f236a33fe4eee5b3f08933ca62fb08e5bcbd0c3"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/evidence/README.md",
+      "bytes": 2694,
+      "sha256": "385ad08e235c77b50a62ab78c5976e00df4f2167fc40f814f0300646a532d6df"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATE_CORRECTION_RECORD_001.md",
+      "bytes": 8262,
+      "sha256": "96788240045cdba49f0ccc714a22ed331229c35783797dfded165aa23443fd5a"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATE_CORRECTION_RECORD_002.md",
+      "bytes": 7579,
+      "sha256": "6ebacf62fedb56f942db153fd50d41556d2dbdc4bb47255f2d825c60657009c3"
+    },
+    {
+      "path": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATE_PLACEMENT_RECOMMENDATION.md",
+      "bytes": 8280,
+      "sha256": "6e05329911147419d46cddd3357146b2a64c4a456e9cf3b32785a436eba5a4b2"
+    },
+    {
+      "path": "factory-intake/PLANNING_001/ARCHITECT_DECISIONS_2026-10-14.md",
+      "bytes": 5915,
+      "sha256": "43817f32df50e53405ace62cd1ddd222ddda02f029e96b59d0586cdac87b9e7f"
+    },
+    {
+      "path": "factory-intake/PLANNING_001/COMBINED_DECISIONS_001.md",
+      "bytes": 55271,
+      "sha256": "9ba3b07e76d1ffd0a2ca0fbf491513181d6adadc9ab23e88785810756aa49040"
+    },
+    {
+      "path": "factory-intake/PLANNING_001/COMBINED_DEPENDENCY_MAP_001.md",
+      "bytes": 51988,
+      "sha256": "4606f976778d82834e5479a139808c4ae244eebe35e8379a3cb62a9a8cbe3b8b"
+    },
+    {
+      "path": "factory-intake/PLANNING_001/DIRECTOR_RULINGS_2026-10-14.md",
+      "bytes": 19931,
+      "sha256": "a9b51795eb48dd142dd356eae47c9e7a72dc55c677a4e483c5c7d72531317915"
+    },
+    {
+      "path": "factory-intake/PLANNING_001/INTAKE_CLARIFICATIONS_001.md",
+      "bytes": 31847,
+      "sha256": "e13c33b9970edcf4d04e44140e6bebe14fe209b142a5bfab9f146f9c4d6cd186"
+    },
+    {
+      "path": "factory-intake/QAM_PLAYBOOK_v1_0.md",
+      "bytes": 30650,
+      "sha256": "97e111e2a495f9a3fe65f50213e6f2ba68c8e5e963f3d23493b1ee99ad35c897"
+    },
+    {
+      "path": "factory-intake/README.md",
+      "bytes": 9197,
+      "sha256": "fc78e1e4abc1df770a2ba85059f6f8a02660482f4b733cecb32ad974bf036f67"
+    },
+    {
+      "path": "factory-intake/SOURCES/Context/SRC-C01_SCOPED_APPROVALS_ENGINEER_REPORT_2026_10_12.md",
+      "bytes": 2199,
+      "sha256": "e7787f6408c0b03277e1c4c846bcc9bdfd6e9074038a5548cffeefa542ddf8d3"
+    },
+    {
+      "path": "factory-intake/SOURCES/QAM/SRC-Q01_QAM_OPERATING_MODEL_PROPOSAL_v0_1.md",
+      "bytes": 14646,
+      "sha256": "57ebdcd1111e767a3bfcb3604a9c7e26bfc74315da5050855256da6be3b956cc"
+    },
+    {
+      "path": "factory-intake/SOURCES/QAM/SRC-Q02_QAM_PILOT_ARCHITECT_JOURNAL.md",
+      "bytes": 10717,
+      "sha256": "da020c5aa54164f509bfb8e2d9b8910d828dc0673f9eadff19baecd92d9ec1f2"
+    },
+    {
+      "path": "factory-intake/SOURCES/QAM/SRC-Q03_STARK_QAM_10X_LAB_MASTER_DRAFT_v0_1.md",
+      "bytes": 38663,
+      "sha256": "df084145954887674b47feb8b42cc179d90c9199e4f7281622084ac6add7379b"
+    },
+    {
+      "path": "factory-intake/SOURCES/QAM/SRC-Q04_RRM004_QAM_PILOT_PLAN_v0_1.md",
+      "bytes": 25700,
+      "sha256": "eabf7ecf7b676c412114d72c4541e08342dba9b167cf5d0ddc056db368ad767f"
+    },
+    {
+      "path": "factory-intake/SOURCES/QAM/SRC-Q05_QAM_DIRECTOR_DISCUSSION_1.txt",
+      "bytes": 2779,
+      "sha256": "4f1fa0ad26b3072270e5676bd56782589fe4b656185a595be1b9128d6a946a77"
+    },
+    {
+      "path": "factory-intake/SOURCES/RRM/SRC-R01_RRM_FACTORY_PILOT_v0_1.zip",
+      "bytes": 121409,
+      "sha256": "0379eb008475d9ab653d0bcdeb0bcb3e6f6a68f7dce38c9afcfc18be9172fac4"
+    },
+    {
+      "path": "factory-intake/SOURCES/RRM/SRC-R02_RRM004_ORIGINAL_PACK_v1_0.zip",
+      "bytes": 60680,
+      "sha256": "c2a21b82ca4f6c1ec0e7d75dd5860ff2cf15c3a3615099c62272558db524ed2a"
+    },
+    {
+      "path": "factory-intake/SOURCES/RRM/SRC-R03_ARCHITECT_10X_LAB_BUNDLE_RRM.zip",
+      "bytes": 29981,
+      "sha256": "191eb232430393cf247e35a453d6df0be51db0800a0b8a7d5db5dbff372ba3c2"
+    },
+    {
+      "path": "factory-intake/SOURCES/RRM/SRC-R04_QA_PRODUCTION_OBSERVATION_JOURNAL.md",
+      "bytes": 26893,
+      "sha256": "ba60e2be633a2347561426f5890a0b7b9f6d3735cff05f9a265fc732569f8675"
+    },
+    {
+      "path": "factory-intake/SOURCES/RRM/SRC-R05_RRM_CAMPAIGN_EMPTY_SCAFFOLD_v1_0.zip",
+      "bytes": 1244,
+      "sha256": "c9ef99f5d6189fff0785bc35dcf3d0be715e52afaec1efdd88d3e8b609743c93"
+    },
+    {
+      "path": "factory-intake/SOURCES/Workflow/SRC-W01_FFM_CREATION.png",
+      "bytes": 380705,
+      "sha256": "714287752cae394fe9a94bbf017253b58ca4791bb840c10708cbbc7569835c86"
+    },
+    {
+      "path": "factory-intake/SOURCES/Workflow/SRC-W02_FFM_EXECUTION.png",
+      "bytes": 192114,
+      "sha256": "327212a3b2e84b7c2607d9bd854f9e4c0ce2204c00f282be22e4296733c3ae04"
+    },
+    {
+      "path": "factory-intake/SOURCES/Workflow/SRC-W03_FFM_DEPLOYMENT.png",
+      "bytes": 331991,
+      "sha256": "743d7a2299ad2da746ed2648e2ea4415aabd2175b6deb86ea7ed1c0b3a1b2268"
+    },
+    {
+      "path": "factory-intake/SOURCES/Workflow/SRC-W04_BIM_WORKFLOW.png",
+      "bytes": 248154,
+      "sha256": "fb87367a23213c65fa76e447ecb7a9c4fae56ef8f1a33c516bce77c5c0ddf9e7"
+    },
+    {
+      "path": "factory-intake/SOURCES/Workflow/SRC-W05_FFM_OPERATING_MODEL_v1_0_R2.md",
+      "bytes": 28680,
+      "sha256": "168b8545dfd44ace0283adfb570561fb7c05a8d86cc63b7777d3ba03fc00012e"
+    },
+    {
+      "path": "factory-intake/SOURCES/Workflow/SRC-W06_BIM_OPERATING_MODEL_v1_0.md",
+      "bytes": 17893,
+      "sha256": "b6144b9bcd44631d0b137b8a4210039c6382d3ff226e1d7c036b408858c62d42"
+    },
+    {
+      "path": "factory-intake/SOURCES/Workflow/SRC-W07_DEVOPS_OPERATING_MODEL_v1_0.md",
+      "bytes": 13825,
+      "sha256": "66e2e35667b7ac73b9838fbc250d3363b3a4b3c90a994ba648c1211db06e9e7b"
+    },
+    {
+      "path": "factory-intake/SOURCES/Workflow/SRC-W08_CODE_REVIEW_CYCLE.txt",
+      "bytes": 2563,
+      "sha256": "feee30ff9f7772bae4e58c6d435c526f910ec91ee8d813681b2e086f5f4aa9e4"
+    },
+    {
+      "path": "factory-intake/SOURCES/Workflow/SRC-W09_BOUNDED_REPAIR.txt",
+      "bytes": 486,
+      "sha256": "11e1bc1eef5590c2c79403b0abc704c1b4c1451445431c3d5691696fc9b91821"
+    },
+    {
+      "path": "factory-intake/SOURCES/Workflow/SRC-W10_DOC_SET_SYNC_PROCESS.txt",
+      "bytes": 2905,
+      "sha256": "d6bd26470952b25f33707072760b759030f60078ac8ad61feeaed6b7bc9a5d19"
+    },
+    {
+      "path": "factory-intake/SOURCES/Workflow/SRC-W11_FACTORY_ENGINE_1_2_3.txt",
+      "bytes": 2563,
+      "sha256": "1ce3bd07ead54de33b750b3f08bbf0ad34347c5850c9f1e30dce75b02c8db831"
+    },
+    {
+      "path": "factory-intake/SOURCE_INVENTORY.json",
+      "bytes": 8253,
+      "sha256": "74bd3ce2bcb59188f7ae5d5d78261aa2b8a14bd0df558ca71a13b3da9b29ac1e"
+    },
+    {
+      "path": "factory-intake/SOURCE_REGISTER.md",
+      "bytes": 12058,
+      "sha256": "7c7e6931b3398c852e5cc9f139c7450da03449e6965946201a7db3648fe25b2e"
+    }
+  ],
+  "note": "Raw units copied byte-for-byte including historical/unapproved proposals as evidence, not blanket content approval. Current rulings and selected scope govern. Index outside immutable snapshot."
+}

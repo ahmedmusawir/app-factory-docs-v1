@@ -1,0 +1,485 @@
+[
+  {
+    "path": "main:_OTHERS/DOCTRINE_HUB_DESIGN_v0_1.md",
+    "line": 3,
+    "quote": "> **Series:** Stark Industries App Factory \u2014 Full Doc Stack Audit (endgame design, pulled forward)",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_OTHERS/DOCTRINE_HUB_DESIGN_v0_1.md",
+    "line": 39,
+    "quote": "- **Hub \u2192 Project (at project start):** pull the latest tagged release into the project's `agent_docs/`. Record the tag in the project (e.g., `agent_docs/DOCTRINE_VERSION` file). ",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_OTHERS/MASTER_DOC_LIST_v1_0_FINAL.md",
+    "line": 6,
+    "quote": "> **Purpose:** The copy-paste seed plan for the `app-factory-doctrine` repo. Every row: pull from WHERE, save as WHAT.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_OTHERS/MASTER_DOC_LIST_v1_0_FINAL.md",
+    "line": 15,
+    "quote": "| FFM_PLAYBOOK | \u2705 ALIGNED both sides | Stack + `agent_docs/APP_FACTORY/FFM_PLAYBOOK.md` chunks identical |",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_OTHERS/MASTER_DOC_LIST_v1_0_FINAL.md",
+    "line": 41,
+    "quote": "- **2_AGENTS-ENGINEER_PLAYBOOK_v1_1.md** \u2190 [STACK]",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_OTHERS/MASTER_DOC_LIST_v1_0_FINAL.md",
+    "line": 45,
+    "quote": "- **3_METHOD-FFM_PLAYBOOK.md** \u2190 [STACK] (aligned with repo)",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_OTHERS/MASTER_DOC_LIST_v1_0_FINAL.md",
+    "line": 66,
+    "quote": "- **5_DESIGN-COMPONENT_REGISTRY_v1_1.md** \u2190 \ud83d\udd34 [REPO] `agent_docs/STARTER_KIT/COMPONENT_REGISTRY.md` (Gate 10 bump to v1.1; verify path on pull)",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/CLAUDE.md",
+    "line": 41,
+    "quote": "   - `git remote -v`, `git rev-parse --abbrev-ref HEAD`, `git status`, `git fetch origin`, `git rev-parse HEAD`, then `git log --oneline -1 origin/main` \u2014 which repo, which branch, which commit, is the tree clean, how far from main. **Do not pull** during discovery. An unclean tree is reported, never touched. From this evidence Claudy proposes the run's **BASE_SHA** (D18): the commit, tag, or branch tip the launch line or intake names; otherwise the clean discovered HEAD. BASE_SHA is never assumed to be `main` \u2014 production syncs, frozen or tagged baselines, candidate validation, branches ahead of main, and resumed runs all name their base explicitly. If the named base and the checkout disagree, or HEAD is behind its own upstream, that is a mechanical clarification (D17): the smallest question.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/CLAUDE.md",
+    "line": 42,
+    "quote": "   - **RESUME detection:** a `docs/sync-*` branch with commits, a non-empty `_INBOX/`, a durable folder `_AUDIT/SYNC_*/` with a DRAFT or APPROVED map and no Gate Q verdict, partial `_ARCHIVE/` additions, or an explicit \"RESUME\" in the launch line \u2192 switch to D15a before anything else.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/CLAUDE.md",
+    "line": 43,
+    "quote": "   - **Cargo scan \u2014 `_INBOX/` (the standing cargo bay).** Every file or folder in `_INBOX/` is presumptive cargo. A folder is one cargo unit (a correction package arrives as a folder tree). Read every unit's contents; classify each aloud per D16 using `_shared/references/INTAKE_TAXONOMY.md` \u2014 content first, filename only as supporting evidence. Legacy fallback: also scan the repo root for `DOCTRINE_PROMOTION*` / `*PATCH*` / lessons files; those name patterns only locate candidates, they do not classify them; cargo found there is valid, note it, and suggest `_INBOX/` next time. A missing `_INBOX/` is not an error.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/CLAUDE.md",
+    "line": 83,
+    "quote": "        \u2514\u2500\u2500 GATE_Q_REPORT.md             \u2190 docs-only overlay on QA_PLAYBOOK \u00a722 (Sol)",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/CLAUDE.md",
+    "line": 102,
+    "quote": "**D5 \u2014 Hub-only git carve-out. Claudy runs git in the Hub; Tony alone creates the PR and merges.** Inside this family, for DocSet synchronization in the Doctrine Hub only: Claudy may create and work on the approved sync branch, commit approved synchronization changes, and push ONLY at the authorized push boundary (D18). Tony creates the PR from the compare URL, reviews, and merges (rebase-and-merge for doctrine work; squash only for trivia). Tony is never asked to run git. **Provenance and limits of this exception:** it is the Operator's standing ruling for the documentation Hub (2026-08-05, reconfirmed in Stage B Ruling 2, 2026-09-14). It is a bounded exception for a docs-only repository with branch protection on main. It does NOT redefine the Engineer git-zero / cloud-zero doctrine that governs BIM, FIX, FEAT, TRM, and all application-module work (`BIM_PLAYBOOK` \u00a72/\u00a77, `BUG_FIX_PLAYBOOK` \u00a73), where the Coordinator commits and the Engineer stages nothing. A future agent reading this rule must not generalize it. Rationale for the exception: hand-driven git produced three recovery incidents in one day (a rejected main push, a stash tangle, a `reset --hard` file loss); the Operator's time belongs at the decision gates. Rationale for rebase-and-merge: it preserves one-commit-per-doc history, which is what makes `git log --follow` on a doctrine file a readable audit trail.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/CLAUDE.md",
+    "line": 104,
+    "quote": "**D6 \u2014 Main is PR-only. Absolute.** Never write to main; never call `merge_pull_request`; every run's changes live on a run branch that starts at the approved BASE_SHA (D18), never on main. On main you PULL, never push. Branch protection enforces this as physics. This is the one rule no in-session override can waive (\u00a76).",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/CLAUDE.md",
+    "line": 110,
+    "quote": "**D9 \u2014 Lint conduct and baseline.** The Hub's four lints run in CI on every push and PR. Run them locally BEFORE every commit (shift-left; a fixup commit on 2026-08-05 bought this). A failure CAUSED by your change is fixed before the commit. A PRE-EXISTING failure is recorded in the baseline at discovery, reported, never fixed uninvited, and NEVER exempted \u2014 adding exempt-patterns to make CI green blinds the drift-killer (AP-5). The baseline (count + paths) travels in the UPDATE MAP \u00a7M and the handoff; QA proves it unchanged.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/CLAUDE.md",
+    "line": 112,
+    "quote": "**D10 \u2014 Writable surface, per seat.** *Claudy:* canonical writes (after Gate 2, D2) \u2014 files on the approved touch list, approved new canonical files, `MANIFEST.md` and `CHANGELOG.md` per the approved map, `_ARCHIVE/` (additions only), `_INBOX/` (dispositioning cargo out of it at sweep); run-state / planning writes (any phase) \u2014 the run's durable folder `_AUDIT/SYNC_<date>_<slug>/` (including the immutable `INTAKE_SNAPSHOT/` copied at Gate 1), `RECOVERY.md`, the session file, and `agent_docs/RESPONSES/` per the repo protocol. *Sol:* the acceptance spec (until frozen at Gate 3) and `GATE_Q_REPORT.md` in the durable folder, `RECOVERY.md`, the session file. *Cody:* `QA_MATRIX.md` and findings in the durable folder, the session file. Everything else in the Hub \u2014 every other tier doc, other `_SKILLS/*`, `lints/`, `.github/`, `_OTHERS/`, the approved map after Gate 2 (Claudy may amend it only through a Gate 2 re-approval \u2014 no other post-freeze write, not even CONTENT_SHA or the Gate 4 time: those live in `SYNC_HANDOFF.md` / `RUN_SUMMARY.md`, D18), the spec after Gate 3, and `INTAKE_SNAPSHOT/` after Gate 1 \u2014 is read-only for every seat. Nobody \"fixes things noticed along the way\"; they go under CONCERNS or become follow-up findings.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/CLAUDE.md",
+    "line": 114,
+    "quote": "**D11 \u2014 Close-out sweep, durable versus debris.** No job ends with floating files. **Durable** (survives the campaign, rides the PR): the run's `_AUDIT/SYNC_<date>_<slug>/` folder \u2014 `UPDATE_MAP.md` (with approval and amendment log), `DOCSET_SYNC_ACCEPTANCE_SPEC.md` (LARGE), `SYNC_HANDOFF.md`, `QA_MATRIX.md` and findings (LARGE), `GATE_Q_REPORT.md` (LARGE), **`INTAKE_SNAPSHOT/`** \u2014 every in-scope cargo unit copied byte-for-byte as received, at Gate 1, never edited afterwards (or, only when a unit is too large to snapshot, `INTAKE_SNAPSHOT/REFERENCE.md` naming its immutable source: repository, commit SHA, path) \u2014 and `RUN_SUMMARY.md` (which carries CONTENT_SHA, the Gate 4 record, the pushed tip, and the final per-ID disposition stamps). On LARGE the snapshot MUST be committed no later than the handoff commit so that it rides the Gate 4 push: TEST B (2026-09) proved a fresh QA worktree had the pushed map, spec, and handoff but not the Engineer's local, uncommitted `_INBOX/` \u2014 Cody must never depend on it. On the TINY path the durable set is `UPDATE_MAP.md` (with the waiver line), `INTAKE_SNAPSHOT/`, and `RUN_SUMMARY.md` (with CONTENT_SHA). **Debris** (removed before Gate Q closeout on LARGE, before the sweep ends on TINY): per-cycle scratch files and grep dumps; duplicates of durable artifacts elsewhere (RESPONSES copies are dispositioned per the Operator's standing 2026-08-10 ruling \u2014 deletions are a NAMED housekeeping commit, never a passenger in a doctrine commit); abandoned local or remote branches; `_INBOX/` contents (every unit landed, parked, or returned \u2014 the bay stays, empty); stray `__pycache__`; editor backups. Session files and `RECOVERY.md` stay at the repo root per repo protocol. Three separate incidents (a stash dance, a vanished recon report, session-file drift) bought this rule; 71 orphaned response logs bought the debris half.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/CLAUDE.md",
+    "line": 124,
+    "quote": "**D15a \u2014 Evidence-driven resume, any seat, any phase.** **Recovery authority hierarchy.** `RECOVERY.md` and the session files are ADVISORY state: convenient, often right, never authoritative. Authoritative recovery evidence is, in this order: the git branch, HEAD, and history; the working-tree diff (`git status --porcelain`, `git diff`); the `_AUDIT/SYNC_*` artifacts and their status lines; the approved UPDATE MAP; the intake and its durable `INTAKE_SNAPSHOT/`; and canonical disk reality. If RECOVERY / session state is stale, missing, or contradicts any of these, git + disk + the approved durable artifacts win, and the discrepancy is reported, not reconciled silently. A fresh agent with no conversational memory and no graceful shutdown behind it must be able to reconstruct from that evidence alone: the active run, BASE_SHA, the approved route, the status of every gate, the current phase, the EXPECTED dirty state, and the next legal action (TEST C2, hard-crash resume, 2026-09). On a declared or detected RESUME: (1) read `RECOVERY.md` and the session file for the claimed state \u2014 if absent, skip them; (2) verify against reality \u2014 `git branch -a`, `git log` on candidate branches, `git status`, `_INBOX/`, `_ARCHIVE/` additions, the durable folder's contents and their status lines; disk and git win over recovery prose; (2a) **classify the dirty set:** compare every uncommitted path against the run's approved expected run-state set (UPDATE MAP \u00a7N \u2014 the map itself, `INTAKE_SNAPSHOT/`, session / recovery state, response logs, the draft RUN_SUMMARY); a dirty set that is exactly a subset of that approved set is a LAWFUL interrupted-run state, not a STOP (TEST C1); any unexplained path \u2192 STOP / BLOCKED \u2192 Tony; (3) locate the phase from the durable folder: no map \u2192 P1; map DRAFT \u2192 P2; map APPROVED and no spec (LARGE) \u2192 P3; spec APPROVED and commits but no handoff \u2192 P4 (inventory DONE / NOT DONE per touch-list row with evidence); handoff present and not pushed \u2192 Gate 4; pushed and no matrix \u2192 P6; matrix partial \u2192 P6 at the last recorded row; findings routed \u2192 rework; Gate Q verdict present \u2192 P8/P9; (4) re-present from the last COMPLETED gate; a half-executed phase is re-presented for its remaining rows, not re-argued from scope; (5) a half-done branch is adopted or cleanly abandoned by the Operator's explicit word, never both, never silently. **QA resume:** a resumed Cody session re-verifies `QA_START_SHA` (or the latest `QA_RETEST_SHA`) against `origin/<branch>` before trusting any previously recorded PASS row; if the tip moved, every row is re-run. The map \u2014 not memory, not the branch \u2014 remains the source of truth.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/CLAUDE.md",
+    "line": 134,
+    "quote": "**D20 \u2014 QA independence and derivation-only acceptance.** On the LARGE path QA is a separate seat in a separate session. Sol authors `DOCSET_SYNC_ACCEPTANCE_SPEC.md` after Gate 2 under the derivation-only rule: every AC traces to an approved Correction / Intake ID, an approved UPDATE MAP row, or a standing invariant family in `_shared/references/STANDING_INVARIANTS.md`; Sol transforms approved intent into testable criteria and may NOT invent doctrine requirements. Tony approves the spec at Gate 3; it is frozen; any material change re-enters Gate 3. Cody verifies at QA_START_SHA with read-only checks and writes evidence only in QA surfaces; Cody may not edit canonical doctrine, the map, the spec, MANIFEST, CHANGELOG, `_ARCHIVE/`, or branch history, may not rewrite Claudy's wording, and may not adjudicate new doctrine. Sol reviews Cody's evidence, classifies and routes findings, and owns the Gate Q verdict in the Factory vocabulary \u2014 PASS / PASS WITH FOLLOW-UP FINDINGS / PASS WITH KNOWN RISK / FAIL / BLOCKED \u2014 and no other. Claudy never issues a verdict and never grades his own paper on LARGE. On the TINY path, the docs-only QA waiver (`SOFTWARE_FACTORY_PLAYBOOK` \u00a72.5 item 6) is recorded explicitly in the map at Gate 2, and Claudy runs the mechanical checks of the standing invariants himself and presents them at Gate 4. Rationale: `QA_PLAYBOOK` \u00a734 names Engineer self-certification an anti-pattern; \u00a73 forbids QA silently repairing what it verifies; `BIM_PLAYBOOK` \u00a78 forbids the Engineer writing his own exam.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/CLAUDE.md",
+    "line": 184,
+    "quote": "| 0.8-DRAFT | 2026-09-26 | **Final bounded hardening after TEST B (LARGE + independent QA + repair/retest + Gate Q) and TEST C1/C2 (graceful and hard-crash resume); no redesign.** D18 + D10: the UPDATE MAP is frozen at Gate 2 \u2014 CONTENT_SHA, Gate 3/4 times, push time and later overrides are recorded in `SYNC_HANDOFF.md` / `RUN_SUMMARY.md`, never written into the frozen map (\u00a7O holds a pointer only). D11 + D10: `INTAKE_SNAPSHOT/` \u2014 the intake copied as received at Gate 1, immutable, committed no later than the handoff commit on LARGE so a fresh QA workspace never depends on the Engineer's local `_INBOX/`. D18: explicit publication sequence CONTENT_SHA \u2192 handoff/audit commit \u2192 Gate 4 \u2192 metadata-only Gate-4 approval commit \u2192 push \u2192 Cody records QA_START_SHA. D7(5): archive fidelity proven with the Git-object method (`git hash-object` vs `git rev-parse <BASE_SHA>:<path>`, staged blob via `git rev-parse :<archive>`); the `git show | diff -` form is retired as evidence (false failure under `core.autocrlf=true`). D15a + D22: recovery authority hierarchy (RECOVERY.md / session advisory; git + working tree + `_AUDIT/SYNC_*` + approved map + intake snapshot + disk authoritative; seven reconstruction items); interrupted-run dirty set compared to the approved expected run-state set (map \u00a7N) \u2014 exact subset = lawful resume, unexplained = STOP; run-state checkpoint commit, then a clean tree before the per-doc sequence. Templates: enumerated rows are the authority for every count (map \u00a7B/\u00a7N/\u00a7P, handoff \u00a73). IMPLEMENTED \u2014 VALIDATED / FINAL HARDENING CANDIDATE; not v1.0. Source: `fable-sync-review/run-001/FINAL_HARDENING_REPORT.md`. |",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/CLAUDE.md",
+    "line": 187,
+    "quote": "| 0.3-DRAFT | 2026-08-10 | Post-PR-#8 amendments encoded. `_INBOX/` is the standing cargo bay: activation discovery scans it first (clone root demoted to legacy fallback). New D15a: interrupted-run resume protocol (inventory reality, DONE/NOT-DONE with evidence, re-present from last completed gate, adopt-or-abandon the half-done branch explicitly). New D16: cargo triage \u2014 every inbox file classified aloud as PACK / NEW DOC / SUPERSEDING DOC before Gate 1; superseding docs ride the full four-step dance with version verified against the live header. README rewritten to match (one drop folder, resume launch line). |",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/README.md",
+    "line": 27,
+    "quote": "**Step 3 \u2014 Drop ALL cargo in `_INBOX/` at the clone root.** One folder, every run. A package goes in as its folder. You do NOT label what is what \u2014 Claudy classifies every unit aloud at Gate 1 (correction package / lesson / new doc / superseding doc / process doc / image / supporting / historical / cross-boundary / no-change / blocked) and asks only if something genuinely cannot be classified from disk.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/README.md",
+    "line": 43,
+    "quote": "**Step 6 \u2014 YOUR move: the PR and the merge.** Click the compare URL Claudy gives you \u2192 Create pull request \u2192 review \u2192 **Merge via REBASE-AND-MERGE** (doctrine law \u2014 preserves per-doc history). Squash only for trivia. On LARGE, merge only on a PASS-family verdict.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/README.md",
+    "line": 45,
+    "quote": "**Step 7 \u2014 Tell him it's merged.** He sweeps: syncs main, deletes the branch, stamps every intake item ENCODED with the PR number, empties `_INBOX/`, removes debris, leaves the run's durable folder in `_AUDIT/SYNC_<date>_<slug>/`, updates RECOVERY.md, delivers the run summary. Done when he says the tree is clean.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/README.md",
+    "line": 60,
+    "quote": "- **Red \u274c on CI** from the recorded pre-existing findings: merge anyway \u2014 they are named in the map and the PR. He fixes reds HIS change caused; he never touches the rest and never silences a lint.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/README.md",
+    "line": 77,
+    "quote": "    Intake: all cargo is in _INBOX/.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/_shared/references/ANTI_PATTERNS.md",
+    "line": 19,
+    "quote": "**Rule:** D6. Main is PR-only. On main you PULL, never push. The rejection is the system working.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/_shared/references/ANTI_PATTERNS.md",
+    "line": 47,
+    "quote": "**Rule:** the `_INBOX/` cargo bay (standing since 2026-08-10) \u2014 every unit in it is presumptive cargo, classified aloud per D16 before Gate 1. The repo root is a legacy fallback only. The Operator's runbook says `_INBOX/`; the scan makes forgetting impossible from either side.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/_shared/references/ANTI_PATTERNS.md",
+    "line": 58,
+    "quote": "**Risk pattern:** the seat that wrote twenty diffs is the seat that proves nothing was missed. `QA_PLAYBOOK` \u00a734 names it; the v0.3 Gate 4 was exactly this for every run size.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/_shared/references/ANTI_PATTERNS.md",
+    "line": 82,
+    "quote": "**Incident (TEST B, 2026-09):** a fresh QA worktree had the pushed map, spec and handoff \u2014 and no intake, because the approved cargo sat only in the Engineer's local, uncommitted `_INBOX/`.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/_shared/references/INTAKE_TAXONOMY.md",
+    "line": 3,
+    "quote": "> Shared reference. Claudy applies it at Phase 1 to every cargo unit in `_INBOX/`; Cody uses it to verify that every ledger row carries a lawful class and a final disposition (AC-T). A unit that fits no class, or fits two, is BLOCKED \u2014 a QUESTION at Gate 1 \u2014 never a guess.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/_shared/references/INTAKE_TAXONOMY.md",
+    "line": 7,
+    "quote": "A **cargo unit** is one file, or one folder treated as a whole, in `_INBOX/` (legacy fallback: the repo root for `DOCTRINE_PROMOTION*`, `*PATCH*`, `LESSONS*`). A correction package arrives as a folder tree and is ONE unit at the package level; each correction inside it is one ledger ROW. Recognition is by discovery, never by asking Tony what a file is, and it is **content-first**. Read the unit and decide from its **status** (APPROVED, FLAGGED, DRAFT, historical), **contents**, **intent** (what it asks to become true), **target** (which doc, repo, or folder it aims at), **provenance** (who produced it, from which run or retro), **authority** (who approved it, and whether that approval governs doctrine), and **semantic form** (brief, entry, whole document, image, record), plus a Hub-counterpart match by canonical name first and content similarity second. The **filename is supporting evidence only**: a file is not a lesson because \"LESSONS\" is in its name, and a file named otherwise is not excluded from a class its contents prove. When filename and contents disagree, contents win and the disagreement is stated aloud.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/_shared/references/STANDING_INVARIANTS.md",
+    "line": 18,
+    "quote": "| **HYGIENE / CLEANUP** | AC-H | One commit per canonical doc with the `docs(<DOC>): v<X.Y> - <summary> [<IDs>]` shape; no `Co-Authored-By` trailer; repair commits carry `repair QA-F<nn>`; one version bump per doc per run; no push occurred before Gate 4 (first remote appearance of the branch postdates the Gate 4 record, which sits in its own metadata-only commit after CONTENT_SHA); `_INBOX/` contents are dispositioned; no debris in the branch (D11 list); the working tree is clean at handoff and at closeout; the durable folder contains the required set \u2014 including `INTAKE_SNAPSHOT/` (byte-identical to what Gate 1 approved; never edited after Gate 1) \u2014 and nothing else. | `git log <base>..<cand> --format=\"%H %s%n%b\"` scanned for shape and trailers; `git reflog`/handoff timestamps vs. Gate 4 record commit; `git status --porcelain` empty; `ls <run>/` vs. the durable list; `git log --follow --diff-filter=M -- <run>/INTAKE_SNAPSHOT` empty (no post-Gate-1 modification); `git ls-files _INBOX/` shows only the bay. |",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/_shared/references/STANDING_INVARIANTS.md",
+    "line": 25,
+    "quote": "- `<run>/INTAKE_SNAPSHOT/` is present at `<cand>` (or `INTAKE_SNAPSHOT/REFERENCE.md` names an immutable source Cody can fetch). QA reads the intake from the snapshot only \u2014 never from the Engineer's local `_INBOX/`, which a fresh QA workspace does not have (TEST B).",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/_shared/templates/DOCSET_SYNC_ACCEPTANCE_SPEC.md",
+    "line": 19,
+    "quote": "- **Explicitly out of scope (QA will not use these to fail the run):** items dispositioned SPLIT / DEFERRED / BLOCKED (listed by ID); pre-existing lint findings in the recorded baseline; baseline drift recorded in map \u00a7G (`DRIFT-\u2026`, graded only as \"unchanged\"); any observation outside the approved scope \u2014 these become Follow-Up Findings, not failures (`QA_PLAYBOOK` \u00a710 scope protection).",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/_shared/templates/DOCSET_SYNC_ACCEPTANCE_SPEC.md",
+    "line": 20,
+    "quote": "- **Preconditions (BLOCKED, not FAIL, if unmet):** CONTENT_SHA recorded in SYNC_HANDOFF \u00a70 and an ancestor of QA_START_SHA; only approved audit/handoff artifacts between them (handoff, `INTAKE_SNAPSHOT/`, the Gate-4 approval record commit, session / recovery / response logs); map APPROVED, this spec APPROVED, and `INTAKE_SNAPSHOT/` present in `<run>/` at the candidate (QA never reads the Engineer's local `_INBOX/`); lint runner executes on the QA rig.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/_shared/templates/DOCSET_SYNC_ACCEPTANCE_SPEC.md",
+    "line": 38,
+    "quote": "| AC11 | AC-H | Commit shape `docs(<DOC>): v<X.Y> - \u2026 [<IDs>]`, no Co-Authored-By, one bump per doc; no push before the Gate-4 approval record commit; `_INBOX/` dispositioned; no debris; tree clean; durable folder contains exactly the required set incl. `INTAKE_SNAPSHOT/` unmodified since Gate 1 | STANDING AC-H; MAP \u00a7N, \u00a7O | `git log` scan; timestamps; `git status`; `ls <run>/`; `git log --diff-filter=M -- <run>/INTAKE_SNAPSHOT` empty | Gate Q |",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/_shared/templates/SYNC_HANDOFF.md",
+    "line": 3,
+    "quote": "> **Engineering \u2192 QA claim package** (`QA_PLAYBOOK` \u00a76: a handoff is claims to verify, never proof). Authored by Claudy AFTER the last approved content commit exists and BEFORE Gate 4. References **CONTENT_SHA**; never claims the SHA of the commit that will contain this file. Cody records **QA_START_SHA** independently from the remote after the Gate 4 push (`_shared/references/SHA_AND_PUSH_CONTRACT.md`). Lives at `_AUDIT/SYNC_<YYYY-MM-DD>_<slug>/SYNC_HANDOFF.md`. On the TINY path this file is not required; the equivalent fields (CONTENT_SHA, Gate 4 record, pushed tip) go in RUN_SUMMARY.md \u2014 never into the map, which is frozen at Gate 2.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/_shared/templates/SYNC_HANDOFF.md",
+    "line": 14,
+    "quote": "| Intake snapshot | `_AUDIT/SYNC_<run>/INTAKE_SNAPSHOT/` \u2014 committed in `<commit short SHA>` (this handoff commit at the latest); unmodified since Gate 1 (`git log --diff-filter=M -- <run>/INTAKE_SNAPSHOT` empty). Cody reads the intake from here, not from `_INBOX/`. |",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-engineer/SKILL.md",
+    "line": 28,
+    "quote": "Do the family CLAUDE.md \u00a72 activation sequence exactly: seat resolution \u2192 CLAUDE.md \u2192 this file \u2192 `RECOVERY.md` + session file \u2192 environment discovery (`pwd`, `ls`, `git remote -v`, branch, HEAD, status, `git fetch`, distance from main; proposed BASE_SHA with its evidence; RESUME detection; `_INBOX/` cargo scan; MANIFEST read + live-doc count, with any mismatch at BASE recorded as baseline drift; lint baseline; MCP presence). Read `_shared/references/ANTI_PATTERNS.md` and name the one or two failure modes most relevant to the job's shape.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-engineer/SKILL.md",
+    "line": 30,
+    "quote": "**RESUME declared or evidenced** (a `docs/sync-*` branch with commits, a non-empty `_INBOX/` beside partial archives, a `_AUDIT/SYNC_*/` folder without a Gate Q verdict): apply D15a before anything else. RECOVERY.md and the session file are advisory \u2014 read them if present, then let git, the working-tree diff, `_AUDIT/SYNC_*`, the approved map, `INTAKE_SNAPSHOT/` and disk decide; report any contradiction. Reconstruct and say aloud, from that evidence alone: the active run, BASE_SHA, the approved route, each gate's status, the current phase, the EXPECTED dirty set (map \u00a7N) versus the actual dirty set, and the next legal action. A dirty set that is exactly a subset of the approved run-state set is a lawful interrupted run; any other dirty path \u2192 STOP. Then locate the phase from the durable folder and re-present from the last COMPLETED gate. A hard crash (no closing session entry, stale RECOVERY.md) changes nothing about this procedure \u2014 it is the case the procedure exists for (TEST C2).",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-engineer/SKILL.md",
+    "line": 40,
+    "quote": "1. For each cargo unit in `_INBOX/` (a folder is one unit; a correction package is one unit with one ledger row per correction), read its contents and classify aloud into exactly one of the eleven classes in `_shared/references/INTAKE_TAXONOMY.md`. Classification is content-first (D16): state the evidence from status, contents, intent, target, provenance, authority, and semantic form, plus the Hub counterpart match (canonical name first, content similarity second). The filename is supporting evidence only and is never the sole reason for a class.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-engineer/SKILL.md",
+    "line": 49,
+    "quote": "7. **On approval \u2014 take the intake snapshot (run-state write, D2 / D11):** create `_AUDIT/SYNC_<YYYY-MM-DD>_<slug>/INTAKE_SNAPSHOT/` and copy every in-scope cargo unit into it byte-for-byte as received (`cp -r _INBOX/<unit> <run>/INTAKE_SNAPSHOT/`); a unit too large to snapshot gets `INTAKE_SNAPSHOT/REFERENCE.md` naming repo, commit SHA and path. The snapshot is never edited afterwards \u2014 final disposition stamps go in `RUN_SUMMARY.md`, not on the snapshot. It is committed no later than the handoff commit so that a fresh QA workspace has the approved intake without your local `_INBOX/` (TEST B; AP-20).",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-engineer/SKILL.md",
+    "line": 123,
+    "quote": "1. Tell Tony his move: launch **Cody** in a fresh session with the QA launch line. Everything Cody needs is on the pushed branch \u2014 map, spec, handoff, `INTAKE_SNAPSHOT/`; he never needs your local `_INBOX/`. You stop. You make no commits while QA runs.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-engineer/SKILL.md",
+    "line": 144,
+    "quote": "1. **Verify the merge landed:** `git checkout <merge-target> && git pull` (PULL, never push, on main or any merge target); `git log --oneline -<n>` shows the run's commits; find the PR number deterministically (`git ls-remote origin 'refs/pull/*/head'` matched to the pushed tip).",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-engineer/SKILL.md",
+    "line": 147,
+    "quote": "4. **`_INBOX/` must end EMPTY:** every unit landed (announce where), parked (target restated by XB ID), or returned to the Operator with a reason. The bay stays.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-engineer/SKILL.md",
+    "line": 160,
+    "quote": "> **Agent:** Reading CLAUDE.md\u2026 done; no seat named, so I am Claudy. Reading sync-engineer/SKILL.md\u2026 done. RECOVERY.md says the last run closed clean. Discovery: Hub clone, on main, tree clean, main is current with origin, launch line names no other base \u2014 proposed BASE_SHA is the current HEAD, `4c3b2a1`. Lint baseline: nine pre-existing findings, all in STARTER_KIT_HANDBOOK, DATABASE_MANUAL, UI_UX_BUILDING_MANUAL \u2014 recorded. MANIFEST says 29 live docs; disk has 31 at BASE \u2014 nothing in the intake adds or removes a doc or authorizes that repair, so it is baseline drift DRIFT-2026-09-21-01, parked, not on the touch list. Cargo scan: `_INBOX/` holds one folder, `CORRECTION_PACKAGE_2026-09/`, and one file, `LESSONS_ADK_HARNESS.md`. Reading contents: the folder has a master index with status APPROVED and three briefs, each carrying problem, evidence, intent, invariants, and preservation \u2014 an APPROVED CORRECTION PACKAGE, CP-01 through CP-03, all fields present. The file's contents are two retrospective-FLAGGED entries, each naming a target doc, a placement, and exact wording \u2014 a DOCTRINE JOURNAL by its contents, not just its name; entries become IN-2026-09-21-01 and -02. CP-02 renames a gate across the Factory; that alone fails the fast path. Provisional route: LARGE. One question I cannot answer from disk: IN-\u2026-02 cites `TRM_PLAYBOOK.md`, which the Hub does not have \u2014 GAP-\u2026-01; does a doc ride in, or does it land flagged? Awaiting your APPROVED on scope and classification.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-engineer/SKILL.md",
+    "line": 162,
+    "quote": "> **Agent:** Recorded. Snapshotting the two cargo units into the run folder's `INTAKE_SNAPSHOT/` as received \u2014 that copy is what Sol and Cody will read. Phase 2. For CP-02 the search terms are the old gate name, the new gate name, and \"pre-deployment gate\"; scope is the five tiers plus MANIFEST and CHANGELOG. Fourteen hits: nine CHANGE across four docs, three CONSISTENT, two HISTORY. Placements verified \u2014 the FFM_PLAYBOOK checklist calls it \"Stage 7 Completion Checklist,\" not \"phase-close checklist\" as the brief says; anchoring there and flagging it. Proposed wording per row\u2026 IN-\u2026-01's sentence lands verbatim; the one-line lead-in I added before it is marked ENGINEER-PROPOSED \u2014 approve or strike it. CP-03 is already true at SOFTWARE_FACTORY_PLAYBOOK \u00a72.5 item 5 \u2014 proposing NO-CHANGE with the quote; your approval makes it so. Route with the finished map: five touch-list docs, a Factory-wide rename \u2014 LARGE, no downgrade proposed. Awaiting your APPROVED on the UPDATE MAP.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-engineer/SKILL.md",
+    "line": 193,
+    "quote": "All phases for your route complete; PR merged by the Operator; sweep clean; `_INBOX/` empty; intake stamped with IDs and the PR number; durable folder complete; parked XB items restated; run summary delivered aloud. Then say what would improve this skill \u2014 every run before v1.0 is a test of the skill itself.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-engineer/SKILL.md",
+    "line": 200,
+    "quote": "| 0.7-DRAFT | 2026-09-14 | TEST A hardening (bounded). P0/P1: proposed BASE_SHA from discovery; content-first classification (filename supporting only); baseline drift parked as `DRIFT-\u2026`; CONFLICT vs mechanical CLARIFICATION presented separately. P2: map is a run-state / planning write; BASE_SHA recorded in \u00a70 before Gate 2 (no longer \"pending until branch creation\"); ENGINEER-PROPOSED wording marked in \u00a7C; \u00a7K typed CONFLICT / CLARIFICATION; \u00a7G updates only run-caused derived fields, drift parked. P4: branch from the approved BASE_SHA or reuse the run branch at BASE / a lawful descendant \u2014 the `git checkout main && git pull` branch step removed; drift values left as at BASE. P5/P8/P9: `<run-branch>` and `<merge-target>` replace hard-coded names. Worked example and anti-patterns 2, 9, 13\u201315 updated. IMPLEMENTED \u2014 AWAITING INDEPENDENT VALIDATION. |",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-engineer/SKILL.md",
+    "line": 202,
+    "quote": "| 0.3-DRAFT | 2026-08-10 | (as root SKILL.md) Phase 1 cargo scan moved to `_INBOX/` with mandatory D16 triage aloud: PACK / NEW DOC / SUPERSEDING DOC. Resume path added at intake per D15a. Phase 4 dance gains superseding-doc mechanics. Phase 6 sweep requires `_INBOX/` empty at close. |",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-engineer/references/TOOL_ROUTING.md",
+    "line": 21,
+    "quote": "- Discovery: `git fetch origin`; report distance from `origin/main`; **do not pull** during discovery (D9 of the review: a pull is a write and is ambiguous off-main).",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-engineer/references/TOOL_ROUTING.md",
+    "line": 28,
+    "quote": "- On main: PULL, never push. Post-merge \"ahead of origin\" confusion = reset/pull, never force.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-engineer/references/TOOL_ROUTING.md",
+    "line": 29,
+    "quote": "- PR number after merge: `git ls-remote origin 'refs/pull/*/head'` matched to the pushed tip (no MCP needed).",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-engineer/references/TOOL_ROUTING.md",
+    "line": 33,
+    "quote": "1. **Branch first, always.** `create_branch` from the approved BASE_SHA before any write. Never write to main; never call `merge_pull_request`.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-engineer/templates/LESSONS_LEARNED.md",
+    "line": 5,
+    "quote": "> A retro may export flagged lessons as a DOCTRINE_PROMOTION pack. Drop the pack \u2014 or this file \u2014 into the Hub clone's `_INBOX/` (the standing cargo bay); the skill classifies it as a DOCTRINE JOURNAL / LESSON and assigns each entry an intake ID (`IN-<run>-<NN>`).",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-qa/SKILL.md",
+    "line": 21,
+    "quote": "You are a QA seat of the `factory-docs-update` family. **Sol** (QA Lead) authors the acceptance contract under the derivation-only rule, reviews Cody's evidence, classifies and routes findings, and issues the Gate Q verdict. **Cody** (QA executor) treats the Engineer's handoff as a claim package, verifies every AC at the recorded remote SHA with read-only checks, and records evidence and findings. Neither seat edits canonical doctrine, the map, the spec, indexes, archives, or history; neither rewrites Claudy's wording; neither adjudicates new doctrine \u2014 those are Tony's (family CLAUDE.md D20, D17). The Factory's QA doctrine (`QA_PLAYBOOK`) governs; this file is its docs-only application. Full doctrine lives in the family CLAUDE.md \u2014 if you have not read it this session, read it now.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-qa/SKILL.md",
+    "line": 23,
+    "quote": "**Independence rule:** you were launched in a fresh session, on purpose \u2014 possibly in a fresh clone or worktree that has nothing the Engineer did not push. Your evidentiary inputs are ONLY: the approved intake **as committed in `<run>/INTAKE_SNAPSHOT/`** (never the Engineer's local `_INBOX/`, which your workspace may not have \u2014 TEST B), the approved UPDATE MAP (frozen at Gate 2), the approved spec, `SYNC_HANDOFF.md`, the remote branch, and the Hub clone. `RECOVERY.md` and the session file are ADVISORY state (which phase, which SHAs) \u2014 not evidence, not authoritative, and not a channel for the Engineer's reasoning; git, the durable folder and disk outrank them (D15a). Do not read the Engineer's CLI transcript or RESPONSES narratives to decide a PASS.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-qa/SKILL.md",
+    "line": 60,
+    "quote": "3. **Extract the contract** into `<run>/QA_MATRIX.md` from `templates/QA_MATRIX.md`: one row per AC \u2014 check, method (command / diff / grep / read), environment (SHA), result Pending. No verification starts until every AC is visible and numbered (`QA_PLAYBOOK` \u00a79 Stage 2).",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-qa/SKILL.md",
+    "line": 78,
+    "quote": "- **AC-H:** commit shapes and trailers; no push before the Gate-4 approval record commit; `_INBOX/` dispositioned; no debris; tree clean; durable folder set present, `INTAKE_SNAPSHOT/` unmodified since Gate 1 (`git log --diff-filter=M -- <run>/INTAKE_SNAPSHOT` empty).",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-qa/SKILL.md",
+    "line": 79,
+    "quote": "- **Exploratory probe (bounded):** after the contract, probe the seams most likely to hide drift \u2014 a copyable example in a doc adjacent to a changed one, a checklist that restates a changed rule, a quick-reference table. Anything found outside the approved scope is a **Follow-Up Finding**, never a failure (`QA_PLAYBOOK` \u00a710).",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-qa/SKILL.md",
+    "line": 81,
+    "quote": "Classify every observation before action (`QA_PLAYBOOK` \u00a79 Stage 7): Acceptance Failure \u00b7 Regression \u00b7 Pre-Existing (provable at BASE) \u00b7 Follow-Up Finding \u00b7 Observation. Record findings as `QA-F<nn>` in the matrix's findings log with the defect standard: ID, AC, severity, classification, exact location, expected, actual, evidence, scope impact, retest requirement.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-qa/SKILL.md",
+    "line": 101,
+    "quote": "2. Write `<run>/GATE_Q_REPORT.md` from `templates/GATE_Q_REPORT.md` (a docs-only overlay on `QA_PLAYBOOK` \u00a722): verdict, scope verified, SHAs per cycle, AC results, findings with routing, pre-existing set, gaps, final tree state, release recommendation. Gate D is `N/A \u2014 documentation-only, no deployment; reason recorded`.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-qa/SKILL.md",
+    "line": 122,
+    "quote": "2. **Fixing what you found.** A QA seat never edits canonical files, the map, the spec, indexes, or archives \u2014 not even a typo (D20; `QA_PLAYBOOK` \u00a73).",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-qa/SKILL.md",
+    "line": 139,
+    "quote": "| 0.8-DRAFT | 2026-09-26 | Final bounded hardening after TEST B / C1 / C2 (no redesign). Independence rule: intake is read from `<run>/INTAKE_SNAPSHOT/` on the pushed branch, never the Engineer's local `_INBOX/`; RECOVERY.md / session advisory, git + durable folder + disk authoritative. S0: missing snapshot \u2192 BLOCKED; CONTENT_SHA located in handoff \u00a70. S2: post-CONTENT diff allowance names the handoff, snapshot and Gate-4 approval record commits; snapshot presence is a precondition. S3: AC-A by Git-object method (blob SHA equality; `git show | diff -` retired); AC-H checks the snapshot unmodified. Templates: QA_MATRIX preconditions, GATE_Q_REPORT environment and AC-A evidence row. IMPLEMENTED \u2014 VALIDATED / FINAL HARDENING CANDIDATE. |",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-qa/SKILL.md",
+    "line": 141,
+    "quote": "| 0.6-DRAFT | 2026-09-14 | Initial QA child of the family (Stage B candidate). Seats Sol (QA Lead: derivation-only spec, finding routing, Gate Q) and Cody (QA executor: QA_START_SHA / QA_RETEST_SHA, preconditions, contract extraction, per-family verification incl. propagation re-run, bounded retest). Docs-only overlay on QA_PLAYBOOK; Factory verdict vocabulary; Follow-Up Finding scope protection; QA resume rule. AWAITING INDEPENDENT VALIDATION. |",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-qa/templates/GATE_Q_REPORT.md",
+    "line": 3,
+    "quote": "> Sol's Gate Q verdict for a LARGE synchronization run. This is a **docs-only overlay** on `QA_PLAYBOOK.md` \u00a722 (QA Acceptance Report): the playbook's structure is kept; deployment sections are recorded N/A with the reason. The playbook remains the single source for QA doctrine; this template adds only the sync-specific fields. Lives at `_AUDIT/SYNC_<YYYY-MM-DD>_<slug>/GATE_Q_REPORT.md`. Written by the QA Lead; never by the Engineer.",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-qa/templates/GATE_Q_REPORT.md",
+    "line": 19,
+    "quote": "- Intake verified from: `<run>/INTAKE_SNAPSHOT/` at QA_START_SHA (`<present / BLOCKED>`; never the Engineer's local `_INBOX/`)",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-qa/templates/GATE_Q_REPORT.md",
+    "line": 74,
+    "quote": "`N/A \u2014 documentation-only synchronization; no deployment in scope (reason recorded per BIM_PLAYBOOK \u00a76).`",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  },
+  {
+    "path": "main:_SKILLS/factory-docs-update/sync-qa/templates/GATE_Q_REPORT.md",
+    "line": 78,
+    "quote": "- `git status --porcelain` at final SHA: empty `<yes/no>` \u00b7 durable folder contents: `<list>` \u00b7 debris check: `<clean / items named>` \u00b7 `_INBOX/` dispositioned: `<yes/no>`",
+    "disposition": "OUT-OF-SCOPE",
+    "drives": "\u00a7I / XB-02; awareness only"
+  }
+]

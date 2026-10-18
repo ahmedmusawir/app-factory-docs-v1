@@ -1,0 +1,14 @@
+git_before: {"HEAD": "626da8d70f4db22987dc7fcc86765492072360cd", "main": "9c179392f79b70da099121fc357d3107ad3bb86e", "origin_main": "9c179392f79b70da099121fc357d3107ad3bb86e", "staged": 0}
+repair_zip: {"sha256": "9782260c…", "members": 46, "inventory": 45, "inventory_ok": true, "payload_equals_run_dir": true}
+serialization_delta: {"inserted_sequences": 2, "bytes_added": 58, "marker_lines": [29748, 30199], "removing_them_reproduces_submitted_patch": true, "old_marker_count_in_submitted": 0}
+git_apply_check_corrected_patch: {"exit": 0, "stderr": "", "cwd": "fresh BASE export (no .git)"}
+git_apply_check_submitted_patch_control: {"exit": 128, "stderr": "error: patch fragment without header at line 29750: @@ -0,0 +1,447 @@"}
+gnu_patch_replay: {"exit": 0, "hunks_reported": 101, "rejects_or_fuzz": false}
+outputs_vs_index: {"exact": 101, "of": 101, "modified": 33, "added": 68, "stray_files": 0, "before_hashes_equal_pinned_blobs": 33}
+archive_fidelity: {"_ARCHIVE/FRONTEND_BUILD_PHASE_PLAYBOOK_v1_2_2.md": "exact", "_ARCHIVE/FRONTEND_FIRST_PLAYBOOK_v1_1_3.md": "exact"}
+all_outgoing_archives_equal_BASE_sources: 31
+lint_suite_on_replayed_tree: {"exit": 0, "tail": "=== RESULT: PASS ==="}
+other_patch_artifacts: {"closeout_patch_git_apply_check_exit": 0, "closeout_12_spans_replay_to_post_index": true, "selected_content_diff_git_apply_check_exit": 0}
+carry_forward_380_edits_to_content_index_and_amended_docs: {"edits": 380, "content_index_docs": 31, "amended_docs_in_replayed_tree": 3, "residual": "header bump + history row"}
+identities_unchanged: {"fixed": ["UPDATE_MAP.md", "DOCSET_SYNC_ACCEPTANCE_SPEC.md", "QA_AMENDED_V1/DOCSET_SYNC_ACCEPTANCE_SPEC_AMENDED_V1.md", "AMENDED_V1/AMENDMENT_V1.md", "AMENDED_V1/AMENDMENT_V1_EDITS.json"], "amended_v1_records": 23, "preservation_baseline": true, "frozen_proposed_content": 101}
+git_after: {"refs_unchanged": true, "staged": 0, "canonical_diff_vs_BASE": "empty", "worktrees_or_branches_created": false}

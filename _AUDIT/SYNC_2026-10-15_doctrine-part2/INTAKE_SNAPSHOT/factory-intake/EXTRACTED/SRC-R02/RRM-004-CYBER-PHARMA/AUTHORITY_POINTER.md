@@ -1,0 +1,12 @@
+# RRM-004-CYBER-PHARMA — Authority Pointer
+
+What binds this pack, in precedence order. Disk beats docs; the registry beats the pack for version numbers; newest ruling wins; conflicts go to the Director. Root `CLAUDE.md` protocol wins over this pack where they collide (RRM-001 A-10).
+
+1. **Director rulings** — `agent_docs/RRM_DIRECTOR_DECISIONS.md` D4 (RRM-004 isolated, full board rerun, targets verified at implementation, Cloudinary per real sources), D6 (naming), D8 (campaign shape); the four decisions taken at DC-1 for this module (DD-1 transitive sweep, DD-2 Cloudinary, DD-3 QA target, DD-4 QAM authorship split) as recorded in `RULINGS_ADDENDUM.md`. The QA Lead's QAM pilot plan v0.1 and the Architect's QAM opinion (2026-09-29) are adopted for this module's QA run shape by Director approval.
+2. **Campaign map** — `agent_docs/RRM_CAMPAIGN_MAP_v1_0.md` §2 lifecycle, §7 RRM-004, §8 Director runway, §10 deferred ledger. Where §7's "remaining advisories listed by ID and not fixed here" meets DD-1, DD-1 wins and a CE erratum records it.
+3. **Ledger rows** — `agent_docs/RRM_FINDINGS_DISPOSITION_LEDGER.md` R-009 (accept); E-17 (QA target substitution precedent), E-18 (QA-F02 backlog — origin check only in this module).
+4. **This pack** — `CLAUDE.md` → `ENVIRONMENT_PREFLIGHT.md` → `DIRECTOR_CHECKPOINTS.md` → `RRM_BRIEF.md` → `ACCEPTANCE_SPEC.md` → `CLAUDY_PROMPTS.md`; post-freeze rulings in `RULINGS_ADDENDUM.md` and the spec's erratum lane. QA side: `QA/AGENTS.md` → `QA/QAM_PILOT_CHARTER.md` → `QA/QA_ENVIRONMENT_PREFLIGHT.md` → `QA/QAM_MANIFEST.md` → `QA/QA_TEST_PLAN.md`.
+5. **Evidence inputs (read, never edited)** — recon R6, R3; `agent_docs/FABLE_CODE_REVIEW.md` F9; `agent_docs/ASTRA_CODE_REVIEW.md` A-003; RRM-003 A-01, A-02; the advisories themselves: GHSA-p293-qw3h-jr36 and GHSA-2xp9-vwfh-vxw4 (`next` < 16.3.3, critical), GHSA-rgj7-g3m4-5g8c (`sharp` < 0.35.4, high; libheif GHSA-g89c-p67h-r497 / GHSA-2jg2-4ch7-h545, fixed libheif 1.23.2).
+6. **Project doctrine** — `agent_docs/` governing instructions; QA playbook snapshot in `QA/GOVERNING/` (copied from RRM-003's at handoff with provenance); Web Factory J-11/J-19.
+
+Out of this pack's authority: any `src/` file, tests, `headers()`, auth paths, migrations, scripts, docs, Admin Portal, MissionControl, any database or dashboard action, deployment, and any dependency other than `next`, `eslint-config-next`, the `sharp` override and what the Director rules in DD-1.

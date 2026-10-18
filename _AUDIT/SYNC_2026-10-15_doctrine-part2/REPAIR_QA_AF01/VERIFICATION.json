@@ -1,0 +1,17 @@
+{
+  "status": "ENGINEER CHECKS PASS; independent QA retest pending",
+  "ordered_edits": 380,
+  "indexed_output_paths": 101,
+  "replayed_exact_outputs": 101,
+  "archive_fidelity": "2/2 exact bytes, Git blobs and no-final-newline state",
+  "lint_exit": 0,
+  "active_and_historical_patches_audited": 5,
+  "serializer_cases": 7,
+  "protected_files_unchanged": 1148,
+  "changed_protected_files": [],
+  "canonical_implementation": false,
+  "git_mutations": false,
+  "gate2_amendment": "PENDING",
+  "gate3": "PENDING",
+  "phase3": "NOT RELEASED"
+}

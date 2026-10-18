@@ -1,0 +1,8 @@
+# Engineer diagram inspection
+
+Inspected all four final librsvg/cairo PNG previews with the image viewer. Stick actors, lane labels, ordered action boxes, connectors and footer requirements are visible without clipped action text. The BIM view includes conditional authorized deployment/Gate D before Engine 1 completion and Engine 2 review; FFM creation includes Architect brief/contract preparation before Design. XML step text and numbered prose agree under MC_VERIFICATION. This is Engineer visual review, not Fable acceptance or runtime QA.
+
+- _AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_assets/workflows/BIM_WORKFLOW.svg — source SHA-256 `7cba33aa1a396e4467a09eb80ef912b6e06d2dc06f839c569ffcdf5f87b67ec9`; preview `_AUDIT/SYNC_2026-10-15_doctrine-part2/MC_EVIDENCE/diagram_previews/BIM_WORKFLOW.png`.
+- _AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_assets/workflows/FFM_CREATION.svg — source SHA-256 `0d7640fc0460f98aaf6a0b0d1acc8bc7866fc94e0ed61099d9d0e59931d3a1f0`; preview `_AUDIT/SYNC_2026-10-15_doctrine-part2/MC_EVIDENCE/diagram_previews/FFM_CREATION.png`.
+- _AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_assets/workflows/FFM_DEPLOYMENT.svg — source SHA-256 `ce17e51c9e72e24cd4fd961f9812d13242914f9e03fcb238a749b49361cb028e`; preview `_AUDIT/SYNC_2026-10-15_doctrine-part2/MC_EVIDENCE/diagram_previews/FFM_DEPLOYMENT.png`.
+- _AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_assets/workflows/FFM_EXECUTION.svg — source SHA-256 `d0ac268ef03f2ab6f4cb80970b2be3d242442af8eeaa3f3518526354df2a915c`; preview `_AUDIT/SYNC_2026-10-15_doctrine-part2/MC_EVIDENCE/diagram_previews/FFM_EXECUTION.png`.

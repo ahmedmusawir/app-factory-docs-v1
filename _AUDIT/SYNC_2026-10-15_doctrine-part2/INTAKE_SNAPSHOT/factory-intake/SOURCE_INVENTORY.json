@@ -1,0 +1,194 @@
+{
+  "sources": [
+    {
+      "id": "SRC-W01",
+      "original_name": "APP FACTORY PART 1_ FFM CREATION@2.6999998092651367x(1).png",
+      "package_path": "SOURCES/Workflow/SRC-W01_FFM_CREATION.png",
+      "status": "Undated diagram; simplified view",
+      "bytes": 380705,
+      "sha256": "714287752cae394fe9a94bbf017253b58ca4791bb840c10708cbbc7569835c86"
+    },
+    {
+      "id": "SRC-W02",
+      "original_name": "APP FACTORY PART 2_ FFM EXECUTION@2.6999998092651367x(1).png",
+      "package_path": "SOURCES/Workflow/SRC-W02_FFM_EXECUTION.png",
+      "status": "Undated diagram; older human QA execution view",
+      "bytes": 192114,
+      "sha256": "327212a3b2e84b7c2607d9bd854f9e4c0ce2204c00f282be22e4296733c3ae04"
+    },
+    {
+      "id": "SRC-W03",
+      "original_name": "APP FACTORY PART 3_ FFM DEPLOYMENT@2.6999998092651367x(1).png",
+      "package_path": "SOURCES/Workflow/SRC-W03_FFM_DEPLOYMENT.png",
+      "status": "Undated diagram; older deployment filenames",
+      "bytes": 331991,
+      "sha256": "743d7a2299ad2da746ed2648e2ea4415aabd2175b6deb86ea7ed1c0b3a1b2268"
+    },
+    {
+      "id": "SRC-W04",
+      "original_name": "APP FACTORY_ BIM WORKFLOW@2.6999998092651367x(1).png",
+      "package_path": "SOURCES/Workflow/SRC-W04_BIM_WORKFLOW.png",
+      "status": "Undated diagram; module QA flow",
+      "bytes": 248154,
+      "sha256": "fb87367a23213c65fa76e447ecb7a9c4fae56ef8f1a33c516bce77c5c0ddf9e7"
+    },
+    {
+      "id": "SRC-W05",
+      "original_name": "APP_FACTORY_FFM_OPERATING_MODEL_v1.0(1).md",
+      "package_path": "SOURCES/Workflow/SRC-W05_FFM_OPERATING_MODEL_v1_0_R2.md",
+      "status": "2026-08-24; REVIEW, reported rulings plus unapproved reconciliation",
+      "bytes": 28680,
+      "sha256": "168b8545dfd44ace0283adfb570561fb7c05a8d86cc63b7777d3ba03fc00012e"
+    },
+    {
+      "id": "SRC-W06",
+      "original_name": "APP_FACTORY_BIM_OPERATING_MODEL_v1.0(1).md",
+      "package_path": "SOURCES/Workflow/SRC-W06_BIM_OPERATING_MODEL_v1_0.md",
+      "status": "2026-08-24; REVIEW; contains older disposable QA branch rule",
+      "bytes": 17893,
+      "sha256": "b6144b9bcd44631d0b137b8a4210039c6382d3ff226e1d7c036b408858c62d42"
+    },
+    {
+      "id": "SRC-W07",
+      "original_name": "APP_FACTORY_DEVOPS_OPERATING_MODEL_v1.0.md",
+      "package_path": "SOURCES/Workflow/SRC-W07_DEVOPS_OPERATING_MODEL_v1_0.md",
+      "status": "2026-08-24; REVIEW; cross-cutting deployment proposal",
+      "bytes": 13825,
+      "sha256": "66e2e35667b7ac73b9838fbc250d3363b3a4b3c90a994ba648c1211db06e9e7b"
+    },
+    {
+      "id": "SRC-W08",
+      "original_name": "CODE_REVIEW_CYCLE.txt",
+      "package_path": "SOURCES/Workflow/SRC-W08_CODE_REVIEW_CYCLE.txt",
+      "status": "Undated review and bounded-repair diagrams",
+      "bytes": 2563,
+      "sha256": "feee30ff9f7772bae4e58c6d435c526f910ec91ee8d813681b2e086f5f4aa9e4"
+    },
+    {
+      "id": "SRC-W09",
+      "original_name": "BOUNDED_OPUS_5_REPAIR.txt",
+      "package_path": "SOURCES/Workflow/SRC-W09_BOUNDED_REPAIR.txt",
+      "status": "Undated repair/re-review/regression sketch",
+      "bytes": 486,
+      "sha256": "11e1bc1eef5590c2c79403b0abc704c1b4c1451445431c3d5691696fc9b91821"
+    },
+    {
+      "id": "SRC-W10",
+      "original_name": "DOC_SET_SYNC_PROCESS.txt",
+      "package_path": "SOURCES/Workflow/SRC-W10_DOC_SET_SYNC_PROCESS.txt",
+      "status": "Undated sync overview; current installed skill governs actual execution",
+      "bytes": 2905,
+      "sha256": "d6bd26470952b25f33707072760b759030f60078ac8ad61feeaed6b7bc9a5d19"
+    },
+    {
+      "id": "SRC-W11",
+      "original_name": "FACTORY_ENGINE_1_2_3.txt",
+      "package_path": "SOURCES/Workflow/SRC-W11_FACTORY_ENGINE_1_2_3.txt",
+      "status": "Undated three-engine draft; applicability unresolved",
+      "bytes": 2563,
+      "sha256": "1ce3bd07ead54de33b750b3f08bbf0ad34347c5850c9f1e30dce75b02c8db831"
+    },
+    {
+      "id": "SRC-R01",
+      "original_name": "RRM_FACTORY_PILOT_v0.1.zip",
+      "package_path": "SOURCES/RRM/SRC-R01_RRM_FACTORY_PILOT_v0_1.zip",
+      "status": "2026-09-17 pilot procedure, templates and original review archives",
+      "bytes": 121409,
+      "sha256": "0379eb008475d9ab653d0bcdeb0bcb3e6f6a68f7dce38c9afcfc18be9172fac4"
+    },
+    {
+      "id": "SRC-R02",
+      "original_name": "RRM-004-CYBER-PHARMA_pack_v1.0.zip",
+      "package_path": "SOURCES/RRM/SRC-R02_RRM004_ORIGINAL_PACK_v1_0.zip",
+      "status": "Authored 2026-09-30; original QA layout and blank results forms",
+      "bytes": 60680,
+      "sha256": "c2a21b82ca4f6c1ec0e7d75dd5860ff2cf15c3a3615099c62272558db524ed2a"
+    },
+    {
+      "id": "SRC-R03",
+      "original_name": "ARCHITECT_10X_LAB_BUNDLE_RRM.zip",
+      "package_path": "SOURCES/RRM/SRC-R03_ARCHITECT_10X_LAB_BUNDLE_RRM.zip",
+      "status": "Campaign report dated 2026-10-02 plus proposal/journal/field notes",
+      "bytes": 29981,
+      "sha256": "191eb232430393cf247e35a453d6df0be51db0800a0b8a7d5db5dbff372ba3c2"
+    },
+    {
+      "id": "SRC-R04",
+      "original_name": "JARVIS_QA_10X_PRODUCTION_OBSERVATION_JOURNAL.md",
+      "package_path": "SOURCES/RRM/SRC-R04_QA_PRODUCTION_OBSERVATION_JOURNAL.md",
+      "status": "QA observation journal; supplied entries end at Q1 review on 2026-10-01",
+      "bytes": 26893,
+      "sha256": "ba60e2be633a2347561426f5890a0b7b9f6d3735cff05f9a265fc732569f8675"
+    },
+    {
+      "id": "SRC-R05",
+      "original_name": "RRM_CAMPAIGN_v1.0.zip",
+      "package_path": "SOURCES/RRM/SRC-R05_RRM_CAMPAIGN_EMPTY_SCAFFOLD_v1_0.zip",
+      "status": "Directory-only archive; no campaign records",
+      "bytes": 1244,
+      "sha256": "c9ef99f5d6189fff0785bc35dcf3d0be715e52afaec1efdd88d3e8b609743c93"
+    },
+    {
+      "id": "SRC-Q01",
+      "original_name": "QAM_OPERATING_MODEL_PROPOSAL_v0_1.md",
+      "package_path": "SOURCES/QAM/SRC-Q01_QAM_OPERATING_MODEL_PROPOSAL_v0_1.md",
+      "status": "2026-09-30 proposal; several mechanics amended later",
+      "bytes": 14646,
+      "sha256": "57ebdcd1111e767a3bfcb3604a9c7e26bfc74315da5050855256da6be3b956cc"
+    },
+    {
+      "id": "SRC-Q02",
+      "original_name": "QAM_PILOT_ARCHITECT_JOURNAL.md",
+      "package_path": "SOURCES/QAM/SRC-Q02_QAM_PILOT_ARCHITECT_JOURNAL.md",
+      "status": "Journal through 2026-10-02; pilot result and remaining closeout items",
+      "bytes": 10717,
+      "sha256": "da020c5aa54164f509bfb8e2d9b8910d828dc0673f9eadff19baecd92d9ec1f2"
+    },
+    {
+      "id": "SRC-Q03",
+      "original_name": "STARK_QAM_10X_LAB_MASTER_DRAFT_v0_1.md",
+      "package_path": "SOURCES/QAM/SRC-Q03_STARK_QAM_10X_LAB_MASTER_DRAFT_v0_1.md",
+      "status": "2026-10-02; EXPERIMENTAL DRAFT; most complete supplied QA synthesis",
+      "bytes": 38663,
+      "sha256": "df084145954887674b47feb8b42cc179d90c9199e4f7281622084ac6add7379b"
+    },
+    {
+      "id": "SRC-Q04",
+      "original_name": "CYBER_PHARMA_RRM004_QAM_PILOT_PLAN_v0_1.md",
+      "package_path": "SOURCES/QAM/SRC-Q04_RRM004_QAM_PILOT_PLAN_v0_1.md",
+      "status": "2026-09-29 controlled experimental plan; later amended",
+      "bytes": 25700,
+      "sha256": "eabf7ecf7b676c412114d72c4541e08342dba9b167cf5d0ddc056db368ad767f"
+    },
+    {
+      "id": "SRC-Q05",
+      "original_name": "QAM_DISCUSSION_1.txt",
+      "package_path": "SOURCES/QAM/SRC-Q05_QAM_DIRECTOR_DISCUSSION_1.txt",
+      "status": "Original Director brain-dump; date contextualized by 30 September proposal",
+      "bytes": 2779,
+      "sha256": "4f1fa0ad26b3072270e5676bd56782589fe4b656185a595be1b9128d6a946a77"
+    },
+    {
+      "id": "SRC-C01",
+      "original_name": "response_2026-10-12_215553_scoped-approvals-recorded.md",
+      "package_path": "SOURCES/Context/SRC-C01_SCOPED_APPROVALS_ENGINEER_REPORT_2026_10_12.md",
+      "status": "2026-10-12 engineer report; decision record itself remains in VM repo",
+      "bytes": 2199,
+      "sha256": "e7787f6408c0b03277e1c4c846bcc9bdfd6e9074038a5548cffeefa542ddf8d3"
+    }
+  ],
+  "duplicate_comparisons": [
+    {
+      "standalone_id": "SRC-Q02",
+      "archive_id": "SRC-R03",
+      "member": "QAM_PILOT_ARCHITECT_JOURNAL.md",
+      "byte_identical": true
+    },
+    {
+      "standalone_id": "SRC-Q01",
+      "archive_id": "SRC-R03",
+      "member": "QAM_OPERATING_MODEL_PROPOSAL_v0_1.md",
+      "byte_identical": true
+    }
+  ]
+}

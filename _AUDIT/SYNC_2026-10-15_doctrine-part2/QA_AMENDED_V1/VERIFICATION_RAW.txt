@@ -1,0 +1,25 @@
+Command: python3 -B -I _AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/verify_amendment.py
+Working directory: /home/moose/Documents/app-factory-docs-v1
+Exit: 1 (recorded QA-AF01; remaining checks completed)
+
+PASS: ZIP identity: 711914a986cd64071f4372e0c428249ba27c6eba8ace160918c312d098b34f60
+PASS: ZIP integrity and safe paths: 28 members
+PASS: Inventory completeness: 27 payload entries
+PASS: Payload hashes and disk equality: 27/27 hashes and local counterparts
+PASS: Edit prefix and sequence: 372 unchanged + E373–E380
+PASS: Path set: 101 unchanged paths
+PASS: Composed hashes and baseline hashes: 101/101 bytes and sizes; 33 before-hashes; only 3 documents differ
+PASS: Independent ordered replay: 380/380 old spans unique at their application step; 31 content-stage hashes exact
+PASS: Metadata residual preservation: 31/31 residuals equal frozen proposal; D-4 adds no change
+PASS: Eight edits over frozen proposed files: 3/3 amended files reproduced byte-exactly
+PASS: Regenerated and unaffected identities: 8 paired records and 13 unaffected records match
+PASS: Amendment document identity table: 3/3 hashes and byte sizes match
+PASS: Distributed patch applies: patch --batch --fuzz=0 -p0 on disposable BASE tree
+FAIL: Distributed patch output: 99/101 match; details in PATCH_MISMATCHES.json
+PASS: Full pinned lint suite: 36 live documents; pinned lint files unchanged
+PASS: Retained ownership hit locations: 39 dispositions; 31 retained locations verified; semantic review recorded separately
+PASS: Ownership sweep replay: 31/31 live hits dispositioned; no additional hit
+PASS: AC37 source-derived actors and steps: ['Architect', 'Authorized operator', 'Designer', 'Director', 'Engineer', 'QA Executor', 'QA Lead', 'Reviewers']; 7/18/8/24 steps; forbidden labels absent
+PASS: Protected files unchanged: 797 source/canonical/skill/lint/intake/run files
+PASS: Git refs and staging unchanged: HEAD/main/origin-main unchanged; nothing staged
+Evidence saved in /home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1; disposable tree /tmp/cody-qa-amended-v1-6nto20fd/composed

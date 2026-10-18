@@ -1,0 +1,7 @@
+{
+  "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/DIRECTOR_DECISIONS.md",
+  "before_sha256": "d68230fbbb602af656584277a410ecee24261115cbdf5620be8773432401be8a",
+  "after_sha256": "36bc97fc544c1c46925c96889ced544cb8e9ef882844b893bda2b0cc77b49d96",
+  "authorization": "Tony explicit instruction to record ordered approvals in DIRECTOR_DECISIONS.md",
+  "frozen_specs_and_map_unchanged": true
+}

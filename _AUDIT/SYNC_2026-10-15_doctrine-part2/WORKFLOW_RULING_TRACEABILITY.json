@@ -1,0 +1,658 @@
+[
+  {
+    "id": "W01",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E1"
+    ],
+    "documents": [
+      "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md"
+    ],
+    "authority": "RUL-01/02/03/04; FC-013/025/026; WF-05/07; QAM-01\u202614"
+  },
+  {
+    "id": "W02",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E2"
+    ],
+    "documents": [
+      "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md"
+    ],
+    "authority": "RUL-01; QAM-02; WF-07"
+  },
+  {
+    "id": "W03",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E3"
+    ],
+    "documents": [
+      "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md"
+    ],
+    "authority": "RUL-04; FC-026"
+  },
+  {
+    "id": "W04",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E4"
+    ],
+    "documents": [
+      "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md"
+    ],
+    "authority": "RUL-04; FC-026"
+  },
+  {
+    "id": "W05",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E5"
+    ],
+    "documents": [
+      "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md"
+    ],
+    "authority": "RUL-01\u202604; FC-013/026; WF-07"
+  },
+  {
+    "id": "W06",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E6"
+    ],
+    "documents": [
+      "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md"
+    ],
+    "authority": "RUL-01/04; QAM-03/04"
+  },
+  {
+    "id": "W07",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E7",
+      "E357"
+    ],
+    "documents": [
+      "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md"
+    ],
+    "authority": "RUL-01 via source \u00a76; QAM-04"
+  },
+  {
+    "id": "W08",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E8"
+    ],
+    "documents": [
+      "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md"
+    ],
+    "authority": "RUL-01/06; WF-01"
+  },
+  {
+    "id": "W09",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E9"
+    ],
+    "documents": [
+      "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md"
+    ],
+    "authority": "RUL-01/06; WF-01/07"
+  },
+  {
+    "id": "W10",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E10"
+    ],
+    "documents": [
+      "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md"
+    ],
+    "authority": "RUL-01/03/06; WF-04/05; QAM-03"
+  },
+  {
+    "id": "W11",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E11"
+    ],
+    "documents": [
+      "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md"
+    ],
+    "authority": "RUL-01/04/06; WF-04/05; FC-025/026; artifact ownership remains DEC-10/11/12 conditional"
+  },
+  {
+    "id": "W12",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E12"
+    ],
+    "documents": [
+      "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md"
+    ],
+    "authority": "RUL-01/03/04/06; FC-025/026; QAM-03/04"
+  },
+  {
+    "id": "W13",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E13"
+    ],
+    "documents": [
+      "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md"
+    ],
+    "authority": "RUL-01/02; QAM-04/05"
+  },
+  {
+    "id": "W14",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E14"
+    ],
+    "documents": [
+      "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md"
+    ],
+    "authority": "RUL-01; QAM-02/05/09"
+  },
+  {
+    "id": "W15",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E15"
+    ],
+    "documents": [
+      "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md"
+    ],
+    "authority": "RUL-01/03; WF-07"
+  },
+  {
+    "id": "W16",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E16"
+    ],
+    "documents": [
+      "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md"
+    ],
+    "authority": "RUL-03; QAM-07/10"
+  },
+  {
+    "id": "W17",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E17"
+    ],
+    "documents": [
+      "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md"
+    ],
+    "authority": "RUL-03; deployment draft \u00a74; preserve Q9.1\u2013Q9.3 stable IDs"
+  },
+  {
+    "id": "W18",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E18"
+    ],
+    "documents": [
+      "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md"
+    ],
+    "authority": "RUL-01/06; WF-05; QAM-03/13"
+  },
+  {
+    "id": "W19",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E19"
+    ],
+    "documents": [
+      "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md"
+    ],
+    "authority": "RUL-01/06; WF-05; QAM-03/13"
+  },
+  {
+    "id": "W20",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E20"
+    ],
+    "documents": [
+      "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md"
+    ],
+    "authority": "RUL-01/06; WF-05; QAM-03/13"
+  },
+  {
+    "id": "W21",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E21"
+    ],
+    "documents": [
+      "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md"
+    ],
+    "authority": "RUL-01/06; WF-05; QAM-03/13"
+  },
+  {
+    "id": "W22",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E22"
+    ],
+    "documents": [
+      "03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md"
+    ],
+    "authority": "RUL-01/06; WF-05; QAM-03/13"
+  },
+  {
+    "id": "W23",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E23",
+      "E355",
+      "E357",
+      "E360",
+      "E366",
+      "E367",
+      "E368"
+    ],
+    "documents": [
+      "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+      "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+      "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+      "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md"
+    ],
+    "authority": "RUL-05; WF-11; K-ENGINE proposed terminology"
+  },
+  {
+    "id": "RUL-01",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E137",
+      "E138",
+      "E139",
+      "E140",
+      "E141",
+      "E310",
+      "E311",
+      "E312",
+      "E313",
+      "E326"
+    ],
+    "documents": [
+      "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+      "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+      "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+      "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+      "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md"
+    ],
+    "authority": "INTAKE_SNAPSHOT/factory-intake/PLANNING_001/DIRECTOR_RULINGS_2026-10-14.md"
+  },
+  {
+    "id": "RUL-02",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E326",
+      "E357"
+    ],
+    "documents": [
+      "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md"
+    ],
+    "authority": "INTAKE_SNAPSHOT/factory-intake/PLANNING_001/DIRECTOR_RULINGS_2026-10-14.md"
+  },
+  {
+    "id": "RUL-03",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E316",
+      "E326",
+      "E357"
+    ],
+    "documents": [
+      "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+      "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md"
+    ],
+    "authority": "INTAKE_SNAPSHOT/factory-intake/PLANNING_001/DIRECTOR_RULINGS_2026-10-14.md"
+  },
+  {
+    "id": "RUL-04",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E357",
+      "E358",
+      "E359"
+    ],
+    "documents": [
+      "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md"
+    ],
+    "authority": "INTAKE_SNAPSHOT/factory-intake/PLANNING_001/DIRECTOR_RULINGS_2026-10-14.md"
+  },
+  {
+    "id": "RUL-05",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E350",
+      "E351",
+      "E355",
+      "E357",
+      "E360",
+      "E361",
+      "E362",
+      "E363",
+      "E364",
+      "E365",
+      "E366",
+      "E367",
+      "E368",
+      "E371",
+      "E372"
+    ],
+    "documents": [
+      "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+      "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+      "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+      "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+      "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md"
+    ],
+    "authority": "INTAKE_SNAPSHOT/factory-intake/PLANNING_001/DIRECTOR_RULINGS_2026-10-14.md"
+  },
+  {
+    "id": "RUL-06",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [],
+    "documents": [
+      "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md"
+    ],
+    "authority": "INTAKE_SNAPSHOT/factory-intake/PLANNING_001/DIRECTOR_RULINGS_2026-10-14.md"
+  },
+  {
+    "id": "RUL-07",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E362",
+      "E363",
+      "E364",
+      "E365"
+    ],
+    "documents": [
+      "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+      "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md"
+    ],
+    "authority": "INTAKE_SNAPSHOT/factory-intake/PLANNING_001/DIRECTOR_RULINGS_2026-10-14.md"
+  },
+  {
+    "id": "RUL-08",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [],
+    "documents": [
+      "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md"
+    ],
+    "authority": "DIRECTOR_RULINGS_2026-10-16.md"
+  },
+  {
+    "id": "RUL-09",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E46",
+      "E47",
+      "E49",
+      "E50",
+      "E51",
+      "E56",
+      "E102",
+      "E137",
+      "E138",
+      "E139",
+      "E140",
+      "E141",
+      "E251",
+      "E252",
+      "E326",
+      "E327",
+      "E328",
+      "E329",
+      "E333",
+      "E350",
+      "E351",
+      "E352",
+      "E356",
+      "E369",
+      "E370"
+    ],
+    "documents": [
+      "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+      "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+      "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+      "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+      "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+      "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md"
+    ],
+    "authority": "DIRECTOR_RULINGS_2026-10-16.md"
+  },
+  {
+    "id": "RUL-10",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E350",
+      "E351"
+    ],
+    "documents": [
+      "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+      "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md"
+    ],
+    "authority": "DIRECTOR_RULINGS_2026-10-16.md"
+  },
+  {
+    "id": "RUL-11",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E61",
+      "E62",
+      "E63",
+      "E64",
+      "E65",
+      "E66",
+      "E67",
+      "E68",
+      "E69",
+      "E70",
+      "E71",
+      "E72",
+      "E73",
+      "E74",
+      "E75",
+      "E76",
+      "E77",
+      "E78",
+      "E79",
+      "E80",
+      "E81",
+      "E85",
+      "E86",
+      "E87",
+      "E88",
+      "E89",
+      "E90",
+      "E91",
+      "E92",
+      "E93",
+      "E94",
+      "E136",
+      "E183",
+      "E184",
+      "E185",
+      "E189",
+      "E212",
+      "E213",
+      "E223",
+      "E272",
+      "E273",
+      "E274",
+      "E275",
+      "E276",
+      "E277",
+      "E278",
+      "E279",
+      "E280",
+      "E281",
+      "E282",
+      "E283",
+      "E284",
+      "E285",
+      "E286",
+      "E287",
+      "E288",
+      "E289",
+      "E290",
+      "E291",
+      "E292",
+      "E293",
+      "E294",
+      "E317"
+    ],
+    "documents": [
+      "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+      "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+      "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+      "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+      "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+      "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+      "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+      "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md"
+    ],
+    "authority": "DIRECTOR_RULINGS_2026-10-16.md"
+  },
+  {
+    "id": "RUL-12",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E43",
+      "E44",
+      "E45",
+      "E59",
+      "E60",
+      "E84",
+      "E111",
+      "E112",
+      "E113",
+      "E142",
+      "E144",
+      "E193",
+      "E243",
+      "E244",
+      "E245",
+      "E246",
+      "E247",
+      "E255",
+      "E256",
+      "E318",
+      "E319",
+      "E320",
+      "E321",
+      "E322",
+      "E323",
+      "E324",
+      "E325",
+      "E353"
+    ],
+    "documents": [
+      "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+      "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+      "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+      "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+      "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+      "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+      "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md"
+    ],
+    "authority": "DIRECTOR_RULINGS_2026-10-16.md"
+  },
+  {
+    "id": "RUL-13",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E101",
+      "E334"
+    ],
+    "documents": [
+      "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+      "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md"
+    ],
+    "authority": "DIRECTOR_RULINGS_2026-10-16.md"
+  },
+  {
+    "id": "RUL-14",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E60",
+      "E116",
+      "E117",
+      "E118",
+      "E169",
+      "E254",
+      "E314",
+      "E315",
+      "E355"
+    ],
+    "documents": [
+      "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+      "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+      "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+      "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+      "05_DESIGN_SYSTEM/THEME_LIBRARY.md"
+    ],
+    "authority": "DIRECTOR_RULINGS_2026-10-16.md"
+  },
+  {
+    "id": "RUL-15",
+    "selection": "SELECTED within attributed scope; unrelated alternatives and exclusions unchanged",
+    "edit_ids": [
+      "E144",
+      "E145",
+      "E146",
+      "E331",
+      "E332"
+    ],
+    "documents": [
+      "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md"
+    ],
+    "authority": "DIRECTOR_RULINGS_2026-10-16.md"
+  }
+]
