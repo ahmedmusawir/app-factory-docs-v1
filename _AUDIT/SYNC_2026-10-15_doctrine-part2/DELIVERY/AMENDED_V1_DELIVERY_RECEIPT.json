@@ -1,0 +1,21 @@
+{
+  "status": "DELIVERED \u2014 Downloads copy, ZIP integrity, inventory self-check and payload-vs-run-directory comparison verified",
+  "package": "AMENDED-v1 review, complete ownership correction (D-1/D-2 + OBS-1 folded per Jarvis + sweep P-1\u2026P-4; 8 edits, 3 documents); ENGINEER-PROPOSED; re-enters Gate 2; not approved; Gate 3 pending; Phase 3 NOT RELEASED",
+  "supersedes": {
+    "zip": "/home/moose/Downloads/FACTORY_AMENDED_V1_REVIEW_2026-10-17_135049.zip",
+    "sha256": "4feb45de9818397b4ac18167f0f0e69a74f3aeb65bb38b1ef2860cfa5ecbd07e"
+  },
+  "target": "/home/moose/Downloads/FACTORY_AMENDED_V1_REVIEW_2026-10-17_145858.zip",
+  "sha256": "711914a986cd64071f4372e0c428249ba27c6eba8ace160918c312d098b34f60",
+  "bytes": 1085384,
+  "zip_members": 28,
+  "inventory_files": 27,
+  "response": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-17_145858_amended-v1-complete.md",
+  "builds_on": {
+    "gate2_review_zip": "FACTORY_PHASE2_MC_CORRECTED_REVIEW_2026-10-16_184920.zip",
+    "gate2_review_sha256": "29a835c18aa517d354bf49f39203013b0a772a15ee5c72556d201ea2d01b8b3f",
+    "gate3_spec_zip": "FACTORY_GATE3_FABLE_SPEC_REVIEW_2026-10-17_112715.zip",
+    "gate3_spec_sha256": "2a74128efa596080360d5ea011cf0ac39bcb8d847a1f47fab7d785fb297a0571"
+  },
+  "delivered_at": "2026-10-17T14:58:59+06:00"
+}

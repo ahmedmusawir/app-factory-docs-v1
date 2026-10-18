@@ -1,0 +1,608 @@
+[
+  {
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "before_sha256": "9b732116c6030aee4d6ae0b792272bc372dd647ef95dea522c2bf7949934af93",
+    "proposed_sha256": "de0321e3b2b9220121606c5255d2ddc3d0d01ce57d69be11200d0c2aed5a2ac4",
+    "bytes": 14426
+  },
+  {
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "before_sha256": "dd9b355bed9b263756a9622205cc30b4b06dad2a08397b7fb55d7e5bb2a7260e",
+    "proposed_sha256": "542fa8e421c067f6b7a141bdc46a266c2043c9e32fe7cabc43f82dba20b74efd",
+    "bytes": 40805
+  },
+  {
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "before_sha256": "396e325b4ac28b02c145fcad6181a99abb4f8345b87278d96f1aef2bbefb7efb",
+    "proposed_sha256": "29ce1d9f602696da3ed6241dd70e4a8f603626a962ca4f43de04edfde5a0d0ab",
+    "bytes": 34575
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "before_sha256": "b0754979e3b24cb79234265fe146f39f03718e608a60153a702a518f34979af4",
+    "proposed_sha256": "ad0712bf79a03233c6dd4799eb04113ad966d23017f26a5ba1a6f433481dce48",
+    "bytes": 26430
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md",
+    "before_sha256": "aa487360f420c1a2e0a48b097eaa2ebc905ebb659bcdc67ae72ce8d6a80f2bfd",
+    "proposed_sha256": "6242a0a67c43ee22b7d930f53f8b6c36b029ff16e1435108b069b8047b562f15",
+    "bytes": 8279
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "before_sha256": "426eb0e7a3da1b31de8efe4ca68550d4b351d6f378b061f0c0de1ab6fbd632ae",
+    "proposed_sha256": "f1e692d175c41ca0d0d9718889be3ba778c454a8078adb5f381f36897bdeccd1",
+    "bytes": 19768
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "before_sha256": "8d73c37a42624fa2c60729d8d2648fc96f72305a732fd5e74460cf0a614f861c",
+    "proposed_sha256": "72477ec8dccc0381d6a5a4476d64b84751b376dfb78f83a49b337beb8651a1e9",
+    "bytes": 50878
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "before_sha256": "6a2f4706542395360248dd42e17cbf9fc49f0886c844aa1e0e5315a047892c4f",
+    "proposed_sha256": "5ccae41d0b7e309a2a98f2aac49776f61c7623325a9b0f9e1a400612149e639c",
+    "bytes": 22291
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "before_sha256": "974f09e3118e94288beeb3dce919bea32a1571f294a59da6fd0041ee615968db",
+    "proposed_sha256": "97cd19e2a2f9b8f34fbfcbff0a6f73c8681fd768cee48db2b316a815c4df81b3",
+    "bytes": 34174
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md",
+    "before_sha256": "d93f3d5d81d5add6638fee9c71eecc370fd86f07ad1ac47f7021d6415a446113",
+    "proposed_sha256": "5e56266b8c9aaec1e1249128e3aff089919ba13dc4d9e93c03201d4a06261756",
+    "bytes": 57300
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "before_sha256": "363619932b39fd7c8b4bafa9f270f814aa1af4aa98159dbfecb28c7f920e4f3b",
+    "proposed_sha256": "5dcc7acd84de42b4cabd765c8e3899b315855cac14b2687df2e0e7966be7c4f9",
+    "bytes": 23815
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+    "before_sha256": "3ca537dec3958cabb0159a5243b7fe3f76c10e46ebcaa4ba04d258dcd5d1a871",
+    "proposed_sha256": "c1eff9134d09bdc148e7c6a6da6cfbf277d32e77f5b87e94428139e97b37f610",
+    "bytes": 24590
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+    "before_sha256": null,
+    "proposed_sha256": "e6db82b211def718a27ab66d079f324164f240e9286fa9a5131a1991692d2538",
+    "bytes": 10747
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md",
+    "before_sha256": "5d70fa061bde72d49507f64b0113daab2646952867c63b8a499ea2feab3ed66f",
+    "proposed_sha256": "0855d943710abf9256b4df588d6dacc09019abbf3f5e7649b790308f427f2473",
+    "bytes": 6702
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "before_sha256": "7be561380ea1568d7df61734b6f1a5b12263194cca3ce469a5731e3bd32eafa0",
+    "proposed_sha256": "95ab785713237a4ecb874746eb4938e3d4010c47fa9057d88cf6bea885fa67e8",
+    "bytes": 115321
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+    "before_sha256": "362609b6551bd585c5f3c57ce5b751285871335d154ad2a8c97ca62b28a20702",
+    "proposed_sha256": "be293bcb3c86c8dd71d9eaac64495d4d61c6a0b06b83af8a7b7ea71ddde2b366",
+    "bytes": 23946
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+    "before_sha256": "2516dcbd50f525328db955592c6c14eafa971c02d4dec722130a87505248a422",
+    "proposed_sha256": "89ab65e614cca62a7b2cd0036fdae9f75751f9534cd0e5b9e4cc501f071da471",
+    "bytes": 15388
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+    "before_sha256": null,
+    "proposed_sha256": "63e75d1c28deec13fae2fc3d5aedaf2f3375918689dd28e57b149edbc40c6e47",
+    "bytes": 33398
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "before_sha256": "b6c70f14af18bb187ca7980954317af486e43b682821245d9911f2160d5198a5",
+    "proposed_sha256": "5bc581426435d75b2873ca29b57b28c2942981e604fb64eb9f308dc62d20f994",
+    "bytes": 42559
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+    "before_sha256": null,
+    "proposed_sha256": "ff675d13641da0640b074147e4274061e8bc2e63cddc5285c0049b37f2f8413c",
+    "bytes": 20075
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "before_sha256": "5dfc2d198d51eebd4c0b136eeafc50cc2f64dafe44b7bbd153b801f4849692ad",
+    "proposed_sha256": "ae5ca593c7930dd594b6afcf89f722eeba698af2f4e74f854a6cc8408e7646bf",
+    "bytes": 79874
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_assets/workflows/BIM_WORKFLOW.svg",
+    "before_sha256": null,
+    "proposed_sha256": "7cba33aa1a396e4467a09eb80ef912b6e06d2dc06f839c569ffcdf5f87b67ec9",
+    "bytes": 16598
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_assets/workflows/FFM_CREATION.svg",
+    "before_sha256": null,
+    "proposed_sha256": "0d7640fc0460f98aaf6a0b0d1acc8bc7866fc94e0ed61099d9d0e59931d3a1f0",
+    "bytes": 5336
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_assets/workflows/FFM_DEPLOYMENT.svg",
+    "before_sha256": null,
+    "proposed_sha256": "ce17e51c9e72e24cd4fd961f9812d13242914f9e03fcb238a749b49361cb028e",
+    "bytes": 6459
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_assets/workflows/FFM_EXECUTION.svg",
+    "before_sha256": null,
+    "proposed_sha256": "d0ac268ef03f2ab6f4cb80970b2be3d242442af8eeaa3f3518526354df2a915c",
+    "bytes": 10588
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/AC_EVIDENCE_MATRIX.md",
+    "before_sha256": null,
+    "proposed_sha256": "bf9685c13d650a109ea0f40d44ed0f813fea31e7fdcb67e0aa8b518ee194cb3a",
+    "bytes": 1934
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/AGENTS.md",
+    "before_sha256": null,
+    "proposed_sha256": "b3415998cf417ea79551d8b4d31b92ff83df1becaf644ad1be499ce9ff0ef03f",
+    "bytes": 1348
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/AUTOMATION/README.md",
+    "before_sha256": null,
+    "proposed_sha256": "c9a4f3a0a8d45077cc5cfbee8a93590cd4c9b08c33e8c6757419d537610bbfcb",
+    "bytes": 1956
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/CLAUDE.md",
+    "before_sha256": null,
+    "proposed_sha256": "79a674620466b01d0a5f2b82f85658177e05f91d689072f1f5a1d1f101e43d2a",
+    "bytes": 1321
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/FINDINGS.md",
+    "before_sha256": null,
+    "proposed_sha256": "e0b10749d2b05183253af6a486b01f92146c58ca3a8c618a73beec584ba46f75",
+    "bytes": 4342
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/GOVERNING/README.md",
+    "before_sha256": null,
+    "proposed_sha256": "b9fc64518dda952a7d4a834a2b4cc9fe3ad82148ade00f4381085968e2dd11f6",
+    "bytes": 2367
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/ENGINEERING_HANDOFF.md",
+    "before_sha256": null,
+    "proposed_sha256": "5bd7766647aad374634061ca31caa3e2f2facef1b5a516f8f8a18d2720f00677",
+    "bytes": 2613
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/FILE_INDEX.template.json",
+    "before_sha256": null,
+    "proposed_sha256": "2620fd114b8d58a7f022631e3dba1d2d8caa2c1b457d596dde15e190460305b8",
+    "bytes": 2199
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/README.md",
+    "before_sha256": null,
+    "proposed_sha256": "4d0eb7a53bba7d94a032353b9fc0316538058475fb2fc40b6d545a6982b9b0aa",
+    "bytes": 1404
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/REVIEW_START_HERE.md",
+    "before_sha256": null,
+    "proposed_sha256": "0ffc1c60f9f4de3bdf10a30af6ecb9b95d036190c79056db1cbd3145a732cac1",
+    "bytes": 2316
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/PARENT_ENTRY_ROUTING.md",
+    "before_sha256": null,
+    "proposed_sha256": "d557319761782cf617ae828a4df81243a9908aa7c033b563d814d2d2fccf3ebe",
+    "bytes": 2837
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_APPROVAL.md",
+    "before_sha256": null,
+    "proposed_sha256": "de505b50c3ed901d77bfc0373ff329901447f2044bc2c3524a0164841628674d",
+    "bytes": 3791
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_CERTIFICATION.md",
+    "before_sha256": null,
+    "proposed_sha256": "7781cf756893b883d58f75c8242e257130fb909625246e9a7b3500c9e83465c6",
+    "bytes": 4009
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_CLEANUP_REPORT.md",
+    "before_sha256": null,
+    "proposed_sha256": "2e5ac571423d245f48563090662679df82d78fcbc415be90ee71f3a33fc1b830",
+    "bytes": 4414
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_ENTRY.md",
+    "before_sha256": null,
+    "proposed_sha256": "a6b9c6f160d9811bf9d273bb03ea32f63256019b4add8cbdc23f032261fababe",
+    "bytes": 12222
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_EXECUTION_REPORT.md",
+    "before_sha256": null,
+    "proposed_sha256": "24ef00dd53190179498b07e8326e3c87216c9a4e5d70da2aa163f76bb7df076b",
+    "bytes": 4104
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_MANIFEST.md",
+    "before_sha256": null,
+    "proposed_sha256": "9d68426ef53d852b46285ab8f15a5f978811e4fb606e239ccaab97ba21ce6b43",
+    "bytes": 5331
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_PACKAGING.md",
+    "before_sha256": null,
+    "proposed_sha256": "be3508938dcc3ea0e2833c5a7f97d7915e2e409204adde9ff69c4941ddd43755",
+    "bytes": 5351
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_PREFLIGHT.md",
+    "before_sha256": null,
+    "proposed_sha256": "073a4381f08d0280d83a991e72d3ffd82926fee8c76e2b1fbffe1b0690f6a1b7",
+    "bytes": 7259
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_RECON_REPORT.md",
+    "before_sha256": null,
+    "proposed_sha256": "42b313b6a0e811293319f9ae390674e88a957ee87d619554d53323358c167c67",
+    "bytes": 3880
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_RISK_REQUIREMENTS.md",
+    "before_sha256": null,
+    "proposed_sha256": "cc910d528ee2ef9398f06f0259896669544e9ad02ee4623d620b98667e1131f0",
+    "bytes": 6693
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_STATE.md",
+    "before_sha256": null,
+    "proposed_sha256": "afc4af6ad54123506bd0b6861ba7a71c9d5dad15e51db1f5bb3704d26a75f62f",
+    "bytes": 6676
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_TEST_PLAN.md",
+    "before_sha256": null,
+    "proposed_sha256": "8d3d245926946e99a8cd2cdecc8dda79f47a436c5b3f35ba7ba48886bc23e0e9",
+    "bytes": 4527
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/README.md",
+    "before_sha256": null,
+    "proposed_sha256": "b7462fc84fb6557d08010623a465588b27ee62edbffa2702ea71f2ba4d5a3d91",
+    "bytes": 12860
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/evidence/README.md",
+    "before_sha256": null,
+    "proposed_sha256": "3c033254f64258d116bbbe069d585fa4df653c5ac84b68e03998bdbc675e9aab",
+    "bytes": 2698
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+    "before_sha256": null,
+    "proposed_sha256": "c45111675dd43a7bb889c0f8561ba5059a5ea0d542c99b5964938cc7e767cc48",
+    "bytes": 3842
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+    "before_sha256": null,
+    "proposed_sha256": "fcfa76eaa6d67cd2cc1c26934e90a097933c79911c0c283f52816b2a7f76f821",
+    "bytes": 2714
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+    "before_sha256": null,
+    "proposed_sha256": "2f8c1653292da84f839c6b4d327ecbe1675ea24bf6c2c85fdc7f839b38bf7ce5",
+    "bytes": 2900
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+    "before_sha256": null,
+    "proposed_sha256": "8c78501bc00af1ce510c4099769dfd23009fcf478b47f5f35b8337407a6e50ef",
+    "bytes": 3402
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "before_sha256": "64794a5d33dbd7fdd473975d5ff7c02f49fe433c8f63c780b059d77ead55a4b3",
+    "proposed_sha256": "41105eb4857a3a04a35bf3b0615fe9d93f5c7a5b048fa3f5d4d14513ba177a32",
+    "bytes": 57451
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "before_sha256": "ca1dc1f0a8ce578523a46a3262f2f1d09a63cb6e8f2517157d940c0febfb3134",
+    "proposed_sha256": "3c6e4c4702a887e929877a60dca065af57a8fcd23e100f8176019ac898d2c163",
+    "bytes": 44554
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "before_sha256": "6b81073fe81727d4a4a48d1a0e4c43098f3ce70fafbcc3a7a6c660e661276850",
+    "proposed_sha256": "e119d65970ab57a33954e2bcc4f4ffefabb31b357892318374b69db6af4ea60f",
+    "bytes": 54476
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "before_sha256": "326802ad938bb6b5b9f1b73c74ebee811789185789ef003e907101a0db4a0cf8",
+    "proposed_sha256": "f774bb0298ef39e3db2505b2cb9686e9d5046f359560b00bfe55ac52f7aa3dd8",
+    "bytes": 33878
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "before_sha256": "d72816173e6a188282718174cbcd8cc4693f9f944858d96fe0bb092edb728f38",
+    "proposed_sha256": "4e0782fe935c50f971daf4f4dc347c5b4757c96648d8db4d04c0be86953b36eb",
+    "bytes": 29782
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "before_sha256": "2a281857fe0a03d9066ac171e725ca50e42944df204b4eceaebba152b61af196",
+    "proposed_sha256": "3f8071658df4331f920538cc2bdc1130a2534dc6764bca21236a0e563bcb5a71",
+    "bytes": 37618
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "before_sha256": "ec5a467ffd31ca8a1200f230b5a4ca4e104148bedaa83d3a4780f8e23f9a3e03",
+    "proposed_sha256": "b501058c57dba78f130a6a9dbe16957d1b76bd4aa282f88c68a2a6c2a188cc3a",
+    "bytes": 32905
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "before_sha256": "4b7d5b7c39fa50838ea536d07a9f4086d3802613a8ee86dd986f09553b28767b",
+    "proposed_sha256": "e1afba393fd6ba1314ab9fea2fb3bb10135e422cf0909400d952c9206da705f3",
+    "bytes": 24087
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+    "before_sha256": "f2dc74390a16836c3213f77652451085680046786d5499b43b1e8a6a6774c8ac",
+    "proposed_sha256": "b46501c6eeca8a4fbe0244cbeb207f73ec382b44ec2a3a8c7a856561ca5072c3",
+    "bytes": 12655
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/THEME_LIBRARY.md",
+    "before_sha256": "480c7bdbc648e2fb7b97a6b120bfa36de35246cbdf3fd163e43aa0a2968ff73e",
+    "proposed_sha256": "0d01b93c12d5f45d65eee0fad7ed00985996703160ca5710c287935ce49d9926",
+    "bytes": 8856
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+    "before_sha256": "3c71a3a959df8393b4f6810a8122a94895fced02d658d3b512ee5f30784091b1",
+    "proposed_sha256": "dd52a6ac007383cf22e57c34fee1489ca94311f65945e87af339247dc4a44e42",
+    "bytes": 17610
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/TOKEN_FILE.md",
+    "before_sha256": "066e0e60a49714adb062bc2983b1d5a82bc69f0c73794bac44292f6851dc88b5",
+    "proposed_sha256": "b784dac7dc9e55b2d417a785211b4d18ae4b945ca63c62536096c55ad554ea9f",
+    "bytes": 12509
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "before_sha256": "8b9a6f647a8999ce35db4dd20df3db058ec7c64a47c4b3ab8051195f97d9d544",
+    "proposed_sha256": "9715e12e3fd4307b574decefa2f916338fcf9f6f8768972f91ed410247ed08ff",
+    "bytes": 59335
+  },
+  {
+    "path": "CHANGELOG.md",
+    "before_sha256": "e5626e8cd956b135b7cb853088b4d9238dd84b4f106cf99737f7d72679fbc06d",
+    "proposed_sha256": "f446f4955d5101e29bd85961f6586c0d4476e86443960f7ab65a9ef1026a06c3",
+    "bytes": 13465
+  },
+  {
+    "path": "MANIFEST.md",
+    "before_sha256": "58275efb3d1e1a7999ca4d511f523f985cfec3db53e498103069582b2b632ff6",
+    "proposed_sha256": "e00f72c708fda328742222f570e1d2d6c93e683ecc511891f4f4d4c281532caa",
+    "bytes": 18546
+  },
+  {
+    "path": "_ARCHIVE/API_AND_SERVICES_MANUAL_v1_1.md",
+    "before_sha256": null,
+    "proposed_sha256": "64794a5d33dbd7fdd473975d5ff7c02f49fe433c8f63c780b059d77ead55a4b3",
+    "bytes": 57422
+  },
+  {
+    "path": "_ARCHIVE/APP_ARCHITECTURE_MANUAL_v1_3.md",
+    "before_sha256": null,
+    "proposed_sha256": "ca1dc1f0a8ce578523a46a3262f2f1d09a63cb6e8f2517157d940c0febfb3134",
+    "bytes": 43476
+  },
+  {
+    "path": "_ARCHIVE/APP_FACTORY_BLUEPRINT_v2_1.md",
+    "before_sha256": null,
+    "proposed_sha256": "9b732116c6030aee4d6ae0b792272bc372dd647ef95dea522c2bf7949934af93",
+    "bytes": 14704
+  },
+  {
+    "path": "_ARCHIVE/APP_FACTORY_SKILLS_PLAYBOOK_v1_1.md",
+    "before_sha256": null,
+    "proposed_sha256": "d93f3d5d81d5add6638fee9c71eecc370fd86f07ad1ac47f7021d6415a446113",
+    "bytes": 56666
+  },
+  {
+    "path": "_ARCHIVE/ARCHITECT_PLAYBOOK_v2_2.md",
+    "before_sha256": null,
+    "proposed_sha256": "b0754979e3b24cb79234265fe146f39f03718e608a60153a702a518f34979af4",
+    "bytes": 25105
+  },
+  {
+    "path": "_ARCHIVE/ARCHITECT_QUESTIONNAIRE_v2_2.md",
+    "before_sha256": null,
+    "proposed_sha256": "aa487360f420c1a2e0a48b097eaa2ebc905ebb659bcdc67ae72ce8d6a80f2bfd",
+    "bytes": 8049
+  },
+  {
+    "path": "_ARCHIVE/AUTH_MANUAL_v1_4.md",
+    "before_sha256": null,
+    "proposed_sha256": "6b81073fe81727d4a4a48d1a0e4c43098f3ce70fafbcc3a7a6c660e661276850",
+    "bytes": 58800
+  },
+  {
+    "path": "_ARCHIVE/BIM_PLAYBOOK_v1_0.md",
+    "before_sha256": null,
+    "proposed_sha256": "363619932b39fd7c8b4bafa9f270f814aa1af4aa98159dbfecb28c7f920e4f3b",
+    "bytes": 19661
+  },
+  {
+    "path": "_ARCHIVE/BUG_FIX_PLAYBOOK_v1_0.md",
+    "before_sha256": null,
+    "proposed_sha256": "3ca537dec3958cabb0159a5243b7fe3f76c10e46ebcaa4ba04d258dcd5d1a871",
+    "bytes": 23811
+  },
+  {
+    "path": "_ARCHIVE/COMPONENT_REGISTRY_v1_1.md",
+    "before_sha256": null,
+    "proposed_sha256": "4b7d5b7c39fa50838ea536d07a9f4086d3802613a8ee86dd986f09553b28767b",
+    "bytes": 23436
+  },
+  {
+    "path": "_ARCHIVE/DATABASE_MANUAL_v1_1.md",
+    "before_sha256": null,
+    "proposed_sha256": "326802ad938bb6b5b9f1b73c74ebee811789185789ef003e907101a0db4a0cf8",
+    "bytes": 33603
+  },
+  {
+    "path": "_ARCHIVE/DESIGNER_PLAYBOOK_v2_1.md",
+    "before_sha256": null,
+    "proposed_sha256": "426eb0e7a3da1b31de8efe4ca68550d4b351d6f378b061f0c0de1ab6fbd632ae",
+    "bytes": 18569
+  },
+  {
+    "path": "_ARCHIVE/ECOMMERCE_AND_PAYMENTS_MANUAL_v1_1.md",
+    "before_sha256": null,
+    "proposed_sha256": "d72816173e6a188282718174cbcd8cc4693f9f944858d96fe0bb092edb728f38",
+    "bytes": 51838
+  },
+  {
+    "path": "_ARCHIVE/ENGINEER_PLAYBOOK_v1_2.md",
+    "before_sha256": null,
+    "proposed_sha256": "8d73c37a42624fa2c60729d8d2648fc96f72305a732fd5e74460cf0a614f861c",
+    "bytes": 48290
+  },
+  {
+    "path": "_ARCHIVE/FEAT_PLAYBOOK_v1_0.md",
+    "before_sha256": null,
+    "proposed_sha256": "5d70fa061bde72d49507f64b0113daab2646952867c63b8a499ea2feab3ed66f",
+    "bytes": 5833
+  },
+  {
+    "path": "_ARCHIVE/FFM_PLAYBOOK_v1_2.md",
+    "before_sha256": null,
+    "proposed_sha256": "7be561380ea1568d7df61734b6f1a5b12263194cca3ce469a5731e3bd32eafa0",
+    "bytes": 112581
+  },
+  {
+    "path": "_ARCHIVE/FRONTEND_BUILD_PHASE_PLAYBOOK_v1_2_2.md",
+    "before_sha256": null,
+    "proposed_sha256": "362609b6551bd585c5f3c57ce5b751285871335d154ad2a8c97ca62b28a20702",
+    "bytes": 23578
+  },
+  {
+    "path": "_ARCHIVE/FRONTEND_FIRST_PLAYBOOK_v1_1_3.md",
+    "before_sha256": null,
+    "proposed_sha256": "2516dcbd50f525328db955592c6c14eafa971c02d4dec722130a87505248a422",
+    "bytes": 15043
+  },
+  {
+    "path": "_ARCHIVE/GLOBAL_DESIGN_SYSTEM_HANDBOOK_v1_1.md",
+    "before_sha256": null,
+    "proposed_sha256": "f2dc74390a16836c3213f77652451085680046786d5499b43b1e8a6a6774c8ac",
+    "bytes": 12072
+  },
+  {
+    "path": "_ARCHIVE/HANDOFF_PACKAGE_PLAYBOOK_v1_1.md",
+    "before_sha256": null,
+    "proposed_sha256": "6a2f4706542395360248dd42e17cbf9fc49f0886c844aa1e0e5315a047892c4f",
+    "bytes": 20068
+  },
+  {
+    "path": "_ARCHIVE/QA_PLAYBOOK_v1_0.md",
+    "before_sha256": null,
+    "proposed_sha256": "32d17ef5ca2eb32dfec6d120a71d280daa2973cba90e8f1735b85e07a3098e99",
+    "bytes": 40146
+  },
+  {
+    "path": "_ARCHIVE/QA_PLAYBOOK_v1_1.md",
+    "before_sha256": null,
+    "proposed_sha256": "b6c70f14af18bb187ca7980954317af486e43b682821245d9911f2160d5198a5",
+    "bytes": 40940
+  },
+  {
+    "path": "_ARCHIVE/RECON_QUESTIONNAIRE_v0_5.md",
+    "before_sha256": null,
+    "proposed_sha256": "974f09e3118e94288beeb3dce919bea32a1571f294a59da6fd0041ee615968db",
+    "bytes": 32520
+  },
+  {
+    "path": "_ARCHIVE/SOFTWARE_FACTORY_PLAYBOOK_v1_3.md",
+    "before_sha256": null,
+    "proposed_sha256": "dd9b355bed9b263756a9622205cc30b4b06dad2a08397b7fb55d7e5bb2a7260e",
+    "bytes": 38349
+  },
+  {
+    "path": "_ARCHIVE/STARTER_KIT_HANDBOOK_v1_1.md",
+    "before_sha256": null,
+    "proposed_sha256": "396e325b4ac28b02c145fcad6181a99abb4f8345b87278d96f1aef2bbefb7efb",
+    "bytes": 34072
+  },
+  {
+    "path": "_ARCHIVE/STATE_MANAGEMENT_MANUAL_v1_2.md",
+    "before_sha256": null,
+    "proposed_sha256": "2a281857fe0a03d9066ac171e725ca50e42944df204b4eceaebba152b61af196",
+    "bytes": 45351
+  },
+  {
+    "path": "_ARCHIVE/STRIPE_SUBSCRIPTIONS_PLAYBOOK_v1_1.md",
+    "before_sha256": null,
+    "proposed_sha256": "ec5a467ffd31ca8a1200f230b5a4ca4e104148bedaa83d3a4780f8e23f9a3e03",
+    "bytes": 38843
+  },
+  {
+    "path": "_ARCHIVE/TESTING_PLAYBOOK_v2_1.md",
+    "before_sha256": null,
+    "proposed_sha256": "5dfc2d198d51eebd4c0b136eeafc50cc2f64dafe44b7bbd153b801f4849692ad",
+    "bytes": 79339
+  },
+  {
+    "path": "_ARCHIVE/THEME_LIBRARY_v1_2.md",
+    "before_sha256": null,
+    "proposed_sha256": "480c7bdbc648e2fb7b97a6b120bfa36de35246cbdf3fd163e43aa0a2968ff73e",
+    "bytes": 8467
+  },
+  {
+    "path": "_ARCHIVE/THEMING_MANUAL_v1_2.md",
+    "before_sha256": null,
+    "proposed_sha256": "3c71a3a959df8393b4f6810a8122a94895fced02d658d3b512ee5f30784091b1",
+    "bytes": 17470
+  },
+  {
+    "path": "_ARCHIVE/TOKEN_FILE_v1_2.md",
+    "before_sha256": null,
+    "proposed_sha256": "066e0e60a49714adb062bc2983b1d5a82bc69f0c73794bac44292f6851dc88b5",
+    "bytes": 12744
+  },
+  {
+    "path": "_ARCHIVE/UI_UX_BUILDING_MANUAL_v1_4.md",
+    "before_sha256": null,
+    "proposed_sha256": "8b9a6f647a8999ce35db4dd20df3db058ec7c64a47c4b3ab8051195f97d9d544",
+    "bytes": 60816
+  }
+]

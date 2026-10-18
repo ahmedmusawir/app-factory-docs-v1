@@ -1,0 +1,49 @@
+              APP FACTORY
+
+┌────────────────────────────────────────┐
+│  ENGINE 1 — BUILD / QA                │
+│                                        │
+│  Architect → Engineer → SOL QA         │
+│              ↕ GLM/MiniMax             │
+│                                        │
+│  Unit of work: BIM                     │
+│  Goal: Acceptance correctness          │
+└────────────────────────────────────────┘
+                    │
+                    ▼
+             PHASE COMPLETE
+                    │
+┌────────────────────────────────────────┐
+│  ENGINE 2 — REVIEW / IMPROVEMENT       │
+│                                        │
+│       Fable          Astra             │
+│       forensic       adversarial       │
+│            \         /                 │
+│             SOL + Tony                 │
+│                 ↓                      │
+│               Opus                     │
+│                 ↓                      │
+│         Targeted Re-review             │
+│                                        │
+│  Unit of work: Phase                   │
+│  Goal: System quality                  │
+└────────────────────────────────────────┘
+                    │
+                    ▼
+              ALL PHASES DONE
+                    │
+┌────────────────────────────────────────┐
+│  ENGINE 3 — RELEASE REVIEW             │
+│                                        │
+│       Fable + Astra                    │
+│       cross-phase attack               │
+│              ↓                         │
+│          SOL + Tony                    │
+│              ↓                         │
+│          bounded repair                │
+│              ↓                         │
+│      final regression/review           │
+│                                        │
+│  Unit of work: Application             │
+│  Goal: Production-system integrity     │
+└────────────────────────────────────────┘

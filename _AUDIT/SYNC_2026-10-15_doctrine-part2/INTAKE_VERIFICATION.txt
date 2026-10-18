@@ -1,0 +1,9 @@
+Harvest FILE_INDEX: 75/75; errors: []
+SOURCE_INVENTORY: 22/22; errors: []
+v0.3 local folder index: 35/35; errors: []
+v0.3 in-place references: 24/24; errors: []
+v0.3 folder coverage: exact; no unindexed or missing members
+Templates: 25/25 byte-identical to Architect-verified ZIP; outer ZIP SHA verified
+Governing QAM source SHA: 97e111e2a495f9a3fe65f50213e6f2ba68c8e5e963f3d23493b1ee99ad35c897
+Canonical scope versus main 9c17939: empty diff
+Current-session preservation baseline: 293 files (distinct from historical 100-file check)

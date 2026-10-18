@@ -1,0 +1,403 @@
+{
+  "addendum": "INTAKE_ADDENDUM_001_v0_3",
+  "version": "0.3",
+  "date": "2026-10-14",
+  "supersedes": "INTAKE_ADDENDUM_001_v0_2 (preserved; the set the QA Lead reviewed; QAM_TEMPLATES_QA_LEAD_REVIEW_v0_2_2026-10-14_192019.zip sha256 bffd05c6566fed627be0b00bd58fc290dae71e2b4f2c88f0bd3ab96bc75d21d4) and INTAKE_ADDENDUM_001_v0_1 (preserved; verified by Jarvis; CONSOLIDATED_INTAKE_001_2026-10-14_184845.zip sha256 4c9d8e5b9ee9de713acd188e136d21b4adc629ae38dc94dcfb33a735d0b12671)",
+  "template_set_version": "v0.3-draft",
+  "template_set_status": "QA Lead (Fable) accepted v0.2-draft with exact amendments on 2026-10-14; AM-1/AM-2/AM-3 and the QAM-SR v1.0 adoption applied in v0.3-draft, Engineer-verified and Architect-verified (2026-10-14; accepted under the QA Lead decision; no further QA Lead review for these edits); template files byte-identical to the verified package; canonical installation and DocSet Sync pending",
+  "architect_verified_package": {
+    "name": "QAM_TEMPLATES_v0_3_AMENDED_FOR_ARCHITECT_2026-10-14_204903.zip",
+    "sha256": "25a6ffe55bfc1d8f42318c63e21cf167ecb1ea932f617c7525ea2cfee677553d",
+    "members": 34,
+    "located_2026-10-15": "~/Downloads/ARCHIVE_OLD/ (relocated by the operator; preserved unchanged)"
+  },
+  "standing_requirements": "QAM-SR v1.0 (adopted by the QA Lead, Fable, 2026-10-14)",
+  "governing_playbook": "QAM_PLAYBOOK v1.0",
+  "decided_home": "03_BUILD_METHODOLOGY/_templates/QAM/ (AD-01; not installed)",
+  "status": "DRAFT — INTAKE ADDENDUM / NOT APPROVED FOR SYNC",
+  "prepared_by": "Claudy (documentation Engineer seat)",
+  "generated_at": "2026-10-15T12:07:08+06:00",
+  "hash_scope": "every file in this folder except ADDENDUM_FILE_INDEX.json (paths relative to the addendum folder), plus referenced in-place files (paths relative to the repository root)",
+  "repository": {
+    "branch": "factory-docs-review-astra-w-chunks",
+    "head": "626da8d70f4db22987dc7fcc86765492072360cd",
+    "main": "9c179392f79b70da099121fc357d3107ad3bb86e"
+  },
+  "addendum_files": [
+    {
+      "path": "00_ADDENDUM_INDEX.md",
+      "bytes": 21452,
+      "sha256": "96a79693cff4965956e6f3388858d3d5785949c93e0b9657bb04e800f102fea5",
+      "purpose": "addendum index, read order, source-register addendum, status lists"
+    },
+    {
+      "path": "ARCHITECT_IMPLEMENTATION_INSTRUCTION_2026-10-14.md",
+      "bytes": 4399,
+      "sha256": "f7b9bef22fb70b4eb4179aa8e1cc723effbaae0053c6ee91f4b09378e4b19465",
+      "purpose": "Director-relayed Architect implementation instruction of 2026-10-14, verbatim (formerly mis-filed as the QA Lead decision)"
+    },
+    {
+      "path": "ARCHITECT_VERIFICATION_2026-10-14.md",
+      "bytes": 4330,
+      "sha256": "d40391eda38efb4982501e5127540e0b345e5384d480cf8c47a648f7c71814db",
+      "purpose": "Architect (Jarvis) verification of the v0.3 package, verbatim; amendments accepted under the QA Lead decision; installation and sync pending"
+    },
+    {
+      "path": "COMBINED_INTAKE_MANIFEST_001.md",
+      "bytes": 13547,
+      "sha256": "35a6631132e2bc1231add2f001bc4e21664ff4defbd4e43f1a86d8e4886482bf",
+      "purpose": "proposed combined intake manifest and decision assessment"
+    },
+    {
+      "path": "ENGINEER_VERIFICATION_v0_3.md",
+      "bytes": 10262,
+      "sha256": "04068d2805e80ac326777c152bea0b83236bea1e3e4d1ebd49ab5fb28c074604",
+      "purpose": "Engineer seat verification results for v0.3 (not QA)"
+    },
+    {
+      "path": "QA_LEAD_DECISION_2026-10-14.md",
+      "bytes": 6384,
+      "sha256": "7b3578e03f6f49f699b28af3e6c05ae7d30bbbc452d329e958e0e264540fb637",
+      "purpose": "QA Lead (Fable) decision, verbatim (provenance corrected 2026-10-15): ACCEPT WITH EXACT AMENDMENTS; §1 ADOPT as QAM-SR v1.0; R-1..R-7 satisfied"
+    },
+    {
+      "path": "QA_LEAD_REVIEW_ENTRY.md",
+      "bytes": 6416,
+      "sha256": "323ac232ecce57cae0d92baf1db124aeca3e5bfaae012c5450bcba4e5ea929c3",
+      "purpose": "v0.2 review entry; review returned 2026-10-14; retained as record"
+    },
+    {
+      "path": "TEMPLATES/QAM/AC_EVIDENCE_MATRIX.md",
+      "bytes": 1930,
+      "sha256": "ce619971ec58604e09f768de64337367cafec29ca30367b019e475c7ebf70883",
+      "purpose": "template v0.3-draft — QA Lead accepted v0.2 with exact amendments (2026-10-14); amendments applied, Engineer-verified; Architect amendment verification pending"
+    },
+    {
+      "path": "TEMPLATES/QAM/AGENTS.md",
+      "bytes": 1346,
+      "sha256": "13c5be461a00bd6239da3b5a247bd91130c85dcf519da59b231fcc421e62eced",
+      "purpose": "template v0.3-draft — QA Lead accepted v0.2 with exact amendments (2026-10-14); amendments applied, Engineer-verified; Architect amendment verification pending"
+    },
+    {
+      "path": "TEMPLATES/QAM/AUTOMATION/README.md",
+      "bytes": 1952,
+      "sha256": "76d5fb29a0f2ee90e7281f091894e1f04c394a3cacea9606a5aa51438d5fcc45",
+      "purpose": "template v0.3-draft — QA Lead accepted v0.2 with exact amendments (2026-10-14); amendments applied, Engineer-verified; Architect amendment verification pending"
+    },
+    {
+      "path": "TEMPLATES/QAM/CLAUDE.md",
+      "bytes": 1319,
+      "sha256": "bf7d4ff22b5d8c14d8f370cc128bc23553a1d95ddb41545700e64a9d080ad535",
+      "purpose": "template v0.3-draft — QA Lead accepted v0.2 with exact amendments (2026-10-14); amendments applied, Engineer-verified; Architect amendment verification pending"
+    },
+    {
+      "path": "TEMPLATES/QAM/FINDINGS.md",
+      "bytes": 4338,
+      "sha256": "c17a149be9a6bea8aaac720c3de47ea9e7b5402bb86792b466c8e5a6f2156385",
+      "purpose": "template v0.3-draft — QA Lead accepted v0.2 with exact amendments (2026-10-14); amendments applied, Engineer-verified; Architect amendment verification pending"
+    },
+    {
+      "path": "TEMPLATES/QAM/GOVERNING/README.md",
+      "bytes": 2363,
+      "sha256": "b11da26e2793bd9bf816b51840f007922b3e4028a6298be7494e834ce28aee20",
+      "purpose": "template v0.3-draft — QA Lead accepted v0.2 with exact amendments (2026-10-14); amendments applied, Engineer-verified; Architect amendment verification pending"
+    },
+    {
+      "path": "TEMPLATES/QAM/HANDOFFS/ENGINEERING_HANDOFF.md",
+      "bytes": 2609,
+      "sha256": "ccb15192ecccfd1dceae95fa2e7f0b2fa6bd9e19f4956e1295964a89eaa7391f",
+      "purpose": "template v0.3-draft — QA Lead accepted v0.2 with exact amendments (2026-10-14); amendments applied, Engineer-verified; Architect amendment verification pending"
+    },
+    {
+      "path": "TEMPLATES/QAM/HANDOFFS/FILE_INDEX.template.json",
+      "bytes": 2197,
+      "sha256": "fa5705561225dc1b108c2e2173121f6949f0d9141d6b5010b577cb5d15e5e2fb",
+      "purpose": "template v0.3-draft — QA Lead accepted v0.2 with exact amendments (2026-10-14); amendments applied, Engineer-verified; Architect amendment verification pending"
+    },
+    {
+      "path": "TEMPLATES/QAM/HANDOFFS/README.md",
+      "bytes": 1400,
+      "sha256": "82876906ba38d2d57506e934e645c38675768d5d76a66089b343d31273ecaba0",
+      "purpose": "template v0.3-draft — QA Lead accepted v0.2 with exact amendments (2026-10-14); amendments applied, Engineer-verified; Architect amendment verification pending"
+    },
+    {
+      "path": "TEMPLATES/QAM/HANDOFFS/REVIEW_START_HERE.md",
+      "bytes": 2312,
+      "sha256": "a7dc1fcac42b30ce6dd270078f5e9202d22aa011e2e531871acb0f5086d37633",
+      "purpose": "template v0.3-draft — QA Lead accepted v0.2 with exact amendments (2026-10-14); amendments applied, Engineer-verified; Architect amendment verification pending"
+    },
+    {
+      "path": "TEMPLATES/QAM/PARENT_ENTRY_ROUTING.md",
+      "bytes": 2833,
+      "sha256": "769345f5dc96fd52a654b65f663d51cacfa2ac65dd5b4f275afba01be9c38eb1",
+      "purpose": "template v0.3-draft — QA Lead accepted v0.2 with exact amendments (2026-10-14); amendments applied, Engineer-verified; Architect amendment verification pending"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_APPROVAL.md",
+      "bytes": 3787,
+      "sha256": "caa2c0f8080bfdecdd48a5c11830ad3ea162c1dd309d87738045a63b58fa6538",
+      "purpose": "template v0.3-draft — QA Lead accepted v0.2 with exact amendments (2026-10-14); amendments applied, Engineer-verified; Architect amendment verification pending"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_CERTIFICATION.md",
+      "bytes": 4005,
+      "sha256": "b2e7db8d3b27c064914bb30f269bd7ab46276eaef92ed3cfeb973c0abe144d19",
+      "purpose": "template v0.3-draft — QA Lead accepted v0.2 with exact amendments (2026-10-14); amendments applied, Engineer-verified; Architect amendment verification pending"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_CLEANUP_REPORT.md",
+      "bytes": 4410,
+      "sha256": "0a2eb83607a81870031d96190263531afed26745fffc8218a3a004293c92a4c1",
+      "purpose": "template v0.3-draft — QA Lead accepted v0.2 with exact amendments (2026-10-14); amendments applied, Engineer-verified; Architect amendment verification pending"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_ENTRY.md",
+      "bytes": 12218,
+      "sha256": "bc15f3c613a144be5a50c811752f00905a9585c6c4eb87300b7ee105da2c01fa",
+      "purpose": "template v0.3-draft — QA Lead accepted v0.2 with exact amendments (2026-10-14); amendments applied, Engineer-verified; Architect amendment verification pending"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_EXECUTION_REPORT.md",
+      "bytes": 4100,
+      "sha256": "723afabf776deddae595dfda5f1bca70dfc2c5616da32fe63de9dcf45e5b7177",
+      "purpose": "template v0.3-draft — QA Lead accepted v0.2 with exact amendments (2026-10-14); amendments applied, Engineer-verified; Architect amendment verification pending"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_MANIFEST.md",
+      "bytes": 5327,
+      "sha256": "2dc5ebb4dd8d257047b4f72b53122ad67953372106ddb7f2662a6858c5948c62",
+      "purpose": "template v0.3-draft — QA Lead accepted v0.2 with exact amendments (2026-10-14); amendments applied, Engineer-verified; Architect amendment verification pending"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_PACKAGING.md",
+      "bytes": 5347,
+      "sha256": "1a9a61ae19b2ee98cc481368d46ec0403895225f51afaec293e440d3ccc84ea7",
+      "purpose": "template v0.3-draft — QA Lead accepted v0.2 with exact amendments (2026-10-14); amendments applied, Engineer-verified; Architect amendment verification pending"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_PREFLIGHT.md",
+      "bytes": 7255,
+      "sha256": "a887e728a817b51944583c30d89a285820fb680c80c2568459ba32ea374f97c6",
+      "purpose": "template v0.3-draft — QA Lead accepted v0.2 with exact amendments (2026-10-14); amendments applied, Engineer-verified; Architect amendment verification pending"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_RECON_REPORT.md",
+      "bytes": 3876,
+      "sha256": "977fb2630ac38727936abc0770e748a705d377b31850a875beb841563eb9b764",
+      "purpose": "template v0.3-draft — QA Lead accepted v0.2 with exact amendments (2026-10-14); amendments applied, Engineer-verified; Architect amendment verification pending"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_RISK_REQUIREMENTS.md",
+      "bytes": 6689,
+      "sha256": "6e8cfb4e2df064b5eb8c2402654b66dec774b10c173a76134c04c65e854a4d76",
+      "purpose": "template v0.3-draft — QA Lead accepted v0.2 with exact amendments (2026-10-14); amendments applied, Engineer-verified; Architect amendment verification pending"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_STATE.md",
+      "bytes": 6672,
+      "sha256": "487b60e8bb7c45f1f246fa9d22e276a6498b1fdd2ddb90fd99d847e8a6d78a1e",
+      "purpose": "template v0.3-draft — QA Lead accepted v0.2 with exact amendments (2026-10-14); amendments applied, Engineer-verified; Architect amendment verification pending"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_TEST_PLAN.md",
+      "bytes": 4523,
+      "sha256": "2df20cbd259a76d4bb58759478c30ce21e2774cfff64e8a796b142c1e7020dc7",
+      "purpose": "template v0.3-draft — QA Lead accepted v0.2 with exact amendments (2026-10-14); amendments applied, Engineer-verified; Architect amendment verification pending"
+    },
+    {
+      "path": "TEMPLATES/QAM/README.md",
+      "bytes": 12831,
+      "sha256": "8ccc80f3f2f89549bd4a29260f236a33fe4eee5b3f08933ca62fb08e5bcbd0c3",
+      "purpose": "template v0.3-draft — QA Lead accepted v0.2 with exact amendments (2026-10-14); amendments applied, Engineer-verified; Architect amendment verification pending"
+    },
+    {
+      "path": "TEMPLATES/QAM/evidence/README.md",
+      "bytes": 2694,
+      "sha256": "385ad08e235c77b50a62ab78c5976e00df4f2167fc40f814f0300646a532d6df",
+      "purpose": "template v0.3-draft — QA Lead accepted v0.2 with exact amendments (2026-10-14); amendments applied, Engineer-verified; Architect amendment verification pending"
+    },
+    {
+      "path": "TEMPLATE_CORRECTION_RECORD_001.md",
+      "bytes": 8262,
+      "sha256": "96788240045cdba49f0ccc714a22ed331229c35783797dfded165aa23443fd5a",
+      "purpose": "concise correction record v0.1-draft -> v0.2-draft (C-1..C-12); unchanged history"
+    },
+    {
+      "path": "TEMPLATE_CORRECTION_RECORD_002.md",
+      "bytes": 7579,
+      "sha256": "6ebacf62fedb56f942db153fd50d41556d2dbdc4bb47255f2d825c60657009c3",
+      "purpose": "correction record v0.2-draft -> v0.3-draft (AM-1, AM-2, AM-3, standing-requirements adoption, bookkeeping B-1..B-4)"
+    },
+    {
+      "path": "TEMPLATE_PLACEMENT_RECOMMENDATION.md",
+      "bytes": 8280,
+      "sha256": "6e05329911147419d46cddd3357146b2a64c4a456e9cf3b32785a436eba5a4b2",
+      "purpose": "recommended Hub home for the template set"
+    }
+  ],
+  "referenced_in_place_files": [
+    {
+      "path": "factory-intake/QAM_PLAYBOOK_v1_0.md",
+      "bytes": 30650,
+      "sha256": "97e111e2a495f9a3fe65f50213e6f2ba68c8e5e963f3d23493b1ee99ad35c897",
+      "purpose": "SRC-A01 — Director-approved source (RUL-01); unchanged",
+      "expected_sha256": "97e111e2a495f9a3fe65f50213e6f2ba68c8e5e963f3d23493b1ee99ad35c897"
+    },
+    {
+      "path": "factory-intake/PLANNING_001/DIRECTOR_RULINGS_2026-10-14.md",
+      "bytes": 19931,
+      "sha256": "a9b51795eb48dd142dd356eae47c9e7a72dc55c677a4e483c5c7d72531317915",
+      "purpose": "ruling record R1.2 (unchanged)"
+    },
+    {
+      "path": "factory-intake/PLANNING_001/ARCHITECT_DECISIONS_2026-10-14.md",
+      "bytes": 5915,
+      "sha256": "43817f32df50e53405ace62cd1ddd222ddda02f029e96b59d0586cdac87b9e7f",
+      "purpose": "Architect decision record (AD-00, AD-01) (unchanged)"
+    },
+    {
+      "path": "factory-intake/PLANNING_001/COMBINED_DECISIONS_001.md",
+      "bytes": 55271,
+      "sha256": "9ba3b07e76d1ffd0a2ca0fbf491513181d6adadc9ab23e88785810756aa49040",
+      "purpose": "planning: decision list R5"
+    },
+    {
+      "path": "factory-intake/PLANNING_001/COMBINED_DEPENDENCY_MAP_001.md",
+      "bytes": 51988,
+      "sha256": "4606f976778d82834e5479a139808c4ae244eebe35e8379a3cb62a9a8cbe3b8b",
+      "purpose": "planning: dependency map R5"
+    },
+    {
+      "path": "factory-intake/PLANNING_001/INTAKE_CLARIFICATIONS_001.md",
+      "bytes": 31847,
+      "sha256": "e13c33b9970edcf4d04e44140e6bebe14fe209b142a5bfab9f146f9c4d6cd186",
+      "purpose": "planning: clarifications R5"
+    },
+    {
+      "path": "factory-corrections/FACTORY_DOCTRINE_CORRECTION_INDEX_001.md",
+      "bytes": 61628,
+      "sha256": "f9d290a561a0935fa5bd1d90131aecd10026aaa3b0f7486366595b9d32fb0fb3",
+      "purpose": "Correction Package 001 R3 (working tree over 626da8d); IDs and history untouched"
+    },
+    {
+      "path": "factory-corrections/DECISION_RECORD_001.md",
+      "bytes": 5028,
+      "sha256": "438bdab0bc0c841d1bd31f2fe99e95c260c56477d07ddf60f72f10c9a04b295e",
+      "purpose": "Correction Package 001 R3 (working tree over 626da8d); IDs and history untouched"
+    },
+    {
+      "path": "factory-corrections/01_governance_corrections.md",
+      "bytes": 34498,
+      "sha256": "78cf8bc765dbadfc609f17045113607a52f6aad2fe007c15a0af5ea14ff3c3e0",
+      "purpose": "Correction Package 001 R3 (working tree over 626da8d); IDs and history untouched"
+    },
+    {
+      "path": "factory-corrections/02_agents_handoffs_corrections.md",
+      "bytes": 20706,
+      "sha256": "65a61d7e2f7e56ab8c59be71d273347c1679ef08512c7da708dbfd98b8e0d8ae",
+      "purpose": "Correction Package 001 R3 (working tree over 626da8d); IDs and history untouched"
+    },
+    {
+      "path": "factory-corrections/03_build_method_corrections.md",
+      "bytes": 29379,
+      "sha256": "dd5d73de09842543e9af7350caa0973bed16825c3239245c4f5f7befa2d9a04f",
+      "purpose": "Correction Package 001 R3 (working tree over 626da8d); IDs and history untouched"
+    },
+    {
+      "path": "factory-corrections/04_auth_data_security_corrections.md",
+      "bytes": 34771,
+      "sha256": "75fbc63f62955276acbb259b93b6b728db8a41a4fa9f4bb8561564c3a2437a2b",
+      "purpose": "Correction Package 001 R3 (working tree over 626da8d); IDs and history untouched"
+    },
+    {
+      "path": "factory-corrections/05_api_commerce_corrections.md",
+      "bytes": 40959,
+      "sha256": "cdb05d32e1e7aa52b0309057156ca29fcc7ee73c03e0317971392aa7cf2760f8",
+      "purpose": "Correction Package 001 R3 (working tree over 626da8d); IDs and history untouched"
+    },
+    {
+      "path": "factory-corrections/06_design_frontend_corrections.md",
+      "bytes": 27515,
+      "sha256": "3dee764a4936329ee8680c8a50af9b341e570cccdc7c000b51df2b16c00875b5",
+      "purpose": "Correction Package 001 R3 (working tree over 626da8d); IDs and history untouched"
+    },
+    {
+      "path": "factory-corrections/07_skills_doc_governance_corrections.md",
+      "bytes": 32491,
+      "sha256": "9f6d04336c3f5330cfe7eee1aa26d56b4647475439d62259e8dd2a06dd8a76cb",
+      "purpose": "Correction Package 001 R3 (working tree over 626da8d); IDs and history untouched"
+    },
+    {
+      "path": "factory-intake/00_MASTER_INDEX.md",
+      "bytes": 13904,
+      "sha256": "120e1987fc56dc2b862a378b064f96ae6a7f114e371c20ab95bf8e16fa99ce72",
+      "purpose": "Harvest Package v0.1 (unchanged)"
+    },
+    {
+      "path": "factory-intake/01_FACTORY_WORKFLOWS_INTAKE.md",
+      "bytes": 15653,
+      "sha256": "6809ed9d53b937c383cd2f8b8034f2740e8587994b1e38725d21bf8569e17a6f",
+      "purpose": "Harvest Package v0.1 (unchanged)"
+    },
+    {
+      "path": "factory-intake/02_RRM_INTAKE.md",
+      "bytes": 14080,
+      "sha256": "c28a34addb1ce426701d186471147ac1a48a7a6f5a2b423d1db57a1068f37b9f",
+      "purpose": "Harvest Package v0.1 (unchanged)"
+    },
+    {
+      "path": "factory-intake/03_QAM_INTAKE.md",
+      "bytes": 19537,
+      "sha256": "9da9ca337bad192c703ad24e5fe7cb142aee5b21439d13fc3efd33bbad25bb1c",
+      "purpose": "Harvest Package v0.1 (unchanged)"
+    },
+    {
+      "path": "factory-intake/SOURCE_REGISTER.md",
+      "bytes": 12058,
+      "sha256": "7c7e6931b3398c852e5cc9f139c7450da03449e6965946201a7db3648fe25b2e",
+      "purpose": "Harvest Package v0.1 (unchanged)"
+    },
+    {
+      "path": "factory-intake/SOURCE_INVENTORY.json",
+      "bytes": 8253,
+      "sha256": "74bd3ce2bcb59188f7ae5d5d78261aa2b8a14bd0df558ca71a13b3da9b29ac1e",
+      "purpose": "Harvest Package v0.1 (unchanged)"
+    },
+    {
+      "path": "factory-intake/ARCHIVE_CONTENTS.json",
+      "bytes": 7990,
+      "sha256": "687c82d5b06c48644d2f368583d1824d8fd052d77517535edf7a1f3676b56955",
+      "purpose": "Harvest Package v0.1 (unchanged)"
+    },
+    {
+      "path": "factory-intake/FILE_INDEX.json",
+      "bytes": 14474,
+      "sha256": "831bcd3d9d08417a6640da71ffe4e26cc0627ebc103d5e80af6a258fbacc660c",
+      "purpose": "Harvest Package v0.1 (unchanged)"
+    },
+    {
+      "path": "factory-intake/README.md",
+      "bytes": 9197,
+      "sha256": "fc78e1e4abc1df770a2ba85059f6f8a02660482f4b733cecb32ad974bf036f67",
+      "purpose": "staging README (Claudy, 2026-10-13; unchanged)"
+    }
+  ],
+  "harvest_outer_zip": {
+    "path": "~/Downloads/ARCHIVE_OLD/FACTORY_PART2_NEW_DOCTRINE_INTAKE_v0_1.zip",
+    "recorded_path_2026-10-13": "~/Downloads/FACTORY_PART2_NEW_DOCTRINE_INTAKE_v0_1.zip",
+    "note": "Claudy's copy, relocated by the operator on 2026-10-14; byte-identical to the 2026-10-13 record. Jarvis reports a locally available copy with a different outer hash/member count; E-8 unconfirmed; neither copy replaced (CL-29).",
+    "exists": true,
+    "bytes": 1499871,
+    "sha256": "2b2b27e38848412143e472d98a2e4c4ffbc0ff760a95d245dab262e3837af782",
+    "expected_sha256": "2b2b27e38848412143e472d98a2e4c4ffbc0ff760a95d245dab262e3837af782"
+  },
+  "omitted_register_member": {
+    "archive": "factory-intake/SOURCES/RRM/SRC-R02_RRM004_ORIGINAL_PACK_v1_0.zip",
+    "archive_sha256": "c2a21b82ca4f6c1ec0e7d75dd5860ff2cf15c3a3615099c62272558db524ed2a",
+    "member": "RRM-004-CYBER-PHARMA/QA/REPAIR_PROPOSAL.md.template",
+    "bytes": 665,
+    "crc32": "5faaed7e",
+    "member_sha256": "49943f04ff46cfe8de8d557b038c12a97512cd9c5dcbcfd3ce77c0747b222224",
+    "note": "not extracted; verified read-only from the archive"
+  }
+}

@@ -1,0 +1,12 @@
+# Paths added or changed by Fable on 2026-10-17 that OPERATOR_PRESERVATION_PATHS.txt (2026-10-16) does not list.
+# Tony: inspect, then add to the preservation pathspec before the preservation commit. Review/run-state only; no canonical paths.
+_AUDIT/SYNC_2026-10-15_doctrine-part2/UPDATE_MAP.md
+_AUDIT/SYNC_2026-10-15_doctrine-part2/DOCSET_SYNC_ACCEPTANCE_SPEC.md
+_AUDIT/SYNC_2026-10-15_doctrine-part2/FABLE_CORRECTION_CONFIRMATION_2026-10-17.md
+_AUDIT/SYNC_2026-10-15_doctrine-part2/GATE2_APPROVAL_RECORD_2026-10-17.md
+_AUDIT/SYNC_2026-10-15_doctrine-part2/FABLE_GATE3_PRESERVATION_SUPPLEMENT.txt
+_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/GATE3_DELIVERY_RECEIPT.json
+session_2026-10-17.md
+RECOVERY.md
+agent_docs/RESPONSES/response_2026-10-17_103622_session-bounce-checkpoint.md
+agent_docs/RESPONSES/response_2026-10-17_112715_gate3-spec-finalized.md

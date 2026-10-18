@@ -1,0 +1,42 @@
+PART 1: CREDS AUTOMATION
+
+- i'm with you 100% 
+
+- let's createa a new  qa env file ... give cody directions accordingly
+
+- deleting the env file should be part of the qa close out for cody 
+
+PART 2: QAM
+
+- what we are doing now is not QAM 
+
+- yes, rrm is written but there is not QAM folder anywhere ...
+
+- this is where i'm confused a bit ... not sure who should be writing it or when ... here is 2 scenarios i can imagine ...
+
+SCENARIO ONE:
+
+- QA Lead will write the QAM playbook ... i mean how to write it and what to focus on etc.
+
+- The Architect, while writing the RRM or ABM or APBM .zip packages would look into the QAM playbook and write the QAM package inside the his RRM/APBM/ABM folders ... like in cyberpharma-rrm001 etc ... you get the point ... this very folder will have that QAM folder just like they have the QA folder now ...
+
+- Claudy will have the instructions to fill it up with files like QA Hand off ... execution report ... etc. 
+
+- When Claudy is done ... QAM folder is now ready to go ...
+
+- Now i as the director simply go in and point cody to the folder and he takes off ... remember, just like our current Claudy plan modes ... Cody will also have a recon mode where he check the env etc. to make sure he has what he needs ... i give you the report and you give me the thumbs up for cody to go ... that's when Cody single shots the QA operation ... just like Claudy is now single shotting his execution when architect and i approved his plan from the plan mode ...
+
+SCENARIO TWO:
+
+- Architect gives me RRM, i give it to you the QA Lead ... then you give me QAM ... i will drop that QAM inside that RRM folder in the /ACTION folder inside /agents_docs folder ... just like now ...
+
+- Claudy will be given instructions (off course there will be a QAM playbook which the Architect will consult) by the architect to fill the QAM folder with the necessary .md files ... QA Hand off, Execution Complete Report etc. like whatever is now used to write Cody's one shot routine ... etc. 
+
+- The rest is the same ... Claudy done ... director gets Cody started by pointing to QAM folder (which will have a nice Claude.md for him w/ all the details)
+
+- Cody runs an env recon and generates a report ... which i give to the QA lead ... if there are issues we fix ... QA gives me thumbs up ... i unleash Cody ... he one shots the QA work ... if necessary there will be rework ... which QA Lead and i supervise while Cody and Claudy both sits in the repo ... something like qa/rrm001 etc. ...
+
+SO THERE YOU HAVE IT ... I'M DROPPING THIS ON BOTH FABLE AND SOL'S LAP ... YOU GUYS WORK IT OUT ... MAKE IT PRETTY ... THIS IS A BRAINDUMP AFTER ALL ... 
+
+NOTE FOR FABLE: 
+- there are a few places 'You' means SOL the QA lead ...  

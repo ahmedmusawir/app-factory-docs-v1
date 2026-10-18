@@ -1,0 +1,338 @@
+{
+  "addendum": "INTAKE_ADDENDUM_001_v0_1",
+  "version": "0.1",
+  "date": "2026-10-14",
+  "status": "DRAFT — INTAKE ADDENDUM / NOT APPROVED FOR SYNC",
+  "prepared_by": "Claudy (documentation Engineer seat)",
+  "generated_at": "2026-10-14T18:47:17+06:00",
+  "hash_scope": "every file in this folder except ADDENDUM_FILE_INDEX.json (paths relative to the addendum folder), plus referenced in-place files (paths relative to the repository root)",
+  "repository": {
+    "branch": "factory-docs-review-astra-w-chunks",
+    "head": "626da8d70f4db22987dc7fcc86765492072360cd",
+    "main": "9c179392f79b70da099121fc357d3107ad3bb86e"
+  },
+  "addendum_files": [
+    {
+      "path": "00_ADDENDUM_INDEX.md",
+      "bytes": 15271,
+      "sha256": "3d6fa6f41f3636cdb02a811b10432eb65ff2da6e71f3b12011d4705981a6297e",
+      "purpose": "addendum index, read order, source-register addendum, status lists"
+    },
+    {
+      "path": "COMBINED_INTAKE_MANIFEST_001.md",
+      "bytes": 11940,
+      "sha256": "a6b05c3d02c71148ae8d994896b500404d128a5adae54e24a8aea78882c113b5",
+      "purpose": "proposed combined intake manifest and decision assessment"
+    },
+    {
+      "path": "TEMPLATES/QAM/AC_EVIDENCE_MATRIX.md",
+      "bytes": 1712,
+      "sha256": "c945a3ad4d96f98067d1dfeb2a94927f5bc0149ac31bd5720571952f854fdb59",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/AGENTS.md",
+      "bytes": 1237,
+      "sha256": "309a0e0b01659abd50cca8601951347695381e42225b8a0b84cd62acd58c7cc1",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/AUTOMATION/README.md",
+      "bytes": 1734,
+      "sha256": "b4f7d5900d4de1a9b9f8cdf6ae8e6d282ab1fbd6169815bc8343d4510da20b4e",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/CLAUDE.md",
+      "bytes": 1210,
+      "sha256": "d39628584e091cfc593517ed4470982abca55843a682870f5910371a0d99941a",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/FINDINGS.md",
+      "bytes": 3698,
+      "sha256": "2a0d93c268c87b12ab5b6e838fc4fd9beefa1ee50d37dc40270e352e3ffea012",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/GOVERNING/README.md",
+      "bytes": 2145,
+      "sha256": "44b03e40561127235b5aa52cb39f11aad523fe7259951284b7af75f38322766b",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/HANDOFFS/ENGINEERING_HANDOFF.md",
+      "bytes": 2180,
+      "sha256": "9e6a91396c06676bca863247c507349737cf38df62e0f991b544cd9231ec77fb",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/HANDOFFS/FILE_INDEX.template.json",
+      "bytes": 1817,
+      "sha256": "0ab86a671ab6aad877d2ccf67f0125cc1f4a60913ba5d870a4ef5c11c2258702",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/HANDOFFS/README.md",
+      "bytes": 936,
+      "sha256": "b611daad1597e931c93d023b706424718d2bfcc95906e934e51f1ba38eb9529b",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/HANDOFFS/REVIEW_START_HERE.md",
+      "bytes": 1900,
+      "sha256": "f4e605a65b3ee59da1ffbbf168e4fa4af1be02b0c6bbe7fef45c231dab4bb428",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/PARENT_ENTRY_ROUTING.md",
+      "bytes": 2615,
+      "sha256": "c150d15139e90e041162601577095ab318d005be6e3fb9e2fdd4228462094799",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_APPROVAL.md",
+      "bytes": 2613,
+      "sha256": "e0b4215f67847f0f358fb04b7fa6904c1bcfe8d8e383b465295fcfeaf1fa3434",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_CERTIFICATION.md",
+      "bytes": 3028,
+      "sha256": "2f538a253587e6e92be09ada4ddeca80f7f663fcc5cbb9bcaecdd41c8a6fca5d",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_CLEANUP_REPORT.md",
+      "bytes": 3615,
+      "sha256": "e009156855def8fa6125b27dfc0fa29af3a3cf69516565016f12782c184a99d4",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_ENTRY.md",
+      "bytes": 6997,
+      "sha256": "64fdccfb027af83ee88d9b2a2186ce00fff913fc1f059a66ed3972100fbb07fa",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_EXECUTION_REPORT.md",
+      "bytes": 3567,
+      "sha256": "944ab9d5fa6577c91471163528caaff281924a20dd49768858f2410bf13024bd",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_MANIFEST.md",
+      "bytes": 3876,
+      "sha256": "eb9600169d9ad6bc6bb703e8b7d1d7609f5a2ef47aaf79f5deb15eb458dfa3f5",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_PACKAGING.md",
+      "bytes": 4033,
+      "sha256": "cd0da4336e5f065af1a978710a07fa7c05f0ef39a4fdfcc2c4edd1e1abb6a419",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_PREFLIGHT.md",
+      "bytes": 6311,
+      "sha256": "bd81642f0a96f34ff673dd27747a97dca79579e6e4909a9591ec8b8b1c877beb",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_RECON_REPORT.md",
+      "bytes": 3442,
+      "sha256": "76e0e60a33124fca16b8e94d4868fb9bccefdf5d87d014553b40d0c838d3a270",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_RISK_REQUIREMENTS.md",
+      "bytes": 5585,
+      "sha256": "53fad66bb499ec8e3b3f6f933231bcd18303fc07dc6eff3a12456944c9888b8b",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_STATE.md",
+      "bytes": 3585,
+      "sha256": "f3518652f21d4a1f7f7d58c6abc76b41d07ff634616d46b51b3d56474eb30824",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/QAM_TEST_PLAN.md",
+      "bytes": 4146,
+      "sha256": "65d871a413de8ec219cccbd6e15d85973dbc1c7f6b4da3c3d328988aece5c350",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/README.md",
+      "bytes": 9521,
+      "sha256": "f8bce794c14f2faf6eea082a3765b397060c0c739a628f23fbf6927d04adaf08",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATES/QAM/evidence/README.md",
+      "bytes": 2132,
+      "sha256": "db56dc52dd12c8590bbce63c374490bff00fd7e9900a2ac77892acb22c2b5f57",
+      "purpose": "template — NEWLY AUTHORED DRAFT — QA LEAD REVIEW REQUIRED"
+    },
+    {
+      "path": "TEMPLATE_PLACEMENT_RECOMMENDATION.md",
+      "bytes": 7951,
+      "sha256": "48333fe9b392dc9b728f72fb399f7633513d55a1df28b5c6b1daebc883790fea",
+      "purpose": "recommended Hub home for the template set"
+    }
+  ],
+  "referenced_in_place_files": [
+    {
+      "path": "factory-intake/QAM_PLAYBOOK_v1_0.md",
+      "bytes": 30650,
+      "sha256": "97e111e2a495f9a3fe65f50213e6f2ba68c8e5e963f3d23493b1ee99ad35c897",
+      "purpose": "SRC-A01 — Director-approved source (RUL-01); unchanged",
+      "expected_sha256": "97e111e2a495f9a3fe65f50213e6f2ba68c8e5e963f3d23493b1ee99ad35c897"
+    },
+    {
+      "path": "factory-intake/PLANNING_001/DIRECTOR_RULINGS_2026-10-14.md",
+      "bytes": 19704,
+      "sha256": "6ba0de7e358e37352028c43a8447974383e9c60cd75167f67b1a50ab094707ac",
+      "purpose": "ruling record R1.1"
+    },
+    {
+      "path": "factory-intake/PLANNING_001/COMBINED_DECISIONS_001.md",
+      "bytes": 51474,
+      "sha256": "1bd36cfc438daa1813161a5682de9ec42c5fdcd95d8ac9b6457024099c33a56c",
+      "purpose": "planning: decision list R2"
+    },
+    {
+      "path": "factory-intake/PLANNING_001/COMBINED_DEPENDENCY_MAP_001.md",
+      "bytes": 46763,
+      "sha256": "114f895683b892578880050baf2b3326a04edb108b3d6afcf75d81c34b767b21",
+      "purpose": "planning: dependency map R2"
+    },
+    {
+      "path": "factory-intake/PLANNING_001/INTAKE_CLARIFICATIONS_001.md",
+      "bytes": 20824,
+      "sha256": "407c38cacc5d4e4f14feffd27f6258781736ed57be6b8bb0c5f15dc04a2b7d46",
+      "purpose": "planning: clarifications R2"
+    },
+    {
+      "path": "factory-corrections/FACTORY_DOCTRINE_CORRECTION_INDEX_001.md",
+      "bytes": 61628,
+      "sha256": "f9d290a561a0935fa5bd1d90131aecd10026aaa3b0f7486366595b9d32fb0fb3",
+      "purpose": "Correction Package 001 R3 (working tree over 626da8d); IDs and history untouched"
+    },
+    {
+      "path": "factory-corrections/DECISION_RECORD_001.md",
+      "bytes": 5028,
+      "sha256": "438bdab0bc0c841d1bd31f2fe99e95c260c56477d07ddf60f72f10c9a04b295e",
+      "purpose": "Correction Package 001 R3 (working tree over 626da8d); IDs and history untouched"
+    },
+    {
+      "path": "factory-corrections/01_governance_corrections.md",
+      "bytes": 34498,
+      "sha256": "78cf8bc765dbadfc609f17045113607a52f6aad2fe007c15a0af5ea14ff3c3e0",
+      "purpose": "Correction Package 001 R3 (working tree over 626da8d); IDs and history untouched"
+    },
+    {
+      "path": "factory-corrections/02_agents_handoffs_corrections.md",
+      "bytes": 20706,
+      "sha256": "65a61d7e2f7e56ab8c59be71d273347c1679ef08512c7da708dbfd98b8e0d8ae",
+      "purpose": "Correction Package 001 R3 (working tree over 626da8d); IDs and history untouched"
+    },
+    {
+      "path": "factory-corrections/03_build_method_corrections.md",
+      "bytes": 29379,
+      "sha256": "dd5d73de09842543e9af7350caa0973bed16825c3239245c4f5f7befa2d9a04f",
+      "purpose": "Correction Package 001 R3 (working tree over 626da8d); IDs and history untouched"
+    },
+    {
+      "path": "factory-corrections/04_auth_data_security_corrections.md",
+      "bytes": 34771,
+      "sha256": "75fbc63f62955276acbb259b93b6b728db8a41a4fa9f4bb8561564c3a2437a2b",
+      "purpose": "Correction Package 001 R3 (working tree over 626da8d); IDs and history untouched"
+    },
+    {
+      "path": "factory-corrections/05_api_commerce_corrections.md",
+      "bytes": 40959,
+      "sha256": "cdb05d32e1e7aa52b0309057156ca29fcc7ee73c03e0317971392aa7cf2760f8",
+      "purpose": "Correction Package 001 R3 (working tree over 626da8d); IDs and history untouched"
+    },
+    {
+      "path": "factory-corrections/06_design_frontend_corrections.md",
+      "bytes": 27515,
+      "sha256": "3dee764a4936329ee8680c8a50af9b341e570cccdc7c000b51df2b16c00875b5",
+      "purpose": "Correction Package 001 R3 (working tree over 626da8d); IDs and history untouched"
+    },
+    {
+      "path": "factory-corrections/07_skills_doc_governance_corrections.md",
+      "bytes": 32491,
+      "sha256": "9f6d04336c3f5330cfe7eee1aa26d56b4647475439d62259e8dd2a06dd8a76cb",
+      "purpose": "Correction Package 001 R3 (working tree over 626da8d); IDs and history untouched"
+    },
+    {
+      "path": "factory-intake/00_MASTER_INDEX.md",
+      "bytes": 13904,
+      "sha256": "120e1987fc56dc2b862a378b064f96ae6a7f114e371c20ab95bf8e16fa99ce72",
+      "purpose": "Harvest Package v0.1 (unchanged)"
+    },
+    {
+      "path": "factory-intake/01_FACTORY_WORKFLOWS_INTAKE.md",
+      "bytes": 15653,
+      "sha256": "6809ed9d53b937c383cd2f8b8034f2740e8587994b1e38725d21bf8569e17a6f",
+      "purpose": "Harvest Package v0.1 (unchanged)"
+    },
+    {
+      "path": "factory-intake/02_RRM_INTAKE.md",
+      "bytes": 14080,
+      "sha256": "c28a34addb1ce426701d186471147ac1a48a7a6f5a2b423d1db57a1068f37b9f",
+      "purpose": "Harvest Package v0.1 (unchanged)"
+    },
+    {
+      "path": "factory-intake/03_QAM_INTAKE.md",
+      "bytes": 19537,
+      "sha256": "9da9ca337bad192c703ad24e5fe7cb142aee5b21439d13fc3efd33bbad25bb1c",
+      "purpose": "Harvest Package v0.1 (unchanged)"
+    },
+    {
+      "path": "factory-intake/SOURCE_REGISTER.md",
+      "bytes": 12058,
+      "sha256": "7c7e6931b3398c852e5cc9f139c7450da03449e6965946201a7db3648fe25b2e",
+      "purpose": "Harvest Package v0.1 (unchanged)"
+    },
+    {
+      "path": "factory-intake/SOURCE_INVENTORY.json",
+      "bytes": 8253,
+      "sha256": "74bd3ce2bcb59188f7ae5d5d78261aa2b8a14bd0df558ca71a13b3da9b29ac1e",
+      "purpose": "Harvest Package v0.1 (unchanged)"
+    },
+    {
+      "path": "factory-intake/ARCHIVE_CONTENTS.json",
+      "bytes": 7990,
+      "sha256": "687c82d5b06c48644d2f368583d1824d8fd052d77517535edf7a1f3676b56955",
+      "purpose": "Harvest Package v0.1 (unchanged)"
+    },
+    {
+      "path": "factory-intake/FILE_INDEX.json",
+      "bytes": 14474,
+      "sha256": "831bcd3d9d08417a6640da71ffe4e26cc0627ebc103d5e80af6a258fbacc660c",
+      "purpose": "Harvest Package v0.1 (unchanged)"
+    },
+    {
+      "path": "factory-intake/README.md",
+      "bytes": 9197,
+      "sha256": "fc78e1e4abc1df770a2ba85059f6f8a02660482f4b733cecb32ad974bf036f67",
+      "purpose": "staging README (Claudy, 2026-10-13; unchanged)"
+    }
+  ],
+  "harvest_outer_zip": {
+    "path": "~/Downloads/FACTORY_PART2_NEW_DOCTRINE_INTAKE_v0_1.zip",
+    "exists": false
+  },
+  "omitted_register_member": {
+    "archive": "factory-intake/SOURCES/RRM/SRC-R02_RRM004_ORIGINAL_PACK_v1_0.zip",
+    "archive_sha256": "c2a21b82ca4f6c1ec0e7d75dd5860ff2cf15c3a3615099c62272558db524ed2a",
+    "member": "RRM-004-CYBER-PHARMA/QA/REPAIR_PROPOSAL.md.template",
+    "bytes": 665,
+    "crc32": "5faaed7e",
+    "member_sha256": "49943f04ff46cfe8de8d557b038c12a97512cd9c5dcbcfd3ce77c0747b222224",
+    "note": "not extracted; verified read-only from the archive"
+  }
+}

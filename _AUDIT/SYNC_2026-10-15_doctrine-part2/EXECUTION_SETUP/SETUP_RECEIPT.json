@@ -1,0 +1,70 @@
+{
+  "status": "IN PROGRESS \u2014 isolated worktree verified; awaiting scoped transfer",
+  "seat": "Cody Engineer",
+  "approval_record": "QA_RETEST_AF01/DIRECTOR_DECISIONS.md",
+  "gate2": {
+    "decision": "APPROVED",
+    "at": "2026-10-17T19:23:09+06:00",
+    "patch_sha256": "cf6413c9340c80f5c1bf53a55385876470e9b3aad364bc8963f52a68580f2a6d"
+  },
+  "gate3": {
+    "decision": "APPROVED",
+    "at": "2026-10-17T19:23:09+06:00",
+    "spec_path": "QA_RETEST_AF01/DOCSET_SYNC_ACCEPTANCE_SPEC_AMENDED_V1_R1.md",
+    "spec_sha256": "2a3867cacef11c6bb0419a4c71229479efe703cee9fbcc1e4f71c0ac8e63f0fc"
+  },
+  "preservation_commit_sha": "e7b4a6f33e1ae2442f71d82f7f3a9d694f50da36",
+  "expected_base": "9c179392f79b70da099121fc357d3107ad3bb86e",
+  "cached_origin_main": "9c179392f79b70da099121fc357d3107ad3bb86e",
+  "fetched_remote_baseline_sha": "9c179392f79b70da099121fc357d3107ad3bb86e",
+  "execution_worktree": "/home/moose/Documents/app-factory-docs-sync-execution",
+  "execution_branch": "docs/sync-doctrine-part2-2026-10-15",
+  "execution_checkpoint_sha": null,
+  "approved_run_transfer_verified": false,
+  "execution_tree_clean_verified": false,
+  "concrete_blocker": null,
+  "waiting_on": "Tony restores explicit 642-path preparation list from verified preservation commit",
+  "phase3_release": "NOT RELEASED",
+  "recorded_at": "2026-10-18T17:39:26+06:00",
+  "standalone_10x": {
+    "authorization_record": "EXECUTION_SETUP/STANDALONE_10X_AUTHORIZATION.json",
+    "files": [
+      {
+        "source": "/home/moose/Documents/ABM_PLAYBOOK_v1_0.md",
+        "destination": "10x Lab/ABM_PLAYBOOK_v1_0.md",
+        "bytes": 47242,
+        "source_sha256": "21f8344812a385ec0a3da8ec41e144dc07c7248814a8b0a73db4f2433c5b2051",
+        "destination_sha256": "21f8344812a385ec0a3da8ec41e144dc07c7248814a8b0a73db4f2433c5b2051",
+        "exact_copy": true
+      },
+      {
+        "source": "/home/moose/Documents/APBM_PLAYBOOK_v1_0.md",
+        "destination": "10x Lab/APBM_PLAYBOOK_v1_0.md",
+        "bytes": 25765,
+        "source_sha256": "c12ff3f9bc4355e9bd8e1c276a3917bd443f864715ab1ffb6b84edf49beb4f93",
+        "destination_sha256": "c12ff3f9bc4355e9bd8e1c276a3917bd443f864715ab1ffb6b84edf49beb4f93",
+        "exact_copy": true
+      }
+    ],
+    "review_tree_copy_verified": true,
+    "execution_tree_copy_verified": false,
+    "separate_reference_commit_sha": null,
+    "transfer_plan": "After run checkpoint, transfer only the two files from actual preservation SHA using REFERENCE_TRANSFER_PATHS.nul; verify hashes; Tony commits only these two paths; verify clean tree again."
+  },
+  "staged_scope_verification": "EXECUTION_SETUP/STAGED_SCOPE_VERIFICATION.json",
+  "preservation_verification": {
+    "paths": 1079,
+    "planned_paths": 888,
+    "missing": 0,
+    "extra_inbox_files": 189,
+    "extra_historical_zips": 2,
+    "extras_in_transfer_list": 0,
+    "committed_bytes_match_disk": true,
+    "approved_identities": "PASS",
+    "checked_at": "2026-10-18T19:07:50.734358+06:00"
+  },
+  "remote_baseline_verified_at": "2026-10-18T19:27:59.712577+06:00",
+  "execution_initial_head": "9c179392f79b70da099121fc357d3107ad3bb86e",
+  "execution_initial_clean_verified": true,
+  "execution_worktree_verified_at": "2026-10-18T19:29:13.638324+06:00"
+}

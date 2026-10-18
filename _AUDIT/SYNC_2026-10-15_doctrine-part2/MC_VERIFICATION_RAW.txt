@@ -1,0 +1,97 @@
+command: python3 _AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_mc_verify.py
+cwd: /home/moose/Documents/app-factory-docs-v1
+exit code: 0
+{
+  "protected_293_and_Fable_review_spec_and_prior_ZIP_unchanged": "PASS",
+  "immutable_intake_189_files": "PASS",
+  "ordered_edit_replay": 372,
+  "all_101_proposal_hashes_and_git_before_hashes": "PASS",
+  "footprint": {
+    "modified_existing": 33,
+    "added": 68,
+    "total": 101
+  },
+  "MC01_thirteen_pointer_containers": [
+    {
+      "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+      "line": 62,
+      "container": "table_open"
+    },
+    {
+      "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+      "line": 118,
+      "container": "bullet_list_open"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+      "line": 7,
+      "container": "blockquote_open"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+      "line": 9,
+      "container": "blockquote_open"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+      "line": 131,
+      "container": "paragraph"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+      "line": 169,
+      "container": "paragraph"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+      "line": 346,
+      "container": "paragraph"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+      "line": 381,
+      "container": "bullet_list_open"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+      "line": 1997,
+      "container": "paragraph"
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+      "line": 373,
+      "container": "paragraph"
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+      "line": 1206,
+      "container": "paragraph"
+    },
+    {
+      "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+      "line": 268,
+      "container": "bullet_list_open"
+    },
+    {
+      "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+      "line": 128,
+      "container": "bullet_list_open"
+    }
+  ],
+  "MC02_MC09_MC13_history_columns_status_suffixes_31_archives": "PASS",
+  "MC03_39_CHANGELOG_rows_inside_ledger_before_footer": "PASS",
+  "MC04_MC05_MC06_MC07_lifecycle_ownership_freeze_and_MC10_bump_guidance": "PASS",
+  "markdown_40_docs_no_new_unclosed_fences": "PASS",
+  "four_workflow_SVG_XML_numbered_prose_links_and_originals": "PASS",
+  "workflow_links_checked": 8,
+  "workflow_branch_Q1_approval_release_Q2_repair_cleanup_review_order": "PASS",
+  "25_accepted_sources_preserved_and_translation_replay": "PASS",
+  "MC08_twelve_spans_nine_paths_pre_post_MANIFEST_headers_pending_evidence": "PASS",
+  "MC11_date_binding_151_scoped_fields_exercised": "PASS \u2014 sample 2099-01-02 in memory only; no actual landing claim",
+  "MC12_97_FC_23_W_15_RUL_AD01_coverage_and_NO_guards": "PASS",
+  "MC14_superseded_template_plan_explicit": "PASS",
+  "unchanged_document_lints": "PASS \u2014 36 live docs; six scripts unchanged",
+  "lint_raw_output": "[ENCODING] PASS \u2014 0 hits across 36 live docs\n[RETIRED-TERMS] PASS \u2014 0 hits across 36 live docs\n[VERSIONED-REFS] PASS \u2014 0 hits across 36 live docs (34 canonical names loaded)\n[HEADER-PRESENCE] PASS \u2014 all 36 live docs carry the standard header\n=== DOCTRINE LINTS ===\n\n--- encoding_lint.py ---\n\n--- retired_terms_lint.py ---\n\n--- versioned_refs_lint.py ---\n\n--- header_lint.py ---\n\n=== RESULT: PASS ===\n",
+  "retained_128_pair_contrast_evidence": "Token declarations unchanged; prior numeric matrix retained; no browser/accessibility claim",
+  "git_refs_staging_canonical_worktree": "Unchanged refs; nothing staged; empty canonical diff; no Git mutation by Cody"
+}

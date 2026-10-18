@@ -1,0 +1,36 @@
+{
+  "status": "ENGINEER-VERIFIED SERIALIZATION REPAIR; independent QA retest and exact successor approvals PENDING",
+  "repair_id": "QA-AF01-R1",
+  "base_sha": "9c179392f79b70da099121fc357d3107ad3bb86e",
+  "corrected_patch": {
+    "path": "REPAIR_QA_AF01/EXECUTION_PROPOSAL.corrected.patch",
+    "sha256": "cf6413c9340c80f5c1bf53a55385876470e9b3aad364bc8963f52a68580f2a6d",
+    "bytes": 1906921
+  },
+  "submitted_patch": {
+    "path": "AMENDED_V1/EXECUTION_PROPOSAL.patch",
+    "sha256": "ce4528d8db1183699ea8a90aaed266e91c991fe59b01747d4aa51e70acb3d58c",
+    "bytes": 1906863
+  },
+  "unchanged_inputs": {
+    "UPDATE_MAP.md": "cd291270bb6c8e537bcb050685c6464d326254f0d2a703c21f7f304dfe286931",
+    "DOCSET_SYNC_ACCEPTANCE_SPEC.md": "3910a62c34ff28acf1f9b956c5650deecae4ebd36872cc0072fd83e35ca19fa0",
+    "AMENDED_V1/AMENDMENT_IDENTITIES.json": "daefb56823173b3707a064c2f22c6ffd4daa25db94b1226d959f8e3c241cc0c1",
+    "AMENDED_V1/AMENDMENT_V1.md": "655e24edf2c53b8ca89563a66ada54ab6df09b930eb80a7a2743216dc1153764",
+    "AMENDED_V1/SELECTED_EXACT_EDITS.json": "2675ffc148f49a95b688e9f252527950ce9c3f1fd61df3fb0ffb067fcc7ff687",
+    "AMENDED_V1/EXECUTION_PROPOSAL_INDEX.json": "69244f4edc347b30b81ed6a909bae4fbb5130864319e9f8cd84b5d5c22e59ba6",
+    "QA_AMENDED_V1/DOCSET_SYNC_ACCEPTANCE_SPEC_AMENDED_V1.md": "103c7ede8a03e7bd0ea64f482e9d0b5a646b7720b8ae7f07729ea3482c9b8bd3",
+    "QA_AMENDED_V1/REVIEW_IDENTITIES.json": "4ae39a534a62136e13218b907c694c3b5a08d59f0c8aa02a4959e593582a8174",
+    "QA_AMENDED_V1/ORDERED_GATE_DECISIONS.md": "5235f2e83e6b90583017ac23f9bbe4a070850e142bb4e0c68b6a44ca69c5610b"
+  },
+  "ordered_edits": 380,
+  "output_paths": 101,
+  "content_amendment": false,
+  "source_review_zip": {
+    "path": "/home/moose/Downloads/FACTORY_AMENDED_V1_QA_SPEC_REVIEW_2026-10-17_160835.zip",
+    "sha256": "86da25006261a33ab4f0edae89520cbd20682d1cc6d918415aa3b4ceb5cf98c4"
+  },
+  "seat": "Cody Engineer; Fable QA Lead",
+  "qa_acceptance": "PENDING; Engineer does not issue independent acceptance",
+  "phase3": "NOT RELEASED"
+}

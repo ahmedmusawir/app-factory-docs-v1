@@ -1,0 +1,55 @@
+{
+  "status": "QA-AF01 CLOSED (PASS); Gate 2 amendment PENDING; Gate 3 PENDING; Phase 3 NOT RELEASED",
+  "seat": "Fable QA Lead; Cody Engineer; Jarvis Architect; Tony Director",
+  "base_sha": "9c179392f79b70da099121fc357d3107ad3bb86e",
+  "amendment": {
+    "record": "AMENDED_V1/AMENDMENT_V1.md",
+    "record_sha256": "655e24edf2c53b8ca89563a66ada54ab6df09b930eb80a7a2743216dc1153764",
+    "edits_record": "AMENDED_V1/AMENDMENT_V1_EDITS.json",
+    "edits_record_sha256": "274df38cbf0b2cefd91e05d505e71fc35d91f09cb16ca885234e80a300364893",
+    "ordered_edits": 380,
+    "ordered_edits_sha256": "2675ffc148f49a95b688e9f252527950ce9c3f1fd61df3fb0ffb067fcc7ff687",
+    "index": "AMENDED_V1/EXECUTION_PROPOSAL_INDEX.json",
+    "index_sha256": "69244f4edc347b30b81ed6a909bae4fbb5130864319e9f8cd84b5d5c22e59ba6",
+    "paths": 101,
+    "amended_documents": {
+      "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md": "df17ac849c4035a3febcc7042329a43bf9fb2ffbf2cafbc954a01a6d0d7f6911",
+      "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md": "3ec6bc37f52ad913e06ad43e7b7344477a5804c5b205122ca8b075502d01949c",
+      "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md": "b0f74569d020176a189abc47fa1ea6f27644a81ceb55efc1ccd78e4d5197a5ab"
+    },
+    "source_zip": "/home/moose/Downloads/FACTORY_AMENDED_V1_REVIEW_2026-10-17_145858.zip",
+    "source_zip_sha256": "711914a986cd64071f4372e0c428249ba27c6eba8ace160918c312d098b34f60"
+  },
+  "corrected_patch": {
+    "path": "REPAIR_QA_AF01/EXECUTION_PROPOSAL.corrected.patch",
+    "sha256": "cf6413c9340c80f5c1bf53a55385876470e9b3aad364bc8963f52a68580f2a6d",
+    "bytes": 1906921,
+    "repair_zip": "/home/moose/Downloads/FACTORY_QA_AF01_REPAIR_2026-10-17_173649.zip",
+    "repair_zip_sha256": "9782260ccbd12fd6b76a844c0439e69796d8e6904e6912c9c78631215fdcf4ed"
+  },
+  "submitted_patch_historical": {
+    "path": "AMENDED_V1/EXECUTION_PROPOSAL.patch",
+    "sha256": "ce4528d8db1183699ea8a90aaed266e91c991fe59b01747d4aa51e70acb3d58c",
+    "bytes": 1906863,
+    "status": "fails git apply --check; not for execution"
+  },
+  "specification": {
+    "current": "QA_RETEST_AF01/DOCSET_SYNC_ACCEPTANCE_SPEC_AMENDED_V1_R1.md",
+    "current_sha256": "2a3867cacef11c6bb0419a4c71229479efe703cee9fbcc1e4f71c0ac8e63f0fc",
+    "previous_amended_v1": "QA_AMENDED_V1/DOCSET_SYNC_ACCEPTANCE_SPEC_AMENDED_V1.md",
+    "previous_amended_v1_sha256": "103c7ede8a03e7bd0ea64f482e9d0b5a646b7720b8ae7f07729ea3482c9b8bd3",
+    "v1_0": "DOCSET_SYNC_ACCEPTANCE_SPEC.md",
+    "v1_0_sha256": "3910a62c34ff28acf1f9b956c5650deecae4ebd36872cc0072fd83e35ca19fa0",
+    "acceptance_criteria": 38
+  },
+  "frozen_map": {
+    "path": "UPDATE_MAP.md",
+    "sha256": "cd291270bb6c8e537bcb050685c6464d326254f0d2a703c21f7f304dfe286931",
+    "original_index_sha256": "84337dcd3b60d059e8c67d1586cd8dba58827c64e14ab46d6d05ab57a611da39"
+  },
+  "retest": {
+    "verdict": "PASS \u2014 CLOSED",
+    "time": "2026-10-17T19:07:09+06:00",
+    "record": "QA_RETEST_AF01/QA_AF01_RETEST_VERDICT.md"
+  }
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+    "before_sha256": "e6db82b211def718a27ab66d079f324164f240e9286fa9a5131a1991692d2538",
+    "proposed_sha256": "fbfeef2ec7f439b99c3233d7b172d43b1c69afd57e64317532791b038c1b2db8"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+    "before_sha256": "63e75d1c28deec13fae2fc3d5aedaf2f3375918689dd28e57b149edbc40c6e47",
+    "proposed_sha256": "e210491aa1ac6597916f6b35d75c7e8a978c15eb729a444042ef8f1131aabdec"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+    "before_sha256": "ff675d13641da0640b074147e4274061e8bc2e63cddc5285c0049b37f2f8413c",
+    "proposed_sha256": "097e5448670ca8525d3a31827f16b5c99d40fdd11398d66b75bfc03c20e640ed"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/README.md",
+    "before_sha256": "b7462fc84fb6557d08010623a465588b27ee62edbffa2702ea71f2ba4d5a3d91",
+    "proposed_sha256": "15fdc40e56000666cca7e02290168e2aed52fc22a73c4a2edefba586011535a2"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+    "before_sha256": "c45111675dd43a7bb889c0f8561ba5059a5ea0d542c99b5964938cc7e767cc48",
+    "proposed_sha256": "8fa90adb0737ce6c50d17f17eaf520afa2ee2b3e8395fa24c658f9c7beec2374"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+    "before_sha256": "fcfa76eaa6d67cd2cc1c26934e90a097933c79911c0c283f52816b2a7f76f821",
+    "proposed_sha256": "50a1e6ce52eac1130c26d1831b20a64c5f5c3372f67e5685cad65f49f1bec4c1"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+    "before_sha256": "2f8c1653292da84f839c6b4d327ecbe1675ea24bf6c2c85fdc7f839b38bf7ce5",
+    "proposed_sha256": "f86b30d60974811aafd8d482adffbac72d6b41fa94cf659475b94d5df36fb22f"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+    "before_sha256": "8c78501bc00af1ce510c4099769dfd23009fcf478b47f5f35b8337407a6e50ef",
+    "proposed_sha256": "3000c20beaa5cc38184a008e0e21df56b58af9ab63e236293d6212c5904f954e"
+  },
+  {
+    "path": "MANIFEST.md",
+    "before_sha256": "e00f72c708fda328742222f570e1d2d6c93e683ecc511891f4f4d4c281532caa",
+    "proposed_sha256": "6bd8b9614652f68d5131106b8b1970e3e41e9a86656bfe3eac1fd62b38be4e24"
+  }
+]

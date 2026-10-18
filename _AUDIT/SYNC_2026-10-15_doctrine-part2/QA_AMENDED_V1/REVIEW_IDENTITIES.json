@@ -1,0 +1,148 @@
+{
+  "status": "Gate 2 amendment PENDING; Gate 3 PENDING; Phase 3 NOT RELEASED",
+  "base_sha": "9c179392f79b70da099121fc357d3107ad3bb86e",
+  "original_map_sha256": "cd291270bb6c8e537bcb050685c6464d326254f0d2a703c21f7f304dfe286931",
+  "original_spec_sha256": "3910a62c34ff28acf1f9b956c5650deecae4ebd36872cc0072fd83e35ca19fa0",
+  "source_zip_sha256": "711914a986cd64071f4372e0c428249ba27c6eba8ace160918c312d098b34f60",
+  "amendment_records": {
+    "AMENDMENT_IDENTITIES.json": {
+      "sha256": "daefb56823173b3707a064c2f22c6ffd4daa25db94b1226d959f8e3c241cc0c1",
+      "bytes": 5197
+    },
+    "AMENDMENT_V1.md": {
+      "sha256": "655e24edf2c53b8ca89563a66ada54ab6df09b930eb80a7a2743216dc1153764",
+      "bytes": 15874
+    },
+    "AMENDMENT_V1_EDITS.json": {
+      "sha256": "274df38cbf0b2cefd91e05d505e71fc35d91f09cb16ca885234e80a300364893",
+      "bytes": 7645
+    },
+    "D4_STARTER_KIT_METADATA_NORMALIZATION.json": {
+      "sha256": "136592e830934b1d75b2779c71494859e08d1ad3b83089710b8b115d0aac566f",
+      "bytes": 1506
+    },
+    "EXECUTION_PROPOSAL.patch": {
+      "sha256": "ce4528d8db1183699ea8a90aaed266e91c991fe59b01747d4aa51e70acb3d58c",
+      "bytes": 1906863
+    },
+    "EXECUTION_PROPOSAL_INDEX.json": {
+      "sha256": "69244f4edc347b30b81ed6a909bae4fbb5130864319e9f8cd84b5d5c22e59ba6",
+      "bytes": 22830
+    },
+    "FABLE_HANDOFF_AMENDED_V1.md": {
+      "sha256": "017ac5ad97a500255a2e3c146cffed6ef62b5a5f60ff0972f62a373a3b1ad643",
+      "bytes": 6036
+    },
+    "LANDING_DATE_PLAN.json": {
+      "sha256": "d7cd5a90ccac52972100be1c570c301d1399896d634d71acf87402585b2a99f1",
+      "bytes": 88049
+    },
+    "OPERATOR_NEXT_STEPS_SUPPLEMENT.md": {
+      "sha256": "5ce95f3c84e74e73fbe2e4919873c3557d389b4d12ff4fa4590df4e630aee5eb",
+      "bytes": 2594
+    },
+    "OWNERSHIP_PROPAGATION.tsv": {
+      "sha256": "104b66f03a12c00a276723a6fb1d816ab39b57ac7205de53de7358f750b78f93",
+      "bytes": 9523
+    },
+    "PRESERVATION_SUPPLEMENT.txt": {
+      "sha256": "4c6904b2340f0749c749b1029c7f723e08a4776405c85bcfc7f765a0f23e810f",
+      "bytes": 766
+    },
+    "PROPOSAL_COUNTS.json": {
+      "sha256": "098dbb074e48ce9a7c1d59839ba447b375414c2576696ad9558fb1e8e010e26a",
+      "bytes": 397
+    },
+    "PROPOSED_CONTENT/01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md": {
+      "sha256": "df17ac849c4035a3febcc7042329a43bf9fb2ffbf2cafbc954a01a6d0d7f6911",
+      "bytes": 14636
+    },
+    "PROPOSED_CONTENT/02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md": {
+      "sha256": "3ec6bc37f52ad913e06ad43e7b7344477a5804c5b205122ca8b075502d01949c",
+      "bytes": 26479
+    },
+    "PROPOSED_CONTENT/02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md": {
+      "sha256": "b0f74569d020176a189abc47fa1ea6f27644a81ceb55efc1ccd78e4d5197a5ab",
+      "bytes": 50972
+    },
+    "README_AMENDED_V1_REVIEW.md": {
+      "sha256": "590015a454888cc50461519b09ae4d7b2abd4c36b631d85c7d85b6847ff366f2",
+      "bytes": 1601
+    },
+    "SCOPE_LEDGER_SUPPLEMENT.md": {
+      "sha256": "d5c17821e71666b038ba69428c05a304a894a2ceca49c24a97bb6dbb78a49069",
+      "bytes": 779
+    },
+    "SELECTED_CONTENT_DIFF.patch": {
+      "sha256": "1e30d8b33900f34f2271d5065fbd6475344c6b7762dfede91cf17535c1f6e878",
+      "bytes": 420353
+    },
+    "SELECTED_CONTENT_INDEX.json": {
+      "sha256": "7620e9399a2bf472f562d836c9413a5750460c17ae35ef9e33230b3951dae631",
+      "bytes": 10312
+    },
+    "SELECTED_EXACT_EDITS.json": {
+      "sha256": "2675ffc148f49a95b688e9f252527950ce9c3f1fd61df3fb0ffb067fcc7ff687",
+      "bytes": 1285628
+    },
+    "VERIFICATION.json": {
+      "sha256": "b181617fab39eb760ac2de74100694c6796c69a4c7e419f36e8baa1946058f85",
+      "bytes": 3336
+    },
+    "VERIFICATION_RAW.txt": {
+      "sha256": "36136c0b5d1b21fae3542151e1f0307b64e093f032ec91f7e82c6f3742130ca0",
+      "bytes": 3266
+    },
+    "WORKFLOW_RULING_TRACEABILITY.json": {
+      "sha256": "caa21bcbb33b276dadc34011e5cb55e7e1c3690671a26663437affcbfd399105",
+      "bytes": 17584
+    }
+  },
+  "matching_specification": {
+    "path": "QA_AMENDED_V1/DOCSET_SYNC_ACCEPTANCE_SPEC_AMENDED_V1.md",
+    "sha256": "103c7ede8a03e7bd0ea64f482e9d0b5a646b7720b8ae7f07729ea3482c9b8bd3"
+  },
+  "amended_documents": [
+    {
+      "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+      "before_sha256": "9b732116c6030aee4d6ae0b792272bc372dd647ef95dea522c2bf7949934af93",
+      "gate2_proposed_sha256": "de0321e3b2b9220121606c5255d2ddc3d0d01ce57d69be11200d0c2aed5a2ac4",
+      "gate2_bytes": 14426,
+      "amended_proposed_sha256": "df17ac849c4035a3febcc7042329a43bf9fb2ffbf2cafbc954a01a6d0d7f6911",
+      "amended_bytes": 14636
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+      "before_sha256": "b0754979e3b24cb79234265fe146f39f03718e608a60153a702a518f34979af4",
+      "gate2_proposed_sha256": "ad0712bf79a03233c6dd4799eb04113ad966d23017f26a5ba1a6f433481dce48",
+      "gate2_bytes": 26430,
+      "amended_proposed_sha256": "3ec6bc37f52ad913e06ad43e7b7344477a5804c5b205122ca8b075502d01949c",
+      "amended_bytes": 26479
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "before_sha256": "8d73c37a42624fa2c60729d8d2648fc96f72305a732fd5e74460cf0a614f861c",
+      "gate2_proposed_sha256": "72477ec8dccc0381d6a5a4476d64b84751b376dfb78f83a49b337beb8651a1e9",
+      "gate2_bytes": 50878,
+      "amended_proposed_sha256": "b0f74569d020176a189abc47fa1ea6f27644a81ceb55efc1ccd78e4d5197a5ab",
+      "amended_bytes": 50972
+    }
+  ],
+  "unaffected_records": {
+    "POST_VERIFICATION_STATUS_TRANSITIONS.json": "36a9d138030b56cc78504a42938a274b3e2dca7846327ab123f912fa72fa7ece",
+    "POST_VERIFICATION_PROPOSAL_INDEX.json": "989471b28beb92a6c3c13fd24d7175af5b8098df535af43375c14994b37996d4",
+    "POST_VERIFICATION_PROPOSAL.patch": "bbe65465bad50cf7ec11abc43ab46e7a3a050d400caf496de0a70d6c6f7f54dc",
+    "PHASE_2_TEMPLATE_TRANSLATIONS.json": "c8fd16c79dcfc51bf2c1aaf4509f498fd501a3490e56f76e117bb611a5f44f8a",
+    "WORKFLOW_PUBLICATION_PLAN.json": "6a522cde1bd43a8ce388584927ed71f5667318b602349a8d968a561d5fd0c1c1",
+    "DOCUMENT_VERSION_AND_ARCHIVE_PLAN.json": "b2d9174daedfd9cb9572200b22fa1a803461763c5f0237cd5501471e580881d0",
+    "NEW_DOCUMENT_PROPOSALS.json": "066c2c1d4e25770ebf312807c7548f22b3236702db4cb44102653a373ffef909",
+    "ARCHIVE_RESTORATION_PROPOSAL.json": "f69e513e9244c558bf5bb9be6ccffcaff6e9ad4dcdb7d12999cc785321fc6741",
+    "UPDATE_MAP.md": "cd291270bb6c8e537bcb050685c6464d326254f0d2a703c21f7f304dfe286931",
+    "GATE2_APPROVAL_RECORD_2026-10-17.md": "6a972e05211135c86c09614fbb449b7921bca790a728929a98d594fa88ac8ba0",
+    "DOCSET_SYNC_ACCEPTANCE_SPEC.md": "3910a62c34ff28acf1f9b956c5650deecae4ebd36872cc0072fd83e35ca19fa0",
+    "FABLE_CORRECTION_CONFIRMATION_2026-10-17.md": "3b8630aa24579ca2c4af72dab4f8461e4d1754ea2380fcf6d56d2941915d8b91",
+    "FABLE_MAP_REVIEW_2026-10-16.md": "3f9c279da43fb2c2d084c77721610d931e759b88bfd952e92ca65698baa0eeea"
+  },
+  "approval_record": "QA_AMENDED_V1/ORDERED_GATE_DECISIONS.md",
+  "known_failure": "QA-AF01 \u2014 patch fidelity; pinned defective patch retained as reviewed"
+}

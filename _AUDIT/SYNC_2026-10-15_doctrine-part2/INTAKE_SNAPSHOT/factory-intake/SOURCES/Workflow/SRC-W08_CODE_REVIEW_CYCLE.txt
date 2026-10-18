@@ -1,0 +1,63 @@
+                     PHASE COMPLETE
+                           │
+                    freeze baseline
+                           │
+             ┌─────────────┴─────────────┐
+             │                           │
+             ▼                           ▼
+           FABLE                       ASTRA
+     FORENSIC EVIDENCE MAP       ADVERSARIAL ATTACK
+     "Did we build what           "How does this
+      we claim we built?"          system still fail?"
+             │                           │
+             └─────────────┬─────────────┘
+                           ▼
+                     SOL + TONY
+                      adjudicate
+                           │
+                           ▼
+                         OPUS
+                    bounded repairs
+                           │
+             ┌─────────────┴─────────────┐
+             │                           │
+             ▼                           ▼
+     TARGETED RE-REVIEW            SOL REGRESSION
+      finding is fixed          old green stays green
+             │                           │
+             └─────────────┬─────────────┘
+                           ▼
+                    PHASE CERTIFIED
+                    
+
+---------------------------------------------------------------------------------------------
+
+
+                 PHASE GATE A
+        Fable Review + Astra Review
+                      │
+                      ▼
+                 SOL + TONY
+                 disposition
+                      │
+              accepted findings
+                      ▼
+                    OPUS
+               bounded repairs
+                      │
+                engineer tests
+                      │
+           ┌──────────┴──────────┐
+           │                     │
+           ▼                     ▼
+    TARGETED RE-REVIEW      REGRESSION QA
+                            SOL → GLM/MiniMax
+   Original reviewer              │
+ verifies accepted repair     verifies previous
+           │                   green behavior
+           └──────────┬──────────┘
+                      ▼
+                 both PASS
+                      │
+                      ▼
+               PHASE CERTIFIED

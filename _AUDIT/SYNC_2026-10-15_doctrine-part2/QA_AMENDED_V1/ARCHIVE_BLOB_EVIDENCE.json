@@ -1,0 +1,191 @@
+{
+  "method": "Compute Git blob SHA-1 from exact indexed bytes and compare with git rev-parse BASE:path; no Git writes",
+  "checks": [
+    {
+      "archive": "_ARCHIVE/APP_FACTORY_BLUEPRINT_v2_1.md",
+      "base_source": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+      "expected_blob": "2a499a9c0b2099005c12724923ae27cf5239cfe1",
+      "proposed_blob": "2a499a9c0b2099005c12724923ae27cf5239cfe1"
+    },
+    {
+      "archive": "_ARCHIVE/SOFTWARE_FACTORY_PLAYBOOK_v1_3.md",
+      "base_source": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+      "expected_blob": "0dcf211e1ba82c811f5d20dc220cbf337ec594b7",
+      "proposed_blob": "0dcf211e1ba82c811f5d20dc220cbf337ec594b7"
+    },
+    {
+      "archive": "_ARCHIVE/STARTER_KIT_HANDBOOK_v1_1.md",
+      "base_source": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+      "expected_blob": "6ed6fd2ff14cf9351e00b4c038d331bcd64fa55e",
+      "proposed_blob": "6ed6fd2ff14cf9351e00b4c038d331bcd64fa55e"
+    },
+    {
+      "archive": "_ARCHIVE/ARCHITECT_PLAYBOOK_v2_2.md",
+      "base_source": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+      "expected_blob": "3a11e19df20127f291df5408bbcff24e97245edd",
+      "proposed_blob": "3a11e19df20127f291df5408bbcff24e97245edd"
+    },
+    {
+      "archive": "_ARCHIVE/ARCHITECT_QUESTIONNAIRE_v2_2.md",
+      "base_source": "02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md",
+      "expected_blob": "15780306c6ad4dc2b5b3ab8d393d7d86a0643852",
+      "proposed_blob": "15780306c6ad4dc2b5b3ab8d393d7d86a0643852"
+    },
+    {
+      "archive": "_ARCHIVE/DESIGNER_PLAYBOOK_v2_1.md",
+      "base_source": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+      "expected_blob": "49955e48ac5f518aff304a999c02dc54d766e89e",
+      "proposed_blob": "49955e48ac5f518aff304a999c02dc54d766e89e"
+    },
+    {
+      "archive": "_ARCHIVE/ENGINEER_PLAYBOOK_v1_2.md",
+      "base_source": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "expected_blob": "2be9f7787481018b5ddafa721eea1220e88aff7e",
+      "proposed_blob": "2be9f7787481018b5ddafa721eea1220e88aff7e"
+    },
+    {
+      "archive": "_ARCHIVE/HANDOFF_PACKAGE_PLAYBOOK_v1_1.md",
+      "base_source": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+      "expected_blob": "d261b4cce6ac7f7c6cf66dae40c8835ce949be40",
+      "proposed_blob": "d261b4cce6ac7f7c6cf66dae40c8835ce949be40"
+    },
+    {
+      "archive": "_ARCHIVE/RECON_QUESTIONNAIRE_v0_5.md",
+      "base_source": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+      "expected_blob": "87d8e16e6c5791954f173d564fc83557939b32ad",
+      "proposed_blob": "87d8e16e6c5791954f173d564fc83557939b32ad"
+    },
+    {
+      "archive": "_ARCHIVE/APP_FACTORY_SKILLS_PLAYBOOK_v1_1.md",
+      "base_source": "03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md",
+      "expected_blob": "ba8d795b651eb61b650af580cef24c94048b9d1a",
+      "proposed_blob": "ba8d795b651eb61b650af580cef24c94048b9d1a"
+    },
+    {
+      "archive": "_ARCHIVE/BIM_PLAYBOOK_v1_0.md",
+      "base_source": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+      "expected_blob": "f65445a388cabe6c6689f1b6f17ff1f5224bbf04",
+      "proposed_blob": "f65445a388cabe6c6689f1b6f17ff1f5224bbf04"
+    },
+    {
+      "archive": "_ARCHIVE/BUG_FIX_PLAYBOOK_v1_0.md",
+      "base_source": "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+      "expected_blob": "c8718f0e6178e898ffbcfd4332ff63b0a044c933",
+      "proposed_blob": "c8718f0e6178e898ffbcfd4332ff63b0a044c933"
+    },
+    {
+      "archive": "_ARCHIVE/FEAT_PLAYBOOK_v1_0.md",
+      "base_source": "03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md",
+      "expected_blob": "e5c2c9f6dbe588eff5982734e2927cb3e126f053",
+      "proposed_blob": "e5c2c9f6dbe588eff5982734e2927cb3e126f053"
+    },
+    {
+      "archive": "_ARCHIVE/FFM_PLAYBOOK_v1_2.md",
+      "base_source": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+      "expected_blob": "9c8fc35c3f66d7ffe6609c995a3330d090153976",
+      "proposed_blob": "9c8fc35c3f66d7ffe6609c995a3330d090153976"
+    },
+    {
+      "archive": "_ARCHIVE/FRONTEND_BUILD_PHASE_PLAYBOOK_v1_2_2.md",
+      "base_source": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+      "expected_blob": "3edb88c3149a9a6d9a7c760471f30956053c9d60",
+      "proposed_blob": "3edb88c3149a9a6d9a7c760471f30956053c9d60"
+    },
+    {
+      "archive": "_ARCHIVE/FRONTEND_FIRST_PLAYBOOK_v1_1_3.md",
+      "base_source": "03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+      "expected_blob": "c8516c8b8b3950e4b2d08d0bb2c112d7136d8f30",
+      "proposed_blob": "c8516c8b8b3950e4b2d08d0bb2c112d7136d8f30"
+    },
+    {
+      "archive": "_ARCHIVE/QA_PLAYBOOK_v1_1.md",
+      "base_source": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+      "expected_blob": "07f50ec1c1f005c1fdc9976d28a576a115f40669",
+      "proposed_blob": "07f50ec1c1f005c1fdc9976d28a576a115f40669"
+    },
+    {
+      "archive": "_ARCHIVE/TESTING_PLAYBOOK_v2_1.md",
+      "base_source": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+      "expected_blob": "ae67dcc8c4aebff0b6661e455de6d391a4530659",
+      "proposed_blob": "ae67dcc8c4aebff0b6661e455de6d391a4530659"
+    },
+    {
+      "archive": "_ARCHIVE/API_AND_SERVICES_MANUAL_v1_1.md",
+      "base_source": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+      "expected_blob": "e86fbef72ab2f84d032baab22d21c51f3423b48f",
+      "proposed_blob": "e86fbef72ab2f84d032baab22d21c51f3423b48f"
+    },
+    {
+      "archive": "_ARCHIVE/APP_ARCHITECTURE_MANUAL_v1_3.md",
+      "base_source": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+      "expected_blob": "5dfe67eb93088b8e7f52f59602734ee05cc327ff",
+      "proposed_blob": "5dfe67eb93088b8e7f52f59602734ee05cc327ff"
+    },
+    {
+      "archive": "_ARCHIVE/AUTH_MANUAL_v1_4.md",
+      "base_source": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+      "expected_blob": "983ae455511f93759f4ced0ca7756d7951113d43",
+      "proposed_blob": "983ae455511f93759f4ced0ca7756d7951113d43"
+    },
+    {
+      "archive": "_ARCHIVE/DATABASE_MANUAL_v1_1.md",
+      "base_source": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+      "expected_blob": "4e11795600a19b928300f9248937da68adf5780e",
+      "proposed_blob": "4e11795600a19b928300f9248937da68adf5780e"
+    },
+    {
+      "archive": "_ARCHIVE/ECOMMERCE_AND_PAYMENTS_MANUAL_v1_1.md",
+      "base_source": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+      "expected_blob": "048e0f8c746d336921913e9362205e2bbdc95f3b",
+      "proposed_blob": "048e0f8c746d336921913e9362205e2bbdc95f3b"
+    },
+    {
+      "archive": "_ARCHIVE/STATE_MANAGEMENT_MANUAL_v1_2.md",
+      "base_source": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+      "expected_blob": "27b883e21cebce11f3b3e134d8557d82b528a6fe",
+      "proposed_blob": "27b883e21cebce11f3b3e134d8557d82b528a6fe"
+    },
+    {
+      "archive": "_ARCHIVE/STRIPE_SUBSCRIPTIONS_PLAYBOOK_v1_1.md",
+      "base_source": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+      "expected_blob": "a119d65163e5402e87a055527cc2ec24a5432797",
+      "proposed_blob": "a119d65163e5402e87a055527cc2ec24a5432797"
+    },
+    {
+      "archive": "_ARCHIVE/COMPONENT_REGISTRY_v1_1.md",
+      "base_source": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+      "expected_blob": "783429f99cc501f28323423c5992429a6e459a44",
+      "proposed_blob": "783429f99cc501f28323423c5992429a6e459a44"
+    },
+    {
+      "archive": "_ARCHIVE/GLOBAL_DESIGN_SYSTEM_HANDBOOK_v1_1.md",
+      "base_source": "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+      "expected_blob": "885db18780530951a49a94fca78119858d433edf",
+      "proposed_blob": "885db18780530951a49a94fca78119858d433edf"
+    },
+    {
+      "archive": "_ARCHIVE/THEME_LIBRARY_v1_2.md",
+      "base_source": "05_DESIGN_SYSTEM/THEME_LIBRARY.md",
+      "expected_blob": "f12f2e416ab14622302664c2ca1f8a9e0babeed5",
+      "proposed_blob": "f12f2e416ab14622302664c2ca1f8a9e0babeed5"
+    },
+    {
+      "archive": "_ARCHIVE/THEMING_MANUAL_v1_2.md",
+      "base_source": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+      "expected_blob": "1c18038aa6c10a46443e6dd59645d6762ad0c6e7",
+      "proposed_blob": "1c18038aa6c10a46443e6dd59645d6762ad0c6e7"
+    },
+    {
+      "archive": "_ARCHIVE/TOKEN_FILE_v1_2.md",
+      "base_source": "05_DESIGN_SYSTEM/TOKEN_FILE.md",
+      "expected_blob": "9712416e644b9f7e7f8c6a8f65e26f390b2c008d",
+      "proposed_blob": "9712416e644b9f7e7f8c6a8f65e26f390b2c008d"
+    },
+    {
+      "archive": "_ARCHIVE/UI_UX_BUILDING_MANUAL_v1_4.md",
+      "base_source": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+      "expected_blob": "138fedce96704f360a0c9c6c7a715d88403a7956",
+      "proposed_blob": "138fedce96704f360a0c9c6c7a715d88403a7956"
+    }
+  ]
+}

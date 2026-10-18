@@ -1,0 +1,23 @@
+{
+ "label": "Gate 3 review package \u2014 Fable QA Lead",
+ "zip_path": "/home/moose/Downloads/FACTORY_GATE3_FABLE_SPEC_REVIEW_2026-10-17_112715.zip",
+ "zip_sha256": "2a74128efa596080360d5ea011cf0ac39bcb8d847a1f47fab7d785fb297a0571",
+ "members": 8,
+ "created": "2026-10-17T11:27:16+06:00",
+ "contents": [
+  "DOCSET_SYNC_ACCEPTANCE_SPEC.md (v1.0 FINAL FOR GATE 3)",
+  "FABLE_CORRECTION_CONFIRMATION_2026-10-17.md",
+  "GATE2_APPROVAL_RECORD_2026-10-17.md",
+  "UPDATE_MAP.md (approved identity cd291270bb6c8e537bcb050685c6464d326254f0d2a703c21f7f304dfe286931)",
+  "OPERATOR_NEXT_STEPS.md",
+  "FABLE_GATE3_PRESERVATION_SUPPLEMENT.txt",
+  "README_GATE3_REVIEW.md",
+  "SHA256SUMS.txt"
+ ],
+ "gate2": "APPROVED 2026-10-17 (Tony: 'go with your recoms'); recorded in UPDATE_MAP.md \u00a7O at 2026-10-17T11:19:57+06:00",
+ "gate3": "PENDING Tony approval of the specification",
+ "phase3": "NOT RELEASED",
+ "blocker": "AMENDED-v1 for D-1/D-2 required before Phase 3 release; Tony preservation/baseline/worktree receipts pending",
+ "response": "agent_docs/RESPONSES/response_2026-10-17_112715_gate3-spec-finalized.md",
+ "git_mutation": false
+}

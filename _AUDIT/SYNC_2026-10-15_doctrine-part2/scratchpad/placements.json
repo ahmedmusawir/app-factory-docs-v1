@@ -1,0 +1,2636 @@
+[
+  {
+    "id": "C-001",
+    "fc": "FC-001",
+    "placements": [
+      {
+        "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+        "line": 632,
+        "heading": "## 8. Phase 6: UI Implementation"
+      },
+      {
+        "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+        "line": 717,
+        "heading": "## 9. Phase 7: Authentication & RBAC"
+      }
+    ],
+    "text": "For kit-based builds, consume the existing kit authentication and authorization primitives and verify them through AUTH-WALK. Do not rebuild login pages, an auth store, metadata role flags or a client route guard. Page wrappers follow STARTER_KIT_HANDBOOK \u00a75 and \u00a77: resolve authorized server data before rendering the interactive client child. Generic non-kit examples do not apply when the kit supplies the capability."
+  },
+  {
+    "id": "C-002",
+    "fc": "FC-002",
+    "placements": [
+      {
+        "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+        "line": 816,
+        "heading": "## 11. Phase 9: Deployment"
+      },
+      {
+        "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+        "line": 907,
+        "heading": "## 13. Checklists"
+      }
+    ],
+    "text": "Before implementation, record approval of the brief, specifications and applicable full screen set. Before independent QA, provide the approved ACCEPTANCE_SPEC and engineering claim package. Before release, record the QA Lead\u2019s Gate Q verdict and the Director\u2019s release decision under \u00a72.5. Record a documentation-only waiver only where \u00a72.5 explicitly permits it; it is not a runtime QA waiver. Deployment verification follows QA_PLAYBOOK Gate D."
+  },
+  {
+    "id": "C-003",
+    "fc": "FC-003",
+    "placements": [
+      {
+        "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+        "line": 666,
+        "heading": "## 14. Handbook Maintenance"
+      },
+      {
+        "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+        "line": 684,
+        "heading": "## 15. Cross-References"
+      }
+    ],
+    "text": "Hub doctrine references use canonical filenames. Versions belong in headers, MANIFEST and archives. A downstream-project or kit-repository path is explicitly labeled with its repository, path and pinned revision; it is not a Hub-relative link. Do not claim an external locator exists until its repository and revision are supplied."
+  },
+  {
+    "id": "C-004",
+    "fc": "FC-004",
+    "placements": [
+      {
+        "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+        "line": 10,
+        "heading": "## THE BIG PICTURE"
+      },
+      {
+        "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+        "line": 42,
+        "heading": "## \ud83d\udd00 WHICH PIPELINE AM I IN?"
+      },
+      {
+        "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+        "line": 122,
+        "heading": "## \ud83d\udd04 THE FULL WORKFLOW"
+      }
+    ],
+    "text": "The Director approves scope and release. The Architect assembles the approved module contract; the Engineer implements and hands off claims; the QA Executor independently plans and measures; the QA Lead approves the QA plan and certifies. Route module work to BIM_PLAYBOOK, BUG_FIX_PLAYBOOK or FEAT_PLAYBOOK as applicable, and approved review repairs to RRM_PLAYBOOK. Every newly authored module includes QAM. Gate Q, release authorization, deployment, Gate D and closeout remain distinct."
+  },
+  {
+    "id": "C-005",
+    "fc": "FC-005",
+    "placements": [
+      {
+        "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+        "line": 31,
+        "heading": "## 1. Philosophy: Human Architect, AI Builder"
+      },
+      {
+        "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+        "line": 96,
+        "heading": "## 1.5 Doctrine Pairing Principle \u2014 Playbooks Paired With Worked Examples"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+        "line": 1139,
+        "heading": "## 15. Agentic Coding Constitution (Karpathy Protocol)"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+        "line": 374,
+        "heading": "## 13. Cross-References (Doctrine Docs)"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+        "line": 231,
+        "heading": "# 5. Source-of-Truth Order"
+      },
+      {
+        "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+        "line": 17,
+        "heading": "## \ud83d\udea8 The First Rule"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 2236,
+        "heading": "## 23. Appendix C \u2014 Template Files (Stubs To Copy)"
+      }
+    ],
+    "text": "Resolve authority by the question being answered: disk and recon establish what exists; approved artifacts establish what is authorized; the named domain owner defines the reusable pattern. A conflict between these is not permission to substitute one for another. Stop the affected work, record both sources and their revisions, and obtain the Director\u2019s attributable ruling. Preserve stage-specific authority within its stated scope."
+  },
+  {
+    "id": "C-006",
+    "fc": "FC-006",
+    "placements": [
+      {
+        "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+        "line": 31,
+        "heading": "## 1. Philosophy: Human Architect, AI Builder"
+      },
+      {
+        "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+        "line": 96,
+        "heading": "## 1.5 Doctrine Pairing Principle \u2014 Playbooks Paired With Worked Examples"
+      },
+      {
+        "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+        "line": 171,
+        "heading": "## 2. The Build Phases"
+      },
+      {
+        "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+        "line": 232,
+        "heading": "## 2.5 Module Identity & QA Handoff  *(Factory-wide \u2014 governs BIM, FIX, FEAT, and all future module types)*"
+      },
+      {
+        "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+        "line": 10,
+        "heading": "## THE BIG PICTURE"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 61,
+        "heading": "## 2. The Four-Role Factory Pattern"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+        "line": 23,
+        "heading": "## 2. Roles (the chain of custody)"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+        "line": 171,
+        "heading": "# 4. Authority"
+      }
+    ],
+    "text": "A seat defines responsibility; a persona or model name does not grant permission. Director is the human scope, access and release authority; Operator and Coordinator are contextual names for that human responsibility. Architect owns assembly and scope interpretation; Engineer owns implementation and factual handoff; QA Lead owns QA doctrine, plan approval, adjudication and certification; QA Executor independently plans and tests. Designer and deployment responsibilities remain distinct. \u201cArchitect\u201d does not name the human approver in an authority rule."
+  },
+  {
+    "id": "C-007",
+    "fc": "FC-007",
+    "placements": [
+      {
+        "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+        "line": 171,
+        "heading": "## 2. The Build Phases"
+      },
+      {
+        "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+        "line": 232,
+        "heading": "## 2.5 Module Identity & QA Handoff  *(Factory-wide \u2014 governs BIM, FIX, FEAT, and all future module types)*"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 1246,
+        "heading": "## 12. File-By-File Authoring Guide \u2014 `playbook/`"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 1250,
+        "heading": "### 12.1 \u2014 Overall Structure"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 1266,
+        "heading": "### 12.2 \u2014 `00-OVERVIEW.md`"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 1283,
+        "heading": "### 12.3 \u2014 `01-DISCOVERY.md` Through `06-VERIFICATION.md` (And `07-RETROSPECTIVE.md`)"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 1296,
+        "heading": "### 12.4 \u2014 Per-Sub-Phase Authoring Notes"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 1338,
+        "heading": "### 12.5 \u2014 `RETROSPECTIVES/` Folder"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 1356,
+        "heading": "### 12.6 \u2014 Playbook Reuse Discipline"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 1999,
+        "heading": "## 20. Worked Examples"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 2065,
+        "heading": "## 21. Appendix A \u2014 Skeleton Folder Tree"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+        "line": 23,
+        "heading": "## 1. What This Playbook Is"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+        "line": 36,
+        "heading": "## 2. Why This Playbook Exists"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+        "line": 16,
+        "heading": "## How To Use This Registry"
+      }
+    ],
+    "text": "Keep lifecycle axes separate: Blueprint phases describe the Factory pipeline; SFP implementation phases describe build disciplines; FFM sub-phases and Frontend Build Phase stages describe execution within a module; roadmap phases describe product scope. Record each stage\u2019s parent, entry artifacts, exit evidence and approver in the module contract. Demo deployment is not Gate Q or Gate D. Engine 1 is module engineering and module QA. Engine 2 is independent system review after all Engine 1 phases and their QA are closed. The separate post-FFM review occurs after FFM and its QA. Only dispositioned findings requiring repair produce RRM work."
+  },
+  {
+    "id": "C-008",
+    "fc": "FC-008",
+    "placements": [
+      {
+        "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+        "line": 65,
+        "heading": "## \ud83d\udcda FACTORY DOCUMENT STRUCTURE"
+      },
+      {
+        "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+        "line": 122,
+        "heading": "## \ud83d\udd04 THE FULL WORKFLOW"
+      },
+      {
+        "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+        "line": 167,
+        "heading": "## \ud83d\udccb ENGINEER AGENT: WHAT IT PRODUCES"
+      }
+    ],
+    "text": "FILE_TREE is an optional Architect assembly aid, not a mandatory independent handoff artifact. The approved DATA_CONTRACT file-structure section defines the required implementation structure. Any additional structure artifact must identify its author, approved revision and relationship to DATA_CONTRACT; conflicting structures stop assembly."
+  },
+  {
+    "id": "C-009",
+    "fc": "FC-009",
+    "placements": [
+      {
+        "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+        "line": 96,
+        "heading": "## 1.5 Doctrine Pairing Principle \u2014 Playbooks Paired With Worked Examples"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md",
+        "line": 331,
+        "heading": "## 7. Folder Layout Standards"
+      },
+      {
+        "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+        "line": 616,
+        "heading": "## 11. Known Issues \u2014 Resolved"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+        "line": 340,
+        "heading": "## 10. The Worked Example"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 1999,
+        "heading": "## 20. Worked Examples"
+      }
+    ],
+    "text": "External skills, worked examples and issue logs require a locator naming the repository, path and immutable revision. A project-local artifact is labeled project-local. An unavailable example is a documented gap, not a prerequisite the Engineer must invent. RRM reviewer guidance belongs in RRM_PLAYBOOK; new example or kit homes require an attributable placement decision."
+  },
+  {
+    "id": "C-010",
+    "fc": "FC-010",
+    "placements": [
+      {
+        "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+        "line": 1139,
+        "heading": "## 15. Agentic Coding Constitution (Karpathy Protocol)"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+        "line": 104,
+        "heading": "## 2. Frontend Build Phase \u2014 Overview"
+      }
+    ],
+    "text": "Plan Mode requires a recorded plan and attributable approval before implementation. Recon evidence, response logs, session records and recovery state are authorized recordkeeping lanes; they do not authorize application or contract changes. The approved plan identifies writable paths and the revision it governs. Root tool configuration points to governed doctrine and grants no additional Factory authority."
+  },
+  {
+    "id": "C-011",
+    "fc": "FC-011",
+    "placements": [
+      {
+        "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+        "line": 816,
+        "heading": "## 11. Phase 9: Deployment"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+        "line": 77,
+        "heading": "## 6. Lifecycle (the stage-gate chain)"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+        "line": 774,
+        "heading": "# 13. Gate D \u2014 Deployed-Environment Verification"
+      },
+      {
+        "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+        "line": 122,
+        "heading": "## \ud83d\udd04 THE FULL WORKFLOW"
+      }
+    ],
+    "text": "DEPLOYMENT_PLAYBOOK owns deployment requirements. Gate D verifies the actual environment and deployed revision, separately from build success and Gate Q. Each deployment contract must identify the authorized operator, environment, source commit, build/image, deployed revision, route, promotion prerequisites and rollback or recovery evidence. An unspecified platform procedure or authority is a blocking gap, not an implied permission."
+  },
+  {
+    "id": "C-012",
+    "fc": "FC-012",
+    "placements": [
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 61,
+        "heading": "## 2. The Four-Role Factory Pattern"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+        "line": 383,
+        "heading": "## 8. Stage 6 \u2014 Demo Deployment Prep (V1)"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+        "line": 1415,
+        "heading": "## 5.1 `CHANGELOG.md`"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+        "line": 108,
+        "heading": "## 7. Standing Engineer Doctrine (bake into every manager)"
+      }
+    ],
+    "text": "Project-module Git belongs to the Director: commit and push the completed engineering candidate, create qa/<module-branch> at that exact commit, commit approved repairs there, and perform final merge and push after certification and closeout. Engineer and QA Executor have distinct writable lanes on that branch. Cloud and staging actions require explicit context-specific authority. A Hub skill exception is confined to its named Hub context and is superseded by an explicit task restriction."
+  },
+  {
+    "id": "C-013",
+    "fc": "FC-013",
+    "placements": [
+      {
+        "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+        "line": 1377,
+        "heading": "## 17. Handoff Protocol to Operations"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+        "line": 46,
+        "heading": "## 4. The Module Package (one folder, self-contained)"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+        "line": 60,
+        "heading": "## 5. The Manager File (CLAUDE.md) \u2014 one module, one manager"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+        "line": 108,
+        "heading": "## 7. Standing Engineer Doctrine (bake into every manager)"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+        "line": 260,
+        "heading": "# 6. The Engineer Handoff Is a Claim Package"
+      }
+    ],
+    "text": "Engineering completion includes the factual QAM manifest and engineering handoff in the original assignment. Identify the approved acceptance contract and provenance, candidate reference, complete changed-file inventory, environment, reproduction commands, engineering checks, limitations and known findings. Before commit, the candidate SHA is explicitly pending; the Director commits and QA resolves the full candidate identity. Route to independent Q1, plan approval, Director release and Q2 before Operations. QA verdict and release decision are separate records."
+  },
+  {
+    "id": "C-014",
+    "fc": "FC-014",
+    "placements": [
+      {
+        "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+        "line": 107,
+        "heading": "## 2. Phase 0: The Recon-Executor Role"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+        "line": 522,
+        "heading": "#### 2. Packaging Is Not Optional"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+        "line": 1166,
+        "heading": "#### 2. Confusion Management (CRITICAL)"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+        "line": 36,
+        "heading": "## How To Use This"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+        "line": 63,
+        "heading": "## SECTION 0 \u2014 The Day-1 Ground-Truth Sweep (Run 001 Meta-Lesson)"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+        "line": 315,
+        "heading": "## SECTION 8 \u2014 Demo / Tutorial Scaffolding (The Cascade Trap)"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+        "line": 471,
+        "heading": "## Recon Report Format (What Claudy Returns)"
+      }
+    ],
+    "text": "Recon may write its report and authorized response, session and recovery records. Diagnostics that generate build or cache output require an explicit authorization naming the target checkout, command, expected writes and cleanup. Record the resulting diff and prove tracked application sources unchanged. Without authorization, report the diagnostic limitation. Recon may not modify product source, configuration, dependencies, lockfiles or the approved contract."
+  },
+  {
+    "id": "C-015",
+    "fc": "FC-015",
+    "placements": [
+      {
+        "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+        "line": 129,
+        "heading": "## 3. Inputs Required"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+        "line": 540,
+        "heading": "#### 3. Editable Installs Are Mandatory"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+        "line": 1178,
+        "heading": "#### 3. Push Back When Warranted"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+        "line": 390,
+        "heading": "## 8. The Build Sequence"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+        "line": 730,
+        "heading": "## 12. DATA_CONTRACT Template"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+        "line": 330,
+        "heading": "## 8. Handoff Protocol to Designer"
+      }
+    ],
+    "text": "For greenfield work, the Architect prepares DATA_CONTRACT before Design and submits its revision for Director approval. Engineering consumes the approved contract and applicable schema/API specifications before fabrication. A required change is an attributable amendment that returns for approval before implementation. Conversion continues to consume its approved extracted contract."
+  },
+  {
+    "id": "C-016",
+    "fc": "FC-016",
+    "placements": [
+      {
+        "path": "02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md",
+        "line": 70,
+        "heading": "## \ud83d\udcc4 APP_BRIEF.md TEMPLATE"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+        "line": 291,
+        "heading": "## 7. Approval Criteria"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+        "line": 241,
+        "heading": "## 8. Deliverables + UI_SPEC Template"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+        "line": 129,
+        "heading": "## 3. Inputs Required"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+        "line": 540,
+        "heading": "#### 3. Editable Installs Are Mandatory"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+        "line": 1178,
+        "heading": "#### 3. Push Back When Warranted"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+        "line": 285,
+        "heading": "## 8. Approval Gates"
+      }
+    ],
+    "text": "Planning artifacts use DRAFT, APPROVED and AMENDED. APPROVED names the approver, time and exact artifact revision. AMENDED identifies the changed requirements and requires renewed approval before use. A legacy LOCKED label is accepted only with the equivalent approval evidence; relabeling alone does not create approval."
+  },
+  {
+    "id": "C-017",
+    "fc": "FC-017",
+    "placements": [
+      {
+        "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+        "line": 26,
+        "heading": "## 1. Role Definition"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+        "line": 330,
+        "heading": "## 8. Handoff Protocol to Designer"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+        "line": 77,
+        "heading": "## 2. Inputs Required"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+        "line": 241,
+        "heading": "## 8. Deliverables + UI_SPEC Template"
+      },
+      {
+        "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+        "line": 122,
+        "heading": "## \ud83d\udd04 THE FULL WORKFLOW"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+        "line": 81,
+        "heading": "## 5. The Four Canonical Files \u2014 Authoring Rules"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+        "line": 83,
+        "heading": "### 5.1 APP_BRIEF.md"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+        "line": 125,
+        "heading": "### 5.2 DATA_CONTRACT.md"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+        "line": 163,
+        "heading": "### 5.3 UI_SPEC.md"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+        "line": 211,
+        "heading": "### 5.4 _project/CLAUDE.md (Project Spine)"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+        "line": 245,
+        "heading": "### 5.5 Greenfield Variant"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+        "line": 129,
+        "heading": "## 3. Inputs Required"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+        "line": 540,
+        "heading": "#### 3. Editable Installs Are Mandatory"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+        "line": 1178,
+        "heading": "#### 3. Push Back When Warranted"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 365,
+        "heading": "## 4. The Two FFM Variants \u2014 Conversion vs Greenfield"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 541,
+        "heading": "## 7. Authoring Sequence"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+        "line": 97,
+        "heading": "## 8. The Designer's deliverables (per project)"
+      }
+    ],
+    "text": "For greenfield work, the Designer authors UI_SPEC from the approved APP_BRIEF and DATA_CONTRACT. The Architect verifies completeness and consistency during final assembly, and the Director approves the design revision before engineering. The Architect does not silently supply a competing UI_SPEC. Conversion retains its explicitly declared extraction and design inputs."
+  },
+  {
+    "id": "C-018",
+    "fc": "FC-018",
+    "placements": [
+      {
+        "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+        "line": 129,
+        "heading": "## 3. Inputs Required"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+        "line": 540,
+        "heading": "#### 3. Editable Installs Are Mandatory"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+        "line": 1178,
+        "heading": "#### 3. Push Back When Warranted"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+        "line": 77,
+        "heading": "## 2. Inputs Required"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 365,
+        "heading": "## 4. The Two FFM Variants \u2014 Conversion vs Greenfield"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+        "line": 63,
+        "heading": "## 4. Prerequisites Before Authoring"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+        "line": 330,
+        "heading": "## 8. Handoff Protocol to Designer"
+      }
+    ],
+    "text": "The approved interface type determines required design inputs. A visual interface requires its approved UI_SPEC, token/style decisions and HTML/PNG references. A nonvisual backend or CLI explicitly records those inputs as NOT APPLICABLE and supplies its approved data/API/command contract, invocation examples and receiving checklist. Missing required input is not NOT APPLICABLE."
+  },
+  {
+    "id": "C-019",
+    "fc": "FC-019",
+    "placements": [
+      {
+        "path": "02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md",
+        "line": 70,
+        "heading": "## \ud83d\udcc4 APP_BRIEF.md TEMPLATE"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+        "line": 212,
+        "heading": "## 5. APP_BRIEF Template"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+        "line": 241,
+        "heading": "## 8. Deliverables + UI_SPEC Template"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+        "line": 81,
+        "heading": "## 5. The Four Canonical Files \u2014 Authoring Rules"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+        "line": 83,
+        "heading": "### 5.1 APP_BRIEF.md"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+        "line": 125,
+        "heading": "### 5.2 DATA_CONTRACT.md"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+        "line": 163,
+        "heading": "### 5.3 UI_SPEC.md"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+        "line": 211,
+        "heading": "### 5.4 _project/CLAUDE.md (Project Spine)"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+        "line": 245,
+        "heading": "### 5.5 Greenfield Variant"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 2236,
+        "heading": "## 23. Appendix C \u2014 Template Files (Stubs To Copy)"
+      }
+    ],
+    "text": "The canonical APP_BRIEF template is ARCHITECT_QUESTIONNAIRE, \u201cAPP_BRIEF.md TEMPLATE\u201d; the canonical UI_SPEC template is DESIGNER_PLAYBOOK \u00a78. Other template locations link to those owners. Each template declares pipeline-specific sections and nonvisual applicability; producer and receiver use the same approved revision."
+  },
+  {
+    "id": "C-020",
+    "fc": "FC-020",
+    "placements": [
+      {
+        "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+        "line": 823,
+        "heading": "## 3.8 Run-verification rituals (promoted from Run 001)"
+      }
+    ],
+    "text": "A webhook acknowledges success only after checked completion of the required state transition or checked durable capture/enqueue. Failure before that boundary returns a retryable non-success. Failure after durable acceptance is recovered through bounded durable retries, visible failed work, reconciliation and a named recovery owner; it does not retroactively invalidate the acknowledgment. Test status and persisted outcome for pre-acceptance failure, post-acceptance failure, duplicates and recovery."
+  },
+  {
+    "id": "C-021",
+    "fc": "FC-021",
+    "placements": [
+      {
+        "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+        "line": 1089,
+        "heading": "## 4.3 Stripe \u2014 wrapper-mock vs constructor-mock decision tree"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+        "line": 1105,
+        "heading": "### 4.3a \u2014 Wrapper-mock pattern (StarkReads / v1.0)"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+        "line": 1152,
+        "heading": "### 4.3b \u2014 Constructor-mock pattern (Dockbloxx)"
+      }
+    ],
+    "text": "Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them."
+  },
+  {
+    "id": "C-022",
+    "fc": "FC-022",
+    "placements": [
+      {
+        "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+        "line": 847,
+        "heading": "## 4.1 Supabase-backed apps (StarkReads example)"
+      }
+    ],
+    "text": "Before privileged test setup or cleanup, verify the target project reference against the Director-approved test-project allowlist and verify the authorized test identity. Fail closed on mismatch, missing identity or unknown target. Record every run-created identity; cleanup may act only on that set. Production verification is a separately authorized, bounded, non-destructive procedure."
+  },
+  {
+    "id": "C-023",
+    "fc": "FC-023",
+    "placements": [
+      {
+        "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+        "line": 1139,
+        "heading": "## 15. Agentic Coding Constitution (Karpathy Protocol)"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+        "line": 650,
+        "heading": "## 3.4 Audit-then-add when joining an existing project"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 616,
+        "heading": "## 8. File-By-File Authoring Guide \u2014 Root Files"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 620,
+        "heading": "### 8.1 \u2014 Root `CLAUDE.md`"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 659,
+        "heading": "### 8.2 \u2014 Root `README.md`"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 693,
+        "heading": "### 8.3 \u2014 `AGENTS.md`"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 713,
+        "heading": "### 8.4 \u2014 `GEMINI.md`"
+      }
+    ],
+    "text": "A newly necessary change outside the approved writable surface stops the affected work. Record evidence, propose the smallest scope amendment, obtain approval, then continue. Escalate a newly discovered high-severity security issue promptly; do not implement it under after-the-fact approval. No emergency implementation exception is created here."
+  },
+  {
+    "id": "C-024",
+    "fc": "FC-024",
+    "placements": [
+      {
+        "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+        "line": 705,
+        "heading": "## 3.6 Skip-and-document as a Factory pattern"
+      }
+    ],
+    "text": "A run with a dependency disabled is diagnostic or isolated evidence. The full-environment flow remains FAILED or BLOCKED until repaired or covered by an explicitly approved compensating verification. Carry the omitted dependency, affected claims and coverage limitation into Gate Q evidence."
+  },
+  {
+    "id": "C-025",
+    "fc": "FC-025",
+    "placements": [
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 261,
+        "heading": "## 3. FFM Anatomy \u2014 The Folder Structure"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 541,
+        "heading": "## 7. Authoring Sequence"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 616,
+        "heading": "## 8. File-By-File Authoring Guide \u2014 Root Files"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 620,
+        "heading": "### 8.1 \u2014 Root `CLAUDE.md`"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 659,
+        "heading": "### 8.2 \u2014 Root `README.md`"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 693,
+        "heading": "### 8.3 \u2014 `AGENTS.md`"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 713,
+        "heading": "### 8.4 \u2014 `GEMINI.md`"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 1367,
+        "heading": "## 13. File-By-File Authoring Guide \u2014 `verification/`"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 1371,
+        "heading": "### 13.1 \u2014 `verification/PHASE_GATES.md`"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 1400,
+        "heading": "### 13.2 \u2014 `verification/BUILD_CHECKLIST.md`"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 1414,
+        "heading": "### 13.3 \u2014 Authoring Discipline"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 1828,
+        "heading": "## 18. The Authoring Checklist"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 2065,
+        "heading": "## 21. Appendix A \u2014 Skeleton Folder Tree"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 2141,
+        "heading": "## 22. Appendix B \u2014 Boot Prompts"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+        "line": 573,
+        "heading": "## 18. Required FIX Artifacts"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+        "line": 260,
+        "heading": "# 6. The Engineer Handoff Is a Claim Package"
+      }
+    ],
+    "text": "Every newly authored module includes ACCEPTANCE_SPEC.md based on the approved pre-implementation contract. The Architect prepares acceptance requirements; Engineering records factual completion without changing success criteria; independent QA evaluates them. Finalize the factual handoff before the engineering stop. A small FIX may combine supporting records, but it still supplies ACCEPTANCE_SPEC.md; runtime modules do not inherit a documentation-only waiver."
+  },
+  {
+    "id": "C-026",
+    "fc": "FC-026",
+    "placements": [
+      {
+        "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+        "line": 46,
+        "heading": "## 4. The Module Package (one folder, self-contained)"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+        "line": 77,
+        "heading": "## 6. Lifecycle (the stage-gate chain)"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+        "line": 150,
+        "heading": "## 11. Anti-Patterns (block these)"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 541,
+        "heading": "## 7. Authoring Sequence"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+        "line": 1185,
+        "heading": "# 20. QA Deliverables"
+      }
+    ],
+    "text": "Freeze requirements and acceptance criteria at handoff. Declare owner-specific writable lanes inside the module for engineering handoff, recon, plans, evidence, findings and attributable rulings. QA records belong in the module\u2019s QAM under agent_docs/. Contract changes require an approved amendment; neither a test-plan edit nor a new evidence file silently amends the contract."
+  },
+  {
+    "id": "C-027",
+    "fc": "FC-027",
+    "placements": [
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 365,
+        "heading": "## 4. The Two FFM Variants \u2014 Conversion vs Greenfield"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 541,
+        "heading": "## 7. Authoring Sequence"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 1422,
+        "heading": "## 14. The Extractor Question \u2014 When To Run Brain Drain"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 1828,
+        "heading": "## 18. The Authoring Checklist"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+        "line": 129,
+        "heading": "## 3. Inputs Required"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+        "line": 540,
+        "heading": "#### 3. Editable Installs Are Mandatory"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+        "line": 1178,
+        "heading": "#### 3. Push Back When Warranted"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+        "line": 330,
+        "heading": "## 8. Handoff Protocol to Designer"
+      }
+    ],
+    "text": "Conversion consumes its approved extracted DATA_CONTRACT. Greenfield uses the Architect-prepared DATA_CONTRACT approved before Design and implementation. The Engineer verifies prerequisites and consumes that revision; a contract shell is not permission to implement types or services. Reopen a missing or conflicting contract through the amendment lane, not by silently changing authorship during execution."
+  },
+  {
+    "id": "C-028",
+    "fc": "FC-028",
+    "placements": [
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 739,
+        "heading": "## 9. File-By-File Authoring Guide \u2014 `_project/`"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 743,
+        "heading": "### 9.1 \u2014 `_project/APP_BRIEF.md`"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 793,
+        "heading": "### 9.2 \u2014 `_project/DATA_CONTRACT.md`"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 854,
+        "heading": "### 9.3 \u2014 `_project/UI_SPEC.md`"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 900,
+        "heading": "### 9.4 \u2014 `_project/CLAUDE.md`"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 1246,
+        "heading": "## 12. File-By-File Authoring Guide \u2014 `playbook/`"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 1250,
+        "heading": "### 12.1 \u2014 Overall Structure"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 1266,
+        "heading": "### 12.2 \u2014 `00-OVERVIEW.md`"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 1283,
+        "heading": "### 12.3 \u2014 `01-DISCOVERY.md` Through `06-VERIFICATION.md` (And `07-RETROSPECTIVE.md`)"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 1296,
+        "heading": "### 12.4 \u2014 Per-Sub-Phase Authoring Notes"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 1338,
+        "heading": "### 12.5 \u2014 `RETROSPECTIVES/` Folder"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 1356,
+        "heading": "### 12.6 \u2014 Playbook Reuse Discipline"
+      }
+    ],
+    "text": "Consume complete kit auth primitives directly. Do not create an auth service whose only purpose is to re-expose kit behavior. A genuinely missing domain capability requires recon evidence, a bounded approved contract and its own verification; it does not authorize replacing the kit\u2019s auth authority."
+  },
+  {
+    "id": "C-029",
+    "fc": "FC-029",
+    "placements": [
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 739,
+        "heading": "## 9. File-By-File Authoring Guide \u2014 `_project/`"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 743,
+        "heading": "### 9.1 \u2014 `_project/APP_BRIEF.md`"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 793,
+        "heading": "### 9.2 \u2014 `_project/DATA_CONTRACT.md`"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 854,
+        "heading": "### 9.3 \u2014 `_project/UI_SPEC.md`"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 900,
+        "heading": "### 9.4 \u2014 `_project/CLAUDE.md`"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 2236,
+        "heading": "## 23. Appendix C \u2014 Template Files (Stubs To Copy)"
+      }
+    ],
+    "text": "APP_BRIEF is the module scope authority. Managers and startup stubs route to its approved revision; DATA_CONTRACT and UI_SPEC define their respective contracts within that scope. A disagreement stops the affected work for an attributable ruling. A manager\u2019s summary never silently expands or overrides APP_BRIEF."
+  },
+  {
+    "id": "C-030",
+    "fc": "FC-030",
+    "placements": [
+      {
+        "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+        "line": 1256,
+        "heading": "## 4.4 Test data sourcing \u2014 discovered vs declared"
+      }
+    ],
+    "text": "Fixture discovery returns one normalized record with role identities, scenario eligibility and a single count field named count. Validate role existence and coupon prerequisites before declaring readiness. A missing required role produces BLOCKED with the missing prerequisite; optional absence is recorded explicitly. Producers and consumers read count, not competing count aliases."
+  },
+  {
+    "id": "C-031",
+    "fc": "FC-031",
+    "placements": [
+      {
+        "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+        "line": 955,
+        "heading": "## 4.2 REST-backed apps (Dockbloxx / WooCommerce example)"
+      }
+    ],
+    "text": "Metadata lookup returns { present: false } for an absent key and { present: true, value } for a present key. Null, zero and the empty string remain present values. Test all four cases; never use null for both absence and a stored null."
+  },
+  {
+    "id": "C-032",
+    "fc": "FC-032",
+    "placements": [
+      {
+        "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+        "line": 417,
+        "heading": "## 9. UI Phase Completion Checklist"
+      }
+    ],
+    "text": "Gate Q refers to QA_PLAYBOOK \u00a712, \u201cGate Q\u201d; Gate D refers to QA_PLAYBOOK \u00a713, \u201cGate D\u201d. These are distinct checks; frontend build success and demo deployment satisfy neither gate by themselves."
+  },
+  {
+    "id": "C-033",
+    "fc": "FC-033",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "line": 130,
+        "heading": "## Overview & Architecture"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "line": 344,
+        "heading": "## Authentication Flow"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "line": 1761,
+        "heading": "## 12. SuperAdmin User Management"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "line": 1932,
+        "heading": "## 13. User Mirror Table Pattern"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "line": 2203,
+        "heading": "## Summary"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+        "line": 96,
+        "heading": "## 2. Project Structure"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+        "line": 1141,
+        "heading": "## 10. Security Architecture"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+        "line": 83,
+        "heading": "## 2. Schema Design Patterns"
+      }
+    ],
+    "text": "The role table is the only authorization authority. Never authorize from user_metadata or a profile mirror. Superadmin creation is console-only; no app-side superadmin creation route is provided. Retire the metadata-authorized add-user, delete-user and get-users recipes. Future privileged list/delete operations remain possible only with trusted current-role lookup, operation-local authorization before elevated capability, an approved target-role allowlist and privileged-target protection. Profile mirrors contain profile data, not authorization columns. Registration metadata is not authorization."
+  },
+  {
+    "id": "C-034",
+    "fc": "FC-034",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "line": 344,
+        "heading": "## Authentication Flow"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "line": 452,
+        "heading": "## API Routes Reference"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+        "line": 83,
+        "heading": "## 2. Schema Design Patterns"
+      }
+    ],
+    "text": "At the trusted public-signup boundary, allow only approved profile fields and force the member role independently of submitted metadata. The provider-side creation path must also ignore or reject public role keys, so direct provider signup cannot bypass the endpoint. Privileged role assignment uses a separately authorized protected channel. Trigger hardening and a negative direct-provider test are required before promotion: role=admin submitted publicly must not produce an admin."
+  },
+  {
+    "id": "C-035",
+    "fc": "FC-035",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "line": 654,
+        "heading": "## Client-Side Auth (Zustand Store)"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "line": 1214,
+        "heading": "## Common Patterns & Recipes"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "line": 2070,
+        "heading": "## 14. HOC Route Protection Pattern"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+        "line": 25,
+        "heading": "## 1. Philosophy & Strategy"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+        "line": 1241,
+        "heading": "## 8. Common Stores Reference"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+        "line": 408,
+        "heading": "## 4. Layout System"
+      }
+    ],
+    "text": "Server guards control page access; server-resolved { user, role } props establish first-render identity. Retire client HOC route protection and post-mount identity fetching as authoritative patterns. Zustand handles interaction and session-event reactions, with no persisted authorization authority. Display helpers are display-only and use explicit role sets; they never authorize an operation."
+  },
+  {
+    "id": "C-036",
+    "fc": "FC-036",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "line": 787,
+        "heading": "## Server-Side Protection (RBAC)"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "line": 1512,
+        "heading": "## Security Best Practices"
+      },
+      {
+        "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+        "line": 49,
+        "heading": "## 1. Auth \u2014 Already Wired"
+      }
+    ],
+    "text": "Every privileged operation authorizes its own invocation before acquiring or using elevated capability: authenticate the requester, resolve the current trusted role, authorize the operation and target, and validate input. Layout admission controls page access only. Direct unauthenticated, wrong-role and wrong-target invocations must produce no privileged side effect."
+  },
+  {
+    "id": "C-037",
+    "fc": "FC-037",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+        "line": 83,
+        "heading": "## 2. Schema Design Patterns"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+        "line": 390,
+        "heading": "## 5. Row Level Security (RLS)"
+      }
+    ],
+    "text": "Enable RLS explicitly. Declare whether the resource is public or private. For a private resource, combine ownership or the explicitly authorized role predicate with is_deleted = false inside each visibility policy; do not add a permissive active-row policy that grants access independently. Verify anonymous, other-owner, deleted-own and authorized privileged cases against the composed policy set."
+  },
+  {
+    "id": "C-038",
+    "fc": "FC-038",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+        "line": 390,
+        "heading": "## 5. Row Level Security (RLS)"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "line": 1761,
+        "heading": "## 12. SuperAdmin User Management"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "line": 1932,
+        "heading": "## 13. User Mirror Table Pattern"
+      }
+    ],
+    "text": "Use the session client for identity and RLS-bound data. Acquire an isolated admin client only after independently authorizing the elevated operation. An API route is not itself a reason to bypass RLS. Do not substitute a service-role client as a general fix for denied access."
+  },
+  {
+    "id": "C-039",
+    "fc": "FC-039",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+        "line": 974,
+        "heading": "## 11. Data Integrity"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "line": 1932,
+        "heading": "## 13. User Mirror Table Pattern"
+      }
+    ],
+    "text": "Use an atomic database operation for invariants inside one database. Across external boundaries, use a stable operation identity, check every forward and compensation result, and persist completed, failed or partially-completed outcomes. Partial failure creates durable reconciliation work with a recovery owner; do not report success after an unchecked compensation or deletion."
+  },
+  {
+    "id": "C-040",
+    "fc": "FC-040",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+        "line": 473,
+        "heading": "## 4. Persistence"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+        "line": 745,
+        "heading": "## 6. Store Templates"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+        "line": 1241,
+        "heading": "## 8. Common Stores Reference"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+        "line": 1472,
+        "heading": "## 9. Best Practices Checklist"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "line": 1512,
+        "heading": "## Security Best Practices"
+      }
+    ],
+    "text": "Do not persist raw contact details by default. Any approved personal-data persistence declares permitted fields, retention duration and user or guest scope. Sign-out and account transition reset and invalidate every affected store even when remote logout fails; a new account must not hydrate the previous account\u2019s data. Payment and authorization state remain outside persistence. Storage readiness is separate from business-data reset."
+  },
+  {
+    "id": "C-041",
+    "fc": "FC-041",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "line": 787,
+        "heading": "## Server-Side Protection (RBAC)"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "line": 880,
+        "heading": "## Server-Resolved Identity for UI (The Navbar Law)"
+      },
+      {
+        "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+        "line": 124,
+        "heading": "## 2. RBAC & RLS \u2014 Already Wired"
+      }
+    ],
+    "text": "The kit guard\u2019s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance."
+  },
+  {
+    "id": "C-042",
+    "fc": "FC-042",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "line": 159,
+        "heading": "## Supabase Client Setup"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "line": 992,
+        "heading": "## Session Management & Middleware"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "line": 1512,
+        "heading": "## Security Best Practices"
+      },
+      {
+        "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+        "line": 49,
+        "heading": "## 1. Auth \u2014 Already Wired"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+        "line": 1141,
+        "heading": "## 10. Security Architecture"
+      }
+    ],
+    "text": "Cookie flags and the session entrypoint follow the verified kit session architecture. STARTER_KIT_HANDBOOK \u00a71 owns that architecture and its tradeoff; AUTH_MANUAL links to it rather than prescribing an incompatible flag. Verify login, refresh and logout before changing cookie behavior. Do not tighten httpOnly in isolation or substitute middleware.ts for the shipped proxy.ts without pinned kit evidence."
+  },
+  {
+    "id": "C-043",
+    "fc": "FC-043",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "line": 452,
+        "heading": "## API Routes Reference"
+      }
+    ],
+    "text": "Resolve next against the request origin inside a guarded parse. Accept only an approved local pathname whose resolved origin equals the application origin; reject external absolute URLs, network-path URLs and malformed values. Use the fixed approved local fallback otherwise. Verify valid local, external, network-path and malformed cases."
+  },
+  {
+    "id": "C-044",
+    "fc": "FC-044",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "line": 452,
+        "heading": "## API Routes Reference"
+      }
+    ],
+    "text": "Inspect the signOut result before reporting remote logout success. Clear local personal and authority state regardless of that result, report remote revocation as failed or unknown when appropriate, and offer the bounded retry or recovery path. Do not tell the user that revocation succeeded merely because local state was cleared."
+  },
+  {
+    "id": "C-045",
+    "fc": "FC-045",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+        "line": 1090,
+        "heading": "## 12. Performance Optimization"
+      }
+    ],
+    "text": "Order cursor pagination by created_at and a unique id, both descending. The next-page predicate is created_at < cursor.created_at OR (created_at = cursor.created_at AND id < cursor.id). Encode both values in the cursor, keep the same filters and authorization scope, and test ties across the page boundary."
+  },
+  {
+    "id": "C-046",
+    "fc": "FC-046",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+        "line": 620,
+        "heading": "## 5. Hydration & SSR"
+      }
+    ],
+    "text": "Subscribe to both hydration state and selected store data on every render, in the same hook order. Gate only the returned data on hydration readiness. This is readiness gating, not Suspense: it does not claim to throw a promise."
+  },
+  {
+    "id": "C-047",
+    "fc": "FC-047",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+        "line": 620,
+        "heading": "## 5. Hydration & SSR"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+        "line": 745,
+        "heading": "## 6. Store Templates"
+      }
+    ],
+    "text": "Keep hydration readiness outside the resettable business state. A normal reset preserves readiness. Hydration finishes in ready or error; an error exposes bounded recovery and never leaves an indefinite loading state. Verify reset after hydration, invalid stored data and unavailable storage."
+  },
+  {
+    "id": "C-048",
+    "fc": "FC-048",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+        "line": 1084,
+        "heading": "## 7. Integration Patterns"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+        "line": 1472,
+        "heading": "## 9. Best Practices Checklist"
+      }
+    ],
+    "text": "Render authoritative server props directly for server-owned collections. If a client working copy is required, define its scope, version and reconciliation policy for incoming server revisions and local edits. A refreshed empty server result clears the displayed server collection; a nonempty client store does not override it permanently."
+  },
+  {
+    "id": "C-049",
+    "fc": "FC-049",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+        "line": 245,
+        "heading": "## 3. Core Patterns"
+      }
+    ],
+    "text": "Update the changed item and its container immutably: items.map(item => matchesCompositeKey(item, incoming) ? { ...item, quantity: item.quantity + incoming.quantity } : item). The composite-key predicate remains unchanged. Verify the previous item object and previous array remain unchanged."
+  },
+  {
+    "id": "C-050",
+    "fc": "FC-050",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "line": 181,
+        "heading": "## 3. PaymentIntent Flow"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "line": 661,
+        "heading": "## 5. Order Management"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "line": 1722,
+        "heading": "## 11. Security Checklist"
+      }
+    ],
+    "text": "The browser may display or poll payment status; it may not choose paid or processing state. A payment-derived transition requires verified server-side evidence bound to the stored order and payment attempt, including amount and currency. Non-webhook mutations authenticate and authorize the operation and target, including an explicitly approved guest capability where supported, then validate the state transition."
+  },
+  {
+    "id": "C-051",
+    "fc": "FC-051",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "line": 181,
+        "heading": "## 3. PaymentIntent Flow"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "line": 661,
+        "heading": "## 5. Order Management"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "line": 877,
+        "heading": "## 6. Cart Logic"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "line": 1511,
+        "heading": "## 9. Webhook Handling"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "line": 1722,
+        "heading": "## 11. Security Checklist"
+      }
+    ],
+    "text": "Accept product/variation identifiers, quantities, shipping selection and coupon code, never caller prices, shipping costs or discount amounts. Validate quantities and product eligibility; load authoritative catalog prices; validate the shipping selection and coupon eligibility; apply the declared tax policy; calculate currency-safe totals on the server. Bind the payment to the authorized order and verify payment identity, amount, currency and order association before marking paid. Client totals are display-only. Return generic failures and redact logs. A persisted versioned quote is a proposed design, not a certified requirement."
+  },
+  {
+    "id": "C-052",
+    "fc": "FC-052",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "line": 1511,
+        "heading": "## 9. Webhook Handling"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+        "line": 391,
+        "heading": "## 6. The Webhook Handler"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+        "line": 840,
+        "heading": "## 14. Phase 3 Roadmap"
+      }
+    ],
+    "text": "For supported events, check business persistence or durable enqueue before acknowledging. Pre-acceptance failure returns a retryable failure. After durable acceptance, worker failures enter bounded durable retries and visible failed-work reconciliation with an alert and recovery owner. Unsupported events are explicitly distinguished from failed supported events. Missing order/user mappings create actionable recovery records, not silent success."
+  },
+  {
+    "id": "C-053",
+    "fc": "FC-053",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "line": 181,
+        "heading": "## 3. PaymentIntent Flow"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "line": 412,
+        "heading": "## 4. Checkout Implementation"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "line": 661,
+        "heading": "## 5. Order Management"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "line": 1722,
+        "heading": "## 11. Security Checklist"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+        "line": 319,
+        "heading": "## 5. The Checkout Flow"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+        "line": 507,
+        "heading": "## 7. The Tier Upgrade Pattern"
+      }
+    ],
+    "text": "Persist one authorized checkout-attempt identity across retries and claim it atomically against concurrent requests. Scope provider idempotency keys to that attempt and operation, reuse or retrieve existing external objects after an unknown outcome, and reconcile before creating a replacement. Persist customer identity independently of paid activation. Handle every documented subscription state, not only active."
+  },
+  {
+    "id": "C-054",
+    "fc": "FC-054",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "line": 1511,
+        "heading": "## 9. Webhook Handling"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+        "line": 391,
+        "heading": "## 6. The Webhook Handler"
+      }
+    ],
+    "text": "Converge each order or subscription aggregate using authoritative provider retrieval or explicit freshness and legal-transition rules. Reject stale transitions; check zero-row updates and repair missing mappings. A late event for an old subscription may not overwrite its replacement. Define reconciliation of the local mirror independently of inbound deduplication."
+  },
+  {
+    "id": "C-055",
+    "fc": "FC-055",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+        "line": 173,
+        "heading": "## 3. Supabase Schema Recipe"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+        "line": 319,
+        "heading": "## 5. The Checkout Flow"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+        "line": 391,
+        "heading": "## 6. The Webhook Handler"
+      }
+    ],
+    "text": "Store provider customer identity independently of paid entitlement. Represent an unpaid checkout bootstrap explicitly and permit only narrowly authorized server writes. Reconcile user/current-subscription identity atomically; reject stale updates for replaced subscriptions. Before publishing a recipe, verify first subscribe, abandoned checkout, cancellation and resubscribe against every schema constraint."
+  },
+  {
+    "id": "C-056",
+    "fc": "FC-056",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+        "line": 1564,
+        "heading": "## 11. Webhook Integration Patterns"
+      }
+    ],
+    "text": "Use the provider\u2019s stable event ID, never a random fallback. Atomically claim each event with in-progress, completed and retryable states; inspect persistence results. Make effects idempotent or transactional. A bounded lease/recovery process reclaims abandoned work and reconciles partial external success without duplicating completed effects."
+  },
+  {
+    "id": "C-057",
+    "fc": "FC-057",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+        "line": 1831,
+        "heading": "## 13. Data Synchronization Patterns"
+      }
+    ],
+    "text": "Manual synchronization is an authenticated, role-authorized POST operation with explicit tenant scope. Apply the context\u2019s CSRF protection, rate and concurrency controls. Job acceptance, progress reads and retries enforce the same authorization boundary. GET is read-only and cannot initiate synchronization."
+  },
+  {
+    "id": "C-058",
+    "fc": "FC-058",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+        "line": 1564,
+        "heading": "## 11. Webhook Integration Patterns"
+      }
+    ],
+    "text": "Capture the raw request body once. Select exactly one provider-specific signature scheme with its documented header and encoding, verify before parsing, and reject missing or invalid headers. Do not sign reconstructed JSON or chain alternative schemes as cumulative requirements. Test signed whitespace-bearing bodies and malformed or absent signatures."
+  },
+  {
+    "id": "C-059",
+    "fc": "FC-059",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+        "line": 1564,
+        "heading": "## 11. Webhook Integration Patterns"
+      }
+    ],
+    "text": "Distinguish optional telemetry from required follow-up. Complete required work retry-safely or durably enqueue it before acknowledgment. Failed or unconfirmed enqueue returns retryable failure. A later worker failure uses bounded durable retry, visible failed-work state and a named recovery owner. Inspect non-success HTTP responses from follow-up targets; a resolved fetch is not proof of success."
+  },
+  {
+    "id": "C-060",
+    "fc": "FC-060",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "line": 181,
+        "heading": "## 3. PaymentIntent Flow"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "line": 412,
+        "heading": "## 4. Checkout Implementation"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "line": 661,
+        "heading": "## 5. Order Management"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "line": 877,
+        "heading": "## 6. Cart Logic"
+      }
+    ],
+    "text": "Use one validated checkout contract across form, state, route and service. The request carries billing.email, validated line identifiers/quantities, shippingMethod and couponCode; it carries no authoritative monetary values. The response identifies the authorized order/payment attempt or a typed generic failure. The server pricing operation from the same contract supplies totals. Revisions to items, shipping or coupon invalidate the old payment binding before a new attempt is released."
+  },
+  {
+    "id": "C-061",
+    "fc": "FC-061",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+        "line": 1328,
+        "heading": "## 9. Performance Patterns"
+      }
+    ],
+    "text": "Validate a nonempty revalidation secret at startup. Reject missing or invalid supplied credentials before comparing; an absent environment value never authenticates an absent request value. Authorize and bound invalidation targets. Verify the unset-secret case causes no invalidation."
+  },
+  {
+    "id": "C-062",
+    "fc": "FC-062",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "line": 1511,
+        "heading": "## 9. Webhook Handling"
+      }
+    ],
+    "text": "Refund and dispute handling is INCOMPLETE and not a production recipe until the module contract defines partial/full refund effects, dispute transitions, notification and recovery owners. Do not acknowledge a supported event until its required local work is completed or durably accepted under the webhook contract."
+  },
+  {
+    "id": "C-063",
+    "fc": "FC-063",
+    "placements": [
+      {
+        "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+        "line": 823,
+        "heading": "## 3.8 Run-verification rituals (promoted from Run 001)"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "line": 1647,
+        "heading": "## 10. Testing Payments"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+        "line": 732,
+        "heading": "## 12. Testing Strategy"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+        "line": 1564,
+        "heading": "## 11. Webhook Integration Patterns"
+      }
+    ],
+    "text": "The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it."
+  },
+  {
+    "id": "C-064",
+    "fc": "FC-064",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+        "line": 166,
+        "heading": "## 3. Service Layer Implementation"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+        "line": 1164,
+        "heading": "## 8. Error Handling Strategy"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+        "line": 1328,
+        "heading": "## 9. Performance Patterns"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+        "line": 550,
+        "heading": "## 8. The Service Layer Swap Pattern"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+        "line": 151,
+        "heading": "## Principle 1.8 \u2014 Defensive error message assertions for security-sensitive endpoints"
+      }
+    ],
+    "text": "Services return an explicit typed outcome: success, not-found, unavailable, invalid or forbidden. Routes map it to the approved HTTP/UI behavior with generic client messages and no upstream error text. Do not cache failures as successful public data. Degrade or fail closed according to the module\u2019s approved failure policy; an unavailable entitlement read is not confirmed absence."
+  },
+  {
+    "id": "C-065",
+    "fc": "FC-065",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+        "line": 507,
+        "heading": "## 7. The Tier Upgrade Pattern"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+        "line": 605,
+        "heading": "## 9. Success Page Polling Pattern"
+      }
+    ],
+    "text": "Poll the server-authorized payment attempt and expected target tier with its qualifying subscription status. A pre-existing paid tier is not evidence of this upgrade. A timeout shows pending or unknown and its recovery/support path; it never claims payment receipt. Redirects remain cosmetic."
+  },
+  {
+    "id": "C-066",
+    "fc": "FC-066",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+        "line": 166,
+        "heading": "## 3. Service Layer Implementation"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+        "line": 383,
+        "heading": "## 4. API Route Patterns"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+        "line": 998,
+        "heading": "## 7. Data Transformation"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+        "line": 1164,
+        "heading": "## 8. Error Handling Strategy"
+      }
+    ],
+    "text": "Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results."
+  },
+  {
+    "id": "C-067",
+    "fc": "FC-067",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "line": 1285,
+        "heading": "## 8. Coupon System"
+      }
+    ],
+    "text": "A fixed-product coupon uses validated eligible line items and quantities in the authoritative server pricing operation. Do not advertise fixed_product through a flat-cart subtotal branch. A client calculation is a display estimate only. Verify equal-subtotal carts with different eligible quantities; preserve valid fixed-cart and percentage behavior."
+  },
+  {
+    "id": "C-068",
+    "fc": "FC-068",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "line": 412,
+        "heading": "## 4. Checkout Implementation"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "line": 1224,
+        "heading": "## 7. Checkout Store"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "line": 1285,
+        "heading": "## 8. Coupon System"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+        "line": 745,
+        "heading": "## 6. Store Templates"
+      }
+    ],
+    "text": "The checkout interaction contract includes shippingCost and couponDiscount as display estimates, couponCode, setCoupon(code) and clearCoupon(), alongside the existing checkout fields. The server revalidates shipping and coupons. STATE_MANAGEMENT_MANUAL owns the shared store shape; ECOMMERCE_AND_PAYMENTS_MANUAL refers to it. Personal fields follow the approved account-transition and retention policy."
+  },
+  {
+    "id": "C-069",
+    "fc": "FC-069",
+    "placements": [
+      {
+        "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+        "line": 63,
+        "heading": "## SECTION 0 \u2014 The Day-1 Ground-Truth Sweep (Run 001 Meta-Lesson)"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+        "line": 847,
+        "heading": "## 4.1 Supabase-backed apps (StarkReads example)"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+        "line": 271,
+        "heading": "## 4. Environment Variables"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+        "line": 543,
+        "heading": "## 5. External API Integration"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+        "line": 390,
+        "heading": "## 5. Row Level Security (RLS)"
+      }
+    ],
+    "text": "Verify credential names and capabilities on disk. SUPABASE_SERVICE_ROLE_KEY and SUPABASE_SECRET_KEY are server-only elevated-credential conventions, not interchangeable proof of project configuration; public anon/publishable keys are a separate capability class. RECON_QUESTIONNAIRE S0.6 owns the environment-name/capability table. Record the actual variable, provider key type and server-only exposure without printing values; manuals refer to that table."
+  },
+  {
+    "id": "C-070",
+    "fc": "FC-070",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+        "line": 11,
+        "heading": "## Table of Contents"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+        "line": 1442,
+        "heading": "## 10. Quick Reference"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+        "line": 1993,
+        "heading": "## 10. Quick Reference"
+      }
+    ],
+    "text": "Maintain one Quick Reference after the numbered API sections. Merge both existing quick-reference bodies without dropping unique content. Keep sections 1\u201313 stable, number the merged Quick Reference 14, and update the table of contents and incoming references to the actual heading. Declare each recipe\u2019s service contract beside it."
+  },
+  {
+    "id": "C-071",
+    "fc": "FC-071",
+    "placements": [
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 477,
+        "heading": "## Layout Components"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 839,
+        "heading": "## Complete Page Examples"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+        "line": 408,
+        "heading": "## 4. Layout System"
+      }
+    ],
+    "text": "Every positive layout example keeps every navigation destination reachable at mobile widths. Consume AppShellPage or provide a complete accessible mobile trigger/drawer or equivalent navigation alongside the desktop sidebar. hidden md:block is acceptable only when that same example supplies the mobile alternative. Retire an incomplete layout as a copyable positive example."
+  },
+  {
+    "id": "C-072",
+    "fc": "FC-072",
+    "placements": [
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 661,
+        "heading": "## Responsive Design Patterns"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+        "line": 589,
+        "heading": "## 7. Mobile Behavior Reference"
+      },
+      {
+        "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+        "line": 429,
+        "heading": "## 6. Responsive & Mobile-Nav"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+        "line": 64,
+        "heading": "## 5. Layout & responsive (Rule Zero)"
+      }
+    ],
+    "text": "The rail transition follows the component\u2019s verified fit contract, not an unrelated generic device label. Verify both sides of the actual transition. The Handbook reports xl/1280 for AppShellPage; publish that as the universal kit value only after pinned kit verification. The 1150px assertion is not a substitute for that check."
+  },
+  {
+    "id": "C-073",
+    "fc": "FC-073",
+    "placements": [
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 212,
+        "heading": "## Common Components"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1339,
+        "heading": "#### 10. Developer Experience Tools"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1481,
+        "heading": "## 10. Advanced Design Patterns"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1487,
+        "heading": "### 10.1 CVA (Class Variance Authority)"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1600,
+        "heading": "### 10.2 Design Tokens"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1750,
+        "heading": "### 10.3 Component Catalogue Pattern"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1847,
+        "heading": "### 10.4 Class Ordering Convention"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1899,
+        "heading": "### 10.5 Dark Mode Best Practices"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1948,
+        "heading": "### 10.6 Touch Device Considerations"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 2007,
+        "heading": "### 10.7 The `cn()` Utility"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 2042,
+        "heading": "### 10.8 Quick Reference: Do's and Don'ts"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+        "line": 85,
+        "heading": "## 1. Common Layout Primitives (`src/components/common/`)"
+      },
+      {
+        "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+        "line": 525,
+        "heading": "## 9. Build & Framework Notes"
+      }
+    ],
+    "text": "Use semantic token utilities in positive examples. A palette literal inherited from a kit is labeled \u201cLEGACY \u2014 migration task per TOKEN_FILE \u00a74\u201d; it is evidence of current state, not the target convention. Resolve a conflict through the approved question-scoped authority rule rather than silently selecting disk or Rule Zero-B."
+  },
+  {
+    "id": "C-074",
+    "fc": "FC-074",
+    "placements": [
+      {
+        "path": "05_DESIGN_SYSTEM/TOKEN_FILE.md",
+        "line": 14,
+        "heading": "## 1. Entry stylesheet (`globals.css` _or_ `globals.scss`)"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/THEME_LIBRARY.md",
+        "line": 25,
+        "heading": "## 2. The \"Metro Warm\" family (Cyber Pharma v1)"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/THEME_LIBRARY.md",
+        "line": 72,
+        "heading": "## 3. Adding a new theme (the repeatable process)"
+      }
+    ],
+    "text": "Do not claim AA verification without a computed contrast matrix for each documented text/fill use in light and dark modes. Retune failing semantic pairs and synchronize THEME_LIBRARY. Brand fills may use a separate accessible foreground. Record the exact token values, ratio, intended use and threshold; large-text or non-text thresholds do not justify a normal-text claim."
+  },
+  {
+    "id": "C-075",
+    "fc": "FC-075",
+    "placements": [
+      {
+        "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+        "line": 126,
+        "heading": "## 4. The Designer's Deliverable"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+        "line": 130,
+        "heading": "### 4.1 Primary Deliverable \u2014 The Tokens File"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+        "line": 158,
+        "heading": "### 4.2 Supporting Deliverables (Visual Reference, Not Executable)"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+        "line": 168,
+        "heading": "### 4.3 Why This Format"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+        "line": 247,
+        "heading": "## 9. The Phase 0 / Phase 1 Discipline"
+      }
+    ],
+    "text": "Designer handoff follows GLOBAL_DESIGN_SYSTEM_HANDBOOK \u00a78: executable HTML is the build reference and PNG is the fidelity target for visual interfaces. Lock the canonical screen and style tile with the human approver before fabrication. Theme notes do not replace either deliverable."
+  },
+  {
+    "id": "C-076",
+    "fc": "FC-076",
+    "placements": [
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1339,
+        "heading": "#### 10. Developer Experience Tools"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1481,
+        "heading": "## 10. Advanced Design Patterns"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1487,
+        "heading": "### 10.1 CVA (Class Variance Authority)"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1600,
+        "heading": "### 10.2 Design Tokens"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1750,
+        "heading": "### 10.3 Component Catalogue Pattern"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1847,
+        "heading": "### 10.4 Class Ordering Convention"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1899,
+        "heading": "### 10.5 Dark Mode Best Practices"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1948,
+        "heading": "### 10.6 Touch Device Considerations"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 2007,
+        "heading": "### 10.7 The `cn()` Utility"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 2042,
+        "heading": "### 10.8 Quick Reference: Do's and Don'ts"
+      }
+    ],
+    "text": "Consume the kit Button, including its verified variants, sizes and asChild composition. Do not replace it with this shortened implementation. An educational internal excerpt must be source-matched and labeled as an excerpt, not installation code. Preserve Link composition through the kit API."
+  },
+  {
+    "id": "C-077",
+    "fc": "FC-077",
+    "placements": [
+      {
+        "path": "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+        "line": 138,
+        "heading": "## 11. New-project checklist (so future labs are fast)"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+        "line": 58,
+        "heading": "## 3. The Token Architecture"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+        "line": 60,
+        "heading": "### 3.1 Semantic Token Categories"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+        "line": 96,
+        "heading": "### 3.2 The Files \u2014 Where Tokens Live"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+        "line": 114,
+        "heading": "### 3.3 The Light / Dark / Brand Triad"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+        "line": 181,
+        "heading": "## 5. The Quick-Swap Workflow (The Pressure-Point Win)"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+        "line": 745,
+        "heading": "## 10. Quick Reference \u2014 \"Which Primitive Should I Use?\""
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1339,
+        "heading": "#### 10. Developer Experience Tools"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1481,
+        "heading": "## 10. Advanced Design Patterns"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1487,
+        "heading": "### 10.1 CVA (Class Variance Authority)"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1600,
+        "heading": "### 10.2 Design Tokens"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1750,
+        "heading": "### 10.3 Component Catalogue Pattern"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1847,
+        "heading": "### 10.4 Class Ordering Convention"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1899,
+        "heading": "### 10.5 Dark Mode Best Practices"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1948,
+        "heading": "### 10.6 Touch Device Considerations"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 2007,
+        "heading": "### 10.7 The `cn()` Utility"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 2042,
+        "heading": "### 10.8 Quick Reference: Do's and Don'ts"
+      }
+    ],
+    "text": "GLOBAL_DESIGN_SYSTEM_HANDBOOK \u00a72 owns the canonical token inventory; TOKEN_FILE supplies reference values. Verify the project entry stylesheet and Tailwind major version before applying setup. Abbreviated snippets are excerpts and do not replace the full token contract, including role tokens."
+  },
+  {
+    "id": "C-078",
+    "fc": "FC-078",
+    "placements": [
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1339,
+        "heading": "#### 10. Developer Experience Tools"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1481,
+        "heading": "## 10. Advanced Design Patterns"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1487,
+        "heading": "### 10.1 CVA (Class Variance Authority)"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1600,
+        "heading": "### 10.2 Design Tokens"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1750,
+        "heading": "### 10.3 Component Catalogue Pattern"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1847,
+        "heading": "### 10.4 Class Ordering Convention"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1899,
+        "heading": "### 10.5 Dark Mode Best Practices"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1948,
+        "heading": "### 10.6 Touch Device Considerations"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 2007,
+        "heading": "### 10.7 The `cn()` Utility"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 2042,
+        "heading": "### 10.8 Quick Reference: Do's and Don'ts"
+      }
+    ],
+    "text": "Consume the existing theme provider and ThemeToggle for light, dark and system modes. Do not create a second controller that edits the HTML class or localStorage.theme independently of the provider. A standalone demonstration, if retained, must be explicitly non-kit and cannot be copied into a kit project."
+  },
+  {
+    "id": "C-079",
+    "fc": "FC-079",
+    "placements": [
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1339,
+        "heading": "#### 10. Developer Experience Tools"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1481,
+        "heading": "## 10. Advanced Design Patterns"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1487,
+        "heading": "### 10.1 CVA (Class Variance Authority)"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1600,
+        "heading": "### 10.2 Design Tokens"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1750,
+        "heading": "### 10.3 Component Catalogue Pattern"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1847,
+        "heading": "### 10.4 Class Ordering Convention"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1899,
+        "heading": "### 10.5 Dark Mode Best Practices"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1948,
+        "heading": "### 10.6 Touch Device Considerations"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 2007,
+        "heading": "### 10.7 The `cn()` Utility"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 2042,
+        "heading": "### 10.8 Quick Reference: Do's and Don'ts"
+      }
+    ],
+    "text": "Interactive targets meet the Factory\u2019s 44px floor. Retain the kit\u2019s coarse-pointer target-floor mechanism and verify the rendered hit area, including icon and compact variants. A 36px or 40px visual box alone is not evidence of a 44px target."
+  },
+  {
+    "id": "C-080",
+    "fc": "FC-080",
+    "placements": [
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1339,
+        "heading": "#### 10. Developer Experience Tools"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1481,
+        "heading": "## 10. Advanced Design Patterns"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1487,
+        "heading": "### 10.1 CVA (Class Variance Authority)"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1600,
+        "heading": "### 10.2 Design Tokens"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1750,
+        "heading": "### 10.3 Component Catalogue Pattern"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1847,
+        "heading": "### 10.4 Class Ordering Convention"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1899,
+        "heading": "### 10.5 Dark Mode Best Practices"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1948,
+        "heading": "### 10.6 Touch Device Considerations"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 2007,
+        "heading": "### 10.7 The `cn()` Utility"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 2042,
+        "heading": "### 10.8 Quick Reference: Do's and Don'ts"
+      }
+    ],
+    "text": "Grid variants map each supported prop to a complete literal utility class string. Use a bounded lookup and reject unsupported values; do not construct unbounded Tailwind utility names by interpolation. Any alternative scanner/safelist mechanism must document the actual supported project version and cover every offered variant."
+  },
+  {
+    "id": "C-081",
+    "fc": "FC-081",
+    "placements": [
+      {
+        "path": "05_DESIGN_SYSTEM/THEME_LIBRARY.md",
+        "line": 115,
+        "heading": "## Cross-References"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+        "line": 775,
+        "heading": "## 11. Cross-References"
+      },
+      {
+        "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+        "line": 254,
+        "heading": "## 4. Components \u2014 Inventory"
+      },
+      {
+        "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+        "line": 684,
+        "heading": "## 15. Cross-References"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+        "line": 1650,
+        "heading": "## 16. Bridging The FFM Into The Starter Kit"
+      }
+    ],
+    "text": "Within the Hub, reference doctrine through canonical DocSet-relative paths. Label an intentional downstream-project snapshot separately with repository, landing path and pinned revision. The project landing-path standard remains conditional on the release/pinning decision; do not make agent_docs/APP_FACTORY a universal rule by inference."
+  },
+  {
+    "id": "C-082",
+    "fc": "FC-082",
+    "placements": [
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 11,
+        "heading": "## \u26a1 RULE ZERO \u2014 MOBILE-FIRST IS THE FOUNDATIONAL POSTURE"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1339,
+        "heading": "#### 10. Developer Experience Tools"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1481,
+        "heading": "## 10. Advanced Design Patterns"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1487,
+        "heading": "### 10.1 CVA (Class Variance Authority)"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1600,
+        "heading": "### 10.2 Design Tokens"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1750,
+        "heading": "### 10.3 Component Catalogue Pattern"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1847,
+        "heading": "### 10.4 Class Ordering Convention"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1899,
+        "heading": "### 10.5 Dark Mode Best Practices"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 1948,
+        "heading": "### 10.6 Touch Device Considerations"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 2007,
+        "heading": "### 10.7 The `cn()` Utility"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 2042,
+        "heading": "### 10.8 Quick Reference: Do's and Don'ts"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+        "line": 589,
+        "heading": "## 7. Mobile Behavior Reference"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+        "line": 64,
+        "heading": "## 5. Layout & responsive (Rule Zero)"
+      }
+    ],
+    "text": "Prohibit unintended horizontal overflow of the viewport or content. A contained tab strip or carousel may scroll horizontally when all controls remain reachable and keyboard operation is defined. Test the containment and navigation at the supported widths; do not ban the very mobile transforms the design contract prescribes."
+  },
+  {
+    "id": "C-083",
+    "fc": "FC-083",
+    "placements": [
+      {
+        "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+        "line": 12,
+        "heading": "## 0. Reader's Guide"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+        "line": 218,
+        "heading": "## 7. What This Manual Does NOT Cover"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+        "line": 266,
+        "heading": "## 10. Cross-References"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 84,
+        "heading": "## \ud83c\udfa8 RULE ZERO-B \u2014 THEMING IS THE SECOND FOUNDATIONAL POSTURE"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 2070,
+        "heading": "## Appendix \u2014 Run 001 Lessons That Updated This Manual"
+      },
+      {
+        "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+        "line": 1006,
+        "heading": "## 14. Manual Reference Guide"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+        "line": 783,
+        "heading": "## 7. Component Architecture"
+      }
+    ],
+    "text": "Cross-references identify the actual canonical file and live heading. Use GLOBAL_DESIGN_SYSTEM_HANDBOOK \u00a78 for Designer deliverables, TOKEN_FILE \u00a73 for font wiring, and COMPONENT_REGISTRY \u00a75 for Shadcn primitives. Add the missing APP_ARCHITECTURE reference to THEMING_MANUAL for token architecture. Replace nonexistent section labels only with the verified equivalent, not a guessed anchor."
+  },
+  {
+    "id": "C-084",
+    "fc": "FC-084",
+    "placements": [
+      {
+        "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+        "line": 217,
+        "heading": "## 7. Screen-by-Screen Discipline"
+      }
+    ],
+    "text": "- [ ] All required elements and minimum display fields in the approved UI_SPEC are present; record NOT APPLICABLE only where that contract says so."
+  },
+  {
+    "id": "C-087",
+    "fc": "FC-087",
+    "placements": [
+      {
+        "path": "03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md",
+        "line": 910,
+        "heading": "## 15. Authoring A New Skill \u2014 Step By Step"
+      }
+    ],
+    "text": "The MANIFEST reverse-dependency table is the header-declared starting candidate set, not the complete propagation surface. Search body references, examples, checklists, templates and read-only skill consumers under DocSet Sync D19. APP_FACTORY_SKILLS_PLAYBOOK governs its skill children; that relationship is outside this table\u2019s header-edge count and remains part of propagation analysis."
+  },
+  {
+    "id": "C-088",
+    "fc": "FC-088",
+    "placements": [
+      {
+        "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+        "line": 96,
+        "heading": "## 1.5 Doctrine Pairing Principle \u2014 Playbooks Paired With Worked Examples"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+        "line": 41,
+        "heading": "## 1.5 Pre-Phase Doctrine Refresh (MANDATORY Before Every Stage)"
+      }
+    ],
+    "text": "The Director releases a merged, verified doctrine revision. A consuming project records canonical document names, header versions, Hub commit SHA, source paths and its approved landing path. It explicitly chooses update or intentional pin; recovery restores the recorded revision before applying later approved changes. A tag is optional pending the Director\u2019s decision. Do not claim deployment authorization from doctrine distribution."
+  },
+  {
+    "id": "C-096",
+    "fc": "FC-096",
+    "placements": [
+      {
+        "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+        "line": 83,
+        "heading": "## 2. Schema Design Patterns"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "line": 2070,
+        "heading": "## Appendix \u2014 Run 001 Lessons That Updated This Manual"
+      },
+      {
+        "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+        "line": 666,
+        "heading": "## 14. Handbook Maintenance"
+      },
+      {
+        "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+        "line": 684,
+        "heading": "## 15. Cross-References"
+      }
+    ],
+    "text": "Clear the nine identified documentation lint defects through their mapped canonical corrections, then require lints/run_all.py to exit 0. Do not add exemptions or silently normalize merge-over-red. Changes to skill merge wording, CI policy or branch protection require their separate owners and authorization."
+  }
+]

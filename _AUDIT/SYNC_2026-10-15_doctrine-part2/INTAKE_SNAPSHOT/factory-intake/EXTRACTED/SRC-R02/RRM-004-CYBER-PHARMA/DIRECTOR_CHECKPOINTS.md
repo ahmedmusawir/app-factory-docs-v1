@@ -1,0 +1,17 @@
+# RRM-004-CYBER-PHARMA — Director Checkpoints
+
+The human stops in this module, declared before the run so none is discovered mid-run. Everything not listed here is the Engineer's, the QA Lead's or the QA Executor's to decide inside the contract. Seven checkpoints; the QAM pilot adds DC-4 (the one command) and DC-7 (pilot results).
+
+| ID | When | What the Director does | Status |
+|---|---|---|---|
+| DC-1 | After P1, before P2 | Reads the plan; approves; rules **DD-1** (transitive sweep: pins only, or pins + `npm audit fix` without `--force`), **DD-2** (Cloudinary: remove or narrow, per the Plan Mode scan), **DD-3** (QA target for the authenticated image walk: main development Supabase login-only with the existing ADMIN and MEMBER accounts per E-17, or a provisioned SCRATCH), **DD-4** (QAM authorship split confirmed: Engineer fills `QA/QAM_MANIFEST.md` only; QA Lead authors `QA/QA_TEST_PLAN.md` and ratifies `QA/AGENTS.md`); rules any contradictions; the Architect turns rulings into P1b rows; the Engineer applies them; the Director commits P1b | pending |
+| DC-2 | End of P2 | Reviews the changed-file inventory and `git status --short`; runs the Engineer's single staging block as-is; commits once; pushes | pending |
+| DC-3 | After DC-2 | Cuts `qa/phase-3-rrm004` from the committed candidate; pushes; hands the QA Lead the entry letter. The QA Lead authors `QA/QA_TEST_PLAN.md`, ratifies or amends `QA/AGENTS.md`, `QA/QAM_PILOT_CHARTER.md`, `QA/QA_ENVIRONMENT_PREFLIGHT.md`; the Director commits those QA planning docs on the QA branch (docs-only successor of the candidate) | pending |
+| DC-4 | QA start | **One command.** Confirms `git status --porcelain` is empty on `qa/phase-3-rrm004`, then starts the QA Executor with the single line in `QA/README.md` §The command. Records `date -Is` in `QA/QAM_PILOT_RESULTS.md` as the pilot start. No other instruction is given unless a QA stop condition is raised | pending |
+| DC-5 | During QA, when the Executor reaches the authenticated image walk | Enters the DD-3 target's ADMIN and MEMBER credentials directly into the browser the Executor opened (never into a file or chat). Target: **one sign-in per role**. No visual spot-check unless the Executor asks for one, and then at most one per role | pending |
+| DC-6 | If QA raises a scope or contract question | Rules it; the Architect writes the addendum/erratum row; the Engineer applies it | as needed |
+| DC-7 | After Gate Q + cleanup + Architect closeout | Merges `--no-ff`, pushes, records SHAs, fills the scoreboard; reads `QA/QAM_PILOT_RESULTS.md` and rules whether the QAM shape is adopted, amended or dropped for the next campaign (10X Lab export) | pending |
+
+**No checkpoint falls between the start of P2 and the staging block**, and **none falls between DC-4 and DC-5** except a QA stop condition. Engineering needs no credential, no destructive action and no decision the pack has not already made. If the Engineer stops mid-P2, it is a stop condition, not a checkpoint — read the stop number and the path:line, rule or repair the pack, and resume with a short instruction.
+
+**Still owed from RRM-001, independent of this module:** Supabase "Allow new users to sign up" OFF on the dev project (and SCRATCH if it is ever provisioned), verified with the curl in `agent_docs/ACTIONS/RRM-001-CYBER-PHARMA/DIRECTOR_ACTIONS.md` DA-2, recorded in that pack's `evidence/DA-2_SUPABASE_SIGNUP_DISABLED.md`. Authoring-time status: **NOT YET** (file absent). Nothing in RRM-004 depends on it; the campaign closeout will record its status either way.

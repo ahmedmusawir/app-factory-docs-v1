@@ -1,0 +1,39 @@
+{
+  "_label": "DRAFT v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS APPLIED AND ENGINEER-VERIFIED; ARCHITECT AMENDMENT VERIFICATION PENDING. Template QAM/HANDOFFS/FILE_INDEX.template.json v0.3-draft (2026-10-14), from QAM_PLAYBOOK_v1_0.md §13. Copy to FILE_INDEX.json inside each review package; one entry per member except FILE_INDEX.json itself. Placeholders use <<...>>. The ZIP's own SHA-256 is recorded outside the ZIP (external receipt).",
+  "package": "<<MODULE_ID>>_<<PHASE>>_REVIEW_<<ATTEMPT>>.zip",
+  "module_id": "<<MODULE_ID>>",
+  "phase": "<<Q1 | Q2 | Q4 | STOP>>",
+  "attempt": "<<NN>>",
+  "produced_by": "<<QA Executor seat / runtime>>",
+  "produced_at": "<<YYYY-MM-DDTHH:MM:SS+ZZ:ZZ>>",
+  "candidate_sha": "<<full SHA or PENDING>>",
+  "qa_execution_head": "<<full SHA or NOT RECORDED>>",
+  "plan_sha256": "<<SHA-256 of the bound QAM_TEST_PLAN.md, or NOT RECORDED in Q1>>",
+  "hash_scope": "every member except FILE_INDEX.json",
+  "state_snapshot": "QAM_STATE.md in this package is the immutable pre-export snapshot; the completed ZIP's SHA-256 is recorded only in the external receipt (HANDOFFS/README.md) and the subsequent live QAM_STATE.md entry; the ZIP is never rebuilt to embed its own hash",
+  "privacy_scan": {
+    "scanner": "<<name / version>>",
+    "validated_with_synthetic_fixture_and_clean_control": "<<true | false>>",
+    "hits": "<<safe count; locations resolved or quarantined; never values>>"
+  },
+  "members": [
+    {
+      "archive_path": "<<MODULE_ID>>_<<PHASE>>_REVIEW_<<ATTEMPT>>/REVIEW_START_HERE.md",
+      "source_path": "QAM/HANDOFFS/REVIEW_START_HERE.md (filled copy)",
+      "purpose": "entry note for the reviewer",
+      "bytes": "<<n>>",
+      "sha256": "<<hex>>"
+    },
+    {
+      "archive_path": "<<…>>",
+      "source_path": "<<…>>",
+      "purpose": "<<…>>",
+      "bytes": "<<n>>",
+      "sha256": "<<hex>>"
+    }
+  ],
+  "excluded": [
+    "<<env/credential files, auth state, browser profiles, dependencies, builds, Git internals, disposable mirrors, unreviewed raw sensitive logs — list what was excluded for this package>>"
+  ],
+  "missing_items_listed_in": "REVIEW_START_HERE.md §Not included"
+}

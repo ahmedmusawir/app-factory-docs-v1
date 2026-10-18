@@ -1,0 +1,8 @@
+command: /usr/bin/python3 _AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_mc_render.py
+cwd: /home/moose/Documents/app-factory-docs-v1
+exit code: 0
+PASS: four revised SVGs rendered with librsvg/cairo; visual inspection recorded separately; no production behavior tested.
+/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_mc_render.py:7: DeprecationWarning: Rsvg.Handle.get_dimensions is deprecated
+  h=Rsvg.Handle.new_from_file(str(p));d=h.get_dimensions();surf=cairo.ImageSurface(cairo.FORMAT_ARGB32,d.width,d.height);ctx=cairo.Context(surf);h.render_cairo(ctx);out=dest/(p.stem+'.png');surf.write_to_png(str(out));rows.append(dict(source=str(p),source_sha256=hashlib.sha256(p.read_bytes()).hexdigest(),preview=str(out),preview_sha256=hashlib.sha256(out.read_bytes()).hexdigest(),width=d.width,height=d.height))
+/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_mc_render.py:7: DeprecationWarning: Rsvg.Handle.render_cairo is deprecated
+  h=Rsvg.Handle.new_from_file(str(p));d=h.get_dimensions();surf=cairo.ImageSurface(cairo.FORMAT_ARGB32,d.width,d.height);ctx=cairo.Context(surf);h.render_cairo(ctx);out=dest/(p.stem+'.png');surf.write_to_png(str(out));rows.append(dict(source=str(p),source_sha256=hashlib.sha256(p.read_bytes()).hexdigest(),preview=str(out),preview_sha256=hashlib.sha256(out.read_bytes()).hexdigest(),width=d.width,height=d.height))

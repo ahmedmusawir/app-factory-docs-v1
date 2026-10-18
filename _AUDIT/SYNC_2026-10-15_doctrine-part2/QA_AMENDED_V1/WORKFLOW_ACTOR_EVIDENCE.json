@@ -1,0 +1,62 @@
+{
+  "source": "WORKFLOW_PUBLICATION_PLAN.json",
+  "sha256": "6a522cde1bd43a8ce388584927ed71f5667318b602349a8d968a561d5fd0c1c1",
+  "permitted_actor_labels": [
+    "Architect",
+    "Authorized operator",
+    "Designer",
+    "Director",
+    "Engineer",
+    "QA Executor",
+    "QA Lead",
+    "Reviewers"
+  ],
+  "workflows": [
+    {
+      "id": "FFM_CREATION",
+      "step_count": 7,
+      "actors": [
+        "Architect",
+        "Designer",
+        "Director",
+        "Engineer"
+      ]
+    },
+    {
+      "id": "FFM_EXECUTION",
+      "step_count": 18,
+      "actors": [
+        "Architect",
+        "Director",
+        "Engineer",
+        "QA Executor",
+        "QA Lead",
+        "Reviewers"
+      ]
+    },
+    {
+      "id": "FFM_DEPLOYMENT",
+      "step_count": 8,
+      "actors": [
+        "Architect",
+        "Authorized operator",
+        "Director",
+        "QA Executor",
+        "QA Lead"
+      ]
+    },
+    {
+      "id": "BIM_WORKFLOW",
+      "step_count": 24,
+      "actors": [
+        "Architect",
+        "Authorized operator",
+        "Director",
+        "Engineer",
+        "QA Executor",
+        "QA Lead",
+        "Reviewers"
+      ]
+    }
+  ]
+}

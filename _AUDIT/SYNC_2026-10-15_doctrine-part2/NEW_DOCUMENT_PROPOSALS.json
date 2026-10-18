@@ -1,0 +1,23 @@
+[
+  {
+    "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+    "source": "_AUDIT/SYNC_2026-10-15_doctrine-part2/DRAFTS/QAM_PLAYBOOK.md",
+    "source_sha256": "bd4aeafad484d66d5a57f1043cfca4b50ffe4a105adcb6b3ab7d590b306f459a",
+    "proposed_sha256": "63e75d1c28deec13fae2fc3d5aedaf2f3375918689dd28e57b149edbc40c6e47",
+    "label": "ENGINEER-PROPOSED new playbook; MC corrections recorded; not installed"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+    "source": "_AUDIT/SYNC_2026-10-15_doctrine-part2/DRAFTS/RRM_PLAYBOOK.md",
+    "source_sha256": "56d02b7a1beb5c8ba077e5a67f7ae96b7cba35cb777781828800d43f93fa34ed",
+    "proposed_sha256": "ff675d13641da0640b074147e4274061e8bc2e63cddc5285c0049b37f2f8413c",
+    "label": "ENGINEER-PROPOSED new playbook; MC corrections recorded; not installed"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+    "source": "_AUDIT/SYNC_2026-10-15_doctrine-part2/DRAFTS/DEPLOYMENT_PLAYBOOK.md",
+    "source_sha256": "7aeacea7f5e485abe5dc21b535f3a62fd3c16e04cc63b28d250205fc20be27dd",
+    "proposed_sha256": "e6db82b211def718a27ab66d079f324164f240e9286fa9a5131a1991692d2538",
+    "label": "ENGINEER-PROPOSED new playbook; MC corrections recorded; not installed"
+  }
+]

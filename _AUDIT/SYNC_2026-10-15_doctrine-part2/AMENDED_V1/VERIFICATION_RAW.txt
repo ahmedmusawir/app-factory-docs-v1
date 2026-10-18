@@ -1,0 +1,30 @@
+frozen_gate2_map_index_spec_and_protected_files_unchanged: PASS — map cd291270…, index 84337dcd…, spec 3910a62c…; PRESERVATION_BASELINE and MC_CORRECTION_PROTECTED hashes hold; all 101 frozen PROPOSED_CONTENT hashes hold
+amendment_spans_exact_unique_and_in_intended_containers: {"E374": "ENGINEER_PLAYBOOK line 746, inside the §12 DATA_CONTRACT template fence, below the Architect-ownership note", "E373": "Blueprint H2 heading + lead paragraph; next heading is \"### **DATA_CONTRACT.md**\"", "E375": "under \"What the Architect Does NOT Do\" inside table_open", "E376": "under \"What the Architect Does NOT Do\" inside table_open", "E377": "under \"Phase 3: ENGINEERING (Architect Contract Assembly)\" inside table_open", "E378": "under \"Phase 3: ENGINEERING (Architect Contract Assembly)\" inside table_open", "E379": "under \"Core Responsibilities\" inside table_open", "E380": "under \"Full-Stack Web App\" → **Engineer Focus:** bullet list (line structure; see note on fence parity)"}
+replay_380_edits_over_pinned_blobs_residual_equals_frozen: {"edits": 380, "documents": 31, "residual_shape": "1 removed / 2 added (header bump + history row) for 30 docs; STARTER_KIT 1-/5+ (D-4, unchanged from Gate 2)"}
+index_101_paths_three_amended_hashes_before_hashes_pinned_canonical_untouched: {"changed": ["01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md", "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md", "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md"], "unchanged": 98}
+outgoing_archives_of_amended_docs_still_BASE_bytes: PASS
+headers_history_rows_MANIFEST_cells_unchanged_for_amended_docs: {"APP_FACTORY_BLUEPRINT": {"version": "2.2", "date": "2026-10-16", "status": "Active"}, "ARCHITECT_PLAYBOOK": {"version": "2.3", "date": "2026-10-16", "status": "Active"}, "ENGINEER_PLAYBOOK": {"version": "1.3", "date": "2026-10-16", "status": "Active"}}
+151_date_spans_unchanged_each_once_and_12_transitions_9_paths_unaffected: PASS — sample 2099-01-02 in memory only; actual landing date null
+traceability_RUL09_gains_E373_E380_counts_from_data_97_FC_preserved: {"ordered_edits": 380, "paths": 101, "amended_paths": 3, "changelog_rows": 39, "date_spans": 151, "transitions": "12 / 9"}
+command: python3 -B -I lints/run_all.py
+cwd: /tmp/claude-1000/-home-moose-Documents-app-factory-docs-v1/b36e8853-a40c-4925-98ea-6cc06bc99f20/scratchpad/amended_v1_lint_tree
+exit code: 0
+[ENCODING] PASS — 0 hits across 36 live docs
+[RETIRED-TERMS] PASS — 0 hits across 36 live docs
+[VERSIONED-REFS] PASS — 0 hits across 36 live docs (34 canonical names loaded)
+[HEADER-PRESENCE] PASS — all 36 live docs carry the standard header
+=== DOCTRINE LINTS ===
+
+--- encoding_lint.py ---
+
+--- retired_terms_lint.py ---
+
+--- versioned_refs_lint.py ---
+
+--- header_lint.py ---
+
+=== RESULT: PASS ===
+
+unchanged_lint_suite_on_overlay_tree: PASS — exit 0; lint scripts byte-identical to repo lints/; no new unclosed fences in the three amended docs
+ownership_sweep_hits_all_dispositioned: {"hits": 39, "resolved": 8, "retained": 31, "scanned": "all live .md/.svg paths in the index excluding _ARCHIVE/ (templates and workflows included)"}
+git_refs_staging_canonical_worktree: Unchanged refs (HEAD 626da8d; main = origin/main = 9c17939); nothing staged; empty canonical diff; no Git mutation by Cody

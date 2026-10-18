@@ -1,0 +1,10 @@
+# Paths added or changed by Cody on 2026-10-17 for AMENDED-v1 that OPERATOR_PRESERVATION_PATHS.txt (2026-10-16) and FABLE_GATE3_PRESERVATION_SUPPLEMENT.txt do not list.
+# Tony: inspect, then add to the preservation pathspec before the preservation commit. Review/run-state only; no canonical paths.
+_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/
+_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_amend_v1.py
+_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_amend_v1_verify.py
+_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/AMENDED_V1_DELIVERY_RECEIPT.json
+session_2026-10-17.md
+RECOVERY.md
+agent_docs/RESPONSES/response_2026-10-17_135049_amended-v1-prepared.md
+agent_docs/RESPONSES/response_2026-10-17_145858_amended-v1-complete.md

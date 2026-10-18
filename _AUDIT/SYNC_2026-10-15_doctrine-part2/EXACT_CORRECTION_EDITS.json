@@ -1,0 +1,173 @@
+[
+  {
+    "id": "FC-031",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "start_line": 1076,
+    "end_line": 1082,
+    "old": "function pickMeta(\n  record: { meta_data: Array<{ key: string; value: unknown }> },\n  key: string,\n): unknown {\n  const entry = record.meta_data?.find((m) => m.key === key);\n  return entry ? entry.value : null; // null = absent; falsy value = present-but-empty\n}",
+    "new": "function pickMeta(\n  record: { meta_data: Array<{ key: string; value: unknown }> },\n  key: string,\n): { present: false } | { present: true; value: unknown } {\n  const entry = record.meta_data.find((m) => m.key === key);\n  return entry === undefined\n    ? { present: false }\n    : { present: true, value: entry.value };\n}",
+    "label": "ENGINEER-PROPOSED"
+  },
+  {
+    "id": "FC-049",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "start_line": 398,
+    "end_line": 400,
+    "old": "      const newItems = [...state.items];\n      newItems[existingIndex].quantity += 1;\n      return { items: newItems };",
+    "new": "      return {\n        items: state.items.map((item, index) =>\n          index === existingIndex ? { ...item, quantity: item.quantity + 1 } : item\n        ),\n      };",
+    "label": "ENGINEER-PROPOSED"
+  },
+  {
+    "id": "FC-046",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "start_line": 727,
+    "end_line": 740,
+    "old": "// Custom hook that throws promise until hydrated\nexport const useHydratedStore = <T,>(\n  store: UseBoundStore<StoreApi<T & { hasHydrated: boolean }>>,\n  selector: (state: T) => unknown\n) => {\n  const hasHydrated = store((state) => state.hasHydrated);\n  \n  if (!hasHydrated) {\n    // Return null or default during SSR\n    return null;\n  }\n  \n  return store(selector as (state: T & { hasHydrated: boolean }) => unknown);\n};",
+    "new": "// Both subscriptions run on every render; only the returned value is gated.\nexport const useHydratedStore = <T,>(\n  store: UseBoundStore<StoreApi<T & { hasHydrated: boolean }>>,\n  selector: (state: T) => unknown\n) => {\n  const hasHydrated = store((state) => state.hasHydrated);\n  const selected = store(selector as (state: T & { hasHydrated: boolean }) => unknown);\n  return hasHydrated ? selected : null;\n};",
+    "label": "ENGINEER-PROPOSED"
+  },
+  {
+    "id": "FC-046-heading",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "start_line": 724,
+    "end_line": 724,
+    "old": "### Alternative: Suspense-Style Loading",
+    "new": "### Alternative: Hydration-Gated Selection",
+    "label": "ENGINEER-PROPOSED"
+  },
+  {
+    "id": "FC-044",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "start_line": 536,
+    "end_line": 541,
+    "old": "  await supabase.auth.signOut();\n\n  return NextResponse.json(\n    { message: \"Logged out successfully\" },\n    { status: 200 }\n  );",
+    "new": "  const { error } = await supabase.auth.signOut();\n  if (error) {\n    return NextResponse.json(\n      { message: \"Remote sign-out could not be confirmed. Retry sign-out.\" },\n      { status: 503 }\n    );\n  }\n  return NextResponse.json(\n    { message: \"Logged out successfully\" },\n    { status: 200 }\n  );",
+    "label": "ENGINEER-PROPOSED"
+  },
+  {
+    "id": "FC-043",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "start_line": 628,
+    "end_line": 628,
+    "old": "      return NextResponse.redirect(new URL(next, request.url));",
+    "new": "      const origin = new URL(request.url).origin;\n      const fallback = new URL(\"/\", origin);\n      const allowedPaths = new Set([\"/\"]); // Extend only with approved local destinations.\n      try {\n        const destination = new URL(next, origin);\n        if (destination.origin === origin && allowedPaths.has(destination.pathname)) {\n          destination.search = \"\";\n          destination.hash = \"\";\n          return NextResponse.redirect(destination);\n        }\n      } catch {\n        // Malformed destinations use the fixed safe fallback.\n      }\n      return NextResponse.redirect(fallback);",
+    "label": "ENGINEER-PROPOSED"
+  },
+  {
+    "id": "FC-065-confirmed",
+    "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "start_line": 621,
+    "end_line": 621,
+    "old": "\"Welcome to Pro!\" with a Continue button. Shown when the subscription tier is no longer \"free.\"",
+    "new": "\"Your subscription change is confirmed.\" with a Continue button. Show only after the server-authorized payment attempt resolves to its expected target tier and qualifying subscription status; an existing non-free tier is insufficient.",
+    "label": "ENGINEER-PROPOSED"
+  },
+  {
+    "id": "FC-065-timeout",
+    "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "start_line": 624,
+    "end_line": 624,
+    "old": "\"Your payment was received! Your subscription will activate momentarily.\" with a Refresh button. Shown after 5 failed polls (10 seconds).",
+    "new": "\"Your subscription change is still pending or could not be confirmed.\" with Refresh and the approved support/recovery path. Show after 5 failed polls (10 seconds); timeout does not establish payment receipt.",
+    "label": "ENGINEER-PROPOSED"
+  },
+  {
+    "id": "FC-080",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "start_line": 1219,
+    "end_line": 1238,
+    "old": "interface GridProps {\n  children: ReactNode;\n  cols?: {\n    mobile?: number;\n    tablet?: number;\n    desktop?: number;\n  };\n  gap?: number;\n  className?: string;\n}\n\nconst Grid = ({ children, cols = {}, gap = 4, className }: GridProps) => {\n  const { mobile = 1, tablet = 2, desktop = 3 } = cols;\n  \n  return (\n    <div className={`grid grid-cols-${mobile} md:grid-cols-${tablet} lg:grid-cols-${desktop} gap-${gap} ${className}`}>\n      {children}\n    </div>\n  );\n};",
+    "new": "const mobileCols = { 1: 'grid-cols-1', 2: 'grid-cols-2', 3: 'grid-cols-3', 4: 'grid-cols-4' } as const;\nconst tabletCols = { 1: 'md:grid-cols-1', 2: 'md:grid-cols-2', 3: 'md:grid-cols-3', 4: 'md:grid-cols-4' } as const;\nconst desktopCols = { 1: 'lg:grid-cols-1', 2: 'lg:grid-cols-2', 3: 'lg:grid-cols-3', 4: 'lg:grid-cols-4' } as const;\nconst gaps = { 0: 'gap-0', 2: 'gap-2', 4: 'gap-4', 6: 'gap-6', 8: 'gap-8' } as const;\n\ninterface GridProps {\n  children: ReactNode;\n  cols?: {\n    mobile?: keyof typeof mobileCols;\n    tablet?: keyof typeof tabletCols;\n    desktop?: keyof typeof desktopCols;\n  };\n  gap?: keyof typeof gaps;\n  className?: string;\n}\n\nconst Grid = ({ children, cols = {}, gap = 4, className = '' }: GridProps) => {\n  const { mobile = 1, tablet = 2, desktop = 3 } = cols;\n  if (!(mobile in mobileCols) || !(tablet in tabletCols) || !(desktop in desktopCols) || !(gap in gaps)) {\n    throw new Error('Unsupported Grid variant');\n  }\n  return (\n    <div className={`grid ${mobileCols[mobile]} ${tabletCols[tablet]} ${desktopCols[desktop]} ${gaps[gap]} ${className}`}>\n      {children}\n    </div>\n  );\n};",
+    "label": "ENGINEER-PROPOSED"
+  },
+  {
+    "id": "FC-084",
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "start_line": 232,
+    "end_line": 232,
+    "old": "- [ ] All required elements present (per \u00a75.6 minimum display fields, if defined)",
+    "new": "- [ ] All required elements and minimum display fields in the approved UI_SPEC are present; record NOT APPLICABLE only where that contract says so.",
+    "label": "ENGINEER-PROPOSED"
+  },
+  {
+    "id": "FC-003/096",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "start_line": 258,
+    "end_line": 258,
+    "old": "1. Check `COMPONENT_REGISTRY_v1.1.md` (sibling file) \u2014 does a primitive exist?",
+    "new": "1. Check `COMPONENT_REGISTRY.md` (sibling file) \u2014 does a primitive exist?",
+    "label": "ENGINEER-PROPOSED mechanical"
+  },
+  {
+    "id": "FC-003/096",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "start_line": 692,
+    "end_line": 692,
+    "old": "- **`agent_docs/STARTER_KIT/COMPONENT_REGISTRY_v1.1.md`** \u2014 scannable component lookup (sibling file)",
+    "new": "- **`agent_docs/STARTER_KIT/COMPONENT_REGISTRY.md`** \u2014 scannable component lookup (sibling file)",
+    "label": "ENGINEER-PROPOSED mechanical"
+  },
+  {
+    "id": "FC-003/096",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "start_line": 261,
+    "end_line": 261,
+    "old": "4. Check `agent_docs/APP_FACTORY/UI-UX-BUILDING-MANUAL_v1_3.md`",
+    "new": "4. Check `agent_docs/APP_FACTORY/UI_UX_BUILDING_MANUAL.md`",
+    "label": "ENGINEER-PROPOSED mechanical"
+  },
+  {
+    "id": "FC-003/096",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "start_line": 690,
+    "end_line": 690,
+    "old": "- **`agent_docs/APP_FACTORY/UI-UX-BUILDING-MANUAL_v1_3.md`** \u2014 full UI patterns, Rule Zero (mobile-first)",
+    "new": "- **`agent_docs/APP_FACTORY/UI_UX_BUILDING_MANUAL.md`** \u2014 full UI patterns, Rule Zero (mobile-first)",
+    "label": "ENGINEER-PROPOSED mechanical"
+  },
+  {
+    "id": "FC-003/096",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "start_line": 688,
+    "end_line": 688,
+    "old": "- **`agent_docs/APP_FACTORY/AUTH_MANUAL_v1.2.md`** \u2014 full auth implementation details (deep dive)",
+    "new": "- **`agent_docs/APP_FACTORY/AUTH_MANUAL.md`** \u2014 full auth implementation details (deep dive)",
+    "label": "ENGINEER-PROPOSED mechanical"
+  },
+  {
+    "id": "FC-003/096",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "start_line": 8,
+    "end_line": 8,
+    "old": "> **Role doctrine (v1.1):** roles live in the `user_roles` table \u2014 one doctrine, aligned with AUTH_MANUAL v1.3 (F-041/F-042).",
+    "new": "> **Role doctrine (v1.1):** roles live in the `user_roles` table \u2014 one doctrine, aligned with AUTH_MANUAL (F-041/F-042).",
+    "label": "ENGINEER-PROPOSED mechanical"
+  },
+  {
+    "id": "FC-003/096",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "start_line": 156,
+    "end_line": 156,
+    "old": "> \u26d4 **FORBIDDEN:** never store \u2014 or READ \u2014 roles for authorization from `user_metadata` (the recon Q3.4 smell), and never mirror a `role` column onto a profile table. Two homes for a role guarantees privilege drift. This aligns with AUTH_MANUAL v1.3 (\"Where Roles Live\").",
+    "new": "> \u26d4 **FORBIDDEN:** never store \u2014 or READ \u2014 roles for authorization from `user_metadata` (the recon Q3.4 smell), and never mirror a `role` column onto a profile table. Two homes for a role guarantees privilege drift. This aligns with AUTH_MANUAL (\"Where Roles Live\").",
+    "label": "ENGINEER-PROPOSED mechanical"
+  },
+  {
+    "id": "FC-003/096",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "start_line": 2092,
+    "end_line": 2092,
+    "old": "**Fix applied to this manual:** Added Rule Zero-B as the companion posture to Rule Zero. Authored `THEMING_MANUAL_v1.0.md` as the standalone deep dive. Updated `APP_ARCHITECTURE_MANUAL` and `HANDOFF_PACKAGE_PLAYBOOK` with cross-references. Bumped this manual to v1.2.",
+    "new": "**Fix applied to this manual:** Added Rule Zero-B as the companion posture to Rule Zero. Authored `THEMING_MANUAL.md` as the standalone deep dive. Updated `APP_ARCHITECTURE_MANUAL` and `HANDOFF_PACKAGE_PLAYBOOK` with cross-references. Bumped this manual to v1.2.",
+    "label": "ENGINEER-PROPOSED mechanical"
+  },
+  {
+    "id": "FC-003/096",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "start_line": 2121,
+    "end_line": 2121,
+    "old": "| 1.2 | 2026-06-02 | Added Rule Zero-B (theming as the second foundational posture). Added TOC entries for Rule Zero and Rule Zero-B. Authored companion `THEMING_MANUAL_v1.0.md`. Added Lesson 9 appendix. Born from Cyber Pharma Run 002. |",
+    "new": "| 1.2 | 2026-06-02 | Added Rule Zero-B (theming as the second foundational posture). Added TOC entries for Rule Zero and Rule Zero-B. Authored companion `THEMING_MANUAL.md`. Added Lesson 9 appendix. Born from Cyber Pharma Run 002. |",
+    "label": "ENGINEER-PROPOSED mechanical"
+  }
+]
