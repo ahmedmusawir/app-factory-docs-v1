@@ -1,5 +1,8 @@
 # STARTER KIT HANDBOOK
 
+> **Version:** 1.2 · **Date:** 2026-10-18 · **Status:** Active
+> **Tier:** 1 — Constitution · **Pairs with:** AUTH_MANUAL, DATABASE_MANUAL, STATE_MANAGEMENT_MANUAL, UI_UX_BUILDING_MANUAL, COMPONENT_REGISTRY
+
 > **Canonical answer to: "What does the kit already provide?"**
 >
 > **🛑 READ THIS BEFORE AUTHORING ANY SERVICE, COMPONENT, OR ROUTE.**
@@ -7,7 +10,7 @@
 > If the kit provides what you're about to build, you DO NOT build it. You consume the kit's primitive directly.
 
 **Kit:** Stark SaaS Starter — **Starter Kit v3** (Pro RBAC Next.js Starter Kit)
-**Version:** v1.1 (Kit-Perfection campaign applied)
+**Kit campaign reference:** handbook v1.1 (historical reconciliation; verify current kit revision)
 **Framework:** Next.js 16.2.1 (App Router) + React 19.2.4
 **Last Updated:** 2026-06-28 (Gates 1–10 of the "Kit Perfection" hardening campaign)
 **Maintained by:** Stark Industries — App Factory
@@ -22,7 +25,7 @@
 
 **The principle:** If the kit provides it as wired infrastructure, **components consume it directly**. The service layer is reserved for what the kit does NOT provide — domain operations specific to the project (chat, agent profiles, agent instructions, etc.).
 
-**Disk wins over docs.** This handbook describes intent; the on-disk code is the source of truth. Every file/export/breakpoint named here was reconciled against disk during the Kit-Perfection campaign. If you ever find a divergence, surface it — don't average the two into a guess.
+**Disk establishes implementation facts.** Verify every consumed export, route and breakpoint against the named kit revision. This handbook’s historical reconciliation is not proof for a different checkout. Approved briefs govern scope and governing documents control their subjects; route genuine conflicts to the Director.
 
 ---
 
@@ -64,10 +67,10 @@ The kit ships with a complete Supabase SSR auth stack. Four client types, reques
 |---|---|---|---|
 | Server (anon) | `src/utils/supabase/server.ts` | Server Components, API routes — own-user ops | NO — respects RLS |
 | Browser | `src/utils/supabase/client.ts` | Client Components, browser auth flows | NO — respects RLS |
-| Middleware | `src/utils/supabase/middleware.ts` | Session refresh, consumed by `src/proxy.ts` | NO |
+| Middleware | Verify the pinned kit entry and session helper | Session refresh; no universal filename or cookie contract | NO |
 | Admin (service role) | `src/utils/supabase/admin.ts` | Portal admin operations | **YES — bypasses RLS** |
 
-**Cookie adapter (modernized — Gate 8):** all four clients use the Supabase SSR `getAll`/`setAll` cookie pattern (not the deprecated `get`/`set`/`remove`). The kit's cookie security flags — `secure`, `sameSite: 'lax'`, **`httpOnly: false`** — are deliberate and preserved in `setAll`. `httpOnly: false` is intentional ("Supabase needs client-side session access"); do NOT "tighten" it. **Modernize the mechanism, never the security behavior** — a dropped flag is a live-session bug that no build will catch.
+**Session/cookie architecture:** verify the pinned server and browser clients, cookie adapters, attributes and refresh behavior together. Neither blanket `httpOnly: true` nor blanket `httpOnly: false` is approved here. Do not change attributes without a compatible verified session contract and tests.
 
 **Auth API Routes (`src/app/api/auth/`):**
 
@@ -76,7 +79,7 @@ The kit ships with a complete Supabase SSR auth stack. Four client types, reques
 - `signup/route.ts` — public signup, creates `member` role; **metadata key MUST be `full_name`**
 - `confirm/route.ts` — email confirmation callback
 
-**User creation is via server actions, not an API route.** Admin → `addMember` (`(admin)/admin-portal/actions.ts`); superadmin → `addUser` (`(superadmin)/superadmin-portal/actions.ts`). Both run behind a role-gated layout (`protectPage`) and then call the service-role admin client. (The legacy `POST /api/auth/superadmin-add-user` route was a dead fossil — removed in Gate 6. Superadmins are **console-only**; see §2.)
+**User creation requires operation-local authorization.** A role-gated layout is not the security boundary for a server action: verify the invocation’s authenticated caller, current table-backed role, allowed target and privileged-target protection before obtaining elevated capability. Verify kit action signatures at the pinned revision. Superadmin creation remains console-only.
 
 **Client Auth State:**
 
@@ -85,13 +88,13 @@ The kit ships with a complete Supabase SSR auth stack. Four client types, reques
 
 **Server-Side Page Protection:**
 
-- `src/utils/supabase/actions.ts` exports `protectPage([AppRole.X])`
+- Inspect the pinned page-guard export, arguments and return value; no callable signature is asserted here.
 - Use as the FIRST call in any protected layout's `RootLayout` async function
 - Returns the authenticated user or redirects to `/auth`
 
 ### How To Consume Auth (The Right Way)
 
-**In a Server Component (e.g., a portal layout):** Use `protectPage([AppRole.ADMIN])` at the top of the layout. No service wrapper needed. See `src/app/(admin)/layout.tsx` for the canonical pattern.
+**Server component protection:** use the verified kit guard at the approved boundary. Confirm its export, arguments, return shape and unauthorized behavior before writing the call.
 
 **In a Client Component (e.g., a sidebar showing user email):** Read from `useAuthStore`. Do NOT call `supabase.auth.getUser()` from the client directly.
 
@@ -101,21 +104,7 @@ The kit ships with a complete Supabase SSR auth stack. Four client types, reques
 
 ### Auth Pattern Decision Tree
 
-```
-Need to know "is the user logged in?" in a Server Component?
-  → const { data: { user } } = await supabase.auth.getUser()
-  → Or use protectPage([role]) if it's a protected route
-
-Need to know "is the user logged in?" in a Client Component?
-  → useAuthStore() — read the state
-
-Need to log in / log out?
-  → POST to /api/auth/login or /api/auth/logout
-
-Need to know the user's role?
-  → Server: await getUserRole() from src/utils/get-user-role.ts
-  → Client: useAuthStore() derived flags (isAdmin, isSuperadmin, isMember)
-```
+**Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance.
 
 > **A green build proves nothing for cookie/session changes.** The real gate for any auth-touching change is the operator AUTH-WALK: login → nav-persist → hard-refresh → logout-bounce → role-resolve.
 
@@ -143,7 +132,7 @@ Three roles, defined in the `AppRole` enum at `src/utils/app-role.ts` (universal
 Superadmins are created in the **Supabase console ONLY**, never from the app. There must be **no app-side superadmin-creation surface** — it is a privilege-escalation attack surface. The deleted fossil route `/api/auth/superadmin-add-user` violated this and was removed in Gate 6.
 
 Corollaries:
-- A superadmin-created user landing as `member` is acceptable — promotion to superadmin happens in the console.
+- Privileged account creation and role promotion require the approved project authority and verified kit path; do not treat a silent downgrade or manual console workaround as successful creation.
 - The doctrine extends to **self-service**: superadmin has NO in-app profile by design. Its Profile link is hidden (render-time `isSuperadmin` gate) and the shared `/profile` route bounces superadmins via its `[ADMIN, MEMBER]` gate.
 
 ### The Two-Table Pattern (CRITICAL)
@@ -172,12 +161,12 @@ public.user_roles
 `handle_new_user()` (`supabase/setup.sql`) fires atomically on every `auth.users` INSERT:
 
 - Reads `full_name` from `raw_user_meta_data` (the key every writer writes)
-- Reads `role` from `raw_user_meta_data` — applies it; defaults to `'member'` if absent
+- Historical Mark IV role-from-metadata behavior is unverified for safe public signup. Do not adopt it: privileged assignment must be inaccessible to client-controlled input and proven against pinned trigger/caller source.
 - Inserts into BOTH `user_roles` AND `profiles` (idempotent — `ON CONFLICT DO NOTHING`)
 
 > **Mark IV is the shipped trigger as of Gate 10 Phase A**, proven live 2026-06-28. It replaced an earlier "dumb" trigger that hard-coded `'member'` and read the wrong key (`'name'`), which caused two now-RESOLVED bugs (`profiles.full_name` NULL at creation; superadmin role-drop). See §11 and `KNOWN_ISSUES.md`.
 
-**🛑 Never manually insert into `user_roles` or `profiles` when creating users via `auth.admin.createUser()`.** The trigger handles it. Manual inserts cause duplicate-key errors. Just write `full_name` + `role` into `user_metadata` and let Mark IV apply them.
+**User creation requires a verified trusted role path.** Never permit client-writable metadata to grant privilege. Verify the pinned trigger and protected admin action before using creation-time transport; avoid duplicate inserts only where the verified trigger already owns those rows. Missing kit evidence blocks this recipe.
 
 ### How To Check Roles
 
@@ -198,17 +187,14 @@ const isAdmin = useAuthStore((s) => s.isAdmin);
 
 **Protected Layout:**
 
-```typescript
-// src/app/(admin)/layout.tsx
-await protectPage([AppRole.ADMIN]);
-```
+**Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance.
 
 ### Role Color Standard (Never Deviate)
 
 ```
 superadmin → text-purple-600 dark:text-purple-400
-admin      → text-red-600    dark:text-red-400
-member     → text-green-600  dark:text-green-400
+Use the appropriate semantic surface, foreground and role tokens; confirm contrast in every supported mode. Numbered palette values describe historical kit debt, not an approved component recipe.
+Use the appropriate semantic surface, foreground and role tokens; confirm contrast in every supported mode. Numbered palette values describe historical kit debt, not an approved component recipe.
 ```
 
 (In components, role colors are driven through the `--role-*` design tokens — never hardcode numbered Tailwind colors in primitives.)
@@ -255,10 +241,10 @@ Service role bypasses RLS — used in admin API routes / server actions.
 
 ### 🛑 BEFORE AUTHORING ANY COMPONENT
 
-1. Check `COMPONENT_REGISTRY_v1.1.md` (sibling file) — does a primitive exist?
+1. Check `COMPONENT_REGISTRY.md` (sibling file) — does a primitive exist?
 2. Check `src/components/common/` for layout primitives
 3. Check `src/components/ui/` for Shadcn primitives
-4. Check `agent_docs/APP_FACTORY/UI-UX-BUILDING-MANUAL_v1_3.md`
+4. Check `UI_UX_BUILDING_MANUAL.md`
 5. Only if NONE of those provide it, author the new component
 
 ### Common Layout Primitives (`src/components/common/`)
@@ -288,8 +274,8 @@ The app-shell primitive. Mobile-first built-in. Props: `{ sidebar, children, mob
 ```
 
 **Mobile behavior contract (the real one):**
-- Below `xl` (<1280px): the sidebar becomes a hamburger-triggered slide-over — a `Sheet` (`side="left"`) under a two-bar layout (the shared global `Navbar` + a slim trigger bar). Dismiss via close-on-nav, outside-tap, and Esc.
-- `xl`+ (≥1280): the sidebar is persistent (`w-[25rem]`, `border-r`); main takes the remainder. The mobile trigger bar disappears.
+- Historical kit rail dimensions/breakpoints require verification against the pinned shell implementation; no current kit value is certified here. Verify trigger, dismissal and layout on both sides of the actual fit breakpoint.
+- Historical kit rail dimensions/breakpoints require verification against the pinned shell implementation; no current kit value is certified here. Verify trigger, dismissal and layout on both sides of the actual fit breakpoint.
 - `sidebar` may be a **render-fn** `(close) => ReactNode` so a panel can close itself on a terminal action (Apply/Done).
 
 **The 4 CP scars** (baked into the primitive): close-on-nav (`usePathname`), passable `close` to a render-fn sidebar, ~25rem width capped to 85vw, native dismiss (outside-tap + Esc).
@@ -356,33 +342,7 @@ If you need a Shadcn primitive that's NOT installed, use `npx shadcn@latest add 
 
 ### Route Groups (Current Kit Baseline)
 
-```
-src/app/
-  (public)/                — Public routes
-    layout.tsx             — No auth required
-    page.tsx               — Home (thin) + PageContent.tsx
-
-  (auth)/                  — Auth pages
-    auth/page.tsx          — Login + register (AuthTabs)
-
-  (account)/               — Shared account area (sidebar-less)
-    layout.tsx             — protectPage([AppRole.ADMIN, AppRole.MEMBER])
-    profile/               — ONE shared /profile (admin + member) → ProfileForm
-
-  (superadmin)/            — Superadmin portal
-    layout.tsx             — protectPage([AppRole.SUPERADMIN])
-    superadmin-portal/     — Full CRUD user management (addUser server action)
-
-  (admin)/                 — Admin portal
-    layout.tsx             — protectPage([AppRole.ADMIN])
-    admin-portal/          — Restricted CRUD (addMember server action)
-
-  (members)/               — Member portal
-    layout.tsx             — protectPage([AppRole.MEMBER])
-    members-portal/        — Member dashboard
-
-  api/auth/                — Auth API routes (login, logout, signup, confirm)
-```
+**Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance.
 
 ### Profile is ONE shared route (Gate 7)
 
@@ -432,7 +392,7 @@ Mobile-first is the kit's foundational posture (UI-UX Manual Rule Zero). The kit
 
 ### Breakpoint contract — the rail vs. the nav
 
-- **App-shell rail persists at `xl` (1280)**, not `lg`. Below `xl`, the `AppShellPage` sidebar collapses to a slide-over. `w-[25rem]` is the persistent rail width.
+- Historical kit rail dimensions/breakpoints require verification against the pinned shell implementation; no current kit value is certified here. Verify trigger, dismissal and layout on both sides of the actual fit breakpoint.
 - **Per-component fit-breakpoints override a blanket rule.** The public nav correctly goes full-horizontal at **`lg` (1024)** — three short links fit there. `xl` is the *rail's* fit rule, not a kit-wide law. Pick the breakpoint where the actual content fits; don't cargo-cult one number everywhere.
 
 ### One mobile-menu pattern: the `Sheet`
@@ -577,7 +537,7 @@ login(...).catch((e) => { /* ... */ })
 
 ### Theme Conventions
 
-Explicit Tailwind classes for theme-aware backgrounds: Dialog/Dropdown `bg-white dark:bg-slate-800`; Toast `bg-white dark:bg-zinc-900`; Input `p-6 bg-slate-100 dark:bg-slate-500 dark:text-white`.
+Use the appropriate semantic surface, foreground and role tokens; confirm contrast in every supported mode. Numbered palette values describe historical kit debt, not an approved component recipe.
 
 ---
 
@@ -597,7 +557,7 @@ Rendered `fixed inset-0 z-[9999] bg-white` on every `<a>` click, covering the Na
 
 ### Gotcha 4: Signup Metadata Key
 
-When creating users via `auth.admin.createUser()`, the metadata key MUST be `full_name`. The Mark IV trigger reads this exact key (it also reads `role`).
+Verify the pinned trigger’s name field and role input contract. Public user metadata must never grant privilege; protected admin creation alone does not prove a shared trigger safe.
 
 ### Gotcha 5: Service Role Bypasses RLS
 
@@ -685,11 +645,11 @@ This handbook is a **living document**. Updates happen at three triggers:
 
 This handbook is the **canonical entry point** for kit knowledge. It cross-references but does NOT duplicate:
 
-- **`agent_docs/APP_FACTORY/AUTH_MANUAL_v1.2.md`** — full auth implementation details (deep dive)
-- **`agent_docs/APP_FACTORY/DATABASE_MANUAL.md`** — full DB setup, RLS policy templates
-- **`agent_docs/APP_FACTORY/UI-UX-BUILDING-MANUAL_v1_3.md`** — full UI patterns, Rule Zero (mobile-first)
-- **`agent_docs/APP_FACTORY/STATE_MANAGEMENT_MANUAL.md`** — Zustand patterns deeper
-- **`agent_docs/STARTER_KIT/COMPONENT_REGISTRY_v1.1.md`** — scannable component lookup (sibling file)
+- **`AUTH_MANUAL.md`** — full auth implementation details (deep dive)
+- **`DATABASE_MANUAL.md`** — full DB setup, RLS policy templates
+- **`UI_UX_BUILDING_MANUAL.md`** — full UI patterns, Rule Zero (mobile-first)
+- **`STATE_MANAGEMENT_MANUAL.md`** — Zustand patterns deeper
+- **`agent_docs/STARTER_KIT/COMPONENT_REGISTRY.md`** — scannable component lookup (sibling file)
 - **`KNOWN_ISSUES.md`** (repo root) — historical record of the two now-resolved bugs
 
 ---
@@ -698,6 +658,7 @@ This handbook is the **canonical entry point** for kit knowledge. It cross-refer
 
 | Version | Date | Changes |
 |---|---|---|
+| 1.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: DEC-04, FC-001, FC-003, FC-003/096, FC-005, FC-033, FC-034, FC-036, FC-038, FC-041, FC-042, FC-072, FC-073, FC-081, RUL-12, RUL-14 |
 | 1.1 | 2026-06-28 | Kit-Perfection harvest (Gates 1–10). Reconciled to disk: removed the `superadmin-add-user` fossil; user creation documented as `addMember`/`addUser` server actions; Mark IV trigger framed as shipped + proven-live (both KNOWN_ISSUES resolved). AppShellPage `<md`→`<xl` + 4 CP scars + owns-`<main>`; real global components (`PublicNav`/`PublicNavAuthSection`/`PublicMobileNav`/`NavbarLoginReg`, dropped `NavbarHome`/`NavbarSuperadmin`); shared `(account)/profile` + `ProfileForm`; test baseline 81/11 → 76/10. NEW §6 Responsive & Mobile-Nav (xl rail vs lg nav, one-`Sheet`, `coarse:` variant + verify-built-CSS); NEW §11 Known Issues — Resolved. Cookie `getAll`/`setAll` + modernize-mechanism-not-behavior; `.next/types` cache lesson; typing-not-casting; AUTH-WALK; console-only superadmin doctrine; shared-links-match-protection. |
 | 1.0 | 2026-05-31 | Initial handbook authored from Run 001 lessons + kit v0.4.1 evidence |
 

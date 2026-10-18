@@ -1,6 +1,6 @@
 # UI/UX BUILDING MANUAL
 
-> **Version:** 1.4 · **Date:** 2026-07-08 · **Status:** Active
+> **Version:** 1.5 · **Date:** 2026-10-18 · **Status:** Active
 > **Tier:** 5 — Design System · **Pairs with:** STARTER_KIT_HANDBOOK, COMPONENT_REGISTRY, THEMING_MANUAL, FRONTEND_BUILD_PHASE_PLAYBOOK, GLOBAL_DESIGN_SYSTEM_HANDBOOK
 
 > **Project:** Stark SaaS Starter Kit
@@ -27,8 +27,8 @@
 | Breakpoint | Width | Behavior |
 |---|---|---|
 | **Mobile** | 375px | Default; everything works here first |
-| **Tablet** | 768px (`md:`) | Layouts may split. Narrow nav rails may persist; **wide app rails (≥ ~20rem) stay a slide-over** (they don't fit yet) |
-| **Desktop** | 1024px+ (`lg:`) | Full multi-column layouts permitted; wide app rails become persistent here |
+- **Responsive rail:** determine the fit breakpoint from the pinned component and actual content. Below that breakpoint supply a reachable, keyboard-accessible drawer trigger; no vanished or untriggered sidebar. Verify on both sides of the breakpoint and at 375px. Do not infer a universal `md`, `lg` or `xl` rail rule.
+- **Responsive rail:** determine the fit breakpoint from the pinned component and actual content. Below that breakpoint supply a reachable, keyboard-accessible drawer trigger; no vanished or untriggered sidebar. Verify on both sides of the breakpoint and at 375px. Do not infer a universal `md`, `lg` or `xl` rail rule.
 
 Every UI screen MUST be verified at all three breakpoints before phase completion.
 
@@ -41,10 +41,10 @@ This is not a suggestion. This is the operating standard. It applies at every ga
 ### Implementation Discipline
 
 - **Touch targets:** 44 pixels minimum on any interactive element
-- **Sidebars:** Slide-over below the breakpoint where the rail actually fits — `lg` (1024) for wide app rails (≥ ~20rem), `md` (768) for narrow nav. Never persistent at a width the rail can't fit, and never *absent* below it: a hamburger/trigger to open the slide-over is mandatory. A fixed sidebar with `hidden md:block` and no trigger = the rail vanishes on mobile = automatic failure.
+- **Responsive rail:** determine the fit breakpoint from the pinned component and actual content. Below that breakpoint supply a reachable, keyboard-accessible drawer trigger; no vanished or untriggered sidebar. Verify on both sides of the breakpoint and at 375px. Do not infer a universal `md`, `lg` or `xl` rail rule.
 - **Type sizes:** Readable at 375px without zoom (no smaller than 14px body text)
 - **Spacing:** Tap-friendly padding, not pixel-economy
-- **No horizontal scroll** at any width below desktop
+- **No unintended page-level horizontal overflow** below desktop; bounded intentional tabs/carousels are permitted with accessible controls.
 - **All controls reachable** at mobile (no "desktop only" UI hidden at mobile)
 
 ### What Violates Rule Zero
@@ -123,9 +123,9 @@ Before authoring any UI component, page, or layout:
 ### Cross-Reference
 
 - **`THEMING_MANUAL.md`** — the deep dive on token architecture, designer deliverable format, and quick-swap workflow
-- **`APP_ARCHITECTURE_MANUAL.md`** §Theming Files — where the token files live in the repo
-- **`HANDOFF_PACKAGE_PLAYBOOK.md`** §Designer Handoff — the designer engagement spec
-- **Cyberize Run 001 `_project/CLAUDE.md`** — the canonical worked example of a Locked Palette table
+- **`TOKEN_FILE.md`** §1 Entry stylesheet — where the token files live in the repo
+- **`GLOBAL_DESIGN_SYSTEM_HANDBOOK.md`** §8 The Designer’s deliverables — the designer engagement spec
+- Historical external example (availability unverified): **Cyberize Run 001 `_project/CLAUDE.md`** — the historical worked example of a Locked Palette table Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.
 
 ### Why Rule Zero-B Supersedes Other Color Doctrine
 
@@ -374,7 +374,7 @@ interface Props {
 
 **Usage:**
 ```tsx
-<Main className="bg-gray-50">
+<Main className="bg-muted">
   {/* page content */}
 </Main>
 ```
@@ -440,20 +440,7 @@ Site-wide components used across all pages. Located in `src/components/global/`.
 - Responsive design (hidden on mobile, visible on md+)
 
 **Usage in Layouts:**
-```tsx
-import Navbar from "@/components/global/Navbar";
-
-export default async function MemberLayout({ children }) {
-  await protectPage(["member"]);
-  
-  return (
-    <div className="flex flex-col min-h-screen">
-      <Navbar />
-      {/* rest of layout */}
-    </div>
-  );
-}
-```
+**Guard-call example withdrawn pending pinned-kit verification.** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance.
 
 ---
 
@@ -480,58 +467,17 @@ Navigation sidebars for different user roles. Located in `src/components/layout/
 
 ### Sidebar Component (Members)
 
-**File:** `src/components/layout/Sidebar.tsx`
+Every positive layout example keeps every navigation destination reachable at mobile widths. Consume AppShellPage or provide a complete accessible mobile trigger/drawer or equivalent navigation alongside the desktop sidebar. hidden md:block is acceptable only when that same example supplies the mobile alternative. Retire an incomplete layout as a copyable positive example.
 
-**Features:**
-- Command palette interface (shadcn/ui Command component)
-- Search functionality
-- Grouped navigation items
-- Keyboard shortcuts display
-- Lucide icons
-
-**Structure:**
-```tsx
-<Command className="bg-secondary">
-  <CommandInput placeholder="Type a command or search..." />
-  <CommandList className="px-8">
-    <CommandGroup heading="Suggestions">
-      <CommandItem>
-        <Icon className="mr-2 h-4 w-4" />
-        <Link href="/path">Label</Link>
-      </CommandItem>
-    </CommandGroup>
-    <CommandSeparator />
-    <CommandGroup heading="Settings">
-      {/* settings items */}
-    </CommandGroup>
-  </CommandList>
-</Command>
-```
-
-**Usage in Layout:**
-```tsx
-<div className="hidden md:block h-auto flex-shrink-0 border-4 w-[25rem]">
-  <Sidebar />
-</div>
-```
-
-**Key Points:**
-- Hidden on mobile (`hidden md:block`)
-- Fixed width: `w-[25rem]` (400px)
-- Flex-shrink-0 prevents compression
-- Border for visual separation
+The former copyable layout is withdrawn because it hid navigation on small screens or bypassed the installed shell. Use the verified responsive shell/rail/drawer contract for the pinned kit; do not invent a breakpoint or duplicate the shell. Verify reachable navigation, focus management, keyboard/escape behavior and no page overflow at every supported width.
 
 ---
 
 ### AdminSidebar Component
 
-**File:** `src/components/layout/AdminSidebar.tsx`
+Every positive layout example keeps every navigation destination reachable at mobile widths. Consume AppShellPage or provide a complete accessible mobile trigger/drawer or equivalent navigation alongside the desktop sidebar. hidden md:block is acceptable only when that same example supplies the mobile alternative. Retire an incomplete layout as a copyable positive example.
 
-**Same structure as Sidebar but with admin-specific links:**
-- `/admin-portal` - Dashboard
-- `/admin-booking` - New Booking
-- `/posts` - Bookings list
-- Settings items
+The former copyable layout is withdrawn because it hid navigation on small screens or bypassed the installed shell. Use the verified responsive shell/rail/drawer contract for the pinned kit; do not invent a breakpoint or duplicate the shell. Verify reachable navigation, focus management, keyboard/escape behavior and no page overflow at every supported width.
 
 ---
 
@@ -813,26 +759,9 @@ members-portal/
 
 #### Sidebar Layout (Desktop Only)
 
-```tsx
-<div className="flex flex-col min-h-screen">
-  <Navbar />
-  <section className="flex flex-1">
-    {/* Sidebar: hidden mobile, visible tablet+ */}
-    <div className="hidden md:block h-auto flex-shrink-0 border-4 w-[25rem]">
-      <Sidebar />
-    </div>
-    {/* Main content: grows to fill space */}
-    <div className="flex-grow">{children}</div>
-  </section>
-</div>
-```
+Every positive layout example keeps every navigation destination reachable at mobile widths. Consume AppShellPage or provide a complete accessible mobile trigger/drawer or equivalent navigation alongside the desktop sidebar. hidden md:block is acceptable only when that same example supplies the mobile alternative. Retire an incomplete layout as a copyable positive example.
 
-**Key Classes:**
-- `flex flex-col min-h-screen` - Full height vertical layout
-- `flex flex-1` - Content area grows
-- `hidden md:block` - Sidebar only on tablet+
-- `flex-shrink-0` - Sidebar doesn't compress
-- `flex-grow` - Main content fills remaining space
+The former copyable layout is withdrawn because it hid navigation on small screens or bypassed the installed shell. Use the verified responsive shell/rail/drawer contract for the pinned kit; do not invent a breakpoint or duplicate the shell. Verify reachable navigation, focus management, keyboard/escape behavior and no page overflow at every supported width.
 
 ---
 
@@ -1001,85 +930,9 @@ export default ResponsivePatterns;
 
 ### Example 3: Members Portal with Layout
 
-**File:** `src/app/(members)/layout.tsx`
-```tsx
-import { ReactNode } from "react";
-import Navbar from "@/components/global/Navbar";
-import Sidebar from "@/components/layout/Sidebar";
-import { protectPage } from "@/utils/supabase/actions";
+Every positive layout example keeps every navigation destination reachable at mobile widths. Consume AppShellPage or provide a complete accessible mobile trigger/drawer or equivalent navigation alongside the desktop sidebar. hidden md:block is acceptable only when that same example supplies the mobile alternative. Retire an incomplete layout as a copyable positive example.
 
-interface LayoutProps {
-  children: ReactNode;
-}
-
-export default async function MemberLayout({ children }: LayoutProps) {
-  // Server-side protection
-  await protectPage(["member"]);
-
-  return (
-    <div className="flex flex-col min-h-screen">
-      {/* Navbar at top */}
-      <Navbar />
-      
-      {/* Content area with sidebar */}
-      <section className="flex flex-1">
-        {/* Sidebar: hidden mobile, visible tablet+ */}
-        <div className="hidden md:block h-auto flex-shrink-0 border-4 w-[25rem]">
-          <Sidebar />
-        </div>
-        
-        {/* Main content area */}
-        <div className="flex-grow">{children}</div>
-      </section>
-    </div>
-  );
-}
-```
-
-**File:** `src/app/(members)/members-portal/page.tsx`
-```tsx
-import type { Metadata } from "next";
-import MembersPortalPageContent from "./MembersPortalPageContent";
-
-// App Router: page-level title/meta belong here, not in a next/head.
-export const metadata: Metadata = {
-  title: "Members Portal",
-  description: "Members dashboard",
-};
-
-export default function MembersPortalPage() {
-  return <MembersPortalPageContent />;
-}
-```
-
-**File:** `src/app/(members)/members-portal/MembersPortalPageContent.tsx`
-```tsx
-import Page from "@/components/common/Page";
-import Row from "@/components/common/Row";
-
-const MembersPortalPageContent = () => {
-  return (
-    <Page FULL={false} className="">
-      <Row className="">
-        <h1 className="h1">Members Portal</h1>
-        <p className="text-muted-foreground">
-          Welcome to the Members Portal.
-        </p>
-      </Row>
-
-      {/* Add more rows for dashboard widgets */}
-    </Page>
-  );
-};
-
-export default MembersPortalPageContent;
-```
-
-**Layout Hierarchy:**
-1. Layout wraps all pages in route group
-2. Layout provides Navbar + Sidebar
-3. Page content renders in `{children}` slot
-4. PageContent component contains actual UI
+The former copyable layout is withdrawn because it hid navigation on small screens or bypassed the installed shell. Use the verified responsive shell/rail/drawer contract for the pinned kit; do not invent a breakpoint or duplicate the shell. Verify reachable navigation, focus management, keyboard/escape behavior and no page overflow at every supported width.
 
 ---
 
@@ -1136,7 +989,7 @@ import React from "react";
 - [ ] Text remains readable
 - [ ] Buttons accessible on touch
 - [ ] Navigation works on all sizes
-- [ ] No horizontal scroll
+- [ ] No unintended page-level horizontal overflow; intentional bounded tabs/carousels remain usable by touch, keyboard and assistive technology.
 - [ ] Proper spacing maintained
 
 ---
@@ -1216,22 +1069,29 @@ const Section = ({ children, title, className }: SectionProps) => {
 **Purpose:** Simplified responsive grid wrapper
 
 ```tsx
+const mobileCols = { 1: 'grid-cols-1', 2: 'grid-cols-2', 3: 'grid-cols-3', 4: 'grid-cols-4' } as const;
+const tabletCols = { 1: 'md:grid-cols-1', 2: 'md:grid-cols-2', 3: 'md:grid-cols-3', 4: 'md:grid-cols-4' } as const;
+const desktopCols = { 1: 'lg:grid-cols-1', 2: 'lg:grid-cols-2', 3: 'lg:grid-cols-3', 4: 'lg:grid-cols-4' } as const;
+const gaps = { 0: 'gap-0', 2: 'gap-2', 4: 'gap-4', 6: 'gap-6', 8: 'gap-8' } as const;
+
 interface GridProps {
   children: ReactNode;
   cols?: {
-    mobile?: number;
-    tablet?: number;
-    desktop?: number;
+    mobile?: keyof typeof mobileCols;
+    tablet?: keyof typeof tabletCols;
+    desktop?: keyof typeof desktopCols;
   };
-  gap?: number;
+  gap?: keyof typeof gaps;
   className?: string;
 }
 
-const Grid = ({ children, cols = {}, gap = 4, className }: GridProps) => {
+const Grid = ({ children, cols = {}, gap = 4, className = '' }: GridProps) => {
   const { mobile = 1, tablet = 2, desktop = 3 } = cols;
-  
+  if (!(mobile in mobileCols) || !(tablet in tabletCols) || !(desktop in desktopCols) || !(gap in gaps)) {
+    throw new Error('Unsupported Grid variant');
+  }
   return (
-    <div className={`grid grid-cols-${mobile} md:grid-cols-${tablet} lg:grid-cols-${desktop} gap-${gap} ${className}`}>
+    <div className={`grid ${mobileCols[mobile]} ${tabletCols[tablet]} ${desktopCols[desktop]} ${gaps[gap]} ${className}`}>
       {children}
     </div>
   );
@@ -1498,8 +1358,8 @@ CVA enables type-safe component variants with Tailwind CSS. Instead of condition
     ${variant === 'primary' ? 'bg-primary text-primary-foreground' : ''}
     ${variant === 'secondary' ? 'bg-secondary text-secondary-foreground' : ''}
     ${variant === 'ghost' ? 'bg-transparent hover:bg-accent' : ''}
-    ${size === 'sm' ? 'h-8 text-sm' : ''}
-    ${size === 'md' ? 'h-10 text-base' : ''}
+    ${size === 'sm' ? 'min-h-11 min-w-11 text-sm' : ''}
+    ${size === 'md' ? 'min-h-11 min-w-11 text-base' : ''}
     ${size === 'lg' ? 'h-12 text-lg' : ''}
   `}
 >
@@ -1507,70 +1367,16 @@ CVA enables type-safe component variants with Tailwind CSS. Instead of condition
 </button>
 
 // With CVA: Clean, type-safe variants
-<Button variant="primary" size="md">{children}</Button>
+<Button variant="default" size="default">{children}</Button>
 ```
 
 #### Creating Variant Recipes
 
-```typescript
-// src/components/ui/button.tsx
+Consume the kit Button, including its verified variants, sizes and asChild composition. Do not replace it with this shortened implementation. An educational internal excerpt must be source-matched and labeled as an excerpt, not installation code. Preserve Link composition through the kit API.
 
-import { cva, type VariantProps } from 'class-variance-authority';
-import { cn } from '@/lib/utils';
-import * as React from 'react';
+Use the installed Shadcn Button as the component, retaining its verified Slot/asChild, ref and native-prop behavior. Do not replace it with the former simplified button implementation. Add a bounded variant only after verifying the installed API. All actionable sizes keep a 44×44px minimum target.
 
-// Define the variant recipe
-export const buttonVariants = cva(
-  // Base classes (always applied)
-  'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
-  {
-    variants: {
-      // Intent variants
-      variant: {
-        default: 'bg-primary text-primary-foreground hover:bg-primary/90',
-        destructive: 'bg-destructive text-destructive-foreground hover:bg-destructive/90',
-        outline: 'border border-input bg-background hover:bg-accent hover:text-accent-foreground',
-        secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
-        ghost: 'hover:bg-accent hover:text-accent-foreground',
-        link: 'text-primary underline-offset-4 hover:underline',
-      },
-      // Size variants
-      size: {
-        default: 'h-10 px-4 py-2',
-        sm: 'h-9 rounded-md px-3',
-        lg: 'h-11 rounded-md px-8',
-        icon: 'h-10 w-10',
-      },
-    },
-    // Default values
-    defaultVariants: {
-      variant: 'default',
-      size: 'default',
-    },
-  }
-);
-
-// Type-safe props
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
-  asChild?: boolean;
-}
-
-// Component implementation
-export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, ...props }, ref) => {
-    return (
-      <button
-        className={cn(buttonVariants({ variant, size, className }))}
-        ref={ref}
-        {...props}
-      />
-    );
-  }
-);
-Button.displayName = 'Button';
-```
+---
 
 #### Type-Safe Props
 
@@ -1578,7 +1384,7 @@ CVA automatically generates TypeScript types from your variants:
 
 ```typescript
 // These are automatically typed!
-<Button variant="primary" />     // ✅ Valid
+<Button variant="default" />     // ✅ Valid
 <Button variant="secondary" />   // ✅ Valid
 <Button variant="invalid" />     // ❌ TypeScript error
 
@@ -1603,61 +1409,9 @@ Design tokens are the single source of truth for visual design decisions. They'r
 
 #### CSS Variables in globals.scss
 
-```scss
-// src/app/globals.scss
+Use the complete mode declarations in TOKEN_FILE.md §1 and the canonical token contract in GLOBAL_DESIGN_SYSTEM_HANDBOOK.md §2. The former partial CSS block is withdrawn as a drop-in setup recipe: it omitted required semantic and role tokens. Preserve every required category, foreground pairing, radius and mode override when instantiating the stylesheet.
 
-@layer base {
-  :root {
-    // Background & Foreground
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    // Card
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    // Popover
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    // Primary (brand color)
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    // Secondary
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    // Muted (subtle backgrounds)
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    // Accent (hover states)
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    // Destructive (errors, delete actions)
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    // Border, Input, Ring
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    // Border Radius
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    // ... dark mode overrides
-  }
-}
-```
+---
 
 #### Tailwind Token Mapping
 
@@ -1911,37 +1665,19 @@ Consistent class ordering improves readability and reduces merge conflicts.
 
 #### Explicit Dark Variants (When Needed)
 
+Use semantic tokens for both modes. If a required semantic state is missing, extend the approved token contract and verify all modes; do not create a numbered-color bypass.
+
 ```tsx
-// For cases where tokens don't cover your needs
-<div className="bg-white dark:bg-gray-900">
-  <p className="text-gray-600 dark:text-gray-400">
-    This text adapts to dark mode
-  </p>
+<div className="bg-background text-foreground">
+  <p className="text-muted-foreground">This text follows the active token mode.</p>
 </div>
 ```
 
+---
+
 #### Dark Mode Toggle
 
-```typescript
-// src/lib/theme.ts
-
-export const toggleDarkMode = () => {
-  document.documentElement.classList.toggle('dark');
-  
-  // Persist preference
-  const isDark = document.documentElement.classList.contains('dark');
-  localStorage.setItem('theme', isDark ? 'dark' : 'light');
-};
-
-export const initializeTheme = () => {
-  const stored = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  
-  if (stored === 'dark' || (!stored && prefersDark)) {
-    document.documentElement.classList.add('dark');
-  }
-};
-```
+Consume the existing theme provider and ThemeToggle for light, dark and system modes. Do not create a second controller that edits the HTML class or localStorage.theme independently of the provider. A standalone demonstration, if retained, must be explicitly non-kit and cannot be copied into a kit project.
 
 ---
 
@@ -2034,7 +1770,7 @@ export function cn(...inputs: ClassValue[]) {
 
 // Override conflicts (twMerge handles this)
 cn('p-4', 'p-6')  // Result: 'p-6' (not 'p-4 p-6')
-cn('text-red-500', 'text-blue-500')  // Result: 'text-blue-500'
+cn('text-destructive', 'text-primary')  // Result: 'text-primary'
 ```
 
 ---
@@ -2089,7 +1825,7 @@ This manual was updated in v1.1 based on lessons learned during Cyberize Agentic
 
 **Root cause:** A win in Run 001 produced a real artifact (the Locked Palette table) but the Factory had no manual to formalize the *pattern* behind the artifact. Result: future projects would re-derive the lesson instead of inheriting it.
 
-**Fix applied to this manual:** Added Rule Zero-B as the companion posture to Rule Zero. Authored `THEMING_MANUAL_v1.0.md` as the standalone deep dive. Updated `APP_ARCHITECTURE_MANUAL` and `HANDOFF_PACKAGE_PLAYBOOK` with cross-references. Bumped this manual to v1.2.
+**Fix applied to this manual:** Added Rule Zero-B as the companion posture to Rule Zero. Authored `THEMING_MANUAL.md` as the standalone deep dive. Updated `APP_ARCHITECTURE_MANUAL` and `HANDOFF_PACKAGE_PLAYBOOK` with cross-references. Bumped this manual to v1.2.
 
 **Pattern to watch for in future runs:** When a project discovers a doctrine win mid-execution and captures it in `_project/CLAUDE.md`, the Phase 8 retrospective must propose promotion to evergreen methodology. Doctrine that stays in `_project/` benefits one run; doctrine that moves to `APP_FACTORY/` benefits every future run.
 
@@ -2116,9 +1852,10 @@ This manual is a **living document**. Updates happen at three triggers:
 
 | Version | Date | Changes |
 |---|---|---|
+| 1.5 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-003/096, FC-009, FC-041, FC-071, FC-072, FC-073, FC-076, FC-077, FC-078, FC-079, FC-080, FC-082, FC-083, MC-01 |
 | 1.4 | 2026-07-08 | **Wave 5 micro (audit sync).** Cross-references canonical-name only: the PHANTOM `HANDOFF_PACKAGE_PLAYBOOK_v1.1.md` reference killed (that version never existed — the audit's forward-dated collector's item) plus the stale handbook/registry/theming/build-phase versioned refs (F-032/F-011). Three broken-arrow mojibake sequences repaired in the component-approach line (F-012 — review counted 1; scan found 3). Standard header block adopted (F-018). Nothing else — MODEL doc; Rule Zero, Rule Zero-B, teaching examples, and the D-018 Update Discipline appendix untouched. |
 | 1.3 | 2026-06-28 | Renamed `ThemeToggler` → `ThemeToggle` (the real shipped component) throughout; dropped deleted-orphan references; re-pointed deleted-demo teaching examples to live files (Example 1 → public home, Example 2 → illustrative); replaced `next/head` (Pages Router) with the App-Router `export const metadata` API in all page examples + the VS Code snippet. Kit Hardening Gate 10. |
-| 1.2 | 2026-06-02 | Added Rule Zero-B (theming as the second foundational posture). Added TOC entries for Rule Zero and Rule Zero-B. Authored companion `THEMING_MANUAL_v1.0.md`. Added Lesson 9 appendix. Born from Cyber Pharma Run 002. |
+| 1.2 | 2026-06-02 | Added Rule Zero-B (theming as the second foundational posture). Added TOC entries for Rule Zero and Rule Zero-B. Authored companion `THEMING_MANUAL.md`. Added Lesson 9 appendix. Born from Cyber Pharma Run 002. |
 | 1.1 | 2026-05-31 | Added Rule Zero (mobile-first foundational posture) at top. Added Lesson 5 appendix. Fixed UTF-8 encoding artifacts throughout. Born from Cyberize Run 001. |
 | 1.0 | 2025-12-30 | Initial manual authored |
 

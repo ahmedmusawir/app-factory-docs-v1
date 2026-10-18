@@ -1,6 +1,6 @@
 # AUTHENTICATION & SUPABASE INTEGRATION MANUAL
 
-> **Version:** 1.4 · **Date:** 2026-08-05 · **Status:** Active
+> **Version:** 1.5 · **Date:** 2026-10-18 · **Status:** Active
 > **Tier:** 4 — Reference Manuals · **Pairs with:** STARTER_KIT_HANDBOOK, DATABASE_MANUAL, API_AND_SERVICES_MANUAL, FRONTEND_FIRST_PLAYBOOK, RECON_QUESTIONNAIRE, STATE_MANAGEMENT_MANUAL
 
 > **Project:** Stark SaaS Starter Kit
@@ -28,7 +28,7 @@
 | Logout endpoint | `/api/auth/logout` | POST to clear session |
 | Signup endpoint | `/api/auth/signup` | POST email/password/full_name |
 | Email confirmation | `/api/auth/confirm` | GET callback |
-| User creation (admin/superadmin) | `addMember` / `addUser` server actions | role-gated layout + service-role admin client |
+| User creation (admin/superadmin) | Verify named actions against pinned kit | Each invocation checks caller, current role, allowed target and privileged-target protection before elevated capability |
 | Client auth state | `src/store/useAuthStore.ts` | Zustand store with user + role flags |
 | Server-side page protection | `src/utils/supabase/actions.ts` | `protectPage([AppRole.X])` |
 | Login form UI | `src/components/auth/LoginForm.tsx` | Pre-wired to `/api/auth/login` |
@@ -63,15 +63,7 @@ export default async function SomePage() {
 ```
 
 **For a protected route:**
-```typescript
-import { protectPage } from "@/utils/supabase/actions";
-import { AppRole } from "@/utils/app-role";
-
-export default async function AdminLayout({ children }) {
-  await protectPage([AppRole.ADMIN]);
-  return <>{children}</>;
-}
-```
+**Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance.
 
 **In a Client Component:**
 ```typescript
@@ -152,7 +144,7 @@ If you're unsure whether a service is legitimate, surface to the operator BEFORE
 2. **Session persistence** - Middleware keeps sessions alive
 3. **Role-based access** - Three-tier role system (superadmin, admin, member)
 4. **Hard reloads** - Force full page reload after auth changes to sync server/client state
-5. **Table-driven roles** - The `user_roles` table is the single source of truth for authorization (kit: `supabase/setup.sql`), resolved server-side via the kit's `get-user-role.ts`. `user_metadata` may carry a role ONLY as a creation-time transport through the protected admin channel — authorization is NEVER read from it.
+Roles must resolve from an authoritative server-side store. Creation and mutation require verified per-call authorization and a role input that untrusted signup cannot control. The historical Mark IV transport is not a verified safe recipe for the current kit; obtain pinned trigger and caller evidence before implementation.
 
 ---
 
@@ -322,7 +314,7 @@ export async function updateSession(request: NextRequest) {
 - Calls `getUser()` to refresh session
 - Prevents session expiration during active use
 
-**Middleware Entry:** `src/middleware.ts`
+**Middleware Entry:** the verified framework-version entry
 
 ```typescript
 import { updateSession } from "@/utils/supabase/middleware";
@@ -399,31 +391,9 @@ window.location.reload();
 
 ### Complete Registration Flow
 
-```
-1. User fills RegisterForm
-   ↓
-2. Form validates with Zod schema
-   ↓
-3. Form calls POST /api/auth/signup
-   ↓
-4. API route calls supabase.auth.signUp() with user_metadata
-   ↓
-5. Supabase creates user; the `handle_new_user()` trigger applies the default role (member) INTO `user_roles` from the creation-time metadata transport
-   ↓
-6. User receives confirmation email (if enabled)
-   ↓
-7. Form redirects to /dashboard (⚠️ currently 404s)
-```
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-**Default User Metadata:**
-```typescript
-{
-  name: "User Name",
-  is_qr_superadmin: 0,
-  is_qr_admin: 0,
-  is_qr_member: 1
-}
-```
+At the trusted public-signup boundary, allow only approved profile fields and force the member role independently of submitted metadata. The provider-side creation path must also ignore or reject public role keys, so direct provider signup cannot bypass the endpoint. Privileged role assignment uses a separately authorized protected channel. Trigger hardening and a negative direct-provider test are required before promotion: role=admin submitted publicly must not produce an admin.
 
 ---
 
@@ -466,20 +436,7 @@ All auth routes are in `src/app/api/auth/`.
 ```
 
 **Response (Success):**
-```typescript
-{
-  user: {
-    id: string;
-    email: string;
-    user_metadata: {
-      name: string;
-      is_qr_superadmin: 0 | 1;
-      is_qr_admin: 0 | 1;
-      is_qr_member: 0 | 1;
-    }
-  }
-}
-```
+**Legacy response example withdrawn:** client metadata flags are not authorization or first-render identity. Use the verified server-resolved user/role contract for the pinned kit.
 
 **Response (Error):**
 ```typescript
@@ -489,30 +446,7 @@ All auth routes are in `src/app/api/auth/`.
 ```
 
 **Implementation:**
-```typescript
-export async function POST(req: NextRequest) {
-  const { email, password } = await req.json();
-  const supabase = await createClient();
-
-  const { data, error } = await supabase.auth.signInWithPassword({
-    email,
-    password,
-  });
-
-  if (error) {
-    return NextResponse.json({ error: error.message }, { status: 401 });
-  }
-
-  return NextResponse.json({ user: data.user }, { 
-    status: 200,
-    headers: {
-      "Cache-Control": "no-store, no-cache, must-revalidate",
-      "Pragma": "no-cache",
-      "Expires": "0",
-    }
-  });
-}
-```
+**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.
 
 ---
 
@@ -533,8 +467,13 @@ export async function POST(req: NextRequest) {
 ```typescript
 export async function POST(req: NextRequest) {
   const supabase = await createClient();
-  await supabase.auth.signOut();
-
+  const { error } = await supabase.auth.signOut();
+  if (error) {
+    return NextResponse.json(
+      { message: "Remote sign-out could not be confirmed. Retry sign-out." },
+      { status: 503 }
+    );
+  }
   return NextResponse.json(
     { message: "Logged out successfully" },
     { status: 200 }
@@ -546,54 +485,9 @@ export async function POST(req: NextRequest) {
 
 ### POST /api/auth/signup
 
-**Purpose:** Register new user
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-**Request:**
-```typescript
-{
-  email: string;
-  password: string;
-  user_metadata: {
-    name: string;
-    is_qr_superadmin: 0 | 1;
-    is_qr_admin: 0 | 1;
-    is_qr_member: 0 | 1;
-  }
-}
-```
-
-**Response (Success):**
-```typescript
-{
-  user: {
-    id: string;
-    email: string;
-    user_metadata: { ... }
-  }
-}
-```
-
-**Implementation:**
-```typescript
-export async function POST(req: NextRequest) {
-  const { email, password, user_metadata } = await req.json();
-  const supabase = await createClient();
-
-  const { data, error } = await supabase.auth.signUp({
-    email,
-    password,
-    options: {
-      data: user_metadata,
-    },
-  });
-
-  if (error) {
-    return NextResponse.json({ error: error.message }, { status: 400 });
-  }
-
-  return NextResponse.json({ user: data.user }, { status: 201 });
-}
-```
+At the trusted public-signup boundary, allow only approved profile fields and force the member role independently of submitted metadata. The provider-side creation path must also ignore or reject public role keys, so direct provider signup cannot bypass the endpoint. Privileged role assignment uses a separately authorized protected channel. Trigger hardening and a negative direct-provider test are required before promotion: role=admin submitted publicly must not produce an admin.
 
 ---
 
@@ -625,7 +519,20 @@ export async function GET(request: NextRequest) {
     });
 
     if (!error) {
-      return NextResponse.redirect(new URL(next, request.url));
+      const origin = new URL(request.url).origin;
+      const fallback = new URL("/", origin);
+      const allowedPaths = new Set(["/"]); // Extend only with approved local destinations.
+      try {
+        const destination = new URL(next, origin);
+        if (destination.origin === origin && allowedPaths.has(destination.pathname)) {
+          destination.search = "";
+          destination.hash = "";
+          return NextResponse.redirect(destination);
+        }
+      } catch {
+        // Malformed destinations use the fixed safe fallback.
+      }
+      return NextResponse.redirect(fallback);
     }
   }
 
@@ -643,144 +550,15 @@ API route. The legacy `POST /api/auth/superadmin-add-user` route was removed (Ga
 - Admin → `addMember` (`(admin)/admin-portal/actions.ts`) — creates a `member`
 - Superadmin → `addUser` (`(superadmin)/superadmin-portal/actions.ts`) — creates admin/member
 
-**Authorization:** the route-group layout gates access (`protectPage([AppRole.X])`); only
-then does the action call the service-role admin client. **Role + name:** both are written
-into `user_metadata` (`role`, `full_name`) and applied at creation by the **Mark IV**
-`handle_new_user()` trigger. Superadmins are created in the Supabase console only
-(console-only doctrine).
+**Authorization:** the server action itself must authenticate and authorize each invocation before any privileged client call. A route-group layout is not an action authorization boundary. Resolve roles from the authoritative server store and allow only explicitly permitted target roles. Do not use a user-writable metadata trigger to assign privilege. The historical action/trigger recipe is withdrawn pending pinned kit verification.
 
 ---
 
 ## Client-Side Auth (Zustand Store)
 
-**File:** `src/store/useAuthStore.ts`
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-> ⚠️ **Legacy-shape advisory (v1.3):** the store snippets in this section (and in "Common Patterns" Pattern 4 + "Troubleshooting" below) show a **legacy shape** — `is_qr_*` flags read from `user_metadata`, QR-era naming. The current kit resolves roles from the **`user_roles` table** via `get-user-role.ts`, and the store's actual shape differs. **Verify the store on disk before consuming (recon Q3.6); do not copy these snippets into new code.** Client role flags are display hints only — never authorization (that is server-side, from the table). Full sample resync against the kit is a queued kit-verification touch.
-
-### Store Structure
-
-```typescript
-interface AuthState {
-  user: any | null;
-  roles: {
-    is_qr_superadmin: number;
-    is_qr_admin: number;
-    is_qr_member: number;
-  };
-  isAuthenticated: boolean;
-  isLoading: boolean;
-  login: (email: string, password: string) => Promise<void>;
-  logout: () => Promise<void>;
-}
-```
-
-### Login Method
-
-```typescript
-login: async (email, password) => {
-  set({ isLoading: true });
-  
-  const response = await fetch("/api/auth/login", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email, password }),
-  });
-
-  if (!response.ok) {
-    const result = await response.json();
-    throw new Error(result.error || "Login failed");
-  }
-
-  const { user } = await response.json();
-  const roles = {
-    is_qr_superadmin: user.user_metadata?.is_qr_superadmin || 0,
-    is_qr_admin: user.user_metadata?.is_qr_admin || 0,
-    is_qr_member: user.user_metadata?.is_qr_member || 0,
-  };
-
-  set({
-    user,
-    roles,
-    isAuthenticated: true,
-    isLoading: false,
-  });
-
-  // Determine redirect based on role hierarchy
-  let redirectPath = "/members-portal";
-  if (roles.is_qr_superadmin === 1) {
-    redirectPath = "/superadmin-portal";
-  } else if (roles.is_qr_admin === 1) {
-    redirectPath = "/admin-portal";
-  }
-
-  localStorage.setItem("redirectAfterLogin", redirectPath);
-  
-  // Force reload to sync server/client state
-  window.location.reload();
-}
-```
-
-**Role Priority:**
-1. Superadmin (highest)
-2. Admin
-3. Member (default)
-
----
-
-### Logout Method
-
-```typescript
-logout: async () => {
-  await fetch("/api/auth/logout", { method: "POST" });
-
-  set({
-    user: null,
-    roles: {
-      is_qr_superadmin: 0,
-      is_qr_admin: 0,
-      is_qr_member: 0,
-    },
-    isAuthenticated: false,
-  });
-
-  window.location.reload();
-}
-```
-
----
-
-### Usage in Components
-
-```typescript
-"use client";
-
-import { useAuthStore } from "@/store/useAuthStore";
-
-export default function MyComponent() {
-  const { user, isAuthenticated, login, logout } = useAuthStore();
-
-  const handleLogin = async () => {
-    try {
-      await login("user@example.com", "password");
-    } catch (error) {
-      console.error(error.message);
-    }
-  };
-
-  return (
-    <div>
-      {isAuthenticated ? (
-        <>
-          <p>Welcome, {user.email}</p>
-          <button onClick={logout}>Logout</button>
-        </>
-      ) : (
-        <button onClick={handleLogin}>Login</button>
-      )}
-    </div>
-  );
-}
-```
+Server guards control page access; server-resolved { user, role } props establish first-render identity. Retire client HOC route protection and post-mount identity fetching as authoritative patterns. Zustand handles interaction and session-event reactions, with no persisted authorization authority. Display helpers are display-only and use explicit role sets; they never authorize an operation.
 
 ---
 
@@ -790,31 +568,7 @@ export default function MyComponent() {
 
 **File:** `src/utils/supabase/actions.ts`
 
-```typescript
-import { createClient } from "./server";
-import { redirect } from "next/navigation";
-import { getUserRole, AppRole } from "@/utils/get-user-role";
-
-export async function protectPage(allowedRoles: AppRole[]) {
-  const supabase = await createClient();
-  
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-
-  if (!user) {
-    redirect("/auth");
-  }
-
-  const userRole = getUserRole(user);
-
-  if (!userRole || !allowedRoles.includes(userRole)) {
-    redirect("/auth");
-  }
-
-  return user;
-}
-```
+**Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance.
 
 **Key Points:**
 - ✅ Runs on server (Server Component or layout)
@@ -828,52 +582,19 @@ export async function protectPage(allowedRoles: AppRole[]) {
 ### Usage in Layouts
 
 **Members Layout:**
-```typescript
-// src/app/(members)/layout.tsx
-import { protectPage } from "@/utils/supabase/actions";
-
-export default async function MemberLayout({ children }) {
-  await protectPage(["member"]);
-
-  return (
-    <div>
-      <Navbar />
-      <Sidebar />
-      {children}
-    </div>
-  );
-}
-```
+**Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance.
 
 **Admin Layout:**
-```typescript
-// src/app/(admin)/layout.tsx
-export default async function AdminLayout({ children }) {
-  await protectPage(["admin"]);
-  // ...
-}
-```
+**Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance.
 
 **Superadmin Layout:**
-```typescript
-// src/app/(superadmin)/layout.tsx
-export default async function SuperadminLayout({ children }) {
-  await protectPage(["superadmin"]);
-  // ...
-}
-```
+**Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance.
 
 ---
 
 ### Multiple Roles
 
-```typescript
-// Allow both admin and superadmin
-await protectPage(["admin", "superadmin"]);
-
-// Allow all authenticated users
-await protectPage(["member", "admin", "superadmin"]);
-```
+**Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance.
 
 ---
 
@@ -905,19 +626,9 @@ staging, and was invisible in dev — see BUG_FIX_PLAYBOOK (mechanism-naming) an
 
 ### ✅ CORRECT — server-resolved, props down
 
-```tsx
-// layout.tsx (SERVER component) — the guard already knows the answer
-const { user, role } = await protectPage([AppRole.ADMIN]);
-return <AuthedShell user={user} role={role}>{children}</AuthedShell>;
+**Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance.
 
-// Navbar — born holding the card; no fetch, no window, no race
-const Navbar = ({ user, role }: { user: SupabaseUser; role: AppRole }) => {
-  const navLinks = buildLinks(role);   // unconditional — structurally never empty
-  ...
-};
-```
-
-`protectPage` returns `{ user, role }` — it already computed both to guard the route;
+Do not assume the page guard returns `{ user, role }`; verify the pinned implementation and callers before destructuring its result.
 returning them costs zero queries. The same server check that admits the user writes
 the user's menu: one source, one moment, correct in the first server-rendered paint.
 
@@ -944,7 +655,7 @@ the user's menu: one source, one moment, correct in the first server-rendered pa
 export type AppRole = "superadmin" | "admin" | "member";
 ```
 
-**How resolution works (doctrine, not a code copy):** `get-user-role.ts` resolves the authenticated user's role **from the `user_roles` table** (server-side). One row per user; the row is written at creation by the Mark IV `handle_new_user()` trigger and is LOCKED to the admin path afterward.
+Roles must resolve from an authoritative server-side store. Creation and mutation require verified per-call authorization and a role input that untrusted signup cannot control. The historical Mark IV transport is not a verified safe recipe for the current kit; obtain pinned trigger and caller evidence before implementation.
 
 > 📁 **The kit file on disk is the ground truth.** Read `src/utils/get-user-role.ts` and `supabase/setup.sql` in the repo you are working on (recon Q3.2/Q5.3). This manual intentionally does not carry an implementation copy that can drift — an earlier edition of this section showed a `user_metadata`-reading implementation that no longer matches the kit (F-042; corrected v1.3).
 
@@ -969,17 +680,15 @@ superadmin (highest privilege)
 
 **⚠️ Important:** Roles are **exclusive** by default. If you want superadmin to access admin routes, you must explicitly allow it:
 
-```typescript
-await protectPage(["admin", "superadmin"]);
-```
+**Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance.
 
 ---
 
 ### Where Roles Live (v1.3 — the F-042 correction)
 
-**Source of truth: the `user_roles` table** (kit: `supabase/setup.sql`) — one row per user; authorization is resolved from it server-side via `get-user-role.ts`; post-creation role changes go through the locked admin path only.
+Roles must resolve from an authoritative server-side store. Creation and mutation require verified per-call authorization and a role input that untrusted signup cannot control. The historical Mark IV transport is not a verified safe recipe for the current kit; obtain pinned trigger and caller evidence before implementation.
 
-**Creation-time transport:** the admin creation flow (`addMember`/`addUser` server actions, service-role client) writes the intended role into `user_metadata` so the Mark IV `handle_new_user()` trigger can apply it INTO `user_roles` at creation. That is **transport, not storage** — after the trigger fires, the table row is the only thing that matters.
+Roles must resolve from an authoritative server-side store. Creation and mutation require verified per-call authorization and a role input that untrusted signup cannot control. The historical Mark IV transport is not a verified safe recipe for the current kit; obtain pinned trigger and caller evidence before implementation.
 
 **⛔ FORBIDDEN:**
 - Reading `user_metadata` for ANY authorization decision, client or server (recon Q3.4 smell).
@@ -996,7 +705,7 @@ await protectPage(["admin", "superadmin"]);
 ```
 Every Request
     ↓
-Next.js Middleware (src/middleware.ts)
+Next.js Middleware (verified entry for the installed framework)
     ↓
 updateSession() (src/utils/supabase/middleware.ts)
     ↓
@@ -1039,7 +748,7 @@ Continue to route handler
 - `sb-<project-ref>-auth-token-code-verifier` - PKCE verifier
 
 **Cookie Options:**
-- `httpOnly: true` - Not accessible via JavaScript
+- HttpOnly attributes — verify against the approved kit session architecture; no blanket value is prescribed here
 - `secure: true` - HTTPS only (production)
 - `sameSite: 'lax'` - CSRF protection
 - `path: '/'` - Available site-wide
@@ -1105,20 +814,7 @@ const formSchema = z.object({
 ```
 
 **Submit Handler:**
-```typescript
-const handleSubmit = async (data) => {
-  setError(null);
-  setIsLoading(true);
-  
-  try {
-    await login(data.email, data.password);
-    // Store triggers reload
-  } catch (error) {
-    setError(error.message);
-    setIsLoading(false);
-  }
-};
-```
+**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.
 
 **Redirect Logic:**
 ```typescript
@@ -1135,55 +831,9 @@ useEffect(() => {
 
 ### RegisterForm Component
 
-**File:** `src/components/auth/RegisterForm.tsx`
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-**Features:**
-- Name, email, password, confirm password fields
-- Password matching validation
-- Default member role assignment
-- Error display
-
-**Form Schema:**
-```typescript
-const formSchema = z.object({
-  name: z.string().min(1, "Name is required"),
-  email: z.string().min(1, "Email is required").email("Please enter a valid email"),
-  password: z.string().min(1, "Password is required"),
-  passwordConfirm: z.string().min(1, "Password confirmation is required"),
-}).refine((data) => data.password === data.passwordConfirm, {
-  message: "Passwords don't match",
-  path: ["passwordConfirm"],
-});
-```
-
-**Submit Handler:**
-```typescript
-const handleSubmit = async (data) => {
-  const user_metadata = {
-    name: data.name,
-    is_qr_superadmin: 0,
-    is_qr_admin: 0,
-    is_qr_member: 1,
-  };
-
-  const response = await fetch("/api/auth/signup", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      email: data.email,
-      password: data.password,
-      user_metadata,
-    }),
-  });
-
-  if (response.ok) {
-    router.push("/dashboard"); // ⚠️ Currently 404s
-  } else {
-    const result = await response.json();
-    setError(result.error);
-  }
-};
-```
+At the trusted public-signup boundary, allow only approved profile fields and force the member role independently of submitted metadata. The provider-side creation path must also ignore or reject public role keys, so direct provider signup cannot bypass the endpoint. Privileged role assignment uses a separately authorized protected channel. Trigger hardening and a negative direct-provider test are required before promotion: role=admin submitted publicly must not produce an admin.
 
 ---
 
@@ -1261,87 +911,23 @@ export default function MyComponent() {
 
 ### Pattern 3: Protected Page (Server Component)
 
-```typescript
-import { protectPage } from "@/utils/supabase/actions";
-
-export default async function ProtectedPage() {
-  const user = await protectPage(["member"]);
-  
-  return (
-    <div>
-      <h1>Protected Content</h1>
-      <p>User: {user.email}</p>
-    </div>
-  );
-}
-```
+**Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance.
 
 ---
 
 ### Pattern 4: Role-Based UI (Client)
 
-> ⚠️ Legacy-shape snippet (`is_qr_*` store flags) — see the advisory in "Client-Side Auth". Client role flags are display hints only; authorization stays server-side (`user_roles` via `protectPage`).
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-```typescript
-"use client";
-
-import { useAuthStore } from "@/store/useAuthStore";
-
-export default function Dashboard() {
-  const { roles } = useAuthStore();
-  
-  return (
-    <div>
-      {roles.is_qr_superadmin === 1 && (
-        <button>Superadmin Action</button>
-      )}
-      
-      {roles.is_qr_admin === 1 && (
-        <button>Admin Action</button>
-      )}
-      
-      <button>Member Action</button>
-    </div>
-  );
-}
-```
+Server guards control page access; server-resolved { user, role } props establish first-render identity. Retire client HOC route protection and post-mount identity fetching as authoritative patterns. Zustand handles interaction and session-event reactions, with no persisted authorization authority. Display helpers are display-only and use explicit role sets; they never authorize an operation.
 
 ---
 
 ### Pattern 5: Conditional Navbar Links
 
-```typescript
-"use client";
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-import { createClient } from "@/utils/supabase/client";
-import { useEffect, useState } from "react";
-
-export default function Navbar() {
-  const [user, setUser] = useState(null);
-  const supabase = createClient();
-  
-  useEffect(() => {
-    const getUser = async () => {
-      const { data: { user } } = await supabase.auth.getUser();
-      setUser(user);
-    };
-    getUser();
-  }, []);
-  
-  return (
-    <nav>
-      {user ? (
-        <>
-          <Link href="/dashboard">Dashboard</Link>
-          <button onClick={logout}>Logout</button>
-        </>
-      ) : (
-        <Link href="/auth">Login</Link>
-      )}
-    </nav>
-  );
-}
-```
+Server guards control page access; server-resolved { user, role } props establish first-render identity. Retire client HOC route protection and post-mount identity fetching as authoritative patterns. Zustand handles interaction and session-event reactions, with no persisted authorization authority. Display helpers are display-only and use explicit role sets; they never authorize an operation.
 
 ---
 
@@ -1377,29 +963,7 @@ export default async function MyPosts() {
 
 ### Pattern 7: Update User Metadata
 
-```typescript
-// API Route
-export async function POST(req: NextRequest) {
-  const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
-  
-  if (!user) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  }
-  
-  const { name } = await req.json();
-  
-  const { data, error } = await supabase.auth.updateUser({
-    data: { name }
-  });
-  
-  if (error) {
-    return NextResponse.json({ error: error.message }, { status: 400 });
-  }
-  
-  return NextResponse.json({ user: data.user });
-}
-```
+**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.
 
 ---
 
@@ -1453,7 +1017,7 @@ const supabase = await createClient();
 3. HTTPS required but using HTTP
 
 **Fixes:**
-1. Check `src/middleware.ts` is present and configured
+1. Check the verified framework-version entry is present and configured
 2. Verify `NEXT_PUBLIC_SITE_URL` is set correctly
 3. Use HTTPS in production
 4. Check browser cookie settings
@@ -1538,7 +1102,7 @@ const supabase = await createClient();
    - Prevents man-in-the-middle attacks
 
 6. **Set proper cookie options**
-   - `httpOnly: true`
+   - HttpOnly only where compatible with the verified session architecture
    - `secure: true` (production)
    - `sameSite: 'lax'`
 
@@ -1681,27 +1245,7 @@ import { updateSession } from "@/utils/supabase/middleware";
 
 ### Common Commands
 
-```typescript
-// Get current user (server)
-const supabase = await createClient();
-const { data: { user } } = await supabase.auth.getUser();
-
-// Get current user (client)
-const supabase = createClient();
-const { data: { user } } = await supabase.auth.getUser();
-
-// Protect page
-const user = await protectPage(["member"]);
-
-// Get user role
-const role = getUserRole(user);
-
-// Login (via store)
-await useAuthStore.getState().login(email, password);
-
-// Logout (via store)
-await useAuthStore.getState().logout();
-```
+**Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance.
 
 ---
 
@@ -1753,450 +1297,36 @@ src/
 │       ├── middleware.ts           # Session refresh
 │       ├── actions.ts              # protectPage
 │       └── fetchUserData.ts        # User data helper
-└── middleware.ts                   # Next.js middleware
+└── <verified-session-entry>        # framework-version-specific entry
 ```
 
 ---
 
 ## 12. SuperAdmin User Management
 
-SuperAdmin users have elevated privileges to create, view, and delete other users.
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-### SuperAdmin Role Definition
+The role table is the only authorization authority. Never authorize from user_metadata or a profile mirror. Superadmin creation is console-only; no app-side superadmin creation route is provided. Retire the metadata-authorized add-user, delete-user and get-users recipes. Future privileged list/delete operations remain possible only with trusted current-role lookup, operation-local authorization before elevated capability, an approved target-role allowlist and privileged-target protection. Profile mirrors contain profile data, not authorization columns. Registration metadata is not authorization.
 
-```typescript
-// User metadata flags
-interface UserRoleFlags {
-  is_qr_superadmin: 0 | 1;  // Full access + user management
-  is_qr_admin: 0 | 1;       // Admin portal access
-  is_qr_member: 0 | 1;      // Member/read-only access
-}
-```
-
-### SuperAdmin API: Create User
-
-```typescript
-// src/app/api/superadmin/add-user/route.ts
-
-import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@/utils/supabase/server';
-
-export async function POST(req: NextRequest) {
-  try {
-    const supabase = await createClient();
-
-    // 1. Verify requester is SuperAdmin
-    const { data: { user: requester } } = await supabase.auth.getUser();
-    if (!requester) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-    }
-
-    const requesterMeta = requester.user_metadata;
-    if (requesterMeta?.is_qr_superadmin !== 1) {
-      return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
-    }
-
-    // 2. Parse request body
-    const { email, password, is_qr_superadmin, is_qr_admin, is_qr_member } = await req.json();
-
-    // 3. Validate at least one role
-    if (!is_qr_superadmin && !is_qr_admin && !is_qr_member) {
-      return NextResponse.json(
-        { error: 'At least one role must be assigned' },
-        { status: 400 }
-      );
-    }
-
-    // 4. Create user in Supabase Auth
-    const { data: authData, error: authError } = await supabase.auth.admin.createUser({
-      email,
-      password,
-      email_confirm: true, // Auto-confirm email
-      user_metadata: {
-        is_qr_superadmin: is_qr_superadmin || 0,
-        is_qr_admin: is_qr_admin || 0,
-        is_qr_member: is_qr_member || 0,
-      },
-    });
-
-    if (authError) {
-      return NextResponse.json({ error: authError.message }, { status: 400 });
-    }
-
-    // 5. Optionally create in mirror table (see next section)
-    await supabase.from('app_users').insert({
-      id: authData.user.id,
-      email,
-      role: is_qr_superadmin ? 'SuperAdmin' : is_qr_admin ? 'Admin' : 'Member',
-    });
-
-    return NextResponse.json({ user: authData.user }, { status: 201 });
-  } catch (error) {
-    console.error('Error creating user:', error);
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
-  }
-}
-```
-
-### SuperAdmin API: Delete User
-
-```typescript
-// src/app/api/superadmin/delete-user/route.ts
-
-import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@/utils/supabase/server';
-
-export async function POST(req: NextRequest) {
-  try {
-    const supabase = await createClient();
-
-    // 1. Verify requester is SuperAdmin
-    const { data: { user: requester } } = await supabase.auth.getUser();
-    if (!requester || requester.user_metadata?.is_qr_superadmin !== 1) {
-      return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
-    }
-
-    // 2. Get user ID to delete
-    const { userId } = await req.json();
-
-    // 3. Prevent deleting SuperAdmins (safety)
-    const { data: targetUser } = await supabase.auth.admin.getUserById(userId);
-    if (targetUser?.user?.user_metadata?.is_qr_superadmin === 1) {
-      return NextResponse.json(
-        { error: 'Cannot delete SuperAdmin users' },
-        { status: 400 }
-      );
-    }
-
-    // 4. Delete from mirror table first
-    await supabase.from('app_users').delete().eq('id', userId);
-
-    // 5. Delete from Supabase Auth
-    const { error } = await supabase.auth.admin.deleteUser(userId);
-    if (error) {
-      return NextResponse.json({ error: error.message }, { status: 400 });
-    }
-
-    return NextResponse.json({ success: true });
-  } catch (error) {
-    console.error('Error deleting user:', error);
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
-  }
-}
-```
-
-### SuperAdmin API: Get All Users
-
-```typescript
-// src/app/api/superadmin/get-users/route.ts
-
-import { NextResponse } from 'next/server';
-import { createClient } from '@/utils/supabase/server';
-
-export async function GET() {
-  try {
-    const supabase = await createClient();
-
-    // 1. Verify requester is SuperAdmin
-    const { data: { user: requester } } = await supabase.auth.getUser();
-    if (!requester || requester.user_metadata?.is_qr_superadmin !== 1) {
-      return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
-    }
-
-    // 2. List all users from Supabase Auth
-    const { data: { users }, error } = await supabase.auth.admin.listUsers();
-    if (error) {
-      return NextResponse.json({ error: error.message }, { status: 400 });
-    }
-
-    // 3. Transform for client consumption
-    const transformedUsers = users.map((user) => ({
-      id: user.id,
-      email: user.email,
-      is_qr_superadmin: user.user_metadata?.is_qr_superadmin || 0,
-      is_qr_admin: user.user_metadata?.is_qr_admin || 0,
-      is_qr_member: user.user_metadata?.is_qr_member || 0,
-      created_at: user.created_at,
-    }));
-
-    return NextResponse.json({ users: transformedUsers });
-  } catch (error) {
-    console.error('Error fetching users:', error);
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
-  }
-}
-```
+Use the session client for identity and RLS-bound data. Acquire an isolated admin client only after independently authorizing the elevated operation. An API route is not itself a reason to bypass RLS. Do not substitute a service-role client as a general fix for denied access.
 
 ---
 
 ## 13. User Mirror Table Pattern
 
-When you need custom user data beyond what Supabase Auth provides, create a mirror table.
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-### Why Mirror Tables?
+The role table is the only authorization authority. Never authorize from user_metadata or a profile mirror. Superadmin creation is console-only; no app-side superadmin creation route is provided. Retire the metadata-authorized add-user, delete-user and get-users recipes. Future privileged list/delete operations remain possible only with trusted current-role lookup, operation-local authorization before elevated capability, an approved target-role allowlist and privileged-target protection. Profile mirrors contain profile data, not authorization columns. Registration metadata is not authorization.
 
-| Benefit | Description |
-|---------|-------------|
-| **Custom fields** | Store app-specific data (avatar, preferences) |
-| **Query flexibility** | Join with other tables easily |
-| **RLS policies** | Apply fine-grained access control |
-| **Audit trail** | Track user changes separately from auth |
-
-### Mirror Table Schema
-
-```sql
-CREATE TABLE app_users (
-  -- Same ID as Supabase Auth user
-  id UUID PRIMARY KEY,
-  
-  -- Custom fields
-  display_name TEXT,
-  avatar_url TEXT,
-  role TEXT DEFAULT 'member',
-  preferences JSONB DEFAULT '{}',
-  
-  -- Timestamps
-  created_at TIMESTAMPTZ DEFAULT NOW(),
-  updated_at TIMESTAMPTZ DEFAULT NOW()
-);
-
--- Enable RLS
-ALTER TABLE app_users ENABLE ROW LEVEL SECURITY;
-
--- Users can read their own profile
-CREATE POLICY "Users read own profile"
-ON app_users FOR SELECT
-USING (auth.uid() = id);
-
--- Users can update their own profile
-CREATE POLICY "Users update own profile"
-ON app_users FOR UPDATE
-USING (auth.uid() = id);
-```
-
-### Synchronized User Creation
-
-```typescript
-// Create user in both Supabase Auth and mirror table
-const createUserWithProfile = async (
-  email: string,
-  password: string,
-  profileData: { displayName: string; role: string }
-) => {
-  const supabase = await createClient();
-
-  // 1. Create in Supabase Auth
-  const { data: authData, error: authError } = await supabase.auth.admin.createUser({
-    email,
-    password,
-    email_confirm: true,
-    user_metadata: {
-      display_name: profileData.displayName,
-      role: profileData.role,
-    },
-  });
-
-  if (authError) throw authError;
-
-  // 2. Create in mirror table with SAME ID
-  const { error: profileError } = await supabase.from('app_users').insert({
-    id: authData.user.id, // Critical: same UUID
-    display_name: profileData.displayName,
-    role: profileData.role,
-  });
-
-  if (profileError) {
-    // Rollback: delete auth user if profile creation fails
-    await supabase.auth.admin.deleteUser(authData.user.id);
-    throw profileError;
-  }
-
-  return authData.user;
-};
-```
-
-### Synchronized User Deletion
-
-```typescript
-// Delete user from both systems
-const deleteUserCompletely = async (userId: string) => {
-  const supabase = await createClient();
-
-  // 1. Delete from mirror table first (referential order)
-  const { error: profileError } = await supabase
-    .from('app_users')
-    .delete()
-    .eq('id', userId);
-
-  if (profileError) {
-    console.error('Failed to delete profile:', profileError);
-    // Continue with auth deletion
-  }
-
-  // 2. Delete from Supabase Auth
-  const { error: authError } = await supabase.auth.admin.deleteUser(userId);
-
-  if (authError) throw authError;
-};
-```
-
-### Fetch User with Profile
-
-```typescript
-// Get auth user and profile in one call
-const getUserWithProfile = async () => {
-  const supabase = await createClient();
-
-  // Get auth user
-  const { data: { user } } = await supabase.auth.getUser();
-  if (!user) return null;
-
-  // Get profile from mirror table
-  const { data: profile } = await supabase
-    .from('app_users')
-    .select('*')
-    .eq('id', user.id)
-    .single();
-
-  return {
-    ...user,
-    profile,
-  };
-};
-```
+Use an atomic database operation for invariants inside one database. Across external boundaries, use a stable operation identity, check every forward and compensation result, and persist completed, failed or partially-completed outcomes. Partial failure creates durable reconciliation work with a recovery owner; do not report success after an unchecked compensation or deletion.
 
 ---
 
 ## 14. HOC Route Protection Pattern
 
-Use Higher-Order Components to protect route layouts by role.
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-### withRoleCheck HOC
-
-```typescript
-// src/hoc/withRoleCheck.tsx
-'use client';
-
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
-import { useAuthStore } from '@/store/useAuthStore';
-import Spinner from '@/components/common/Spinner';
-
-interface RoleCheckConfig {
-  allowedRoles: string[]; // e.g., ['is_qr_admin', 'is_qr_member']
-  redirectTo: string;     // e.g., '/admin-login'
-}
-
-export function withRoleCheck<P extends object>(
-  WrappedComponent: React.ComponentType<P>,
-  config: RoleCheckConfig
-) {
-  return function WithRoleCheckComponent(props: P) {
-    const router = useRouter();
-    const { user, roles, isLoading } = useAuthStore();
-    const [isAuthorized, setIsAuthorized] = useState(false);
-
-    useEffect(() => {
-      if (isLoading) return;
-
-      // Not logged in
-      if (!user) {
-        router.push(config.redirectTo);
-        return;
-      }
-
-      // Check if user has any of the allowed roles
-      const hasRole = config.allowedRoles.some(
-        (role) => roles[role as keyof typeof roles] === 1
-      );
-
-      if (!hasRole) {
-        router.push(config.redirectTo);
-        return;
-      }
-
-      setIsAuthorized(true);
-    }, [user, roles, isLoading, router]);
-
-    if (isLoading || !isAuthorized) {
-      return (
-        <div className="flex items-center justify-center min-h-screen">
-          <Spinner />
-        </div>
-      );
-    }
-
-    return <WrappedComponent {...props} />;
-  };
-}
-```
-
-### Usage in Layouts
-
-```typescript
-// src/app/(admin)/layout.tsx
-import { withRoleCheck } from '@/hoc/withRoleCheck';
-
-function AdminLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="min-h-screen bg-slate-50">
-      <AdminNavbar />
-      <main className="p-4">{children}</main>
-    </div>
-  );
-}
-
-// Protect: Only admin and member roles can access
-export default withRoleCheck(AdminLayout, {
-  allowedRoles: ['is_qr_admin', 'is_qr_member'],
-  redirectTo: '/admin-login',
-});
-```
-
-```typescript
-// src/app/(superadmin)/layout.tsx
-import { withRoleCheck } from '@/hoc/withRoleCheck';
-
-function SuperAdminLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="min-h-screen bg-slate-900 text-white">
-      <SuperAdminNavbar />
-      <main className="p-4">{children}</main>
-    </div>
-  );
-}
-
-// Protect: Only superadmin role can access
-export default withRoleCheck(SuperAdminLayout, {
-  allowedRoles: ['is_qr_superadmin'],
-  redirectTo: '/superadmin-login',
-});
-```
-
-### Role-Based UI Elements
-
-```typescript
-// Show/hide UI based on role
-'use client';
-
-import { useAuthStore } from '@/store/useAuthStore';
-
-export function AdminActions() {
-  const { roles } = useAuthStore();
-
-  return (
-    <div className="flex gap-2">
-      {/* All admins can view */}
-      <Button>View Details</Button>
-
-      {/* Only SuperAdmins can delete */}
-      {roles.is_qr_superadmin === 1 && (
-        <Button variant="destructive">Delete User</Button>
-      )}
-    </div>
-  );
-}
-```
+Server guards control page access; server-resolved { user, role } props establish first-render identity. Retire client HOC route protection and post-mount identity fetching as authoritative patterns. Zustand handles interaction and session-event reactions, with no persisted authorization authority. Display helpers are display-only and use explicit role sets; they never authorize an operation.
 
 ---
 
@@ -2214,7 +1344,7 @@ This authentication system provides:
 1. Always use server-side validation
 2. Three client types for different contexts
 3. Hard reload ensures session sync
-4. Roles stored in user_metadata
+4. Authorization roles resolved from the authoritative user_roles table; never from user_metadata.
 5. Middleware keeps sessions alive
 6. protectPage() for route protection
 7. Mirror tables for custom user data
@@ -2240,6 +1370,7 @@ This authentication system provides:
 | 1.2 | 2026-06-28 | Removed the deleted `POST /api/auth/superadmin-add-user` route (creation via `addMember`/`addUser` server actions); documented the Mark IV `handle_new_user` trigger applying the metadata `role` + `full_name` at creation. Kit Hardening Gate 10. |
 | 1.3 | 2026-07-08 | **Wave 4 — the F-042 role-doctrine correction.** Role storage doctrine corrected everywhere it lived: the `user_roles` TABLE is the single source of truth (kit `supabase/setup.sql`; server-side resolution via `get-user-role.ts`); the v1.2 "Metadata-driven roles — NOT separate tables" philosophy line was FALSE against the kit's own filesystem (RECON_WAVE0 Q1 ground-truth). Key Principle #5 rewritten; "User Metadata Schema" section → "Where Roles Live" (table home + creation-time-transport nuance + ⛔ never read authz from `user_metadata`, recon Q3.4); §8 metadata-reading `getUserRole` sample replaced with the canonical-path description + read-the-kit-on-disk pointer (no drifting code copies — D-015); legacy `is_qr_*` (QR-era) store/pattern snippets marked with advisories; troubleshooting realigned to the table model; registration flow wording corrected. Kit hardening ticket referenced without documenting the vector. Canonical cross-refs (F-032/F-011); standard header (F-018). Full code-sample resync vs the kit = queued kit-verification touch. |
 | 1.4 | 2026-08-05 | **Navbar Saga promotion.** New § "Server-Resolved Identity for UI (The Navbar Law)" inserted after Server-Side Protection (RBAC): identity renders from server props, never from client stores. Four hard rules. | navbar-saga |
+| 1.5 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-021, FC-033, FC-034, FC-035, FC-036, FC-038, FC-039, FC-041, FC-042, FC-043, FC-044, FC-063, FC-066, RUL-11 |
 
 ---
 

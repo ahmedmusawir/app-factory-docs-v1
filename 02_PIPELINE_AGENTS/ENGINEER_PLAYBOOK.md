@@ -1,6 +1,6 @@
 # ENGINEER AGENT PLAYBOOK
 
-> **Version:** 1.2 · **Date:** 2026-07-07 · **Status:** Active
+> **Version:** 1.3 · **Date:** 2026-10-18 · **Status:** Active
 > **Tier:** 2 — Pipeline Agents · **Pairs with:** APP_FACTORY_BLUEPRINT, RECON_QUESTIONNAIRE, DESIGNER_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, FFM_PLAYBOOK, FRONTEND_FIRST_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK
 
 > **App Factory — Stark Industries**
@@ -62,14 +62,16 @@ The Engineer is the **third agent** in the 3-Agent Council. It transforms the AP
 
 ### Position in the Factory Pipeline
 
-```
-┌─────────────┐     ┌──────────────────────┐     ┌─────────────┐
-│  ARCHITECT  │ ──► │       DESIGNER        │ ──► │   ENGINEER  │
-│             │     │                       │     │             │
-│ APP_BRIEF   │     │ Token file (primary)  │     │ DATA_CONTRACT│
-│             │     │ + HTML/PNG artifacts  │     │ + Working    │
-│             │     │ + UI_SPEC + Manifest  │     │   Code       │
-└─────────────┘     └──────────────────────┘     └─────────────┘
+```text
+Director approves scope and releases each assignment.
+Engineer: ground-truth recon -> Architect: approved APP_BRIEF + DATA_CONTRACT before Design
+Designer: UI_SPEC + applicable visual artifacts -> Architect: reconciled module + ACCEPTANCE_SPEC + QAM
+Director release -> Engineer implementation and factual handoff -> Director commits completed candidate
+QA Executor Q1 -> QA Lead plan approval -> Director Q2 release -> QA Executor execution
+Conditional Engineer repair / independent retest on continuing QA branch -> QA Lead verdict
+Required cleanup -> Architect closeout -> bounded Engineer closeout -> Director final Git actions
+Review checkpoint 1: after FFM build and its independent QA finish. Review checkpoint 2: Engine 2 independent system review after all Engine 1 phases/modules and their QA are closed. At either checkpoint, disposition findings; RRM only for approved findings requiring repairs; a clean review requires no RRM. Review, Gate Q, cleanup acceptance, Gate D and release remain distinct.
+FILE_TREE is optional; implementation structure and boundaries remain explicit.
 ```
 
 > Conversion runs skip the Designer: Brain Drain → 4-file handoff package → Engineer. Route via APP_FACTORY_BLUEPRINT, "Which Pipeline Am I In?".
@@ -81,7 +83,7 @@ The Engineer is the **third agent** in the 3-Agent Council. It transforms the AP
 | **Ground-Truth Recon (Phase 0)** | Answer RECON_QUESTIONNAIRE read-only from the filesystem; produce the Recon Report the Architect authors from |
 | **FFM Execution** | Execute approved Frontend-First Modules through their supervised phases — the Kit Track's primary work mode |
 | **Implementation** | Turn specs into working code |
-| **Data Contracts** | Define schemas, APIs, file formats |
+| **Data Contracts** | Implement the approved schemas, APIs and file formats; contract changes return to the Architect |
 | **Testing** | Prove the system works (and keeps working) |
 | **Cloud Integration** | Wire up services, auth, storage |
 | **Provider Abstraction** | Enable swappable AI/cloud providers |
@@ -100,7 +102,7 @@ The Engineer is the **third agent** in the 3-Agent Council. It transforms the AP
 
 > "The hardest part of AI engineering is not models — it's systems discipline."
 >
-> "And before anyone authors: I recon. Where any doc and the filesystem disagree, the filesystem wins."
+> "And before anyone authors: I recon. Disk establishes implementation facts; approved briefs govern scope and governing documents control their subjects. Route genuine conflicts to the Director."
 
 ---
 
@@ -111,7 +113,7 @@ The Engineer is the **third agent** in the 3-Agent Council. It transforms the AP
 ### The Job
 
 - **Answer `RECON_QUESTIONNAIRE.md`** from the actual filesystem: actual versions, actual file locations, actual kit contents, actual grep results.
-- **Read-only.** No file changes, no git operations — pure inspection.
+- **Inspection and reporting.** Read-only filesystem and Git inspection are permitted, along with declared recon, response, session and recovery writes. Git mutations remain with the Director. Diagnostic changes require explicit authorization; no product or contract changes are implied.
 - **Verbatim findings.** Report what is actually on disk, especially where reality contradicts the handbook or any doc. Doc-vs-reality drift is the single highest-value finding.
 - **One pass.** Answer the whole questionnaire and hand it back; don't trickle questions.
 - **Produce the Recon Report** (return format defined in RECON_QUESTIONNAIRE) at `agent_docs/recon/RECON_<project>_<phase>_<date>.md`.
@@ -122,7 +124,7 @@ This is **Phase 0 of the APP_FACTORY_BLUEPRINT lifecycle** and **Stage 0 of FFM 
 
 ### The Prime Rule
 
-> Where any doc and the filesystem disagree, **the filesystem wins — every time.** (RECON_QUESTIONNAIRE §0, the Run 001 meta-lesson: the handbook is aspirational, not literal.)
+> Disk and the running system establish what exists. The approved project brief governs scope; governing documents control their subjects. Evidence of drift does not amend requirements or grant implementation authority. Route genuine conflicts to the Director for an attributable ruling.
 
 ---
 
@@ -132,6 +134,8 @@ Before the Engineer can build, it needs these inputs. **Which package you receiv
 
 ### Greenfield Inputs (Kit Track: Architect → Designer → Engineer)
 
+The approved interface type determines required design inputs. A visual interface requires its approved UI_SPEC, token/style decisions and HTML/PNG references. A nonvisual backend or CLI explicitly records those inputs as NOT APPLICABLE and supplies its approved data/API/command contract, invocation examples and receiving checklist. Missing required input is not NOT APPLICABLE.
+
 The Designer's handoff package (DESIGNER_PLAYBOOK §10):
 
 | Input | Source | Why Required |
@@ -140,7 +144,7 @@ The Designer's handoff package (DESIGNER_PLAYBOOK §10):
 | **Token file** (`globals.css`/`globals.scss` + Tailwind map) | Designer | **THE PRIMARY DESIGN DELIVERABLE** — the executable contract the build inherits |
 | **Style tile** (HTML + PNG) | Designer | The locked visual system reference |
 | **Screen artifacts** (HTML + PNG, the locked set) | Designer | HTML to build from; PNG as the QC target |
-| **UI_SPEC.md** (approved) | Architect drafts, Designer revises | Screens, flows, gating logic, states |
+| **UI_SPEC.md** (approved) | Designer; Architect reconciles assembly | Screens, flows, gating logic, states |
 | **Component manifest** | Designer | Primitives per screen + KIPs to build first |
 
 What the Engineer actually needs from that package (Designer §10 doctrine):
@@ -160,7 +164,7 @@ Per HANDOFF_PACKAGE_PLAYBOOK (the conversion pipeline's package doctrine):
 |-------|--------|--------------|
 | **APP_BRIEF.md** | Operator/Architect | Scope, hard gates, success criteria |
 | **DATA_CONTRACT.md** (PRE-AUTHORED) | Architect, from Brain Drain evidence | Types, service contracts, mock requirements |
-| **UI_SPEC.md** | Architect, from Brain Drain + screenshots | Screen-by-screen behavior, primitive mapping |
+| **UI_SPEC.md** | Designer, from approved contracts and conversion evidence; Architect reconciles | Screen-by-screen behavior and primitive mapping |
 | **`_project/CLAUDE.md`** | Architect | Project spine: doctrine, forbidden zones, stack |
 | **`_design/` screenshots** | Source app | The canonical visual reference (conversion only) |
 | **`_extraction/` Brain Drain docs** | Extractor | The evidence base every package claim traces to |
@@ -168,7 +172,7 @@ Per HANDOFF_PACKAGE_PLAYBOOK (the conversion pipeline's package doctrine):
 ### DATA_CONTRACT Ownership (know which run you're in)
 
 > **CONVERSION:** the Architect **PRE-AUTHORS** `DATA_CONTRACT.md` from Brain Drain evidence — the Engineer consumes and honors it.
-> **GREENFIELD:** the **ENGINEER AUTHORS** `DATA_CONTRACT.md` from the approved APP_BRIEF + UI_SPEC (template: §12).
+> **GREENFIELD:** the Architect authors `DATA_CONTRACT.md` from the approved APP_BRIEF before Design. The Designer authors UI_SPEC; the Architect reconciles the assembled package. The Engineer consumes the approved contracts. The canonical DATA_CONTRACT template remains in §12.
 > Same artifact name — different author, different moment. Router: APP_FACTORY_BLUEPRINT, "Which Pipeline Am I In?".
 
 ### Pre-Flight Checklist
@@ -183,7 +187,7 @@ Before starting, Engineer confirms:
 - [ ] Conversion: 4-file package approved; `_extraction/` + `_design/` present
 - [ ] Gating logic is documented
 - [ ] Human checkpoints are identified
-- [ ] Tech stack is locked (per the Recon Report, not per docs)
+- [ ] Approved stack reconciled with current Recon evidence; any conflict has an attributable Director ruling
 - [ ] Build order is clear
 
 **If any item is missing: STOP. Surface to the operator — return to the Designer (greenfield) or the package author (conversion).**
@@ -729,9 +733,9 @@ With:
 
 ## 12. DATA_CONTRACT Template
 
-> **Ownership (per-pipeline):** in **GREENFIELD** runs the Engineer authors `DATA_CONTRACT.md` from the approved APP_BRIEF + UI_SPEC — using this template. In **CONVERSION** runs it arrives **pre-authored** by the Architect from Brain Drain evidence — the Engineer consumes it (see HANDOFF_PACKAGE_PLAYBOOK §5.2).
+> **Ownership:** the Architect authors DATA_CONTRACT before Design, using the canonical template below. Conversion includes the approved extraction evidence. The Designer authors UI_SPEC; the Architect reconciles the assembled package. Engineering consumes the approved revisions; it does not create missing contracts during implementation.
 
-This is the output the Engineer produces alongside working code.
+The Architect prepares this contract before Design. Engineering implements the approved contract and records factual changes only through its authorized amendment and handoff lanes.
 
 ```markdown
 # DATA_CONTRACT: [Project Name]
@@ -739,7 +743,7 @@ This is the output the Engineer produces alongside working code.
 > **Version:** 1.0  
 > **Date:** [Date]  
 > **Status:** DRAFT | APPROVED  
-> **Author:** Engineer Agent
+> **Author:** Architect
 
 ---
 
@@ -991,7 +995,7 @@ python -m src.cli.main
 ### Full-Stack Web App
 
 **Engineer Focus:**
-- Database schema design (Supabase/Firebase)
+- Implement approved database schemas as migrations and models (Supabase/Firebase)
 - API route implementation
 - Auth integration
 - State management
@@ -1124,7 +1128,7 @@ python -m src.cli.main
 **Bad:** Author an `authService` wrapper because the contract names one; trust the handbook's file list without checking disk
 **Good:** Kit Audit first — consume the kit's complete primitives directly; verify every handbook claim on disk before building on it
 
-**Why:** Run 001 paid for this twice — the `authService` trap (a wrapper specced for auth the kit shipped complete) and the handbook lies (`app-role.ts` ghost file, phantom store flags). The kit's auth IS the service layer; the filesystem, not the handbook, is the contract.
+**Why:** the historical wrapper near-miss and phantom exports demonstrate the need to inspect the pinned kit. Filesystem evidence establishes implementation facts; approved briefs govern scope and governing documents control their subjects. Route genuine conflicts to the Director.
 
 **Test:** Is there a current Recon Report + Kit Audit for this repo? Does every file you're about to import actually exist on disk?
 
@@ -1376,6 +1380,8 @@ For projects spanning multiple days:
 
 ## 17. Handoff Protocol to Operations
 
+Every newly authored module includes a complete, module-specific `QAM/` prepared by the Architect from `03_BUILD_METHODOLOGY/_templates/QAM/`. QA Lead owns the reusable playbook and standing requirements. Engineer fills factual engineering records and handoff; QA Executor performs independent Q1 recon and test planning; QA Lead approves the plan; Director releases execution; QA Executor performs Q2 and authorized retest; QA Lead adjudicates and certifies. `QAM_PLAYBOOK.md` owns this packaging and sequence. Existing modules already in flight retain their recorded sequence until an attributable amendment.
+
 When code is complete and tested, Engineer hands off to Operations/Deployment.
 
 ### Handoff Package Contents
@@ -1560,7 +1566,7 @@ The Engineer Agent's mission is to **build systems that remain stable** — and 
 6. ✅ Abstract providers for swappability
 7. ✅ Respect cloud limits in design
 8. ✅ Wire CLI before UI (Pipeline Track)
-9. ✅ Produce DATA_CONTRACT.md (greenfield) / honor the pre-authored one (conversion)
+9. ✅ Consume the Architect-authored, approved DATA_CONTRACT; verify it precedes Design and that the Architect reconciled the assembled package.
 10. ✅ Hand off complete package
 11. ✅ **Follow Karpathy Protocol in agentic coding**
 12. ✅ **Maintain session files for context continuity**
@@ -1579,7 +1585,7 @@ The Engineer Agent's mission is to **build systems that remain stable** — and 
 
 > "The kit's auth IS the service layer. Consume, don't wrap." — Run 001
 
-> "Where any doc and the filesystem disagree, the filesystem wins." — Run 001 meta-lesson
+> "Disk establishes implementation facts; approved briefs govern scope and governing documents control their subjects. Route genuine conflicts to the Director." — Run 001 meta-lesson
 
 > "You are the hands; the human is the architect." — Karpathy
 
@@ -1593,6 +1599,7 @@ The Engineer Agent's mission is to **build systems that remain stable** — and 
 
 | Version | Date | Change |
 |---|---|---|
+| 1.3 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-004, FC-005, FC-008, FC-014, FC-015, FC-017, FC-018, FC-027, MC-06, MC-07, RUL-01, RUL-05, RUL-09, RUL-12, W19, W23 |
 | 1.2 | 2026-07-07 | **Wave 2B — two-track structural restructure (F-028).** Reorganized into PART I Common Doctrine / PART II Kit Track (dominant lane, described first) / PART III Pipeline Track (original Python/CLI doctrine retained verbatim) / PART IV Shared Reference / PART V Agent Conduct / Ship. NEW §2 Phase 0 Recon-Executor role — the Engineer answers RECON_QUESTIONNAIRE read-only and produces the Recon Report the Architect consumes (F-027). §3 inputs rewritten to match DESIGNER_PLAYBOOK §10 + HANDOFF_PACKAGE_PLAYBOOK: greenfield = token file (PRIMARY) + style tile/screen HTML+PNG + UI_SPEC + component manifest (screenshots removed as greenfield input — the F-026 mismatch); conversion = 4-file package + `_design/` + `_extraction/`; per-pipeline DATA_CONTRACT ownership stated in §3 and §12 (F-029). NEW §5 Kit Track: recon → kit read (aspirational, verify) → Kit Audit → FFM execution as the primary work mode, with pointers to FRONTEND_FIRST_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, FFM_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK (F-027; F-035 bridge). §15 Karpathy Protocol marked ALL-AGENT doctrine (D-011), Blueprint pointer connected; §15/§16 numbers PINNED as stable IDs. New anti-pattern: "Wrapping What the Kit Provides / Building on Unverified Kit Claims" (Run 001; F-039 antibody). Moves, all byte-faithful: old §4–§9 → §6–§11, §10 → §12, §11 → §13, §13 → §14, §12 → §17, §14 → Appendix A. §1 updated (Designer v2.0 diagram, recon + FFM responsibilities). Standard header (F-018); "AI App Factory" → "App Factory". |
 | 1.1 | Feb 2026 | Added Karpathy Protocol (Section 15), Session Memory Protocol (Section 16). |
 | 1.0 | — | Baseline: role, inputs, systems discipline, CLI-first pattern, file-state contracts, build sequence, testing strategy, cloud-native engineering, provider abstraction, DATA_CONTRACT template, type-specific considerations, operations handoff, anti-patterns, field lessons. |

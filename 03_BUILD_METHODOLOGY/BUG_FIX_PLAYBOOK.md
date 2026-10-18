@@ -1,6 +1,6 @@
 # BUG FIX PLAYBOOK
 
-> **Version:** 1.0 · **Date:** 2026-08-10 · **Status:** Active — field-validated (FIX-001/002/003, ADK Harness)
+> **Version:** 1.1 · **Date:** 2026-10-18 · **Status:** Active — field-validated (FIX-001/002/003, ADK Harness)
 > **Tier:** 3 — Build Methodology  
 > **Pairs with:** `QA_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `RECON_QUESTIONNAIRE.md`, `FFM_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`  
 > **Owner:** Stark Industries App Factory  
@@ -69,7 +69,7 @@ The Architect **advises** on QA findings — architectural classification and ro
 - Runs targeted and full regression suites.
 - Produces evidence.
 
-The Engineer runs zero git and zero cloud commands. He builds, tests, self-verifies, and hands the Coordinator suggested commit messages plus exact per-concern file lists. He finalizes the `ACCEPTANCE_SPEC.md` at handoff (see §18). Any step outside the enumerated writable surface is flagged for ratification, never silently taken.
+The Engineer may inspect Git read-only; all Git mutations remain Director-only and existing FIX cloud restrictions remain in force. Engineering fills factual handoff records within the approved acceptance contract. Changes beyond the released writable surface require explicit authorization before execution.
 
 ### QA Lead
 
@@ -572,6 +572,8 @@ FIX modules follow the Factory-level ID doctrine (`SOFTWARE_FACTORY_PLAYBOOK.md`
 
 ## 18. Required FIX Artifacts
 
+Every newly authored module includes a complete, module-specific `QAM/` prepared by the Architect from `03_BUILD_METHODOLOGY/_templates/QAM/`. QA Lead owns the reusable playbook and standing requirements. Engineer fills factual engineering records and handoff; QA Executor performs independent Q1 recon and test planning; QA Lead approves the plan; Director releases execution; QA Executor performs Q2 and authorized retest; QA Lead adjudicates and certifies. `QAM_PLAYBOOK.md` owns this packaging and sequence. Existing modules already in flight retain their recorded sequence until an attributable amendment.
+
 Every non-trivial FIX module should contain:
 
 1. `BUG_REPORT.md` (or the finding IDs + adjudication record when QA-born)
@@ -735,3 +737,4 @@ Testing a URL without proving which commit or Cloud Run revision is serving it.
 |---|---|---|
 | 0.1 | 2026-08-04 | Initial draft. Defines evidence-first bug lifecycle, root-cause mechanism rule, regression protection, Gate Q and Gate D, scope control, environment parity, severity, required artifacts, doctrine promotion, and closure criteria. |
 | 1.0 | 2026-08-10 | Field-validated against FIX-001/002/003 (ADK-HARNESS, legacy). Added: mandatory ACCEPTANCE_SPEC with Engineering/QA separation; app-suffixed module IDs; git-zero Engineer doctrine; QA-adjudication flow; FIX module anatomy; case studies. All v0.1 lifecycle rules confirmed by field use. Seamless merge of the v1.0 amendments kit (A1–A6, N1–N3). |
+| 1.1 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-012, FC-014, RUL-12, W21 |

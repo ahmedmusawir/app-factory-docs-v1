@@ -1,6 +1,6 @@
 # STATE MANAGEMENT MANUAL
 
-> **Version:** 1.2 · **Date:** 2026-08-05 · **Status:** Active
+> **Version:** 1.3 · **Date:** 2026-10-18 · **Status:** Active
 > **Tier:** 4 — Reference Manuals · **Pairs with:** STARTER_KIT_HANDBOOK, AUTH_MANUAL, FRONTEND_FIRST_PLAYBOOK, APP_ARCHITECTURE_MANUAL
 
 > **Stark Industries Software Factory**
@@ -395,9 +395,11 @@ addItem: (product, variationId, customFields) => {
     
     if (existingIndex >= 0) {
       // Update quantity of existing item
-      const newItems = [...state.items];
-      newItems[existingIndex].quantity += 1;
-      return { items: newItems };
+      return {
+        items: state.items.map((item, index) =>
+          index === existingIndex ? { ...item, quantity: item.quantity + 1 } : item
+        ),
+      };
     }
     
     // Add new item
@@ -514,9 +516,8 @@ export const useCheckoutStore = create<CheckoutState>()(
     {
       name: 'checkout-storage',
       partialize: (state) => ({
-        // Only persist addresses (user convenience)
-        billingAddress: state.billingAddress,
-        shippingAddress: state.shippingAddress,
+        // Raw contact information is not persisted by default.
+        // An approved exception must name fields, purpose, retention and owner.
         // DO NOT persist: isProcessing, validationErrors, paymentIntent
       }),
     }
@@ -631,114 +632,27 @@ Result: Hydration mismatch error!
 
 ### Hydration Flags
 
-Use a hydration flag to gate UI that depends on persisted state:
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-```typescript
-// src/store/useCartStore.ts
+Keep hydration readiness outside the resettable business state. A normal reset preserves readiness. Hydration finishes in ready or error; an error exposes bounded recovery and never leaves an indefinite loading state. Verify reset after hydration, invalid stored data and unavailable storage.
 
-interface CartState {
-  items: CartItem[];
-  hasHydrated: boolean;  // Hydration flag
-  setHasHydrated: (value: boolean) => void;
-  // ... other state
-}
-
-export const useCartStore = create<CartState>()(
-  persist(
-    (set) => ({
-      items: [],
-      hasHydrated: false,
-
-      setHasHydrated: (value) => set({ hasHydrated: value }),
-    }),
-    {
-      name: 'cart-storage',
-      onRehydrateStorage: () => (state) => {
-        // Called when rehydration completes
-        state?.setHasHydrated(true);
-      },
-    }
-  )
-);
-
-// Selector for hydration state
-export const selectHasHydrated = (state: CartState) => state.hasHydrated;
-```
+---
 
 ### `onRehydrateStorage` Callback
 
-This callback fires when the store finishes loading from storage:
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-```typescript
-persist(
-  (set) => ({ /* ... */ }),
-  {
-    name: 'cart-storage',
-    onRehydrateStorage: () => {
-      console.log('Hydration starting...');
-      
-      return (state, error) => {
-        if (error) {
-          console.error('Hydration failed:', error);
-        } else {
-          console.log('Hydration complete:', state);
-          state?.setHasHydrated(true);
-        }
-      };
-    },
-  }
-)
-```
+Keep hydration readiness outside the resettable business state. A normal reset preserves readiness. Hydration finishes in ready or error; an error exposes bounded recovery and never leaves an indefinite loading state. Verify reset after hydration, invalid stored data and unavailable storage.
+
+---
 
 ### Gating UI on Hydration State
 
-```typescript
-// src/components/cart/CartIcon.tsx
-'use client';
+**Dependent executable example withdrawn.** Use a project-approved state/payment contract with explicit hydration errors, server-authoritative pricing, authenticated ownership and recovery. The removed example’s missing contract is still tracked; no universal quote/subscription schema is introduced.
 
-import { useCartStore, selectHasHydrated, selectCartItemCount } from '@/store/useCartStore';
-import { Skeleton } from '@/components/ui/skeleton';
+### Alternative: Hydration-Gated Selection
 
-export const CartIcon = () => {
-  const hasHydrated = useCartStore(selectHasHydrated);
-  const itemCount = useCartStore(selectCartItemCount);
-
-  // Show skeleton until hydrated to prevent flash
-  if (!hasHydrated) {
-    return <Skeleton className="h-6 w-6 rounded-full" />;
-  }
-
-  return (
-    <div className="relative">
-      <ShoppingCartIcon />
-      {itemCount > 0 && (
-        <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-xs rounded-full h-5 w-5 flex items-center justify-center">
-          {itemCount}
-        </span>
-      )}
-    </div>
-  );
-};
-```
-
-### Alternative: Suspense-Style Loading
-
-```typescript
-// Custom hook that throws promise until hydrated
-export const useHydratedStore = <T,>(
-  store: UseBoundStore<StoreApi<T & { hasHydrated: boolean }>>,
-  selector: (state: T) => unknown
-) => {
-  const hasHydrated = store((state) => state.hasHydrated);
-  
-  if (!hasHydrated) {
-    // Return null or default during SSR
-    return null;
-  }
-  
-  return store(selector as (state: T & { hasHydrated: boolean }) => unknown);
-};
-```
+**Dependent executable example withdrawn.** Use a project-approved state/payment contract with explicit hydration errors, server-authoritative pricing, authenticated ownership and recovery. The removed example’s missing contract is still tracked; no universal quote/subscription schema is introduced.
 
 ---
 
@@ -773,84 +687,11 @@ export const selectValue = (state: BasicState) => state.value;
 
 ### Persisted Store Template
 
-```typescript
-// src/store/usePersistedStore.ts
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-import { create } from 'zustand';
-import { persist, createJSONStorage } from 'zustand/middleware';
+Keep hydration readiness outside the resettable business state. A normal reset preserves readiness. Hydration finishes in ready or error; an error exposes bounded recovery and never leaves an indefinite loading state. Verify reset after hydration, invalid stored data and unavailable storage.
 
-interface PersistedState {
-  // Persisted state
-  items: Item[];
-  preferences: UserPreferences;
-  
-  // Transient state (not persisted)
-  isLoading: boolean;
-  error: string | null;
-  hasHydrated: boolean;
-  
-  // Actions
-  addItem: (item: Item) => void;
-  removeItem: (id: string) => void;
-  updatePreferences: (prefs: Partial<UserPreferences>) => void;
-  setLoading: (loading: boolean) => void;
-  setError: (error: string | null) => void;
-  setHasHydrated: (value: boolean) => void;
-  reset: () => void;
-}
-
-const initialState = {
-  items: [],
-  preferences: { theme: 'light', notifications: true },
-  isLoading: false,
-  error: null,
-  hasHydrated: false,
-};
-
-export const usePersistedStore = create<PersistedState>()(
-  persist(
-    (set) => ({
-      ...initialState,
-
-      addItem: (item) =>
-        set((state) => ({ items: [...state.items, item] })),
-
-      removeItem: (id) =>
-        set((state) => ({
-          items: state.items.filter((item) => item.id !== id),
-        })),
-
-      updatePreferences: (prefs) =>
-        set((state) => ({
-          preferences: { ...state.preferences, ...prefs },
-        })),
-
-      setLoading: (isLoading) => set({ isLoading }),
-      setError: (error) => set({ error }),
-      setHasHydrated: (hasHydrated) => set({ hasHydrated }),
-      reset: () => set(initialState),
-    }),
-    {
-      name: 'persisted-storage',
-      storage: createJSONStorage(() => localStorage),
-      partialize: (state) => ({
-        items: state.items,
-        preferences: state.preferences,
-      }),
-      onRehydrateStorage: () => (state) => {
-        state?.setHasHydrated(true);
-      },
-    }
-  )
-);
-
-// Selectors
-export const selectItems = (state: PersistedState) => state.items;
-export const selectPreferences = (state: PersistedState) => state.preferences;
-export const selectIsLoading = (state: PersistedState) => state.isLoading;
-export const selectError = (state: PersistedState) => state.error;
-export const selectHasHydrated = (state: PersistedState) => state.hasHydrated;
-```
+---
 
 ### Pagination Store Template
 
@@ -937,147 +778,13 @@ export const selectCanGoPrev = (state: PagePaginationState) =>
 
 ### Form/Checkout Store Template
 
-```typescript
-// src/store/useCheckoutStore.ts
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-import { create } from 'zustand';
-import { persist, createJSONStorage } from 'zustand/middleware';
+Do not persist raw contact details by default. Any approved personal-data persistence declares permitted fields, retention duration and user or guest scope. Sign-out and account transition reset and invalidate every affected store even when remote logout fails; a new account must not hydrate the previous account’s data. Payment and authorization state remain outside persistence. Storage readiness is separate from business-data reset.
 
-interface Address {
-  firstName: string;
-  lastName: string;
-  address1: string;
-  address2?: string;
-  city: string;
-  state: string;
-  postcode: string;
-  country: string;
-  phone?: string;
-}
+Keep hydration readiness outside the resettable business state. A normal reset preserves readiness. Hydration finishes in ready or error; an error exposes bounded recovery and never leaves an indefinite loading state. Verify reset after hydration, invalid stored data and unavailable storage.
 
-interface CheckoutState {
-  // Customer info
-  email: string;
-  billingAddress: Address | null;
-  shippingAddress: Address | null;
-  sameAsShipping: boolean;
-  
-  // Shipping & payment
-  shippingMethodId: string | null;
-  paymentMethodId: string | null;
-  
-  // Order notes
-  customerNotes: string;
-  
-  // Transient state
-  currentStep: number;
-  isProcessing: boolean;
-  validationErrors: Record<string, string>;
-  hasHydrated: boolean;
-  
-  // Actions
-  setEmail: (email: string) => void;
-  setBillingAddress: (address: Address) => void;
-  setShippingAddress: (address: Address) => void;
-  setSameAsShipping: (same: boolean) => void;
-  setShippingMethod: (id: string) => void;
-  setPaymentMethod: (id: string) => void;
-  setCustomerNotes: (notes: string) => void;
-  setCurrentStep: (step: number) => void;
-  setIsProcessing: (processing: boolean) => void;
-  setValidationError: (field: string, error: string) => void;
-  clearValidationError: (field: string) => void;
-  clearAllErrors: () => void;
-  setHasHydrated: (value: boolean) => void;
-  reset: () => void;
-}
-
-const initialState = {
-  email: '',
-  billingAddress: null,
-  shippingAddress: null,
-  sameAsShipping: true,
-  shippingMethodId: null,
-  paymentMethodId: null,
-  customerNotes: '',
-  currentStep: 0,
-  isProcessing: false,
-  validationErrors: {},
-  hasHydrated: false,
-};
-
-export const useCheckoutStore = create<CheckoutState>()(
-  persist(
-    (set) => ({
-      ...initialState,
-
-      setEmail: (email) => set({ email }),
-      setBillingAddress: (billingAddress) => set({ billingAddress }),
-      setShippingAddress: (shippingAddress) => set({ shippingAddress }),
-      setSameAsShipping: (sameAsShipping) => set({ sameAsShipping }),
-      setShippingMethod: (shippingMethodId) => set({ shippingMethodId }),
-      setPaymentMethod: (paymentMethodId) => set({ paymentMethodId }),
-      setCustomerNotes: (customerNotes) => set({ customerNotes }),
-      setCurrentStep: (currentStep) => set({ currentStep }),
-      setIsProcessing: (isProcessing) => set({ isProcessing }),
-      
-      setValidationError: (field, error) =>
-        set((state) => ({
-          validationErrors: { ...state.validationErrors, [field]: error },
-        })),
-      
-      clearValidationError: (field) =>
-        set((state) => {
-          const { [field]: _, ...rest } = state.validationErrors;
-          return { validationErrors: rest };
-        }),
-      
-      clearAllErrors: () => set({ validationErrors: {} }),
-      setHasHydrated: (hasHydrated) => set({ hasHydrated }),
-      reset: () => set(initialState),
-    }),
-    {
-      name: 'checkout-storage',
-      storage: createJSONStorage(() => localStorage),
-      partialize: (state) => ({
-        email: state.email,
-        billingAddress: state.billingAddress,
-        shippingAddress: state.shippingAddress,
-        sameAsShipping: state.sameAsShipping,
-      }),
-      onRehydrateStorage: () => (state) => {
-        state?.setHasHydrated(true);
-      },
-    }
-  )
-);
-
-// Selectors
-export const selectEmail = (state: CheckoutState) => state.email;
-export const selectBillingAddress = (state: CheckoutState) => state.billingAddress;
-export const selectShippingAddress = (state: CheckoutState) => state.shippingAddress;
-export const selectCurrentStep = (state: CheckoutState) => state.currentStep;
-export const selectIsProcessing = (state: CheckoutState) => state.isProcessing;
-export const selectValidationErrors = (state: CheckoutState) => state.validationErrors;
-export const selectHasHydrated = (state: CheckoutState) => state.hasHydrated;
-
-// Derived selectors
-export const selectEffectiveBillingAddress = (state: CheckoutState) =>
-  state.sameAsShipping ? state.shippingAddress : state.billingAddress;
-
-export const selectIsStepValid = (step: number) => (state: CheckoutState) => {
-  switch (step) {
-    case 0: // Contact
-      return !!state.email && !state.validationErrors.email;
-    case 1: // Shipping
-      return !!state.shippingAddress && !!state.shippingMethodId;
-    case 2: // Payment
-      return !!state.paymentMethodId;
-    default:
-      return false;
-  }
-};
-```
+The checkout interaction contract includes shippingCost and couponDiscount as display estimates, couponCode, setCoupon(code) and clearCoupon(), alongside the existing checkout fields. The server revalidates shipping and coupons. STATE_MANAGEMENT_MANUAL owns the shared store shape; ECOMMERCE_AND_PAYMENTS_MANUAL refers to it. Personal fields follow the approved account-transition and retention policy.
 
 ---
 
@@ -1185,10 +892,8 @@ export const ProductList = ({ initialProducts }: Props) => {
   
   // Initialize store with server data on mount
   useEffect(() => {
-    if (products.length === 0) {
-      setProducts(initialProducts);
-    }
-  }, [initialProducts, products.length, setProducts]);
+    setProducts(initialProducts);
+  }, [initialProducts, setProducts]);
   
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -1242,175 +947,19 @@ export const AddToCartButton = ({ product, variationId }: Props) => {
 
 ### Cart Store Pattern
 
-```typescript
-// src/store/useCartStore.ts
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-import { create } from 'zustand';
-import { persist, createJSONStorage } from 'zustand/middleware';
+Keep hydration readiness outside the resettable business state. A normal reset preserves readiness. Hydration finishes in ready or error; an error exposes bounded recovery and never leaves an indefinite loading state. Verify reset after hydration, invalid stored data and unavailable storage.
 
-interface CartItem {
-  id: string;
-  productId: number;
-  variationId?: number;
-  name: string;
-  price: number;
-  quantity: number;
-  image?: string;
-}
-
-interface CartState {
-  items: CartItem[];
-  hasHydrated: boolean;
-  
-  addItem: (item: Omit<CartItem, 'id'>) => void;
-  removeItem: (id: string) => void;
-  updateQuantity: (id: string, quantity: number) => void;
-  clearCart: () => void;
-  setHasHydrated: (value: boolean) => void;
-}
-
-const generateId = (item: Omit<CartItem, 'id'>) =>
-  `${item.productId}-${item.variationId || 'default'}`;
-
-export const useCartStore = create<CartState>()(
-  persist(
-    (set) => ({
-      items: [],
-      hasHydrated: false,
-
-      addItem: (item) =>
-        set((state) => {
-          const id = generateId(item);
-          const existing = state.items.find((i) => i.id === id);
-          
-          if (existing) {
-            return {
-              items: state.items.map((i) =>
-                i.id === id ? { ...i, quantity: i.quantity + item.quantity } : i
-              ),
-            };
-          }
-          
-          return { items: [...state.items, { ...item, id }] };
-        }),
-
-      removeItem: (id) =>
-        set((state) => ({
-          items: state.items.filter((item) => item.id !== id),
-        })),
-
-      updateQuantity: (id, quantity) =>
-        set((state) => ({
-          items: quantity > 0
-            ? state.items.map((item) =>
-                item.id === id ? { ...item, quantity } : item
-              )
-            : state.items.filter((item) => item.id !== id),
-        })),
-
-      clearCart: () => set({ items: [] }),
-      setHasHydrated: (hasHydrated) => set({ hasHydrated }),
-    }),
-    {
-      name: 'cart-storage',
-      storage: createJSONStorage(() => localStorage),
-      partialize: (state) => ({ items: state.items }),
-      onRehydrateStorage: () => (state) => {
-        state?.setHasHydrated(true);
-      },
-    }
-  )
-);
-
-// Selectors
-export const selectCartItems = (state: CartState) => state.items;
-export const selectCartItemCount = (state: CartState) =>
-  state.items.reduce((sum, item) => sum + item.quantity, 0);
-export const selectCartSubtotal = (state: CartState) =>
-  state.items.reduce((sum, item) => sum + item.price * item.quantity, 0);
-export const selectHasHydrated = (state: CartState) => state.hasHydrated;
-```
+---
 
 ### Auth Store Pattern
 
-```typescript
-// src/store/useAuthStore.ts
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-import { create } from 'zustand';
-import { persist, createJSONStorage } from 'zustand/middleware';
+Server guards control page access; server-resolved { user, role } props establish first-render identity. Retire client HOC route protection and post-mount identity fetching as authoritative patterns. Zustand handles interaction and session-event reactions, with no persisted authorization authority. Display helpers are display-only and use explicit role sets; they never authorize an operation.
 
-type UserRole = 'member' | 'admin' | 'superadmin';
-
-interface User {
-  id: string;
-  email: string;
-  role: UserRole;
-  fullName?: string;
-}
-
-interface AuthState {
-  user: User | null;
-  isAuthenticated: boolean;
-  isLoading: boolean;
-  hasHydrated: boolean;
-  
-  setUser: (user: User | null) => void;
-  setIsLoading: (loading: boolean) => void;
-  setHasHydrated: (value: boolean) => void;
-  logout: () => void;
-}
-
-export const useAuthStore = create<AuthState>()(
-  persist(
-    (set) => ({
-      user: null,
-      isAuthenticated: false,
-      isLoading: true,
-      hasHydrated: false,
-
-      setUser: (user) =>
-        set({
-          user,
-          isAuthenticated: !!user,
-          isLoading: false,
-        }),
-
-      setIsLoading: (isLoading) => set({ isLoading }),
-      setHasHydrated: (hasHydrated) => set({ hasHydrated }),
-      
-      logout: () =>
-        set({
-          user: null,
-          isAuthenticated: false,
-          isLoading: false,
-        }),
-    }),
-    {
-      name: 'auth-storage',
-      storage: createJSONStorage(() => localStorage),
-      partialize: (state) => ({
-        user: state.user,
-        isAuthenticated: state.isAuthenticated,
-      }),
-      onRehydrateStorage: () => (state) => {
-        state?.setHasHydrated(true);
-      },
-    }
-  )
-);
-
-// Selectors
-export const selectUser = (state: AuthState) => state.user;
-export const selectIsAuthenticated = (state: AuthState) => state.isAuthenticated;
-export const selectUserRole = (state: AuthState) => state.user?.role;
-export const selectHasHydrated = (state: AuthState) => state.hasHydrated;
-
-// Role check helpers
-export const selectIsAdmin = (state: AuthState) =>
-  state.user?.role === 'admin' || state.user?.role === 'superadmin';
-export const selectIsSuperAdmin = (state: AuthState) =>
-  state.user?.role === 'superadmin';
-```
+---
 
 ### UI Store Pattern
 
@@ -1558,6 +1107,7 @@ const unsubscribe = useCartStore.subscribe(
 | 1.0 | (original, date unknown) | Initial manual: three-layer state model, when-to-use table, store architecture, core patterns, persistence, SSR hydration, templates, integration patterns, common stores, best practices. Unversioned until the 2026-07 audit. |
 | 1.1 | 2026-07-08 | **Wave 4 metadata patch (audit sync).** Standard header block — this doc was the F-018 worst-case specimen (no version, date, or history anywhere). Cross-References section added — outbound isolation ended (F-035). This history table (D-018). ZERO content changes — the audit verified the doctrine clean (no derived-flag fictions, no `: any`, service-layer-consistent). |
 | 1.2 | 2026-08-05 | **Navbar Saga promotion.** Division of Labor subsection appended to §1 (server props vs. client stores hard rule — identity renders from server, stores react to browser events). Cross-ref to AUTH_MANUAL Navbar Law added. | navbar-saga |
+| 1.3 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-035, FC-040, FC-046, FC-046-heading, FC-047, FC-048, FC-049, FC-055, FC-067, FC-068, RUL-11, RUL-13 |
 
 ---
 

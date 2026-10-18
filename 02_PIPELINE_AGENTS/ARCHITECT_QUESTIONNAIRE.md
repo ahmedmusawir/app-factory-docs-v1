@@ -1,6 +1,6 @@
 # 🏗️ ARCHITECT QUESTIONNAIRE
 
-> **Version:** 2.2 · **Date:** 2026-07-07 · **Status:** Active
+> **Version:** 2.3 · **Date:** 2026-10-18 · **Status:** Active
 > **Tier:** 2 — Pipeline Agents · **Pairs with:** ARCHITECT_PLAYBOOK, APP_FACTORY_BLUEPRINT, RECON_QUESTIONNAIRE
 
 > **This doc is the SINGLE SOURCE for the Ignition Questionnaire and the APP_BRIEF template.**
@@ -72,7 +72,7 @@
 ```markdown
 # APP BRIEF: [Project Name]
 
-> **Status:** [DRAFT | REVIEW | LOCKED]
+> **Status:** [DRAFT | APPROVED | AMENDED — record approver and revision; never prefill approval]
 > **Last Updated:** [Date]
 > **Author:** Architect Agent
 
@@ -171,6 +171,7 @@ The primary interaction loop, completable in <10 seconds.
 
 | Version | Date | Change |
 |---|---|---|
+| 2.3 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-016 |
 | 2.2 | 2026-07-07 | **Wave 2A — F-017 single-source merge.** This doc is now the SINGLE SOURCE for the Ignition Questionnaire + APP_BRIEF template; ARCHITECT_PLAYBOOK §3/§5 shrink to pointers. Absorbed the playbook-only value: Q2 enriched (technical level, environment), Q10 enriched (per-layer exotic spec), new OPTIONAL Phase 4 — Constraints Deep-Dive (Q13 App Type, Q14 Tech Constraints & Deadline, Q15 Integrations, Q16 Security/Compliance, Q17 Risks & Unknowns → Planning State ❓ routing rule). Dropped playbook duplicates (what-building, problem-solved, done-looks-like, must-haves, out-of-scope, anchor checklist — each covered by a sharper standalone question or the template). Template gained Deployment Class line + §9 Integrations, §10 Constraints & Deadline, §11 Risks & Unknowns. De-Stitched Q4 → "screenshot, style tile, or Figma link" (F-002). Standard header (F-018); canonical refs (F-011); CRLF→LF normalized. "Changes Applied — GPT Recommendation" table retired into this history (see 2.1 row); chat-residue closing line removed. ⛔ Hard Gate, 📌 Reality Rule, and Planning State preserved untouched. |
 | 2.1 | 2026 (pre-audit, undated) | Added preamble (state-transition purpose), 📌 Reality Rule, ⛔ Hard Gate, Planning State table (template §8) — applied from a GPT recommendation review; formerly logged as a "✅ Changes Applied" table (chat residue, retired at 2.2). |
 | ≤2.0 | — | Earlier questionnaire iterations, pre-dating this standalone doc's version tracking. |

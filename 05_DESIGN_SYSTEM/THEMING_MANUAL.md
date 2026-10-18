@@ -1,6 +1,6 @@
 # THEMING MANUAL
 
-> **Version:** 1.2 · **Date:** 2026-07-08 · **Status:** Active
+> **Version:** 1.3 · **Date:** 2026-10-18 · **Status:** Active
 > **Tier:** 5 — Design System · **Pairs with:** GLOBAL_DESIGN_SYSTEM_HANDBOOK, TOKEN_FILE, THEME_LIBRARY, UI_UX_BUILDING_MANUAL, APP_ARCHITECTURE_MANUAL
 
 > **Project:** Stark Industries App Factory
@@ -155,15 +155,11 @@ The designer's binding output is a **filled-in entry-stylesheet snippet** (`glob
 
 Values are typically in **HSL space without the `hsl()` wrapper** — this matches shadcn's convention and lets Tailwind compose with alpha modifiers cleanly.
 
-### 4.2 Supporting Deliverables (Visual Reference, Not Executable)
+### 4.2 Required Visual Deliverables
 
-These help humans understand the designer's intent but are NOT the contract Claudy fabricates against:
+Designer handoff follows GLOBAL_DESIGN_SYSTEM_HANDBOOK §8: executable HTML is the build reference and PNG is the fidelity target for visual interfaces. Lock the canonical screen and style tile with the human approver before fabrication. Theme notes do not replace either deliverable.
 
-- **Style tile** — a one-page image showing the palette, typography, button styles, form fields
-- **Screen mockups** — annotated reference screens showing the tokens in real composition
-- **Brand rationale** — a one-page document explaining why these tokens were chosen for this brand
-
-These are valuable for stakeholder review and human alignment, but they are **secondary**. The tokens file is primary.
+---
 
 ### 4.3 Why This Format
 
@@ -266,10 +262,10 @@ When setting up a new project, theming is sequenced as follows:
 ## 10. Cross-References
 
 - **UI-UX-BUILDING-MANUAL** §Theming and Design Tokens — the operating doctrine that points here
-- **APP_ARCHITECTURE_MANUAL** §Theming Files — the file location convention
-- **HANDOFF_PACKAGE_PLAYBOOK** §Designer Handoff — the designer engagement spec
-- **STARTER_KIT_HANDBOOK** §shadcn Defaults — what the kit provides out of the box
-- **Cyberize Run 001 `_project/CLAUDE.md`** — the canonical worked example of a Locked Palette table
+- **APP_ARCHITECTURE_MANUAL** §7 Component Architecture — the file location convention
+- **GLOBAL_DESIGN_SYSTEM_HANDBOOK** §8 The Designer’s deliverables — the designer engagement spec
+- **COMPONENT_REGISTRY** §5 Shadcn UI Primitives — what the kit provides out of the box
+- Historical external example (availability unverified): **Cyberize Run 001 `_project/CLAUDE.md`** — the historical worked example of a Locked Palette table Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.
 
 ---
 
@@ -296,6 +292,7 @@ Every future Stark Industries project inherits this doctrine. The Cyberize Locke
 | 1.0 | 2026-06-02 | Initial manual. Born from Cyber Pharma Run 002. Promotes the Cyberize Run 001 Locked Palette WIN into evergreen Factory doctrine. |
 | 1.1 | Jun 2026 | **(Entry restored 2026-07-08 — the bump was applied to the header/body but never logged here; F-033 inverse-symptom.)** Added the entry-stylesheet portability rule to §3.2: `globals.css` OR `globals.scss` per kit, extension-agnostic `/* */` comments, per-kit fact not doctrine (L14 institutionalized as verify-then-fork). |
 | 1.2 | 2026-07-08 | **Wave 5 (audit sync).** Missing v1.1 history entry restored above — metadata honesty (F-033). Cross-references canonical-name only, §0 + §10: the PHANTOM `HANDOFF_PACKAGE_PLAYBOOK v1.1` (a version that never existed) killed at both sites, plus the stale UI-UX/APP_ARCHITECTURE/handbook versioned refs (F-032/F-011). §3.1 token table aligned to the GDSH §2 canonical contract: success/warning no longer "optional", info/chart-1..5/radius added, the three `--role-*` identity tokens added with their rules one-liners (F-043 consumer alignment). §4.1 gains the TW3/TW4 format fork note (GDSH §2 model). Standard header block (F-018); footer suite label de-versioned. |
+| 1.3 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-009, FC-075, FC-083, MC-01 |
 
 ---
 

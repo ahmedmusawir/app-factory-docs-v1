@@ -1,6 +1,6 @@
 # FRONTEND_FIRST_PLAYBOOK.md
 
-> **Version:** 1.1.3 · **Date:** 2026-07-07 · **Status:** Active
+> **Version:** 1.2.0 · **Date:** 2026-10-18 · **Status:** Active
 > **Tier:** 3 — Build Methodology · **Pairs with:** FRONTEND_BUILD_PHASE_PLAYBOOK, STARTER_KIT_HANDBOOK, COMPONENT_REGISTRY, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK
 
 > **Born from:** Cyberize Run 001 lessons (Lesson 2 redundant authService, Lesson 4/7 component blindness, Lesson 7 page composition) + v1.1.1 correction (Lesson 9 — over-merged sections relocated to FRONTEND_BUILD_PHASE_PLAYBOOK)
@@ -370,7 +370,7 @@ src/app/(cyberize)/chat/ChatPageContent.tsx ← co-located with page.tsx
 
 ### Reference Example
 
-The canonical worked example of this pattern is at:
+Historical external example (availability unverified): The historical worked example of this pattern is at: Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.
 - `src/app/(admin)/admin-portal/page.tsx` (thin wrapper)
 - `src/app/(admin)/admin-portal/AdminPortalPageContent.tsx` (actual content)
 
@@ -432,6 +432,7 @@ This split is also v1.1's first explicit application of the **Doctrine Pairing P
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 1.2.0 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-009, MC-01 |
 | 1.1.3 | 2026-07-07 | **Wave 3 micro-patch (audit sync).** Standard header block (F-018). Cross-references stripped of version suffixes — §0 STARTER_KIT_HANDBOOK + COMPONENT_REGISTRY, §14 FRONTEND_BUILD_PHASE_PLAYBOOK + SOFTWARE_FACTORY_PLAYBOOK (F-032/F-011, the zero-hour same-campaign drift record). 8× broken em-dash artifacts repaired (quote-mark residue restored to em-dashes: §3 gate headers ×3, §4, §5, §6 ×3) — the corruption class the a-circumflex grep cannot see (F-012). One-line recon pointer added to §0 (F-024 coordination). Footer suite label de-versioned. |
 | 1.1.2 | 2026-06-28 | Re-pointed the §12 co-location Reference Example from the deleted `/demo` route to the live `(admin)/admin-portal` page+content pair (preserve lesson, swap actor). Kit Hardening Gate 10. |
 | 1.1.1 | 2026-06-02 | Sections 14 and 15 trimmed to cross-references. Stage execution doctrine (Pre-Phase Doctrine Refresh, Kit Improvement Proposals) relocated to its proper home in FRONTEND_BUILD_PHASE_PLAYBOOK_v1.2.md. Doctrine de-duplication. Born from Lesson 9 (speculative authoring caught in v1.1 retrospective). |

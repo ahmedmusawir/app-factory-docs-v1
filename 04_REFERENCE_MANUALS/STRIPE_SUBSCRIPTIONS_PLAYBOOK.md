@@ -1,6 +1,6 @@
 # STRIPE SUBSCRIPTIONS PLAYBOOK
 
-> **Version:** 1.1 · **Date:** 2026-07-08 · **Status:** Active
+> **Version:** 1.2 · **Date:** 2026-10-18 · **Status:** Active
 > **Tier:** 4 — Reference Manuals · **Pairs with:** ECOMMERCE_AND_PAYMENTS_MANUAL, API_AND_SERVICES_MANUAL, TESTING_PLAYBOOK, AUTH_MANUAL
 
 > **Author:** Architect (Claude) for Tony Stark
@@ -65,7 +65,7 @@ Five nouns you need:
 
 **Price** — a specific amount on a Product. "$15/month." A Product can have multiple Prices (monthly, annual, different currencies). Old subscribers stay on their original Price forever — you change prices without breaking existing subscriptions.
 
-**Customer** — a person in Stripe's system. One Stripe Customer per user in your app. Store the `stripe_customer_id` on your user/subscription record. This is the bridge between your world and Stripe's.
+**Customer identity:** use the project-approved ownership and storage contract. Do not prescribe universal storage on a subscription row; universal subscription-schema design is deferred.
 
 **Subscription** — the live recurring relationship between a Customer and a Price. Has a status: `active`, `past_due`, `canceled`, `incomplete`, `trialing`, `unpaid`.
 
@@ -172,99 +172,9 @@ This gives you a free, hosted subscription management page. Your app just redire
 
 ## 3. Supabase Schema Recipe
 
-### The Subscriptions Table
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-```sql
-CREATE TABLE public.subscriptions (
-  id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
-  user_id UUID NOT NULL REFERENCES auth.users(id) ON DELETE CASCADE,
-  stripe_customer_id TEXT,
-  stripe_subscription_id TEXT,
-  tier TEXT NOT NULL CHECK (tier IN ('starter', 'pro', 'enterprise')),
-  status TEXT NOT NULL DEFAULT 'active' CHECK (status IN ('active', 'canceled', 'past_due', 'incomplete', 'trialing', 'unpaid')),
-  current_period_start TIMESTAMPTZ,
-  current_period_end TIMESTAMPTZ,
-  cancel_at_period_end BOOLEAN DEFAULT FALSE,
-  created_at TIMESTAMPTZ DEFAULT NOW(),
-  updated_at TIMESTAMPTZ DEFAULT NOW()
-);
-
--- One subscription per user
-ALTER TABLE public.subscriptions
-  ADD CONSTRAINT subscriptions_user_id_unique UNIQUE (user_id);
-
--- Prevent duplicate webhook processing
-ALTER TABLE public.subscriptions
-  ADD CONSTRAINT subscriptions_stripe_subscription_id_unique UNIQUE (stripe_subscription_id);
-
--- Fast lookups
-CREATE INDEX idx_subscriptions_user_id ON public.subscriptions(user_id);
-CREATE INDEX idx_subscriptions_stripe_sub_id ON public.subscriptions(stripe_subscription_id);
-```
-
-### RLS Policies
-
-```sql
-ALTER TABLE public.subscriptions ENABLE ROW LEVEL SECURITY;
-
--- Users can read their own subscription
-CREATE POLICY "Users can read own subscription"
-  ON public.subscriptions FOR SELECT
-  USING (auth.uid() = user_id);
-
--- Block all direct writes (webhook handler uses service role to bypass)
-CREATE POLICY "No direct user inserts"
-  ON public.subscriptions FOR INSERT WITH CHECK (FALSE);
-
-CREATE POLICY "No direct user updates"
-  ON public.subscriptions FOR UPDATE USING (FALSE);
-
-CREATE POLICY "No direct user deletes"
-  ON public.subscriptions FOR DELETE USING (FALSE);
-```
-
-### Auto-Update Trigger
-
-```sql
-CREATE OR REPLACE FUNCTION public.update_updated_at()
-RETURNS TRIGGER AS $$
-BEGIN
-  NEW.updated_at = NOW();
-  RETURN NEW;
-END;
-$$ LANGUAGE plpgsql;
-
-CREATE TRIGGER subscriptions_updated_at
-  BEFORE UPDATE ON public.subscriptions
-  FOR EACH ROW EXECUTE FUNCTION public.update_updated_at();
-```
-
-### Column Reference
-
-| Column | Purpose | Who Writes It |
-|--------|---------|---------------|
-| `id` | Primary key | Auto-generated |
-| `user_id` | Links to Supabase auth user | Checkout route (on first subscribe) |
-| `stripe_customer_id` | Bridge to Stripe Customer object | Checkout route (on first subscribe) |
-| `stripe_subscription_id` | Bridge to Stripe Subscription | Webhook handler |
-| `tier` | Current subscription tier string | Webhook handler |
-| `status` | Stripe subscription status | Webhook handler |
-| `current_period_start` | Billing period start | Webhook handler |
-| `current_period_end` | Billing period end (check this + status for access) | Webhook handler |
-| `cancel_at_period_end` | User canceled but still has access until period ends | Webhook handler |
-| `created_at` | Row creation timestamp | Auto |
-| `updated_at` | Last modification timestamp | Auto (trigger) |
-
-### The "No Subscription" Convention
-
-Users who never subscribed have NO row in this table. The service layer treats absence as `tier: 'free'`:
-
-```typescript
-const { data } = await supabase.from('subscriptions').select('*').eq('user_id', userId).single();
-if (!data) return { tier: 'free', status: 'none', renewal_date: null, started_at: null };
-```
-
-Components never deal with null — the service layer always returns a valid `Subscription` object.
+Subscription bootstrap, customer identity and resubscription must agree with the project’s approved schema. Universal subscription-schema design is deferred; no runnable replacement is supplied here. Preserve owner-only reads and server-only subscription writes. Keep this finding open until the project contract and recovery behavior are verified.
 
 ---
 
@@ -318,232 +228,35 @@ Same env var name in code, different secret in GCP per project. Clone the repo, 
 
 ## 5. The Checkout Flow
 
-### Architecture
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-```
-PlanCard (client) → checkoutService.subscribe(tier)
-    ↓ POST /api/checkout { tier, next? }
-Checkout Route (server):
-    1. Authenticate user from Supabase session
-    2. Validate tier against known values
-    3. Look up existing subscription row
-    4. If active subscription exists → UPGRADE path (Section 7)
-    5. If no subscription → NEW SUBSCRIBER path:
-       a. Create Stripe Customer (if needed)
-       b. Save stripe_customer_id to Supabase
-       c. Create Checkout Session (mode: 'subscription')
-       d. Return { redirect_url: session.url }
-    ↓
-PlanCard: window.location.href = redirect_url
-    ↓
-User on Stripe Checkout → pays → redirected to success URL
-```
+Persist one authorized checkout-attempt identity across retries and claim it atomically against concurrent requests. Scope provider idempotency keys to that attempt and operation, reuse or retrieve existing external objects after an unknown outcome, and reconcile before creating a replacement. Use the project-approved customer-identity contract without assuming paid activation; universal subscription schema design is deferred. Handle every documented subscription state, not only active.
 
-### Why `window.location.href` Not `router.push()`
-
-Stripe Checkout lives on `checkout.stripe.com` — an external domain. Next.js `router.push()` only handles internal routes. For external URLs, use `window.location.href` for a full browser redirect. This also works for internal URLs (upgrade path returns `/subscribe/success`), so one code path handles both cases.
-
-### The Checkout Session Configuration
-
-```typescript
-const session = await stripe.checkout.sessions.create({
-  mode: 'subscription',
-  customer: stripeCustomerId,
-  line_items: [{ price: priceId, quantity: 1 }],
-  success_url: `${origin}/subscribe/success${next ? `?next=${encodeURIComponent(next)}` : ''}`,
-  cancel_url: `${origin}/pricing${next ? `?next=${encodeURIComponent(next)}` : ''}`,
-  metadata: { supabase_user_id: user.id, tier },
-});
-```
-
-**Key details:**
-- `mode: 'subscription'` — not `'payment'` (that's for one-time charges like DockBloxx)
-- `metadata` — carries your user ID and tier through the Stripe flow so the webhook can link back to your database
-- `success_url` / `cancel_url` — preserve the `?next=` parameter so intent-aware redirects survive the Stripe round-trip
-- `customer` — always pass the Stripe Customer ID; never let Stripe auto-create customers (you lose the link to your user)
-
-### Stripe Customer Creation Strategy
-
-One Stripe Customer per user, ever. Created on first subscribe:
-
-```typescript
-const customer = await stripe.customers.create({
-  email: user.email,
-  metadata: { supabase_user_id: user.id },
-});
-```
-
-Store `stripe_customer_id` on the subscriptions row. On subsequent subscribes/upgrades, look it up instead of creating a new one. Never create duplicate customers — it causes billing confusion.
-
-### Price ID Validation
-
-Never trust the client to send a valid tier. Always validate server-side:
-
-```typescript
-const priceId = resolvePriceIdFromTier(tier);
-if (!priceId) return NextResponse.json({ error: 'Invalid tier' }, { status: 400 });
-```
-
-The `resolvePriceIdFromTier()` helper reads from env vars — never hardcode Price IDs.
+Subscription bootstrap, customer identity and resubscription must agree with the project’s approved schema. Universal subscription-schema design is deferred; no runnable replacement is supplied here. Preserve owner-only reads and server-only subscription writes. Keep this finding open until the project contract and recovery behavior are verified.
 
 ---
 
 ## 6. The Webhook Handler
 
-### The Most Important File In The System
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-The webhook handler is where money becomes access. Get it wrong and either (a) people pay but don't get access, or (b) people get access without paying. Both are catastrophic.
+For supported events, check business persistence or durable enqueue before acknowledging. Pre-acceptance failure returns a retryable failure. After durable acceptance, worker failures enter bounded durable retries and visible failed-work reconciliation with an alert and recovery owner. Unsupported events are explicitly distinguished from failed supported events. Missing order/user mappings create actionable recovery records, not silent success.
 
-### Signature Verification (Non-Negotiable)
+Converge each order or subscription aggregate using authoritative provider retrieval or explicit freshness and legal-transition rules. Reject stale transitions; check zero-row updates and repair missing mappings. A late event for an old subscription may not overwrite its replacement. Define reconciliation of the local mirror independently of inbound deduplication.
 
-```typescript
-export async function POST(request: Request) {
-  const body = await request.text();  // RAW body, NOT request.json()
-  const signature = request.headers.get('stripe-signature')!;
+Subscription bootstrap, customer identity and resubscription must agree with the project’s approved schema. Universal subscription-schema design is deferred; no runnable replacement is supplied here. Preserve owner-only reads and server-only subscription writes. Keep this finding open until the project contract and recovery behavior are verified.
 
-  let event: Stripe.Event;
-  try {
-    event = stripe.webhooks.constructEvent(
-      body,
-      signature,
-      process.env.STRIPE_WEBHOOK_SECRET!
-    );
-  } catch (err) {
-    console.error('Webhook signature verification failed:', err);
-    return new Response('Webhook signature verification failed', { status: 400 });
-  }
-
-  // Process event...
-  return new Response('OK', { status: 200 });
-}
-```
-
-**Critical details:**
-- Read the body as `request.text()`, NOT `request.json()`. Signature verification needs the raw bytes. If you parse to JSON first, the signature won't match.
-- Always return 200, even for unknown event types. Stripe retries on non-2xx responses for up to 3 days. Returning 400 for an event type you don't handle will cause endless retries.
-- The `STRIPE_WEBHOOK_SECRET` changes every time you restart the Stripe CLI listener in development. Update `.env.local` and restart your dev server.
-
-### Event Types (Happy Path)
-
-Handle these three. Log and ignore everything else.
-
-**`checkout.session.completed`** — User just paid for the first time.
-```
-1. Extract session.subscription (Stripe Subscription ID)
-2. Retrieve full subscription: stripe.subscriptions.retrieve(subId)
-3. Extract price ID from subscription.items.data[0].price.id
-4. Resolve tier via resolveTierFromPriceId()
-5. Extract customer ID and user ID from session metadata
-6. UPSERT into subscriptions table
-```
-
-**`customer.subscription.updated`** — Subscription changed (upgrade, downgrade, renewal, pending cancellation).
-```
-1. Extract subscription object from event.data.object
-2. Extract price ID → resolve tier
-3. UPDATE subscriptions row WHERE stripe_subscription_id matches
-4. Update: tier, status, period dates, cancel_at_period_end
-```
-
-**`customer.subscription.deleted`** — Subscription fully canceled (period ended).
-```
-1. Extract subscription object
-2. UPDATE subscriptions row WHERE stripe_subscription_id matches
-3. Set status to 'canceled'
-```
-
-### Idempotency via UPSERT
-
-Webhooks can arrive multiple times (Stripe retries). Use Supabase UPSERT with conflict handling:
-
-```typescript
-await supabaseAdmin
-  .from('subscriptions')
-  .upsert({
-    user_id: userId,
-    stripe_customer_id: customerId,
-    stripe_subscription_id: subscriptionId,
-    tier,
-    status,
-    current_period_start,
-    current_period_end,
-    cancel_at_period_end,
-  }, {
-    onConflict: 'stripe_subscription_id',
-  });
-```
-
-Same event twice = same final state. Idempotent by design.
-
-### Stripe SDK v22 Gotcha
-
-In Stripe SDK v22+, `current_period_start` and `current_period_end` moved from the Subscription object to the SubscriptionItem. Read them from:
-
-```typescript
-subscription.items.data[0].current_period_start
-subscription.items.data[0].current_period_end
-```
-
-Not from `subscription.current_period_start` (which may be undefined or deprecated).
-
-### The Admin Client
-
-The webhook handler writes to Supabase using the **service role key**, which bypasses RLS. This is intentional — RLS blocks all user-level writes to the subscriptions table. The webhook is the only trusted writer.
-
-```typescript
-import { createClient } from '@supabase/supabase-js';
-
-export const supabaseAdmin = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!,
-  { auth: { autoRefreshToken: false, persistSession: false } }
-);
-```
-
-**Never import this client in client-side code.**
+Distinguish optional telemetry from required follow-up. Complete required work retry-safely or durably enqueue it before acknowledgment. Failed or unconfirmed enqueue returns retryable failure. A later worker failure uses bounded durable retry, visible failed-work state and a named recovery owner. Inspect non-success HTTP responses from follow-up targets; a resolved fetch is not proof of success.
 
 ---
 
 ## 7. The Tier Upgrade Pattern
 
-### The Bug That Caught Us
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-When a subscribed user clicked "Subscribe" on a different tier, the checkout route created a brand new Stripe Subscription. The user ended up with TWO active subscriptions and was double-charged. This is the #1 most common Stripe subscription bug in the wild.
+Persist one authorized checkout-attempt identity across retries and claim it atomically against concurrent requests. Scope provider idempotency keys to that attempt and operation, reuse or retrieve existing external objects after an unknown outcome, and reconcile before creating a replacement. Use the project-approved customer-identity contract without assuming paid activation; universal subscription schema design is deferred. Handle every documented subscription state, not only active.
 
-### The Fix
-
-Before creating a new Checkout Session, check if the user already has an active subscription:
-
-```typescript
-// In /api/checkout route handler:
-if (existingSubscription?.stripe_subscription_id && existingSubscription?.status === 'active') {
-  // UPGRADE PATH — modify existing subscription
-  const stripeSubscription = await stripe.subscriptions.retrieve(existingSubscription.stripe_subscription_id);
-  const existingItemId = stripeSubscription.items.data[0].id;
-  const newPriceId = resolvePriceIdFromTier(tier);
-
-  await stripe.subscriptions.update(existingSubscription.stripe_subscription_id, {
-    items: [{ id: existingItemId, price: newPriceId }],
-  });
-
-  // No Checkout page needed — upgrade is instant
-  return NextResponse.json({ redirect_url: '/subscribe/success' });
-}
-
-// NEW SUBSCRIBER PATH — create Checkout Session (existing flow)
-```
-
-### Why This Works
-
-- `stripe.subscriptions.update()` swaps the Price ID on the existing subscription
-- Stripe automatically prorates — credits unused time on old plan, charges difference for new plan
-- Stripe fires `customer.subscription.updated` webhook event
-- Your webhook handler already handles this event type — it updates the tier in Supabase
-- ONE subscription in Stripe, ONE row in Supabase, correct tier reflected in your app
-
-### Key Detail
-
-The upgrade path returns an internal URL (`/subscribe/success`), not a Stripe URL. The user doesn't need to enter card details again — they already have a payment method on file. The PlanCard's `window.location.href` handles both internal and external URLs, so no client code changes needed.
+Poll the server-authorized payment attempt and expected target tier with its qualifying subscription status. A pre-existing paid tier is not evidence of this upgrade. A timeout shows pending or unknown and its recovery/support path; it never claims payment receipt. Redirects remain cosmetic.
 
 ---
 
@@ -618,10 +331,10 @@ Poll for subscription status with three visual states:
 "Activating your subscription..." with a spinning icon. Check every 2 seconds.
 
 **State 2 — Confirmed (green check):**
-"Welcome to Pro!" with a Continue button. Shown when the subscription tier is no longer "free."
+"Your subscription change is confirmed." with a Continue button. Show only after the server-authorized payment attempt resolves to its expected target tier and qualifying subscription status; an existing non-free tier is insufficient.
 
 **State 3 — Timeout (amber info):**
-"Your payment was received! Your subscription will activate momentarily." with a Refresh button. Shown after 5 failed polls (10 seconds).
+"Your subscription change is still pending or could not be confirmed." with Refresh and the approved support/recovery path. Show after 5 failed polls (10 seconds); timeout does not establish payment receipt.
 
 ### Implementation Notes
 
@@ -641,19 +354,7 @@ Instead of building a custom subscription management UI (cancel, update payment,
 
 ### The API Route
 
-```typescript
-// /api/customer-portal/route.ts
-export async function POST(request: Request) {
-  // 1. Authenticate user
-  // 2. Look up stripe_customer_id from subscriptions table
-  // 3. Create portal session:
-  const session = await stripe.billingPortal.sessions.create({
-    customer: stripeCustomerId,
-    return_url: `${origin}/members-portal/account`,
-  });
-  // 4. Return { redirect_url: session.url }
-}
-```
+**Dependent executable example withdrawn.** Use a project-approved state/payment contract with explicit hydration errors, server-authoritative pricing, authenticated ownership and recovery. The removed example’s missing contract is still tracked; no universal quote/subscription schema is introduced.
 
 ### The Frontend
 
@@ -730,6 +431,8 @@ All hosted by Stripe. All PCI-compliant. Zero UI for you to build or maintain.
 ---
 
 ## 12. Testing Strategy
+
+The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it.
 
 ### Pure Function Unit Tests (High Value, Low Effort)
 
@@ -905,6 +608,7 @@ Replace Stripe's built-in emails with branded transactional emails (welcome, ren
 |---|---|---|
 | 1.0 | 2026-04-28 | Initial playbook, distilled from StarkReads Subscription v1: object model, setup + schema recipes, checkout flow, webhook handler, tier upgrades, service-layer swap, success polling, customer portal, gotchas, testing, deployment, roadmap. |
 | 1.1 | 2026-07-08 | **Wave 4 micro (audit sync).** Territory declaration added (recurring only; one-time/WooCommerce → ECOMMERCE_AND_PAYMENTS_MANUAL — completes the pair's two-way declaration). Cross-References section added — island ended: §8 ↔ API_AND_SERVICES, §12 ↔ TESTING_PLAYBOOK (provenance siblings introduced at last), gate helpers ↔ AUTH_MANUAL (F-035). Standard header (F-018); this history table (D-018). Content untouched — the D-016 money-truth model + RBAC ⊥ subscriptions doctrine is promoted gold. |
+| 1.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-047, FC-052, FC-053, FC-054, FC-055, FC-059, FC-063, FC-065, FC-065-confirmed, FC-065-timeout, FC-067, FC-068, RUL-11 |
 
 ---
 

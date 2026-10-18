@@ -1,6 +1,6 @@
 # QA PLAYBOOK
 
-> **Version:** 1.1 · **Date:** 2026-08-10 · **Status:** Active — field-tested (ADK Harness BIM/FIX verification)
+> **Version:** 1.2 · **Date:** 2026-10-18 · **Status:** Active — field-tested (ADK Harness BIM/FIX verification)
 > **Tier:** 3 — Build Methodology  
 > **Pairs with:** `BUG_FIX_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `RECON_QUESTIONNAIRE.md`  
 > **Owner:** Stark Industries App Factory  
@@ -204,14 +204,16 @@ The Engineer:
 
 The QA Lead:
 
-- treats the handoff as claims to verify,
-- authors or reviews the QA plan,
-- traces acceptance criteria to evidence,
-- executes or coordinates manual QA,
-- performs exploratory verification,
-- classifies findings,
-- issues Gate Q and Gate D verdicts,
+- owns the reusable QA playbook and standing risk requirements,
+- treats the engineering handoff as claims to verify,
+- reviews and approves the QA Executor’s independent plan,
+- adjudicates findings and issues the governed QA verdict and certification,
+- governs retention and cleanup acceptance,
 - protects the boundary between in-scope defects and follow-up findings.
+
+## QA Executor
+
+The QA Executor independently performs Q1 recon and test planning, executes the approved plan after Director release, records evidence, packages checkpoints, and performs authorized retest and cleanup. The Executor does not repair product code, grant release authority or certify its own result.
 
 ## DevOps / Deployment Operator
 
@@ -230,30 +232,9 @@ DevOps:
 
 # 5. Source-of-Truth Order
 
-QA must know what wins when sources disagree.
+Resolve authority by the question being answered: disk and recon establish what exists; approved artifacts establish what is authorized; the named domain owner defines the reusable pattern. A conflict between these is not permission to substitute one for another. Stop the affected work, record both sources and their revisions, and obtain the Director’s attributable ruling. Preserve stage-specific authority within its stated scope.
 
-Use this order unless a module explicitly overrides it:
-
-1. **Current accepted scope / acceptance specification**
-2. **Current filesystem and running system**
-3. **Current data contracts / architecture contracts**
-4. **Current recon report**
-5. **Current environment configuration**
-6. **Engineer completion report**
-7. **Prior documentation**
-8. **Conversation history / recollection**
-
-Important:
-
-> The Engineer report is never higher authority than the acceptance contract or the running system.
-
-If docs and disk disagree:
-
-> Disk wins, and the documentation drift becomes a finding.
-
-If acceptance criteria and implementation disagree:
-
-> Acceptance criteria win until the Operator or Architect changes the contract.
+Approved project briefs govern scope; governing documents control their respective subjects. Acceptance criteria are amended only by attributable approval. QA treats an implementation mismatch as evidence of a finding, not as a change to the acceptance contract.
 
 ---
 
@@ -473,6 +454,8 @@ Automated evidence should normally be collected before long exploratory manual w
 ---
 
 ## Stage 5 — Operator Manual QA
+
+For newly authored modules, the QA Lead’s approved QAM plan allocates checks to the QA Executor or to declared human-only verification according to evidence needs, capability and authorized side effects. Agent-capable matrices do not default to the Director. The one-test-at-a-time protocol below applies when the plan calls for Operator execution. It does not replace independent Q1 planning, plan approval or Director release.
 
 Manual QA is run **one test at a time**.
 
@@ -926,6 +909,8 @@ Minimum:
 
 # 14. The Final Environment Reset Rule
 
+Required cleanup removes only authorized disposable execution debris, temporary credentials/authentication state, and owned QA processes or browser contexts. Retain durable evidence, required failed attempts and justified helpers. QA Lead governs retention and cleanup acceptance; certification, Architect closeout and Director release remain separate responsibilities. Record command, working directory, exit code and unfiltered safe output, with sensitive data excluded at collection. Prove product, tests, configuration and contract identity unchanged by cleanup. Module QA records live under `agent_docs/` in their module `QAM/`; verify production exclusion under `DEPLOYMENT_PLAYBOOK.md`.
+
 QA must not leave the system in a test-only or broken state.
 
 Before issuing the final verdict, verify the final operating configuration.
@@ -1186,7 +1171,7 @@ Not merely larger.
 
 Every meaningful BIM, FIX, FEAT, or release should produce or reference:
 
-1. `ACCEPTANCE_SPEC.md` or equivalent acceptance criteria,
+1. The module’s mandatory `ACCEPTANCE_SPEC.md`,
 2. Engineer completion report,
 3. `QA_PLAN.md`,
 4. automated test evidence,
@@ -1803,6 +1788,7 @@ That is the reason the QA seat exists.
 | 0.1 | 2026-08-04 | Initial draft. Defined QA roles, evidence discipline, risk-based planning, Gate Q, Gate D, production confirmation, deliverables, defect routing, regression doctrine, security/privacy handling, and release-complete criteria. |
 | 1.0 | 2026-08-10 | Promoted after hands-on ADK Next.js Harness QA. Adds Engineer Handoff as Claim Package, Acceptance Spec contract extraction, one-test-at-a-time manual protocol, environment-readiness triage, exploratory seam testing, explicit finding classifications, PASS WITH FOLLOW-UP FINDINGS, scope-protection doctrine, browser-state testing, mock/live boundary testing, failure injection, final environment reset verification, field-tested FIX/BIM protocols, and 10 promoted field lessons. |
 | 1.1 | 2026-08-10 | AC* numbering synchronized with the Factory Module Identity & QA Handoff doctrine; legacy gate-ID citations labeled. |
+| 1.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-005, FC-025, RUL-03, RUL-12, W14, W15, W16 |
 
 ---
 

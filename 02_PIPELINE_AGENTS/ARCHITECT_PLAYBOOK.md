@@ -1,6 +1,6 @@
 # ARCHITECT AGENT PLAYBOOK
 
-> **Version:** 2.2 · **Date:** 2026-07-07 · **Status:** Active
+> **Version:** 2.3 · **Date:** 2026-10-18 · **Status:** Active
 > **Tier:** 2 — Pipeline Agents · **Pairs with:** ARCHITECT_QUESTIONNAIRE, RECON_QUESTIONNAIRE, DESIGNER_PLAYBOOK, APP_FACTORY_BLUEPRINT
 
 > **App Factory — Stark Industries**  
@@ -31,14 +31,16 @@ The Architect is the **first agent** in the 3-Agent Council. It transforms a raw
 
 ### Position in the Factory Pipeline
 
-```
-┌─────────────┐     ┌──────────────────────┐     ┌─────────────┐
-│  ARCHITECT  │ ──► │       DESIGNER        │ ──► │   ENGINEER  │
-│             │     │                       │     │             │
-│ APP_BRIEF   │     │ Token file (primary)  │     │ DATA_CONTRACT│
-│             │     │ + HTML/PNG artifacts  │     │ + Claudy     │
-│             │     │ + UI_SPEC + Manifest  │     │   (Claude Code)│
-└─────────────┘     └──────────────────────┘     └─────────────┘
+```text
+Director approves scope and releases each assignment.
+Engineer: ground-truth recon -> Architect: approved APP_BRIEF + DATA_CONTRACT before Design
+Designer: UI_SPEC + applicable visual artifacts -> Architect: reconciled module + ACCEPTANCE_SPEC + QAM
+Director release -> Engineer implementation and factual handoff -> Director commits completed candidate
+QA Executor Q1 -> QA Lead plan approval -> Director Q2 release -> QA Executor execution
+Conditional Engineer repair / independent retest on continuing QA branch -> QA Lead verdict
+Required cleanup -> Architect closeout -> bounded Engineer closeout -> Director final Git actions
+Review checkpoint 1: after FFM build and its independent QA finish. Review checkpoint 2: Engine 2 independent system review after all Engine 1 phases/modules and their QA are closed. At either checkpoint, disposition findings; RRM only for approved findings requiring repairs; a clean review requires no RRM. Review, Gate Q, cleanup acceptance, Gate D and release remain distinct.
+FILE_TREE is optional; implementation structure and boundaries remain explicit.
 ```
 
 ### Core Responsibilities
@@ -58,11 +60,11 @@ The Architect is the **first agent** in the 3-Agent Council. It transforms a raw
 | Not Architect's Job | Belongs To |
 |---------------------|------------|
 | Design UI/UX | Designer Agent |
-| Define data schemas | Engineer Agent |
+| Implement approved data schemas as migrations and models | Engineer Agent |
 | Write code | Claude Code / Windsurf |
 | Make product decisions | Human (Tony Stark) |
 | Choose visual styles | Designer Agent |
-| Define API contracts | Engineer Agent |
+| Implement approved API contracts | Engineer Agent |
 
 ### The Architect's Mantra
 
@@ -80,13 +82,13 @@ Before the Architect can produce an APP_BRIEF, it needs these inputs from the hu
 
 > **This is the Architect's Plan Mode.** Plan Mode keeps the Engineer from coding blind. Recon Mode keeps the Architect from authoring blind. It is not optional, and it comes before every other input below.
 
-**The Architect does NOT author an APP_BRIEF, DATA_CONTRACT, UI_SPEC, `_project/CLAUDE.md`, or any FFM file against a repo until a current `stark-recon` Recon Report exists for that repo's actual state.**
+**Before preparing or reconciling any project artifact, the Architect requires a current Recon Report for the actual repository state. The Architect owns APP_BRIEF, DATA_CONTRACT and assembly; the Designer owns UI_SPEC.**
 
 Why this is law, not preference: docs drift. Starter-kit handbooks, prior APP_BRIEFs, and session logs make claims about disk that go stale. An Architect who authors against a stale doc produces a *correct artifact built on wrong data* — and the cost surfaces later as conflict after conflict at the Engineer's build gate. (This is the lesson of the Cyber Pharma v1 Phase 1 run: six confirmed handbook bugs, stale env names, a year-old cross-project fossil — all of which a recon catches on day one.)
 
 The rule:
 - **Run `stark-recon` first.** The Engineer (Claudy) executes it read-only and writes a Recon Report to `agent_docs/recon/RECON_<project>_<phase>_<date>.md`.
-- **Author only from the report.** Where any doc and the filesystem disagree, the filesystem wins.
+- **Author only from the report.** Disk establishes implementation facts; approved briefs govern scope and governing documents control their subjects. Route genuine conflicts to the Director.
 - **Re-run when stale.** If a phase closed, a kit was upgraded, or branches merged since the last recon, the report is stale — recon again before authoring the next brief/FFM.
 - **Applies to every project, every kit, every phase** — not just the first.
 
@@ -328,6 +330,8 @@ Human (Tony Stark) confirms:
 ---
 
 ## 8. Handoff Protocol to Designer
+
+Every newly authored module includes a complete, module-specific `QAM/` prepared by the Architect from `03_BUILD_METHODOLOGY/_templates/QAM/`. QA Lead owns the reusable playbook and standing requirements. Engineer fills factual engineering records and handoff; QA Executor performs independent Q1 recon and test planning; QA Lead approves the plan; Director releases execution; QA Executor performs Q2 and authorized retest; QA Lead adjudicates and certifies. `QAM_PLAYBOOK.md` owns this packaging and sequence. Existing modules already in flight retain their recorded sequence until an attributable amendment.
 
 When APP_BRIEF reaches APPROVED status, Architect hands off to Designer.
 
@@ -610,6 +614,7 @@ The Architect Agent's mission is to **freeze intent before code**.
 
 | Version | Date | Change |
 |---|---|---|
+| 2.3 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-004, FC-005, FC-008, FC-014, FC-017, FC-027, MC-06, RUL-01, RUL-05, RUL-09, RUL-12, W18, W23 |
 | 2.2 | 2026-07-07 | **Wave 2A (audit sync).** §3 Ignition Questionnaire + §5 APP_BRIEF template relocated to ARCHITECT_QUESTIONNAIRE as the single source — summaries + pointers remain here (F-017; FRONTEND_FIRST §14 relocation pattern; Doctrine Pairing Principle, SOFTWARE_FACTORY_PLAYBOOK §1.5). §1 pipeline diagram redrawn to the Designer v2.0 model: token file primary, HTML/PNG as QC artifacts (F-002; pattern from DESIGNER_PLAYBOOK §1). De-Stitched §2 inputs table + No-Vibe-Design step + §8 handoff package (F-002). §2 Recon Mode now cross-references RECON_QUESTIONNAIRE (the skill's instrument) and Blueprint Phase 0 (F-024). Internal version aligned to 2.2; filename/version mismatch resolves at MANIFEST rename, Wave 6 (F-016). Standard header block (F-018); canonical-name refs (F-011). |
 | 2.1 | Jun 2026 | Recon Mode added as a non-negotiable precondition (§2) — the Architect's Plan Mode. No APP_BRIEF/FFM authored without a current `stark-recon` Recon Report. Ground-Truth Verification added as the first Core Responsibility (§1), the recon clause to the Mantra, the "Authoring Against Stale Docs" anti-pattern (§9, #1), and recon as Step 0 of the checklist. Promoted from the Cyber Pharma v1 Phase 1 run (six handbook bugs caught a posteriori; Recon Mode catches them a priori). |
 | 2.0 | — | Baseline as audited (REVIEW_004): role definition, Ignition Questionnaire (then embedded), App Type Router, APP_BRIEF template (then embedded), type-specific considerations, approval criteria, Designer handoff protocol, anti-patterns, worked examples. |
