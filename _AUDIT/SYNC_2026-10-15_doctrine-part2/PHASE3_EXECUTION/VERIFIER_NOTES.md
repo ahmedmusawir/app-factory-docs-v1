@@ -1,0 +1,3 @@
+# Verifier scope
+
+engineer_apply_verify.py is the exact script used, with initial worktree clean-state guard for apply. verify consumes preserved inputs. Its protected-set comparison was run before authorized setup-receipt reconciliation and handoff updates; those subsequent bookkeeping files are expected to change. Rechecks should exclude only EXECUTION_SETUP/SETUP_RECEIPT.json and OPERATOR_NEXT_STEPS.md from that original protected-run comparison. Original map/spec/sources/indexes remain protected. engineer_commit.py records commit orchestration and originally loaded definitions from /tmp/factory_phase3.py; the same source is preserved here as engineer_apply_verify.py. Prior failed attempts were verifier-only and retained.

@@ -1,0 +1,62 @@
+{
+  "snapshot_files": 189,
+  "links": [
+    {
+      "file": "03_BUILD_METHODOLOGY/_templates/QAM/README.md",
+      "link": "../../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/QA_LEAD_DECISION_2026-10-14.md",
+      "exists": true
+    },
+    {
+      "file": "03_BUILD_METHODOLOGY/_templates/QAM/README.md",
+      "link": "../../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/ARCHITECT_VERIFICATION_2026-10-14.md",
+      "exists": true
+    },
+    {
+      "file": "03_BUILD_METHODOLOGY/_templates/QAM/README.md",
+      "link": "../../../_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE_2_TEMPLATE_TRANSLATIONS.json",
+      "exists": true
+    },
+    {
+      "file": "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+      "link": "../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W02_FFM_EXECUTION.png",
+      "exists": true
+    },
+    {
+      "file": "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+      "link": "../_assets/workflows/FFM_EXECUTION.svg",
+      "exists": true
+    },
+    {
+      "file": "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+      "link": "../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W04_BIM_WORKFLOW.png",
+      "exists": true
+    },
+    {
+      "file": "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+      "link": "../_assets/workflows/BIM_WORKFLOW.svg",
+      "exists": true
+    },
+    {
+      "file": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+      "link": "../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W01_FFM_CREATION.png",
+      "exists": true
+    },
+    {
+      "file": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+      "link": "../_assets/workflows/FFM_CREATION.svg",
+      "exists": true
+    },
+    {
+      "file": "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+      "link": "../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W03_FFM_DEPLOYMENT.png",
+      "exists": true
+    },
+    {
+      "file": "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+      "link": "../_assets/workflows/FFM_DEPLOYMENT.svg",
+      "exists": true
+    }
+  ],
+  "template_state_owner_tables": "Installed bytes equal approved translations exactly; accepted semantics carried forward",
+  "independent_qa": "PENDING"
+}

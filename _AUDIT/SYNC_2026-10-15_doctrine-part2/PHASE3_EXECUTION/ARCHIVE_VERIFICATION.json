@@ -1,0 +1,227 @@
+[
+  {
+    "path": "_ARCHIVE/APP_FACTORY_BLUEPRINT_v2_1.md",
+    "sha256": "9b732116c6030aee4d6ae0b792272bc372dd647ef95dea522c2bf7949934af93",
+    "blob": "2a499a9c0b2099005c12724923ae27cf5239cfe1",
+    "source_blob": "2a499a9c0b2099005c12724923ae27cf5239cfe1",
+    "final_lf": true
+  },
+  {
+    "path": "_ARCHIVE/SOFTWARE_FACTORY_PLAYBOOK_v1_3.md",
+    "sha256": "dd9b355bed9b263756a9622205cc30b4b06dad2a08397b7fb55d7e5bb2a7260e",
+    "blob": "0dcf211e1ba82c811f5d20dc220cbf337ec594b7",
+    "source_blob": "0dcf211e1ba82c811f5d20dc220cbf337ec594b7",
+    "final_lf": true
+  },
+  {
+    "path": "_ARCHIVE/STARTER_KIT_HANDBOOK_v1_1.md",
+    "sha256": "396e325b4ac28b02c145fcad6181a99abb4f8345b87278d96f1aef2bbefb7efb",
+    "blob": "6ed6fd2ff14cf9351e00b4c038d331bcd64fa55e",
+    "source_blob": "6ed6fd2ff14cf9351e00b4c038d331bcd64fa55e",
+    "final_lf": true
+  },
+  {
+    "path": "_ARCHIVE/ARCHITECT_PLAYBOOK_v2_2.md",
+    "sha256": "b0754979e3b24cb79234265fe146f39f03718e608a60153a702a518f34979af4",
+    "blob": "3a11e19df20127f291df5408bbcff24e97245edd",
+    "source_blob": "3a11e19df20127f291df5408bbcff24e97245edd",
+    "final_lf": true
+  },
+  {
+    "path": "_ARCHIVE/ARCHITECT_QUESTIONNAIRE_v2_2.md",
+    "sha256": "aa487360f420c1a2e0a48b097eaa2ebc905ebb659bcdc67ae72ce8d6a80f2bfd",
+    "blob": "15780306c6ad4dc2b5b3ab8d393d7d86a0643852",
+    "source_blob": "15780306c6ad4dc2b5b3ab8d393d7d86a0643852",
+    "final_lf": true
+  },
+  {
+    "path": "_ARCHIVE/DESIGNER_PLAYBOOK_v2_1.md",
+    "sha256": "426eb0e7a3da1b31de8efe4ca68550d4b351d6f378b061f0c0de1ab6fbd632ae",
+    "blob": "49955e48ac5f518aff304a999c02dc54d766e89e",
+    "source_blob": "49955e48ac5f518aff304a999c02dc54d766e89e",
+    "final_lf": true
+  },
+  {
+    "path": "_ARCHIVE/ENGINEER_PLAYBOOK_v1_2.md",
+    "sha256": "8d73c37a42624fa2c60729d8d2648fc96f72305a732fd5e74460cf0a614f861c",
+    "blob": "2be9f7787481018b5ddafa721eea1220e88aff7e",
+    "source_blob": "2be9f7787481018b5ddafa721eea1220e88aff7e",
+    "final_lf": true
+  },
+  {
+    "path": "_ARCHIVE/HANDOFF_PACKAGE_PLAYBOOK_v1_1.md",
+    "sha256": "6a2f4706542395360248dd42e17cbf9fc49f0886c844aa1e0e5315a047892c4f",
+    "blob": "d261b4cce6ac7f7c6cf66dae40c8835ce949be40",
+    "source_blob": "d261b4cce6ac7f7c6cf66dae40c8835ce949be40",
+    "final_lf": true
+  },
+  {
+    "path": "_ARCHIVE/RECON_QUESTIONNAIRE_v0_5.md",
+    "sha256": "974f09e3118e94288beeb3dce919bea32a1571f294a59da6fd0041ee615968db",
+    "blob": "87d8e16e6c5791954f173d564fc83557939b32ad",
+    "source_blob": "87d8e16e6c5791954f173d564fc83557939b32ad",
+    "final_lf": true
+  },
+  {
+    "path": "_ARCHIVE/APP_FACTORY_SKILLS_PLAYBOOK_v1_1.md",
+    "sha256": "d93f3d5d81d5add6638fee9c71eecc370fd86f07ad1ac47f7021d6415a446113",
+    "blob": "ba8d795b651eb61b650af580cef24c94048b9d1a",
+    "source_blob": "ba8d795b651eb61b650af580cef24c94048b9d1a",
+    "final_lf": true
+  },
+  {
+    "path": "_ARCHIVE/BIM_PLAYBOOK_v1_0.md",
+    "sha256": "363619932b39fd7c8b4bafa9f270f814aa1af4aa98159dbfecb28c7f920e4f3b",
+    "blob": "f65445a388cabe6c6689f1b6f17ff1f5224bbf04",
+    "source_blob": "f65445a388cabe6c6689f1b6f17ff1f5224bbf04",
+    "final_lf": true
+  },
+  {
+    "path": "_ARCHIVE/BUG_FIX_PLAYBOOK_v1_0.md",
+    "sha256": "3ca537dec3958cabb0159a5243b7fe3f76c10e46ebcaa4ba04d258dcd5d1a871",
+    "blob": "c8718f0e6178e898ffbcfd4332ff63b0a044c933",
+    "source_blob": "c8718f0e6178e898ffbcfd4332ff63b0a044c933",
+    "final_lf": true
+  },
+  {
+    "path": "_ARCHIVE/FEAT_PLAYBOOK_v1_0.md",
+    "sha256": "5d70fa061bde72d49507f64b0113daab2646952867c63b8a499ea2feab3ed66f",
+    "blob": "e5c2c9f6dbe588eff5982734e2927cb3e126f053",
+    "source_blob": "e5c2c9f6dbe588eff5982734e2927cb3e126f053",
+    "final_lf": true
+  },
+  {
+    "path": "_ARCHIVE/FFM_PLAYBOOK_v1_2.md",
+    "sha256": "7be561380ea1568d7df61734b6f1a5b12263194cca3ce469a5731e3bd32eafa0",
+    "blob": "9c8fc35c3f66d7ffe6609c995a3330d090153976",
+    "source_blob": "9c8fc35c3f66d7ffe6609c995a3330d090153976",
+    "final_lf": true
+  },
+  {
+    "path": "_ARCHIVE/FRONTEND_BUILD_PHASE_PLAYBOOK_v1_2_2.md",
+    "sha256": "362609b6551bd585c5f3c57ce5b751285871335d154ad2a8c97ca62b28a20702",
+    "blob": "3edb88c3149a9a6d9a7c760471f30956053c9d60",
+    "source_blob": "3edb88c3149a9a6d9a7c760471f30956053c9d60",
+    "final_lf": false
+  },
+  {
+    "path": "_ARCHIVE/FRONTEND_FIRST_PLAYBOOK_v1_1_3.md",
+    "sha256": "2516dcbd50f525328db955592c6c14eafa971c02d4dec722130a87505248a422",
+    "blob": "c8516c8b8b3950e4b2d08d0bb2c112d7136d8f30",
+    "source_blob": "c8516c8b8b3950e4b2d08d0bb2c112d7136d8f30",
+    "final_lf": false
+  },
+  {
+    "path": "_ARCHIVE/QA_PLAYBOOK_v1_1.md",
+    "sha256": "b6c70f14af18bb187ca7980954317af486e43b682821245d9911f2160d5198a5",
+    "blob": "07f50ec1c1f005c1fdc9976d28a576a115f40669",
+    "source_blob": "07f50ec1c1f005c1fdc9976d28a576a115f40669",
+    "final_lf": true
+  },
+  {
+    "path": "_ARCHIVE/TESTING_PLAYBOOK_v2_1.md",
+    "sha256": "5dfc2d198d51eebd4c0b136eeafc50cc2f64dafe44b7bbd153b801f4849692ad",
+    "blob": "ae67dcc8c4aebff0b6661e455de6d391a4530659",
+    "source_blob": "ae67dcc8c4aebff0b6661e455de6d391a4530659",
+    "final_lf": true
+  },
+  {
+    "path": "_ARCHIVE/API_AND_SERVICES_MANUAL_v1_1.md",
+    "sha256": "64794a5d33dbd7fdd473975d5ff7c02f49fe433c8f63c780b059d77ead55a4b3",
+    "blob": "e86fbef72ab2f84d032baab22d21c51f3423b48f",
+    "source_blob": "e86fbef72ab2f84d032baab22d21c51f3423b48f",
+    "final_lf": true
+  },
+  {
+    "path": "_ARCHIVE/APP_ARCHITECTURE_MANUAL_v1_3.md",
+    "sha256": "ca1dc1f0a8ce578523a46a3262f2f1d09a63cb6e8f2517157d940c0febfb3134",
+    "blob": "5dfe67eb93088b8e7f52f59602734ee05cc327ff",
+    "source_blob": "5dfe67eb93088b8e7f52f59602734ee05cc327ff",
+    "final_lf": true
+  },
+  {
+    "path": "_ARCHIVE/AUTH_MANUAL_v1_4.md",
+    "sha256": "6b81073fe81727d4a4a48d1a0e4c43098f3ce70fafbcc3a7a6c660e661276850",
+    "blob": "983ae455511f93759f4ced0ca7756d7951113d43",
+    "source_blob": "983ae455511f93759f4ced0ca7756d7951113d43",
+    "final_lf": true
+  },
+  {
+    "path": "_ARCHIVE/DATABASE_MANUAL_v1_1.md",
+    "sha256": "326802ad938bb6b5b9f1b73c74ebee811789185789ef003e907101a0db4a0cf8",
+    "blob": "4e11795600a19b928300f9248937da68adf5780e",
+    "source_blob": "4e11795600a19b928300f9248937da68adf5780e",
+    "final_lf": true
+  },
+  {
+    "path": "_ARCHIVE/ECOMMERCE_AND_PAYMENTS_MANUAL_v1_1.md",
+    "sha256": "d72816173e6a188282718174cbcd8cc4693f9f944858d96fe0bb092edb728f38",
+    "blob": "048e0f8c746d336921913e9362205e2bbdc95f3b",
+    "source_blob": "048e0f8c746d336921913e9362205e2bbdc95f3b",
+    "final_lf": true
+  },
+  {
+    "path": "_ARCHIVE/STATE_MANAGEMENT_MANUAL_v1_2.md",
+    "sha256": "2a281857fe0a03d9066ac171e725ca50e42944df204b4eceaebba152b61af196",
+    "blob": "27b883e21cebce11f3b3e134d8557d82b528a6fe",
+    "source_blob": "27b883e21cebce11f3b3e134d8557d82b528a6fe",
+    "final_lf": true
+  },
+  {
+    "path": "_ARCHIVE/STRIPE_SUBSCRIPTIONS_PLAYBOOK_v1_1.md",
+    "sha256": "ec5a467ffd31ca8a1200f230b5a4ca4e104148bedaa83d3a4780f8e23f9a3e03",
+    "blob": "a119d65163e5402e87a055527cc2ec24a5432797",
+    "source_blob": "a119d65163e5402e87a055527cc2ec24a5432797",
+    "final_lf": true
+  },
+  {
+    "path": "_ARCHIVE/COMPONENT_REGISTRY_v1_1.md",
+    "sha256": "4b7d5b7c39fa50838ea536d07a9f4086d3802613a8ee86dd986f09553b28767b",
+    "blob": "783429f99cc501f28323423c5992429a6e459a44",
+    "source_blob": "783429f99cc501f28323423c5992429a6e459a44",
+    "final_lf": true
+  },
+  {
+    "path": "_ARCHIVE/GLOBAL_DESIGN_SYSTEM_HANDBOOK_v1_1.md",
+    "sha256": "f2dc74390a16836c3213f77652451085680046786d5499b43b1e8a6a6774c8ac",
+    "blob": "885db18780530951a49a94fca78119858d433edf",
+    "source_blob": "885db18780530951a49a94fca78119858d433edf",
+    "final_lf": true
+  },
+  {
+    "path": "_ARCHIVE/THEME_LIBRARY_v1_2.md",
+    "sha256": "480c7bdbc648e2fb7b97a6b120bfa36de35246cbdf3fd163e43aa0a2968ff73e",
+    "blob": "f12f2e416ab14622302664c2ca1f8a9e0babeed5",
+    "source_blob": "f12f2e416ab14622302664c2ca1f8a9e0babeed5",
+    "final_lf": true
+  },
+  {
+    "path": "_ARCHIVE/THEMING_MANUAL_v1_2.md",
+    "sha256": "3c71a3a959df8393b4f6810a8122a94895fced02d658d3b512ee5f30784091b1",
+    "blob": "1c18038aa6c10a46443e6dd59645d6762ad0c6e7",
+    "source_blob": "1c18038aa6c10a46443e6dd59645d6762ad0c6e7",
+    "final_lf": true
+  },
+  {
+    "path": "_ARCHIVE/TOKEN_FILE_v1_2.md",
+    "sha256": "066e0e60a49714adb062bc2983b1d5a82bc69f0c73794bac44292f6851dc88b5",
+    "blob": "9712416e644b9f7e7f8c6a8f65e26f390b2c008d",
+    "source_blob": "9712416e644b9f7e7f8c6a8f65e26f390b2c008d",
+    "final_lf": true
+  },
+  {
+    "path": "_ARCHIVE/UI_UX_BUILDING_MANUAL_v1_4.md",
+    "sha256": "8b9a6f647a8999ce35db4dd20df3db058ec7c64a47c4b3ab8051195f97d9d544",
+    "blob": "138fedce96704f360a0c9c6c7a715d88403a7956",
+    "source_blob": "138fedce96704f360a0c9c6c7a715d88403a7956",
+    "final_lf": true
+  },
+  {
+    "ruling": "RUL-14",
+    "source": "9ad3f3f:03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "git_blob": "bb41260f6b6f94372a682f04b313a451f2b3c4b1",
+    "destination": "_ARCHIVE/QA_PLAYBOOK_v1_0.md",
+    "sha256": "32d17ef5ca2eb32dfec6d120a71d280daa2973cba90e8f1735b85e07a3098e99",
+    "status": "exact proposed bytes; history only; canonical archive not written"
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "command": [
+      "git",
+      "apply",
+      "--check",
+      "-p0",
+      "/home/moose/Documents/app-factory-docs-sync-execution/_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/EXECUTION_PROPOSAL.corrected.patch"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "patch",
+      "--batch",
+      "--fuzz=0",
+      "-p0",
+      "-i",
+      "/home/moose/Documents/app-factory-docs-sync-execution/_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/EXECUTION_PROPOSAL.corrected.patch"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit_code": 0,
+    "stdout": "patching file 01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md\npatching file 01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md\npatching file 01_CONSTITUTION/STARTER_KIT_HANDBOOK.md\npatching file 02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md\npatching file 02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md\npatching file 02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md\npatching file 02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md\npatching file 02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md\npatching file 02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md\npatching file 03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md\npatching file 03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md\npatching file 03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md\npatching file 03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md\npatching file 03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md\npatching file 03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md\npatching file 03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md\npatching file 03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md\npatching file 03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md\npatching file 03_BUILD_METHODOLOGY/QA_PLAYBOOK.md\npatching file 03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md\npatching file 03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md\npatching file 03_BUILD_METHODOLOGY/_assets/workflows/BIM_WORKFLOW.svg\npatching file 03_BUILD_METHODOLOGY/_assets/workflows/FFM_CREATION.svg\npatching file 03_BUILD_METHODOLOGY/_assets/workflows/FFM_DEPLOYMENT.svg\npatching file 03_BUILD_METHODOLOGY/_assets/workflows/FFM_EXECUTION.svg\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/AC_EVIDENCE_MATRIX.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/AGENTS.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/AUTOMATION/README.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/CLAUDE.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/FINDINGS.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/GOVERNING/README.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/ENGINEERING_HANDOFF.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/FILE_INDEX.template.json\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/README.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/REVIEW_START_HERE.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/PARENT_ENTRY_ROUTING.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/QAM_APPROVAL.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/QAM_CERTIFICATION.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/QAM_CLEANUP_REPORT.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/QAM_ENTRY.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/QAM_EXECUTION_REPORT.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/QAM_MANIFEST.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/QAM_PACKAGING.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/QAM_PREFLIGHT.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/QAM_RECON_REPORT.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/QAM_RISK_REQUIREMENTS.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/QAM_STATE.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/QAM_TEST_PLAN.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/README.md\npatching file 03_BUILD_METHODOLOGY/_templates/QAM/evidence/README.md\npatching file 03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md\npatching file 03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md\npatching file 03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md\npatching file 03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md\npatching file 04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md\npatching file 04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md\npatching file 04_REFERENCE_MANUALS/AUTH_MANUAL.md\npatching file 04_REFERENCE_MANUALS/DATABASE_MANUAL.md\npatching file 04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md\npatching file 04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md\npatching file 04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md\npatching file 05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md\npatching file 05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md\npatching file 05_DESIGN_SYSTEM/THEME_LIBRARY.md\npatching file 05_DESIGN_SYSTEM/THEMING_MANUAL.md\npatching file 05_DESIGN_SYSTEM/TOKEN_FILE.md\npatching file 05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md\npatching file CHANGELOG.md\npatching file MANIFEST.md\npatching file _ARCHIVE/API_AND_SERVICES_MANUAL_v1_1.md\npatching file _ARCHIVE/APP_ARCHITECTURE_MANUAL_v1_3.md\npatching file _ARCHIVE/APP_FACTORY_BLUEPRINT_v2_1.md\npatching file _ARCHIVE/APP_FACTORY_SKILLS_PLAYBOOK_v1_1.md\npatching file _ARCHIVE/ARCHITECT_PLAYBOOK_v2_2.md\npatching file _ARCHIVE/ARCHITECT_QUESTIONNAIRE_v2_2.md\npatching file _ARCHIVE/AUTH_MANUAL_v1_4.md\npatching file _ARCHIVE/BIM_PLAYBOOK_v1_0.md\npatching file _ARCHIVE/BUG_FIX_PLAYBOOK_v1_0.md\npatching file _ARCHIVE/COMPONENT_REGISTRY_v1_1.md\npatching file _ARCHIVE/DATABASE_MANUAL_v1_1.md\npatching file _ARCHIVE/DESIGNER_PLAYBOOK_v2_1.md\npatching file _ARCHIVE/ECOMMERCE_AND_PAYMENTS_MANUAL_v1_1.md\npatching file _ARCHIVE/ENGINEER_PLAYBOOK_v1_2.md\npatching file _ARCHIVE/FEAT_PLAYBOOK_v1_0.md\npatching file _ARCHIVE/FFM_PLAYBOOK_v1_2.md\npatching file _ARCHIVE/FRONTEND_BUILD_PHASE_PLAYBOOK_v1_2_2.md\npatching file _ARCHIVE/FRONTEND_FIRST_PLAYBOOK_v1_1_3.md\npatching file _ARCHIVE/GLOBAL_DESIGN_SYSTEM_HANDBOOK_v1_1.md\npatching file _ARCHIVE/HANDOFF_PACKAGE_PLAYBOOK_v1_1.md\npatching file _ARCHIVE/QA_PLAYBOOK_v1_0.md\npatching file _ARCHIVE/QA_PLAYBOOK_v1_1.md\npatching file _ARCHIVE/RECON_QUESTIONNAIRE_v0_5.md\npatching file _ARCHIVE/SOFTWARE_FACTORY_PLAYBOOK_v1_3.md\npatching file _ARCHIVE/STARTER_KIT_HANDBOOK_v1_1.md\npatching file _ARCHIVE/STATE_MANAGEMENT_MANUAL_v1_2.md\npatching file _ARCHIVE/STRIPE_SUBSCRIPTIONS_PLAYBOOK_v1_1.md\npatching file _ARCHIVE/TESTING_PLAYBOOK_v2_1.md\npatching file _ARCHIVE/THEME_LIBRARY_v1_2.md\npatching file _ARCHIVE/THEMING_MANUAL_v1_2.md\npatching file _ARCHIVE/TOKEN_FILE_v1_2.md\npatching file _ARCHIVE/UI_UX_BUILDING_MANUAL_v1_4.md\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "-I",
+      "lints/run_all.py"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit_code": 0,
+    "stdout": "[ENCODING] PASS \u2014 0 hits across 36 live docs\n[RETIRED-TERMS] PASS \u2014 0 hits across 36 live docs\n[VERSIONED-REFS] PASS \u2014 0 hits across 36 live docs (34 canonical names loaded)\n[HEADER-PRESENCE] PASS \u2014 all 36 live docs carry the standard header\n=== DOCTRINE LINTS ===\n\n--- encoding_lint.py ---\n\n--- retired_terms_lint.py ---\n\n--- versioned_refs_lint.py ---\n\n--- header_lint.py ---\n\n=== RESULT: PASS ===\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "add",
+      "--pathspec-from-file=/home/moose/Documents/app-factory-docs-sync-execution/_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE3_EXECUTION/IMPLEMENTATION_PATHS.nul",
+      "--pathspec-file-nul"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "commit",
+      "-m",
+      "docs(sync): apply approved 101-path doctrine update [FC/W/RUL/AD-01; AMENDED-v1 380 edits]"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit_code": 0,
+    "stdout": "[docs/sync-doctrine-part2-2026-10-15 ef35d26] docs(sync): apply approved 101-path doctrine update [FC/W/RUL/AD-01; AMENDED-v1 380 edits]\n 101 files changed, 35331 insertions(+), 5526 deletions(-)\n create mode 100644 03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md\n create mode 100644 03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md\n create mode 100644 03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md\n create mode 100644 03_BUILD_METHODOLOGY/_assets/workflows/BIM_WORKFLOW.svg\n create mode 100644 03_BUILD_METHODOLOGY/_assets/workflows/FFM_CREATION.svg\n create mode 100644 03_BUILD_METHODOLOGY/_assets/workflows/FFM_DEPLOYMENT.svg\n create mode 100644 03_BUILD_METHODOLOGY/_assets/workflows/FFM_EXECUTION.svg\n create mode 100644 03_BUILD_METHODOLOGY/_templates/QAM/AC_EVIDENCE_MATRIX.md\n create mode 100644 03_BUILD_METHODOLOGY/_templates/QAM/AGENTS.md\n create mode 100644 03_BUILD_METHODOLOGY/_templates/QAM/AUTOMATION/README.md\n create mode 100644 03_BUILD_METHODOLOGY/_templates/QAM/CLAUDE.md\n create mode 100644 03_BUILD_METHODOLOGY/_templates/QAM/FINDINGS.md\n create mode 100644 03_BUILD_METHODOLOGY/_templates/QAM/GOVERNING/README.md\n create mode 100644 03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/ENGINEERING_HANDOFF.md\n create mode 100644 03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/FILE_INDEX.template.json\n create mode 100644 03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/README.md\n create mode 100644 03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/REVIEW_START_HERE.md\n create mode 100644 03_BUILD_METHODOLOGY/_templates/QAM/PARENT_ENTRY_ROUTING.md\n create mode 100644 03_BUILD_METHODOLOGY/_templates/QAM/QAM_APPROVAL.md\n create mode 100644 03_BUILD_METHODOLOGY/_templates/QAM/QAM_CERTIFICATION.md\n create mode 100644 03_BUILD_METHODOLOGY/_templates/QAM/QAM_CLEANUP_REPORT.md\n create mode 100644 03_BUILD_METHODOLOGY/_templates/QAM/QAM_ENTRY.md\n create mode 100644 03_BUILD_METHODOLOGY/_templates/QAM/QAM_EXECUTION_REPORT.md\n create mode 100644 03_BUILD_METHODOLOGY/_templates/QAM/QAM_MANIFEST.md\n create mode 100644 03_BUILD_METHODOLOGY/_templates/QAM/QAM_PACKAGING.md\n create mode 100644 03_BUILD_METHODOLOGY/_templates/QAM/QAM_PREFLIGHT.md\n create mode 100644 03_BUILD_METHODOLOGY/_templates/QAM/QAM_RECON_REPORT.md\n create mode 100644 03_BUILD_METHODOLOGY/_templates/QAM/QAM_RISK_REQUIREMENTS.md\n create mode 100644 03_BUILD_METHODOLOGY/_templates/QAM/QAM_STATE.md\n create mode 100644 03_BUILD_METHODOLOGY/_templates/QAM/QAM_TEST_PLAN.md\n create mode 100644 03_BUILD_METHODOLOGY/_templates/QAM/README.md\n create mode 100644 03_BUILD_METHODOLOGY/_templates/QAM/evidence/README.md\n create mode 100644 03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md\n create mode 100644 03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md\n create mode 100644 03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md\n create mode 100644 03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md\n create mode 100644 _ARCHIVE/API_AND_SERVICES_MANUAL_v1_1.md\n create mode 100644 _ARCHIVE/APP_ARCHITECTURE_MANUAL_v1_3.md\n create mode 100644 _ARCHIVE/APP_FACTORY_BLUEPRINT_v2_1.md\n create mode 100644 _ARCHIVE/APP_FACTORY_SKILLS_PLAYBOOK_v1_1.md\n create mode 100644 _ARCHIVE/ARCHITECT_PLAYBOOK_v2_2.md\n create mode 100644 _ARCHIVE/ARCHITECT_QUESTIONNAIRE_v2_2.md\n create mode 100644 _ARCHIVE/AUTH_MANUAL_v1_4.md\n create mode 100644 _ARCHIVE/BIM_PLAYBOOK_v1_0.md\n create mode 100644 _ARCHIVE/BUG_FIX_PLAYBOOK_v1_0.md\n create mode 100644 _ARCHIVE/COMPONENT_REGISTRY_v1_1.md\n create mode 100644 _ARCHIVE/DATABASE_MANUAL_v1_1.md\n create mode 100644 _ARCHIVE/DESIGNER_PLAYBOOK_v2_1.md\n create mode 100644 _ARCHIVE/ECOMMERCE_AND_PAYMENTS_MANUAL_v1_1.md\n create mode 100644 _ARCHIVE/ENGINEER_PLAYBOOK_v1_2.md\n create mode 100644 _ARCHIVE/FEAT_PLAYBOOK_v1_0.md\n create mode 100644 _ARCHIVE/FFM_PLAYBOOK_v1_2.md\n create mode 100644 _ARCHIVE/FRONTEND_BUILD_PHASE_PLAYBOOK_v1_2_2.md\n create mode 100644 _ARCHIVE/FRONTEND_FIRST_PLAYBOOK_v1_1_3.md\n create mode 100644 _ARCHIVE/GLOBAL_DESIGN_SYSTEM_HANDBOOK_v1_1.md\n create mode 100644 _ARCHIVE/HANDOFF_PACKAGE_PLAYBOOK_v1_1.md\n create mode 100644 _ARCHIVE/QA_PLAYBOOK_v1_0.md\n create mode 100644 _ARCHIVE/QA_PLAYBOOK_v1_1.md\n create mode 100644 _ARCHIVE/RECON_QUESTIONNAIRE_v0_5.md\n create mode 100644 _ARCHIVE/SOFTWARE_FACTORY_PLAYBOOK_v1_3.md\n create mode 100644 _ARCHIVE/STARTER_KIT_HANDBOOK_v1_1.md\n create mode 100644 _ARCHIVE/STATE_MANAGEMENT_MANUAL_v1_2.md\n create mode 100644 _ARCHIVE/STRIPE_SUBSCRIPTIONS_PLAYBOOK_v1_1.md\n create mode 100644 _ARCHIVE/TESTING_PLAYBOOK_v2_1.md\n create mode 100644 _ARCHIVE/THEME_LIBRARY_v1_2.md\n create mode 100644 _ARCHIVE/THEMING_MANUAL_v1_2.md\n create mode 100644 _ARCHIVE/TOKEN_FILE_v1_2.md\n create mode 100644 _ARCHIVE/UI_UX_BUILDING_MANUAL_v1_4.md\n",
+    "stderr": ""
+  }
+]

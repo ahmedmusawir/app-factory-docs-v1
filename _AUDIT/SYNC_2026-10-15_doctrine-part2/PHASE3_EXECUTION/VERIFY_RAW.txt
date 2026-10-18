@@ -1,0 +1,32 @@
+Command: python3 /tmp/factory_phase3.py verify
+Working directory: /home/moose/Documents/app-factory-docs-sync-execution
+Exit code: 0
+PASS Installed bound outputs 101/101
+PASS Ordered edit replay 380/380 unique old spans;31 content-stage outputs exact
+PASS Only declared date changes from frozen proposal 151 fields; historical dates and all other bytes preserved
+PASS Archives 31 outgoing byte/blob-exact including both missing-final-LF archives; historical QA v1.0 exact
+PASS Template file set 25 exact translated files; sources unchanged
+PASS Identical template runtime routing QA Executor routing preserved
+PASS Template amendments/SR rows AM-1/2/3 and11 standing requirements
+PASS Workflow documents and diagrams 4 matched prose/SVG sequences;7/18/8/24 steps; forbidden actor labels absent
+PASS Conditional transitions pending 12 pre-transition spans retained across9 paths
+PASS Frozen run and10x preservation 641 files byte-unchanged
+PASS Root/skills/lints/CI unchanged empty diff
+PASS Document lints [ENCODING] PASS — 0 hits across 36 live docs
+[RETIRED-TERMS] PASS — 0 hits across 36 live docs
+[VERSIONED-REFS] PASS — 0 hits across 36 live docs (34 canonical names loaded)
+[HEADER-PRESENCE] PASS — all 36 live docs carry the standard header
+=== DOCTRINE LINTS ===
+
+--- encoding_lint.py ---
+
+--- retired_terms_lint.py ---
+
+--- versioned_refs_lint.py ---
+
+--- header_lint.py ---
+
+=== RESULT: PASS ===
+
+PASS MANIFEST/header agreement 34/34 exact version/date/status rows
+ENGINEERING VERIFICATION COMPLETE; independent QA remains required.
