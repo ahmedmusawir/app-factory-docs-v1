@@ -1,7 +1,7 @@
 # FEAT PLAYBOOK
 ## Feature Modules — Adding Capability to Working Systems
 
-> **Version:** 1.0 · **Date:** 2026-08-10 · **Status:** Active
+> **Version:** 1.1 · **Date:** 2026-10-18 · **Status:** Active
 > **Tier:** 3 — Build Methodology
 > **Pairs with:** `SOFTWARE_FACTORY_PLAYBOOK.md` › Module Identity & QA Handoff (Factory-level shared doctrine), `BIM_PLAYBOOK.md` (module mechanics reference — this playbook only states deltas), `BUG_FIX_PLAYBOOK.md`, `QA_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`
 > **Owner:** Stark Industries App Factory
@@ -17,7 +17,7 @@ Typical FEATs: accessibility features, UI capabilities (copy, read-aloud, panels
 
 ## 2. Shared Doctrine (inherited from the FACTORY level — not restated)
 
-**Module identity and the QA-handoff contract are Factory-wide doctrine** (SOFTWARE_FACTORY_PLAYBOOK › Module Identity & QA Handoff): `<TYPE>-<NNN>-<APP-SLUG>` IDs, the mandatory `ACCEPTANCE_SPEC.md` with `AC*` requirements, the Engineering/QA separation, and QA verdict ownership (QA verdict → Operator final authority → Architect advisory). FEAT inherits these from the Factory level — never from BIM. Module *mechanics* shared with BIM (one-folder package, one CLAUDE.md manager, stage-gate lifecycle, freeze rule, Plan Mode, verify-first, git-zero/cloud-zero, baseline-first regression, per-module failure policy, anti-patterns, Definition of Done) are documented in `BIM_PLAYBOOK.md` §4–§12 and apply to FEATs by reference. Below are the FEAT-specific deltas.
+**Module identity and the QA-handoff contract are Factory-wide doctrine** (SOFTWARE_FACTORY_PLAYBOOK › Module Identity & QA Handoff): `<TYPE>-<NNN>-<APP-SLUG>` IDs, the mandatory `ACCEPTANCE_SPEC.md` with `AC*` requirements, the Engineering/QA separation, and QA verdict ownership (QA verdict → Operator final authority → Architect advisory). FEAT inherits these from the Factory level — never from BIM. Module *mechanics* shared with BIM (one-folder package, one CLAUDE.md manager, stage-gate lifecycle, freeze rule, Plan Mode, verify-first, read-only Git inspection with Director-only mutations and the existing BIM cloud restrictions, baseline-first regression, per-module failure policy, anti-patterns, Definition of Done) are documented in `BIM_PLAYBOOK.md` §4–§12 and apply to FEATs by reference. Below are the FEAT-specific deltas.
 
 ## 3. FEAT-Specific Doctrine
 
@@ -42,6 +42,8 @@ Numbered `V1…Vn` in the manager: capability works as specified · capability i
 
 ## 5. Definition of Done — delta only
 
+Every newly authored module includes a complete, module-specific `QAM/` prepared by the Architect from `03_BUILD_METHODOLOGY/_templates/QAM/`. QA Lead owns the reusable playbook and standing requirements. Engineer fills factual engineering records and handoff; QA Executor performs independent Q1 recon and test planning; QA Lead approves the plan; Director releases execution; QA Executor performs Q2 and authorized retest; QA Lead adjudicates and certifies. `QAM_PLAYBOOK.md` owns this packaging and sequence. Existing modules already in flight retain their recorded sequence until an attributable amendment.
+
 BIM_PLAYBOOK §12 applies, plus: the v2 seed recorded in the retrospective; any deferred garnish named in the acceptance spec's known-follow-up section so QA doesn't file it as a defect.
 
 ## 6. Version History
@@ -51,3 +53,4 @@ BIM_PLAYBOOK §12 applies, plus: the v2 seed recorded in the retrospective; any 
 | 1.0-DRAFT | 2026-08-10 | Initial playbook from FEAT-001 (ADK-HARNESS, legacy) field experience. |
 | 1.0-DRAFT-R2 | 2026-08-10 | QA AMEND pass: inheritance re-pointed to Factory-level doctrine (never BIM-as-constitution); mode-parity rule scoped to features both modes support; byte-unmodified test rule replaced with the no-weakened-assertions law. |
 | 1.0 ACTIVE | 2026-08-10 | Finalization pass (F1 registry ref removed; F4 per-module failure-policy wording). Promotion provenance: field campaign → QA engagements → R1 → R2 → final pass. |
+| 1.1 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-014, RUL-12, W22 |

@@ -1,11 +1,11 @@
 # DATABASE MANUAL
 
-> **Version:** 1.1 · **Date:** 2026-07-08 · **Status:** Active
+> **Version:** 1.2 · **Date:** 2026-10-18 · **Status:** Active
 > **Tier:** 4 — Reference Manuals · **Pairs with:** STARTER_KIT_HANDBOOK, AUTH_MANUAL, API_AND_SERVICES_MANUAL, FRONTEND_FIRST_PLAYBOOK, TESTING_PLAYBOOK
 
 > **Stark Industries Software Factory**
 > *The definitive guide to Supabase PostgreSQL database design, schema patterns, and data management.*
-> **Role doctrine (v1.1):** roles live in the `user_roles` table — one doctrine, aligned with AUTH_MANUAL v1.3 (F-041/F-042).
+> **Role doctrine (v1.1):** roles live in the `user_roles` table — one doctrine, aligned with AUTH_MANUAL (F-041/F-042).
 
 ---
 
@@ -151,9 +151,9 @@ CREATE TABLE user_roles (
 );
 ```
 
-**How the row gets there:** the kit's `handle_new_user()` trigger fires at user creation and applies the creation-time role transport (carried in `user_metadata` via the protected admin channel) INTO `user_roles`. After the trigger fires, the table row is the only authority; post-creation role changes go through the locked admin path. Server-side resolution is via the kit's `get_user_role()` / `src/utils/get-user-role.ts`.
+Roles must resolve from an authoritative server-side store. Creation and mutation require verified per-call authorization and a role input that untrusted signup cannot control. The historical Mark IV transport is not a verified safe recipe for the current kit; obtain pinned trigger and caller evidence before implementation.
 
-> ⛔ **FORBIDDEN:** never store — or READ — roles for authorization from `user_metadata` (the recon Q3.4 smell), and never mirror a `role` column onto a profile table. Two homes for a role guarantees privilege drift. This aligns with AUTH_MANUAL v1.3 ("Where Roles Live").
+> ⛔ **FORBIDDEN:** never store — or READ — roles for authorization from `user_metadata` (the recon Q3.4 smell), and never mirror a `role` column onto a profile table. Two homes for a role guarantees privilege drift. This aligns with AUTH_MANUAL ("Where Roles Live").
 
 ### User Mirror Table Pattern (profile data — NO role column)
 
@@ -176,44 +176,7 @@ CREATE TABLE app_users (
 );
 ```
 
-**Synchronization Logic:**
-
-```typescript
-// When creating a user in Supabase Auth (protected admin channel)
-const createUserWithProfile = async (email: string, password: string, profile: UserProfile) => {
-  // 1. Create in Supabase Auth. The role rides user_metadata ONLY as the
-  //    creation-time transport — the kit's handle_new_user() trigger applies
-  //    it into user_roles. It is never read back for authorization.
-  const { data: authData, error: authError } = await supabase.auth.admin.createUser({
-    email,
-    password,
-    email_confirm: true,
-    user_metadata: {
-      display_name: profile.displayName,
-      role: profile.role, // transport for the trigger, not storage
-    },
-  });
-
-  if (authError) throw authError;
-
-  // 2. Create the profile mirror row with the SAME ID — no role column here;
-  //    user_roles was populated by the trigger in step 1.
-  const { error: profileError } = await supabase
-    .from('app_users')
-    .insert({
-      id: authData.user.id, // Same UUID
-      display_name: profile.displayName,
-    });
-
-  if (profileError) {
-    // Rollback: delete auth user
-    await supabase.auth.admin.deleteUser(authData.user.id);
-    throw profileError;
-  }
-
-  return authData.user;
-};
-```
+**Synchronization example withdrawn.** The role table is the only authorization authority. Never authorize from user_metadata or a profile mirror. Superadmin creation is console-only; no app-side superadmin creation route is provided. Retire the metadata-authorized add-user, delete-user and get-users recipes. Future privileged list/delete operations remain possible only with trusted current-role lookup, operation-local authorization before elevated capability, an approved target-role allowlist and privileged-target protection. Profile mirrors contain profile data, not authorization columns. Registration metadata is not authorization. Use the session client for identity and RLS-bound data. Acquire an isolated admin client only after independently authorizing the elevated operation. An API route is not itself a reason to bypass RLS. Do not substitute a service-role client as a general fix for denied access. Use an atomic database operation for invariants inside one database. Across external boundaries, use a stable operation identity, check every forward and compensation result, and persist completed, failed or partially-completed outcomes. Partial failure creates durable reconciliation work with a recovery owner; do not report success after an unchecked compensation or deletion.
 
 ### External System Mapping Table
 
@@ -257,9 +220,11 @@ CREATE TABLE resources (
 -- Index for common queries (exclude deleted)
 CREATE INDEX idx_resources_active ON resources(id) WHERE is_deleted = FALSE;
 
--- RLS policy excludes deleted records
-CREATE POLICY "Users see active records only"
-ON resources FOR SELECT
+-- Restrictive filter: does not grant access. Enable RLS and supply a separate
+-- permissive ownership/tenant policy verified for the application.
+ALTER TABLE resources ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "Exclude deleted records"
+ON resources AS RESTRICTIVE FOR SELECT TO authenticated
 USING (is_deleted = FALSE);
 ```
 
@@ -1043,47 +1008,9 @@ const verifyTicketCount = async (orderId: string) => {
 
 ### Transaction Pattern (Pseudo-Transaction)
 
-Supabase JS doesn't support true transactions, but you can handle rollbacks:
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-```typescript
-const createOrderWithTickets = async (
-  orderData: Order,
-  ticketTypes: Record<string, number>
-) => {
-  // 1. Insert order
-  const { data: order, error: orderError } = await supabase
-    .from('orders')
-    .insert(orderData)
-    .select()
-    .single();
-
-  if (orderError) throw orderError;
-
-  // 2. Insert tickets
-  const tickets = [];
-  for (const [type, qty] of Object.entries(ticketTypes)) {
-    for (let i = 0; i < qty; i++) {
-      tickets.push({
-        order_id: order.order_id,
-        ticket_type: type,
-        status: 'live',
-      });
-    }
-  }
-
-  const { error: ticketsError } = await supabase
-    .from('tickets')
-    .insert(tickets);
-
-  if (ticketsError) {
-    // Rollback: delete the order (tickets cascade)
-    await supabase.from('orders').delete().eq('order_id', order.order_id);
-    throw ticketsError;
-  }
-
-  return order;
-};
-```
+Use an atomic database operation for invariants inside one database. Across external boundaries, use a stable operation identity, check every forward and compensation result, and persist completed, failed or partially-completed outcomes. Partial failure creates durable reconciliation work with a recovery owner; do not report success after an unchecked compensation or deletion.
 
 ---
 
@@ -1108,13 +1035,10 @@ const { data } = await supabase
   .order('created_at', { ascending: false })
   .range(0, 19); // First 20 records
 
-// Cursor-based (better for large datasets)
-const { data } = await supabase
-  .from('orders')
-  .select('*')
-  .order('created_at', { ascending: false })
-  .lt('created_at', lastCreatedAt) // Cursor
-  .limit(20);
+// Cursor recipe withdrawn: a timestamp alone skips rows sharing that value.
+// Use a project-validated cursor over (created_at, id), ordered by both fields,
+// with a matching strict lexicographic boundary. Test tied timestamps and
+// pagination across every boundary before publishing an executable example.
 ```
 
 ### Caching Strategy
@@ -1234,6 +1158,7 @@ supabase.from('table').select('*').range(0, 9)
 |---|---|---|
 | 1.0 | (original, date unknown) | Initial manual: schema-first philosophy, design patterns, data types, relationships, RLS, indexing, JSONB, type generation, query patterns, migrations, integrity, performance. Unversioned until the 2026-07 audit. |
 | 1.1 | 2026-07-08 | **Wave 4 — role-doctrine surgery (F-041, security-classed).** §2: new "Roles Table Pattern" — `user_roles` as the single authorization home (labeled PATTERN SQL; kit `setup.sql` = ground truth), `handle_new_user()` creation-time transport explained, ⛔ forbidden box (no role storage OR authz reads from `user_metadata` — recon Q3.4; no role columns on profile mirrors); mirror-table pattern stripped of its `role` column + sync example rewritten to the transport model. §5: the `raw_user_meta_data` RLS policy variant REMOVED (it was shown as a peer option — it is the forbidden pattern); `user_roles` policy stands alone + ⛔ marker (ruling: reconcile BOTH examples). Doc now speaks ONE role doctrine, aligned with AUTH_MANUAL v1.3 (F-042 outcome). "When Schema-First Applies" note + FRONTEND_FIRST pointers added (F-040). GHL/QR fossil examples neutralized (naming table, mapping-table default, comments — recon Q8.5 class). Standard header (F-018); Cross-References section (F-035); this history table (D-018). |
+| 1.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-003/096, FC-033, FC-034, FC-036, FC-037, FC-038, FC-039, FC-045, RUL-11 |
 
 ---
 

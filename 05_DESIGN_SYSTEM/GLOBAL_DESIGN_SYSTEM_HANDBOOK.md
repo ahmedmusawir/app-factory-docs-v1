@@ -1,6 +1,6 @@
 # GLOBAL DESIGN SYSTEM HANDBOOK
 
-> **Version:** 1.1 · **Date:** 2026-07-08 · **Status:** Active
+> **Version:** 1.2 · **Date:** 2026-10-18 · **Status:** Active
 > **Tier:** 5 — Design System · **Pairs with:** THEME_LIBRARY, TOKEN_FILE, THEMING_MANUAL, DESIGNER_PLAYBOOK, UI_UX_BUILDING_MANUAL, COMPONENT_REGISTRY
 
 > **What this is:** the stable doctrine for how the factory designs apps. It rarely changes. It pairs with two fast-moving companions — the **Theme Library** (named theme value-sets) and each project's **token file** (`globals.css`). Cyber Pharma is the worked example throughout; the rules are app-agnostic.
@@ -65,7 +65,7 @@ Rules:
 
 - **Mobile-first. Base design target 375px**, then scale up. Breakpoints map to Tailwind: `sm 640 / md 768 / lg 1024 / xl 1280`.
 - **Canonical responsive transforms** (design these once, reuse everywhere):
-  - **Sidebar/filter rail → slide-in drawer** below `lg`, behind a trigger with an active-count badge.
+- **Responsive rail:** determine the fit breakpoint from the pinned component and actual content. Below that breakpoint supply a reachable, keyboard-accessible drawer trigger; no vanished or untriggered sidebar. Verify on both sides of the breakpoint and at 375px. Do not infer a universal `md`, `lg` or `xl` rail rule.
   - **Wide data table → stacked cards** on mobile — one card per row, the most important value as the hero number, the rest in a 2-col detail grid. *A 10+ column table cannot exist at 375px; this reflow is mandatory.*
   - **KPI row → 2×2** on mobile.
   - **Tabs → horizontal scroll strip.**
@@ -101,7 +101,7 @@ The style tile is **a token-driven HTML page**, not a static picture — so it c
 | 1 | **Token file** (`globals.css` + Tailwind map) | the executable system — all modes. *Primary deliverable.* |
 | 2 | **Style tile** (HTML + PNG) | the visual contract |
 | 3 | **Screen artifacts** (HTML + PNG) | each screen in the canonical theme; HTML = build reference, PNG = QC target |
-| 4 | **UI_SPEC.md** | component hierarchy, gating, empty/loading/error states, responsive rules, human checkpoints. *(Designer revises the Architect's draft.)* |
+| 4 | **UI_SPEC.md** | Designer-authored hierarchy, gating, states, responsive rules and checkpoints; Architect reconciles the assembled package |
 | 5 | **Component manifest** | primitives per screen + KIPs to build first |
 
 Plus the **factory-level** docs that outlive any one project: **this Handbook** and the **Theme Library**.
@@ -116,7 +116,7 @@ Plus the **factory-level** docs that outlive any one project: **this Handbook** 
 2. **Lock tokens + build that one canonical screen** perfectly, token-driven.
 3. **Render the style tile**, review light+dark, **lock**.
 4. **Clone-and-adapt** the remaining screens from the canonical — change content, not structure. (Other themes/modes are pure token swaps.)
-5. **Write/revise the UI_SPEC + component manifest.**
+5. **Designer authors UI_SPEC and component manifest; Architect reconciles the assembled package.**
 6. **Hand to Claudy** — HTML to build from, PNG to verify against, tokens to inherit.
 
 Principles: design **one page per step**, never "design all screens at once" (that's where drift comes from). **Human approval gates** at the canonical-screen lock and the style-tile lock. Functional clarity first (Demo Mode); polish later.
@@ -141,8 +141,8 @@ When a new app brief lands, the Designer:
 
 1. Reads the brief + confirms the **kit's Tailwind version** (`package.json`).
 2. Identifies the **canonical screen**.
-3. Asks the Architect for the **UI_SPEC draft** (or drafts the screen list with them).
-4. Produces, in order: **token file → canonical screen → style tile → remaining screen artifacts → UI_SPEC revision → component manifest.**
+3. Receives the Architect’s approved **DATA_CONTRACT before Design**, then authors UI_SPEC; the Architect reconciles the assembled package.
+4. Produces **token file → canonical screen → style tile → remaining screen artifacts → UI_SPEC → component manifest**, using the full canonical token contract; validates all modes and role/semantic distinctions.
 5. Pulls theme values from the **Theme Library** (or derives a new family and adds it).
 6. Hands Claudy the HTML + PNG + tokens + spec + manifest.
 
@@ -162,3 +162,4 @@ Tokens are the system. They live in `globals.css`, map through Tailwind, and com
 |---|---|---|
 | 1.0 | (original, date unknown) | Initial handbook: four-layer model, canonical token contract, theming method, component vocabulary + KIPs, Rule Zero + canonical transforms, AA bar with per-mode tuning, style-tile method (D-017), deliverables, Canonical Page workflow, anti-patterns, one-paragraph version. Unversioned until the 2026-07 audit. |
 | 1.1 | 2026-07-08 | **Wave 5 — the contract gains role identity tokens (F-013a confirmed / F-043 closed).** §2 canonical set now includes `--role-superadmin(-foreground)`, `--role-admin(-foreground)`, `--role-member(-foreground)` with the rules from THEME_LIBRARY §2: identities-not-statuses, hue holds across modes, admin ≠ destructive red, member may align with success, AA on `--card` per mode, multi-tenant never swaps them. Reference values minted in TOKEN_FILE v1.2 (Metro Warm). The Library's v1.1 one-sided reconciliation is now two-sided. Standard header block (F-018); this history table (D-018). Everything else untouched (MODEL doc). |
+| 1.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-017, FC-027, FC-071, FC-072, FC-077, RUL-09 |

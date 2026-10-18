@@ -1,6 +1,6 @@
 # DESIGNER AGENT PLAYBOOK
 
-> **Version:** 2.1 · **Date:** 2026-07-07 · **Status:** Active
+> **Version:** 2.2 · **Date:** 2026-10-18 · **Status:** Active
 > **Tier:** 2 — Pipeline Agents · **Pairs with:** GLOBAL_DESIGN_SYSTEM_HANDBOOK, THEME_LIBRARY, THEMING_MANUAL, COMPONENT_REGISTRY, ARCHITECT_PLAYBOOK, ENGINEER_PLAYBOOK
 
 > **App Factory — Stark Industries**
@@ -36,14 +36,16 @@ The Designer is the **second agent** in the 3-Agent Council. It transforms the A
 
 ### Position in the Factory Pipeline
 
-```
-┌─────────────┐     ┌──────────────────────┐     ┌─────────────┐
-│  ARCHITECT  │ ──► │       DESIGNER        │ ──► │   ENGINEER  │
-│             │     │                       │     │             │
-│ APP_BRIEF   │     │ Token file (primary)  │     │ DATA_CONTRACT│
-│             │     │ + HTML/PNG artifacts  │     │ + Claudy     │
-│             │     │ + UI_SPEC + Manifest  │     │   (Claude Code)│
-└─────────────┘     └──────────────────────┘     └─────────────┘
+```text
+Director approves scope and releases each assignment.
+Engineer: ground-truth recon -> Architect: approved APP_BRIEF + DATA_CONTRACT before Design
+Designer: UI_SPEC + applicable visual artifacts -> Architect: reconciled module + ACCEPTANCE_SPEC + QAM
+Director release -> Engineer implementation and factual handoff -> Director commits completed candidate
+QA Executor Q1 -> QA Lead plan approval -> Director Q2 release -> QA Executor execution
+Conditional Engineer repair / independent retest on continuing QA branch -> QA Lead verdict
+Required cleanup -> Architect closeout -> bounded Engineer closeout -> Director final Git actions
+Review checkpoint 1: after FFM build and its independent QA finish. Review checkpoint 2: Engine 2 independent system review after all Engine 1 phases/modules and their QA are closed. At either checkpoint, disposition findings; RRM only for approved findings requiring repairs; a clean review requires no RRM. Review, Gate Q, cleanup acceptance, Gate D and release remain distinct.
+FILE_TREE is optional; implementation structure and boundaries remain explicit.
 ```
 
 ### Core Responsibilities
@@ -64,7 +66,7 @@ The Designer is the **second agent** in the 3-Agent Council. It transforms the A
 |--------------------|------------|
 | Define app scope | Architect Agent |
 | Write the production app | Engineer Agent / Claudy |
-| Define data schemas | Engineer Agent |
+| Define DATA_CONTRACT before Design | Architect |
 | Make product decisions | Human (Tony Stark) |
 | Invent components the kit can compose | Flag a KIP instead |
 
@@ -75,6 +77,8 @@ The Designer is the **second agent** in the 3-Agent Council. It transforms the A
 ---
 
 ## 2. Inputs Required
+
+The approved interface type determines required design inputs. A visual interface requires its approved UI_SPEC, token/style decisions and HTML/PNG references. A nonvisual backend or CLI explicitly records those inputs as NOT APPLICABLE and supplies its approved data/API/command contract, invocation examples and receiving checklist. Missing required input is not NOT APPLICABLE.
 
 Before the Designer can work, it needs these inputs.
 
@@ -229,7 +233,7 @@ These patterns are tool-agnostic and validated in real builds. Express each in k
 ### Screen Locking Checklist
 Before moving on:
 - [ ] Purpose is clear
-- [ ] All required elements present (per §5.6 minimum display fields, if defined)
+- [ ] All required elements and minimum display fields in the approved UI_SPEC are present; record NOT APPLICABLE only where that contract says so.
 - [ ] Matches the canonical structure (shell, grid, spacing, type)
 - [ ] Tokens only — zero hardcoded color
 - [ ] Light + dark render captured (Playwright PNG)
@@ -256,7 +260,7 @@ Before moving on:
 # UI_SPEC: [Project Name]
 
 > **Version:** 1.0
-> **Status:** APPROVED
+> **Status:** DRAFT — approval requires an attributable decision on this revision
 > **Design Mode:** Demo
 
 ## 1. Design Overview
@@ -381,7 +385,7 @@ This playbook is the *how-to-be-the-Designer* manual. It sits on top of the stab
 - **TOKEN_FILE.md** — a **reference snapshot / drop-in template** (Cyber Pharma Metro Warm values) — NOT the live file. The live token values for the current project are **`globals.css`/`globals.scss`** in the project repo (ruling: GLOBAL_DESIGN_SYSTEM_HANDBOOK §8).
 - **COMPONENT_REGISTRY / manifest** — primitive mapping + KIPs.
 
-**Conflict rule:** if this playbook and a doctrine doc disagree on tokens or method, the doctrine doc wins — surface the conflict and update this playbook.
+**Conflict rule:** governing documents control their subjects and the approved brief controls scope. Record the conflicting revisions and obtain an attributable Director resolution; do not silently update either side.
 
 ---
 
@@ -394,3 +398,4 @@ This playbook is the *how-to-be-the-Designer* manual. It sits on top of the stab
 | 1.4 | 5 Feb 2026 | Stitch "Batch Protocol", selection/utility patterns, media-player strategy integrated. |
 | 2.0 | 9 Jun 2026 | **Stitch retired.** §5 "Stitch Protocol" replaced by "The Production Method: Token-Driven HTML + Playwright." Designer now builds canonical screens directly as token-driven HTML and renders to PNG via Playwright; clone-and-adapt operates on HTML, not tool prompts. Deliverables aligned to the Handbook (token file primary; HTML+PNG artifacts; UI_SPEC; component manifest). Removed Batch & Order image protocol, "re-upload anchor" rule, `[CONTEXT][CONSTRAINTS]…` prompt format, and all Stitch keywords. Anti-patterns + field lessons reframed; doctrine cross-references added. |
 | 2.1 | 2026-07-07 | **Wave 2A micro-patch (audit sync).** §13 token-file reference corrected per the F-025 ruling: `TOKEN_FILE.md` = reference snapshot / drop-in template, NOT the live file — live token values are `globals.css`/`globals.scss` per GLOBAL_DESIGN_SYSTEM_HANDBOOK §8 (the doc's §5 was already correct; §13 was the stale outlier). THEMING_MANUAL reference de-versioned — canonical names only (F-011). Standard header block at top, version/date moved out of footer (F-018); "AI App Factory" → "App Factory". No structural or content changes — Tier 2 gold standard preserved. |
+| 2.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-004, FC-005, FC-008, FC-016, FC-017, FC-018, FC-027, FC-084, MC-06, MC-07, RUL-01, RUL-05, RUL-09, RUL-12, W23 |

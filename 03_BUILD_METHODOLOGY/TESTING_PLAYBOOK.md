@@ -1,6 +1,6 @@
 # TESTING PLAYBOOK
 
-> **Version:** 2.1 · **Date:** 2026-07-08 · **Status:** Active
+> **Version:** 2.2 · **Date:** 2026-10-18 · **Status:** Active
 > **Tier:** 3 — Build Methodology · **Pairs with:** STARTER_KIT_HANDBOOK, SOFTWARE_FACTORY_PLAYBOOK, FFM_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, RECON_QUESTIONNAIRE
 
 > **Author:** Architect (Claude) — synthesis of v1.0 (StarkReads, 2026-05-03) + Dockbloxx field notes (Blocks 2/3/4, May 8–11)
@@ -423,7 +423,7 @@ await expect(page.getByText(/Coupon Applied:/)).toBeVisible(); // user-facing cl
 const stored = await page.evaluate(() =>
   localStorage.getItem("checkout-storage"),
 );
-expect(JSON.parse(stored!).state.checkoutData.coupon.code).toBe(expectedCode); // ground truth
+expect(JSON.parse(stored!).state.couponCode).toBe(expectedCode); // approved non-sensitive project fixture only
 ```
 
 The UI proves the user sees the right thing. The persistent state proves the system actually did the right thing. UIs can lie (e.g., showing optimistic state that doesn't match the store).
@@ -632,7 +632,7 @@ Findings discovered during recon belong in a dedicated `SECURITY_FINDINGS.md`, *
 
 The right pattern:
 
-- **HIGH-severity findings** — fix inline in the same session (small, contained source change + test that locks in the fix).
+- **HIGH-severity findings** — report immediately. Implement only within the existing approved scope; otherwise obtain an attributable scope amendment first. Severity creates urgency, not an emergency authorization.
 - **MEDIUM / LOW findings** — document in `SECURITY_FINDINGS.md` with severity, recommended fix, and mitigation-until-fix.
 - **Tests assert the CORRECT post-fix behavior** (defensive assertions), not the buggy pre-fix state.
 
@@ -642,7 +642,7 @@ Source recon on `/api/create-payment-intent` revealed:
 
 1. **SDK-direct import (no wrapper)** — changed the mocking approach. Test plan adjusted.
 2. **Multi-step customer flow** (list customers → maybe create → PaymentIntent) — added two more tests for the branch coverage.
-3. **Error message leak in catch block** — HIGH-severity finding, fixed inline (`{ message: error.message }` → generic message + server-side logging).
+3. **Error-message leak in a catch block:** report the finding with the certified severity and obtain an authorized repair assignment. Replace unsafe responses/logging only within that assignment; QA does not silently implement the fix.
 4. **No input validation** — MEDIUM-severity finding, documented as open item in `SECURITY_FINDINGS.md` Finding #2.
 
 Two of those were test-plan adjustments. **Two were production security issues that recon happened to surface.** Without recon, both would have shipped untested.
@@ -697,14 +697,14 @@ Third-party script mutating page state during E2E?
 │   │        seed → goto → waitForURL(deterministic-signal) → click → assert
 │   │
 │   └── Yes → seed-and-wait won't fully work. Consider:
-│             (a) page.route to abort the script's network request
-│             (b) addInitScript to neutralize history.replaceState etc.
+│             (a) diagnostic isolation only: abort the request, record omitted coverage
+│             (b) diagnostic isolation only: neutralize effects, no full-flow PASS
 │             (c) skip-and-document (Section 3.6) until architectural fix
 ```
 
 ## 3.6 Skip-and-document as a Factory pattern
 
-When a test can't be made reliable due to an architectural issue outside the test layer, use `test.skip` with a deliberate comment block. The skip isn't a hack — it's a documented coverage decision.
+A run with a dependency disabled is diagnostic or isolated evidence. The full-environment flow remains FAILED or BLOCKED until repaired or covered by an explicitly approved compensating verification. Carry the omitted dependency, affected claims and coverage limitation into Gate Q evidence. A skipped check records the reason, attempts, coverage gap and approved compensating verification; it is not a passing result.
 
 ### The comment block carries five things
 
@@ -822,6 +822,8 @@ In every case, "one function with a flag" is the wrong shape. Two functions with
 
 ## 3.8 Run-verification rituals (promoted from Run 001)
 
+The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it.
+
 Three verification disciplines earned during Cyber Pharma v1 Run 001 (lessons L17, L25, L26). They were first codified as recon-time checks (RECON_QUESTIONNAIRE §12); their canonical doctrine home is here.
 
 ### Grep-verifiable gates run their grep at close (L17)
@@ -876,32 +878,11 @@ Constructing fully-typed mocks of Supabase response shapes is prohibitively verb
 
 ### E2E user lifecycle (Supabase apps)
 
-```
-uniqueEmail()
-→ "test-1714768800000-x4q2@e2e.test"
-        │
-        ▼
-registerUser(page, email)
-→ fills /auth Register tab → clicks Signup
-→ waits for /members-portal redirect
-        │
-        ▼
-getUserId(email)
-→ supabaseAdmin.auth.admin.listUsers() → find by email → UUID
-        │
-        ▼
-seedSubscription(userId, tier)
-→ UPSERT into subscriptions table with synthetic Stripe IDs
-        │
-        ▼
-TEST RUNS
-        │
-        ▼
-deleteTestUser(email) [afterAll]
-1. DELETE from subscriptions (FK first)
-2. DELETE from user_roles
-3. supabaseAdmin.auth.admin.deleteUser
-```
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
+
+Before privileged test setup or cleanup, verify the target project reference against the Director-approved test-project allowlist and verify the authorized test identity. Fail closed on mismatch, missing identity or unknown target. Record every run-created identity; cleanup may act only on that set. Production verification is a separately authorized, bounded, non-destructive procedure.
+
+---
 
 ### Direct DB seeding to bypass Stripe in E2E
 
@@ -1076,9 +1057,11 @@ When parsing sparse metadata (WordPress meta, JSON columns, document store extra
 function pickMeta(
   record: { meta_data: Array<{ key: string; value: unknown }> },
   key: string,
-): unknown {
-  const entry = record.meta_data?.find((m) => m.key === key);
-  return entry ? entry.value : null; // null = absent; falsy value = present-but-empty
+): { present: false } | { present: true; value: unknown } {
+  const entry = record.meta_data.find((m) => m.key === key);
+  return entry === undefined
+    ? { present: false }
+    : { present: true, value: entry.value };
 }
 ```
 
@@ -1218,14 +1201,14 @@ Absence + presence assertions together catch both "accidentally always-calling" 
 
 Stripe errors can contain card details, customer emails, internal request IDs. The catch block of any payment route must:
 
-1. Log the full error server-side (for debugging).
+1. Log only allow-listed structured diagnostics: correlation ID, operation, normalized failure class and safe provider code. Never log raw payment exceptions or personal data.
 2. Return a **generic** message to the client.
 3. Have a test that asserts the leak doesn't happen.
 
 ```ts
 // Route source:
 } catch (error: any) {
-  console.error("Stripe Error:", error);
+  console.error("Payment operation failed", { failureClass: "provider_error" });
   return NextResponse.json(
     { message: "Failed to process payment. Please try again." },
     { status: 500 }
@@ -1248,6 +1231,8 @@ test("returns 500 with generic message when Stripe SDK throws (no internal detai
   expect(data.message).not.toMatch(/4242/);
   expect(data.message).not.toMatch(/abc-secret-leaked/);
   expect(data.message).not.toMatch(/declined/i);
+  // Also spy on the logger in this test and assert retained output contains
+  // neither synthetic sensitive marker (4242, abc-secret-leaked).
 });
 ```
 
@@ -1270,82 +1255,11 @@ Static fixtures are for things the script can't infer (e.g., which dealer slugs 
 
 ### Discovery script architecture
 
-```ts
-#!/usr/bin/env tsx
-import * as dotenv from "dotenv";
-import * as fs from "fs";
-import * as path from "path";
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-dotenv.config({ path: ".env.local" });
+Fixture discovery returns one normalized record with role identities, scenario eligibility and a single count field named count. Validate role existence and coupon prerequisites before declaring readiness. A missing required role produces BLOCKED with the missing prerequisite; optional absence is recorded explicitly. Producers and consumers read count, not competing count aliases.
 
-const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL;
-const CK = process.env.WOOCOM_CONSUMER_KEY;
-const CS = process.env.WOOCOM_CONSUMER_SECRET;
-
-function fail(msg: string): never {
-  console.error(`❌ ${msg}`);
-  process.exit(1);
-}
-
-// Fail loud on missing env vars BEFORE any network call.
-if (!BACKEND_URL) fail("NEXT_PUBLIC_BACKEND_URL is not set in .env.local");
-if (!CK) fail("WOOCOM_CONSUMER_KEY is not set in .env.local");
-if (!CS) fail("WOOCOM_CONSUMER_SECRET is not set in .env.local");
-
-async function wooFetch<T>(endpoint: string): Promise<T> {
-  const sep = endpoint.includes("?") ? "&" : "?";
-  const url = `${BACKEND_URL}/wp-json/wc/v3${endpoint}${sep}consumer_key=${CK}&consumer_secret=${CS}`;
-  const resp = await fetch(url);
-  if (!resp.ok) {
-    // Never include the URL in error messages — it has credentials.
-    throw new Error(
-      `Woo REST ${resp.status} ${resp.statusText} for endpoint ${endpoint}`,
-    );
-  }
-  return (await resp.json()) as T;
-}
-
-async function main() {
-  // Pull live data
-  const products = await wooFetch<any[]>(
-    "/products?per_page=20&status=publish",
-  );
-  const categories = await wooFetch<any[]>("/products/categories?per_page=20");
-  const coupons = await wooFetch<any[]>("/coupons?per_page=20");
-
-  // Read static fixtures
-  const dealers = JSON.parse(
-    fs.readFileSync("e2e/fixtures/dealers.json", "utf-8"),
-  );
-
-  // Compose
-  const liveData = {
-    generated_at: new Date().toISOString(),
-    backend_url: BACKEND_URL,
-    products: {
-      first_published: products[0],
-      general_pool: products.slice(0, 5),
-    },
-    categories: { populated: categories.find((c) => c.count > 0) },
-    coupons: {
-      valid: coupons.find(
-        (c) => !c.date_expires || new Date(c.date_expires) > new Date(),
-      ),
-    },
-    dealers,
-  };
-
-  // Atomic write — temp file + rename. Prevents partial files on crash.
-  const tmpPath = `e2e/fixtures/live-data.json.tmp`;
-  const finalPath = `e2e/fixtures/live-data.json`;
-  fs.writeFileSync(tmpPath, JSON.stringify(liveData, null, 2), "utf-8");
-  fs.renameSync(tmpPath, finalPath);
-
-  console.log(`✅ Fixtures written to ${finalPath}`);
-}
-
-main().catch((err: Error) => fail(`Fixture fetch failed: ${err.message}`));
-```
+---
 
 ### Four principles enforced by the script
 
@@ -1591,9 +1505,11 @@ Order matters. ts-jest compiles to CommonJS where assignment statements interlea
 
 For per-test configuration that varies, prefer `mockReset()` (clears history + implementation) over `clearMocks`.
 
-### G5: Webhook handler always returns 200
+### G5: Webhook acknowledgment follows durable acceptance
 
-By design, to prevent Stripe from infinitely retrying. Tests assert the database call shape, not the response status, for event-processing tests. Only signature-verification tests (missing/invalid) check for 400.
+A webhook acknowledges success only after checked completion of the required state transition or checked durable capture/enqueue. Failure before that boundary returns a retryable non-success. Failure after durable acceptance is recovered through bounded durable retries, visible failed work, reconciliation and a named recovery owner; it does not retroactively invalidate the acknowledgment. Test status and persisted outcome for pre-acceptance failure, post-acceptance failure, duplicates and recovery.
+
+---
 
 ### G6: Console output in passing tests is normal
 
@@ -1736,6 +1652,7 @@ await Promise.race([
 | 1.0 | 2026-05-03 | Initial playbook — four-layer testing strategy codified from StarkReads (Subscription v1: Supabase + Stripe, 136 tests across 3 layers). |
 | 2.0 | 2026-05-11 | Backend-agnostic generalization: layered principles-then-appendices architecture, REST fetch-mock patterns alongside Supabase chain mocks, Stripe wrapper-vs-constructor decision tree, fixture discovery, diagnostic principles, companion artifacts (CHANGELOG / SECURITY_FINDINGS / CLEANUP_BACKLOG). Synthesized with Dockbloxx field notes (182 tests across 4 layers). Tail carried a stale "DRAFT" label despite operating as doctrine (F-036). |
 | 2.1 | 2026-07-08 | **Wave 3 (audit sync).** Status resolved: "DRAFT" tail label dropped — the doc has operated as doctrine since May (F-036); this Version History table added (D-018). Isolation ended (F-035): "Where This Doc Sits" section added — outbound refs to STARTER_KIT_HANDBOOK (runner/config ground truth) + RECON_QUESTIONNAIRE (Q1.7), inbound executors named (SFP Phase 8, FFM verification/, FRONTEND_BUILD_PHASE §9 — their pointers to here landed in SFP v1.2 / BUILD_PHASE v1.2.1; FFM verification-guide pointer queued). §3.8 added: run-verification rituals L17/L25/L26 promoted from RECON_QUESTIONNAIRE §12 — canonical doctrine home is now here, written at principle level (RECON keeps the recon-time executable form; its pointer-back is a queued touch). Standard header block (F-018). Content otherwise untouched. |
+| 2.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: DEC-03, FC-020, FC-021, FC-022, FC-023, FC-024, FC-030, FC-031, FC-040, FC-063, RUL-11, RUL-12, RUL-13 |
 
 ---
 

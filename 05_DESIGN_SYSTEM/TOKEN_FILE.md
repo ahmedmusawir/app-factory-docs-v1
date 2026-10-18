@@ -1,6 +1,6 @@
 # TOKEN FILE — Cyber Pharma / Metro Warm (Tailwind 3.4 + shadcn)
 
-> **Version:** 1.2 · **Date:** 2026-07-08 · **Status:** Active
+> **Version:** 1.3 · **Date:** 2026-10-18 · **Status:** Active
 > **Tier:** 5 — Design System · **Pairs with:** GLOBAL_DESIGN_SYSTEM_HANDBOOK, THEME_LIBRARY, THEMING_MANUAL, DESIGNER_PLAYBOOK
 
 > **Role of this doc (F-025):** **reference values for Cyber Pharma / Metro Warm — a drop-in template.** The LIVE token file is each project's entry stylesheet (`globals.css`/`.scss`), not this doc (GDSH §8 ruling).
@@ -30,13 +30,13 @@ Drop into the kit's entry stylesheet (match its extension). Replace the existing
     --popover: 0 0% 100%;
     --popover-foreground: 219 16% 17%;
 
-    --primary: 12 93% 64%;              /* #f9704f coral */
+    --primary: 12 93% 39%;
     --primary-foreground: 0 0% 100%;
     --secondary: 220 19% 94%;           /* #eceef2 panel */
     --secondary-foreground: 219 16% 17%;
     --muted: 222 15% 87%;               /* #d9dce3 */
-    --muted-foreground: 218 12% 42%;    /* #5f6878 */
-    --accent: 12 93% 64%;               /* coral */
+    --muted-foreground: 218 12% 39%;
+    --accent: 12 93% 39%;
     --accent-foreground: 0 0% 100%;
 
     --border: 220 12% 75%;              /* #b8bdc7 */
@@ -44,13 +44,13 @@ Drop into the kit's entry stylesheet (match its extension). Replace the existing
     --ring: 12 93% 64%;                 /* coral focus */
 
     /* semantic — FIXED MEANING across all themes */
-    --destructive: 2 67% 51%;           /* #d6322c underpaid/lost */
+    --destructive: 2 67% 45%;
     --destructive-foreground: 0 0% 100%;
-    --success: 131 54% 40%;             /* #2f9e44 recovered */
+    --success: 131 54% 29%;
     --success-foreground: 0 0% 100%;
-    --warning: 41 93% 47%;              /* #e8a008 pending */
+    --warning: 41 93% 27%;
     --warning-foreground: 0 0% 100%;
-    --info: 214 74% 53%;                /* #2f7ce0 neutral counts */
+    --info: 214 74% 43%;
     --info-foreground: 0 0% 100%;
 
     /* data-viz / KPI tiles */
@@ -63,9 +63,9 @@ Drop into the kit's entry stylesheet (match its extension). Replace the existing
     /* role identity — identities, not statuses; hue holds across modes (GDSH §2) */
     --role-superadmin: 262 52% 47%;     /* #6d48b7 purple — 6.4:1 on card */
     --role-superadmin-foreground: 0 0% 100%;
-    --role-admin: 189 65% 32%;          /* #1d7987 teal — 5.1:1 on card; NOT the destructive red */
+    --role-admin: 189 65% 30%;
     --role-admin-foreground: 0 0% 100%;
-    --role-member: 131 40% 33%;         /* #33763f green (aligns w/ success) — 5.5:1 on card */
+    --role-member: 131 40% 32%;
     --role-member-foreground: 0 0% 100%;
 
     --radius: 0px;                      /* Metro flat */
@@ -82,14 +82,14 @@ Drop into the kit's entry stylesheet (match its extension). Replace the existing
     --popover: 220 16% 22%;
     --popover-foreground: 222 26% 93%;
 
-    --primary: 12 93% 64%;              /* coral holds across modes */
-    --primary-foreground: 0 0% 100%;
+    --primary: 12 93% 66%;
+    --primary-foreground: 222 20% 13%;
     --secondary: 221 16% 27%;           /* #3a4150 */
     --secondary-foreground: 222 26% 93%;
     --muted: 220 16% 19%;               /* #282d37 */
     --muted-foreground: 221 17% 71%;    /* #a9b1c2 — readable secondary text/placeholders */
-    --accent: 12 93% 64%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 12 93% 66%;
+    --accent-foreground: 222 20% 13%;
 
     --border: 218 13% 33%;              /* #49515f — firmer edges */
     --input: 218 13% 33%;
@@ -102,8 +102,8 @@ Drop into the kit's entry stylesheet (match its extension). Replace the existing
     --success-foreground: 222 20% 13%;
     --warning: 41 93% 47%;              /* #e8a008 */
     --warning-foreground: 222 20% 13%;
-    --info: 214 74% 53%;
-    --info-foreground: 0 0% 100%;
+    --info: 214 74% 66%;
+    --info-foreground: 222 20% 13%;
 
     --chart-1: 351 95% 71%;
     --chart-2: 214 74% 53%;
@@ -233,3 +233,4 @@ const saira = Saira({ subsets: ["latin"], weight: ["300","400","500","600","700"
 | 1.0 | (original) | Initial Metro Warm token file for Cyber Pharma (Mist/Slate + alternates, Tailwind map, Saira wiring, usage rules). |
 | 1.1 | Jun 2026 | Slate readability pass (L16): background dropped below card, muted-foreground lifted, borders firmed; per-mode contrast notes + guards. |
 | 1.2 | 2026-07-08 | **Wave 5 — the role mint (F-013a/F-043) + F-025 closure.** Role sentence added to the header: this doc = REFERENCE VALUES / drop-in template; the live file is the project's entry stylesheet (GDSH §8). Minted `--role-superadmin/admin/member(-foreground)` for both shipping modes, AA-computed on each mode's `--card` (superadmin 262° purple 6.4:1/4.7:1 · admin 189° teal — NOT destructive red — 5.1:1/6.1:1 · member 131° success-aligned 5.5:1/7.0:1); hues hold across modes per THEME_LIBRARY §2 / GDSH §2. Tailwind `role.*` mapping added; usage rule + migration task updated (kit's hardcoded role colors → these tokens); alternates-need-no-overrides note. Stray orphan code fence at EOF removed; standard header + this history table (F-018/D-018). |
+| 1.3 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-074 |

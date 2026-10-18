@@ -1,6 +1,6 @@
 # THEME LIBRARY — the factory theme catalog
 
-> **Version:** 1.2 · **Date:** 2026-07-08 · **Status:** Active
+> **Version:** 1.3 · **Date:** 2026-10-18 · **Status:** Active
 > **Tier:** 5 — Design System · **Pairs with:** GLOBAL_DESIGN_SYSTEM_HANDBOOK, TOKEN_FILE, THEMING_MANUAL, DESIGNER_PLAYBOOK
 
 > **Scope:** first family — **Metro Warm** (Cyber Pharma: Mist / Slate / Bright / Dark-deep). Further theme families append here as new projects derive them; the pattern is app-agnostic.
@@ -28,11 +28,11 @@ Shared across **all four** (these never change between modes — brand + meaning
 
 | | Value |
 |---|---|
-| Primary (brand) | coral `#f9704f` → `12 93% 64%` |
-| Success (recovered) | green — `131 54% 40%` light / `142 69% 58%` dark |
-| Destructive (money lost) | red — `2 67% 51%` light / `351 95% 71%` dark |
-| Info (neutral count) | blue `#2f7ce0` → `214 74% 53%` |
-| Warning (pending) | amber `#e8a008` → `41 93% 47%` |
+| Primary (brand) | coral hue — `12 93% 39%` light / `12 93% 66%` dark |
+| Success (recovered) | green — `131 54% 29%` light / `142 69% 58%` dark |
+| Destructive (money lost) | red — `2 67% 45%` light / `351 95% 71%` dark |
+| Info (neutral count) | blue hue — `214 74% 43%` light / `214 74% 66%` dark |
+| Warning (pending) | amber hue — `41 93% 27%` light / `41 93% 47%` dark |
 | Role — superadmin | identity hue, distinct from brand & status *(set per family; AA on `--card`)* |
 | Role — admin | identity hue — **must not reuse the destructive red** |
 | Role — member | identity hue — may align with `--success` |
@@ -42,7 +42,7 @@ Shared across **all four** (these never change between modes — brand + meaning
 
 > **Role tokens (added v1.1):** roles are identities, not statuses. They hold their hue across all four modes just like the semantic four. The only hard rule: `--role-admin` must read as visually distinct from `--destructive` so an admin badge never looks like an error. Tune each role's lightness per mode and contrast-check on the style tile.
 
-What changes between modes is **only the neutral surface stack**:
+Semantic hue and meaning hold across modes; lightness and paired foregrounds may differ to meet contrast requirements. TOKEN_FILE contains the reference values. Verify the documented text/fill uses before claiming accessibility:
 
 ### 🟫 Mist — *default light*
 - **Base:** light · **Background:** `#e2e5ea` (`217 16% 90%`) · **Surface:** `#ffffff`
@@ -71,7 +71,7 @@ What changes between modes is **only the neutral surface stack**:
 
 ## 3. Adding a new theme (the repeatable process)
 
-1. **Pick the neutral direction** — only the surface stack changes (background, card, muted, border, secondary). Brand + semantic + role stay fixed.
+1. **Pick the neutral direction** — choose the surface stack; preserve brand, semantic and role hue/meaning while adjusting lightness and paired foregrounds for verified contrast.
 2. **Derive the full set** — every token the Handbook lists, light *and*/or dark base. Don't ship a partial theme.
 3. **Contrast-check** — run `success`/`destructive` (and the `--role-*` colors) as small text against the new `card`; tune lightness until all clear WCAG AA. (This is the step a 4-color palette can't give you.)
 4. **Add as a class** — a `.theme-*` override block in `globals.css`. Nothing else changes.
@@ -114,8 +114,8 @@ Full token values: `globals.css`. Visual proof of all modes: the style tile + th
 
 ## Cross-References
 
-- **`agent_docs/APP_FACTORY/design-system/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md`** — the token contract this library satisfies.
-- **`agent_docs/APP_FACTORY/STARTER_KIT_HANDBOOK.md`** — kit primitives; its §8 Theme Conventions and §2 Role Colors defer to these tokens.
+- **`GLOBAL_DESIGN_SYSTEM_HANDBOOK.md`** — the token contract this library satisfies.
+- **`STARTER_KIT_HANDBOOK.md`** — kit primitives; its §8 Theme Conventions and §2 Role Colors defer to these tokens.
 - **`globals.css`** — the live token file (per project).
 
 ---
@@ -127,6 +127,7 @@ Full token values: `globals.css`. Visual proof of all modes: the style tile + th
 | 1.1 | 2026-06-08 | Corrected `TOKEN_FILE.md` → `globals.css` as the live token file (aligns with GDSH §8); added `--role-*` tokens to the Metro Warm family + the add-a-theme contrast step + the multi-tenant rule; folded the L16 Slate readability fix into the Slate entry; added cross-references. Theme values unchanged. |
 | 1.2 | 2026-07-08 | **Wave 5 (audit sync).** The v1.1 one-sided reconciliation is now two-sided: `--role-*` tokens are DEFINED in the contract (GDSH §2 gained them, F-043 closed) with reference values MINTED in TOKEN_FILE (Metro Warm, both modes, AA-computed per this doc's §2 rules — admin teal ≠ destructive red; member aligns w/ success; superadmin purple); the v1.1 note annotated accordingly. Standard header block added (F-018); title scope generalized (first family: Metro Warm; further families append). Theme values and all content otherwise untouched — cleanest doc in the audit stays that way. |
 | (prior) | — | Initial Theme Library (Mist / Slate / Bright / Dark-deep). |
+| 1.3 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-003, FC-074, FC-081, RUL-14 |
 
 ---
 

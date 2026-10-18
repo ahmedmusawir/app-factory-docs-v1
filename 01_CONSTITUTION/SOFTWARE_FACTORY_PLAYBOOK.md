@@ -1,6 +1,6 @@
 # SOFTWARE FACTORY PLAYBOOK
 
-> **Version:** 1.3 · **Date:** 2026-08-10 · **Status:** Active
+> **Version:** 1.4 · **Date:** 2026-10-18 · **Status:** Active
 > **Tier:** 1 — Constitution · **Pairs with:** APP_FACTORY_BLUEPRINT, DESIGNER_PLAYBOOK, TESTING_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK
 
 > **Stark Industries Software Factory**
@@ -11,7 +11,7 @@
 
 ## Table of Contents
 
-1. [Philosophy: Human Architect, AI Builder](#1-philosophy-human-architect-ai-builder)
+1. [Philosophy and Factory Seats](#1-philosophy-and-factory-seats)
 2. [The Build Phases](#2-the-build-phases)
 3. [Phase 1: Planning & User Stories](#3-phase-1-planning--user-stories)
 4. [Phase 2: Design System](#4-phase-2-design-system)
@@ -28,75 +28,26 @@
 
 ---
 
-## 1. Philosophy: Human Architect, AI Builder
+## 1. Philosophy and Factory Seats
 
-### The Stark Software Factory Model
+Resolve authority by the question being answered: disk and recon establish what exists; approved artifacts establish what is authorized; the named domain owner defines the reusable pattern. A conflict between these is not permission to substitute one for another. Stop the affected work, record both sources and their revisions, and obtain the Director’s attributable ruling. Preserve stage-specific authority within its stated scope.
 
-This is **NOT** a "vibe coding" environment where AI generates random solutions.
+### Shared terminology
 
-This is a **disciplined factory** where:
-- **Humans** define the architecture, constraints, and acceptance criteria
-- **AI** executes the implementation within those guardrails
-- **Manuals** provide the institutional knowledge and patterns
+A seat defines responsibility; a persona or model name does not grant permission. Director is the human scope, access and release authority; Operator and Coordinator are contextual names for that human responsibility. Architect owns assembly and scope interpretation; Engineer owns implementation and factual handoff; QA Lead owns QA doctrine, plan approval, adjudication and certification; QA Executor independently plans and tests. Designer and deployment responsibilities remain distinct. “Architect” does not name the human approver in an authority rule.
 
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                    STARK SOFTWARE FACTORY MODEL                              │
-└─────────────────────────────────────────────────────────────────────────────┘
+Keep lifecycle axes separate: Blueprint phases describe the Factory pipeline; SFP implementation phases describe build disciplines; FFM sub-phases and Frontend Build Phase stages describe execution within a module; roadmap phases describe product scope. Record each stage’s parent, entry artifacts, exit evidence and approver in the module contract. Demo deployment is not Gate Q or Gate D. Engine 1 is module engineering and module QA. Engine 2 is independent system review after all Engine 1 phases and their QA are closed. The separate post-FFM review occurs after FFM and its QA. Only dispositioned findings requiring repair produce RRM work.
 
-    ┌──────────────────────────────────────────────────────────────────┐
-    │                        HUMAN (ARCHITECT)                          │
-    │                                                                    │
-    │   • Defines user stories and acceptance criteria                  │
-    │   • Approves designs and UI patterns                              │
-    │   • Specifies database schema requirements                        │
-    │   • Sets constraints and guardrails                               │
-    │   • Reviews and approves deliverables                             │
-    └────────────────────────────┬─────────────────────────────────────┘
-                                 │
-                                 │ SPEC + CONSTRAINTS
-                                 ▼
-    ┌──────────────────────────────────────────────────────────────────┐
-    │                         AI (BUILDER)                              │
-    │                                                                    │
-    │   • Implements features according to spec                         │
-    │   • Follows patterns from manuals                                 │
-    │   • Generates code within constraints                             │
-    │   • Reports progress and blockers                                 │
-    │   • Asks clarifying questions when needed                         │
-    └────────────────────────────┬─────────────────────────────────────┘
-                                 │
-                                 │ REFERENCES
-                                 ▼
-    ┌──────────────────────────────────────────────────────────────────┐
-    │                    MANUALS (KNOWLEDGE BASE)                       │
-    │                                                                    │
-    │   • UI-UX-BUILDING-MANUAL.md                                      │
-    │   • AUTH_MANUAL.md                                                │
-    │   • DATABASE_MANUAL.md                                            │
-    │   • API_AND_SERVICES_MANUAL.md                                    │
-    │   • STATE_MANAGEMENT_MANUAL.md                                    │
-    │   • APP_ARCHITECTURE_MANUAL.md                                    │
-    │   • ECOMMERCE_AND_PAYMENTS_MANUAL.md                              │
-    └──────────────────────────────────────────────────────────────────┘
-```
-
-### Key Principles
-
-| Principle | Description |
-|-----------|-------------|
-| **Schema-First** | Database design precedes application code |
-| **Spec-Driven** | No implementation without approved spec |
-| **Pattern-Based** | Use established patterns from manuals |
-| **Incremental** | Build in small, testable increments |
-| **Documentation** | Code is documented as it's built |
+Schema-first, approved specifications, incremental verification and recorded changes remain required.
 
 ---
+
+Revised workflow documents and stick diagrams: [FFM creation](../03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md), [FFM execution and post-FFM review](../03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md), [deployment](../03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md), [BIM and Engine 2](../03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md). They supersede the historical August pictures when verified and published; originals are retained.
 
 ## 1.5 Doctrine Pairing Principle — Playbooks Paired With Worked Examples
 
 > **Born from Cyberize Run 001 (May 2026).**
-> Every methodology playbook in this factory is paired with a concrete worked example.
+> Pair each methodology with an available, verified worked example. Historical external pointers below are not proof that an example is present in this Hub or in a project. Record repository, immutable revision and path before requiring it.
 
 ### The Principle
 
@@ -108,7 +59,7 @@ This is true for human architects authoring docs and reading playbooks. It is ev
 
 | Playbook (Instruction) | Paired Example (Concrete) |
 |---|---|
-| `HANDOFF_PACKAGE_PLAYBOOK.md` | `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/` |
+| `HANDOFF_PACKAGE_PLAYBOOK.md` | Historical external example (availability unverified): `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/`. Obtain the source repository, immutable revision and path before use; do not assume this path exists locally. |
 | `FRONTEND_FIRST_PLAYBOOK.md` | Cyberize Agentic Automation build (Run 001) |
 | `UI-UX-BUILDING-MANUAL.md` | Cyberize screenshots in `_design/` + built screens |
 | `AUTH_MANUAL.md` | Starter kit's working auth implementation |
@@ -164,11 +115,13 @@ This keeps playbook and example in sync. They evolve together. The pairing stays
 ### Cross-Reference
 
 - **`HANDOFF_PACKAGE_PLAYBOOK.md`** — first explicit application of this principle (instructions + Cyberize handoff as example)
-- **`CURRENT_APP/app-factory-frontend-first-module/_project/`** — the inaugural canonical worked example
+- Historical external example (availability unverified): **`CURRENT_APP/app-factory-frontend-first-module/_project/`** — the inaugural historical worked example Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.
 
 ---
 
 ## 2. The Build Phases
+
+Engine 1 denotes module engineering and module QA across the implementation phases. Review occurs after FFM completion and its QA, and again at Engine 2 after all Engine 1 phase/module engineering and QA are closed. Findings require disposition; only approved findings needing repair produce bounded RRM work, and each RRM includes QAM. A clean review produces no RRM. Module QA certification, broader review completion and deployed-system Gate D remain distinct.
 
 Every feature follows this sequence:
 
@@ -205,7 +158,7 @@ Every feature follows this sequence:
 | Phase | Why It Comes Before the Next |
 |-------|------------------------------|
 | Planning | Can't design without knowing what to build |
-| Design | Can't model data without knowing the UI needs |
+| Design | Consume the Architect’s approved DATA_CONTRACT; proposed contract refinements require approved amendments before implementation. |
 | Database | Can't build APIs without knowing the data shape |
 | API | Can't manage state without knowing what data exists |
 | State | Can't build UI without knowing where data comes from |
@@ -224,6 +177,10 @@ The factory uses one canonical project-phase map: the **APP_FACTORY_BLUEPRINT li
 | Phase 3 — Database Schema | Phase 3 — Engineering (spec) → Phase 4 — Fabrication (build) |
 | Phases 4–8 — API / State / UI / Auth / Testing | Phase 4 — Fabrication |
 | Phase 9 — Deployment | Phase 5 — Deployment |
+| Engine 1 | Module engineering and independent module QA, including required certification/cleanup/closeout; complete every scoped phase/module and its QA before Engine 2. |
+| Post-FFM review (checkpoint 1) | Independent review after FFM build and its independent QA finish; findings require disposition. |
+| Engine 2 (checkpoint 2) | Independent system review after all Engine 1 phases/modules and their QA are closed. |
+| RRM | Repair work only for approved review findings requiring repair; a clean review requires no RRM. Review does not replace Gate Q, Gate D or Director release. |
 
 > **Phase 0 — Recon precedes everything:** no Phase 1 planning until the target repo is ground-truthed per `RECON_QUESTIONNAIRE.md` and the Recon Report is consumed (see APP_FACTORY_BLUEPRINT, Phase 0).
 
@@ -249,6 +206,10 @@ The factory uses one canonical project-phase map: the **APP_FACTORY_BLUEPRINT li
 4. **Minimum contents:** canonical module ID + owning app · objective · in-scope / explicit out-of-scope · numbered ACs, testable and observable · expected behavior per AC incl. error surfaces · **environment/setup prerequisites and every manual Operator step, called out FIRST** · regression expectations · manual-only points · known limitations · follow-up work outside this contract.
 5. **Authority chain:** QA owns the verdict — Factory vocabulary exactly: **PASS / PASS WITH FOLLOW-UP FINDINGS / PASS WITH KNOWN RISK / FAIL / BLOCKED.** The **Operator holds final adjudication and release authority.** The Architect advises on architectural classification and routing. An in-scope acceptance failure needs no one's permission to be a FAIL. Accepted findings reach Engineering only as approved module content.
 6. **Gate Q is mandatory for all code-bearing modules.** Only documentation-only / non-runtime changes may receive a recorded Operator QA waiver.
+
+Every newly authored module includes a complete, module-specific `QAM/` prepared by the Architect from `03_BUILD_METHODOLOGY/_templates/QAM/`. QA Lead owns the reusable playbook and standing requirements. Engineer fills factual engineering records and handoff; QA Executor performs independent Q1 recon and test planning; QA Lead approves the plan; Director releases execution; QA Executor performs Q2 and authorized retest; QA Lead adjudicates and certifies. `QAM_PLAYBOOK.md` owns this packaging and sequence. Existing modules already in flight retain their recorded sequence until an attributable amendment.
+
+The Director commits and pushes the completed engineering candidate on the numbered product branch, then creates `qa/<module-branch>` at that exact commit. Engineer performs approved repairs and QA Executor independently tests on that same QA branch, with separate writable lanes and one active writer during repair or measurement. The QA branch continues to final integration; do not transfer work back or abandon it as the normal workflow. After the QA Lead’s verdict and required cleanup, the Architect issues closeout instructions, Engineer performs bounded closeout, and the Director performs final commits, merge and push. Preserve product, execution, evidence and closeout identities separately.
 
 ---
 
@@ -467,62 +428,7 @@ src/
 
 ### Service Function Template
 
-```typescript
-// src/services/{entity}Services.ts
-
-import { createClient } from '@/utils/supabase/server';
-import type { Entity, EntityInsert } from '@/types/database';
-
-export const fetchEntities = async (): Promise<Entity[]> => {
-  const supabase = await createClient();
-  
-  const { data, error } = await supabase
-    .from('entities')
-    .select('*')
-    .order('created_at', { ascending: false });
-
-  if (error) {
-    console.error('Error fetching entities:', error);
-    return [];
-  }
-
-  return data;
-};
-
-export const fetchEntityById = async (id: string): Promise<Entity | null> => {
-  const supabase = await createClient();
-  
-  const { data, error } = await supabase
-    .from('entities')
-    .select('*')
-    .eq('id', id)
-    .single();
-
-  if (error) {
-    console.error('Error fetching entity:', error);
-    return null;
-  }
-
-  return data;
-};
-
-export const createEntity = async (entity: EntityInsert): Promise<Entity | null> => {
-  const supabase = await createClient();
-  
-  const { data, error } = await supabase
-    .from('entities')
-    .insert(entity)
-    .select()
-    .single();
-
-  if (error) {
-    console.error('Error creating entity:', error);
-    return null;
-  }
-
-  return data;
-};
-```
+**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.
 
 ### Deliverables
 
@@ -716,47 +622,13 @@ export default function OrdersPage() {
 
 ## 9. Phase 7: Authentication & RBAC
 
-### Objective
+For kit-based builds, consume the existing kit authentication and authorization primitives and verify them through AUTH-WALK. Do not rebuild login pages, an auth store, metadata role flags or a client route guard. Page wrappers follow STARTER_KIT_HANDBOOK §5 and §7: resolve authorized server data before rendering the interactive client child. Generic non-kit examples do not apply when the kit supplies the capability.
 
-Add authentication and role-based access control to protect routes and features.
+The role table is the only authorization authority. Never authorize from user_metadata or a profile mirror. Superadmin creation is console-only; no app-side superadmin creation route is provided. Retire the metadata-authorized add-user, delete-user and get-users recipes. Future privileged list/delete operations remain possible only with trusted current-role lookup, operation-local authorization before elevated capability, an approved target-role allowlist and privileged-target protection. Profile mirrors contain profile data, not authorization columns. Registration metadata is not authorization.
 
-### Auth Implementation Checklist
+Every privileged operation authorizes its own invocation before acquiring or using elevated capability: authenticate the requester, resolve the current trusted role, authorize the operation and target, and validate input. Layout admission controls page access only. Direct unauthenticated, wrong-role and wrong-target invocations must produce no privileged side effect.
 
-- [ ] Login page(s) created
-- [ ] Auth store configured
-- [ ] Role flags defined in user_metadata
-- [ ] Protected layouts with HOC
-- [ ] API routes verify auth
-- [ ] Role-based UI elements
-
-### Route Protection
-
-```typescript
-// Layout-level protection
-export default withRoleCheck(AdminLayout, {
-  allowedRoles: ['is_admin', 'is_member'],
-  redirectTo: '/login',
-});
-```
-
-### API Protection
-
-```typescript
-// API route protection
-const { data: { user } } = await supabase.auth.getUser();
-if (!user) {
-  return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-}
-```
-
-### Deliverables
-
-- [ ] Auth flows working (login, logout)
-- [ ] Routes protected by role
-- [ ] APIs protected by auth
-- [ ] User management (if SuperAdmin)
-
-**Reference:** `AUTH_MANUAL.md`
+Verify authentication state, table-backed current role, object-level authorization, denied targets, session expiry, logout and first server render. The former metadata-role/auth-store checklist is withdrawn. Kit-dependent signatures require the pinned kit evidence; this containment does not close those replacements.
 
 ---
 
@@ -908,6 +780,9 @@ Use this template when starting any new feature:
 
 ### Feature Development Checklist
 
+- [ ] Approved brief, applicable specifications and complete applicable screen set are identified before implementation.
+- [ ] Approved ACCEPTANCE_SPEC and engineering QAM handoff are ready before independent QA.
+
 ```markdown
 ## Feature: [Name]
 
@@ -975,6 +850,9 @@ Use this template when starting any new feature:
 
 ```markdown
 ## Pre-Release QA
+
+- [ ] QA Lead Gate Q verdict and Director release decision are recorded separately.
+- [ ] Applicable deployed-environment Gate D is planned and verified; build success is not Gate D.
 
 ### Authentication
 - [ ] Login works
@@ -1045,7 +923,7 @@ The Stark Software Factory Playbook ensures:
 ✅ **Predictable** - Same process for every feature  
 ✅ **Maintainable** - Code follows documented patterns  
 ✅ **Scalable** - Architecture supports growth  
-✅ **Collaborative** - Human architects, AI builders, shared knowledge
+✅ **Collaborative** — Director, Architect, Designer, Engineer and independent QA retain distinct responsibilities.
 
 **Remember:**
 1. **Plan before you build**
@@ -1060,6 +938,7 @@ The Stark Software Factory Playbook ensures:
 
 | Version | Date | Changes |
 |---|---|---|
+| 1.4 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-002, FC-005, FC-006, FC-007, FC-009, FC-021, FC-033, FC-036, FC-063, FC-066, MC-01, MC-05, MC-06, MC-07, RUL-01, RUL-05, RUL-07, RUL-08, RUL-09, RUL-11, RUL-12, RUL-14, W01, W23 |
 | 1.3 | 2026-08-10 | Added §2.5 "Module Identity & QA Handoff" Factory-wide section (app-suffixed module IDs; mandatory ACCEPTANCE_SPEC contract; QA verdict ownership + Operator final authority; AC* numbering decision). Promoted from the ADK Harness field campaign via R1/R2 QA review and finalization pass. |
 | 1.2 | 2026-07-07 | **Wave 1 (audit sync).** Standard header block adopted, version/date moved to top (F-018). Phase 2 rewritten to defer to DESIGNER_PLAYBOOK — token file primary, Canonical Page Method; obsolete Stitch/Figma design-spec workflow deleted (F-009, F-002). "Phase Vocabulary" note + mapping table added to §2: Blueprint lifecycle (incl. Phase 0 Recon) is the canonical phase map, these 9 phases are the execution breakdown, FFM Sub-Phases nest inside build phases (F-010). Phase 8 now points to TESTING_PLAYBOOK (F-035). §1.5 pairing-table refs stripped of version suffixes — canonical names only (F-011). Full mojibake sweep incl. 16 invisible U+0090 control chars left behind by the v1.1 "encoding fix" (F-012). §13 Phase-2 checklist aligned to Designer deliverables. |
 | 1.1 | 2026-05-31 | Added Section 1.5 (Doctrine Pairing Principle). Born from Cyberize Run 001 operator insight on instruction+example pairing. Fixed UTF-8 encoding artifacts (incompletely — see 1.2). |

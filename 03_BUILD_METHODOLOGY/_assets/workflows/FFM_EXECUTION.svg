@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="2430" viewBox="0 0 1800 2430" role="img" aria-labelledby="title desc">
+<title id="title">FFM engineering, independent QA and post-FFM review</title>
+<desc id="desc">Revised stick-actor sequence; original August diagram preserved as history. Required reviews, QA verdicts and release remain distinct.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#334155"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="32" y="42" font-size="28" font-family="sans-serif" fill="#0f172a">FFM engineering, independent QA and post-FFM review</text>
+<text x="32" y="77" font-size="18" font-family="sans-serif" fill="#334155">v1.0 · revised workflow reference · RUL-01–15</text>
+<g stroke="#334155" stroke-width="3" fill="none"><circle cx="150.0" cy="116" r="13"/><path d="M150.0 129v39m-22-28h44m-22 28l-20 27m20-27l20 27"/></g>
+<text x="150.0" y="221" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#0f172a">Engineer</text>
+<path d="M150.0 237V2250" stroke="#cbd5e1" stroke-dasharray="7 7"/>
+<g stroke="#334155" stroke-width="3" fill="none"><circle cx="450.0" cy="116" r="13"/><path d="M450.0 129v39m-22-28h44m-22 28l-20 27m20-27l20 27"/></g>
+<text x="450.0" y="221" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#0f172a">Director</text>
+<path d="M450.0 237V2250" stroke="#cbd5e1" stroke-dasharray="7 7"/>
+<g stroke="#334155" stroke-width="3" fill="none"><circle cx="750.0" cy="116" r="13"/><path d="M750.0 129v39m-22-28h44m-22 28l-20 27m20-27l20 27"/></g>
+<text x="750.0" y="221" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#0f172a">QA Executor</text>
+<path d="M750.0 237V2250" stroke="#cbd5e1" stroke-dasharray="7 7"/>
+<g stroke="#334155" stroke-width="3" fill="none"><circle cx="1050.0" cy="116" r="13"/><path d="M1050.0 129v39m-22-28h44m-22 28l-20 27m20-27l20 27"/></g>
+<text x="1050.0" y="221" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#0f172a">QA Lead</text>
+<path d="M1050.0 237V2250" stroke="#cbd5e1" stroke-dasharray="7 7"/>
+<g stroke="#334155" stroke-width="3" fill="none"><circle cx="1350.0" cy="116" r="13"/><path d="M1350.0 129v39m-22-28h44m-22 28l-20 27m20-27l20 27"/></g>
+<text x="1350.0" y="221" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#0f172a">Architect</text>
+<path d="M1350.0 237V2250" stroke="#cbd5e1" stroke-dasharray="7 7"/>
+<g stroke="#334155" stroke-width="3" fill="none"><circle cx="1650.0" cy="116" r="13"/><path d="M1650.0 129v39m-22-28h44m-22 28l-20 27m20-27l20 27"/></g>
+<text x="1650.0" y="221" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#0f172a">Reviewers</text>
+<path d="M1650.0 237V2250" stroke="#cbd5e1" stroke-dasharray="7 7"/>
+<rect x="10" y="270" width="288.0" height="76" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+<text x="20" y="290" font-family="sans-serif" font-size="15" fill="#0f172a">1. Build and self-check;</text>
+<text x="20" y="306" font-family="sans-serif" font-size="15" fill="#0f172a">factual QAM handoff</text>
+<path d="M150.0 350V366H450.0V380" stroke="#334155" fill="none" marker-end="url(#arrow)"/>
+<rect x="306.0" y="380" width="288.0" height="76" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+<text x="316.0" y="400" font-family="sans-serif" font-size="15" fill="#0f172a">2. Commit/push numbered</text>
+<text x="316.0" y="416" font-family="sans-serif" font-size="15" fill="#0f172a">engineering candidate</text>
+<path d="M450.0 460V476H450.0V490" stroke="#334155" fill="none" marker-end="url(#arrow)"/>
+<rect x="306.0" y="490" width="288.0" height="76" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+<text x="316.0" y="510" font-family="sans-serif" font-size="15" fill="#0f172a">3. QA branch at exact</text>
+<text x="316.0" y="526" font-family="sans-serif" font-size="15" fill="#0f172a">candidate commit</text>
+<path d="M450.0 570V586H750.0V600" stroke="#334155" fill="none" marker-end="url(#arrow)"/>
+<rect x="606.0" y="600" width="288.0" height="76" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+<text x="616.0" y="620" font-family="sans-serif" font-size="15" fill="#0f172a">4. Q1 recon and independent</text>
+<text x="616.0" y="636" font-family="sans-serif" font-size="15" fill="#0f172a">test plan</text>
+<path d="M750.0 680V696H1050.0V710" stroke="#334155" fill="none" marker-end="url(#arrow)"/>
+<rect x="906.0" y="710" width="288.0" height="76" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+<text x="916.0" y="730" font-family="sans-serif" font-size="15" fill="#0f172a">5. Approve the specific QA</text>
+<text x="916.0" y="746" font-family="sans-serif" font-size="15" fill="#0f172a">plan</text>
+<path d="M1050.0 790V806H450.0V820" stroke="#334155" fill="none" marker-end="url(#arrow)"/>
+<rect x="306.0" y="820" width="288.0" height="76" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+<text x="316.0" y="840" font-family="sans-serif" font-size="15" fill="#0f172a">6. Release Q2 execution</text>
+<path d="M450.0 900V916H750.0V930" stroke="#334155" fill="none" marker-end="url(#arrow)"/>
+<rect x="606.0" y="930" width="288.0" height="76" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+<text x="616.0" y="950" font-family="sans-serif" font-size="15" fill="#0f172a">7. Q2 tests and evidence</text>
+<path d="M750.0 1010V1026H150.0V1040" stroke="#334155" fill="none" marker-end="url(#arrow)"/>
+<rect x="10" y="1040" width="288.0" height="76" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+<text x="20" y="1060" font-family="sans-serif" font-size="15" fill="#0f172a">8. Conditional authorized</text>
+<text x="20" y="1076" font-family="sans-serif" font-size="15" fill="#0f172a">repair on same QA branch</text>
+<path d="M150.0 1120V1136H450.0V1150" stroke="#334155" fill="none" marker-end="url(#arrow)"/>
+<rect x="306.0" y="1150" width="288.0" height="76" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+<text x="316.0" y="1170" font-family="sans-serif" font-size="15" fill="#0f172a">9. Commit repaired candidate</text>
+<text x="316.0" y="1186" font-family="sans-serif" font-size="15" fill="#0f172a">on the continuing QA branch</text>
+<path d="M450.0 1230V1246H750.0V1260" stroke="#334155" fill="none" marker-end="url(#arrow)"/>
+<rect x="606.0" y="1260" width="288.0" height="76" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+<text x="616.0" y="1280" font-family="sans-serif" font-size="15" fill="#0f172a">10. Independent retest of</text>
+<text x="616.0" y="1296" font-family="sans-serif" font-size="15" fill="#0f172a">repair and regression</text>
+<path d="M750.0 1340V1356H1050.0V1370" stroke="#334155" fill="none" marker-end="url(#arrow)"/>
+<rect x="906.0" y="1370" width="288.0" height="76" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+<text x="916.0" y="1390" font-family="sans-serif" font-size="15" fill="#0f172a">11. Product certification;</text>
+<text x="916.0" y="1406" font-family="sans-serif" font-size="15" fill="#0f172a">approve cleanup retention</text>
+<path d="M1050.0 1450V1466H750.0V1480" stroke="#334155" fill="none" marker-end="url(#arrow)"/>
+<rect x="606.0" y="1480" width="288.0" height="76" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+<text x="616.0" y="1500" font-family="sans-serif" font-size="15" fill="#0f172a">12. Authorized cleanup;</text>
+<text x="616.0" y="1516" font-family="sans-serif" font-size="15" fill="#0f172a">retain durable evidence</text>
+<path d="M750.0 1560V1576H1050.0V1590" stroke="#334155" fill="none" marker-end="url(#arrow)"/>
+<rect x="906.0" y="1590" width="288.0" height="76" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+<text x="916.0" y="1610" font-family="sans-serif" font-size="15" fill="#0f172a">13. Accept cleanup; preserve</text>
+<text x="916.0" y="1626" font-family="sans-serif" font-size="15" fill="#0f172a">product verdict identity</text>
+<path d="M1050.0 1670V1686H1350.0V1700" stroke="#334155" fill="none" marker-end="url(#arrow)"/>
+<rect x="1206.0" y="1700" width="288.0" height="76" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+<text x="1216.0" y="1720" font-family="sans-serif" font-size="15" fill="#0f172a">14. Closeout instruction</text>
+<path d="M1350.0 1780V1796H150.0V1810" stroke="#334155" fill="none" marker-end="url(#arrow)"/>
+<rect x="10" y="1810" width="288.0" height="76" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+<text x="20" y="1830" font-family="sans-serif" font-size="15" fill="#0f172a">15. Bounded closeout</text>
+<path d="M150.0 1890V1906H450.0V1920" stroke="#334155" fill="none" marker-end="url(#arrow)"/>
+<rect x="306.0" y="1920" width="288.0" height="76" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+<text x="316.0" y="1940" font-family="sans-serif" font-size="15" fill="#0f172a">16. Final commits, merge and</text>
+<text x="316.0" y="1956" font-family="sans-serif" font-size="15" fill="#0f172a">push</text>
+<path d="M450.0 2000V2016H1650.0V2030" stroke="#334155" fill="none" marker-end="url(#arrow)"/>
+<rect x="1502.0" y="2030" width="288.0" height="76" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+<text x="1512.0" y="2050" font-family="sans-serif" font-size="15" fill="#0f172a">17. Review checkpoint 1</text>
+<text x="1512.0" y="2066" font-family="sans-serif" font-size="15" fill="#0f172a">after FFM build and</text>
+<text x="1512.0" y="2082" font-family="sans-serif" font-size="15" fill="#0f172a">independent QA</text>
+<path d="M1650.0 2110V2126H450.0V2140" stroke="#334155" fill="none" marker-end="url(#arrow)"/>
+<rect x="306.0" y="2140" width="288.0" height="76" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+<text x="316.0" y="2160" font-family="sans-serif" font-size="15" fill="#0f172a">18. Disposition review</text>
+<text x="316.0" y="2176" font-family="sans-serif" font-size="15" fill="#0f172a">findings; RRM only for</text>
+<text x="316.0" y="2192" font-family="sans-serif" font-size="15" fill="#0f172a">approved repairs</text>
+<text x="32" y="2290" font-family="sans-serif" font-size="17" fill="#0f172a">Review checkpoint 1: after FFM build and its independent QA finish.</text>
+<text x="32" y="2319" font-family="sans-serif" font-size="17" fill="#0f172a">Review checkpoint 2: Engine 2 independent system review after all Engine 1 phases/modules and their QA are closed.</text>
+<text x="32" y="2348" font-family="sans-serif" font-size="17" fill="#0f172a">At either checkpoint, disposition findings; RRM only for approved findings requiring repairs. A clean review requires no RRM.</text>
+<text x="32" y="2377" font-family="sans-serif" font-size="17" fill="#0f172a">Review, Gate Q, required cleanup and certification, Gate D and Director release remain separate responsibilities.</text>
+</svg>

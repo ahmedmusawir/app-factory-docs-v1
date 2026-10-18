@@ -1,6 +1,6 @@
 # FRONTEND_BUILD_PHASE_PLAYBOOK.md
 
-> **Version:** 1.2.2 · **Date:** 2026-08-05 · **Status:** Active
+> **Version:** 1.3.0 · **Date:** 2026-10-18 · **Status:** Active
 > **Tier:** 3 — Build Methodology · **Pairs with:** FRONTEND_FIRST_PLAYBOOK, STARTER_KIT_HANDBOOK, COMPONENT_REGISTRY, UI-UX-BUILDING-MANUAL, FFM_PLAYBOOK, TESTING_PLAYBOOK
 
 > **Born from:** Cyberize Run 001 lessons (Lessons 2, 4, 5, 7 + Lesson 9 — speculative authoring discovered during v1.1 retrospective); Lesson 10 added at v1.2 (Cyber Pharma v1 Phase 2.2)
@@ -48,7 +48,7 @@ Doctrine read at build Stage 0 (Discovery) decays by Stage 5. To prevent this, e
 
 ### The Refresh Protocol
 
-At the START of each stage below (before any work), re-read:
+At the START of each stage below (before any work), re-read the approved project snapshots, identified by canonical document name, header version and Hub commit. Preserve intentional pins until an authorized update; resolve the project’s declared paths rather than assuming a universal landing path. Re-read:
 
 1. **Root CLAUDE.md Rule Zero** — mobile-first as foundational posture
 2. **UI-UX-BUILDING-MANUAL Rule Zero** — operating standard
@@ -205,7 +205,7 @@ If you cannot answer all four, do not author the file. Surface to the operator.
 ### Stage 2 Anti-Patterns
 
 - ❌ Authoring raw flex layouts when AppShellPage / Page / Row / Box primitives exist
-- ❌ Fixed-width / persistent sidebars (`w-64`, `hidden md:block`) without responsive collapse to a slide-over **below the rail's fit breakpoint** — `lg` for wide app rails (≥ ~20rem), `md` for narrow nav. A sidebar hidden below its breakpoint with NO hamburger/trigger = the rail vanishes on mobile = automatic failure (this is **Gate M** — see FFM_PLAYBOOK §13.1 / root CLAUDE.md forbidden zone).
+- **Responsive rail:** determine the fit breakpoint from the pinned component and actual content. Below that breakpoint supply a reachable, keyboard-accessible drawer trigger; no vanished or untriggered sidebar. Verify on both sides of the breakpoint and at 375px. Do not infer a universal `md`, `lg` or `xl` rail rule.
 - ❌ `*PageContent.tsx` files placed in `src/components/` instead of co-located with `page.tsx`
 - ❌ Skipping the 375px sketch in the plan
 - ❌ Deferring the mobile shell to a "later/responsive cluster" — the named deferred-violation pattern; build it in the SAME phase as the shell.
@@ -455,8 +455,8 @@ Before declaring Frontend Build Phase complete:
 - [ ] Data Contract still accurate (update if UI revealed new needs)
 
 ### Quality Gates
-- [ ] **Gate Q — Pre-Deployment Quality Gate** passed per `QA_PLAYBOOK.md` §9 (includes production-mode verify: `npm run build && npm start` walk — dev mode hides latency-class and build-class bugs).
-- [ ] **Gate D — Deployed-Environment Verification** passed per `QA_PLAYBOOK.md` §10: the smoke walk runs ON the deployed URL against the RECORDED deployed revision. A deploy without a passed Gate D is not done.
+- [ ] **Gate Q — Pre-Deployment Quality Gate** passed per `QA_PLAYBOOK.md` §12 (includes production-mode verify: `npm run build && npm start` walk — dev mode hides latency-class and build-class bugs).
+- [ ] **Gate D — Deployed-Environment Verification** passed per `QA_PLAYBOOK.md` §13: the smoke walk runs ON the deployed URL against the RECORDED deployed revision. A deploy without a passed Gate D is not done.
 - [ ] Any bug fixed during this phase: mechanism named in the commit (never "small fix") and regression protection added, per `BUG_FIX_PLAYBOOK.md` Rules 3 & 6.
 
 If any item is unchecked, the phase is not complete.
@@ -570,6 +570,7 @@ Fix in this playbook: Section 9 (UI Phase Completion Checklist) now carries a "R
 
 | Version | Date | Changes |
 |---------|------|---------|
+| 1.3.0 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-032, FC-071, FC-072, FC-088, RUL-14 |
 | 1.2.1 | 2026-07-08 | **Wave 3 micro-patch (audit sync).** Standard header block adopted — the top header previously claimed v1.1/June 2 while history/content/filename were v1.2 (F-033, the header-lies case; corrected). F-034 character-loss repair: restored "- " bullets on ~20 de-bulleted lists, arrows (member → admin → superadmin; Page → Row → Box), slashes (status/severity, Hide/show, Success/error ×2, Audit/history, WebSockets / real-time sync, data/security), lost quotes ("No data", "Are you sure"), Golden Rule blockquote markers; REBUILT the three de-piped tables (§7 Allowed + Forbidden, §10) — cell content restored from the surviving words (evidence-based); separator glyphs standardized to markdown/ASCII (original glyph class unrecoverable — see 1.2.1 concerns note in audit trail). "Phase 0" → "build Stage 0 (Discovery)" + naming note distinguishing lifecycle Phase 0 Recon (F-010 coordination with SFP §2). "Cascade" → "the build agent" ×2 (tool-agnostic). Stage 2 activity de-Stitched — "Reference the Designer's screen HTML/PNG" (F-002, hit not listed in REVIEW_012). §1 Related Documents + §9 checklist gain TESTING_PLAYBOOK pointers (F-035 inbound). Footer de-versioned. |
 | 1.2.2 | 2026-08-05 | **Navbar Saga promotion.** Gate Q/D checklist items appended to §9 (pointers to QA_PLAYBOOK + BUG_FIX_PLAYBOOK — never duplicated doctrine). | navbar-saga |
 | 1.2 | 2026-06-25 | Added Lesson 10 (the mobile gate must check the desktop content frame — gutter + centered form max-width — not just 375 collapse) + the Section 9 "Responsive (Gate M)" checklist block. Born from Cyber Pharma v1 Phase 2.2 Admin Portal retrospective. |

@@ -1,6 +1,6 @@
 # COMPONENT REGISTRY
 
-> **Version:** 1.1 · **Date:** 2026-07-08 · **Status:** Active
+> **Version:** 1.2 · **Date:** 2026-10-18 · **Status:** Active
 > **Tier:** 5 — Design System · **Pairs with:** STARTER_KIT_HANDBOOK, UI_UX_BUILDING_MANUAL, GLOBAL_DESIGN_SYSTEM_HANDBOOK
 
 > **Scannable primitive lookup. Decision-ready. The first stop before authoring any UI.**
@@ -266,16 +266,16 @@ These are the kit's reusable building blocks. They are mobile-first by default a
 ```
 
 **Mobile behavior (built-in) — REAL as of Gate 2/3 (Kit-Perfection):**
-- Below `xl` (<1280px): sidebar becomes a hamburger-triggered slide-over (a `Sheet`,
+- Historical kit rail dimensions/breakpoints require verification against the pinned shell implementation; no current kit value is certified here. Verify trigger, dismissal and layout on both sides of the actual fit breakpoint.
   side="left") under a two-bar layout (the shared `Navbar` + a trigger bar). Dismiss
   via close-on-nav (`usePathname`), outside-tap, and Esc.
-- `xl`+ (>=1280): sidebar persistent (`w-[25rem]`), main takes the remainder.
+- Historical kit rail dimensions/breakpoints require verification against the pinned shell implementation; no current kit value is certified here. Verify trigger, dismissal and layout on both sides of the actual fit breakpoint.
 - `sidebar` may be a render-fn `(close) => ReactNode` so a panel can close on a
   terminal action. The 4 CP scars: close-on-nav, passable `close`, ~25rem capped to
   85vw, native dismiss.
 
 **Theme behavior:**
-- Dark mode default: `dark:bg-zinc-800` (softer than `zinc-950`)
+Use the appropriate semantic surface, foreground and role tokens; confirm contrast in every supported mode. Numbered palette values describe historical kit debt, not an approved component recipe.
 - Light mode default: white/neutral
 
 **Example:**
@@ -619,7 +619,7 @@ Before authoring any new UI component, answer:
 - [ ] What changes at 768px?
 - [ ] What changes at 1024px?
 - [ ] Are all touch targets ≥ 44px?
-- [ ] Does horizontal scroll occur at any width? (If yes, fix the layout)
+- [ ] No unintended page-level horizontal overflow; bounded intentional tabs/carousels remain accessible and usable.
 - [ ] Is text readable at 375px without zoom? (≥ 14px body)
 
 ---
@@ -634,7 +634,7 @@ Patterns that look reasonable but break in this kit:
 ```tsx
 <div className="flex flex-col h-screen">
   <div className="flex flex-1">
-    <div className="w-64 bg-gray-100">...</div>
+    <div className="w-64 bg-muted">...</div>
     <div className="flex-1">...</div>
   </div>
 </div>
@@ -775,7 +775,7 @@ If you find yourself needing any of these, you've found a Kit Improvement Propos
 ## 11. Cross-References
 
 - **`STARTER_KIT_HANDBOOK.md`** — full kit overview (sibling file)
-- **`agent_docs/APP_FACTORY/UI-UX-BUILDING-MANUAL.md`** — full UI patterns deep-dive
+- **`UI_UX_BUILDING_MANUAL.md`** — full UI patterns deep-dive
 - **`src/app/(public)/page.tsx`** — canonical page-composition example (live `Page`/`Row`/`Box` content-flow)
 - **`src/components/common/AppShellPage.tsx`** — heavy in-file JSDoc with decision tree
 
@@ -785,6 +785,7 @@ If you find yourself needing any of these, you've found a Kit Improvement Propos
 
 | Version | Date | Changes |
 |---|---|---|
+| 1.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-003, FC-072, FC-073, FC-081, FC-082, RUL-14 |
 | 1.1 | 2026-06-28 | Kit-Perfection reconciliation: `AppShellPage` + `Sheet` are REAL (built Gates 2–3); breakpoint `md`→`xl`, two-bar + render-fn sidebar + 4 CP scars; removed non-existent `NavbarHome`/`NavbarSuperadmin`; added real global components (`PublicNav`/`PublicNavAuthSection`/`NavbarLoginReg`/`PublicMobileNav`); re-pointed the page-composition cross-ref from the deleted `/demo` to the live home. *(2026-07-08 Wave 5 content-tag, version unchanged: standard header block adopted with a formal Version line (F-018); "Role badge" row added to the Quick Decision Tree now that `--role-*` tokens exist in the contract (post-F-013a — GDSH §2 / TOKEN_FILE values). Nothing else — MODEL doc.)* |
 | 1.0 | 2026-05-31 | Initial registry authored from kit v0.4.1 + Run 001 lessons |
 

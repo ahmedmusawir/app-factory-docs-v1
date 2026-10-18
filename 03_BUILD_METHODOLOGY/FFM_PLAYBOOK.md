@@ -1,6 +1,6 @@
 # FFM PLAYBOOK — Frontend-First Module Authoring Manual
 
-> **Version:** 1.2 · **Date:** 2026-07-07 · **Status:** Active
+> **Version:** 1.3 · **Date:** 2026-10-18 · **Status:** Active
 > **Tier:** 3 — Build Methodology · **Pairs with:** HANDOFF_PACKAGE_PLAYBOOK, APP_FACTORY_SKILLS_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, ARCHITECT_PLAYBOOK, ENGINEER_PLAYBOOK, DESIGNER_PLAYBOOK, RECON_QUESTIONNAIRE
 
 > **Audience:** Future Architects (human or agent) authoring a Frontend-First Module (FFM) for any project's any phase.
@@ -12,7 +12,7 @@
 ## Table of Contents
 
 1. [What an FFM Is, In One Page](#1-what-an-ffm-is-in-one-page)
-2. [The Four-Role Factory Pattern](#2-the-four-role-factory-pattern)
+2. [The Factory Roles and Delivery Pattern](#2-the-factory-roles-and-delivery-pattern)
 3. [FFM Anatomy — The Folder Structure](#3-ffm-anatomy--the-folder-structure)
 4. [The Two FFM Variants — Conversion vs Greenfield](#4-the-two-ffm-variants--conversion-vs-greenfield)
 5. [Naming Conventions](#5-naming-conventions)
@@ -58,45 +58,32 @@ The FFM is **vendor-neutral** — Claude Code, Codex, Gemini all use the same mo
 
 ---
 
-## 2. The Four-Role Factory Pattern
+## 2. The Factory Roles and Delivery Pattern
 
-The FFM lives inside a four-role pipeline. Understanding the pipeline matters because **each role's outputs feed the next role's inputs**, and skipping or reordering breaks the chain.
+The FFM preparation stream retains Designer, Extractor, Architect and Engineer responsibilities. The complete delivery workflow also includes independent QA Executor and QA Lead responsibilities and the Director’s approval and release authority. Each role’s outputs feed the next role’s inputs; the preparation diagram below is not a complete release lifecycle.
 
 ### The Roles
 
+```text
+Current recon and approved brief / extraction evidence
+→ Architect authors DATA_CONTRACT before Design
+→ Designer authors UI_SPEC, tokens and the complete visual package
+→ Architect reconciles assembly, prepares module-specific QAM and entry routing
+→ Director approves package and releases Engineering
+→ Engineer builds, verifies and fills factual handoff
+→ Director commits/pushes the numbered engineering candidate
+→ QA branch starts at that exact candidate; Q1 recon and independent plan
+→ QA Lead approves; Director releases Q2 execution
+→ Authorized repair/retest on the same QA branch as needed
+→ QA Lead product verdict; required cleanup and acceptance
+→ Architect closeout; bounded Engineering closeout; Director final Git actions
+→ Review checkpoint 1: after FFM build and its independent QA finish.
+→ Disposition findings; RRM only for approved findings requiring repairs; a clean review requires no RRM.
+→ Continue Engine 1 phases/modules and QA; Engine 2 review only after all are closed.
+→ Review, module QA, cleanup acceptance, Gate D and Director release retain separate responsibilities.
 ```
-                    0. RECON (STAGE 0 — before all roles)
-                    Engineer (Claudy) answers RECON_QUESTIONNAIRE read-only
-                    → Recon Report → the Architect authors from verified facts
-                                       │
-                                       ▼
-┌─────────────────────────────────────────────────────────────────────┐
-│                                                                     │
-│   1. DESIGNER       2. EXTRACTOR      3. ARCHITECT     4. ENGINEER  │
-│   ─────────         ─────────         ─────────        ─────────    │
-│   Designer +        Claudy +          Architect        Engineer     │
-│   Operator          Extractor +       (Claude in       (Claudy in   │
-│                     Operator          chat)            terminal)    │
-│                                                                     │
-│   PRODUCES:         PRODUCES:         PRODUCES:        PRODUCES:    │
-│   Token file        Brain Drain       The FFM          Working code │
-│   (PRIMARY)         extracts          folder           per the FFM  │
-│   Style tile        (11 evidence-                                   │
-│   HTML+PNG          labeled docs)                                   │
-│   Screen HTML+PNG                                                   │
-│   Comp. manifest                                                    │
-│                                                                     │
-└─────────────────────────────────────────────────────────────────────┘
-                │                │                │
-                ▼                ▼                ▼
-        Feeds _design/   Feeds _extraction/   Feeds _project/
-                                                       │
-                                                       ▼
-                                              Claudy reads FFM,
-                                              builds the phase,
-                                              operator reviews
-                                              at each gate.
-```
+
+---
 
 ### Role 1 — Designer
 
@@ -252,13 +239,21 @@ If a downstream role is blocked because an upstream role's outputs are missing, 
 
 ### Parallel Opportunities
 
-Designer and Extractor can work in parallel — they have independent inputs and outputs. The Architect waits for both before authoring the FFM in earnest, though the Architect can scaffold the structure and reusable parts (skill, playbook, verification) while Designer and Extractor are still working.
+Extraction and evidence gathering may run in parallel with visual research. The Architect prepares DATA_CONTRACT from the approved brief and available verified extraction evidence before Design. The Designer authors UI_SPEC and the complete visual package; the Architect reconciles the assembly and prepares QAM before Engineering release.
 
 The Engineer cannot run until the Architect ships a complete FFM.
 
 ---
 
+Review checkpoints and repair routing: `RRM_PLAYBOOK.md` §2; Engine vocabulary: `SOFTWARE_FACTORY_PLAYBOOK.md` §2. The FFM completion checklist must retain the post-FFM review and any approved RRM follow-up before downstream progression.
+
+Revised workflow references: [FFM creation](_workflows/FFM_CREATION.md), [FFM execution and post-FFM review](_workflows/FFM_EXECUTION.md), [deployment and Gate D](_workflows/FFM_DEPLOYMENT.md), and [BIM through Engine 2](_workflows/BIM_WORKFLOW.md). Each includes a revised stick diagram and links its superseded original as history. The source diagrams are not current instructions.
+
 ## 3. FFM Anatomy — The Folder Structure
+
+Every newly authored module includes a complete, module-specific `QAM/` prepared by the Architect from `03_BUILD_METHODOLOGY/_templates/QAM/`. QA Lead owns the reusable playbook and standing requirements. Engineer fills factual engineering records and handoff; QA Executor performs independent Q1 recon and test planning; QA Lead approves the plan; Director releases execution; QA Executor performs Q2 and authorized retest; QA Lead adjudicates and certifies. `QAM_PLAYBOOK.md` owns this packaging and sequence. Existing modules already in flight retain their recorded sequence until an attributable amendment.
+
+The FFM lives under the project’s `agent_docs/` module convention. Its `QAM/` records and support material are excluded from production inputs and artifacts, with verification under `DEPLOYMENT_PLAYBOOK.md`.
 
 Every FFM follows the same folder structure. Names and content vary per project; structure does not.
 
@@ -267,6 +262,11 @@ Every FFM follows the same folder structure. Names and content vary per project;
 │
 ├── CLAUDE.md             ← navigation contract (entry point for Claude Code)
 ├── README.md             ← operator's setup guide
+├── ACCEPTANCE_SPEC.md    # approved acceptance contract; Engineer factual handoff
+├── QAM/                  # Architect-prepared module QAM from accepted templates
+│   ├── CLAUDE.md         # QA Executor entry → QAM_ENTRY.md
+│   ├── AGENTS.md         # same QA Executor routing
+│   └── QAM_ENTRY.md      # module-specific QA instructions and required records
 ├── AGENTS.md             ← Codex CLI pointer → redirects to CLAUDE.md
 ├── GEMINI.md             ← Gemini CLI pointer → redirects to CLAUDE.md
 │
@@ -388,8 +388,8 @@ FFMs come in two flavors based on whether a source app exists to convert from.
 
 **`_design/` contains:** the Designer v2.0 package — token file (PRIMARY), style tile HTML+PNG, per-screen HTML+PNG (Canonical Page Method), component manifest, logos (the visual ground truth replaces source app screenshots).
 **`_extraction/` contains:** Either (a) data-shape evidence from upstream/related repos that inform what the new build should look like, or (b) a `README.md` documenting "N/A — greenfield, no source to extract."
-**DATA_CONTRACT** is authored: From operator decisions, related repos' extracts, or the starter kit's existing schema (Engineer is the author of record in greenfield runs — see §7's ownership note).
-**UI_SPEC** is authored: From the Designer's screen HTML/PNG + token file (drafted by the Architect, revised by the Designer).
+**DATA_CONTRACT** is authored by the Architect before Design, from the approved brief and verified interface/schema evidence.
+**UI_SPEC** is authored by the Designer from the approved brief, DATA_CONTRACT, screen HTML/PNG and token file; the Architect reconciles the assembled package.
 **The "Known Discrepancies" section** may not apply or may be very thin.
 
 ### What Differs Between Variants
@@ -399,8 +399,8 @@ FFMs come in two flavors based on whether a source app exists to convert from.
 | Source app exists | Yes | No |
 | `_design/` contents | Source app screenshots | Designer v2.0 package: token file (PRIMARY) + style tile HTML+PNG + screen HTML+PNG + component manifest |
 | `_extraction/` contents | 11 Brain Drain docs | Data-shape evidence from related repos OR N/A |
-| DATA_CONTRACT source | Brain Drain TOOL-SYSTEM doc | Operator decisions, related extracts (Engineer authors) |
-| UI_SPEC source | Brain Drain PROMPTS-AND-PERSONA + screenshots | Designer screen HTML/PNG (Architect drafts, Designer revises) |
+| DATA_CONTRACT source | Architect uses approved extraction evidence before Design | Architect uses approved brief and verified interfaces before Design |
+| UI_SPEC source | Designer uses extraction evidence and screenshots; Architect reconciles | Designer authors from approved contracts and screen HTML/PNG; Architect reconciles |
 | Known Discrepancies relevance | High | Low / N/A |
 | Authoring time | Faster (evidence pre-extracted) | Slower (operator decisions take time) |
 | Failure mode | Inventing fields not in source | Operator decisions drift mid-build |
@@ -542,18 +542,17 @@ Some teams prefer to keep all FFMs in `current_app/` and use git tags / branches
 
 ### High-Level Authoring Order
 
-The Architect authors files in this order. Each step gets the previous step's outputs as inputs.
+The Architect coordinates this authoring order; each artifact retains its assigned owner. Each step consumes the previous step’s approved outputs.
 
 ```
 0. RECON (STAGE 0) — confirm a CURRENT Recon Report exists for the target repo
    (Engineer answers RECON_QUESTIONNAIRE read-only via stark-recon; the Architect
-   authors from the report — where any doc and the filesystem disagree, the
-   filesystem wins). No report → STOP; do not author a single FFM line.
+   authors from the report — Disk establishes implementation facts; approved briefs govern scope and governing documents control their subjects. Route genuine conflicts to the Director.). No report → STOP; do not author a single FFM line.
 1. Scaffold the folder structure (mkdir, empty files)
 2. Author the root navigation files (CLAUDE.md, README.md, AGENTS.md, GEMINI.md)
 3. Author _project/APP_BRIEF.md FIRST (scope must be locked)
 4. Author _project/DATA_CONTRACT.md SECOND (data shapes inform UI)
-5. Author _project/UI_SPEC.md THIRD (screens built from data contract)
+5. Designer authors _project/UI_SPEC.md THIRD from the approved DATA_CONTRACT; Architect reconciles
 6. Author _project/CLAUDE.md LAST (project spine informed by the above three)
 7. Author _design/README.md (instructions for operator on what to drop in)
 8. Author _extraction/README.md (instructions for operator on what to drop in)
@@ -562,8 +561,9 @@ The Architect authors files in this order. Each step gets the previous step's ou
 11. Author verification/* (PHASE_GATES, BUILD_CHECKLIST)
 12. Self-check (cross-references resolve, hard gates measurable, structure complete)
 13. Package (zip the folder for handoff to operator)
-14. Operator fills _design/ and _extraction/ with actual content (Architect's job is done at this point)
-15. Operator drops FFM at agent_docs/CURRENT_APP/, boots Claudy
+14. Return actual Designer and extraction outputs to the Architect for completeness and contract reconciliation.
+15. Architect assembles the final approved package, includes ACCEPTANCE_SPEC.md and module-specific QAM/, verifies dependencies and declares writable output lanes.
+16. Director approves the assembled revision and releases the Engineer on the numbered product branch. Engineering handoff, Q1, plan approval, release, Q2, conditional repair/retest, cleanup and closeout follow QAM_PLAYBOOK.
 ```
 
 ### Why APP_BRIEF First, CLAUDE.md Last
@@ -576,7 +576,7 @@ The Architect authors files in this order. Each step gets the previous step's ou
 If you author UI_SPEC before DATA_CONTRACT, you'll invent data shapes that don't match the source.
 If you author CLAUDE.md before the others, you won't know the conventions to encode.
 
-> **DATA_CONTRACT ownership is per-pipeline (consistent with APP_FACTORY_BLUEPRINT / HANDOFF_PACKAGE_PLAYBOOK / ENGINEER_PLAYBOOK):** in a CONVERSION FFM, the Architect pre-authors DATA_CONTRACT from Brain Drain evidence (step 4 above, as written). In a GREENFIELD FFM, the **Engineer is the author of record** — from the approved APP_BRIEF + UI_SPEC; step 4 then ships the contract shell + evidence pointers rather than the full contract. Same artifact name, different author and moment.
+> **DATA_CONTRACT ownership:** the Architect authors the complete contract before Design for both pipelines, using conversion extraction evidence where applicable. The Designer authors UI_SPEC; the Architect reconciles both with the approved brief before Engineering begins. A shell is not a completed contract.
 
 ### Time Budget (Rough)
 
@@ -834,21 +834,8 @@ Notice both are concrete, measurable, scoped to one phase.
 ```typescript
 // /src/services/auth.ts (CONTRACT — not implementation)
 
-export interface AuthService {
-  /**
-   * Get the current authenticated user with their role.
-   * Returns null if no session.
-   * BACKEND_SWAP_NOTES (Phase 2): wraps starter kit's getUser() with role join.
-   */
-  getCurrentUser(): Promise<AuthenticatedUser | null>;
-
-  /**
-   * Sign in with email/password. Returns user on success, throws on failure.
-   * BACKEND_SWAP_NOTES (Phase 2): wraps starter kit's signInWithPassword().
-   * On Phase 3, audit log entry created via trigger.
-   */
-  signIn(email: string, password: string): Promise<AuthenticatedUser>;
-}
+// Kit auth is consumed directly after recon; do not author an AuthService wrapper.
+// Declare only genuinely missing, approved project-domain services.
 ```
 
 ### 9.3 — `_project/UI_SPEC.md`
@@ -1388,7 +1375,7 @@ Plus a final section:
 
 Rule Zero is a build-time GATE, not spec-authoring advice. Every `PHASE_GATES.md` MUST carry a **Gate M**, verified in the SAME sub-phase that builds any shell/screen — NOT a late "responsive" cluster:
 
-- Authed/app shell has mobile nav: navbar → hamburger; the sidebar / app-rail is reachable via a hamburger + slide-over below its fit breakpoint (`lg` for wide rails ≥ ~20rem) — never `hidden md:block` (or fixed-width) with no trigger.
+- **Responsive rail:** determine the fit breakpoint from the pinned component and actual content. Below that breakpoint supply a reachable, keyboard-accessible drawer trigger; no vanished or untriggered sidebar. Verify on both sides of the breakpoint and at 375px. Do not infer a universal `md`, `lg` or `xl` rail rule.
 - No control is desktop-only; no horizontal overflow at 375px; touch targets ≥ 44px.
 - Verified at 375 / tablet / desktop, both themes.
 - **Failure mode — refuse to advance:** "we'll fix mobile in a later cluster" (the named deferred-violation pattern).
@@ -1555,7 +1542,7 @@ Skip or shrink these sections (they're not needed for this run):
 - [Section to deprioritize]
 - [Section to deprioritize]
 
-Surface any gaps or questions during the run. Plan Mode before each document.
+Surface gaps or questions during the run. Plan before release, then execute continuously within the released extraction assignment; stop for concrete blockers or authority changes.
 ```
 
 ### Example Custom Prompts
@@ -1625,7 +1612,7 @@ Surface anything outside auth scope as INFERENCE labeled "not in scope for this 
 ### Custom Prompt Discipline
 
 - **Don't replace the skill** — the custom prompt augments
-- **Don't skip Plan Mode** — Claudy still plans before each doc
+- **Plan before release** — execute the approved assignment continuously, including checks and reporting; stop for concrete blockers, authority changes or required independent verdicts.
 - **Don't lose evidence discipline** — even targeted runs use the 5-label system
 - **Output to a clearly-named folder** — `_EXTRACTIONS_security_audit/` not just `_EXTRACTIONS/` so it doesn't overwrite the standard one
 - **Document what you skipped** — so the next reader knows what's NOT in the extract
@@ -1678,8 +1665,8 @@ The current project's Factory module lives at:
 On session start, read `CLAUDE.md` in that folder. That file is the project's navigation contract. It tells you which project we're building, what's in scope, what's forbidden, what phase we're in, and where to find the project handoff docs (APP_BRIEF, DATA_CONTRACT, UI_SPEC).
 
 Before starting the FFM's Discovery sub-phase, also read these kit-level references:
-- `agent_docs/starter-kit/starter-kit-handbook.md` — kit conventions and what's pre-wired
-- `agent_docs/starter-kit/COMPONENT_REGISTRY.md` (if it exists) — primitive mapping
+- Governing starter-kit handbook: use its recorded canonical name, header version and Hub commit at the project-declared location; verify the referenced kit revision.
+- Governing component registry: use its recorded canonical name, header version and Hub commit at the project-declared location.
 
 All work for the current build follows the module's doctrine and playbook. This pointer is **active until this phase completes**. After completion, this file gets updated to point at the next phase's FFM.
 ```
@@ -1827,12 +1814,21 @@ Pace it: morning for `_project/` files (highest cognitive load), afternoon for `
 
 ## 18. The Authoring Checklist
 
+- [ ] Approved pre-implementation `ACCEPTANCE_SPEC.md` is present.
+- [ ] Module-specific `QAM/` is prepared from the accepted template set; no independent QA result, approval or certification is prefilled.
+- [ ] Parent entry files route Engineering to implementation and QA to `QAM/`; both QAM entry files assign QA Executor.
+- [ ] Frozen contract and owner-specific writable output lanes are declared.
+- [ ] Actual Designer/extraction outputs returned to Architect assembly and are approved before launch.
+- [ ] Compile/test exclusion and build/deploy/artifact exclusion of `agent_docs/**` are declared and verifiable.
+
 Use this checklist when authoring a new FFM. Walk it top to bottom. Don't skip steps.
 
 ### Pre-Authoring (Inputs Confirmation)
 
 - [ ] Current Recon Report exists for the target repo (Stage 0 — RECON_QUESTIONNAIRE / stark-recon)
 - [ ] PHASE_ROADMAP is locked; this FFM is for phase N
+- [ ] Schedule review after FFM build and independent QA finish; disposition findings and route only approved repairs to RRM.
+- [ ] Keep Engine 2 review after all Engine 1 phases/modules and their QA close; do not substitute review for QA or release.
 - [ ] MASTER_APP_BRIEF is locked
 - [ ] Designer outputs in hand (or operator confirmed "use defaults")
 - [ ] Extractor outputs in hand (or operator confirmed "greenfield, N/A")
@@ -1843,7 +1839,7 @@ Use this checklist when authoring a new FFM. Walk it top to bottom. Don't skip s
 ### Scaffold
 
 - [ ] Create FFM folder named `<project>_<phase>_ffm` (lowercase, underscores)
-- [ ] Create subfolders: `_project/`, `_design/`, `_extraction/`, `skills/stark-frontend-first/`, `playbook/RETROSPECTIVES/`, `verification/`
+- [ ] Create module-specific `QAM/` from the accepted canonical templates, both QA entry routes and all required records; prepare `ACCEPTANCE_SPEC.md`; create `_project/`, `_design/`, `_extraction/`, `skills/stark-frontend-first/`, `playbook/RETROSPECTIVES/` and `verification/`.
 - [ ] Create skill subfolders: `skills/stark-frontend-first/workflow/`, `references/`, `templates/`
 
 ### Root Files
@@ -1998,7 +1994,7 @@ Don't update for:
 
 ## 20. Worked Examples
 
-This playbook describes the pattern abstractly. Two real FFMs are available as worked examples.
+This playbook describes two historical FFM examples below. Availability is unverified: obtain the source repository, immutable revision and path before use; do not assume either example is present locally.
 
 ### Example 1 — Conversion FFM v1.0 (Cyberize Agentic Automation, May 2026)
 
@@ -2072,6 +2068,11 @@ The complete folder structure to scaffold, with file purposes:
 ├── CLAUDE.md                          # Navigation contract for AI tools
 ├── README.md                          # Operator's setup guide
 ├── AGENTS.md                          # Codex CLI pointer
+├── ACCEPTANCE_SPEC.md    # approved acceptance contract; Engineer factual handoff
+├── QAM/                  # Architect-prepared module QAM from accepted templates
+│   ├── CLAUDE.md         # QA Executor entry → QAM_ENTRY.md
+│   ├── AGENTS.md         # same QA Executor routing
+│   └── QAM_ENTRY.md      # module-specific QA instructions and required records
 ├── GEMINI.md                          # Gemini CLI pointer
 │
 ├── _project/                          # PROJECT-SPECIFIC content
@@ -2140,65 +2141,43 @@ The complete folder structure to scaffold, with file purposes:
 
 ## 22. Appendix B — Boot Prompts
 
+For newly authored modules, use the prepared module entry routes. Engineering launch does not approve QA execution. QA launch enters `QAM/` as QA Executor at the durable recorded state; Q1 produces the independent plan, Q2 requires QA Lead approval and Director release. Resume validates candidate, branch, approval and writable lanes before acting.
+
 Three boot prompt templates the operator uses to activate Claudy.
 
 ### B.1 — First Session (Fresh Boot)
 
+```text
+Identify your assigned seat and released assignment before acting.
+Read applicable root instructions, then the project’s declared module pointer and its actual entry file.
+Read the approved APP_BRIEF, DATA_CONTRACT and applicable UI_SPEC at their declared locations.
+Engineering routes to implementation; QA routes into the prepared QAM as QA Executor.
+Verify acceptance contract, candidate identity, governing snapshot pins and declared writable lanes.
+Read-only filesystem/Git inspection and declared reporting writes are allowed.
+Diagnostic changes need explicit authorization. Git mutations remain with the Director.
+Missing or contradictory prerequisites: report evidence and STOP the affected work.
+Q1 prepares the independent plan; Q2 requires QA Lead approval and Director release.
+Continue within the released assignment; stop at its required boundaries.
+Retain the post-FFM review after FFM build and independent QA finish.
+Engine 2 review waits until every Engine 1 phase/module and its QA are closed.
+Route review findings for disposition; RRM only for approved repairs; a clean review requires no RRM.
 ```
-You are Claudy, working on the <PROJECT_NAME> build under <OPERATOR_NAME>.
 
-BOOT SEQUENCE — read in this exact order, then STOP:
+The module declares actual project paths and available skills; no universal project-copy path is assumed. Mirror parent routing in CLAUDE.md and AGENTS.md. Do not prefill independent QA approvals or results.
 
-1. Read your global CLAUDE.md (universal Stark doctrine).
-
-2. Read this repo's root CLAUDE.md (starter kit conventions).
-
-3. Read PROJECT_POINTER.md at repo root. It names the active FFM folder.
-
-4. Read the kit-level references listed in PROJECT_POINTER.md:
-   - agent_docs/starter-kit/starter-kit-handbook.md
-   - agent_docs/starter-kit/COMPONENT_REGISTRY.md (if exists; skip if not)
-
-5. Read the active FFM's navigation contract:
-   - agent_docs/CURRENT_APP/<FFM_FOLDER>/CLAUDE.md
-   
-   Then follow that file's "Reading Order" section exactly.
-
-6. Confirm required skills are present in .claude/skills/:
-   - frontend-design
-   - skill-creator
-   - webapp-testing
-   - stark-frontend-first
-   If any are missing, surface — operator will install before proceeding.
-
-7. Produce a structured Sub-Phase 0 Discovery summary per
-   playbook/01-DISCOVERY.md Step 5.
-
-8. STOP. Wait for "approved" before doing anything else.
-
-Hard constraints during boot:
-- Do NOT write any code
-- Do NOT modify any files
-- Do NOT advance past Sub-Phase 0
-- Plan Mode applies even to reading
-- Eyesight-aware: explanations before any code blocks
-
-Karpathy Protocol applies: you are the hands, I am the architect. Move fast
-but never faster than I can verify.
-
-Go.
-```
+---
 
 ### B.2 — Resume Session (After Interruption)
 
+```text
+Read RECOVERY.md and the declared active module entry, then verify their claims against disk.
+Confirm assigned seat, branch/candidate, approved contract revision, latest approval and writable lanes.
+Use QAM’s durable state for QA; do not resume from historical prose alone.
+Report the last verified completed step and next authorized action.
+Continue within the still-valid released assignment; stop for a changed authority, concrete blocker or required independent verdict.
 ```
-Read RECOVERY.md at project root, then read the CLAUDE.md at
-`agent_docs/CURRENT_APP/<FFM_FOLDER>/CLAUDE.md`, then continue from where
-we left off.
 
-Report the last completed sub-phase and propose the next sub-phase before
-doing any work. STOP after the proposal.
-```
+---
 
 ### B.3 — Forbidden Zone Violation Recovery
 
@@ -2216,7 +2195,7 @@ Do NOT continue executing until I approve the recovery plan.
 ```
 STOP. You skipped a sub-phase boundary without my approval.
 
-Roll back the work that wasn't approved.
+Preserve and inventory the unapproved work. Report the affected paths; the Director authorizes recovery and performs any Git mutation.
 
 Read the playbook for the current sub-phase and re-propose.
 
@@ -2293,7 +2272,7 @@ This module is **tool-agnostic**...
 9. **`_extraction/`** — referenced on demand for ambiguity
 10. **`_design/`** — visual reference
 
-Conflict resolution: `DATA_CONTRACT.md` wins on data shapes, `UI_SPEC.md` wins on UI behavior, `_project/CLAUDE.md` wins on scope, this file wins on module structure. If two sources still conflict, STOP and surface to the operator.
+Conflict resolution: the approved APP_BRIEF governs scope; DATA_CONTRACT and UI_SPEC govern their subjects. Managers route to those contracts and cannot change them. Genuine conflicts stop affected work for attributable Director resolution.
 
 ---
 
@@ -2344,107 +2323,9 @@ When the operator stages this module into the <starter kit> and opens an AI tool
 
 ### C.2 — `_project/APP_BRIEF.md` Stub
 
-```markdown
-# APP BRIEF — <PROJECT_NAME> / Phase <N>: <PHASE_LABEL>
-
-> **Status:** LOCKED
-> **Phase:** <N> of <TOTAL>
-> **Predecessor:** Phase <N-1>
-> **Successor:** Phase <N+1>
-> **Author:** Architect Agent (Claude) for <operator>
+Instantiate the single canonical APP_BRIEF template from ARCHITECT_QUESTIONNAIRE.md. Fill its pipeline-specific sections from attributable evidence; record the actual approval and revision. Do not fork the former duplicate stub. The approved package also contains the Architect-owned DATA_CONTRACT, Designer-owned UI_SPEC, ACCEPTANCE_SPEC and prepared QAM.
 
 ---
-
-## 1. Mission Of This Phase
-
-(One paragraph: what this phase exists to do.)
-
----
-
-## 2. Hero Outcome
-
-> **(One sentence: what success looks like, observably.)**
-
----
-
-## 3. In Scope (Phase <N> Only)
-
-- ...
-- ...
-
----
-
-## 4. Out of Scope (Phase <N>)
-
-- ❌ ... (Phase <X>)
-- ❌ ... (Phase <Y>)
-
----
-
-## 5. Hard Gates
-
-| Gate | Verification |
-|---|---|
-| **G1** ... | ... |
-| **G2** ... | ... |
-...
-
----
-
-## 6. Success Criteria Table
-
-| Criterion | How to verify |
-|---|---|
-| ... | ... |
-
----
-
-## 7. Known Risks
-
-| Risk | Likelihood | Mitigation |
-|---|---|---|
-| ... | ... | ... |
-
----
-
-## 8. Common Stumbles (Watch For These)
-
-| Stumble | Why it happens | Fix |
-|---|---|---|
-| ... | ... | ... |
-
----
-
-## 9. Estimated Effort
-
-**<N> sessions** per the locked PHASE_ROADMAP.
-
----
-
-## 10. Handoff To Next Phase
-
-(What becomes available to Phase <N+1>.)
-
----
-
-## 11. Constraints
-
-(Non-negotiable rules.)
-
----
-
-## 12. Phase Transitions
-
-(Where each phase fits in the roadmap.)
-
----
-
-## 13. Changelog
-
-| Version | Date | Changes |
-|---|---|---|
-| 1.0 | <date> | Initial. |
-```
 
 ### C.3 — `_design/README.md` Stub
 
@@ -2637,6 +2518,7 @@ The factory compounds. Every FFM run sharpens the next. Every retrospective surf
 | 1.0 | Jun 2026 | Initial playbook: FFM definition, four-role pattern, folder anatomy, two variants + router, phase scoping, authoring sequence, file-by-file guides, Brain Drain integration, kit bridging, stumbles, checklist, evolution rules, worked examples, appendices. |
 | 1.1 | 2026-06-18 | Added mandatory **Gate M (mobile shell)** to §13.1 + authoring checklist (Rule Zero as an enforced gate, not just spec advice; after RUN_002 missed shipping a mobile shell). |
 | 1.2 | 2026-07-07 | **Wave 3 (audit sync).** Step 0 — Recon added to §7 authoring sequence + the four-role diagram + both input checklists: current Recon Report required before authoring, per RECON_QUESTIONNAIRE / stark-recon (F-024 closure — the FFM side of the mutual pointer). Role 1 (Designer) + §4 Variant B + §10.1 `_design/` contract rewritten to the complete Designer v2.0 package: token file (PRIMARY), style tile HTML+PNG, per-screen HTML+PNG via the Canonical Page Method, component manifest (F-031); all 4 Stitch references removed (F-002). Per-pipeline DATA_CONTRACT ownership note added to §7, consistent with Blueprint/Handoff/Engineer (F-029). §4 marked as the DETAILED router source with a pointer to the Blueprint's constitution-level version (F-030 coordination). Standard header block (F-018); stale "v1.0" tail label corrected; canonical refs (F-011). Existing §7 step numbers and section numbers unchanged (D-019). |
+| 1.3 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-003, FC-004, FC-005, FC-009, FC-014, FC-016, FC-017, FC-019, FC-025, FC-026, FC-027, FC-028, FC-029, FC-071, FC-072, FC-081, MC-01, MC-06, RUL-01, RUL-02, RUL-03, RUL-05, RUL-07, RUL-09, RUL-12, RUL-14, RUL-15, W08, W09, W10, W11, W12, W13, W23 |
 
 ---
 

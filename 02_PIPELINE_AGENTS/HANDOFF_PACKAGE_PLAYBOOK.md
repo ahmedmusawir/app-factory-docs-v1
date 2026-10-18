@@ -1,12 +1,12 @@
 # HANDOFF PACKAGE PLAYBOOK
 
-> **Version:** 1.1 · **Date:** 2026-07-07 · **Status:** Active
+> **Version:** 1.2 · **Date:** 2026-10-18 · **Status:** Active
 > **Tier:** 2 — Pipeline Agents · **Pairs with:** APP_FACTORY_BLUEPRINT, DESIGNER_PLAYBOOK, ENGINEER_PLAYBOOK, FRONTEND_FIRST_PLAYBOOK, RECON_QUESTIONNAIRE
 
 > **The instruction set for authoring project handoff packages.**
-> Paired with the Cyberize Agentic Automation handoff as the canonical worked example.
+> Historical external example (availability unverified): Paired with the Cyberize Agentic Automation handoff as the historical worked example. Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.
 > **Born from:** Cyberize Agentic Automation Run 001 (May 2026) — first successful Factory frontend conversion
-> **Worked example:** `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/`
+> Historical external example (availability unverified): **Worked example:** `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/` Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.
 
 ---
 
@@ -61,6 +61,8 @@ A handoff package is NOT authored:
 ---
 
 ## 4. Prerequisites Before Authoring
+
+The approved interface type determines required design inputs. A visual interface requires its approved UI_SPEC, token/style decisions and HTML/PNG references. A nonvisual backend or CLI explicitly records those inputs as NOT APPLICABLE and supplies its approved data/API/command contract, invocation examples and receiving checklist. Missing required input is not NOT APPLICABLE.
 
 Before writing the handoff package, these inputs must exist:
 
@@ -126,9 +128,9 @@ If forbidden zones are vague, Claudy will drift. If they're explicit and numbere
 
 **Purpose:** Every data shape, every service contract, every mock requirement.
 
-**Canonical example:** `_project/DATA_CONTRACT.md` in the Cyberize module.
+Historical external example (availability unverified): **Canonical example:** `_project/DATA_CONTRACT.md` in the Cyberize module. Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.
 
-**Ownership is per-pipeline:** in CONVERSION runs (this playbook's home case) the Architect pre-authors DATA_CONTRACT from Brain Drain evidence before handoff; in GREENFIELD runs the Engineer authors it from the approved APP_BRIEF + UI_SPEC — see `APP_FACTORY_BLUEPRINT.md`, "Which Pipeline Am I In?".
+**Ownership:** the Architect authors DATA_CONTRACT before Design. Conversion uses extraction evidence; greenfield uses the approved brief and verified interfaces. Engineering consumes the approved contract. Use the single canonical DATA_CONTRACT template in ENGINEER_PLAYBOOK §12; this section describes authoring requirements, not a competing template.
 
 **Required sections (in order):**
 
@@ -164,7 +166,7 @@ If forbidden zones are vague, Claudy will drift. If they're explicit and numbere
 
 **Purpose:** Screen-by-screen behavior, Shadcn primitive mapping, state machines.
 
-**Canonical example:** `_project/UI_SPEC.md` in the Cyberize module.
+Historical external example (availability unverified): **Canonical example:** `_project/UI_SPEC.md` in the Cyberize module. Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.
 
 **Required sections (in order):**
 
@@ -251,7 +253,7 @@ In a GREENFIELD run (no source app — see the pipeline preamble), the package c
 - **Per-screen HTML + PNG** — Playwright-rendered, light + dark
 - **Component manifest** (`COMPONENT_MANIFEST.md`)
 
-Authorship shifts with the pipeline: **UI_SPEC is drafted by the Architect and revised by the Designer** (in conversion runs it is authored from Brain Drain evidence + screenshots). The visual ground truth is the Designer's HTML/PNG set, not source-app screenshots — Claudy builds from the Designer's HTML and verifies against the PNG.
+The Designer owns UI_SPEC. For conversion, extraction evidence and source screenshots inform the specification; for greenfield, the Designer’s token file and screen HTML/PNG establish the visual contract. The Architect reconciles the assembled package before Director approval.
 
 ---
 
@@ -283,6 +285,8 @@ In Run 001, every type in DATA_CONTRACT traced to a specific section of `04-TOOL
 ---
 
 ## 8. Approval Gates
+
+Every newly authored module includes a complete, module-specific `QAM/` prepared by the Architect from `03_BUILD_METHODOLOGY/_templates/QAM/`. QA Lead owns the reusable playbook and standing requirements. Engineer fills factual engineering records and handoff; QA Executor performs independent Q1 recon and test planning; QA Lead approves the plan; Director releases execution; QA Executor performs Q2 and authorized retest; QA Lead adjudicates and certifies. `QAM_PLAYBOOK.md` owns this packaging and sequence. Existing modules already in flight retain their recorded sequence until an attributable amendment.
 
 The handoff package is approved when:
 
@@ -339,7 +343,7 @@ In Run 001, the Mission Control hardcoded 4 agents vs Chat dropdown's 5 was pres
 
 ## 10. The Worked Example
 
-The canonical worked example is `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/`. Read all four files there to see what "good" looks like:
+Historical external example (availability unverified): The historical worked example is `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/`. Read all four files there to see what "good" looks like: Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.
 
 - **`APP_BRIEF.md`** — 200+ lines, 15 hard gates, success criteria table, known discrepancies preserved
 - **`DATA_CONTRACT.md`** — 500+ lines, 12 types, 4 service contracts, mock data requirements, Phase 2 decision points
@@ -366,6 +370,7 @@ The playbook evolves through use. Each run leaves it sharper for the next.
 
 | Version | Date | Born From | Changes |
 |---|---|---|---|
+| 1.2 | 2026-10-18 | doctrine-part2 sync | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-009, FC-017, FC-018, FC-019, FC-027, MC-01, RUL-09, W20 |
 | 1.1 | 2026-07-07 | Wave 1 audit sync | **Pipeline duality made explicit.** Standard header block (F-018). "Which Pipeline Am I In?" preamble added: this playbook = the CONVERSION pipeline's package doctrine; greenfield routes via the agent playbooks; entry point = APP_FACTORY_BLUEPRINT router (F-030). §5.5 Greenfield Variant added: package additionally carries Designer deliverables per DESIGNER_PLAYBOOK §10 — token file (primary), style tile HTML+PNG, screen HTML+PNG, component manifest; UI_SPEC drafted by Architect, revised by Designer (F-026 closure). Per-pipeline DATA_CONTRACT ownership stated in §5.2 (F-029). Recon Report added to §4 prerequisites — package authoring presupposes Phase 0 recon (F-003 bridge). |
 | 1.0 | 2026-05-31 | Cyberize Run 001 | Initial playbook authored from Run 001 worked example |
 
@@ -373,7 +378,7 @@ The playbook evolves through use. Each run leaves it sharper for the next.
 
 ## 13. Cross-References
 
-- **Worked example:** `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/`
+- Historical external example (availability unverified): **Worked example:** `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/` Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.
 - **Frontend playbook:** `FRONTEND_FIRST_PLAYBOOK.md` (mandatory gates BEFORE handoff package authoring)
 - **Build phases:** `FRONTEND_BUILD_PHASE_PLAYBOOK.md` (what happens AFTER handoff package is approved)
 - **Kit reference:** `agent_docs/STARTER_KIT_HANDBOOK.md` (what the starter kit provides)

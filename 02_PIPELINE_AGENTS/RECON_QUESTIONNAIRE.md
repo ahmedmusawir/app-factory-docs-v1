@@ -1,11 +1,11 @@
 # RECON QUESTIONNAIRE — Ground-Truth Verification Before FFM Authoring
 
-> **Version:** 0.5 · **Date:** 2026-07-07 · **Status:** Active (living document — grows with every FFM run's lessons)
+> **Version:** 0.6 · **Date:** 2026-10-18 · **Status:** Active (living document — grows with every FFM run's lessons)
 > **Tier:** 2 — Pipeline Agents · **Pairs with:** ARCHITECT_PLAYBOOK, FFM_PLAYBOOK, APP_FACTORY_BLUEPRINT, STARTER_KIT_HANDBOOK
 
 > **Purpose:** Catch repo-vs-doctrine drift BEFORE the Architect authors an FFM, not after the Engineer surfaces it at Discovery.
 > **Owner:** Stark Industries — App Factory
-> **Where this sits:** Recon is **Phase 0 of the APP_FACTORY_BLUEPRINT lifecycle** and **Stage 0 of the FFM four-role pattern**. ARCHITECT_PLAYBOOK §2 (Recon Mode) is the law that makes it mandatory; the `stark-recon` skill automates it — **this questionnaire is the skill's source content.**
+> **Where this sits:** Recon is **Phase 0 of the APP_FACTORY_BLUEPRINT lifecycle** and **Stage 0 of FFM module preparation**. ARCHITECT_PLAYBOOK §2 (Recon Mode) is the law that makes it mandatory; the `stark-recon` skill automates it — **this questionnaire is the skill's source content.**
 
 ---
 
@@ -29,7 +29,7 @@ Conflicts that a recon pass would have caught up front (all from Cyber Pharma v1
 
 **The pattern:** none of these were deep design failures. They were all "the Architect couldn't see the ground truth." The fix is cheap: have the Engineer (Claudy, who IS in the repo) answer a questionnaire before the Architect writes a line.
 
-**The meta-lesson (the biggest one):** the **starter kit handbook is aspirational, not literal.** By the end of Phase 1, FOUR separate handbook claims were proven false against on-disk reality (the `app-role.ts` location, the "files already separated" split, the `useAuthStore` derived flags, and the `user` type). Treat the handbook as a description of *intent*, and verify every load-bearing claim against the filesystem during recon. **Where the handbook and the filesystem disagree, the filesystem wins — every time.**
+**The meta-lesson (the biggest one):** the **starter kit handbook is aspirational, not literal.** By the end of Phase 1, FOUR separate handbook claims were proven false against on-disk reality (the `app-role.ts` location, the "files already separated" split, the `useAuthStore` derived flags, and the `user` type). Treat the handbook as a description of *intent*, and verify every load-bearing claim against the filesystem during recon. **Disk establishes implementation facts; report drift without changing approved scope or requirements.**
 
 ---
 
@@ -43,7 +43,9 @@ Conflicts that a recon pass would have caught up front (all from Cyber Pharma v1
 
 2. Operator (you) runs Claudy in the repo:
    "Answer the RECON QUESTIONNAIRE from ground truth. Read-only —
-    no file changes, no git operations. Report findings verbatim."
+    read-only filesystem and Git inspection plus declared reporting writes.
+    No Git mutations. Diagnostic changes require explicit authorization.
+    Report findings verbatim."
 
 3. Claudy answers from the filesystem — actual versions, actual file
    locations, actual kit contents, actual grep results.
@@ -54,7 +56,7 @@ Conflicts that a recon pass would have caught up front (all from Cyber Pharma v1
 
 ### Discipline
 
-- **Read-only.** Claudy answers by reading and grepping. No file changes, no `cd && git` that could trigger hooks. Pure inspection.
+- **Inspection and declared reporting.** Read-only filesystem/Git inspection and declared recon/reporting writes are allowed. Git mutations belong to the Director. Build, cache or other diagnostic changes require explicit authorization naming expected writes; otherwise report the limitation.
 - **Verbatim findings.** Claudy reports what it actually found, including when reality contradicts the handbook. Doc-vs-reality drift is the single highest-value finding.
 - **One pass.** The questionnaire is answered in one shot and handed back. The Architect then authors. Don't trickle questions one at a time.
 
@@ -62,7 +64,9 @@ Conflicts that a recon pass would have caught up front (all from Cyber Pharma v1
 
 ## SECTION 0 — The Day-1 Ground-Truth Sweep (Run 001 Meta-Lesson)
 
-> **THE governing lesson from Cyber Pharma v1 Phase 1:** *the kit handbook (and APP_BRIEF, and every doc) is ASPIRATIONAL, not contractual.* Six confirmed handbook bugs in one run. Every doc claim about disk state that went unverified became a shipped wrong assumption. **Where any doc and the filesystem disagree, the filesystem wins — every time.**
+Record the actual server-only Supabase credential variable name used by this project and its approved alias mapping. Reference examples using SUPABASE_SERVICE_ROLE_KEY or SUPABASE_SECRET_KEY are alternative project profiles, not two automatically configured credentials. Confirm each consumer against the same contract; never expose either credential in client bundles or logs.
+
+> **THE governing lesson from Cyber Pharma v1 Phase 1:** *handbook implementation claims require recon; the approved APP_BRIEF remains the scope contract.* Six confirmed handbook bugs in one run. Every doc claim about disk state that went unverified became a shipped wrong assumption. **Disk establishes implementation facts; approved briefs govern scope and governing documents control their subjects. Route genuine conflicts to the Director.**
 >
 > This section is the consolidated "verify before you trust" sweep. Run it FIRST, before authoring anything. Every check here exists because trusting a doc instead of disk cost real time in Run 001.
 
@@ -105,7 +109,10 @@ grep -rn "process\.env\." src/ | grep -oP "process\.env\.\w+" | sort -u
 # S0.7 — RUN THE BUILD ROUTE TABLE (L7, L32)
 #   The route table is ground truth for "what surfaces actually exist." It surfaced
 #   /demo, /template, /api/ghl/ (a year-old QR fossil), and the real vuln-route path.
-npm run build 2>&1 | grep -E "Route|/|├|└" | head -60
+# DIAGNOSTIC CHANGES: run only after explicit authorization.
+# Capture command, working directory, exit code and unfiltered output.
+# Without authorization, report this check as not performed; do not run it.
+npm run build
 ```
 
 **The rule:** when this sweep and a doc disagree, the sweep wins, and the doc gets flagged for correction (kit handbook v3). Don't author a single FFM line against an unverified doc claim. Every handbook bug in Run 001 (L1, L5, L6, L7, L8 — plus the env-name and runner drift) would have been caught here on Day 1 instead of mid-build.
@@ -146,7 +153,7 @@ grep -E '"test"|vitest|jest' package.json
 
 ## SECTION 2 — Kit Structure vs Handbook Claims
 
-The handbook describes what the kit *should* contain. The filesystem describes what it *actually* contains. When they disagree, the filesystem wins and the drift gets recorded.
+The handbook describes what the kit *should* contain. The filesystem describes what it *actually* contains. When they disagree, record the factual drift and route any requirements conflict to the Director.
 
 ```bash
 # Q2.1 — Verify every file the handbook claims exists
@@ -206,7 +213,7 @@ grep -n "isAdmin\|isMember\|isSuperadmin\|isAuthenticated\|role" src/store/useAu
 grep -n ": any\|as any" src/store/useAuthStore.ts src/utils/get-user-role.ts 2>/dev/null
 ```
 
-> **Q3.4 nuance (F-042 resolution, RECON_WAVE0 Q1, 2026-07-07):** the kit is **TABLE-BASED** — `user_roles` is the source of truth and `get-user-role.ts` is the canonical read path. The live smell is (a) any **authorization READ** from `user_metadata`, or (b) any **client-writable role write path** (e.g. anon-key `signUp` with `options.data.role` honored by a trigger). Metadata MAY carry a role ONLY as a **creation-time transport** written via the protected channel (admin API / `app_metadata` preferred). Creation-time transport alone is not the smell — reading it for authz, or letting the client write it, is.
+> **Q3.4:** inspect both authorization reads and creation-time writes. User-writable metadata must never grant privilege, including through a trigger. A protected caller alone does not make a shared metadata field trustworthy: prove that public signup cannot supply the privileged value. Record the pinned role table, resolver, trigger and caller evidence; otherwise flag the path as unsafe.
 
 **Architect uses this to:** decide whether DATA_CONTRACT needs ANY service contracts. If the kit provides auth complete (it usually does), DATA_CONTRACT says "consume the kit's primitives directly — no wrapper." Service layer is reserved for project-specific domain logic only. Also: write the FFM's `_project/CLAUDE.md` against the store's ACTUAL shape (Q3.6) — if the handbook claims derived flags the store doesn't have, schedule adding them (or correcting the handbook) as a kit-reconciliation task, and don't write FFM code that reads flags that return `undefined`. Type smells (Q3.7) like `user: any` become reconciliation tasks (replace with the project's `User` type).
 
@@ -341,7 +348,10 @@ find src/app/api -type d  # eyeball every API route — any that belong to NO cu
 # Q8.6 — FULL ROUTE TABLE INVENTORY (run the build, read the route list day 1)
 #         Phase 1's extra cruft (/demo, /template, /api/ghl, /profile) surfaced here.
 #         Every route should map to THIS project or kit baseline — anything else is suspect.
-npm run build 2>&1 | grep -E "^\s*[├└]|Route|/" | head -50
+# DIAGNOSTIC CHANGES: run only after explicit authorization.
+# Capture command, working directory, exit code and unfiltered output.
+# Without authorization, report this check as not performed; do not run it.
+npm run build
 ```
 
 **Architect uses this to:** scope a "demo cascade deletion" task into the FFM's Components sub-phase from day one, with the COMPLETE file list. Without this, the cascade gets discovered piecemeal mid-build (as it did in Phase 1) and the deletion becomes whack-a-mole. Knowing the full fan-out lets the deletion happen in one verified pass.
@@ -349,6 +359,8 @@ npm run build 2>&1 | grep -E "^\s*[├└]|Route|/" | head -50
 ---
 
 ## SECTION 9 — FFM Packaging & Compile Scope
+
+**Q9.4 — Build/deployment exclusion.** Identify the applicable build/deploy input exclusion mechanisms for `agent_docs/**` (for example `.dockerignore`, `.gcloudignore`, `.vercelignore` or the platform equivalent). Verify the actual built image/bundle or deployed artifact excludes it. Record command, working directory, exit code and unfiltered safe output. Compile/test exclusion alone does not prove production exclusion. Follow `DEPLOYMENT_PLAYBOOK.md` §4; do not infer cloud authorization from this question.
 
 The FFM itself can break the build if its template files land inside the TypeScript or test scope. Phase 1 found the FFM's `.ts` template stubs (in `skills/templates/` and `_design/tokens/`) caught by `tsc --noEmit`, throwing 3 phantom errors in non-source files.
 
@@ -365,7 +377,7 @@ grep -rn "include\|exclude\|testMatch\|dir" vitest.config.* jest.config.* 2>/dev
 find agent_docs -name "*.ts" -o -name "*.tsx" 2>/dev/null | grep -v node_modules
 ```
 
-**Architect uses this to:** ship the FFM with the right packaging — either (a) instruct the operator to add `agent_docs/**` to tsconfig `exclude`, or (b) name the FFM's template stubs with a non-compiled extension (`.ts.txt`) so they never enter compile scope. This is a self-inflicted conflict the FFM author can prevent entirely.
+**Architect uses this to:** declare and verify compile/test exclusions, build/deploy input exclusions and inspection of the actual produced artifact. A non-compiled extension prevents compilation only; it does not prove deployment exclusion. Keep module/QAM/evidence records under `agent_docs/` and preserve required evidence.
 
 ---
 
@@ -530,6 +542,7 @@ Claudy answers in this structure:
 ### Recommendation to Architect
 - <any FFM authoring implications Claudy spotted>
 - <every handbook claim that proved FALSE against the filesystem>
+```
 
 ---
 
@@ -542,7 +555,7 @@ Claudy answers in this structure:
 | 0.3 | 2026-06-05 | Mid-Cluster-3 additions. Q1.7 (test runner check, Jest vs doctrine Vitest). Q8.5 (inherited cross-project residue, the year-old QR-project GHL hooktest fossil riding along through clones). Q8.6 (full route-table inventory day 1, surfaces /demo /template /api/ghl /profile cruft). |
 | 0.4 | 2026-06-07 | Full Run 001 integration (34 lessons). NEW Section 0 (Day-1 Ground-Truth Sweep — the meta-lesson: handbook is aspirational, verify everything on disk first; consolidates L1/L5/L6/L7/L8/L9/L24/L32). NEW Section 11 (Nav & Auth-State Patterns — marketing-vs-portal nav L19, every-navbar-theme-toggle L20, auth-state region L22, split-hero lg: L18, controls-outside-menu L21). NEW Section 12 (Verification Rituals — grep-at-close L17, process-status check L28, SP5 seam-check L29, rm .next between batches L25, fresh test baseline L26). Section 4 gained CSS-extension match (L14) + dark-mode real-screen check (L16). Open-Ended Sweep renumbered to Section 13. |
 | 0.5 | 2026-07-07 | **Wave 2A (audit sync).** Standard header block (F-018); recon's place stated: Blueprint lifecycle Phase 0 + FFM Stage 0; mutual pointers with ARCHITECT_PLAYBOOK §2 Recon Mode and the `stark-recon` skill — this doc named as the skill's source content (F-024). Numbering repaired without renumbering (F-023): §7 and §10 marked as retired numbers with the stable-ID rule stated (numbers are IDs, not positions — external citations of Q3.4/Q8.x/Q9.1 stay valid); §13's questions relabeled Q10.x → Q13.1–Q13.4; Recon Report Format "Section 10 — Surprises" → "Section 13 — Surprises". Q3.4 gained the F-042-resolution nuance box (kit is table-based; smell = authz read from user_metadata or client-writable role write path; metadata = creation-time transport only, via protected channel). Content otherwise untouched — scars preserved. |
-```
+| 0.6 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-005, FC-007, FC-014, FC-033, FC-034, FC-069, MC-02, MC-04, MC-13, RUL-03, RUL-12, W17 |
 
 ---
 

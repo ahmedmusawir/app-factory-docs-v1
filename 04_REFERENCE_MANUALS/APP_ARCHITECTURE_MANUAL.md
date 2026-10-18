@@ -1,6 +1,6 @@
 # APP ARCHITECTURE MANUAL
 
-> **Version:** 1.3 · **Date:** 2026-07-08 · **Status:** Active
+> **Version:** 1.4 · **Date:** 2026-10-18 · **Status:** Active
 > **Tier:** 4 — Reference Manuals · **Pairs with:** STARTER_KIT_HANDBOOK, RECON_QUESTIONNAIRE, AUTH_MANUAL, API_AND_SERVICES_MANUAL, STATE_MANAGEMENT_MANUAL, ECOMMERCE_AND_PAYMENTS_MANUAL
 
 > **Stark Industries Software Factory**
@@ -236,7 +236,7 @@ src/services/
 ├── blogServices.ts               # Blog/content API calls
 ├── paymentServices.ts            # Payment processing
 ├── supabaseServices.ts           # Supabase operations
-├── authServices.ts               # Auth operations
+├── <domain>Services.ts           # Approved domain logic; consume kit auth directly
 └── index.ts                      # Re-exports
 ```
 
@@ -453,35 +453,7 @@ export default function RootLayout({
 
 Each route group can have its own layout:
 
-```typescript
-// src/app/(admin)/layout.tsx
-'use client';
-
-import { ReactNode } from 'react';
-import { Sidebar } from '@/components/common/Sidebar';
-import { useAuthStore, selectIsAdmin } from '@/store/useAuthStore';
-import { redirect } from 'next/navigation';
-
-interface Props {
-  children: ReactNode;
-}
-
-export default function AdminLayout({ children }: Props) {
-  const isAdmin = useAuthStore(selectIsAdmin);
-  
-  // Client-side auth check (middleware handles server-side)
-  if (!isAdmin) {
-    redirect('/auth/login');
-  }
-  
-  return (
-    <div className="flex">
-      <Sidebar className="w-64 hidden md:block" />
-      <div className="flex-1 p-6">{children}</div>
-    </div>
-  );
-}
-```
+**Example withdrawn:** consume the verified responsive kit shell and server-resolved identity props. Client-store role hints are not page authority; navigation must remain reachable on mobile. Every positive layout example keeps every navigation destination reachable at mobile widths. Consume AppShellPage or provide a complete accessible mobile trigger/drawer or equivalent navigation alongside the desktop sidebar. hidden md:block is acceptable only when that same example supplies the mobile alternative. Retire an incomplete layout as a copyable positive example.
 
 ### Nested Layouts
 
@@ -892,113 +864,11 @@ interface ButtonProps extends React.ComponentProps<'button'> {
 
 ### REST API Integration
 
-```typescript
-// src/services/productServices.ts
-
-import { API_ENDPOINTS } from '@/constants/apiEndpoints';
-import type { Product, ProductsResponse } from '@/types/product';
-
-export const fetchProducts = async (
-  options: {
-    page?: number;
-    perPage?: number;
-    category?: string;
-  } = {}
-): Promise<ProductsResponse> => {
-  const { page = 1, perPage = 12, category } = options;
-  
-  const params = new URLSearchParams({
-    page: page.toString(),
-    per_page: perPage.toString(),
-    ...(category && { category }),
-  });
-
-  try {
-    const response = await fetch(
-      `${API_ENDPOINTS.PRODUCTS}?${params}`,
-      {
-        next: { revalidate: 3600 }, // ISR: 1 hour
-      }
-    );
-
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
-    }
-
-    const data = await response.json();
-    
-    return {
-      items: data,
-      totalPages: parseInt(response.headers.get('X-WP-TotalPages') || '1'),
-      totalItems: parseInt(response.headers.get('X-WP-Total') || '0'),
-    };
-  } catch (error) {
-    console.error('Error fetching products:', error);
-    return { items: [], totalPages: 0, totalItems: 0 };
-  }
-};
-```
+**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.
 
 ### GraphQL Integration
 
-```typescript
-// src/services/blogServices.ts
-
-const GRAPHQL_ENDPOINT = process.env.WORDPRESS_GRAPHQL_URL!;
-
-const GET_POSTS_QUERY = `
-  query GetPosts($first: Int!, $after: String) {
-    posts(first: $first, after: $after) {
-      nodes {
-        id
-        title
-        slug
-        excerpt
-        date
-        featuredImage {
-          node {
-            sourceUrl
-          }
-        }
-      }
-      pageInfo {
-        hasNextPage
-        endCursor
-      }
-    }
-  }
-`;
-
-export const fetchBlogPosts = async (first: number, after?: string) => {
-  try {
-    const response = await fetch(GRAPHQL_ENDPOINT, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        query: GET_POSTS_QUERY,
-        variables: { first, after },
-      }),
-      next: { revalidate: 3600 },
-    });
-
-    const { data, errors } = await response.json();
-
-    if (errors) {
-      console.error('GraphQL errors:', errors);
-      return { items: [], hasNextPage: false, endCursor: null };
-    }
-
-    return {
-      items: data.posts.nodes,
-      hasNextPage: data.posts.pageInfo.hasNextPage,
-      endCursor: data.posts.pageInfo.endCursor,
-    };
-  } catch (error) {
-    console.error('Error fetching posts:', error);
-    return { items: [], hasNextPage: false, endCursor: null };
-  }
-};
-```
+**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.
 
 ### Payment Provider Integration
 
@@ -1079,28 +949,7 @@ import Image from 'next/image';
 
 Next.js automatically code-splits by route. For component-level splitting:
 
-```typescript
-import dynamic from 'next/dynamic';
-
-// Lazy load heavy components
-const HeavyChart = dynamic(() => import('@/components/charts/HeavyChart'), {
-  loading: () => <ChartSkeleton />,
-  ssr: false,  // Client-only component
-});
-
-// Lazy load based on condition
-const AdminPanel = dynamic(() => import('@/components/admin/AdminPanel'));
-
-export default function Dashboard() {
-  const isAdmin = useAuthStore(selectIsAdmin);
-  
-  return (
-    <div>
-      {isAdmin && <AdminPanel />}
-    </div>
-  );
-}
-```
+**Example withdrawn:** consume the verified responsive kit shell and server-resolved identity props. Client-store role hints are not page authority; navigation must remain reachable on mobile. Every positive layout example keeps every navigation destination reachable at mobile widths. Consume AppShellPage or provide a complete accessible mobile trigger/drawer or equivalent navigation alongside the desktop sidebar. hidden md:block is acceptable only when that same example supplies the mobile alternative. Retire an incomplete layout as a copyable positive example.
 
 ### Caching Strategies
 
@@ -1159,63 +1008,15 @@ WOO_CONSUMER_SECRET=cs_xxx
 
 ### Route Protection
 
-> **File-name note (version-sensitive):** Next.js 16 kits wire this via **`src/proxy.ts`** (the kit's current convention — see AUTH_MANUAL's middleware section); earlier versions use `src/middleware.ts` as shown below. **Verify which file your repo uses on disk (recon Q2.5)** — the pattern is the same, the filename is not.
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-```typescript
-// src/middleware.ts (src/proxy.ts on Next 16 kits — see note above)
+The role table is the only authorization authority. Never authorize from user_metadata or a profile mirror. Superadmin creation is console-only; no app-side superadmin creation route is provided. Retire the metadata-authorized add-user, delete-user and get-users recipes. Future privileged list/delete operations remain possible only with trusted current-role lookup, operation-local authorization before elevated capability, an approved target-role allowlist and privileged-target protection. Profile mirrors contain profile data, not authorization columns. Registration metadata is not authorization.
 
-import { createServerClient } from '@supabase/ssr';
-import { NextResponse, type NextRequest } from 'next/server';
+Every privileged operation authorizes its own invocation before acquiring or using elevated capability: authenticate the requester, resolve the current trusted role, authorize the operation and target, and validate input. Layout admission controls page access only. Direct unauthenticated, wrong-role and wrong-target invocations must produce no privileged side effect.
 
-export async function middleware(request: NextRequest) {
-  const response = NextResponse.next();
-  
-  const supabase = createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
-    {
-      cookies: {
-        getAll: () => request.cookies.getAll(),
-        setAll: (cookies) => {
-          cookies.forEach(({ name, value, options }) => {
-            response.cookies.set(name, value, options);
-          });
-        },
-      },
-    }
-  );
+The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance.
 
-  const { data: { user } } = await supabase.auth.getUser();
-
-  // Protect admin routes
-  if (request.nextUrl.pathname.startsWith('/admin')) {
-    if (!user) {
-      return NextResponse.redirect(new URL('/auth/login', request.url));
-    }
-    
-    // Check admin role
-    const role = user.user_metadata?.role;
-    if (role !== 'admin' && role !== 'superadmin') {
-      return NextResponse.redirect(new URL('/', request.url));
-    }
-  }
-
-  // Protect customer routes
-  if (request.nextUrl.pathname.startsWith('/customer')) {
-    if (!user) {
-      return NextResponse.redirect(new URL('/auth/login', request.url));
-    }
-  }
-
-  return response;
-}
-
-export const config = {
-  matcher: [
-    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
-  ],
-};
-```
+---
 
 ### Input Validation
 
@@ -1254,15 +1055,7 @@ export async function POST(request: NextRequest) {
 - Payment pages require HTTPS (Stripe requirement)
 - Set secure cookie options in production
 
-```typescript
-// Cookie options for production
-const cookieOptions = {
-  httpOnly: true,
-  secure: process.env.NODE_ENV === 'production',
-  sameSite: 'lax' as const,
-  path: '/',
-};
-```
+Session-cookie attributes must follow the verified pinned kit’s session architecture. HTTPS and Secure transport remain required in production; do not impose an unverified HttpOnly architecture on a browser-client session model. Record the verification gap rather than guessing compatible options.
 
 ---
 
@@ -1410,7 +1203,7 @@ Co-location keeps page-specific code with the page that owns it:
 
 ### Reference Example
 
-The canonical worked example of this pattern is at:
+Historical external example (availability unverified): The historical worked example of this pattern is at: Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.
 
 - `src/app/(admin)/admin-portal/page.tsx` (thin wrapper)
 - `src/app/(admin)/admin-portal/AdminPortalPageContent.tsx` (actual content)
@@ -1490,6 +1283,7 @@ When designing utility modules:
 
 | Version | Date | Changes |
 |---|---|---|
+| 1.4 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-009, FC-021, FC-028, FC-033, FC-035, FC-036, FC-041, FC-042, FC-063, FC-066, FC-071, MC-01, RUL-11 |
 | 1.2 | 2026-06-28 | Re-pointed the §11 co-location Reference Example from the deleted `/demo` route to the live `(admin)/admin-portal` page+content pair (preserve lesson, swap actor). Kit Hardening Gate 10. |
 | 1.3 | 2026-07-08 | **Wave 4 (audit sync).** Framework version de-pinned (F-038 — this manual was the exact offender RECON §1 was written about): subtitle + stack table + §3 intro now say "Next.js App Router"; version-sensitive facts labeled ("Next.js 15+" for params-as-Promise); header carries the version rule — `package.json` is the only truth (recon Q1.1). §10 Route Protection gains the `src/middleware.ts` vs `src/proxy.ts` (Next 16 kit convention) note with a verify-on-disk pointer (recon Q2.5). Encoding repaired: 21 mojibake sequences (▼/►/✅) + 17 invisible U+0090 C1 controls — a Gate-10 doc whose v1.1 changelog claimed the UTF-8 fix; F-012 systemic diagnosis reconfirmed a third time (the editing pipeline re-corrupts on save). Handbook cross-ref canonical (F-032). Standard header (F-018). |
 | 1.1 | 2026-05-31 | Added Section 11 (Page Composition Pattern), Section 12 (Server/Client Boundary). Born from Cyberize Run 001 Lessons 7, 8. Fixed UTF-8 encoding artifacts. |

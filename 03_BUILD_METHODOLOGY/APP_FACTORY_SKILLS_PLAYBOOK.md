@@ -1,10 +1,10 @@
 # APP FACTORY SKILLS PLAYBOOK
 
-> **Version:** 1.1 · **Date:** 2026-07-08 · **Status:** Active
+> **Version:** 1.2 · **Date:** 2026-10-18 · **Status:** Active
 > **Tier:** 3 — Build Methodology · **Pairs with:** FFM_PLAYBOOK, RECON_QUESTIONNAIRE, DESIGNER_PLAYBOOK
 
 > **Authoritative doctrine for skill authoring in the Stark Industries App Factory.**
-> Read by Generals (DevOps, Architects, Designers). Not read by Engineer agents (Claude Code, Windsurf, Cursor) — those are skill consumers, not authors.
+> Read by skill authors in their assigned seats. Engineer agents consume skills and may author them only under an explicit skill-authoring assignment.
 > This is an imperative manual. Rules are non-negotiable unless explicitly overridden by the operator with acknowledgment.
 
 ---
@@ -541,7 +541,7 @@ The agent runs basic environment discovery to understand context:
 - `pwd` — where am I?
 - `ls` — what's around me?
 - `git remote -v` (if applicable) — what repo is this?
-- `cat .env.local` (read-only, if relevant) — what's already configured?
+- Inspect relevant environment variable names and whether required configuration is present; do not print secret values or dump `.env.local`.
 
 The exact discovery steps depend on the skill type and are specified in CLAUDE.md.
 
@@ -901,13 +901,15 @@ The June skill ecosystem produced living instances of this playbook's doctrine �
 - **Type test passes cleanly:** the agent guides a read-only ground-truth pass and the operator boots Claudy to execute it — operator stays in the driver's seat (Stark Skill).
 - **Source-content pairing:** the skill AUTOMATES a doctrine doc — `RECON_QUESTIONNAIRE.md` is its source content; the skill is that questionnaire's executable form. This is the Doctrine Pairing Principle applied to skills: doc = instruction set, skill = activation vehicle.
 - **Hard output contract:** a Recon Report at `agent_docs/recon/RECON_<project>_<phase>_<date>.md` in the questionnaire's return format — machine-consumable by the Architect.
-- **Discipline encoded:** read-only, verbatim findings, one pass, filesystem-wins — the skill enforces the doc's rules rather than paraphrasing them.
+- **Discipline encoded:** read-only inspection plus declared reporting writes, verbatim findings and evidence-based recon. Facts on disk do not silently amend approved requirements.
 
 **What it teaches authors:** when a skill automates a doctrine doc, keep the doc as the single source and make the skill consume it — never fork the content into the skill folder. (Sync obligation: when the doc bumps, the skill re-syncs — see the Evolution Principle.)
 
 ---
 
 ## 15. Authoring A New Skill — Step By Step
+
+Before changing referenced doctrine, use MANIFEST header dependencies as a starting set, then inspect body-only references, templates, checklists, examples and consuming skills. Record every affected consumer and route changes outside the authorized boundary to a separately approved job. A header graph is not a complete impact analysis.
 
 This is the procedure a General follows when authoring a new skill from scratch. Imperative.
 
@@ -1146,6 +1148,7 @@ The fundamentals — two-file core, v2 format, folder layout, evolution principl
 |---------|------|--------|
 | 1.0 | 2026-05-05 | Initial Playbook. Defines Stark Skills and Agent Skills. Establishes two-file core (CLAUDE.md + SKILL.md). Mandates Anthropic Skills v2 format for SKILL.md. Specifies single skill and family skill structures. Names eight anti-patterns from prior authoring history. Identifies Cloud Deployment Skills (family) and Supabase Migration Skill (single, most complex) as structural exemplars. Includes inline excerpt of v2 format with reference to Anthropic's official spec. Codifies activation flow, Plan Mode, operator override, evidence discipline, evolution principle. Audience: Generals (DevOps, Architects, Designers). |
 | 1.1 | 2026-07-08 | **Wave 3 (audit sync).** "Stitch Prompting Discipline" example replaced with "Token-Driven HTML Screen Discipline" per the Canonical Page Method — §2 example bullet + the full §16 Agent Skill spec (F-002/F-037). §7 gained "Where Skills Live + The Launch-CWD Rule": `_SKILLS/` = authoring library vs `.claude/skills/` = repo-side install Claude Code auto-discovers; skills resolve from the LAUNCH directory (Run 001 Q6.5); launch CWD documented in RECOVERY.md; convention reconciled with RECON_QUESTIONNAIRE Q6.1/Q6.5 (F-037). §14 gained Exemplar 3: stark-recon case study + the June ecosystem (stark-recon, starter-kit-cleaner, repo-security) — described, not imported (F-021 scope split honored); teaches the doc-as-source / skill-as-vehicle pairing rule. Outbound Cross-References section added: FFM_PLAYBOOK §11, RECON_QUESTIONNAIRE §6, DESIGNER_PLAYBOOK (F-035 family — outbound-zero ended). Standard header block (F-018); closing label de-versioned. |
+| 1.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-005, FC-006, FC-014, FC-021, FC-087 |
 
 ---
 

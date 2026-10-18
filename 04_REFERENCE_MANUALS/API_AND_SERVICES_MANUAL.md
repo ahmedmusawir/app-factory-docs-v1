@@ -1,6 +1,6 @@
 # API AND SERVICES MANUAL
 
-> **Version:** 1.1 · **Date:** 2026-07-08 · **Status:** Active
+> **Version:** 1.2 · **Date:** 2026-10-18 · **Status:** Active
 > **Tier:** 4 — Reference Manuals · **Pairs with:** FRONTEND_FIRST_PLAYBOOK, STARTER_KIT_HANDBOOK, DATABASE_MANUAL, ECOMMERCE_AND_PAYMENTS_MANUAL, TESTING_PLAYBOOK
 
 > **Stark Industries Software Factory**
@@ -167,89 +167,13 @@ src/
 
 ### Creating a Service File
 
-Every service file follows this structure:
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-```typescript
-// src/services/productServices.ts
+Services return an explicit typed outcome: success, not-found, unavailable, invalid or forbidden. Routes map it to the approved HTTP/UI behavior with generic client messages and no upstream error text. Do not cache failures as successful public data. Degrade or fail closed according to the module’s approved failure policy; an unavailable entitlement read is not confirmed absence.
 
-import { API_ENDPOINTS } from '@/constants/apiEndpoints';
-import type { Product, ProductsResponse } from '@/types/product';
+Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results.
 
-/**
- * Fetches all products with pagination
- * @param page - Page number (1-indexed)
- * @param perPage - Items per page
- * @returns ProductsResponse with items and pagination info
- */
-export const fetchProducts = async (
-  page: number = 1,
-  perPage: number = 12
-): Promise<ProductsResponse> => {
-  try {
-    const response = await fetch(
-      `${API_ENDPOINTS.PRODUCTS}?page=${page}&per_page=${perPage}`,
-      {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        next: { revalidate: 3600 }, // ISR: revalidate every hour
-      }
-    );
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-
-    const data = await response.json();
-
-    return {
-      items: data.products || [],
-      totalPages: parseInt(response.headers.get('X-WP-TotalPages') || '1'),
-      totalItems: parseInt(response.headers.get('X-WP-Total') || '0'),
-    };
-  } catch (error) {
-    console.error('Error fetching products:', error);
-    return {
-      items: [],
-      totalPages: 0,
-      totalItems: 0,
-    };
-  }
-};
-
-/**
- * Fetches a single product by slug
- * @param slug - Product URL slug
- * @returns Product or null if not found
- */
-export const fetchProductBySlug = async (
-  slug: string
-): Promise<Product | null> => {
-  try {
-    const response = await fetch(
-      `${API_ENDPOINTS.PRODUCTS}?slug=${slug}`,
-      {
-        method: 'GET',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        next: { revalidate: 3600 },
-      }
-    );
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-
-    const data = await response.json();
-    return data[0] || null;
-  } catch (error) {
-    console.error(`Error fetching product with slug "${slug}":`, error);
-    return null;
-  }
-};
-```
+---
 
 ### Function Naming Conventions
 
@@ -314,38 +238,13 @@ export interface ProductsResponse {
 
 ### Error Handling Template
 
-**The Golden Rule:** Services should never throw errors that crash the UI. Return safe defaults.
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-```typescript
-export const fetchResource = async (): Promise<ResourceResponse> => {
-  try {
-    const response = await fetch(API_ENDPOINT);
+Services return an explicit typed outcome: success, not-found, unavailable, invalid or forbidden. Routes map it to the approved HTTP/UI behavior with generic client messages and no upstream error text. Do not cache failures as successful public data. Degrade or fail closed according to the module’s approved failure policy; an unavailable entitlement read is not confirmed absence.
 
-    if (!response.ok) {
-      // Log for debugging, but don't crash
-      console.error(`API Error: ${response.status} ${response.statusText}`);
-      return { items: [], error: `Failed to fetch: ${response.status}` };
-    }
+Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results.
 
-    const data = await response.json();
-
-    // Validate response structure
-    if (!data || !Array.isArray(data.items)) {
-      console.error('Invalid response structure:', data);
-      return { items: [], error: 'Invalid response format' };
-    }
-
-    return { items: data.items, error: null };
-  } catch (error) {
-    // Network errors, JSON parse errors, etc.
-    console.error('Service error:', error);
-    return { 
-      items: [], 
-      error: error instanceof Error ? error.message : 'Unknown error' 
-    };
-  }
-};
-```
+---
 
 ### Return Type Consistency
 
@@ -384,94 +283,17 @@ export const fetchUser = async (id: string) => {
 
 ### GET Route Template
 
-```typescript
-// src/app/api/products/route.ts
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-import { NextRequest, NextResponse } from 'next/server';
-import { fetchProducts } from '@/services/productServices';
+Services return an explicit typed outcome: success, not-found, unavailable, invalid or forbidden. Routes map it to the approved HTTP/UI behavior with generic client messages and no upstream error text. Do not cache failures as successful public data. Degrade or fail closed according to the module’s approved failure policy; an unavailable entitlement read is not confirmed absence.
 
-export async function GET(request: NextRequest) {
-  try {
-    // Extract query parameters
-    const searchParams = request.nextUrl.searchParams;
-    const page = parseInt(searchParams.get('page') || '1');
-    const perPage = parseInt(searchParams.get('per_page') || '12');
-    const category = searchParams.get('category') || undefined;
+Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results.
 
-    // Validate parameters
-    if (page < 1 || perPage < 1 || perPage > 100) {
-      return NextResponse.json(
-        { error: 'Invalid pagination parameters' },
-        { status: 400 }
-      );
-    }
-
-    // Call service layer
-    const result = await fetchProducts(page, perPage, category);
-
-    // Return response with cache headers
-    return NextResponse.json(result, {
-      headers: {
-        'Cache-Control': 'public, s-maxage=3600, stale-while-revalidate=86400',
-      },
-    });
-  } catch (error) {
-    console.error('API Route Error:', error);
-    return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
-    );
-  }
-}
-```
+---
 
 ### POST Route Template
 
-```typescript
-// src/app/api/orders/route.ts
-
-import { NextRequest, NextResponse } from 'next/server';
-import { createOrder } from '@/services/orderServices';
-import { OrderCreateSchema } from '@/types/order';
-
-export async function POST(request: NextRequest) {
-  try {
-    // Parse request body
-    const body = await request.json();
-
-    // Validate request body (using Zod or manual validation)
-    const validation = OrderCreateSchema.safeParse(body);
-    if (!validation.success) {
-      return NextResponse.json(
-        { error: 'Invalid request body', details: validation.error.flatten() },
-        { status: 400 }
-      );
-    }
-
-    // Call service layer
-    const result = await createOrder(validation.data);
-
-    if (!result.success) {
-      return NextResponse.json(
-        { error: result.error },
-        { status: 400 }
-      );
-    }
-
-    // Return success response
-    return NextResponse.json(
-      { order: result.data },
-      { status: 201 }
-    );
-  } catch (error) {
-    console.error('API Route Error:', error);
-    return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
-    );
-  }
-}
-```
+**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.
 
 ### Request Validation with Zod
 
@@ -546,143 +368,13 @@ headers: {
 
 For REST APIs like WooCommerce, payment gateways, or CRM systems:
 
-```typescript
-// src/services/externalApiServices.ts
-
-import axios from 'axios';
-
-// Create a configured client for the external API
-const apiClient = axios.create({
-  baseURL: process.env.EXTERNAL_API_URL,
-  auth: {
-    username: process.env.EXTERNAL_API_KEY!,
-    password: process.env.EXTERNAL_API_SECRET!,
-  },
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  timeout: 10000, // 10 second timeout
-});
-
-// Add response interceptor for consistent error handling
-apiClient.interceptors.response.use(
-  (response) => response,
-  (error) => {
-    console.error('External API Error:', {
-      status: error.response?.status,
-      data: error.response?.data,
-      url: error.config?.url,
-    });
-    return Promise.reject(error);
-  }
-);
-
-export const fetchExternalResource = async (id: string) => {
-  try {
-    const response = await apiClient.get(`/resources/${id}`);
-    return { data: response.data, error: null };
-  } catch (error) {
-    return { data: null, error: 'Failed to fetch resource' };
-  }
-};
-
-export const createExternalResource = async (payload: ResourcePayload) => {
-  try {
-    const response = await apiClient.post('/resources', payload);
-    return { data: response.data, error: null };
-  } catch (error) {
-    return { data: null, error: 'Failed to create resource' };
-  }
-};
-```
+**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.
 
 ### GraphQL Pattern
 
 For GraphQL APIs like WordPress/WPGraphQL:
 
-```typescript
-// src/services/graphqlServices.ts
-
-const GRAPHQL_ENDPOINT = process.env.WORDPRESS_GRAPHQL_URL!;
-
-interface GraphQLResponse<T> {
-  data: T;
-  errors?: Array<{ message: string }>;
-}
-
-export const executeGraphQL = async <T>(
-  query: string,
-  variables?: Record<string, unknown>
-): Promise<{ data: T | null; error: string | null }> => {
-  try {
-    const response = await fetch(GRAPHQL_ENDPOINT, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ query, variables }),
-      next: { revalidate: 3600 },
-    });
-
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-
-    const result: GraphQLResponse<T> = await response.json();
-
-    if (result.errors?.length) {
-      console.error('GraphQL Errors:', result.errors);
-      return { data: null, error: result.errors[0].message };
-    }
-
-    return { data: result.data, error: null };
-  } catch (error) {
-    console.error('GraphQL request failed:', error);
-    return { data: null, error: 'GraphQL request failed' };
-  }
-};
-
-// Usage example
-const GET_POSTS_QUERY = `
-  query GetPosts($first: Int!, $after: String) {
-    posts(first: $first, after: $after) {
-      nodes {
-        id
-        title
-        slug
-        excerpt
-        date
-        featuredImage {
-          node {
-            sourceUrl
-          }
-        }
-      }
-      pageInfo {
-        hasNextPage
-        endCursor
-      }
-    }
-  }
-`;
-
-export const fetchBlogPosts = async (first: number, after?: string) => {
-  const result = await executeGraphQL<{ posts: PostsConnection }>(
-    GET_POSTS_QUERY,
-    { first, after }
-  );
-
-  if (result.error || !result.data) {
-    return { items: [], hasNextPage: false, endCursor: null };
-  }
-
-  return {
-    items: result.data.posts.nodes,
-    hasNextPage: result.data.posts.pageInfo.hasNextPage,
-    endCursor: result.data.posts.pageInfo.endCursor,
-  };
-};
-```
+**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.
 
 ### Authentication Handling
 
@@ -751,129 +443,7 @@ import { createClient } from '@/utils/supabase/server';
 
 ### Supabase Service File Structure
 
-```typescript
-// src/services/supabaseServices.ts
-
-import { createClient } from '@/utils/supabase/server';
-import type { Database } from '@/types/supabase';
-
-type Tables = Database['public']['Tables'];
-type Profile = Tables['profiles']['Row'];
-type ProfileInsert = Tables['profiles']['Insert'];
-type ProfileUpdate = Tables['profiles']['Update'];
-
-/**
- * Fetches a user profile by ID
- * Server-side only - uses server createClient
- */
-export const fetchProfile = async (
-  userId: string
-): Promise<{ data: Profile | null; error: string | null }> => {
-  try {
-    const supabase = await createClient();
-    
-    const { data, error } = await supabase
-      .from('profiles')
-      .select('*')
-      .eq('id', userId)
-      .single();
-
-    if (error) {
-      console.error('Supabase error fetching profile:', error);
-      return { data: null, error: error.message };
-    }
-
-    return { data, error: null };
-  } catch (error) {
-    console.error('Service error:', error);
-    return { data: null, error: 'Failed to fetch profile' };
-  }
-};
-
-/**
- * Updates a user profile
- * Server-side only
- */
-export const updateProfile = async (
-  userId: string,
-  updates: ProfileUpdate
-): Promise<{ data: Profile | null; error: string | null }> => {
-  try {
-    const supabase = await createClient();
-    
-    const { data, error } = await supabase
-      .from('profiles')
-      .update(updates)
-      .eq('id', userId)
-      .select()
-      .single();
-
-    if (error) {
-      console.error('Supabase error updating profile:', error);
-      return { data: null, error: error.message };
-    }
-
-    return { data, error: null };
-  } catch (error) {
-    console.error('Service error:', error);
-    return { data: null, error: 'Failed to update profile' };
-  }
-};
-
-/**
- * Fetches records with pagination
- * Demonstrates the standard pagination pattern
- */
-export const fetchPaginatedRecords = async <T extends keyof Tables>(
-  table: T,
-  options: {
-    page?: number;
-    perPage?: number;
-    orderBy?: string;
-    ascending?: boolean;
-    filters?: Record<string, unknown>;
-  } = {}
-): Promise<{
-  data: Tables[T]['Row'][];
-  count: number;
-  error: string | null;
-}> => {
-  const { page = 1, perPage = 10, orderBy = 'created_at', ascending = false, filters = {} } = options;
-  
-  try {
-    const supabase = await createClient();
-    
-    // Calculate range for pagination
-    const from = (page - 1) * perPage;
-    const to = from + perPage - 1;
-
-    let query = supabase
-      .from(table)
-      .select('*', { count: 'exact' })
-      .order(orderBy, { ascending })
-      .range(from, to);
-
-    // Apply filters
-    Object.entries(filters).forEach(([key, value]) => {
-      if (value !== undefined && value !== null) {
-        query = query.eq(key, value);
-      }
-    });
-
-    const { data, count, error } = await query;
-
-    if (error) {
-      console.error(`Supabase error fetching ${table}:`, error);
-      return { data: [], count: 0, error: error.message };
-    }
-
-    return { data: data || [], count: count || 0, error: null };
-  } catch (error) {
-    console.error('Service error:', error);
-    return { data: [], count: 0, error: 'Failed to fetch records' };
-  }
-};
-```
+**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.
 
 ### Client-Side Supabase Service
 
@@ -1165,55 +735,7 @@ export const fetchWithPagination = async <T>(
 
 ### Client-Side Error Boundaries
 
-```typescript
-// src/components/common/ErrorBoundary.tsx
-'use client';
-
-import { Component, ReactNode } from 'react';
-
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-}
-
-interface State {
-  hasError: boolean;
-  error: Error | null;
-}
-
-export class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false, error: null };
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-    // Send to error tracking service (Sentry, etc.)
-  }
-
-  render() {
-    if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="p-4 bg-destructive/10 rounded-md">
-          <h2 className="text-lg font-semibold text-destructive">
-            Something went wrong
-          </h2>
-          <p className="text-sm text-muted-foreground">
-            Please try refreshing the page.
-          </p>
-        </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
-```
+**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.
 
 ### Server-Side Error Logging
 
@@ -1349,7 +871,8 @@ export async function POST(request: NextRequest) {
   const { path, tag, secret } = await request.json();
 
   // Verify secret
-  if (secret !== process.env.REVALIDATION_SECRET) {
+  const expectedSecret = process.env.REVALIDATION_SECRET;
+  if (!expectedSecret || typeof secret !== 'string' || secret !== expectedSecret) {
     return NextResponse.json({ error: 'Invalid secret' }, { status: 401 });
   }
 
@@ -1443,107 +966,11 @@ export const fetchPageData = async (slug: string) => {
 
 ### Service Function Template
 
-```typescript
-// src/services/{domain}Services.ts
-
-import { API_ENDPOINTS } from '@/constants/apiEndpoints';
-import type { Resource, ResourceResponse } from '@/types/{domain}';
-
-/**
- * [Description of what this function does]
- * @param param1 - [Description]
- * @returns [Description of return value]
- */
-export const fetchResource = async (
-  param1: string
-): Promise<ResourceResponse> => {
-  try {
-    const response = await fetch(`${API_ENDPOINTS.RESOURCE}/${param1}`, {
-      method: 'GET',
-      headers: { 'Content-Type': 'application/json' },
-      next: { revalidate: 3600 },
-    });
-
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
-    }
-
-    const data = await response.json();
-    return { data, error: null };
-  } catch (error) {
-    console.error('fetchResource error:', error);
-    return { data: null, error: 'Failed to fetch resource' };
-  }
-};
-```
+**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.
 
 ### API Route Template
 
-```typescript
-// src/app/api/{resource}/route.ts
-
-import { NextRequest, NextResponse } from 'next/server';
-import { fetchResource } from '@/services/{domain}Services';
-
-export async function GET(request: NextRequest) {
-  try {
-    const searchParams = request.nextUrl.searchParams;
-    const param = searchParams.get('param');
-
-    if (!param) {
-      return NextResponse.json(
-        { error: 'Missing required parameter' },
-        { status: 400 }
-      );
-    }
-
-    const result = await fetchResource(param);
-
-    if (result.error) {
-      return NextResponse.json(
-        { error: result.error },
-        { status: 400 }
-      );
-    }
-
-    return NextResponse.json({ data: result.data });
-  } catch (error) {
-    console.error('API route error:', error);
-    return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
-    );
-  }
-}
-
-export async function POST(request: NextRequest) {
-  try {
-    const body = await request.json();
-
-    // Validate body...
-
-    const result = await createResource(body);
-
-    if (result.error) {
-      return NextResponse.json(
-        { error: result.error },
-        { status: 400 }
-      );
-    }
-
-    return NextResponse.json(
-      { data: result.data },
-      { status: 201 }
-    );
-  } catch (error) {
-    console.error('API route error:', error);
-    return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
-    );
-  }
-}
-```
+**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.
 
 ### Common Patterns Cheat Sheet
 
@@ -1567,156 +994,39 @@ Webhooks allow external systems to push data to your application in real-time.
 
 ### Webhook Endpoint Structure
 
-```typescript
-// src/app/api/webhooks/[provider]/route.ts
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-import { NextRequest, NextResponse } from 'next/server';
+Capture the raw request body once. Select exactly one provider-specific signature scheme with its documented header and encoding, verify before parsing, and reject missing or invalid headers. Do not sign reconstructed JSON or chain alternative schemes as cumulative requirements. Test signed whitespace-bearing bodies and malformed or absent signatures.
 
-interface WebhookPayload {
-  type: string;
-  data: unknown;
-}
+Distinguish optional telemetry from required follow-up. Complete required work retry-safely or durably enqueue it before acknowledgment. Failed or unconfirmed enqueue returns retryable failure. A later worker failure uses bounded durable retry, visible failed-work state and a named recovery owner. Inspect non-success HTTP responses from follow-up targets; a resolved fetch is not proof of success.
 
-export async function POST(request: NextRequest) {
-  try {
-    // 1. Parse payload
-    const payload: WebhookPayload = await request.json();
-
-    // 2. Validate webhook (signature, required fields)
-    const isValid = await validateWebhook(request, payload);
-    if (!isValid) {
-      return NextResponse.json({ error: 'Invalid webhook' }, { status: 401 });
-    }
-
-    // 3. Extract relevant data
-    const extractedData = extractWebhookData(payload);
-    if (!extractedData) {
-      return NextResponse.json({ error: 'Missing required data' }, { status: 400 });
-    }
-
-    // 4. Process webhook (main business logic)
-    const result = await processWebhook(extractedData);
-
-    // 5. Trigger async follow-up (non-blocking)
-    triggerAsyncFollowUp(extractedData);
-
-    // 6. Return success quickly (external systems expect fast responses)
-    return NextResponse.json({
-      message: 'Webhook processed successfully',
-      ...result,
-    });
-  } catch (error) {
-    console.error('Webhook processing error:', error);
-    return NextResponse.json(
-      { error: 'Webhook processing failed' },
-      { status: 500 }
-    );
-  }
-}
-```
+---
 
 ### Data Extraction Pattern
 
-```typescript
-// src/app/api/webhooks/crm/dataExtraction.ts
-
-export interface ExtractedWebhookData {
-  orderId: string;
-  contactId: string;
-  productId: string;
-}
-
-export function extractWebhookData(payload: any): ExtractedWebhookData | null {
-  try {
-    const orderId = payload.order?._id;
-    const contactId = payload.order?.contactId;
-    const productId = payload.order?.items?.[0]?.product?._id;
-
-    // Validate required fields
-    if (!orderId || !contactId || !productId) {
-      console.warn('Missing required webhook fields:', { orderId, contactId, productId });
-      return null;
-    }
-
-    return { orderId, contactId, productId };
-  } catch (error) {
-    console.error('Error extracting webhook data:', error);
-    return null;
-  }
-}
-```
+**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.
 
 ### Webhook Security
 
-```typescript
-// Signature verification
-const validateWebhook = async (
-  request: NextRequest,
-  payload: unknown
-): Promise<boolean> => {
-  // Option 1: Webhook secret header
-  const webhookSecret = request.headers.get('x-webhook-secret');
-  if (webhookSecret !== process.env.WEBHOOK_SECRET) {
-    return false;
-  }
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-  // Option 2: HMAC signature (more secure)
-  const signature = request.headers.get('x-signature');
-  const body = JSON.stringify(payload);
-  const expectedSignature = crypto
-    .createHmac('sha256', process.env.WEBHOOK_SECRET!)
-    .update(body)
-    .digest('hex');
+Capture the raw request body once. Select exactly one provider-specific signature scheme with its documented header and encoding, verify before parsing, and reject missing or invalid headers. Do not sign reconstructed JSON or chain alternative schemes as cumulative requirements. Test signed whitespace-bearing bodies and malformed or absent signatures.
 
-  return signature === expectedSignature;
-};
-```
+---
 
 ### Async Follow-Up Pattern (Fire-and-Forget)
 
-```typescript
-// Non-blocking background task
-const triggerAsyncFollowUp = (data: ExtractedWebhookData) => {
-  // Fire and forget - don't await
-  fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/internal/sync-order`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ orderId: data.orderId }),
-  })
-    .then((res) => res.json())
-    .then((result) => console.log('Async sync completed:', result))
-    .catch((error) => console.error('Async sync failed:', error));
-};
-```
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
+
+Distinguish optional telemetry from required follow-up. Complete required work retry-safely or durably enqueue it before acknowledgment. Failed or unconfirmed enqueue returns retryable failure. A later worker failure uses bounded durable retry, visible failed-work state and a named recovery owner. Inspect non-success HTTP responses from follow-up targets; a resolved fetch is not proof of success.
+
+---
 
 ### Idempotency for Webhooks
 
-External systems may retry webhooks. Handle duplicates:
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-```typescript
-export async function POST(request: NextRequest) {
-  const payload = await request.json();
-  const webhookId = payload.webhookId || payload.order?._id;
-
-  // Check if already processed
-  const { data: existing } = await supabase
-    .from('processed_webhooks')
-    .select('id')
-    .eq('webhook_id', webhookId)
-    .single();
-
-  if (existing) {
-    return NextResponse.json({ message: 'Already processed' });
-  }
-
-  // Process webhook...
-
-  // Mark as processed
-  await supabase.from('processed_webhooks').insert({ webhook_id: webhookId });
-
-  return NextResponse.json({ message: 'Processed' });
-}
-```
+Use the provider’s stable event ID, never a random fallback. Atomically claim each event with in-progress, completed and retryable states; inspect persistence results. Make effects idempotent or transactional. A bounded lease/recovery process reclaims abandoned work and reconciles partial external success without duplicating completed effects.
 
 ---
 
@@ -1832,222 +1142,29 @@ const processOrderWebhook = async (data: ExtractedWebhookData) => {
 
 ### Manual Sync with Progress Tracking
 
-```typescript
-// src/app/api/sync/route.ts
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-import { NextResponse } from 'next/server';
-
-export async function GET() {
-  const io = globalThis.io; // Socket.IO instance (if available)
-
-  try {
-    // 1. Get list of items to sync
-    const itemIds = await fetchItemsToSync();
-    const totalItems = itemIds.length;
-
-    // 2. Emit initial status
-    if (io) {
-      io.emit('sync_status', {
-        syncInProgress: true,
-        totalItems,
-        syncedItems: 0,
-        status: 'Starting',
-      });
-    }
-
-    // 3. Process each item
-    let syncedItems = 0;
-    for (const itemId of itemIds) {
-      await syncSingleItem(itemId);
-      syncedItems++;
-
-      // 4. Emit progress
-      if (io) {
-        io.emit('sync_progress', {
-          syncInProgress: true,
-          totalItems,
-          syncedItems,
-          status: 'Syncing',
-        });
-      }
-    }
-
-    // 5. Emit completion
-    if (io) {
-      io.emit('sync_complete', { message: 'Sync completed!' });
-    }
-
-    return NextResponse.json({ message: 'Sync completed', syncedItems });
-  } catch (error) {
-    if (io) {
-      io.emit('sync_status', { syncInProgress: false, status: 'Error' });
-    }
-    return NextResponse.json({ error: 'Sync failed' }, { status: 500 });
-  }
-}
-```
-
-### Upsert Pattern for Sync
-
-```typescript
-// Sync external data to local database
-const syncSingleItem = async (externalId: string) => {
-  // 1. Fetch from external API
-  const externalData = await fetchExternalItemDetails(externalId);
-
-  // 2. Transform to local schema
-  const localData = transformExternalData(externalData);
-
-  // 3. Upsert to database
-  const { error } = await supabase
-    .from('items')
-    .upsert(localData, { onConflict: 'external_id' });
-
-  if (error) {
-    throw new Error(`Failed to sync item ${externalId}: ${error.message}`);
-  }
-};
-
-// Transform external API response to local schema
-const transformExternalData = (external: ExternalItem): LocalItem => ({
-  external_id: external._id,
-  name: external.name,
-  email: external.contactSnapshot?.email,
-  total: external.amount?.total,
-  status: external.status,
-  metadata: external.customFields, // Store extras in JSONB
-  synced_at: new Date().toISOString(),
-});
-```
-
-### Client-Side Sync Monitoring
-
-```typescript
-// src/components/admin/SyncButton.tsx
-'use client';
-
-import { useState, useEffect } from 'react';
-import { io, Socket } from 'socket.io-client';
-import { Button } from '@/components/ui/button';
-import { Progress } from '@/components/ui/progress';
-
-interface SyncStatus {
-  syncInProgress: boolean;
-  totalItems: number;
-  syncedItems: number;
-  status: string;
-}
-
-export const SyncButton = () => {
-  const [socket, setSocket] = useState<Socket | null>(null);
-  const [syncStatus, setSyncStatus] = useState<SyncStatus | null>(null);
-
-  useEffect(() => {
-    const socketInstance = io();
-    setSocket(socketInstance);
-
-    socketInstance.on('sync_status', setSyncStatus);
-    socketInstance.on('sync_progress', setSyncStatus);
-    socketInstance.on('sync_complete', () => {
-      setSyncStatus(null);
-      // Refresh data
-    });
-
-    return () => {
-      socketInstance.disconnect();
-    };
-  }, []);
-
-  const triggerSync = async () => {
-    await fetch('/api/sync');
-  };
-
-  const progress = syncStatus
-    ? (syncStatus.syncedItems / syncStatus.totalItems) * 100
-    : 0;
-
-  return (
-    <div className="space-y-2">
-      <Button
-        onClick={triggerSync}
-        disabled={syncStatus?.syncInProgress}
-      >
-        {syncStatus?.syncInProgress ? 'Syncing...' : 'Start Sync'}
-      </Button>
-
-      {syncStatus && (
-        <div className="space-y-1">
-          <Progress value={progress} />
-          <p className="text-sm text-muted-foreground">
-            {syncStatus.syncedItems} / {syncStatus.totalItems} items
-          </p>
-        </div>
-      )}
-    </div>
-  );
-};
-```
+Manual synchronization is an authenticated, role-authorized POST operation with explicit tenant scope. Apply the context’s CSRF protection, rate and concurrency controls. Job acceptance, progress reads and retries enforce the same authorization boundary. GET is read-only and cannot initiate synchronization.
 
 ---
 
-## 10. Quick Reference
+### Upsert Pattern for Sync
+
+**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.
+
+### Client-Side Sync Monitoring
+
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
+
+Manual synchronization is an authenticated, role-authorized POST operation with explicit tenant scope. Apply the context’s CSRF protection, rate and concurrency controls. Job acceptance, progress reads and retries enforce the same authorization boundary. GET is read-only and cannot initiate synchronization.
+
+---
+
+## 14. Integration Quick Reference
 
 ### API Route Template
 
-```typescript
-// src/app/api/[resource]/route.ts
-
-import { NextRequest, NextResponse } from 'next/server';
-
-export async function GET(request: NextRequest) {
-  try {
-    const result = await fetchResource();
-
-    if (result.error) {
-      return NextResponse.json(
-        { error: result.error },
-        { status: 400 }
-      );
-    }
-
-    return NextResponse.json({ data: result.data });
-  } catch (error) {
-    console.error('API route error:', error);
-    return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
-    );
-  }
-}
-
-export async function POST(request: NextRequest) {
-  try {
-    const body = await request.json();
-
-    // Validate body...
-
-    const result = await createResource(body);
-
-    if (result.error) {
-      return NextResponse.json(
-        { error: result.error },
-        { status: 400 }
-      );
-    }
-
-    return NextResponse.json(
-      { data: result.data },
-      { status: 201 }
-    );
-  } catch (error) {
-    console.error('API route error:', error);
-    return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
-    );
-  }
-}
-```
+**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.
 
 ### Common Patterns Cheat Sheet
 
@@ -2065,7 +1182,7 @@ export async function POST(request: NextRequest) {
 | Webhook Endpoint | Receiving external events | `/api/webhooks/stripe` |
 | Field Mapping | External system integration | `crm_field_mappings` table |
 | Upsert Sync | Data synchronization | `onConflict: 'external_id'` |
-| Fire-and-Forget | Non-blocking async tasks | Background sync after webhook |
+| Durable asynchronous work | Required webhook follow-up | Acknowledge only after verified durable acceptance; no unawaited fire-and-forget promise |
 
 ---
 
@@ -2086,6 +1203,7 @@ export async function POST(request: NextRequest) {
 |---|---|---|
 | 1.0 | (original, date unknown) | Initial manual: service-layer philosophy, folder structure, implementation, API route patterns, external integration, Supabase pattern, transformation, error handling, performance, quick reference, webhooks, CRM integration, data sync. Unversioned until the 2026-07 audit. |
 | 1.1 | 2026-07-08 | **Wave 4 (audit sync).** THE KIT EXCEPTION box added at §1 — the Lesson-2 antibody at its root: kit primitives consumed directly, the kit's auth IS the service layer, Kit Audit before authoring any service (F-039 — the blanket rule that produced the Run 001 authService near-miss is now amended at the source). §7 gained the factory wire-format conventions (snake_case wire / camelCase UI; service layer owns the boundary — HANDOFF DATA_CONTRACT discipline). Cross-References section added — outbound-zero ended (F-035). Standard header (F-018) + this history table (D-018). |
+| 1.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-021, FC-056, FC-057, FC-058, FC-059, FC-061, FC-063, FC-064, FC-066, FC-070, RUL-11 |
 
 ---
 
