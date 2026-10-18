@@ -1,0 +1,19 @@
+Command: python3 /tmp/factory_phase3.py verify
+Working directory: /home/moose/Documents/app-factory-docs-sync-execution
+Exit code: 1
+PASS Installed bound outputs 101/101
+PASS Ordered edit replay 380/380 unique old spans;31 content-stage outputs exact
+PASS Only declared date changes from frozen proposal 151 fields; historical dates and all other bytes preserved
+PASS Archives 31 outgoing byte/blob-exact including both missing-final-LF archives; historical QA v1.0 exact
+PASS Template file set 25 exact translated files; sources unchanged
+PASS Identical template runtime routing QA Executor routing preserved
+PASS Template amendments/SR rows AM-1/2/3 and11 standing requirements
+PASS Workflow documents and diagrams 4 matched prose/SVG sequences;7/18/8/24 steps; forbidden actor labels absent
+Traceback (most recent call last):
+  File "/tmp/factory_phase3.py", line 91, in <module>
+    trans=js(r/'BOUND_STATUS_TRANSITIONS.json')['transitions'];check('Conditional transitions pending',len(trans)==12 and all((root[t['path']]).read_text().count(t['old'])==t['occurrences'] for t in trans),'12 pre-transition spans retained across9 paths')
+                                                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/factory_phase3.py", line 91, in <genexpr>
+    trans=js(r/'BOUND_STATUS_TRANSITIONS.json')['transitions'];check('Conditional transitions pending',len(trans)==12 and all((root[t['path']]).read_text().count(t['old'])==t['occurrences'] for t in trans),'12 pre-transition spans retained across9 paths')
+                                                                                                                               ~~~~^^^^^^^^^^^
+TypeError: 'PosixPath' object is not subscriptable

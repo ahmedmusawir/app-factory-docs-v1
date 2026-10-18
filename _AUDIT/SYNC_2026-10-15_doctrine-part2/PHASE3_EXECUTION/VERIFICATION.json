@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Installed bound outputs",
+    "result": "PASS",
+    "detail": "101/101"
+  },
+  {
+    "name": "Ordered edit replay",
+    "result": "PASS",
+    "detail": "380/380 unique old spans;31 content-stage outputs exact"
+  },
+  {
+    "name": "Only declared date changes from frozen proposal",
+    "result": "PASS",
+    "detail": "151 fields; historical dates and all other bytes preserved"
+  },
+  {
+    "name": "Archives",
+    "result": "PASS",
+    "detail": "31 outgoing byte/blob-exact including both missing-final-LF archives; historical QA v1.0 exact"
+  },
+  {
+    "name": "Template file set",
+    "result": "PASS",
+    "detail": "25 exact translated files; sources unchanged"
+  },
+  {
+    "name": "Identical template runtime routing",
+    "result": "PASS",
+    "detail": "QA Executor routing preserved"
+  },
+  {
+    "name": "Template amendments/SR rows",
+    "result": "PASS",
+    "detail": "AM-1/2/3 and11 standing requirements"
+  },
+  {
+    "name": "Workflow documents and diagrams",
+    "result": "PASS",
+    "detail": "4 matched prose/SVG sequences;7/18/8/24 steps; forbidden actor labels absent"
+  },
+  {
+    "name": "Conditional transitions pending",
+    "result": "PASS",
+    "detail": "12 pre-transition spans retained across9 paths"
+  },
+  {
+    "name": "Frozen run and10x preservation",
+    "result": "PASS",
+    "detail": "641 files byte-unchanged"
+  },
+  {
+    "name": "Root/skills/lints/CI unchanged",
+    "result": "PASS",
+    "detail": "empty diff"
+  },
+  {
+    "name": "Document lints",
+    "result": "PASS",
+    "detail": "[ENCODING] PASS \u2014 0 hits across 36 live docs\n[RETIRED-TERMS] PASS \u2014 0 hits across 36 live docs\n[VERSIONED-REFS] PASS \u2014 0 hits across 36 live docs (34 canonical names loaded)\n[HEADER-PRESENCE] PASS \u2014 all 36 live docs carry the standard header\n=== DOCTRINE LINTS ===\n\n--- encoding_lint.py ---\n\n--- retired_terms_lint.py ---\n\n--- versioned_refs_lint.py ---\n\n--- header_lint.py ---\n\n=== RESULT: PASS ===\n"
+  },
+  {
+    "name": "MANIFEST/header agreement",
+    "result": "PASS",
+    "detail": "34/34 exact version/date/status rows"
+  }
+]

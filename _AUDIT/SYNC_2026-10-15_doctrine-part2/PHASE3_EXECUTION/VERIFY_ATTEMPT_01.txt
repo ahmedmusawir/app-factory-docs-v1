@@ -1,0 +1,15 @@
+Command: python3 /tmp/factory_phase3.py verify
+Working directory: /home/moose/Documents/app-factory-docs-sync-execution
+Exit code: 1
+PASS Installed bound outputs 101/101
+PASS Ordered edit replay 380/380 unique old spans;31 content-stage outputs exact
+PASS Only declared date changes from frozen proposal 151 fields; historical dates and all other bytes preserved
+PASS Archives 31 outgoing byte/blob-exact including both missing-final-LF archives; historical QA v1.0 exact
+PASS Template file set 25 exact translated files; sources unchanged
+Traceback (most recent call last):
+  File "/tmp/factory_phase3.py", line 78, in <module>
+    check('Identical template runtime routing',routing(tp/'CLAUDE.md')==routing(tp/'AGENTS.md'),'QA Executor routing preserved')
+  File "/tmp/factory_phase3.py", line 53, in check
+    checks.append({'name':name,'result':'PASS' if ok else 'FAIL','detail':detail});save(ev/'VERIFICATION.json',checks);assert ok,(name,detail);print('PASS',name,detail)
+                                                                                                                              ^^
+AssertionError: ('Identical template runtime routing', 'QA Executor routing preserved')

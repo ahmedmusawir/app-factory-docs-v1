@@ -1,0 +1,26 @@
+[
+  {
+    "workflow": "FFM_CREATION",
+    "ordered_steps": 7,
+    "svg_xml": "PASS",
+    "historical_source_present": true
+  },
+  {
+    "workflow": "FFM_EXECUTION",
+    "ordered_steps": 18,
+    "svg_xml": "PASS",
+    "historical_source_present": true
+  },
+  {
+    "workflow": "FFM_DEPLOYMENT",
+    "ordered_steps": 8,
+    "svg_xml": "PASS",
+    "historical_source_present": true
+  },
+  {
+    "workflow": "BIM_WORKFLOW",
+    "ordered_steps": 24,
+    "svg_xml": "PASS",
+    "historical_source_present": true
+  }
+]

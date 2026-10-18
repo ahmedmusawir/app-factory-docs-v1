@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Installed bound outputs",
+    "result": "PASS",
+    "detail": "101/101"
+  },
+  {
+    "name": "Ordered edit replay",
+    "result": "PASS",
+    "detail": "380/380 unique old spans;31 content-stage outputs exact"
+  },
+  {
+    "name": "Only declared date changes from frozen proposal",
+    "result": "PASS",
+    "detail": "151 fields; historical dates and all other bytes preserved"
+  },
+  {
+    "name": "Archives",
+    "result": "PASS",
+    "detail": "31 outgoing byte/blob-exact including both missing-final-LF archives; historical QA v1.0 exact"
+  },
+  {
+    "name": "Template file set",
+    "result": "PASS",
+    "detail": "25 exact translated files; sources unchanged"
+  },
+  {
+    "name": "Identical template runtime routing",
+    "result": "FAIL",
+    "detail": "QA Executor routing preserved"
+  }
+]
