@@ -1,0 +1,83 @@
+[
+  {
+    "command": [
+      "git",
+      "branch",
+      "--show-current"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "docs/sync-doctrine-part2-2026-10-15\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "apply",
+      "--check",
+      "-p0",
+      "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/EXECUTION_PROPOSAL.patch"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "apply",
+      "-p0",
+      "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/EXECUTION_PROPOSAL.patch"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "-I",
+      "lints/run_all.py"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "[ENCODING] PASS — 0 hits across 36 live docs\n[RETIRED-TERMS] PASS — 0 hits across 36 live docs\n[VERSIONED-REFS] PASS — 0 hits across 36 live docs (34 canonical names loaded)\n[HEADER-PRESENCE] PASS — all 36 live docs carry the standard header\n=== DOCTRINE LINTS ===\n\n--- encoding_lint.py ---\n\n--- retired_terms_lint.py ---\n\n--- versioned_refs_lint.py ---\n\n--- header_lint.py ---\n\n=== RESULT: PASS ===\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

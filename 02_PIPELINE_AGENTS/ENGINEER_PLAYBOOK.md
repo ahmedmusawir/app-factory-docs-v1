@@ -173,7 +173,7 @@ Per HANDOFF_PACKAGE_PLAYBOOK (the conversion pipeline's package doctrine):
 
 > **CONVERSION:** the Architect **PRE-AUTHORS** `DATA_CONTRACT.md` from Brain Drain evidence — the Engineer consumes and honors it.
 > **GREENFIELD:** the Architect authors `DATA_CONTRACT.md` from the approved APP_BRIEF before Design. The Designer authors UI_SPEC; the Architect reconciles the assembled package. The Engineer consumes the approved contracts. The canonical DATA_CONTRACT template remains in §12.
-> Same artifact name — different author, different moment. Router: APP_FACTORY_BLUEPRINT, "Which Pipeline Am I In?".
+> The Architect authors `DATA_CONTRACT.md` in both runs; only the evidence base and moment differ: conversion uses Brain Drain evidence and is pre-authored; greenfield uses the approved APP_BRIEF before Design. Router: APP_FACTORY_BLUEPRINT, "Which Pipeline Am I In?".
 
 ### Pre-Flight Checklist
 
@@ -252,9 +252,9 @@ PHASE 0 — RECON (§2)
         │
         ▼
 KIT READ — STARTER_KIT_HANDBOOK
-   Read the handbook, treat it as ASPIRATIONAL — verify every load-bearing
-   claim against disk (RECON_QUESTIONNAIRE §0). Where handbook and
-   filesystem disagree, the filesystem wins.
+   Read the handbook, treat it as ASPIRATIONAL — verify every load-bearing claim against disk (RECON_QUESTIONNAIRE §0).
+   Disk establishes implementation facts; approved briefs govern scope and governing documents control their subjects.
+   Record handbook drift; route genuine requirements conflicts to the Director.
         │
         ▼
 KIT AUDIT — FRONTEND_FIRST_PLAYBOOK §0
@@ -1382,7 +1382,7 @@ For projects spanning multiple days:
 
 Every newly authored module includes a complete, module-specific `QAM/` prepared by the Architect from `03_BUILD_METHODOLOGY/_templates/QAM/`. QA Lead owns the reusable playbook and standing requirements. Engineer fills factual engineering records and handoff; QA Executor performs independent Q1 recon and test planning; QA Lead approves the plan; Director releases execution; QA Executor performs Q2 and authorized retest; QA Lead adjudicates and certifies. `QAM_PLAYBOOK.md` owns this packaging and sequence. Existing modules already in flight retain their recorded sequence until an attributable amendment.
 
-When code is complete and tested, Engineer hands off to Operations/Deployment.
+When code is complete and self-verified, the Engineer hands the candidate and factual QAM engineering handoff to independent QA on the Director-created QA branch; Operations/Deployment receives the package only after QA Lead certification and Director release (see QAM_PLAYBOOK §3 and DEPLOYMENT_PLAYBOOK §3).
 
 ### Handoff Package Contents
 
@@ -1392,7 +1392,9 @@ When code is complete and tested, Engineer hands off to Operations/Deployment.
 ├── APP_BRIEF.md (from Architect)
 ├── UI_SPEC.md (from Designer)
 ├── DATA_CONTRACT.md
+├── ACCEPTANCE_SPEC.md (from Architect)
 ├── Working Code (tested)
+├── QAM/ (module QA pack: ENGINEERING_HANDOFF, approved plan, results, certificate)
 ├── README.md (setup instructions)
 └── Deployment Guide
 ```
@@ -1599,7 +1601,7 @@ The Engineer Agent's mission is to **build systems that remain stable** — and 
 
 | Version | Date | Change |
 |---|---|---|
-| 1.3 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-004, FC-005, FC-008, FC-014, FC-015, FC-017, FC-018, FC-027, MC-06, MC-07, RUL-01, RUL-05, RUL-09, RUL-12, W19, W23 |
+| 1.3 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-004, FC-005, FC-008, FC-014, FC-015, FC-017, FC-018, FC-027, MC-06, MC-07, RUL-01, RUL-05, RUL-09, RUL-12, W19, W23; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) |
 | 1.2 | 2026-07-07 | **Wave 2B — two-track structural restructure (F-028).** Reorganized into PART I Common Doctrine / PART II Kit Track (dominant lane, described first) / PART III Pipeline Track (original Python/CLI doctrine retained verbatim) / PART IV Shared Reference / PART V Agent Conduct / Ship. NEW §2 Phase 0 Recon-Executor role — the Engineer answers RECON_QUESTIONNAIRE read-only and produces the Recon Report the Architect consumes (F-027). §3 inputs rewritten to match DESIGNER_PLAYBOOK §10 + HANDOFF_PACKAGE_PLAYBOOK: greenfield = token file (PRIMARY) + style tile/screen HTML+PNG + UI_SPEC + component manifest (screenshots removed as greenfield input — the F-026 mismatch); conversion = 4-file package + `_design/` + `_extraction/`; per-pipeline DATA_CONTRACT ownership stated in §3 and §12 (F-029). NEW §5 Kit Track: recon → kit read (aspirational, verify) → Kit Audit → FFM execution as the primary work mode, with pointers to FRONTEND_FIRST_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, FFM_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK (F-027; F-035 bridge). §15 Karpathy Protocol marked ALL-AGENT doctrine (D-011), Blueprint pointer connected; §15/§16 numbers PINNED as stable IDs. New anti-pattern: "Wrapping What the Kit Provides / Building on Unverified Kit Claims" (Run 001; F-039 antibody). Moves, all byte-faithful: old §4–§9 → §6–§11, §10 → §12, §11 → §13, §13 → §14, §12 → §17, §14 → Appendix A. §1 updated (Designer v2.0 diagram, recon + FFM responsibilities). Standard header (F-018); "AI App Factory" → "App Factory". |
 | 1.1 | Feb 2026 | Added Karpathy Protocol (Section 15), Session Memory Protocol (Section 16). |
 | 1.0 | — | Baseline: role, inputs, systems discipline, CLI-first pattern, file-state contracts, build sequence, testing strategy, cloud-native engineering, provider abstraction, DATA_CONTRACT template, type-specific considerations, operations handoff, anti-patterns, field lessons. |

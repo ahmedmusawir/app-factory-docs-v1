@@ -1,0 +1,116 @@
+[
+  {
+    "command": [
+      "git",
+      "show-ref"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "677e0e448576941571e619cd30c59cdd534cac3a refs/heads/astra-factory-doc-review\n20f71ee932ed21c0878cb3a0f39c6fbe90d0a793 refs/heads/docs/sync-doctrine-part2-2026-10-15\ne7b4a6f33e1ae2442f71d82f7f3a9d694f50da36 refs/heads/factory-docs-review-astra-w-chunks\n9c179392f79b70da099121fc357d3107ad3bb86e refs/heads/main\n9c179392f79b70da099121fc357d3107ad3bb86e refs/remotes/origin/HEAD\n677e0e448576941571e619cd30c59cdd534cac3a refs/remotes/origin/astra-factory-doc-review\n20f71ee932ed21c0878cb3a0f39c6fbe90d0a793 refs/remotes/origin/docs/sync-doctrine-part2-2026-10-15\n626da8d70f4db22987dc7fcc86765492072360cd refs/remotes/origin/factory-docs-review-astra-w-chunks\n39a1c6114d72b22d3550d7ff65234ec0f01418f6 refs/remotes/origin/factory-docs-review-fable-001\nbd4a8aa8d14af4049f4ad7dc93ae1d872a60607e refs/remotes/origin/factory-docs-sync-process-001\n9c179392f79b70da099121fc357d3107ad3bb86e refs/remotes/origin/main\n99bea67fd66854decbc2a1e51256793b5d9e6042 refs/remotes/origin/test/docset-sync-v06-tiny-001\n588079dd61cc1c4d0fc153e165d4e23025f2a595 refs/remotes/origin/test/docset-sync-v07-large-001\nefe36c8d468fdd7ee1a46970c3026bb6938bac64 refs/remotes/origin/test/docset-sync-v07-recovery-001\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "archive",
+      "--format=tar",
+      "--output=/tmp/amended-v2-2m9mzctz/candidate.tar",
+      "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "apply",
+      "--check",
+      "-p0",
+      "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/EXECUTION_PROPOSAL.patch"
+    ],
+    "cwd": "/tmp/amended-v2-2m9mzctz/tree",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "apply",
+      "-p0",
+      "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/EXECUTION_PROPOSAL.patch"
+    ],
+    "cwd": "/tmp/amended-v2-2m9mzctz/tree",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "-I",
+      "lints/run_all.py"
+    ],
+    "cwd": "/tmp/amended-v2-2m9mzctz/tree",
+    "exit": 0,
+    "stdout": "[ENCODING] PASS — 0 hits across 36 live docs\n[RETIRED-TERMS] PASS — 0 hits across 36 live docs\n[VERSIONED-REFS] PASS — 0 hits across 36 live docs (34 canonical names loaded)\n[HEADER-PRESENCE] PASS — all 36 live docs carry the standard header\n=== DOCTRINE LINTS ===\n\n--- encoding_lint.py ---\n\n--- retired_terms_lint.py ---\n\n--- versioned_refs_lint.py ---\n\n--- header_lint.py ---\n\n=== RESULT: PASS ===\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "show-ref"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "677e0e448576941571e619cd30c59cdd534cac3a refs/heads/astra-factory-doc-review\n20f71ee932ed21c0878cb3a0f39c6fbe90d0a793 refs/heads/docs/sync-doctrine-part2-2026-10-15\ne7b4a6f33e1ae2442f71d82f7f3a9d694f50da36 refs/heads/factory-docs-review-astra-w-chunks\n9c179392f79b70da099121fc357d3107ad3bb86e refs/heads/main\n9c179392f79b70da099121fc357d3107ad3bb86e refs/remotes/origin/HEAD\n677e0e448576941571e619cd30c59cdd534cac3a refs/remotes/origin/astra-factory-doc-review\n20f71ee932ed21c0878cb3a0f39c6fbe90d0a793 refs/remotes/origin/docs/sync-doctrine-part2-2026-10-15\n626da8d70f4db22987dc7fcc86765492072360cd refs/remotes/origin/factory-docs-review-astra-w-chunks\n39a1c6114d72b22d3550d7ff65234ec0f01418f6 refs/remotes/origin/factory-docs-review-fable-001\nbd4a8aa8d14af4049f4ad7dc93ae1d872a60607e refs/remotes/origin/factory-docs-sync-process-001\n9c179392f79b70da099121fc357d3107ad3bb86e refs/remotes/origin/main\n99bea67fd66854decbc2a1e51256793b5d9e6042 refs/remotes/origin/test/docset-sync-v06-tiny-001\n588079dd61cc1c4d0fc153e165d4e23025f2a595 refs/remotes/origin/test/docset-sync-v07-large-001\nefe36c8d468fdd7ee1a46970c3026bb6938bac64 refs/remotes/origin/test/docset-sync-v07-recovery-001\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793\n",
+    "stderr": ""
+  }
+]

@@ -610,6 +610,8 @@ const normalizeProduct = (wooProduct: WooCommerceProduct): Product => ({
   stockQuantity: wooProduct.stock_quantity,
 });
 
+// Independent normalization-step example: fetchProducts() returns Promise<Product[]>.
+// This array-returning step is not the typed-outcome service used by the route below.
 export const fetchProducts = async (): Promise<Product[]> => {
   const response = await fetch(API_ENDPOINTS.PRODUCTS);
   const wooProducts: WooCommerceProduct[] = await response.json();
@@ -782,6 +784,8 @@ const log = (level: LogLevel, message: string, context?: Record<string, unknown>
 
 ### Graceful Degradation Pattern
 
+This caller uses the §3 typed-outcome contract: `fetchProducts()` returns a discriminated outcome with `status` equal to `success`, `not-found`, `unavailable`, `invalid` or `forbidden`; only `success` carries `items: Product[]`. This example assumes a project-approved public-catalog failure policy permitting the generic empty-state UI on non-success; this is not an entitlement decision or a cached successful result. It does not call the independent array-returning normalization example.
+
 ```typescript
 // src/app/(public)/shop/page.tsx
 
@@ -790,10 +794,10 @@ import { ProductList } from '@/components/shop/ProductList';
 import { EmptyState } from '@/components/common/EmptyState';
 
 export default async function ShopPage() {
-  const { items: products, error } = await fetchProducts();
+  const outcome = await fetchProducts();
 
-  // Graceful degradation: show empty state instead of crashing
-  if (error || products.length === 0) {
+  // Apply the declared public-catalog failure policy; do not treat failure as success.
+  if (outcome.status !== 'success' || outcome.items.length === 0) {
     return (
       <EmptyState
         title="No products available"
@@ -806,7 +810,7 @@ export default async function ShopPage() {
     );
   }
 
-  return <ProductList products={products} />;
+  return <ProductList products={outcome.items} />;
 }
 ```
 
@@ -850,6 +854,8 @@ export const getErrorMessage = (code: string): string => {
 ## 9. Performance Patterns
 
 ### ISR and Revalidation
+
+Independent ISR example: this `fetchProducts()` returns the endpoint’s raw JSON payload, with no normalization or typed-outcome envelope; it is not the §3 service or the caller above. The project must declare and validate that endpoint’s wire contract and failure/cache policy before implementation; this example only illustrates the revalidation option.
 
 ```typescript
 // Static generation with revalidation
@@ -1203,7 +1209,7 @@ Manual synchronization is an authenticated, role-authorized POST operation with 
 |---|---|---|
 | 1.0 | (original, date unknown) | Initial manual: service-layer philosophy, folder structure, implementation, API route patterns, external integration, Supabase pattern, transformation, error handling, performance, quick reference, webhooks, CRM integration, data sync. Unversioned until the 2026-07 audit. |
 | 1.1 | 2026-07-08 | **Wave 4 (audit sync).** THE KIT EXCEPTION box added at §1 — the Lesson-2 antibody at its root: kit primitives consumed directly, the kit's auth IS the service layer, Kit Audit before authoring any service (F-039 — the blanket rule that produced the Run 001 authService near-miss is now amended at the source). §7 gained the factory wire-format conventions (snake_case wire / camelCase UI; service layer owns the boundary — HANDOFF DATA_CONTRACT discipline). Cross-References section added — outbound-zero ended (F-035). Standard header (F-018) + this history table (D-018). |
-| 1.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-021, FC-056, FC-057, FC-058, FC-059, FC-061, FC-063, FC-064, FC-066, FC-070, RUL-11 |
+| 1.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-021, FC-056, FC-057, FC-058, FC-059, FC-061, FC-063, FC-064, FC-066, FC-070, RUL-11; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) |
 
 ---
 

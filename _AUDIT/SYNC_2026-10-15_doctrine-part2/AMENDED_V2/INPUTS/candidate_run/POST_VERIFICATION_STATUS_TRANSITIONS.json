@@ -1,0 +1,132 @@
+{
+  "label": "ENGINEER-PROPOSED conditional closeout plan for Gate 2 review; no completed evidence or approval claimed",
+  "commit_plan": {
+    "purpose": "Tony closeout: activate verified new doctrine/workflow references and record installed-template provenance after accepted product QA and cleanup; no product/policy changes",
+    "suggested_subject": "docs(sync): activate verified doctrine and workflow references [SYNC_2026-10-15_doctrine-part2]",
+    "actual_sha": null,
+    "actual_sha_status": "PENDING \u2014 commit does not exist; record observed SHA only after Tony creates it, in a subsequent receipt, never self-referentially",
+    "conditions": [
+      "Gate 2 exact map including these 12 transitions approved; Fable finalized spec approved at Gate 3",
+      "Actual pre-transition installed-file comparison for all 25 templates passes, including source/translation/destination hashes and raw command/cwd/exit/output",
+      "Independent QA Lead accepts product verdict for the exact pre-transition candidate; cleanup retention and cleanup acceptance recorded separately",
+      "Architect issues bounded closeout instruction naming exactly the nine transition paths; Tony performs Git mutations"
+    ],
+    "bounded_retest": {
+      "owner": "Independent QA Executor; QA Lead accepts resulting evidence and final verdict",
+      "checks": [
+        "AC25: actual MANIFEST/header equality, count/reverse map/appendix unchanged",
+        "AC27: per-document history rows unchanged by status-only closeout",
+        "AC31: unchanged full lint suite green",
+        "AC32: exact nine-path canonical diff, Tony commit identity, no unapproved edits",
+        "AC33: all 12 exact spans; required evidence predates actual commit; actual SHA recorded after creation",
+        "Repeat 25-template source/approved-translation/installed comparison allowing only the one declared README provenance transition",
+        "Verify four workflow documents still link their SVGs/originals and both review checkpoints, RRM routing, QA/cleanup/release distinctions remain unchanged"
+      ],
+      "failure_behavior": "Stop release; QA Lead routes bounded repair or a Gate 2/3 amendment. Do not transfer the pre-transition verdict to changed bytes automatically."
+    }
+  },
+  "required_evidence": [
+    {
+      "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/TEMPLATE_INSTALL_VERIFICATION.md",
+      "status": "PENDING \u2014 not created; future actual evidence required",
+      "minimum": "25 source hashes, approved translated hashes and installed hashes before/after declared README transition; exact file set, standing amendments/SR preservation; command, cwd, exit, unfiltered safe output"
+    },
+    {
+      "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RUN_SUMMARY.md",
+      "status": "PENDING \u2014 not created; future actual evidence required",
+      "minimum": "Actual implementation/QA/cleanup identities and reports, verified landing date, Architect closeout authority, pre/post-transition hashes, intended commit purpose and actual closeout SHA only after creation, independent bounded-retest results"
+    },
+    {
+      "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_VERIFICATION.md",
+      "status": "PENDING \u2014 not created; future independent bounded verification required",
+      "minimum": "Exact closeout diff; 12 spans/9 paths; AC25/27/31/32/33 and template/workflow checks; QA Lead final acceptance or routed findings"
+    }
+  ],
+  "date_binding": "Old/new spans carry planned 2026-10-16 where applicable; bind only landing-date fields through LANDING_DATE_PLAN.json before implementation; recompute both pre/post hashes from actual bytes. Do not change historical approval dates.",
+  "transitions": [
+    {
+      "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+      "old": "**Status:** DRAFT FOR EXECUTABLE-MAP REVIEW \u2014 NOT INSTALLED",
+      "new": "**Status:** Active",
+      "occurrences": 1,
+      "trigger": "PENDING: Gate 2/3 approval; actual installed/new-document verification; independent product verdict and cleanup acceptance; Architect closeout instruction. Tony applies only in the named closeout commit. See commit_plan and required_evidence."
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "old": "**Status:** DRAFT FOR EXECUTABLE-MAP REVIEW \u2014 NOT INSTALLED",
+      "new": "**Status:** Active",
+      "occurrences": 1,
+      "trigger": "PENDING: Gate 2/3 approval; actual installed/new-document verification; independent product verdict and cleanup acceptance; Architect closeout instruction. Tony applies only in the named closeout commit. See commit_plan and required_evidence."
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "old": "**Status:** DRAFT FOR EXECUTABLE-MAP REVIEW \u2014 NOT INSTALLED",
+      "new": "**Status:** Active",
+      "occurrences": 1,
+      "trigger": "PENDING: Gate 2/3 approval; actual installed/new-document verification; independent product verdict and cleanup acceptance; Architect closeout instruction. Tony applies only in the named closeout commit. See commit_plan and required_evidence."
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "old": "The following proposed wording expresses that guidance for map review; pilot source records remain unchanged.",
+      "new": "The reviewer guidance below governs review; pilot source records remain unchanged.",
+      "occurrences": 1,
+      "trigger": "PENDING: Gate 2/3 approval; actual installed/new-document verification; independent product verdict and cleanup acceptance; Architect closeout instruction. Tony applies only in the named closeout commit. See commit_plan and required_evidence."
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/_templates/QAM/README.md",
+      "old": "This proposed set differs only by the status/provenance translations enumerated in this run\u2019s `PHASE_2_TEMPLATE_TRANSLATIONS.json`; installation and translation approval remain pending;",
+      "new": "This installed set uses the approved status/provenance translations enumerated in this run\u2019s `PHASE_2_TEMPLATE_TRANSLATIONS.json`; installation evidence is recorded in the run\u2019s `TEMPLATE_INSTALL_VERIFICATION.md`;",
+      "occurrences": 1,
+      "trigger": "PENDING: Gate 2/3 approval; actual installed/new-document verification; independent product verdict and cleanup acceptance; Architect closeout instruction. Tony applies only in the named closeout commit. See commit_plan and required_evidence."
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| QAM_PLAYBOOK | 1.0 | 2026-10-16 | DRAFT FOR EXECUTABLE-MAP REVIEW \u2014 NOT INSTALLED | Mandatory module QAM and accepted _templates/QAM set | ARCHITECT_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QA_PLAYBOOK, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |",
+      "new": "| QAM_PLAYBOOK | 1.0 | 2026-10-16 | Active | Mandatory module QAM and accepted _templates/QAM set | ARCHITECT_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QA_PLAYBOOK, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |",
+      "occurrences": 1,
+      "trigger": "Same closeout commit as the matching playbook header transition; rows must equal actual headers."
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| RRM_PLAYBOOK | 1.0 | 2026-10-16 | DRAFT FOR EXECUTABLE-MAP REVIEW \u2014 NOT INSTALLED | Approved review repairs with QAM; post-FFM and Engine 2 checkpoints | ARCHITECT_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |",
+      "new": "| RRM_PLAYBOOK | 1.0 | 2026-10-16 | Active | Approved review repairs with QAM; post-FFM and Engine 2 checkpoints | ARCHITECT_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |",
+      "occurrences": 1,
+      "trigger": "Same closeout commit as the matching playbook header transition; rows must equal actual headers."
+    },
+    {
+      "path": "MANIFEST.md",
+      "old": "| DEPLOYMENT_PLAYBOOK | 1.0 | 2026-10-16 | DRAFT FOR EXECUTABLE-MAP REVIEW \u2014 NOT INSTALLED (sections marked OPEN are not doctrine until ruled) | Common identity, exclusion, verification and recovery; context-specific permissions retained | APP_FACTORY_SKILLS_PLAYBOOK, BIM_PLAYBOOK, FFM_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, RECON_QUESTIONNAIRE, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK |",
+      "new": "| DEPLOYMENT_PLAYBOOK | 1.0 | 2026-10-16 | Active (sections marked OPEN are not doctrine until ruled) | Common identity, exclusion, verification and recovery; context-specific permissions retained | APP_FACTORY_SKILLS_PLAYBOOK, BIM_PLAYBOOK, FFM_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, RECON_QUESTIONNAIRE, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK |",
+      "occurrences": 1,
+      "trigger": "Same closeout commit as the matching playbook header transition; rows must equal actual headers."
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+      "old": "**Status:** Proposed \u2014 pending verified publication",
+      "new": "**Status:** Active reference",
+      "occurrences": 1,
+      "trigger": "Same named closeout commit, after actual workflow/diagram publication and independent consistency checks."
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+      "old": "**Status:** Proposed \u2014 pending verified publication",
+      "new": "**Status:** Active reference",
+      "occurrences": 1,
+      "trigger": "Same named closeout commit, after actual workflow/diagram publication and independent consistency checks."
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+      "old": "**Status:** Proposed \u2014 pending verified publication",
+      "new": "**Status:** Active reference",
+      "occurrences": 1,
+      "trigger": "Same named closeout commit, after actual workflow/diagram publication and independent consistency checks."
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+      "old": "**Status:** Proposed \u2014 pending verified publication",
+      "new": "**Status:** Active reference",
+      "occurrences": 1,
+      "trigger": "Same named closeout commit, after actual workflow/diagram publication and independent consistency checks."
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "time": "2026-10-19T09:04:22.630145+00:00",
+  "status": "ENGINEERING INSTALLED CHECKS PASS — independent QA acceptance pending",
+  "start_candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+  "checks": {
+    "R12_existing_path_scope": {
+      "status": "PASS",
+      "details": {
+        "seven_changed_paths": [
+          "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+          "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+          "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+          "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+          "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+          "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+          "CHANGELOG.md"
+        ],
+        "all_other_existing_files_unchanged": 857
+      }
+    },
+    "R6_all_successor_hashes": {
+      "status": "PASS",
+      "details": "101/101 installed hashes equal approved successor index; seven changed, 94 unchanged."
+    },
+    "approved_exact_replay": {
+      "status": "PASS",
+      "details": "All 29 edits replay exactly to installed seven files."
+    },
+    "R1_ownership": {
+      "status": "PASS",
+      "details": "Eight AMENDED-v1 spans intact; adjacent ownership sentence aligned. Ownership negative search below."
+    },
+    "R1_R3_negative_search": {
+      "status": "PASS",
+      "details": {
+        "live_docs": 36,
+        "active_hits": [],
+        "scope": "Includes code fences; excludes Version History only."
+      }
+    },
+    "R1_map_ownership_queries": {
+      "status": "PASS",
+      "details": {
+        "phrases": [
+          "Engineer authors DATA_CONTRACT",
+          "Architect drafts UI_SPEC",
+          "Designer revises",
+          "FILE_TREE = source of truth",
+          "FILE_TREE is the source of truth",
+          "The Engineer's full output list",
+          "This is the output the Engineer produces alongside working code"
+        ],
+        "paths_scanned": 36,
+        "active_hits": []
+      }
+    },
+    "R2_handoff": {
+      "status": "PASS",
+      "details": "Route and eight-entry tree aligned; existing six entries retained."
+    },
+    "R2_protected_sections": {
+      "status": "PASS",
+      "details": "What Operations Needs and Verbal Brief unchanged."
+    },
+    "R3_RUL12": {
+      "status": "PASS",
+      "details": "Diagram retains three text lines and structural connectors."
+    },
+    "R4_FC022": {
+      "status": "PASS",
+      "details": "Both executable fences replaced by standard withdrawal + allowlist/identity fail-closed invariant."
+    },
+    "R4_FC038": {
+      "status": "PASS",
+      "details": "Lead, list and both code comments require independently authorized elevated operation."
+    },
+    "R4_FC066": {
+      "status": "PASS",
+      "details": "Normalization array explicitly independent; caller uses discriminated typed outcome; ISR raw-JSON alternative labelled. No service implementation added."
+    },
+    "R4_other_28": {
+      "status": "PASS",
+      "details": "28 prior PASS-row cited excerpts preserved; three confirmed failures corrected. Original QA judgments retained in INPUTS, never overwritten."
+    },
+    "R5_policy": {
+      "status": "PASS",
+      "details": "All four manuals state default; three new sentences only, no new persistence example; STATE unchanged."
+    },
+    "R7_metadata": {
+      "status": "PASS",
+      "details": "Six headers and MANIFEST unchanged; one amended run-history row per document; 39 run CHANGELOG rows with exactly six amended and no added rows."
+    },
+    "R8_lints": {
+      "status": "PASS",
+      "details": "Unchanged full lint suite passes across 36 live docs; header-presence PASS."
+    },
+    "R9_protected": {
+      "status": "PASS",
+      "details": {
+        "paths": 94,
+        "prefixes": [
+          "_ARCHIVE/",
+          "03_BUILD_METHODOLOGY/_templates/QAM/",
+          "_workflows/",
+          "_assets/",
+          "10x Lab/",
+          "_SKILLS/",
+          "lints/",
+          ".github/"
+        ],
+        "hashes": "PROTECTED_PATHS.json"
+      }
+    },
+    "R10_closeout": {
+      "status": "PASS",
+      "details": "All 12 pre-transition spans on nine paths remain; no closeout approval inferred."
+    },
+    "propagation": {
+      "status": "PASS",
+      "details": {
+        "hits": 164,
+        "proposed_hits": 155,
+        "scope": "36 live docs incl fences and history; case-insensitive ten-term sweep; unknown hazardous or fetchProducts hit fails closed."
+      }
+    },
+    "frozen_spec": {
+      "status": "PASS",
+      "details": "Frozen specification preserved; no main, merge or closeout change."
+    },
+    "approval_and_proposal_preserved": {
+      "status": "PASS",
+      "details": "Original sealed records copied exactly; additive Gate 2 approval predates application. Old approval and bound index unchanged."
+    }
+  },
+  "gate2": "APPROVED by Tony with pinned identities",
+  "closeout": "12 pending",
+  "verifier_source_sha256": "92408ffe3ff95f052af870405483db0b500e0fbf7ee483968b28e03f7c24b427"
+}
