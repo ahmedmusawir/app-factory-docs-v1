@@ -417,18 +417,19 @@ WITH CHECK (auth.uid() IS NOT NULL);
 
 ### Service Role Bypass
 
-When using the service role key (server-side), RLS is bypassed. This is appropriate for:
-- API routes
-- Background jobs
-- Admin operations
+A service-role client bypasses RLS and is appropriate only inside an independently authorized elevated operation:
+- Background jobs with operation-local authorization
+- Admin operations with operation-local authorization
+
+An API route is not itself a reason to bypass RLS; never use a service-role client as the default route client (see AUTH_MANUAL, Service-Role Capability Boundary).
 
 ```typescript
-// Server-side: Service role bypasses RLS
+// Construct only inside an independently authorized elevated operation, never as a default route client.
 import { createClient } from '@supabase/supabase-js';
 
 const supabase = createClient(
   process.env.SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY! // Bypasses RLS
+  process.env.SUPABASE_SERVICE_ROLE_KEY! // Operation-local authorization is required before construction.
 );
 ```
 
@@ -1158,7 +1159,7 @@ supabase.from('table').select('*').range(0, 9)
 |---|---|---|
 | 1.0 | (original, date unknown) | Initial manual: schema-first philosophy, design patterns, data types, relationships, RLS, indexing, JSONB, type generation, query patterns, migrations, integrity, performance. Unversioned until the 2026-07 audit. |
 | 1.1 | 2026-07-08 | **Wave 4 — role-doctrine surgery (F-041, security-classed).** §2: new "Roles Table Pattern" — `user_roles` as the single authorization home (labeled PATTERN SQL; kit `setup.sql` = ground truth), `handle_new_user()` creation-time transport explained, ⛔ forbidden box (no role storage OR authz reads from `user_metadata` — recon Q3.4; no role columns on profile mirrors); mirror-table pattern stripped of its `role` column + sync example rewritten to the transport model. §5: the `raw_user_meta_data` RLS policy variant REMOVED (it was shown as a peer option — it is the forbidden pattern); `user_roles` policy stands alone + ⛔ marker (ruling: reconcile BOTH examples). Doc now speaks ONE role doctrine, aligned with AUTH_MANUAL v1.3 (F-042 outcome). "When Schema-First Applies" note + FRONTEND_FIRST pointers added (F-040). GHL/QR fossil examples neutralized (naming table, mapping-table default, comments — recon Q8.5 class). Standard header (F-018); Cross-References section (F-035); this history table (D-018). |
-| 1.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-003/096, FC-033, FC-034, FC-036, FC-037, FC-038, FC-039, FC-045, RUL-11 |
+| 1.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-003/096, FC-033, FC-034, FC-036, FC-037, FC-038, FC-039, FC-045, RUL-11; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) |
 
 ---
 

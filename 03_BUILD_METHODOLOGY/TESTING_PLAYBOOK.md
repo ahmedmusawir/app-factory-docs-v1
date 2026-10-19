@@ -426,6 +426,8 @@ const stored = await page.evaluate(() =>
 expect(JSON.parse(stored!).state.couponCode).toBe(expectedCode); // approved non-sensitive project fixture only
 ```
 
+No persistent raw contact information is stored in browser storage by default; any approved exception names the fields, purpose, retention period and owner, with clearing/invalidation behavior.
+
 The UI proves the user sees the right thing. The persistent state proves the system actually did the right thing. UIs can lie (e.g., showing optimistic state that doesn't match the store).
 
 ### Playwright `getByText` strict-mode awareness
@@ -888,26 +890,9 @@ Before privileged test setup or cleanup, verify the target project reference aga
 
 E2E tests need users with specific subscription tiers. Automating Stripe Checkout in a browser is brittle (Stripe changes their DOM). Solution: insert subscription rows directly into Supabase via the admin client, as if the webhook had already fired.
 
-```typescript
-export async function seedSubscription(userId: string, tier: TestTier) {
-  const { error } = await supabaseAdmin.from("subscriptions").upsert(
-    {
-      user_id: userId,
-      tier,
-      status: "active",
-      stripe_customer_id: `cus_test_${userId.slice(0, 8)}`,
-      stripe_subscription_id: `sub_test_${userId.slice(0, 8)}`,
-      current_period_start: new Date().toISOString(),
-      current_period_end: new Date(
-        Date.now() + 30 * 24 * 60 * 60 * 1000,
-      ).toISOString(),
-      cancel_at_period_end: false,
-    },
-    { onConflict: "user_id" },
-  );
-  if (error) throw new Error(`Failed to seed subscription: ${error.message}`);
-}
-```
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
+
+Privileged seeding and admin-client construction in test helpers run only behind the Director-approved test-project allowlist and authorized-test-identity guard above; fail closed on mismatch, missing identity or unknown target.
 
 Synthetic Stripe IDs (`cus_test_*`, `sub_test_*`) work because the gating logic only reads `tier` and `status` from the row — it never calls the Stripe API to verify the subscription ID.
 
@@ -915,19 +900,9 @@ Synthetic Stripe IDs (`cus_test_*`, `sub_test_*`) work because the gating logic 
 
 ### Supabase admin client in E2E helpers
 
-```typescript
-import { createClient } from "@supabase/supabase-js";
-import * as dotenv from "dotenv";
+**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
 
-// Playwright runs outside Next.js — must load .env.local manually
-dotenv.config({ path: ".env.local" });
-
-export const supabaseAdmin = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SECRET_KEY!,
-  { auth: { autoRefreshToken: false, persistSession: false } },
-);
-```
+Privileged seeding and admin-client construction in test helpers run only behind the Director-approved test-project allowlist and authorized-test-identity guard above; fail closed on mismatch, missing identity or unknown target.
 
 The `dotenv` import is required because Playwright runs in its own Node process, not inside Next.js. Without it, env vars from `.env.local` aren't available to the helpers.
 
@@ -1652,7 +1627,7 @@ await Promise.race([
 | 1.0 | 2026-05-03 | Initial playbook — four-layer testing strategy codified from StarkReads (Subscription v1: Supabase + Stripe, 136 tests across 3 layers). |
 | 2.0 | 2026-05-11 | Backend-agnostic generalization: layered principles-then-appendices architecture, REST fetch-mock patterns alongside Supabase chain mocks, Stripe wrapper-vs-constructor decision tree, fixture discovery, diagnostic principles, companion artifacts (CHANGELOG / SECURITY_FINDINGS / CLEANUP_BACKLOG). Synthesized with Dockbloxx field notes (182 tests across 4 layers). Tail carried a stale "DRAFT" label despite operating as doctrine (F-036). |
 | 2.1 | 2026-07-08 | **Wave 3 (audit sync).** Status resolved: "DRAFT" tail label dropped — the doc has operated as doctrine since May (F-036); this Version History table added (D-018). Isolation ended (F-035): "Where This Doc Sits" section added — outbound refs to STARTER_KIT_HANDBOOK (runner/config ground truth) + RECON_QUESTIONNAIRE (Q1.7), inbound executors named (SFP Phase 8, FFM verification/, FRONTEND_BUILD_PHASE §9 — their pointers to here landed in SFP v1.2 / BUILD_PHASE v1.2.1; FFM verification-guide pointer queued). §3.8 added: run-verification rituals L17/L25/L26 promoted from RECON_QUESTIONNAIRE §12 — canonical doctrine home is now here, written at principle level (RECON keeps the recon-time executable form; its pointer-back is a queued touch). Standard header block (F-018). Content otherwise untouched. |
-| 2.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: DEC-03, FC-020, FC-021, FC-022, FC-023, FC-024, FC-030, FC-031, FC-040, FC-063, RUL-11, RUL-12, RUL-13 |
+| 2.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: DEC-03, FC-020, FC-021, FC-022, FC-023, FC-024, FC-030, FC-031, FC-040, FC-063, RUL-11, RUL-12, RUL-13; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) |
 
 ---
 

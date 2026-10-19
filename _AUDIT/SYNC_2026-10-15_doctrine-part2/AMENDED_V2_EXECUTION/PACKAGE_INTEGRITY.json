@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "package_sha256": "182016aa2bd9ad6119ea1e63583f7155db6e3c86af4b2456f1294c073d695ba7",
+  "inventory_hashes": 46,
+  "approved_index_sha256": "b4fe406963b13b650f11d7d688026c88ff37fb1698d6191cdec420247c156bc9",
+  "approved_patch_sha256": "86fbfe6f3787c55332bb5d0c741d7ed3296c1f872e3ce26bc4af01b29a0282fd"
+}

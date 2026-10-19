@@ -202,7 +202,7 @@ Persist one authorized checkout-attempt identity across retries and claim it ato
 
 Use one validated checkout contract across form, state, route and service. The request carries billing.email, validated line identifiers/quantities, shippingMethod and couponCode; it carries no authoritative monetary values. The response identifies the authorized order/payment attempt or a typed generic failure. The server pricing operation from the same contract supplies totals. Revisions to items, shipping or coupon invalidate the old payment binding before a new attempt is released.
 
-The checkout interaction contract includes shippingCost and couponDiscount as display estimates, couponCode, setCoupon(code) and clearCoupon(), alongside the existing checkout fields. The server revalidates shipping and coupons. STATE_MANAGEMENT_MANUAL owns the shared store shape; ECOMMERCE_AND_PAYMENTS_MANUAL refers to it. Personal fields follow the approved account-transition and retention policy.
+The checkout interaction contract includes shippingCost and couponDiscount as display estimates, couponCode, setCoupon(code) and clearCoupon(), alongside the existing checkout fields. The server revalidates shipping and coupons. STATE_MANAGEMENT_MANUAL owns the shared store shape; ECOMMERCE_AND_PAYMENTS_MANUAL refers to it. Personal fields follow the approved account-transition and retention policy in STATE_MANAGEMENT_MANUAL. No persistent raw contact information is stored in browser storage by default; any approved exception names the fields, purpose, retention period and owner, with clearing/invalidation behavior.
 
 ---
 
@@ -560,7 +560,7 @@ WOOCOM_CONSUMER_SECRET=cs_xxx                    # NEVER expose
 |---|---|---|
 | 1.0 | (original, date unknown) | Initial manual: payment architecture, Stripe setup, PaymentIntent flow, checkout, orders, cart logic, checkout store, coupons, webhooks, testing, security checklist. Unversioned until the 2026-07 audit. |
 | 1.1 | 2026-07-08 | **Wave 4 (audit sync).** Scope Declaration added at top — this manual = headless WooCommerce + Stripe ONE-TIME commerce; recurring → STRIPE_SUBSCRIPTIONS_PLAYBOOK; Supabase-native commerce = extend, don't assume (F-040 undeclared-jurisdiction fix; "THE E-commerce Module" framing dropped). Self-contradicting Stripe pin removed (`apiVersion: '2023-10-16' // Use latest`) → verify-per-repo note (F-038 pattern). Cross-References section (F-035); standard header (F-018); this history table (D-018). |
-| 1.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-047, FC-050, FC-051, FC-052, FC-053, FC-054, FC-055, FC-059, FC-060, FC-062, FC-063, FC-067, FC-068, RUL-11 |
+| 1.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-047, FC-050, FC-051, FC-052, FC-053, FC-054, FC-055, FC-059, FC-060, FC-062, FC-063, FC-067, FC-068, RUL-11; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) |
 
 ---
 
