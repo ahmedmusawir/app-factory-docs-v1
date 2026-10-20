@@ -1,0 +1,214 @@
+{
+  "checked_at": "2026-10-18T17:39:26+06:00",
+  "zip": "/home/moose/Downloads/FACTORY_QA_FINAL_HANDOFF_2026-10-17_190959.zip",
+  "sha256": "d8b8c5c268a6ae96d5f72c5b66411d68845f4b707b5e86c1b570878a2ed1923b",
+  "members": 35,
+  "inventory_verified": 34,
+  "payloads": [
+    {
+      "member": "00_START_HERE.md",
+      "sha256": "3d94d016481716173cf74c1e6e51fde32dfc13a8cc5df7bac02bebf0abe39a75",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/README_FINAL_HANDOFF.md",
+      "matches": true
+    },
+    {
+      "member": "CONTEXT/AMENDED_V1/AMENDMENT_IDENTITIES.json",
+      "sha256": "daefb56823173b3707a064c2f22c6ffd4daa25db94b1226d959f8e3c241cc0c1",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/AMENDMENT_IDENTITIES.json",
+      "matches": true
+    },
+    {
+      "member": "CONTEXT/AMENDED_V1/AMENDMENT_V1_EDITS.json",
+      "sha256": "274df38cbf0b2cefd91e05d505e71fc35d91f09cb16ca885234e80a300364893",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/AMENDMENT_V1_EDITS.json",
+      "matches": true
+    },
+    {
+      "member": "CONTEXT/AMENDED_V1/AMENDMENT_V1.md",
+      "sha256": "655e24edf2c53b8ca89563a66ada54ab6df09b930eb80a7a2743216dc1153764",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/AMENDMENT_V1.md",
+      "matches": true
+    },
+    {
+      "member": "CONTEXT/AMENDED_V1/EXECUTION_PROPOSAL_INDEX.json",
+      "sha256": "69244f4edc347b30b81ed6a909bae4fbb5130864319e9f8cd84b5d5c22e59ba6",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/EXECUTION_PROPOSAL_INDEX.json",
+      "matches": true
+    },
+    {
+      "member": "CONTEXT/AMENDED_V1/SELECTED_EXACT_EDITS.json",
+      "sha256": "2675ffc148f49a95b688e9f252527950ce9c3f1fd61df3fb0ffb067fcc7ff687",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/SELECTED_EXACT_EDITS.json",
+      "matches": true
+    },
+    {
+      "member": "CONTEXT/DOCSET_SYNC_ACCEPTANCE_SPEC.md",
+      "sha256": "3910a62c34ff28acf1f9b956c5650deecae4ebd36872cc0072fd83e35ca19fa0",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/DOCSET_SYNC_ACCEPTANCE_SPEC.md",
+      "matches": true
+    },
+    {
+      "member": "CONTEXT/QA_AMENDED_V1/AMENDMENT_CONFIRMATION.md",
+      "sha256": "781f7d9535fc5eb968f62edef9fe0a577a486137e381772cbdb72214bd9ff343",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/AMENDMENT_CONFIRMATION.md",
+      "matches": true
+    },
+    {
+      "member": "CONTEXT/QA_AMENDED_V1/DOCSET_SYNC_ACCEPTANCE_SPEC_AMENDED_V1.md",
+      "sha256": "103c7ede8a03e7bd0ea64f482e9d0b5a646b7720b8ae7f07729ea3482c9b8bd3",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/DOCSET_SYNC_ACCEPTANCE_SPEC_AMENDED_V1.md",
+      "matches": true
+    },
+    {
+      "member": "CONTEXT/QA_AMENDED_V1/ORDERED_GATE_DECISIONS.md",
+      "sha256": "5235f2e83e6b90583017ac23f9bbe4a070850e142bb4e0c68b6a44ca69c5610b",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/ORDERED_GATE_DECISIONS.md",
+      "matches": true
+    },
+    {
+      "member": "CONTEXT/QA_AMENDED_V1/REVIEW_IDENTITIES.json",
+      "sha256": "4ae39a534a62136e13218b907c694c3b5a08d59f0c8aa02a4959e593582a8174",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/REVIEW_IDENTITIES.json",
+      "matches": true
+    },
+    {
+      "member": "CONTEXT/REPAIR_QA_AF01/EXECUTION_PROPOSAL.corrected.patch",
+      "sha256": "cf6413c9340c80f5c1bf53a55385876470e9b3aad364bc8963f52a68580f2a6d",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/EXECUTION_PROPOSAL.corrected.patch",
+      "matches": true
+    },
+    {
+      "member": "CONTEXT/REPAIR_QA_AF01/INDEPENDENT_RETEST_HANDOFF.md",
+      "sha256": "269f674cdc0b24114e82f8a3c64eed2b33efb54a41863be493e5ed9cdc93f5f5",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/INDEPENDENT_RETEST_HANDOFF.md",
+      "matches": true
+    },
+    {
+      "member": "CONTEXT/REPAIR_QA_AF01/QA_LEAD_REFERENCE_UPDATES.md",
+      "sha256": "d441879b6ca60a4f6b1d382fcd964de6ab366c4a9bac01781eca948be4cfb516",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/QA_LEAD_REFERENCE_UPDATES.md",
+      "matches": true
+    },
+    {
+      "member": "CONTEXT/REPAIR_QA_AF01/REPAIR_IDENTITIES.json",
+      "sha256": "0b7b89ae7cff62cf489fe4f1fccdbe52c35867461bdd336a799afebbc57983c7",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/REPAIR_IDENTITIES.json",
+      "matches": true
+    },
+    {
+      "member": "CONTEXT/REPAIR_QA_AF01/SERIALIZATION_REPAIR.diff",
+      "sha256": "6878aee14b38522d712aca4d18f72d55e1614d6869285c8e42bd87efd4bc3788",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/SERIALIZATION_REPAIR.diff",
+      "matches": true
+    },
+    {
+      "member": "CONTEXT/UPDATE_MAP.md",
+      "sha256": "cd291270bb6c8e537bcb050685c6464d326254f0d2a703c21f7f304dfe286931",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/UPDATE_MAP.md",
+      "matches": true
+    },
+    {
+      "member": "QA_RETEST_AF01/ARCHIVE_BLOBS.json",
+      "sha256": "e1dd617e2b62c51bc562e27f39facbee0ce7efb64ab30b1f63b0cec384ff1f57",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/ARCHIVE_BLOBS.json",
+      "matches": true
+    },
+    {
+      "member": "QA_RETEST_AF01/COMPLETE_PRESERVATION_PATHS.nul",
+      "sha256": "e7b45650fb98122c78fd8d0a7fa3318724a19195540aabfaa094f498b44f77c3",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/COMPLETE_PRESERVATION_PATHS.nul",
+      "matches": true
+    },
+    {
+      "member": "QA_RETEST_AF01/COMPLETE_PRESERVATION_PATHS.txt",
+      "sha256": "70765a3f68bb4038636989d4eea0fa58b73db5219259b7a08148f372caa6bd7a",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/COMPLETE_PRESERVATION_PATHS.txt",
+      "matches": true
+    },
+    {
+      "member": "QA_RETEST_AF01/DIRECTOR_DECISIONS.md",
+      "sha256": "d68230fbbb602af656584277a410ecee24261115cbdf5620be8773432401be8a",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/DIRECTOR_DECISIONS.md",
+      "matches": true
+    },
+    {
+      "member": "QA_RETEST_AF01/DOCSET_SYNC_ACCEPTANCE_SPEC_AMENDED_V1_R1.md",
+      "sha256": "2a3867cacef11c6bb0419a4c71229479efe703cee9fbcc1e4f71c0ac8e63f0fc",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/DOCSET_SYNC_ACCEPTANCE_SPEC_AMENDED_V1_R1.md",
+      "matches": true
+    },
+    {
+      "member": "QA_RETEST_AF01/FINAL_HANDOFF.md",
+      "sha256": "ff4ecb58d4c3705508ede89f764e459c075ba74dc24ef1794f7ba64459f129d5",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/FINAL_HANDOFF.md",
+      "matches": true
+    },
+    {
+      "member": "QA_RETEST_AF01/FINAL_IDENTITIES.json",
+      "sha256": "4cbd10cfce4efc338db433b4a89814109d2d2fd225fc48730a1f9eb78e76d739",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/FINAL_IDENTITIES.json",
+      "matches": true
+    },
+    {
+      "member": "QA_RETEST_AF01/LINT_RAW.txt",
+      "sha256": "2fe3f3abe8bc03d8324fbe436a88f47379135e605039c997c0bbd67584fa435c",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/LINT_RAW.txt",
+      "matches": true
+    },
+    {
+      "member": "QA_RETEST_AF01/OPERATOR_INSTRUCTIONS_FINAL.md",
+      "sha256": "b8887067e489e834a3b5afc7bd1b8c3da81434ac6ae53837fc6b3440df1c746c",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/OPERATOR_INSTRUCTIONS_FINAL.md",
+      "matches": true
+    },
+    {
+      "member": "QA_RETEST_AF01/QA_AF01_RETEST_VERDICT.md",
+      "sha256": "1ba9a2cb0f7f327f2294b29900c288c79c6cd6f4c73b53e6fd19b4d73ad60ee2",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/QA_AF01_RETEST_VERDICT.md",
+      "matches": true
+    },
+    {
+      "member": "QA_RETEST_AF01/qa_retest_af01.py",
+      "sha256": "a0569144b46e6f3862a9e1da8f1fa0af7184a559b9361e2c6c1be86e0d8a167f",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/qa_retest_af01.py",
+      "matches": true
+    },
+    {
+      "member": "QA_RETEST_AF01/README_FINAL_HANDOFF.md",
+      "sha256": "3d94d016481716173cf74c1e6e51fde32dfc13a8cc5df7bac02bebf0abe39a75",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/README_FINAL_HANDOFF.md",
+      "matches": true
+    },
+    {
+      "member": "QA_RETEST_AF01/REPLAY_101_HASHES.json",
+      "sha256": "b2cba7ee692904d99ad6b2406666905b80aeb2750b037c51af4013ce66aa44b4",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/REPLAY_101_HASHES.json",
+      "matches": true
+    },
+    {
+      "member": "QA_RETEST_AF01/RETEST_COMMANDS.json",
+      "sha256": "ab4ab75fdd9c50a573a9afea27ee2e3ee29b8e3e9cd8f68ca7ba81310153513c",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/RETEST_COMMANDS.json",
+      "matches": true
+    },
+    {
+      "member": "QA_RETEST_AF01/RETEST_RAW.txt",
+      "sha256": "58aad8c0916833fa6411e0e86379f6a8cd42a2a3d775fbaed08f2517aefb3140",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/RETEST_RAW.txt",
+      "matches": true
+    },
+    {
+      "member": "QA_RETEST_AF01/RETEST_VERIFICATION.json",
+      "sha256": "89c9afa28ddffbda427c6ec995f76a560db36e056f7c9a822cacddf22920e830",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/RETEST_VERIFICATION.json",
+      "matches": true
+    },
+    {
+      "member": "QA_RETEST_AF01/SPEC_REVISION_R1.diff",
+      "sha256": "cf5102431fb1db5e05b742a4a2ad6eaf5a1d43165e89b252dfb5edcc6fd8083d",
+      "local_path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/SPEC_REVISION_R1.diff",
+      "matches": true
+    }
+  ],
+  "note": "Checks performed before authorized decision-record update. ZIP and all other prior payloads stay unchanged."
+}

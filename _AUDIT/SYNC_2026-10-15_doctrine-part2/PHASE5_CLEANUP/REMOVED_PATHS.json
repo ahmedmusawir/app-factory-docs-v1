@@ -1,0 +1,8 @@
+[
+  {
+    "path": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/lints/__pycache__/lint_common.cpython-312.pyc",
+    "sha256": "c0a54b916990999896af119f6c0f223a6d043cabf1f6075fdfa387b7320c872d",
+    "bytes": 3556,
+    "reason": "Untracked regenerable Python bytecode; source retained; absent from evidence manifests; not installed in execution run"
+  }
+]

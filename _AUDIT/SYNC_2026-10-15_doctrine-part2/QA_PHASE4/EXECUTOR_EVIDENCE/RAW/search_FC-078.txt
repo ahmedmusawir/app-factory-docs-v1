@@ -1,0 +1,18 @@
+01_CONSTITUTION/STARTER_KIT_HANDBOOK.md:270:   mobileTopBarRight={<ThemeToggle />}
+01_CONSTITUTION/STARTER_KIT_HANDBOOK.md:306: | `ThemeToggle` | Light/dark/system theme switcher (next-themes) |
+01_CONSTITUTION/STARTER_KIT_HANDBOOK.md:617: | Theme toggle | `ThemeToggle` in `global/` | 🛑 DO NOT BUILD |
+02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md:243: grep -rn "ThemeToggle\|useTheme\|setTheme" src/ | grep -v node_modules | head
+05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md:72: │   └─ Theme toggle? → ThemeToggle (already wired)
+05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md:264:   mobileTopBarRight?: ReactNode;   // Right slot in mobile top bar (e.g., ThemeToggle)
+05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md:286:   mobileTopBarRight={<ThemeToggle />}
+05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md:397: ### `ThemeToggle`
+05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md:406: <ThemeToggle />
+05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md:761: | Toggle light/dark | `ThemeToggle` (don't author) |
+05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md:176: ├── global/              # Site-wide components (Navbar, ThemeToggle)
+05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md:447: ### ThemeToggle Component
+05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md:449: **File:** `src/components/global/ThemeToggle.tsx`
+05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md:451: **Purpose:** Light/dark/system theme switcher (dropdown via next-themes)
+05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md:455: import ThemeToggle from "@/components/global/ThemeToggle";
+05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md:457: <ThemeToggle />
+05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md:1680: Consume the existing theme provider and ThemeToggle for light, dark and system modes. Do not create a second controller that edits the HTML class or localStorage.theme independently of the provider. A standalone demonstration, if retained, must be explicitly non-kit and cannot be copied into a kit project.
+05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md:1857: | 1.3 | 2026-06-28 | Renamed `ThemeToggler` → `ThemeToggle` (the real shipped component) throughout; dropped deleted-orphan references; re-pointed deleted-demo teaching examples to live files (Example 1 → public home, Example 2 → illustrative); replaced `next/head` (Pages Router) with the App-Router `export const metadata` API in all page examples + the VS Code snippet. Kit Hardening Gate 10. |

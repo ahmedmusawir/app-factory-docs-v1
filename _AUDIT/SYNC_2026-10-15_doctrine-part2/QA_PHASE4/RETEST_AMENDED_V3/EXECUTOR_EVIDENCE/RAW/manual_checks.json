@@ -1,0 +1,13 @@
+{
+  "four_contracts_coherent": true,
+  "streaming_comment_present": true,
+  "only_label_and_metadata_changes": true,
+  "headers_expected": true,
+  "propagation_complete": true,
+  "withdrawal_count": 31,
+  "withdrawal_statuses": {
+    "CARRIED": 23,
+    "PASS": 8
+  },
+  "withdrawals_preserved": true
+}

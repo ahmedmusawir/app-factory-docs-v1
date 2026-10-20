@@ -1,0 +1,422 @@
+[
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/AC_EVIDENCE_MATRIX.md:3: > TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC. Template `QAM/AC_EVIDENCE_MATRIX.md` v0.3-draft (2026-10-14), from `QAM_PLAYBOOK_v1_0.md` §10–§11. **Owner: QA Executor** (per-AC evidence). The QA Lead's adjudication is recorded in `FINDINGS.md` and the verdict in `QAM_CERTIFICATION.md`, never here.",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/AC_EVIDENCE_MATRIX.md:7: Status vocabulary (observations, not release decisions): **PASS** (independently proven, literal AC) · **FAIL** (demonstrated miss) · **BLOCKED** (prerequisite unavailable; name it) · **NOT RUN** (not attempted; say why) · **ADJUDICATE** (contract question for the QA Lead; cite the row). Every PASS or FAIL cites an evidence path. An unresolved discrepancy never becomes PASS by relabeling.",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/AC_EVIDENCE_MATRIX.md:25: | PASS | FAIL | BLOCKED | NOT RUN | ADJUDICATE | Total ACs |",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/AC_EVIDENCE_MATRIX.md:29: *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_CLEANUP_REPORT.md:3: > TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC. Template `QAM/QAM_CLEANUP_REPORT.md` v0.3-draft (2026-10-14), from `QAM_PLAYBOOK_v1_0.md` §14 (preserved in full by RUL-03) and §12. **Owners: QA Lead records the cleanup point (§0), the retention decisions (§3, Decision column) and the acceptance (§4); the QA Executor executes under that recorded authority and records §1, §2 and the Executed?/Evidence columns.** Cleanup is a closure operation, not another planning or testing campaign. It is **required**; retention is never \"keep everything\". Only cleanup steps tied to abandoning the QA branch or transferring work back to the engineering branch do not exist here (RUL-02/RUL-03).",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_CLEANUP_REPORT.md:12: | Cleanup point approved by / at | NOT RECORDED |",
+    "classification": "unfilled placeholder"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_CLEANUP_REPORT.md:14: | Director-reported items (e.g. password rotation) — recorded as reported, not evidenced | NOT RECORDED |",
+    "classification": "unfilled placeholder"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_CLEANUP_REPORT.md:57: *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/FINDINGS.md:3: > TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC. Template `QAM/FINDINGS.md` v0.3-draft (2026-10-14), from `QAM_PLAYBOOK_v1_0.md` §11 (findings, classification, repair protocol) and §5. **Owners: §1 QA Executor records findings and proposes a class; §2 QA Lead dispositions; §3 conditional repair routing — Executor proposes, QA Lead classifies, Architect rules scope, Engineer repairs on the QA branch, Director commits, Executor re-pins and retests.** A proposal here is never a work order.",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/FINDINGS.md:39: | Repair on `qa/<<MODULE_BRANCH>>`, approved paths only; self-verification; amendment to `QAM_MANIFEST.md` §8 — state `REPAIR RULED — AWAITING COMMIT` (nobody retests in this state) | Engineer | commit(s) `PENDING` | NOT RECORDED |",
+    "classification": "unfilled placeholder"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/FINDINGS.md:41: | Retest-scope approval (`QAM_TEST_PLAN.md` §7 bound in `QAM_APPROVAL.md` §4) — state `RETEST SCOPE APPROVED — NOT RELEASED` | QA Lead | `QAM_APPROVAL.md` §4 | NOT RECORDED |",
+    "classification": "unfilled placeholder"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/FINDINGS.md:48: *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_PACKAGING.md:3: > TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC. Template `QAM/QAM_PACKAGING.md` v0.3-draft (2026-10-14), from `QAM_PLAYBOOK_v1_0.md` §13 (and §12 privacy, §8/§10 returns, §15 state). **Owner: QA Executor builds every package; the Architect sets module-specific exclusions at packaging.** These are instructions, not a tool: no exporter or validator is delivered with this set (RUL-07). The Director should never ask \"which files?\" or search temporary folders.",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_PACKAGING.md:31: | `evidence/**` approved sanitized evidence + `AUTOMATION/` helper sources | identity evidence | ✔ | partial, as safe |",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_PACKAGING.md:39: Env/credential files (`<<QA_CREDENTIAL_FILE>>` and any `.env*`), auth state (`storageState`, cookies, tokens), browser profiles, dependencies (`node_modules/`, venvs), builds (`.next/`, `dist/`, caches), Git internals, disposable mirrors, unreviewed raw sensitive logs or traces, image bodies beyond the approved sanitized set. Module-specific additions set by the Architect: `<<…>>`.",
+    "classification": "unfilled placeholder"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_PACKAGING.md:60: *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/CLAUDE.md:3: > TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC. Template `QAM/CLAUDE.md` v0.3-draft (2026-10-14), from `QAM_PLAYBOOK_v1_0.md` §6. Generated by the Architect at packaging. The routing text below must stay **identical** to `QAM/AGENTS.md`; only this header line and the title differ.",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_MANIFEST.md:3: > TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC. Template `QAM/QAM_MANIFEST.md` v0.3-draft (2026-10-14), from `QAM_PLAYBOOK_v1_0.md` §7 (\"As Engineering finishes\") and §5. **Owner: Engineer**, written as part of the original engineering assignment and **before the Director commits**. Facts and labeled **CLAIMs** only. This file contains no test plan, no risk order, no expected value other than the Engineer's own measurements, each marked CLAIM. It contains no Q1 finding, no Q2 result, no QA Lead decision and no certification.",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_MANIFEST.md:55: ## 5. Environment the QA body needs (facts; no secret values)",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_MANIFEST.md:89: *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_EXECUTION_REPORT.md:3: > TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC. Template `QAM/QAM_EXECUTION_REPORT.md` v0.3-draft (2026-10-14), from `QAM_PLAYBOOK_v1_0.md` §10, §11, §17. **Owner: QA Executor.** Measurements, attempts, stops, helper corrections and limitations. **No self-certification**: this report carries observations and a recommendation, never the verdict.",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_EXECUTION_REPORT.md:11: | Approved plan (SHA-256) matches `QAM_APPROVAL.md` §2 | NOT RECORDED | |",
+    "classification": "unfilled placeholder"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_EXECUTION_REPORT.md:13: | Product identity (candidate) = approved candidate | NOT RECORDED | |",
+    "classification": "unfilled placeholder"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_EXECUTION_REPORT.md:14: | Target identity = approved target | NOT RECORDED | |",
+    "classification": "unfilled placeholder"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_EXECUTION_REPORT.md:23: | Test ID | AC(s) | Command / steps (working dir) | Started | Result label (PASS · FAIL · BLOCKED · NOT RUN · ADJUDICATE) | Evidence path | Note |",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_EXECUTION_REPORT.md:27: Labels are observations, not release decisions. Where governing vocabulary differs (e.g. UNTESTED, PASS-PENDING-ADJUDICATION), the mapping is stated once here: `<<mapping or \"none needed\">>`.",
+    "classification": "unfilled placeholder"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_EXECUTION_REPORT.md:82: *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/AGENTS.md:3: > TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC. Template `QAM/AGENTS.md` v0.3-draft (2026-10-14), from `QAM_PLAYBOOK_v1_0.md` §6. Generated by the Architect at packaging. The routing text below must stay **identical** to `QAM/CLAUDE.md`; only this header line and the title differ.",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_RISK_REQUIREMENTS.md:3: > TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC. Template `QAM/QAM_RISK_REQUIREMENTS.md` v0.3-draft (2026-10-14), from `QAM_PLAYBOOK_v1_0.md` §5, §7 (\"QA Lead standing requirements are reusable\"), §12 and §16. **Owners: §1 QA Lead (standing, reusable across modules; the QA Lead need not review every engineering packet before work begins); §2 Architect (module-specific risks, clearly attributed); §3 QA Executor (its own reading of both, recorded in Q1; an Executor-owned section inside this file, per `QAM_ENTRY.md` §3).** Nothing here is a test plan; the plan is drafted independently by the Executor from this file, the contract, the source, recon and the Engineer's claims.",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_RISK_REQUIREMENTS.md:24: | SR-3 | Evidence: every PASS/FAIL cites an evidence path with the command, working directory, exit code and unfiltered output; existence checks precede greps/diffs so vacuous passes are impossible | §10 | all |",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_RISK_REQUIREMENTS.md:26: | SR-5 | Credentials: declared ignored file only; no `NEXT_PUBLIC_*` reuse for QA passwords; file proved ignored AND untracked; schema validated without emitting values; values never in build/server env, commands, logs, exceptions, screenshots, traces, JSON or ZIPs; a service-role key never substitutes for proving a user's login | §12 | modules with auth |",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_RISK_REQUIREMENTS.md:27: | SR-6 | Privacy scanners validated with synthetic leak fixtures and clean controls; raw authenticated traces treated as sensitive; only approved sanitized evidence retained | §12 | all with browser/API traces |",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_RISK_REQUIREMENTS.md:30: | SR-9 | Result labels are observations (PASS / FAIL / BLOCKED / NOT RUN / ADJUDICATE); an unresolved discrepancy never becomes PASS by relabeling | §11 | all |",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_RISK_REQUIREMENTS.md:77: *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_APPROVAL.md:3: > TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC. Template `QAM/QAM_APPROVAL.md` v0.3-draft (2026-10-14), from `QAM_PLAYBOOK_v1_0.md` §9 and §13. **Owners: §1, §2 and the QA Lead columns of §4 — QA Lead only (the decision); §3 and the Director columns of §4 — Director (release references).** Kept separate from the plan so the plan's hash is not self-referential. **Ownership vs transcription:** the decision belongs to the QA Lead and the release to the Director. The QA Executor may **transcribe** the exact supplied text into this file only when expressly instructed to, attributing it (author, source, date) — it never composes, infers or reconstructs a decision or release. **An empty decision means no approval exists.**",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_APPROVAL.md:11: | Decision | NOT RECORDED — one of `APPROVED` · `APPROVED WITH EXACT AMENDMENTS` · `HOLD (blockers listed)` |",
+    "classification": "unfilled placeholder"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_APPROVAL.md:18: ## 2. Binding (what exactly is approved)",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_APPROVAL.md:42: | Date | QA Lead decision (retest scope approved; plan §7 SHA-256) | Repaired candidate (full SHA, from the Director's commit receipt) | Director release for Q4 (reference, date) | Recorded by (seat; \"transcribed\" if applicable) |",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_APPROVAL.md:48: *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_TEST_PLAN.md:3: > TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC. Template `QAM/QAM_TEST_PLAN.md` v0.3-draft (2026-10-14), from `QAM_PLAYBOOK_v1_0.md` §8 (drafting), §9 (approval and exact amendments), §10 (execution order), §11 (retest scope), §12 (browser matrix). **Owner: QA Executor drafts independently in Q1; the QA Lead amends and approves.** The approval itself is recorded in `QAM_APPROVAL.md`, a separate file, so this plan's hash is not self-referential. Plan edits never modify the frozen contract (RUL-04).",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_TEST_PLAN.md:55: ## 7. Conditional Q4 retest scope (filled only if a repair is ruled; drafted by the Executor after the Director's repair commit exists, approved by the QA Lead in `QAM_APPROVAL.md` §4; executed only in state `RELEASED FOR Q4`)",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_TEST_PLAN.md:67: *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_STATE.md:3: > TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC. Template `QAM/QAM_STATE.md` v0.3-draft (2026-10-14), from `QAM_PLAYBOOK_v1_0.md` §15 (and §6, §13). **Owner: Architect creates; each seat appends dated entries for its own transitions.** A small index into authoritative records: it references authority and never grants it. Do not duplicate reports here. Immutable exports keep their historical statements; later entries supersede stale \"pending\" summaries with dated provenance. This file is read by the arriving agent; it is not a dispatcher.",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_STATE.md:7: `READY FOR ENGINEERING` → `ENGINEERING COMPLETE — AWAITING QA BRANCH` → `READY FOR RECON` → `Q1 COMPLETE — AWAITING QA LEAD REVIEW` → (`Q1 AMENDMENTS REQUESTED` → `Q1 AMENDED — AWAITING QA LEAD BINDING`) | `HOLD` → `APPROVED — NOT RELEASED` → `RELEASED FOR Q2` → `Q2 COMPLETE — AWAITING ADJUDICATION` → (conditional: `REPAIR RULED — AWAITING COMMIT` → `RETEST SCOPE APPROVED — NOT RELEASED` → `RELEASED FOR Q4` → `Q4 COMPLETE — AWAITING ADJUDICATION`) → `VERDICT ISSUED — CLEANUP PENDING` → `CLEANUP EXECUTED — AWAITING ACCEPTANCE` → `CLEANUP ACCEPTED — RELEASED TO CLOSEOUT` → `CLOSED`. `STOPPED (STOP-*)` may interrupt any phase and records its safe resume point.",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_STATE.md:47: | | QA Lead | → `APPROVED — NOT RELEASED` / `Q1 AMENDMENTS REQUESTED` / `HOLD` | plan SHA-256 `<<…>>` | `QAM_APPROVAL.md` §1–§2 |",
+    "classification": "unfilled placeholder"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_STATE.md:51: | | Director | → `RETEST SCOPE APPROVED — NOT RELEASED` → `RELEASED FOR Q4` | repaired candidate `<<…>>`; Q4 scope approval + release | `QAM_APPROVAL.md` §4 |",
+    "classification": "unfilled placeholder"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_STATE.md:57: *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_CERTIFICATION.md:3: > TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC. Template `QAM/QAM_CERTIFICATION.md` v0.3-draft (2026-10-14), from `QAM_PLAYBOOK_v1_0.md` §14 and §13 (\"Include exact certification/approval text when someone is instructed to transcribe it. No reconstructing a missing letter from another seat's summary\"). **Owner: QA Lead only.** **Ownership vs transcription:** the verdict is the QA Lead's; an expressly instructed, attributed transcription of the QA Lead's exact text is allowed; a composed, inferred or reconstructed verdict is not. **An empty verdict means no certificate exists.** The Engineer never writes this file; the QA Executor writes it only as such a transcription.",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_CERTIFICATION.md:17: | **Verdict** | NOT RECORDED — one of `PASS` · `PASS WITH FOLLOW-UP FINDINGS` · `PASS WITH KNOWN RISK` · `FAIL` · `BLOCKED` |",
+    "classification": "unfilled placeholder"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_CERTIFICATION.md:22: | Approved plan (SHA-256) and approval record | NOT RECORDED (`QAM_APPROVAL.md`) |",
+    "classification": "unfilled placeholder"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_CERTIFICATION.md:32: Follow-up findings carried (if `PASS WITH FOLLOW-UP FINDINGS`): NOT RECORDED.",
+    "classification": "unfilled placeholder"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_CERTIFICATION.md:33: Known risk accepted (if `PASS WITH KNOWN RISK`): NOT RECORDED — Director authority reference: NOT RECORDED. No accepted requirement silently becomes optional.",
+    "classification": "unfilled placeholder"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_CERTIFICATION.md:42: | Gate D (deployed-system verification; separately scoped and authorized) | not covered by this certificate |",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_CERTIFICATION.md:43: | Review completion (RRM checkpoints) | not covered by this certificate |",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_CERTIFICATION.md:55: After release: the Architect directs bounded Engineer closeout; the Director commits, merges `qa/<<MODULE_BRANCH>>` into `main` and pushes. A documentation-only successor is verified by reviewing the complete diff before the recorded identity is extended. This certificate does not certify a deployed revision.",
+    "classification": "unfilled placeholder"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_CERTIFICATION.md:57: *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/PARENT_ENTRY_ROUTING.md:3: > TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC. Template `QAM/PARENT_ENTRY_ROUTING.md` v0.3-draft (2026-10-14), from `QAM_PLAYBOOK_v1_0.md` §6 (\"At the parent module, both entry conventions must route Engineering to the implementation assignment and QA to QAM\"). **Owner: Architect.** This file is not read by the QA Executor; it is the snippet the Architect pastes into the parent module's `CLAUDE.md` and `AGENTS.md` (and `GEMINI.md` where the module ships one) so that both entry conventions route the same way. Delete this file from the instantiated `QAM/` once pasted, or keep it as the record of what was pasted.",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/PARENT_ENTRY_ROUTING.md:27: *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/README.md:3: > **TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.**",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/README.md:4: > Template set **v0.3**. Governing playbook: **QAM_PLAYBOOK v1.0**. QA behavior was accepted by Fable on 2026-10-14 with three exact amendments; Jarvis verified their application. Source set v0.3-draft is preserved byte-for-byte in this run’s intake snapshot. This proposed set differs only by the status/provenance translations enumerated in this run’s `PHASE_2_TEMPLATE_TRANSLATIONS.json`; installation and translation approval remain pending; it is newly authored from the approved playbook, not the pilot’s missing original templates. Source playbook SHA-256: `97e111e2a495f9a3fe65f50213e6f2ba68c8e5e963f3d23493b1ee99ad35c897`.",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/README.md:15: | Token | Meaning |",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/README.md:23: No file in this set carries a PASS, an approval, a certificate, a SHA, a credential or a project-specific name. Where the pilot used Cyber Pharma names, this set uses placeholders (playbook §12: \"Do not hardcode Cyber Pharma's ADMIN/MEMBER or 375px into every app\").",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/README.md:44: | `QAM_CLEANUP_REPORT.md` | QA Executor executes approved cleanup; QA Lead approves retention and accepts the cleanup | after the accepted product verdict | §14 |",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/README.md:60: 7. **Governing snapshot.** Versioned local snapshot of the governing bodies with source, version and hash, or an explicitly approved accessible source — `GOVERNING/README.md`.",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/README.md:64: The Architect does not write Q1 findings, the test plan, the approval, Q2 results, dispositions or the certificate.",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/README.md:74: 5. environments, prerequisites, migrations, fixtures, roles and credentials **needed**, without secret values;",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/README.md:92: → Q2  QA Executor executes the approved plan continuously → one indexed result package; no self-certification",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/README.md:96: → Product verdict  QA Lead issues the certificate §1–§3 (VERDICT ISSUED — CLEANUP PENDING)",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/README.md:98: → Cleanup acceptance + durable records committed by the Director → certificate §4 appended",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/README.md:112: *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC. Installed reusable template; instantiate and resolve module-specific fields before launch.*",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_PREFLIGHT.md:3: > TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC. Template `QAM/QAM_PREFLIGHT.md` v0.3-draft (2026-10-14), from `QAM_PLAYBOOK_v1_0.md` §5 and §8 (Q1 checks 1–6). **Owner: Architect authors the rows (check, command, expected result, authorized effect, owner); the QA Executor records only the Result and Evidence cells in Q1 and rechecks changeable rows at Q2/Q4 entry, without changing the Architect-authored expectations or authorizations** (`QAM_ENTRY.md` §3). A row the Executor believes is wrong is recorded as a GAP/QUESTION in `QAM_RECON_REPORT.md` §4 for the Architect, not edited. Rows measure real prerequisites for this module; there is no universal minimum row count. Every result starts as `NOT RUN`.",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_PREFLIGHT.md:7: Q1 is read-only toward product and live business data; writes go only to the declared QA lane and approved transient setup. Install/build/serve and bounded login/logout probes are allowed only where a row below authorizes them. Execute the complete permitted assessment in one run; aggregate independent blockers instead of returning after each one; stop immediately before a forbidden or unsafe action.",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_PREFLIGHT.md:28: | PF-2.5 | Engineer manifest and handoff complete (every AC has a row; no secret values) | read | complete, or GAP rows in recon | NOT RUN | |",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_PREFLIGHT.md:74: *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_RECON_REPORT.md:3: > TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC. Template `QAM/QAM_RECON_REPORT.md` v0.3-draft (2026-10-14), from `QAM_PLAYBOOK_v1_0.md` §8. **Owner: QA Executor.** Independent Q1 observations, contradictions and readiness. Q1 is not the full QA campaign and produces no verdict. A successful login during recon does not satisfy the later acceptance walk.",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_RECON_REPORT.md:67: *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_ENTRY.md:3: > TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC. Template `QAM/QAM_ENTRY.md` v0.3-draft (2026-10-14), from `QAM_PLAYBOOK_v1_0.md` §§2, 5, 6, 7, 15. **Owner: Architect** (resolves every `<<…>>` at packaging). This file is the canonical entry both `CLAUDE.md` and `AGENTS.md` point to. It references authority; it grants none. The dispatch table in §5 is a document instruction read by the arriving agent, not a dispatcher.",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_ENTRY.md:23: | Ruling / erratum lane (append-only; attributable approved amendments only) | `<<../RULINGS_ADDENDUM.md or equivalent>>` | `<<…>>` |",
+    "classification": "unfilled placeholder"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_ENTRY.md:34: | Engineer | `QAM_MANIFEST.md` (incl. dated factual amendments §8), `HANDOFFS/ENGINEERING_HANDOFF.md`, its own `QAM_STATE.md` entries; ruled repair paths on `qa/<<MODULE_BRANCH>>` only | QA results, plan approval, dispositions, certificate |",
+    "classification": "unfilled placeholder"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_ENTRY.md:67: | `APPROVED — NOT RELEASED` | Director | Name the missing Director release (`QAM_APPROVAL.md` §3). Do not start Q2. |",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_ENTRY.md:68: | `RELEASED FOR Q2` | QA Executor | Verify the approval ↔ candidate binding (`QAM_APPROVAL.md` §2–§3), full HEAD, product identity, target; review the complete candidate→HEAD diff; recheck changeable readiness rows; execute the approved plan; build the Q2 package; record `Q2 COMPLETE — AWAITING ADJUDICATION`. |",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_ENTRY.md:72: | `RETEST SCOPE APPROVED — NOT RELEASED` | Director | Report that the QA Lead's Q4 scope approval exists (`QAM_APPROVAL.md` §4) and the Director's release is missing. Do not start Q4. |",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_ENTRY.md:77: | `CLEANUP ACCEPTED — RELEASED TO CLOSEOUT` | Architect | QA work is complete. Report the certificate and that the Architect's closeout instruction is next; do not restart testing or cleanup. |",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_ENTRY.md:88: The Engineer completes `QAM_MANIFEST.md` (including the complete change inventory at handoff: committed since baseline, staged, unstaged, untracked) and `HANDOFFS/ENGINEERING_HANDOFF.md` as part of the original engineering assignment (playbook §7), before the Director commits, and records `ENGINEERING COMPLETE — AWAITING QA BRANCH` in `QAM_STATE.md`. The Engineer fills no QA result, decision or certificate.",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_ENTRY.md:90: *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/ENGINEERING_HANDOFF.md:3: > TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC. Template `QAM/HANDOFFS/ENGINEERING_HANDOFF.md` v0.3-draft (2026-10-14), from `QAM_PLAYBOOK_v1_0.md` §5 and §7. **Owner: Engineer**, as part of the original engineering assignment. Everything here is a **claim for independent QA** unless it is a command or a path. Companion to `../QAM_MANIFEST.md` (identity, environment and reproduction facts); do not restate the manifest, link to it.",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/ENGINEERING_HANDOFF.md:39: - Q1 findings, Q2 results, a plan, an approval, a certificate (not the Engineer's to write).",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/ENGINEERING_HANDOFF.md:40: - Secret values, auth state, raw authenticated traces.",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/ENGINEERING_HANDOFF.md:43: *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/REVIEW_START_HERE.md:3: > TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC. Template `QAM/HANDOFFS/REVIEW_START_HERE.md` v0.3-draft (2026-10-14), from `QAM_PLAYBOOK_v1_0.md` §13. **Owner: QA Executor**, one copy per package (filled at packaging time; the template stays in `HANDOFFS/` unfilled). The first file a reviewer opens.",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/REVIEW_START_HERE.md:33: *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/README.md:3: > TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC. Template `QAM/HANDOFFS/README.md` v0.3-draft (2026-10-14), from `QAM_PLAYBOOK_v1_0.md` §5 and §13.",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/README.md:11: *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/evidence/README.md:3: > TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC. Template `QAM/evidence/README.md` v0.3-draft (2026-10-14), from `QAM_PLAYBOOK_v1_0.md` §5, §10, §12, §14. **Owner: QA Executor** (writes); the Architect declares the lane and the expected evidence outputs at packaging; the QA Lead decides retention at cleanup.",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/evidence/README.md:21: - Every PASS or FAIL in the matrix cites a path here with the command, its working directory, exit code and unfiltered output (or a cropped screenshot / sanitized trace for the browser). \"Verified\" without a path is NOT RUN.",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/evidence/README.md:22: - Raw authenticated traces can contain sensitive state even after login: retain only approved sanitized evidence. Image bodies: keep a short hex prefix, not the body, unless the plan requires it.",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/evidence/README.md:32: *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/GOVERNING/README.md:3: > TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC. Template `QAM/GOVERNING/README.md` v0.3-draft (2026-10-14), from `QAM_PLAYBOOK_v1_0.md` §2, §4, §5. **Owner: Architect** at packaging (the Engineer may copy a prior module's snapshot only with a fresh provenance table). External governing bodies must be available through a versioned local snapshot with provenance, or an explicitly approved accessible source. Conflicts between bodies are surfaced with both sources and an owner; a folder-level instruction cannot erase higher-priority tool restrictions or repository authority.",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/GOVERNING/README.md:7: | Body | Role in this QAM | Form (local snapshot file / approved accessible source) | Version | Source location (repo + commit / URL / release tag) | SHA-256 (snapshot) | Retrieved by / at |",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/GOVERNING/README.md:9: | QAM_PLAYBOOK | packaging and execution process | `<<GOVERNING/QAM_PLAYBOOK.md or approved source>>` | `<<…>>` | `<<…>>` | `<<…>>` | `<<…>>` |",
+    "classification": "unfilled placeholder"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/GOVERNING/README.md:21: Approved contract corrections go to the parent's append-only ruling/erratum lane with original observation, exact corrected interpretation, approving authority, date and affected ACs. Plan amendments alone cannot modify a contract.",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/GOVERNING/README.md:23: *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/AUTOMATION/README.md:1: # AUTOMATION/ — approved QA helpers and instrument controls",
+    "classification": "instruction/vocabulary"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/AUTOMATION/README.md:3: > TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC. Template `QAM/AUTOMATION/README.md` v0.3-draft (2026-10-14), from `QAM_PLAYBOOK_v1_0.md` §5, §10, §12. **Owner: QA Executor writes helpers within this lane; the Architect declares the lane and its limits at packaging; the QA Lead approves retention at cleanup.** Helpers here are QA-only instruments, never product runtime dependencies. Promotion of a helper into maintained product tests is a separate authorized engineering change.",
+    "classification": "provenance"
+  },
+  {
+    "hit": "03_BUILD_METHODOLOGY/_templates/QAM/AUTOMATION/README.md:19: *TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.*",
+    "classification": "provenance"
+  }
+]

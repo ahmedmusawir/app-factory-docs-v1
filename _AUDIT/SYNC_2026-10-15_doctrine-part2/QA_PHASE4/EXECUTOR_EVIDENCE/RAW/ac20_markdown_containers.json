@@ -1,0 +1,342 @@
+[
+  {
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 62,
+    "quote": "| `HANDOFF_PACKAGE_PLAYBOOK.md` | Historical external example (availability unverified): `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/`. Obtain the source repository, immutable revision and path before use; do not assume this path exists locally. |",
+    "containers": [
+      {
+        "type": "table_open",
+        "map": [
+          59,
+          67
+        ],
+        "content": ""
+      },
+      {
+        "type": "tr_open",
+        "map": [
+          61,
+          62
+        ],
+        "content": ""
+      },
+      {
+        "type": "inline",
+        "map": [
+          61,
+          62
+        ],
+        "content": "`HANDOFF_PACKAGE_PLAYBOOK.md`"
+      },
+      {
+        "type": "inline",
+        "map": [
+          61,
+          62
+        ],
+        "content": "Historical external example (availability unverified): `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/`. Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+      }
+    ]
+  },
+  {
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 118,
+    "quote": "- Historical external example (availability unverified): **`CURRENT_APP/app-factory-frontend-first-module/_project/`** — the inaugural historical worked example Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.",
+    "containers": [
+      {
+        "type": "list_item_open",
+        "map": [
+          117,
+          119
+        ],
+        "content": ""
+      },
+      {
+        "type": "paragraph_open",
+        "map": [
+          117,
+          118
+        ],
+        "content": ""
+      },
+      {
+        "type": "inline",
+        "map": [
+          117,
+          118
+        ],
+        "content": "Historical external example (availability unverified): **`CURRENT_APP/app-factory-frontend-first-module/_project/`** — the inaugural historical worked example Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+      }
+    ]
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 7,
+    "quote": "> Historical external example (availability unverified): Paired with the Cyberize Agentic Automation handoff as the historical worked example. Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.",
+    "containers": [
+      {
+        "type": "blockquote_open",
+        "map": [
+          5,
+          9
+        ],
+        "content": ""
+      },
+      {
+        "type": "paragraph_open",
+        "map": [
+          5,
+          9
+        ],
+        "content": ""
+      },
+      {
+        "type": "inline",
+        "map": [
+          5,
+          9
+        ],
+        "content": "**The instruction set for authoring project handoff packages.**\nHistorical external example (availability unverified): Paired with the Cyberize Agentic Automation handoff as the historical worked example. Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.\n**Born from:** Cyberize Agentic Automation Run 001 (May 2026) — first successful Factory frontend conversion\nHistorical external example (availability unverified): **Worked example:** `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/` Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+      }
+    ]
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 9,
+    "quote": "> Historical external example (availability unverified): **Worked example:** `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/` Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.",
+    "containers": [
+      {
+        "type": "blockquote_open",
+        "map": [
+          5,
+          9
+        ],
+        "content": ""
+      },
+      {
+        "type": "paragraph_open",
+        "map": [
+          5,
+          9
+        ],
+        "content": ""
+      },
+      {
+        "type": "inline",
+        "map": [
+          5,
+          9
+        ],
+        "content": "**The instruction set for authoring project handoff packages.**\nHistorical external example (availability unverified): Paired with the Cyberize Agentic Automation handoff as the historical worked example. Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.\n**Born from:** Cyberize Agentic Automation Run 001 (May 2026) — first successful Factory frontend conversion\nHistorical external example (availability unverified): **Worked example:** `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/` Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+      }
+    ]
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 131,
+    "quote": "Historical external example (availability unverified): **Canonical example:** `_project/DATA_CONTRACT.md` in the Cyberize module. Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.",
+    "containers": [
+      {
+        "type": "paragraph_open",
+        "map": [
+          130,
+          131
+        ],
+        "content": ""
+      },
+      {
+        "type": "inline",
+        "map": [
+          130,
+          131
+        ],
+        "content": "Historical external example (availability unverified): **Canonical example:** `_project/DATA_CONTRACT.md` in the Cyberize module. Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+      }
+    ]
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 169,
+    "quote": "Historical external example (availability unverified): **Canonical example:** `_project/UI_SPEC.md` in the Cyberize module. Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.",
+    "containers": [
+      {
+        "type": "paragraph_open",
+        "map": [
+          168,
+          169
+        ],
+        "content": ""
+      },
+      {
+        "type": "inline",
+        "map": [
+          168,
+          169
+        ],
+        "content": "Historical external example (availability unverified): **Canonical example:** `_project/UI_SPEC.md` in the Cyberize module. Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+      }
+    ]
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 346,
+    "quote": "Historical external example (availability unverified): The historical worked example is `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/`. Read all four files there to see what \"good\" looks like: Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.",
+    "containers": [
+      {
+        "type": "paragraph_open",
+        "map": [
+          345,
+          346
+        ],
+        "content": ""
+      },
+      {
+        "type": "inline",
+        "map": [
+          345,
+          346
+        ],
+        "content": "Historical external example (availability unverified): The historical worked example is `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/`. Read all four files there to see what \"good\" looks like: Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+      }
+    ]
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 381,
+    "quote": "- Historical external example (availability unverified): **Worked example:** `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/` Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.",
+    "containers": [
+      {
+        "type": "list_item_open",
+        "map": [
+          380,
+          381
+        ],
+        "content": ""
+      },
+      {
+        "type": "paragraph_open",
+        "map": [
+          380,
+          381
+        ],
+        "content": ""
+      },
+      {
+        "type": "inline",
+        "map": [
+          380,
+          381
+        ],
+        "content": "Historical external example (availability unverified): **Worked example:** `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/` Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+      }
+    ]
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+    "line": 373,
+    "quote": "Historical external example (availability unverified): The historical worked example of this pattern is at: Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.",
+    "containers": [
+      {
+        "type": "paragraph_open",
+        "map": [
+          372,
+          373
+        ],
+        "content": ""
+      },
+      {
+        "type": "inline",
+        "map": [
+          372,
+          373
+        ],
+        "content": "Historical external example (availability unverified): The historical worked example of this pattern is at: Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+      }
+    ]
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 1206,
+    "quote": "Historical external example (availability unverified): The historical worked example of this pattern is at: Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.",
+    "containers": [
+      {
+        "type": "paragraph_open",
+        "map": [
+          1205,
+          1206
+        ],
+        "content": ""
+      },
+      {
+        "type": "inline",
+        "map": [
+          1205,
+          1206
+        ],
+        "content": "Historical external example (availability unverified): The historical worked example of this pattern is at: Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+      }
+    ]
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+    "line": 268,
+    "quote": "- Historical external example (availability unverified): **Cyberize Run 001 `_project/CLAUDE.md`** — the historical worked example of a Locked Palette table Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.",
+    "containers": [
+      {
+        "type": "list_item_open",
+        "map": [
+          267,
+          269
+        ],
+        "content": ""
+      },
+      {
+        "type": "paragraph_open",
+        "map": [
+          267,
+          268
+        ],
+        "content": ""
+      },
+      {
+        "type": "inline",
+        "map": [
+          267,
+          268
+        ],
+        "content": "Historical external example (availability unverified): **Cyberize Run 001 `_project/CLAUDE.md`** — the historical worked example of a Locked Palette table Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+      }
+    ]
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "line": 128,
+    "quote": "- Historical external example (availability unverified): **Cyberize Run 001 `_project/CLAUDE.md`** — the historical worked example of a Locked Palette table Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.",
+    "containers": [
+      {
+        "type": "list_item_open",
+        "map": [
+          127,
+          129
+        ],
+        "content": ""
+      },
+      {
+        "type": "paragraph_open",
+        "map": [
+          127,
+          128
+        ],
+        "content": ""
+      },
+      {
+        "type": "inline",
+        "map": [
+          127,
+          128
+        ],
+        "content": "Historical external example (availability unverified): **Cyberize Run 001 `_project/CLAUDE.md`** — the historical worked example of a Locked Palette table Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+      }
+    ]
+  }
+]

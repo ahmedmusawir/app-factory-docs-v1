@@ -1,0 +1,62 @@
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:927:   process.env.SUPABASE_SECRET_KEY!,
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:426: expect(JSON.parse(stored!).state.couponCode).toBe(expectedCode); // approved non-sensitive project fixture only
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:165: │   ├── signup/
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:166: │   │   └── page.tsx              # /auth/signup
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:174:     │   └── signup/route.ts
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:208: │   ├── SignupForm.tsx
+04_REFERENCE_MANUALS/AUTH_MANUAL.md:1282: │           ├── signup/route.ts     # POST signup
+04_REFERENCE_MANUALS/DATABASE_MANUAL.md:426: // Server-side: Service role bypasses RLS
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:1229: export enum AppRole {
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:1235: export async function getUserRole() {
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:1249: export enum AppRole {
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:1259: import { AppRole } from "./app-role";
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:1261: export async function getUserRole(): Promise<AppRole | null> {
+04_REFERENCE_MANUALS/AUTH_MANUAL.md:655: export type AppRole = "superadmin" | "admin" | "member";
+04_REFERENCE_MANUALS/AUTH_MANUAL.md:1233: import { protectPage } from "@/utils/supabase/actions";
+04_REFERENCE_MANUALS/AUTH_MANUAL.md:1234: import { getUserRole } from "@/utils/get-user-role";
+04_REFERENCE_MANUALS/AUTH_MANUAL.md:1298: │       ├── actions.ts              # protectPage
+04_REFERENCE_MANUALS/AUTH_MANUAL.md:710: updateSession() (src/utils/supabase/middleware.ts)
+04_REFERENCE_MANUALS/AUTH_MANUAL.md:1297: │       ├── middleware.ts           # Session refresh
+04_REFERENCE_MANUALS/DATABASE_MANUAL.md:737:   .order('created_at', { ascending: false })
+04_REFERENCE_MANUALS/DATABASE_MANUAL.md:1035:   .order('created_at', { ascending: false })
+04_REFERENCE_MANUALS/DATABASE_MANUAL.md:1039: // Use a project-validated cursor over (created_at, id), ordered by both fields,
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:862: // For UPSERT: from().upsert()
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:863: const upsert = jest.fn().mockResolvedValue({ error: null });
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:864: const from = jest.fn(() => ({ upsert }));
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:893:   const { error } = await supabaseAdmin.from("subscriptions").upsert(
+04_REFERENCE_MANUALS/DATABASE_MANUAL.md:761:   .upsert(
+04_REFERENCE_MANUALS/DATABASE_MANUAL.md:1098: -- Upsert
+04_REFERENCE_MANUALS/DATABASE_MANUAL.md:1118: // Upsert
+04_REFERENCE_MANUALS/DATABASE_MANUAL.md:1119: supabase.from('table').upsert({ id: 1, col: 'val' })
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:1123: (stripe.checkout.sessions.create as jest.Mock).mockResolvedValue({
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:1142: // route handler uses stripe.customers.list(), stripe.paymentIntents.create(), etc.
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:898:       stripe_customer_id: `cus_test_${userId.slice(0, 8)}`,
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:108: export async function GET() {
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:498: export async function GET(
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:708: export async function GET(request: NextRequest) {
+04_REFERENCE_MANUALS/AUTH_MANUAL.md:507: export async function GET(request: NextRequest) {
+04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md:286: export async function GET(request: NextRequest) {
+04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md:250:   shippingMethodId: string | null;
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:215:   shippingMethodId: string;    // Reference ID, not nested object
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:283: export const selectShippingMethodId = (state: CartState) => state.shippingMethodId;
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:351: export const calculateCartTotals = (items: CartItem[], coupon?: Coupon) => {
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:908:   if (error) throw new Error(`Failed to seed subscription: ${error.message}`);
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:818: export const ERROR_MESSAGES = {
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:844:   return ERROR_MESSAGES[code as keyof typeof ERROR_MESSAGES] || ERROR_MESSAGES.UNKNOWN;
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:941:   if (ids.length === 0) return [];
+04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md:439:     // 4. Verify error message displayed
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:613: export const fetchProducts = async (): Promise<Product[]> => {
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:788: import { fetchProducts } from '@/services/productServices';
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:793:   const { items: products, error } = await fetchProducts();
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:856: export const fetchProducts = async () => {
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:940: export const fetchProductsByIds = async (ids: number[]): Promise<Product[]> => {
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:505: import { fetchProducts } from '@/services/productServices';
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:510:   const products = await fetchProducts();
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:612:   const products = await fetchProducts();
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:801:   fetchProducts: async () => {
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:810: export const fetchProducts = async () => {
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:826:     fetchProducts().then(setProducts);
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:869: import { fetchProducts } from '@/services/productServices';
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:873:   const products = await fetchProducts();
+04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md:251:   shippingCost: number;
+04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md:258:   couponDiscount: number;

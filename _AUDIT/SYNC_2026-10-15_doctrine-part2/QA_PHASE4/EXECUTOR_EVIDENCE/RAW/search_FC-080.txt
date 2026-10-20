@@ -1,0 +1,2 @@
+05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md:1077: interface GridProps {
+05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md:1088: const Grid = ({ children, cols = {}, gap = 4, className = '' }: GridProps) => {

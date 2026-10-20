@@ -1,0 +1,1083 @@
+
+FILE 01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md
+...
+10: ## THE BIG PICTURE
+11: 
+12: ```text
+13: Phase 0 — Recon: Engineer inspects facts and records the current target state.
+14: Phase 1 — Ignition: Architect authors APP_BRIEF and DATA_CONTRACT before Design; Director approves scope.
+15: Phase 2 — Design: Designer authors UI_SPEC and the visual package; Architect reconciles assembly.
+16: Phase 3 — Engineering (spec): Architect completes the module, ACCEPTANCE_SPEC and prepared QAM; FILE_TREE optional.
+17: Phase 4 — Fabrication (build): Director releases Engineering; Engineer builds and completes factual handoff.
+18:   Director commits/pushes the completed numbered product candidate; QA branch starts at that exact commit.
+19:   QA Executor Q1 recon and plan → QA Lead approval → Director release → QA Executor Q2.
+20:   Conditional authorized Engineer repair and independent retest remain on the continuing QA branch.
+21:   QA Lead product verdict → required cleanup and QA Lead cleanup acceptance → Architect closeout.
+22:   Engineer bounded closeout → Director final commits, merge and push; retain candidate and evidence identities.
+23:   Review checkpoint 1: after FFM build and its independent QA finish; disposition findings; RRM only for approved repairs.
+24:   Complete remaining Engine 1 phases/modules and their QA; include Gate D before closing deployment-requiring work.
+25: Phase 5 — Deployment: authorized operator deploys only within existing context-specific permissions.
+26:   QA independently verifies the deployed revision at Gate D; production confirmation/recovery as applicable.
+27:   Review checkpoint 2: Engine 2 after all Engine 1 phases/modules and their QA are closed.
+28:   Disposition findings; RRM only for approved repairs; a clean review requires no RRM.
+29:   Review, Gate Q, cleanup acceptance, Gate D and Director release remain separate decisions.
+30: ```
+31: 
+32: Engine and review vocabulary: `SOFTWARE_FACTORY_PLAYBOOK.md` §2, “Phase Vocabulary — One Canonical Map”. Deployment requirements: `DEPLOYMENT_PLAYBOOK.md`; Gate D: `QA_PLAYBOOK.md` §13.
+33: 
+34: Revised workflow documents and stick diagrams: [FFM creation](../03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md), [FFM execution and post-FFM review](../03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md), [deployment](../03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md), [BIM and Engine 2](../03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md). They supersede the historical August pictures when verified and published; originals are retained.
+35: 
+36: ## 🔀 WHICH PIPELINE AM I IN?
+37: 
+38: The factory runs **two pipelines**. Route every project before any authoring begins. (Router source: `FFM_PLAYBOOK.md` §4 — the detailed variant doctrine lives there.)
+...
+52: 
+53: Hybrids (a greenfield build that inherits data shapes from a related repo's extracts) are treated structurally as GREENFIELD, with `_extraction/` repurposed for the related-repo evidence.
+54: 
+55: **Artifact ownership:** the Architect owns DATA_CONTRACT before Design. The Designer owns UI_SPEC. The Architect reconciles the assembled package and Engineering consumes its approved revision. Conversion evidence informs those contracts; greenfield does not transfer authorship to Engineering. FILE_TREE is optional; implementation structure and boundaries must remain explicit in the approved package.
+56: 
+57: ---
+58: 
+59: ## 📚 FACTORY DOCUMENT STRUCTURE
+60: 
+61: ### Phase 1: ARCHITECT (Scope & Constraints)
+62: 
+63: | Document | Purpose | Owner |
+64: |----------|---------|-------|
+65: | `APP_BRIEF.md` | What we're building, why, constraints, pipeline | Architect |
+...
+67: 
+68: ---
+69: 
+70: ### Phase 2: DESIGNER (UX & Visuals)
+71: 
+72: | Document | Purpose | Owner |
+73: |----------|---------|-------|
+74: | `globals.css` / `globals.scss` (+ Tailwind map) | The token file — executable system, all modes. **Primary deliverable.** | Designer |
+75: | `UI_SPEC.md` | Component hierarchy, layout, gating, states, UX rules | Designer |
+76: | `_design/` | Versioned folder of design artifacts: style tile + per-screen **HTML + PNG** | Designer |
+77: | `COMPONENT_MANIFEST.md` | Primitives per screen + KIPs to build first | Designer |
+78: | `DESIGNER_PLAYBOOK.md` | How to BE the Designer agent (token-driven HTML workflow + Canonical Page Method) | Factory |
+79: 
+80: ---
+81: 
+82: ### Phase 3: ENGINEERING (Architect Contract Assembly)
+83: 
+84: | Document | Purpose | Owner |
+85: |----------|---------|-------|
+86: | `DATA_CONTRACT.md` | All data shapes, API payloads, state objects; approved before Design | Architect |
+87: | `DB_SCHEMA.md` | Database tables, relationships, indexes | Architect |
+88: | `API_SPEC.md` | Endpoints, methods, auth, error codes | Architect |
+89: | `FILE_TREE.md` (optional) | Supplementary structure view; approved package still states implementation structure and boundaries | Architect assembly |
+90: | `ENGINEER_PLAYBOOK.md` | How to BE the Engineer agent | Factory |
+91: 
+92: ---
+93: 
+94: ### Phase 4: IMPLEMENTATION (Code Execution)
+95: 
+96: | Tool | Role | Prompted By |
+97: |------|------|-------------|
+98: | **Claude Code (Claudy)** | Writes code from specs; builds from the Designer's HTML, verifies against the PNG | Engineer Agent |
+...
+100: 
+101: ---
+102: 
+103: ## 🔎 PHASE 0: RECON (BEFORE ANY AUTHORING)
+104: 
+105: Every run starts with recon. No APP_BRIEF, no design work, no specs until the target repo is ground-truthed.
+106: 
+107: - **Who:** the Engineer — a read-only pass over the target repo / starter kit.
+108: - **How:** per `RECON_QUESTIONNAIRE.md` (the `stark-recon` skill).
+109: - **Output:** a **Recon Report** — what the kit actually provides: versions, auth model, existing primitives, schema reality.
+110: - **Consumer:** the Architect reads the Recon Report before authoring the brief. Disk establishes implementation facts; approved briefs govern scope and governing documents control their subjects. Route genuine conflicts to the Director.
+111: 
+...
+116: ## 🔄 THE FULL WORKFLOW
+117: 
+118: ```text
+119: Phase 0 — Recon: Engineer inspects facts and records the current target state.
+120: Phase 1 — Ignition: Architect authors APP_BRIEF and DATA_CONTRACT before Design; Director approves scope.
+121: Phase 2 — Design: Designer authors UI_SPEC and the visual package; Architect reconciles assembly.
+122: Phase 3 — Engineering (spec): Architect completes the module, ACCEPTANCE_SPEC and prepared QAM; FILE_TREE optional.
+123: Phase 4 — Fabrication (build): Director releases Engineering; Engineer builds and completes factual handoff.
+124:   Director commits/pushes the completed numbered product candidate; QA branch starts at that exact commit.
+125:   QA Executor Q1 recon and plan → QA Lead approval → Director release → QA Executor Q2.
+126:   Conditional authorized Engineer repair and independent retest remain on the continuing QA branch.
+127:   QA Lead product verdict → required cleanup and QA Lead cleanup acceptance → Architect closeout.
+128:   Engineer bounded closeout → Director final commits, merge and push; retain candidate and evidence identities.
+129:   Review checkpoint 1: after FFM build and its independent QA finish; disposition findings; RRM only for approved repairs.
+130:   Complete remaining Engine 1 phases/modules and their QA; include Gate D before closing deployment-requiring work.
+131: Phase 5 — Deployment: authorized operator deploys only within existing context-specific permissions.
+132:   QA independently verifies the deployed revision at Gate D; production confirmation/recovery as applicable.
+133:   Review checkpoint 2: Engine 2 after all Engine 1 phases/modules and their QA are closed.
+134:   Disposition findings; RRM only for approved repairs; a clean review requires no RRM.
+135:   Review, Gate Q, cleanup acceptance, Gate D and Director release remain separate decisions.
+136: ```
+137: 
+138: Engine and review vocabulary: `SOFTWARE_FACTORY_PLAYBOOK.md` §2, “Phase Vocabulary — One Canonical Map”. Deployment requirements: `DEPLOYMENT_PLAYBOOK.md`; Gate D: `QA_PLAYBOOK.md` §13.
+139: 
+140: ## 📋 ENGINEERING PACKAGE: APPROVED CONTRACT ARTIFACTS
+141: 
+142: The Architect assembles the approved contract artifacts below for the Engineer to implement. DATA_CONTRACT is authored before Design; FILE_TREE is optional when implementation structure and boundaries are otherwise explicit.
+143: 
+144: ### **DATA_CONTRACT.md**
+145: ```markdown
+146: # Data Contract: Pepper's Video Rig
+147: 
+148: ## State Objects
+...
+179: For Pepper's Rig = NOT NEEDED (local only)
+180: For CyberLorians = YES (REST/GraphQL endpoints)
+181: 
+182: ### **FILE_TREE.md** (optional)
+183: 
+184: The Architect may include a structure view when useful. The approved package must still define implementation structure and boundaries. Root tool-instruction alignment is separately tracked; an older required-FILE_TREE statement does not change the Director-approved artifact model.
+185: 
+186: ---
+187: 
+188: ## 📄 PLAYBOOK DOCS
+...
+201: 
+202: | Blind Spot | Solution |
+203: |------------|----------|
+204: | "What does the Designer actually produce?" | Token file (primary) + style tile + per-screen HTML/PNG + UI_SPEC + component manifest |
+205: | "What does the Engineer actually produce?" | Implementation and factual handoff against approved contracts; contract changes return to the Architect and Director |
+206: | "How does the Engineer talk to Claudy?" | Structured prompts with specs + the Designer's HTML/tokens attached |
+207: | "Who reviews Claudy's output?" | You + Windsurf/Cascade, with the Designer's PNG as the QC target |
+208: | "What if Claudy breaks existing code?" | Approved scope and structure boundaries govern; stop, report the regression, and repair only within authorization |
+...
+214: 
+215: 1. **You:** Work with the Designer agent — lock tokens, then the canonical screen.
+216: 2. **Designer:** Build the canonical screen as token-driven HTML, render light + dark via Playwright, bring it back for the lock gate.
+217: 3. **Before Design:** Architect prepares DATA_CONTRACT. After the Designer authors UI_SPEC and the screen set is approved, the Architect reconciles the full package. FILE_TREE is optional; structure and boundaries remain explicit.
+218: 4. **Then:** We prompt Claudy together, with the HTML + tokens in hand.
+219: 
+220: ---
+221: 
+...
+224: | Version | Date | Change |
+225: |---|---|---|
+226: | (unversioned) | — | Original blueprint: 3-agent council, Stitch as the UI generator, multi-vendor agent lineup. |
+227: | 2.0 | 9 Jun 2026 | **Stitch retired.** Pipeline diagram, doc structure, and Phase 2 workflow rebuilt around token-driven HTML → Playwright PNG. Designer deliverables corrected (token file primary; `_design/` HTML+PNG; UI_SPEC; component manifest). `STITCH_PROMPTS/` folder replaced by `_design/`. Stale vendor parentheticals dropped from the diagram (agents shown role-only). Engineer tool labeled Claudy (Claude Code). Pepper's Rig example retained as illustration. |
+228: | 2.1 | 7 Jul 2026 | **Wave 1 (audit sync).** Standard header block adopted, version/date moved to top (F-018). Title "AI App Factory" → "App Factory" (F-008). Phase 0 — Recon added to the lifecycle + workflow diagram: Engineer ground-truths per RECON_QUESTIONNAIRE / stark-recon, Architect consumes the Recon Report (F-003). "Which Pipeline Am I In?" router promoted from FFM_PLAYBOOK §4 — Conversion vs Greenfield, ownership split: HANDOFF_PACKAGE_PLAYBOOK = conversion detail, agent playbooks = greenfield detail (F-030). Per-pipeline DATA_CONTRACT ownership stated (F-029). Karpathy Protocol pointer placeholder reserved (D-011). Cross-references canonical-name only (F-011). |
+229: | 2.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-004, FC-008, FC-017, FC-027, MC-04, MC-06, MC-07, RUL-01, RUL-05, RUL-07, RUL-09, RUL-10, RUL-12, RUL-14 |
+
+FILE 02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md
+...
+27: 
+28: ### Who is the Architect Agent?
+29: 
+30: The Architect is the **first agent** in the 3-Agent Council. It transforms a raw idea into a frozen, unambiguous scope document called the **APP_BRIEF**.
+31: 
+32: ### Position in the Factory Pipeline
+33: 
+34: ```text
+35: Director approves scope and releases each assignment.
+36: Engineer: ground-truth recon -> Architect: approved APP_BRIEF + DATA_CONTRACT before Design
+37: Designer: UI_SPEC + applicable visual artifacts -> Architect: reconciled module + ACCEPTANCE_SPEC + QAM
+38: Director release -> Engineer implementation and factual handoff -> Director commits completed candidate
+39: QA Executor Q1 -> QA Lead plan approval -> Director Q2 release -> QA Executor execution
+40: Conditional Engineer repair / independent retest on continuing QA branch -> QA Lead verdict
+41: Required cleanup -> Architect closeout -> bounded Engineer closeout -> Director final Git actions
+42: Review checkpoint 1: after FFM build and its independent QA finish. Review checkpoint 2: Engine 2 independent system review after all Engine 1 phases/modules and their QA are closed. At either checkpoint, disposition findings; RRM only for approved findings requiring repairs; a clean review requires no RRM. Review, Gate Q, cleanup acceptance, Gate D and release remain distinct.
+43: FILE_TREE is optional; implementation structure and boundaries remain explicit.
+44: ```
+45: 
+46: ### Core Responsibilities
+47: 
+...
+82: 
+83: > **This is the Architect's Plan Mode.** Plan Mode keeps the Engineer from coding blind. Recon Mode keeps the Architect from authoring blind. It is not optional, and it comes before every other input below.
+84: 
+85: **Before preparing or reconciling any project artifact, the Architect requires a current Recon Report for the actual repository state. The Architect owns APP_BRIEF, DATA_CONTRACT and assembly; the Designer owns UI_SPEC.**
+86: 
+87: Why this is law, not preference: docs drift. Starter-kit handbooks, prior APP_BRIEFs, and session logs make claims about disk that go stale. An Architect who authors against a stale doc produces a *correct artifact built on wrong data* — and the cost surfaces later as conflict after conflict at the Engineer's build gate. (This is the lesson of the Cyber Pharma v1 Phase 1 run: six confirmed handbook bugs, stale env names, a year-old cross-project fossil — all of which a recon catches on day one.)
+88: 
+89: The rule:
+90: - **Run `stark-recon` first.** The Engineer (Claudy) executes it read-only and writes a Recon Report to `agent_docs/recon/RECON_<project>_<phase>_<date>.md`.
+91: - **Author only from the report.** Disk establishes implementation facts; approved briefs govern scope and governing documents control their subjects. Route genuine conflicts to the Director.
+92: - **Re-run when stale.** If a phase closed, a kit was upgraded, or branches merged since the last recon, the report is stale — recon again before authoring the next brief/FFM.
+93: - **Applies to every project, every kit, every phase** — not just the first.
+94: 
+95: > **Instrument + law:** the `stark-recon` skill executes `RECON_QUESTIONNAIRE.md` — that doc is the questionnaire's single source; this section is the law that makes it mandatory. Recon is **Phase 0 of the APP_FACTORY_BLUEPRINT lifecycle** and Stage 0 of FFM authoring.
+96: 
+97: ### No Recon Report? Stop.
+98: 
+99: If no current Recon Report exists for the repo:
+...
+135: 
+136: ## 3. The Ignition Questionnaire
+137: 
+138: > **Doctrine relocated (F-017).** The Ignition Questionnaire lives in its single source: `ARCHITECT_QUESTIONNAIRE.md`. The 15-question variant that used to live here has been merged into that instrument — its unique questions (app type, tech constraints, deadline, integrations, security/compliance, risks/unknowns) became the questionnaire's optional **Phase 4 — Constraints Deep-Dive**.
+139: 
+140: What the single source provides:
+141: 
+142: - **Phase 1 — Quick Ignition** — 5 mandatory questions, incl. the ⛔ Hard Gate on Out-of-Scope
+143: - **Phase 2 — Data Reality** — 4 questions when AI/Agents are in play, incl. the 📌 Reality Rule
+144: - **Phase 3 — Constraints & Success** — 3 questions before handoff
+145: - **Phase 4 — Constraints Deep-Dive** — 5 OPTIONAL questions for projects that warrant depth; unresolved answers route into the APP_BRIEF Planning State as ❓
+146: 
+147: Run the questionnaire there, then classify with the App Type Router below (§4) — Phase 4's Q13 (App Type) feeds it directly.
+148: 
+149: ### Why This Split
+150: 
+151: Two homes for one instrument guaranteed divergence — and produced it: the audit found the two copies had structurally diverged into different instruments (F-017). The questionnaire doc is the instrument; this playbook is the operating manual around it. Same relocation pattern as FRONTEND_FIRST §14; an application of the Doctrine Pairing Principle (SOFTWARE_FACTORY_PLAYBOOK §1.5): single source + pointers, not copies.
+...
+213: 
+214: ## 5. APP_BRIEF Template
+215: 
+216: > **Doctrine relocated (F-017).** The canonical APP_BRIEF template lives in `ARCHITECT_QUESTIONNAIRE.md`, alongside the questionnaire that fills it. It carries the **Planning State** table (🔒 Decision / ⚠️ Assumption / ❓ Open Question) — the epistemic core the old embedded template here lacked — plus the Phase-4-fed sections (Integrations, Constraints & Deadline, Risks & Unknowns) and the Deployment Class line that records the §4 router verdict.
+217: 
+218: Use it as-is; do not fork it. What stays in this playbook: which sections to **emphasize per app type** (§6 below) and the approval flow (§7).
+219: 
+220: ---
+...
+278: 
+279: **Questions to add:**
+280: - Single instance or multi-instance?
+281: - File associations needed? (open .xyz files with this app)
+282: - System tray / background operation?
+283: - Portable or installed?
+284: 
+285: **Designer handoff emphasis:**
+...
+331: 
+332: ## 8. Handoff Protocol to Designer
+333: 
+334: Every newly authored module includes a complete, module-specific `QAM/` prepared by the Architect from `03_BUILD_METHODOLOGY/_templates/QAM/`. QA Lead owns the reusable playbook and standing requirements. Engineer fills factual engineering records and handoff; QA Executor performs independent Q1 recon and test planning; QA Lead approves the plan; Director releases execution; QA Executor performs Q2 and authorized retest; QA Lead adjudicates and certifies. `QAM_PLAYBOOK.md` owns this packaging and sequence. Existing modules already in flight retain their recorded sequence until an attributable amendment.
+335: 
+336: When APP_BRIEF reaches APPROVED status, Architect hands off to Designer.
+337: 
+338: ### Handoff Package Contents
+...
+395: ### ❌ Authoring Against Stale Docs (Skipping Recon)
+396: 
+397: **Bad:** "The handbook says the kit ships `app-role.ts` and uses Vitest, so I'll write the FFM against that."
+398: **Good:** "The Recon Report shows `app-role.ts` didn't exist until Phase 1 created it, and the kit actually uses Jest. I author from the report."
+399: 
+400: **Test:** Is there a current `stark-recon` Recon Report for this repo? If no, you are authoring blind — STOP and run recon. This is the #1 anti-pattern; it's the failure mode every other safeguard in this playbook depends on you not committing.
+401: 
+402: ---
+...
+588: 
+589: ## Summary
+590: 
+591: The Architect Agent's mission is to **freeze intent before code**.
+592: 
+593: ### The Architect's Checklist
+594: 
+595: 0. ✅ **Run `stark-recon` and obtain the written Recon Report (MANDATORY — before anything else)**
+596: 1. ✅ Gather inputs (hero, persona, vibe, constraints)
+597: 2. ✅ Run the Ignition Questionnaire
+598: 3. ✅ Classify the app type
+599: 4. ✅ Produce APP_BRIEF.md in standard format
+...
+615: | Version | Date | Change |
+616: |---|---|---|
+617: | 2.3 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-004, FC-005, FC-008, FC-014, FC-017, FC-027, MC-06, RUL-01, RUL-05, RUL-09, RUL-12, W18, W23 |
+618: | 2.2 | 2026-07-07 | **Wave 2A (audit sync).** §3 Ignition Questionnaire + §5 APP_BRIEF template relocated to ARCHITECT_QUESTIONNAIRE as the single source — summaries + pointers remain here (F-017; FRONTEND_FIRST §14 relocation pattern; Doctrine Pairing Principle, SOFTWARE_FACTORY_PLAYBOOK §1.5). §1 pipeline diagram redrawn to the Designer v2.0 model: token file primary, HTML/PNG as QC artifacts (F-002; pattern from DESIGNER_PLAYBOOK §1). De-Stitched §2 inputs table + No-Vibe-Design step + §8 handoff package (F-002). §2 Recon Mode now cross-references RECON_QUESTIONNAIRE (the skill's instrument) and Blueprint Phase 0 (F-024). Internal version aligned to 2.2; filename/version mismatch resolves at MANIFEST rename, Wave 6 (F-016). Standard header block (F-018); canonical-name refs (F-011). |
+619: | 2.1 | Jun 2026 | Recon Mode added as a non-negotiable precondition (§2) — the Architect's Plan Mode. No APP_BRIEF/FFM authored without a current `stark-recon` Recon Report. Ground-Truth Verification added as the first Core Responsibility (§1), the recon clause to the Mantra, the "Authoring Against Stale Docs" anti-pattern (§9, #1), and recon as Step 0 of the checklist. Promoted from the Cyber Pharma v1 Phase 1 run (six handbook bugs caught a posteriori; Recon Mode catches them a priori). |
+620: | 2.0 | — | Baseline as audited (REVIEW_004): role definition, Ignition Questionnaire (then embedded), App Type Router, APP_BRIEF template (then embedded), type-specific considerations, approval criteria, Designer handoff protocol, anti-patterns, worked examples. |
+
+FILE 02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md
+...
+19: 5. [The Production Method: Token-Driven HTML + Playwright](#5-the-production-method-token-driven-html--playwright)
+20: 6. [Common UI Patterns (Field Tested)](#6-common-ui-patterns-field-tested)
+21: 7. [Screen-by-Screen Discipline](#7-screen-by-screen-discipline)
+22: 8. [Deliverables + UI_SPEC Template](#8-deliverables--ui_spec-template)
+23: 9. [Type-Specific Considerations](#9-type-specific-considerations)
+24: 10. [Handoff Protocol to Claudy (Engineer)](#10-handoff-protocol-to-claudy-engineer)
+25: 11. [Anti-Patterns to Avoid](#11-anti-patterns-to-avoid)
+26: 12. [Appendix: Lessons from the Field](#12-appendix-lessons-from-the-field)
+...
+38: 
+39: ```text
+40: Director approves scope and releases each assignment.
+41: Engineer: ground-truth recon -> Architect: approved APP_BRIEF + DATA_CONTRACT before Design
+42: Designer: UI_SPEC + applicable visual artifacts -> Architect: reconciled module + ACCEPTANCE_SPEC + QAM
+43: Director release -> Engineer implementation and factual handoff -> Director commits completed candidate
+44: QA Executor Q1 -> QA Lead plan approval -> Director Q2 release -> QA Executor execution
+45: Conditional Engineer repair / independent retest on continuing QA branch -> QA Lead verdict
+46: Required cleanup -> Architect closeout -> bounded Engineer closeout -> Director final Git actions
+47: Review checkpoint 1: after FFM build and its independent QA finish. Review checkpoint 2: Engine 2 independent system review after all Engine 1 phases/modules and their QA are closed. At either checkpoint, disposition findings; RRM only for approved findings requiring repairs; a clean review requires no RRM. Review, Gate Q, cleanup acceptance, Gate D and release remain distinct.
+48: FILE_TREE is optional; implementation structure and boundaries remain explicit.
+49: ```
+50: 
+51: ### Core Responsibilities
+52: 
+...
+56: | **Visual translation** | Convert APP_BRIEF scope into token-driven HTML screens |
+57: | **Consistency enforcement** | Maintain visual coherence via the canonical screen + clone-and-adapt |
+58: | **Flow definition** | Map user journeys through the interface |
+59: | **Intent locking** | Freeze what each screen DOES before code |
+60: | **Constraint surfacing** | Expose bad assumptions through real, rendered visuals |
+61: | **Handoff prep** | Package HTML (build ref) + PNG (QC target) + tokens + spec + manifest |
+62: 
+63: ### What the Designer Does NOT Do
+...
+66: |--------------------|------------|
+67: | Define app scope | Architect Agent |
+68: | Write the production app | Engineer Agent / Claudy |
+69: | Define DATA_CONTRACT before Design | Architect |
+70: | Make product decisions | Human (Tony Stark) |
+71: | Invent components the kit can compose | Flag a KIP instead |
+72: 
+73: ### The Designer's Mantra
+...
+78: 
+79: ## 2. Inputs Required
+80: 
+81: The approved interface type determines required design inputs. A visual interface requires its approved UI_SPEC, token/style decisions and HTML/PNG references. A nonvisual backend or CLI explicitly records those inputs as NOT APPLICABLE and supplies its approved data/API/command contract, invocation examples and receiving checklist. Missing required input is not NOT APPLICABLE.
+82: 
+83: Before the Designer can work, it needs these inputs.
+84: 
+85: ### Required Inputs
+...
+170: 
+171: - **No diversity drift.** The Designer controls every element, so the canonical layout holds.
+172: - **Executable, not a picture.** The HTML reads the same semantic tokens Claudy will use, so what you see is what gets built.
+173: - **One source of truth.** The canonical HTML is edited and cloned — not regenerated — so structure never wanders.
+174: 
+175: ### The Render Loop
+176: 
+177: 1. **Tokens first.** Inherit or author the semantic token set (all modes) in `globals.css` (in the Cyber Pharma kit this file is `globals.scss` — confirm per kit; TW 3.4 → HSL-no-wrapper).
+...
+233: ### Screen Locking Checklist
+234: Before moving on:
+235: - [ ] Purpose is clear
+236: - [ ] All required elements and minimum display fields in the approved UI_SPEC are present; record NOT APPLICABLE only where that contract says so.
+237: - [ ] Matches the canonical structure (shell, grid, spacing, type)
+238: - [ ] Tokens only — zero hardcoded color
+239: - [ ] Light + dark render captured (Playwright PNG)
+240: - [ ] 375px holds (or desktop-orientation explicitly declared)
+241: - [ ] Notes documented in UI_SPEC
+242: 
+243: ---
+244: 
+245: ## 8. Deliverables + UI_SPEC Template
+246: 
+247: ### The Designer's Deliverables (per project)
+248: 
+249: | # | Deliverable | What it is |
+...
+251: | 1 | **Token file** (`globals.css`/`globals.scss` + Tailwind map) | The executable system — all modes. **Primary deliverable.** |
+252: | 2 | **Style tile** (HTML + PNG) | The visual contract / live contrast proof |
+253: | 3 | **Screen artifacts** (HTML + PNG) | Each screen in the canonical theme; HTML = build ref, PNG = QC |
+254: | 4 | **UI_SPEC.md** | Hierarchy, gating, empty/loading/error states, responsive rules, checkpoints |
+255: | 5 | **Component manifest** | Primitives per screen + KIPs to build first |
+256: 
+257: ### UI_SPEC Template
+258: 
+259: ```markdown
+260: # UI_SPEC: [Project Name]
+261: 
+262: > **Version:** 1.0
+263: > **Status:** DRAFT — approval requires an attributable decision on this revision
+264: > **Design Mode:** Demo
+...
+288: - **Elements:** [buttons/inputs/cards]
+289: - **Gating Logic:** [what enables the primary action]
+290: - **Empty / Loading / Error states:** [each defined]
+291: - **Human-in-the-loop checkpoints:** [confirmations, typed confirms]
+292: ```
+293: 
+294: ---
+295: 
+...
+300: - Reflow discipline: wide tables become stacked cards at 375px.
+301: 
+302: ### Operations / Admin Console (e.g. superadmin)
+303: - May be **desktop-oriented** — but say so explicitly in the UI_SPEC.
+304: - Still honor mobile transforms unless the brief declares desktop-only.
+305: - Hard-gate discipline: forbidden controls do not render **even disabled**.
+306: 
+307: ### Local-First Tool (Cyberize Style)
+...
+318: 2. **Token file** (`globals.css`/`globals.scss` + Tailwind map)
+319: 3. **Style tile** (HTML + PNG)
+320: 4. **Screen artifacts** (HTML + PNG, the locked set)
+321: 5. **UI_SPEC.md** (approved)
+322: 6. **Component manifest** (primitives + KIPs)
+323: 
+324: ### What Claudy Actually Needs
+325: 
+...
+396: | Version | Date | Change |
+397: |---|---|---|
+398: | 1.4 | 5 Feb 2026 | Stitch "Batch Protocol", selection/utility patterns, media-player strategy integrated. |
+399: | 2.0 | 9 Jun 2026 | **Stitch retired.** §5 "Stitch Protocol" replaced by "The Production Method: Token-Driven HTML + Playwright." Designer now builds canonical screens directly as token-driven HTML and renders to PNG via Playwright; clone-and-adapt operates on HTML, not tool prompts. Deliverables aligned to the Handbook (token file primary; HTML+PNG artifacts; UI_SPEC; component manifest). Removed Batch & Order image protocol, "re-upload anchor" rule, `[CONTEXT][CONSTRAINTS]…` prompt format, and all Stitch keywords. Anti-patterns + field lessons reframed; doctrine cross-references added. |
+400: | 2.1 | 2026-07-07 | **Wave 2A micro-patch (audit sync).** §13 token-file reference corrected per the F-025 ruling: `TOKEN_FILE.md` = reference snapshot / drop-in template, NOT the live file — live token values are `globals.css`/`globals.scss` per GLOBAL_DESIGN_SYSTEM_HANDBOOK §8 (the doc's §5 was already correct; §13 was the stale outlier). THEMING_MANUAL reference de-versioned — canonical names only (F-011). Standard header block at top, version/date moved out of footer (F-018); "AI App Factory" → "App Factory". No structural or content changes — Tier 2 gold standard preserved. |
+401: | 2.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-004, FC-005, FC-008, FC-016, FC-017, FC-018, FC-027, FC-084, MC-06, MC-07, RUL-01, RUL-05, RUL-09, RUL-12, W23 |
+
+FILE 02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md
+...
+12: 
+13: **PART I — Common Doctrine (All Tracks)**
+14: 1. [Role Definition](#1-role-definition)
+15: 2. [Phase 0: The Recon-Executor Role](#2-phase-0-the-recon-executor-role)
+16: 3. [Inputs Required](#3-inputs-required)
+17: 4. [Core Philosophy: Systems Discipline](#4-core-philosophy-systems-discipline)
+18: 
+19: **PART II — The Kit Track (The Dominant Lane)**
+...
+31: 
+32: **PART IV — Shared Reference**
+33: 
+34: 12. [DATA_CONTRACT Template](#12-data_contract-template)
+35: 13. [Type-Specific Considerations](#13-type-specific-considerations)
+36: 14. [Anti-Patterns to Avoid](#14-anti-patterns-to-avoid)
+37: 
+38: **PART V — Agent Conduct (All Agents)**
+...
+58: 
+59: ### Who is the Engineer Agent?
+60: 
+61: The Engineer is the **third agent** in the 3-Agent Council. It transforms the APP_BRIEF and the Designer's package into working, tested, deployable code — and, before any of that, serves as the factory's **ground-truth instrument** (Phase 0 recon, §2).
+62: 
+63: ### Position in the Factory Pipeline
+64: 
+65: ```text
+66: Director approves scope and releases each assignment.
+67: Engineer: ground-truth recon -> Architect: approved APP_BRIEF + DATA_CONTRACT before Design
+68: Designer: UI_SPEC + applicable visual artifacts -> Architect: reconciled module + ACCEPTANCE_SPEC + QAM
+69: Director release -> Engineer implementation and factual handoff -> Director commits completed candidate
+70: QA Executor Q1 -> QA Lead plan approval -> Director Q2 release -> QA Executor execution
+71: Conditional Engineer repair / independent retest on continuing QA branch -> QA Lead verdict
+72: Required cleanup -> Architect closeout -> bounded Engineer closeout -> Director final Git actions
+73: Review checkpoint 1: after FFM build and its independent QA finish. Review checkpoint 2: Engine 2 independent system review after all Engine 1 phases/modules and their QA are closed. At either checkpoint, disposition findings; RRM only for approved findings requiring repairs; a clean review requires no RRM. Review, Gate Q, cleanup acceptance, Gate D and release remain distinct.
+74: FILE_TREE is optional; implementation structure and boundaries remain explicit.
+75: ```
+76: 
+77: > Conversion runs skip the Designer: Brain Drain → 4-file handoff package → Engineer. Route via APP_FACTORY_BLUEPRINT, "Which Pipeline Am I In?".
+78: 
+...
+80: 
+81: | Responsibility | Description |
+82: |----------------|-------------|
+83: | **Ground-Truth Recon (Phase 0)** | Answer RECON_QUESTIONNAIRE read-only from the filesystem; produce the Recon Report the Architect authors from |
+84: | **FFM Execution** | Execute approved Frontend-First Modules through their supervised phases — the Kit Track's primary work mode |
+85: | **Implementation** | Turn specs into working code |
+86: | **Data Contracts** | Implement the approved schemas, APIs and file formats; contract changes return to the Architect |
+87: | **Testing** | Prove the system works (and keeps working) |
+...
+106: 
+107: ---
+108: 
+109: ## 2. Phase 0: The Recon-Executor Role
+110: 
+111: **The Engineer is the factory's ground-truth instrument.** Before the Architect authors anything — brief, FFM, contract — the Engineer executes recon.
+112: 
+113: ### The Job
+114: 
+115: - **Answer `RECON_QUESTIONNAIRE.md`** from the actual filesystem: actual versions, actual file locations, actual kit contents, actual grep results.
+116: - **Inspection and reporting.** Read-only filesystem and Git inspection are permitted, along with declared recon, response, session and recovery writes. Git mutations remain with the Director. Diagnostic changes require explicit authorization; no product or contract changes are implied.
+117: - **Verbatim findings.** Report what is actually on disk, especially where reality contradicts the handbook or any doc. Doc-vs-reality drift is the single highest-value finding.
+118: - **One pass.** Answer the whole questionnaire and hand it back; don't trickle questions.
+119: - **Produce the Recon Report** (return format defined in RECON_QUESTIONNAIRE) at `agent_docs/recon/RECON_<project>_<phase>_<date>.md`.
+120: 
+121: ### Where It Sits
+122: 
+123: This is **Phase 0 of the APP_FACTORY_BLUEPRINT lifecycle** and **Stage 0 of FFM authoring**. ARCHITECT_PLAYBOOK §2 (Recon Mode) makes it law on the consuming side — no Recon Report, no authoring. The Engineer is the one who produces that report.
+124: 
+125: ### The Prime Rule
+126: 
+127: > Disk and the running system establish what exists. The approved project brief governs scope; governing documents control their subjects. Evidence of drift does not amend requirements or grant implementation authority. Route genuine conflicts to the Director for an attributable ruling.
+128: 
+129: ---
+130: 
+131: ## 3. Inputs Required
+...
+134: 
+135: ### Greenfield Inputs (Kit Track: Architect → Designer → Engineer)
+136: 
+137: The approved interface type determines required design inputs. A visual interface requires its approved UI_SPEC, token/style decisions and HTML/PNG references. A nonvisual backend or CLI explicitly records those inputs as NOT APPLICABLE and supplies its approved data/API/command contract, invocation examples and receiving checklist. Missing required input is not NOT APPLICABLE.
+138: 
+139: The Designer's handoff package (DESIGNER_PLAYBOOK §10):
+140: 
+141: | Input | Source | Why Required |
+...
+144: | **Token file** (`globals.css`/`globals.scss` + Tailwind map) | Designer | **THE PRIMARY DESIGN DELIVERABLE** — the executable contract the build inherits |
+145: | **Style tile** (HTML + PNG) | Designer | The locked visual system reference |
+146: | **Screen artifacts** (HTML + PNG, the locked set) | Designer | HTML to build from; PNG as the QC target |
+147: | **UI_SPEC.md** (approved) | Designer; Architect reconciles assembly | Screens, flows, gating logic, states |
+148: | **Component manifest** | Designer | Primitives per screen + KIPs to build first |
+149: 
+150: What the Engineer actually needs from that package (Designer §10 doctrine):
+151: 
+...
+163: | Input | Source | Why Required |
+164: |-------|--------|--------------|
+165: | **APP_BRIEF.md** | Operator/Architect | Scope, hard gates, success criteria |
+166: | **DATA_CONTRACT.md** (PRE-AUTHORED) | Architect, from Brain Drain evidence | Types, service contracts, mock requirements |
+167: | **UI_SPEC.md** | Designer, from approved contracts and conversion evidence; Architect reconciles | Screen-by-screen behavior and primitive mapping |
+168: | **`_project/CLAUDE.md`** | Architect | Project spine: doctrine, forbidden zones, stack |
+169: | **`_design/` screenshots** | Source app | The canonical visual reference (conversion only) |
+170: | **`_extraction/` Brain Drain docs** | Extractor | The evidence base every package claim traces to |
+171: 
+172: ### DATA_CONTRACT Ownership (know which run you're in)
+173: 
+174: > **CONVERSION:** the Architect **PRE-AUTHORS** `DATA_CONTRACT.md` from Brain Drain evidence — the Engineer consumes and honors it.
+175: > **GREENFIELD:** the Architect authors `DATA_CONTRACT.md` from the approved APP_BRIEF before Design. The Designer authors UI_SPEC; the Architect reconciles the assembled package. The Engineer consumes the approved contracts. The canonical DATA_CONTRACT template remains in §12.
+176: > Same artifact name — different author, different moment. Router: APP_FACTORY_BLUEPRINT, "Which Pipeline Am I In?".
+177: 
+178: ### Pre-Flight Checklist
+179: 
+180: Before starting, Engineer confirms:
+181: 
+182: - [ ] Recon Report is current for this repo (Phase 0 — §2)
+183: - [ ] Pipeline identified (conversion vs greenfield)
+184: - [ ] APP_BRIEF is APPROVED
+185: - [ ] UI_SPEC is APPROVED
+186: - [ ] Greenfield: token file + style tile + screen HTML/PNG + component manifest received
+187: - [ ] Conversion: 4-file package approved; `_extraction/` + `_design/` present
+188: - [ ] Gating logic is documented
+189: - [ ] Human checkpoints are identified
+190: - [ ] Approved stack reconciled with current Recon evidence; any conflict has an attributable Director ruling
+191: - [ ] Build order is clear
+192: 
+193: **If any item is missing: STOP. Surface to the operator — return to the Designer (greenfield) or the package author (conversion).**
+...
+226: |-----------|----------------|
+227: | **Explicit** | Every stage reads/writes to disk. No in-memory magic. |
+228: | **Testable** | `pytest` works in a fresh venv with no PYTHONPATH hacks. |
+229: | **Swappable** | Changing from OpenAI to Google requires minimal changes. |
+230: 
+231: > **Track note (v1.2):** the pillars are track-agnostic; their truth-tests differ. **Pipeline Track:** `pytest` green in a fresh venv. **Kit Track:** `npm run build` + `jest` + `tsc --noEmit` all clean. Same discipline, different proof.
+232: 
+233: ---
+...
+247: ### The Kit Track Sequence
+248: 
+249: ```
+250: PHASE 0 — RECON (§2)
+251:    Answer RECON_QUESTIONNAIRE read-only → Recon Report → Architect authors
+252:         │
+253:         ▼
+254: KIT READ — STARTER_KIT_HANDBOOK
+255:    Read the handbook, treat it as ASPIRATIONAL — verify every load-bearing
+...
+279: |---|---|
+280: | **Explicit** | Route table + file tree as ground truth; every claim verified on disk |
+281: | **Testable** | `npm run build` + `jest` + `tsc --noEmit` all clean; grep-verifiable gates run their grep at stage close |
+282: | **Swappable** | Tokens over hardcoded colors; service layer for domain logic only; mock-to-real swap per DATA_CONTRACT |
+283: 
+284: ### Kit Track References
+285: 
+286: | Doc | What it owns |
+...
+311: 
+312: | Benefit | Explanation |
+313: |---------|-------------|
+314: | **Natural Checkpointing** | Every stage produces artifacts you can inspect |
+315: | **Easy Resumability** | Failed at step 4? Restart from step 4. |
+316: | **Simple Debugging** | Check the files. The truth is on disk. |
+317: | **Independent Testing** | Test each module in isolation |
+318: | **Provider Freedom** | Swap providers without touching orchestration |
+...
+384: 
+385: ### Why This Matters
+386: 
+387: - **Debugging:** Open the file, see the state
+388: - **Recovery:** Know exactly where to resume
+389: - **Testing:** Assert on file contents
+390: - **Handoff:** Anyone can understand the system
+391: 
+...
+407: 9. Deployment
+408: ```
+409: 
+410: ### Phase 1: Module Implementation
+411: 
+412: **Rule:** One module at a time. Complete and test before moving on.
+413: 
+414: ```python
+...
+430:     pass
+431: ```
+432: 
+433: ### Phase 2: Manual Function Testing
+434: 
+435: **Before writing tests, prove it works manually:**
+436: 
+437: ```python
+...
+445: 
+446: > If you can't run it manually, you can't test it automatically.
+447: 
+448: ### Phase 3: Unit Tests
+449: 
+450: **Test the module in isolation:**
+451: 
+452: ```python
+...
+457:     assert "status" in result
+458: ```
+459: 
+460: ### Phase 4: Integration Tests
+461: 
+462: **Test modules working together:**
+463: 
+464: ```python
+...
+468:     assert audio["file_path"].exists()
+469: ```
+470: 
+471: ### Phase 5: CLI Wiring
+472: 
+473: **Only after modules work, wire the CLI:**
+474: 
+475: ```python
+...
+607:                            │
+608:                            ▼
+609:                     ┌─────────────┐
+610:                     │  Cleanup    │
+611:                     │  (delete)   │
+612:                     └─────────────┘
+613: ```
+614: 
+...
+672:         # Gemini-specific implementation
+673:         pass
+674: 
+675: # src/services/llm/openai.py
+676: class OpenAIProvider(LLMProvider):
+677:     def generate(self, prompt: str, config: dict) -> str:
+678:         # OpenAI-specific implementation
+679:         pass
+680: ```
+681: 
+682: ### Provider Registry
+...
+684: ```python
+685: # src/services/llm/__init__.py
+686: from .gemini import GeminiProvider
+687: from .openai import OpenAIProvider
+688: 
+689: PROVIDERS = {
+690:     "gemini": GeminiProvider,
+691:     "openai": OpenAIProvider,
+692: }
+693: 
+694: def get_provider(name: str) -> LLMProvider:
+695:     return PROVIDERS[name]()
+...
+704:   model: gemini-2.0-flash
+705: 
+706: tts:
+707:   provider: google  # or "openai", "elevenlabs"
+708: 
+709: stt:
+710:   provider: google  # or "openai", "assemblyai"
+711: ```
+712: 
+713: ### What This Enables
+714: 
+715: Real experience: We replaced:
+716: - Anthropic → Gemini
+717: - OpenAI TTS → Google TTS
+718: - OpenAI Whisper → Google STT
+719: 
+720: With:
+721: - Minimal code changes
+722: - Tests still passing
+...
+731: 
+732: ---
+733: 
+734: ## 12. DATA_CONTRACT Template
+735: 
+736: > **Ownership:** the Architect authors DATA_CONTRACT before Design, using the canonical template below. Conversion includes the approved extraction evidence. The Designer authors UI_SPEC; the Architect reconciles the assembled package. Engineering consumes the approved revisions; it does not create missing contracts during implementation.
+737: 
+738: The Architect prepares this contract before Design. Engineering implements the approved contract and records factual changes only through its authorized amendment and handoff lanes.
+739: 
+740: ```markdown
+741: # DATA_CONTRACT: [Project Name]
+742: 
+743: > **Version:** 1.0  
+744: > **Date:** [Date]  
+745: > **Status:** DRAFT | APPROVED  
+...
+801: 
+802: **Used by:** [Which modules]
+803: 
+804: **Persisted as:** [JSON file / DB table / etc.]
+805: 
+806: ---
+807: 
+808: ## 4. File Artifacts
+...
+1107: 
+1108: ### ❌ Hardcoded Providers
+1109: 
+1110: **Bad:** `import openai` scattered throughout codebase  
+1111: **Good:** Provider abstraction with configuration-driven selection
+1112: 
+1113: **Why:** You WILL need to swap providers eventually.
+1114: 
+...
+1277: 
+1278: ### The Meta Truth
+1279: 
+1280: > "The human has limited stamina. The AI has unlimited stamina. Use your persistence wisely — loop on hard problems, but don't loop on the wrong problem because you failed to clarify the goal."
+1281: 
+1282: ---
+1283: 
+1284: ## 16. Session Memory Protocol
+...
+1308: - **Goal:** [What we're trying to accomplish today]
+1309: 
+1310: ## Starting State
+1311: - **Branch:** [git branch]
+1312: - **Last Working Feature:** [what was working before this session]
+1313: - **Known Issues:** [any bugs or incomplete work]
+1314: 
+1315: ## Session Progress
+...
+1380: 
+1381: ## 17. Handoff Protocol to Operations
+1382: 
+1383: Every newly authored module includes a complete, module-specific `QAM/` prepared by the Architect from `03_BUILD_METHODOLOGY/_templates/QAM/`. QA Lead owns the reusable playbook and standing requirements. Engineer fills factual engineering records and handoff; QA Executor performs independent Q1 recon and test planning; QA Lead approves the plan; Director releases execution; QA Executor performs Q2 and authorized retest; QA Lead adjudicates and certifies. `QAM_PLAYBOOK.md` owns this packaging and sequence. Existing modules already in flight retain their recorded sequence until an attributable amendment.
+1384: 
+1385: When code is complete and tested, Engineer hands off to Operations/Deployment.
+1386: 
+1387: ### Handoff Package Contents
+...
+1390: 📦 ENGINEER → OPERATIONS HANDOFF
+1391: │
+1392: ├── APP_BRIEF.md (from Architect)
+1393: ├── UI_SPEC.md (from Designer)
+1394: ├── DATA_CONTRACT.md
+1395: ├── Working Code (tested)
+1396: ├── README.md (setup instructions)
+1397: └── Deployment Guide
+1398: ```
+...
+1452: - No hidden in-memory state
+1453: 
+1454: This gave us:
+1455: - Natural checkpointing
+1456: - Easy resumability
+1457: - Simple debugging
+1458: - Independent module testing
+1459: - Freedom to change providers
+...
+1497: 
+1498: #### Cloud Migration Reality
+1499: 
+1500: **OpenAI vs Google Cloud is NOT apples-to-apples.**
+1501: 
+1502: | OpenAI | Google Cloud |
+1503: |--------|--------------|
+1504: | Upload big files directly | Strict request limits |
+1505: | API abstracts storage | Explicit storage required |
+1506: | Simple mental model | More setup, more control |
+...
+1517: 
+1518: Because of early decisions, we replaced:
+1519: - Anthropic → Gemini
+1520: - OpenAI TTS → Google TTS
+1521: - OpenAI Whisper → Google STT
+1522: 
+1523: With:
+1524: - Minimal surface-area changes
+1525: - Tests still passing
+...
+1533: Without planning it, we discovered:
+1534: 
+1535: ```
+1536: Phase 1: CLI Reference App
+1537: ├── Manual, explicit, testable, boring (good)
+1538: 
+1539: Phase 2: Operator UI (Streamlit)
+1540: ├── Same modules, same artifacts
+1541: ├── Just orchestration + UX
+1542: 
+1543: Phase 3: Product App
+1544: ├── API-first, auth, multi-user, scalable
+1545: ├── Same core modules
+1546: ```
+1547: 
+...
+1557: 
+1558: ### The Engineer's Checklist
+1559: 
+1560: 0. ✅ **Run recon: answer RECON_QUESTIONNAIRE read-only, deliver the Recon Report (Phase 0)**
+1561: 1. ✅ Identify the pipeline (Blueprint router) and receive the matching package — greenfield: token file (PRIMARY) + style tile + screen HTML/PNG + UI_SPEC + component manifest; conversion: the 4-file handoff package
+1562: 2. ✅ Kit Track: kit read → Kit Audit → FFM execution · Pipeline Track: design file-based state contracts
+1563: 3. ✅ Build modules one at a time
+1564: 4. ✅ Manual test before automated test
+1565: 5. ✅ Ensure clean-venv compatibility (Pipeline) / clean `build` + `jest` + `tsc` (Kit)
+1566: 6. ✅ Abstract providers for swappability
+1567: 7. ✅ Respect cloud limits in design
+1568: 8. ✅ Wire CLI before UI (Pipeline Track)
+1569: 9. ✅ Consume the Architect-authored, approved DATA_CONTRACT; verify it precedes Design and that the Architect reconciled the assembled package.
+1570: 10. ✅ Hand off complete package
+1571: 11. ✅ **Follow Karpathy Protocol in agentic coding**
+1572: 12. ✅ **Maintain session files for context continuity**
+1573: 
+...
+1600: | Version | Date | Change |
+1601: |---|---|---|
+1602: | 1.3 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-004, FC-005, FC-008, FC-014, FC-015, FC-017, FC-018, FC-027, MC-06, MC-07, RUL-01, RUL-05, RUL-09, RUL-12, W19, W23 |
+1603: | 1.2 | 2026-07-07 | **Wave 2B — two-track structural restructure (F-028).** Reorganized into PART I Common Doctrine / PART II Kit Track (dominant lane, described first) / PART III Pipeline Track (original Python/CLI doctrine retained verbatim) / PART IV Shared Reference / PART V Agent Conduct / Ship. NEW §2 Phase 0 Recon-Executor role — the Engineer answers RECON_QUESTIONNAIRE read-only and produces the Recon Report the Architect consumes (F-027). §3 inputs rewritten to match DESIGNER_PLAYBOOK §10 + HANDOFF_PACKAGE_PLAYBOOK: greenfield = token file (PRIMARY) + style tile/screen HTML+PNG + UI_SPEC + component manifest (screenshots removed as greenfield input — the F-026 mismatch); conversion = 4-file package + `_design/` + `_extraction/`; per-pipeline DATA_CONTRACT ownership stated in §3 and §12 (F-029). NEW §5 Kit Track: recon → kit read (aspirational, verify) → Kit Audit → FFM execution as the primary work mode, with pointers to FRONTEND_FIRST_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, FFM_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK (F-027; F-035 bridge). §15 Karpathy Protocol marked ALL-AGENT doctrine (D-011), Blueprint pointer connected; §15/§16 numbers PINNED as stable IDs. New anti-pattern: "Wrapping What the Kit Provides / Building on Unverified Kit Claims" (Run 001; F-039 antibody). Moves, all byte-faithful: old §4–§9 → §6–§11, §10 → §12, §11 → §13, §13 → §14, §12 → §17, §14 → Appendix A. §1 updated (Designer v2.0 diagram, recon + FFM responsibilities). Standard header (F-018); "AI App Factory" → "App Factory". |
+1604: | 1.1 | Feb 2026 | Added Karpathy Protocol (Section 15), Session Memory Protocol (Section 16). |
+1605: | 1.0 | — | Baseline: role, inputs, systems discipline, CLI-first pattern, file-state contracts, build sequence, testing strategy, cloud-native engineering, provider abstraction, DATA_CONTRACT template, type-specific considerations, operations handoff, anti-patterns, field lessons. |
+
+FILE 02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md
+...
+4: > **Tier:** 2 — Pipeline Agents · **Pairs with:** APP_FACTORY_BLUEPRINT, DESIGNER_PLAYBOOK, ENGINEER_PLAYBOOK, FRONTEND_FIRST_PLAYBOOK, RECON_QUESTIONNAIRE
+5: 
+6: > **The instruction set for authoring project handoff packages.**
+7: > Historical external example (availability unverified): Paired with the Cyberize Agentic Automation handoff as the historical worked example. Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.
+8: > **Born from:** Cyberize Agentic Automation Run 001 (May 2026) — first successful Factory frontend conversion
+9: > Historical external example (availability unverified): **Worked example:** `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/` Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.
+10: 
+11: ---
+12: 
+13: ## Which Pipeline Am I In? (Read This First)
+...
+25: This is the playbook for authoring the four canonical documents that drive every Factory build:
+26: 
+27: 1. **APP_BRIEF.md** — scope, success criteria, forbidden zones
+28: 2. **DATA_CONTRACT.md** — types, service contracts, mock requirements
+29: 3. **UI_SPEC.md** — screen-by-screen behavior, primitive mapping
+30: 4. **_project/CLAUDE.md** — project spine, doctrine, tech stack
+31: 
+32: Together these four documents constitute a **handoff package**. When the package is complete and approved, Claudy can execute the build through 8 supervised phases with minimal operator intervention.
+33: 
+...
+62: 
+63: ## 4. Prerequisites Before Authoring
+64: 
+65: The approved interface type determines required design inputs. A visual interface requires its approved UI_SPEC, token/style decisions and HTML/PNG references. A nonvisual backend or CLI explicitly records those inputs as NOT APPLICABLE and supplies its approved data/API/command contract, invocation examples and receiving checklist. Missing required input is not NOT APPLICABLE.
+66: 
+67: Before writing the handoff package, these inputs must exist:
+68: 
+69: | Input | Source | Purpose |
+70: |---|---|---|
+71: | **Recon Report (current)** | Phase 0 recon per `RECON_QUESTIONNAIRE.md` (`stark-recon`) | Ground truth of the target repo/kit — package authoring presupposes it |
+72: | Project scope decision | Operator | Confirms this is worth building |
+73: | Source app (if conversion) | Existing app | Reference for behavior to preserve |
+74: | Brain Drain extraction (if conversion) | `_extraction/` folder | Evidence-labeled source code analysis |
+75: | Screenshots (if visual app) | `_design/` folder | Canonical visual reference |
+...
+94: 2. **One-Sentence Purpose** — single sentence describing the build
+95: 3. **Who Uses This** — primary user, secondary users, NOT for
+96: 4. **Why We're Building It** — strategic context
+97: 5. **In Scope (Phase 1)** — screens, features, integrations included
+98: 6. **Out Of Scope (Phase 1) — HARD GATES** — explicit forbidden zones, numbered list, no ambiguity
+99: 7. **Success Criteria** — checkboxes that define "done"
+100: 8. **Tech Stack** — table format with layer + technology
+101: 9. **Source-Of-Truth Artifacts** — reading order, conflict resolution rules
+102: 10. **Known Discrepancies** — quirks of the source app preserved deliberately
+...
+124: 
+125: ---
+126: 
+127: ### 5.2 DATA_CONTRACT.md
+128: 
+129: **Purpose:** Every data shape, every service contract, every mock requirement.
+130: 
+131: Historical external example (availability unverified): **Canonical example:** `_project/DATA_CONTRACT.md` in the Cyberize module. Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.
+132: 
+133: **Ownership:** the Architect authors DATA_CONTRACT before Design. Conversion uses extraction evidence; greenfield uses the approved brief and verified interfaces. Engineering consumes the approved contract. Use the single canonical DATA_CONTRACT template in ENGINEER_PLAYBOOK §12; this section describes authoring requirements, not a competing template.
+134: 
+135: **Required sections (in order):**
+136: 
+137: 1. **Type-by-Type Reference** — every interface, every enum, every type
+138: 2. **Service Method Contracts** — every method the UI calls, its signature, its mock behavior, its BACKEND_SWAP_NOTES
+139: 3. **Mock Data Requirements** — what realistic mocks look like, what edge cases to cover
+140: 4. **Known Discrepancies** (if conversion) — drift between source app and contract
+141: 5. **Phase 2 Decision Points** — questions deferred to backend wiring phase
+142: 6. **Field-By-Field Mapping** (if conversion) — source-app fields to TypeScript fields
+143: 7. **Verification Checklist** — how to validate the contract is complete
+144: 8. **Changelog** — version history
+145: 
+...
+151: - **Wire format conventions matter.** Snake_case for wire shapes (matches FastAPI/Pydantic convention typically); camelCase for UI-internal types.
+152: - **No `any` types ever.** Use `unknown` with narrowing if truly unknown.
+153: - **Enum values as string literal unions**, not `enum` keyword.
+154: - **BACKEND_SWAP_NOTES per service method** — explicit instructions for Phase 2 wiring.
+155: 
+156: **Common authoring mistakes:**
+157: 
+158: - Inventing fields that aren't in the source — STOP, only document what's evidenced
+...
+162: 
+163: ---
+164: 
+165: ### 5.3 UI_SPEC.md
+166: 
+167: **Purpose:** Screen-by-screen behavior, Shadcn primitive mapping, state machines.
+168: 
+169: Historical external example (availability unverified): **Canonical example:** `_project/UI_SPEC.md` in the Cyberize module. Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.
+170: 
+171: **Required sections (in order):**
+172: 
+173: 1. **Screens Overview** — table of all screens, routes, auth requirements
+...
+181:    - Data sources (which service methods feed this screen)
+182: 4. **Cross-Cutting Behaviors** — auth gates, sidebar nav, error conventions, loading states, markdown rendering
+183: 5. **Component Inventory** — suggested file tree for components
+184: 6. **Out Of UI_SPEC Scope** — explicit list of things considered and excluded
+185: 7. **Reference Screenshots** — mapping screenshot files to screens
+186: 8. **Verification Checklist**
+187: 9. **Changelog**
+188: 
+...
+223: 3. **What You ARE Building** — top-level summary of in-scope items
+224: 4. **Tech Stack** — table (matches APP_BRIEF)
+225: 5. **Project Structure (Expected)** — folder tree
+226: 6. **Source of Truth (Reading Order)** — order to read docs in
+227: 7. **Skills Loaded For This Project** — which custom + Anthropic skills activate
+228: 8. **Operating Rules (Inherited From Global)** — Plan Mode, Karpathy Protocol, eyesight-aware communication
+229: 9. **TDD Flow** — Build → Unit Test → Integrate → Block Test → System Test → Finalize
+230: 10. **Project-Specific Conventions** — naming, service layer discipline, state management
+231: 11. **Approval Gates** — phase boundary discipline
+232: 12. **Disaster Recovery** — RECOVERY.md format and update discipline
+233: 13. **Known Discrepancies** — preserve, don't fix
+234: 14. **Phase Transitions** — Phase 1 (Factory) vs Phase 2+ (operator manual work)
+235: 15. **On Completion** — what happens when Phase 1 success criteria are met
+236: 
+237: **Length expectation:** 250-350 lines.
+238: 
+239: **The critical discipline:**
+240: 
+241: - This file is INTENTIONALLY REDUNDANT with APP_BRIEF on forbidden zones. The redundancy is a feature — different docs are read in different contexts and the forbidden zones must be reinforced.
+242: - Mobile-first / Rule Zero language should be present here, not just in UI_SPEC.
+243: - The "Active Project Module" pointer must reference the module's location.
+244: 
+245: ---
+246: 
+...
+253: - **Per-screen HTML + PNG** — Playwright-rendered, light + dark
+254: - **Component manifest** (`COMPONENT_MANIFEST.md`)
+255: 
+256: The Designer owns UI_SPEC. For conversion, extraction evidence and source screenshots inform the specification; for greenfield, the Designer’s token file and screen HTML/PNG establish the visual contract. The Architect reconciles the assembled package before Director approval.
+257: 
+258: ---
+259: 
+260: ## 6. Authoring Order
+...
+262: Author the files in this order:
+263: 
+264: 1. **APP_BRIEF.md FIRST** — scope must be locked before contracts or screens can be specified
+265: 2. **DATA_CONTRACT.md SECOND** — data shapes inform what the UI needs to display
+266: 3. **UI_SPEC.md THIRD** — screens are built from the data contract
+267: 4. **_project/CLAUDE.md LAST** — the spine is informed by the other three
+268: 
+269: If you author UI_SPEC before DATA_CONTRACT, you'll invent data shapes that don't match the source. If you author CLAUDE.md before the others, you won't know the conventions to encode.
+270: 
+271: ---
+272: 
+273: ## 7. Evidence Traceability
+...
+280: 
+281: If you can't trace a claim to evidence, surface to operator. Don't invent.
+282: 
+283: In Run 001, every type in DATA_CONTRACT traced to a specific section of `04-TOOL-SYSTEM.md` (the Brain Drain API surface doc). Every screen in UI_SPEC traced to `06-PROMPTS-AND-PERSONA.md` (the screen inventory) and the screenshots. This traceability is why the handoff package was airtight.
+284: 
+285: ---
+286: 
+287: ## 8. Approval Gates
+288: 
+289: Every newly authored module includes a complete, module-specific `QAM/` prepared by the Architect from `03_BUILD_METHODOLOGY/_templates/QAM/`. QA Lead owns the reusable playbook and standing requirements. Engineer fills factual engineering records and handoff; QA Executor performs independent Q1 recon and test planning; QA Lead approves the plan; Director releases execution; QA Executor performs Q2 and authorized retest; QA Lead adjudicates and certifies. `QAM_PLAYBOOK.md` owns this packaging and sequence. Existing modules already in flight retain their recorded sequence until an attributable amendment.
+290: 
+291: The handoff package is approved when:
+292: 
+293: 1. **Operator has read APP_BRIEF in full** and confirmed scope
+294: 2. **Operator has read DATA_CONTRACT in full** and confirmed shapes match expectations
+295: 3. **Operator has read UI_SPEC in full** and confirmed screen behavior matches intent
+296: 4. **Operator has read _project/CLAUDE.md** and confirmed doctrine is right
+297: 5. **Operator has explicitly approved** — "this package is ready to hand to Claudy"
+298: 
+299: Until all four files are approved, Claudy does not start Phase 0 Discovery on the build.
+300: 
+301: ---
+302: 
+303: ## 9. Common Authoring Mistakes
+...
+313: 
+314: ### Mistake 2 — Inventing Mock Data Shapes
+315: 
+316: ❌ Author DATA_CONTRACT with shapes that "feel right"
+317: ✅ Author DATA_CONTRACT from Brain Drain extraction evidence
+318: 
+319: In Run 001, every field in `RunAgentRequest` and `RunAgentResponse` traced to specific line numbers in the source `chat.py`. No invention.
+320: 
+321: ### Mistake 3 — Skipping The Mobile Layout
+322: 
+323: ❌ Document UI_SPEC as desktop-first, mention mobile in passing
+324: ✅ Document mobile sketch FIRST per screen, desktop as progressive enhancement
+325: 
+326: This is the structural lesson from Lesson 5. If the spec describes desktop, the build will be desktop.
+327: 
+...
+343: 
+344: ## 10. The Worked Example
+345: 
+346: Historical external example (availability unverified): The historical worked example is `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/`. Read all four files there to see what "good" looks like: Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.
+347: 
+348: - **`APP_BRIEF.md`** — 200+ lines, 15 hard gates, success criteria table, known discrepancies preserved
+349: - **`DATA_CONTRACT.md`** — 500+ lines, 12 types, 4 service contracts, mock data requirements, Phase 2 decision points
+350: - **`UI_SPEC.md`** — 600+ lines, 3 screens with full per-screen specs, Shadcn primitive mapping, mobile breakpoints
+351: - **`_project/CLAUDE.md`** — 350+ lines, forbidden zones repeated, tech stack, operating rules, approval gates
+352: 
+353: When authoring a new handoff package, use these files as direct templates. Copy the structure. Adapt the content to the new project.
+354: 
+...
+371: | Version | Date | Born From | Changes |
+372: |---|---|---|---|
+373: | 1.2 | 2026-10-18 | doctrine-part2 sync | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-009, FC-017, FC-018, FC-019, FC-027, MC-01, RUL-09, W20 |
+374: | 1.1 | 2026-07-07 | Wave 1 audit sync | **Pipeline duality made explicit.** Standard header block (F-018). "Which Pipeline Am I In?" preamble added: this playbook = the CONVERSION pipeline's package doctrine; greenfield routes via the agent playbooks; entry point = APP_FACTORY_BLUEPRINT router (F-030). §5.5 Greenfield Variant added: package additionally carries Designer deliverables per DESIGNER_PLAYBOOK §10 — token file (primary), style tile HTML+PNG, screen HTML+PNG, component manifest; UI_SPEC drafted by Architect, revised by Designer (F-026 closure). Per-pipeline DATA_CONTRACT ownership stated in §5.2 (F-029). Recon Report added to §4 prerequisites — package authoring presupposes Phase 0 recon (F-003 bridge). |
+375: | 1.0 | 2026-05-31 | Cyberize Run 001 | Initial playbook authored from Run 001 worked example |
+376: 
+377: ---
+378: 
+379: ## 13. Cross-References
+380: 
+381: - Historical external example (availability unverified): **Worked example:** `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/` Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.
+382: - **Frontend playbook:** `FRONTEND_FIRST_PLAYBOOK.md` (mandatory gates BEFORE handoff package authoring)
+383: - **Build phases:** `FRONTEND_BUILD_PHASE_PLAYBOOK.md` (what happens AFTER handoff package is approved)
+384: - **Kit reference:** `agent_docs/STARTER_KIT_HANDBOOK.md` (what the starter kit provides)
+385: - **Component reference:** `agent_docs/COMPONENT_REGISTRY.md` (which primitives map to UI elements)
+
+FILE 05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md
+...
+18: | **Tokens** | named constants / config | semantic CSS variables (`--primary`, `--destructive`…) in `globals.css` |
+19: | **Components** | functions that read constants | shadcn primitives, themed by tokens |
+20: | **Patterns** | reusable modules | recurring compositions (dashboard, data-table screen, admin pattern) |
+21: | **Guidelines** | docs / lint rules | this Handbook, the UI_SPEC, the manifests |
+22: 
+23: If a layer hardcodes a value the layer below should own (e.g. a component using `bg-slate-800`), the system is broken. The whole job is keeping values flowing down from tokens.
+24: 
+25: ---
+...
+101: | 1 | **Token file** (`globals.css` + Tailwind map) | the executable system — all modes. *Primary deliverable.* |
+102: | 2 | **Style tile** (HTML + PNG) | the visual contract |
+103: | 3 | **Screen artifacts** (HTML + PNG) | each screen in the canonical theme; HTML = build reference, PNG = QC target |
+104: | 4 | **UI_SPEC.md** | Designer-authored hierarchy, gating, states, responsive rules and checkpoints; Architect reconciles the assembled package |
+105: | 5 | **Component manifest** | primitives per screen + KIPs to build first |
+106: 
+107: Plus the **factory-level** docs that outlive any one project: **this Handbook** and the **Theme Library**.
+108: 
+...
+116: 2. **Lock tokens + build that one canonical screen** perfectly, token-driven.
+117: 3. **Render the style tile**, review light+dark, **lock**.
+118: 4. **Clone-and-adapt** the remaining screens from the canonical — change content, not structure. (Other themes/modes are pure token swaps.)
+119: 5. **Designer authors UI_SPEC and component manifest; Architect reconciles the assembled package.**
+120: 6. **Hand to Claudy** — HTML to build from, PNG to verify against, tokens to inherit.
+121: 
+122: Principles: design **one page per step**, never "design all screens at once" (that's where drift comes from). **Human approval gates** at the canonical-screen lock and the style-tile lock. Functional clarity first (Demo Mode); polish later.
+123: 
+...
+141: 
+142: 1. Reads the brief + confirms the **kit's Tailwind version** (`package.json`).
+143: 2. Identifies the **canonical screen**.
+144: 3. Receives the Architect’s approved **DATA_CONTRACT before Design**, then authors UI_SPEC; the Architect reconciles the assembled package.
+145: 4. Produces **token file → canonical screen → style tile → remaining screen artifacts → UI_SPEC → component manifest**, using the full canonical token contract; validates all modes and role/semantic distinctions.
+146: 5. Pulls theme values from the **Theme Library** (or derives a new family and adds it).
+147: 6. Hands Claudy the HTML + PNG + tokens + spec + manifest.
+148: 
+149: If anything's missing to start, the Designer says exactly what — usually just the brief and the Tailwind version.

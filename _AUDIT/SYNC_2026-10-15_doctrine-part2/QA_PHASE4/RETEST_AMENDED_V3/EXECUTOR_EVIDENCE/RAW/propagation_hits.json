@@ -1,0 +1,213 @@
+[
+  {
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 183,
+    "matches": [
+      "fetchProducts"
+    ],
+    "text": "| Read multiple | `fetch{Resources}` or `fetchAll{Resources}` | `fetchProducts()`, `fetchAllProductSlugs()` |"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 582,
+    "matches": [
+      "services/productServices"
+    ],
+    "text": "// src/services/productServices.ts"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 613,
+    "matches": [
+      "fetchProducts"
+    ],
+    "text": "// Independent normalization-step example: fetchProducts() returns Promise<Product[]>."
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 615,
+    "matches": [
+      "fetchProducts"
+    ],
+    "text": "export const fetchProducts = async (): Promise<Product[]> => {"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 787,
+    "matches": [
+      "fetchProducts"
+    ],
+    "text": "This caller uses the §3 typed-outcome contract: `fetchProducts()` returns a discriminated outcome with `status` equal to `success`, `not-found`, `unavailable`, `invalid` or `forbidden`; only `success` carries `items: Product[]`. This example assumes a project-approved public-catalog failure policy permitting the generic empty-state UI on non-success; this is not an entitlement decision or a cached successful result. It does not call the independent array-returning normalization example."
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 792,
+    "matches": [
+      "fetchProducts",
+      "services/productServices"
+    ],
+    "text": "import { fetchProducts } from '@/services/productServices';"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 797,
+    "matches": [
+      "fetchProducts"
+    ],
+    "text": "  const outcome = await fetchProducts();"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 858,
+    "matches": [
+      "fetchProducts"
+    ],
+    "text": "Independent ISR example: this `fetchProducts()` returns the endpoint’s raw JSON payload, with no normalization or typed-outcome envelope; it is not the §3 service or the caller above. The project must declare and validate that endpoint’s wire contract and failure/cache policy before implementation; this example only illustrates the revalidation option."
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 862,
+    "matches": [
+      "fetchProducts"
+    ],
+    "text": "export const fetchProducts = async () => {"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 946,
+    "matches": [
+      "fetchProducts"
+    ],
+    "text": "export const fetchProductsByIds = async (ids: number[]): Promise<Product[]> => {"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 985,
+    "matches": [
+      "fetchProducts"
+    ],
+    "text": "| Service Layer | All external API calls | `fetchProducts()` |"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 1179,
+    "matches": [
+      "fetchProducts"
+    ],
+    "text": "| Service Layer | All external API calls | `fetchProducts()` |"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 501,
+    "matches": [
+      "fetchProducts"
+    ],
+    "text": "Independent rendering illustration: the `fetchProducts()` used in this section returns `Promise<Product[]>` and is not the API manual §3 typed-outcome service; a project implementing the §3 contract narrows `status === 'success'` and passes `items` to the list."
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 507,
+    "matches": [
+      "fetchProducts",
+      "services/productServices"
+    ],
+    "text": "import { fetchProducts } from '@/services/productServices';"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 512,
+    "matches": [
+      "fetchProducts"
+    ],
+    "text": "  const products = await fetchProducts();"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 615,
+    "matches": [
+      "fetchProducts"
+    ],
+    "text": "  const products = await fetchProducts();"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 631,
+    "matches": [
+      "services/productServices"
+    ],
+    "text": "import { fetchProductBySlug } from '@/services/productServices';"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 241,
+    "matches": [
+      "fetchProducts"
+    ],
+    "text": "| Fetch/Load | `fetch`, `load` | `fetchProducts`, `loadMore` |"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 801,
+    "matches": [
+      "fetchProducts"
+    ],
+    "text": "  fetchProducts: async () => {"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 809,
+    "matches": [
+      "services/productServices"
+    ],
+    "text": "// src/services/productServices.ts — independent store/service-separation illustration"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 810,
+    "matches": [
+      "fetchProducts"
+    ],
+    "text": "// this local fetchProducts() returns the route's raw JSON array; it is not the API manual §3 typed-outcome service"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 811,
+    "matches": [
+      "fetchProducts"
+    ],
+    "text": "export const fetchProducts = async () => {"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 827,
+    "matches": [
+      "fetchProducts"
+    ],
+    "text": "    fetchProducts().then(setProducts);"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 866,
+    "matches": [
+      "fetchProducts"
+    ],
+    "text": "Server Components cannot use hooks, but they can pass initial data to Client Components: This illustration's `fetchProducts()` returns `Promise<Product[]>` (hence `initialProducts: Product[]`) and is not the API manual §3 typed-outcome service; under that contract, narrow `status === 'success'` and pass `outcome.items`."
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 870,
+    "matches": [
+      "fetchProducts",
+      "services/productServices"
+    ],
+    "text": "import { fetchProducts } from '@/services/productServices';"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 874,
+    "matches": [
+      "fetchProducts"
+    ],
+    "text": "  const products = await fetchProducts();"
+  }
+]

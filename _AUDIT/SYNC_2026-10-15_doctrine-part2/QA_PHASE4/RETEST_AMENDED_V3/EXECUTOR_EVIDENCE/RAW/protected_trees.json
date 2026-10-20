@@ -1,0 +1,56 @@
+{
+  "_ARCHIVE/": {
+    "parent_count": 40,
+    "candidate_count": 40,
+    "existing_equal": true,
+    "exact_tree_equal": true
+  },
+  "03_BUILD_METHODOLOGY/_templates/QAM/": {
+    "parent_count": 25,
+    "candidate_count": 25,
+    "existing_equal": true,
+    "exact_tree_equal": true
+  },
+  "03_BUILD_METHODOLOGY/_workflows/": {
+    "parent_count": 4,
+    "candidate_count": 4,
+    "existing_equal": true,
+    "exact_tree_equal": true
+  },
+  "03_BUILD_METHODOLOGY/_assets/workflows/": {
+    "parent_count": 4,
+    "candidate_count": 4,
+    "existing_equal": true,
+    "exact_tree_equal": true
+  },
+  "10x Lab/": {
+    "parent_count": 2,
+    "candidate_count": 2,
+    "existing_equal": true,
+    "exact_tree_equal": true
+  },
+  "_SKILLS/": {
+    "parent_count": 16,
+    "candidate_count": 16,
+    "existing_equal": true,
+    "exact_tree_equal": true
+  },
+  "lints/": {
+    "parent_count": 8,
+    "candidate_count": 8,
+    "existing_equal": true,
+    "exact_tree_equal": true
+  },
+  ".github/": {
+    "parent_count": 1,
+    "candidate_count": 1,
+    "existing_equal": true,
+    "exact_tree_equal": true
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/": {
+    "parent_count": 725,
+    "candidate_count": 778,
+    "existing_equal": true,
+    "exact_tree_equal": false
+  }
+}

@@ -1,0 +1,7 @@
+01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md:56: This is true for human architects authoring docs and reading playbooks. It is even more true for AI agents executing those playbooks. Every Factory playbook that aims to guide authoring or building should be paired with a real, complete, evidence-traceable example.
+03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md:1149: | 1.0 | 2026-05-05 | Initial Playbook. Defines Stark Skills and Agent Skills. Establishes two-file core (CLAUDE.md + SKILL.md). Mandates Anthropic Skills v2 format for SKILL.md. Specifies single skill and family skill structures. Names eight anti-patterns from prior authoring history. Identifies Cloud Deployment Skills (family) and Supabase Migration Skill (single, most complex) as structural exemplars. Includes inline excerpt of v2 format with reference to Anthropic's official spec. Codifies activation flow, Plan Mode, operator override, evidence discipline, evolution principle. Audience: Generals (DevOps, Architects, Designers). |
+03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md:374: - Stakeholders can use the app
+03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md:403: - Communicate limitations clearly to stakeholders
+03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md:408: - Stakeholders can review and give feedback
+03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md:251: * stakeholders agree on UX
+03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md:320: - [ ] All UI flows approved by stakeholders

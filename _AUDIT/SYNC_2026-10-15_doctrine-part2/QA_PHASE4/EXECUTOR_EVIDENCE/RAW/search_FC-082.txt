@@ -1,0 +1,6 @@
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1379: - No control is desktop-only; no horizontal overflow at 375px; touch targets ≥ 44px.
+05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md:622: - [ ] No unintended page-level horizontal overflow; bounded intentional tabs/carousels remain accessible and usable.
+05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md:71:   - **Tabs → horizontal scroll strip.**
+05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md:47: - **No unintended page-level horizontal overflow** below desktop; bounded intentional tabs/carousels are permitted with accessible controls.
+05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md:992: - [ ] No unintended page-level horizontal overflow; intentional bounded tabs/carousels remain usable by touch, keyboard and assistive technology.
+05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md:1726: // Horizontal scroll for carousels

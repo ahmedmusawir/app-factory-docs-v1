@@ -1,0 +1,19 @@
+# Remaining components — Jarvis coordinates follow-ups
+
+RUL-08 assigns coordination to Jarvis; it does not authorize Cody to perform external jobs or assert missing facts. Tony retains authority and Git mutations. Owners below describe responsibilities, not invented appointed implementers.
+
+| Component / finding | Owner | Resolving trigger | Current scope consequence |
+|---|---|---|---|
+| Pinned kit guard exports/call/return contracts — FC-041, kit parts FC-001/028/033–035 | Jarvis coordinates kit custodian; Cody verifies supplied evidence | Named repo + immutable revision + source/caller evidence | Incorrect examples withdrawn/qualified; no verified replacement or closure claimed |
+| Session/cookie architecture — FC-042 | Jarvis / kit custodian | Pinned server and browser session/cookie implementation plus tests | Blanket HttpOnly assumptions removed; kit architecture remains unverified |
+| Rail breakpoint and responsive shell — FC-072 / kit portion FC-071 | Jarvis / kit custodian | Pinned shell/rail source and both-side breakpoint evidence | No universal breakpoint invented; misleading layouts withdrawn |
+| External worked examples, skills and locators — FC-009, locator part FC-003 / DEC-19 | Jarvis / source custodians | Actual repository, path, immutable revision and availability | Missing external source is not fabricated; reviewer guidance remains canonical RRM scope |
+| Root authority classification / pre-approval writes / recovery / CHANGELOG / FILE_TREE alignment — FC-008/010/090/091/094; DEC-08 | Jarvis coordinates a separately authorized root-instruction owner; Tony rules | Explicit root job and authority ruling, then verified aligned instructions | No root edits in this sync; scoped RUL-09 artifact rule does not approve arbitrary root changes |
+| Skill precedence/seat/closeout/CI/merge-over-red language — FC-005/006/092/095/096 | Jarvis coordinates separately authorized skill maintainer; Tony authorizes | Skills authoring job, approved changes and verification at current main | No older review-branch skill copied into main; FC-085/086/097 remain NO correction guards |
+| CI trigger expansion / lint tooling / branch protection — FC-095/096 | Tony owns settings; Jarvis coordinates any tooling maintainer | Explicit separate authorization and actual settings/check evidence | No CI or lint rewrite; canonical nine lint repairs remain selected |
+| Platform-specific promotion, rollback/recovery operations, DevOps occupant and FFM staging permissions — FC-011/012/088 / DEC-18 remainder | Jarvis coordinates platform owner; Tony grants context authority | Platform evidence plus named authorization/procedure | Common requirements selected; missing platform procedures remain open, no new cloud grant |
+| Universal quote storage and universal subscription schema — DEC-05 / K-SUBSCRIPTION-MODEL; FC-051/053/054/055/060/067/068 dependencies | Jarvis designs only under future scope; Tony releases | Explicit future design scope and verified project contracts | DEFERRED by RUL-11; supported safety corrections/withdrawals proceed without declaring these finding families resolved |
+| QAM automation tooling, ABM/APBM methodology and TRM definition | Jarvis coordinates future scoped owners; QA Lead owns QA requirements | Separate scope and approval | Excluded; not prerequisites for accepted document-template installation |
+| Missing historical sources / disputed harvest ZIP identity — GAP-01…06 | Jarvis coordinates original custodians | Attributable originals and identity reconciliation | Preserve sources and qualify history; current rulings govern without fabricating historical proof |
+
+Every retained finding keeps its certified identity/severity/disposition. Containment, partial canonical completion and separately tracked external work are different claims.

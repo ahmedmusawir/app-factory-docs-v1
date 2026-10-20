@@ -1,0 +1,4 @@
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:424:   localStorage.getItem("checkout-storage"),
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:517:       name: 'checkout-storage',
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:519:         // Raw contact information is not persisted by default.
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:783: Do not persist raw contact details by default. Any approved personal-data persistence declares permitted fields, retention duration and user or guest scope. Sign-out and account transition reset and invalidate every affected store even when remote logout fails; a new account must not hydrate the previous account’s data. Payment and authorization state remain outside persistence. Storage readiness is separate from business-data reset.

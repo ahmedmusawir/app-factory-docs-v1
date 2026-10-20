@@ -1,0 +1,3 @@
+04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md:396: | `payment_intent.succeeded` | Payment completed | Update order to "processing" |
+04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md:520: - **Events:** Select `checkout.session.completed`, `customer.subscription.updated`, `customer.subscription.deleted`
+04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md:549: Handle `invoice.payment_failed` webhook event. Update subscription status to `past_due`. Show a banner: "Your payment failed. Please update your payment method." Link to Customer Portal. After N failures, Stripe automatically cancels — handle `customer.subscription.deleted`.

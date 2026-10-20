@@ -1,0 +1,3 @@
+26b050fe70de66e74ec8d65bcf9287d4369a91f7	refs/heads/docs/sync-doctrine-part2-2026-10-15
+9c179392f79b70da099121fc357d3107ad3bb86e	refs/heads/main
+Read-only git ls-remote origin, execution worktree; exit 0 (2026-10-20).

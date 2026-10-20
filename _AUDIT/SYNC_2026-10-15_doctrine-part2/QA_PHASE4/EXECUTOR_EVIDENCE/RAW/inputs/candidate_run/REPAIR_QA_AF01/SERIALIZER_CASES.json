@@ -1,0 +1,51 @@
+[
+  {
+    "label": "add_unterminated",
+    "git_apply_check": 0,
+    "GNU_patch": 0,
+    "verified_outputs": 1,
+    "unplanned_files": 0
+  },
+  {
+    "label": "delete_unterminated",
+    "git_apply_check": 0,
+    "GNU_patch": 0,
+    "verified_outputs": 1,
+    "unplanned_files": 0
+  },
+  {
+    "label": "both_unterminated",
+    "git_apply_check": 0,
+    "GNU_patch": 0,
+    "verified_outputs": 1,
+    "unplanned_files": 0
+  },
+  {
+    "label": "add_final_lf",
+    "git_apply_check": 0,
+    "GNU_patch": 0,
+    "verified_outputs": 1,
+    "unplanned_files": 0
+  },
+  {
+    "label": "remove_final_lf",
+    "git_apply_check": 0,
+    "GNU_patch": 0,
+    "verified_outputs": 1,
+    "unplanned_files": 0
+  },
+  {
+    "label": "unterminated_context",
+    "git_apply_check": 0,
+    "GNU_patch": 0,
+    "verified_outputs": 1,
+    "unplanned_files": 0
+  },
+  {
+    "label": "crlf",
+    "git_apply_check": 0,
+    "GNU_patch": 0,
+    "verified_outputs": 1,
+    "unplanned_files": 0
+  }
+]

@@ -1,0 +1,17 @@
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:183: | Read multiple | `fetch{Resources}` or `fetchAll{Resources}` | `fetchProducts()`, `fetchAllProductSlugs()` |
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:613: export const fetchProducts = async (): Promise<Product[]> => {
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:788: import { fetchProducts } from '@/services/productServices';
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:793:   const { items: products, error } = await fetchProducts();
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:856: export const fetchProducts = async () => {
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:940: export const fetchProductsByIds = async (ids: number[]): Promise<Product[]> => {
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:979: | Service Layer | All external API calls | `fetchProducts()` |
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:1173: | Service Layer | All external API calls | `fetchProducts()` |
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:505: import { fetchProducts } from '@/services/productServices';
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:510:   const products = await fetchProducts();
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:612:   const products = await fetchProducts();
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:241: | Fetch/Load | `fetch`, `load` | `fetchProducts`, `loadMore` |
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:801:   fetchProducts: async () => {
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:810: export const fetchProducts = async () => {
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:826:     fetchProducts().then(setProducts);
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:869: import { fetchProducts } from '@/services/productServices';
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:873:   const products = await fetchProducts();

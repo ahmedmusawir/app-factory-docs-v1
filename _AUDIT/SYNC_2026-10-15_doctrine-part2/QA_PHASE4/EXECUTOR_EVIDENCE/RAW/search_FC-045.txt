@@ -1,0 +1,3 @@
+04_REFERENCE_MANUALS/DATABASE_MANUAL.md:737:   .order('created_at', { ascending: false })
+04_REFERENCE_MANUALS/DATABASE_MANUAL.md:1035:   .order('created_at', { ascending: false })
+04_REFERENCE_MANUALS/DATABASE_MANUAL.md:1039: // Use a project-validated cursor over (created_at, id), ordered by both fields,

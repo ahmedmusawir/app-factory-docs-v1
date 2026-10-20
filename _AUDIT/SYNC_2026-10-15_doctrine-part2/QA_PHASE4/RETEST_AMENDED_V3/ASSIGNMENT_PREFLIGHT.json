@@ -1,0 +1,9 @@
+{"seat":"Fable, QA Lead","prepared":"2026-10-20T14:28:31+06:00","candidate":"26b050fe70de66e74ec8d65bcf9287d4369a91f7","parent":"8dff354937bc7baf739370a9886497d9d5359186",
+"checks":{"handoff_zip_sha256":"5efa6fee26d94598fc6687e22b9cd50bec0b282bb4cf2196ba1b06283cd60485","handoff_inventory":"38/38 OK",
+"index_sha256_zip_eq_committed":"55537c6411724ab78837d0191d61375654839202acbf15b13a76d98aa8d483e6","patch_sha256_zip_eq_committed":"afd8f9249854d4e99c385b1e21c459fa297fa5ed5ddcac782d1509747c43faed","gate2_record_sha256_zip_eq_committed":"1fa28bc81dedd96f017f9ffc9a69b7a86326917a61093e9aeb9390bcfbe300a4",
+"remote_tip":"26b050fe70de66e74ec8d65bcf9287d4369a91f7","remote_main":"9c179392f79b70da099121fc357d3107ad3bb86e","worktree_head":"26b050fe70de66e74ec8d65bcf9287d4369a91f7","worktree_clean":true,
+"commit":"one non-merge child of 8dff354; subject 'repair QA-P4 RV2-F01 (AMENDED-v3 55537c64…)'; 56 paths = 3 canonical + 53 RUN/AMENDED_V3*/ records",
+"labels_present":"ARCH §5 sentence + streaming comment; STATE §7 two GOOD-fence comments + Store+Server Components sentence (read at candidate)",
+"history_rows":"ARCH:1289, STATE:1111, CHANGELOG:56/60 carry 'QA-P4 repair: RV2-F01 (AC16/FC-066 labels)'; headers unchanged",
+"state_first_diff_line":809,"nothing_graded":true,"git_mutation":false,"product_edits":false},
+"prompt":"_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/RETEST_AMENDED_V3/QA_EXECUTOR_PROMPT.md","prompt_sha256":"66bd5e14dab3f93c0858c9b2e799d00c5f47f0f36dcbfdd505613e4843eb6880"}

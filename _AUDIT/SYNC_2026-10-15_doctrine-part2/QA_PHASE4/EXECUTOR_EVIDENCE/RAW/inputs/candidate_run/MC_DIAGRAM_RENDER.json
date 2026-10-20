@@ -1,0 +1,34 @@
+[
+  {
+    "source": "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_assets/workflows/BIM_WORKFLOW.svg",
+    "source_sha256": "7cba33aa1a396e4467a09eb80ef912b6e06d2dc06f839c569ffcdf5f87b67ec9",
+    "preview": "_AUDIT/SYNC_2026-10-15_doctrine-part2/MC_EVIDENCE/diagram_previews/BIM_WORKFLOW.png",
+    "preview_sha256": "496ae80cfff75791911dc51b7dc8664d4c9637b4ea3ea10c5b19c246d76056be",
+    "width": 1800,
+    "height": 3090
+  },
+  {
+    "source": "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_assets/workflows/FFM_CREATION.svg",
+    "source_sha256": "0d7640fc0460f98aaf6a0b0d1acc8bc7866fc94e0ed61099d9d0e59931d3a1f0",
+    "preview": "_AUDIT/SYNC_2026-10-15_doctrine-part2/MC_EVIDENCE/diagram_previews/FFM_CREATION.png",
+    "preview_sha256": "fbc558a027979c757d8ad41d67125c8e32530576e6aeb0515d38f9c95d6fbf0c",
+    "width": 1800,
+    "height": 1220
+  },
+  {
+    "source": "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_assets/workflows/FFM_DEPLOYMENT.svg",
+    "source_sha256": "ce17e51c9e72e24cd4fd961f9812d13242914f9e03fcb238a749b49361cb028e",
+    "preview": "_AUDIT/SYNC_2026-10-15_doctrine-part2/MC_EVIDENCE/diagram_previews/FFM_DEPLOYMENT.png",
+    "preview_sha256": "ebca488389d4c393e0e7352f9c4e1ea5c850024f66dda6f6087c7f7481d796b6",
+    "width": 1800,
+    "height": 1330
+  },
+  {
+    "source": "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_assets/workflows/FFM_EXECUTION.svg",
+    "source_sha256": "d0ac268ef03f2ab6f4cb80970b2be3d242442af8eeaa3f3518526354df2a915c",
+    "preview": "_AUDIT/SYNC_2026-10-15_doctrine-part2/MC_EVIDENCE/diagram_previews/FFM_EXECUTION.png",
+    "preview_sha256": "cc62d62a3eb2cbcd03eaee0bc0d059b8a3c52c08ec7a91e1c198f34bb6c8dfc9",
+    "width": 1800,
+    "height": 2430
+  }
+]

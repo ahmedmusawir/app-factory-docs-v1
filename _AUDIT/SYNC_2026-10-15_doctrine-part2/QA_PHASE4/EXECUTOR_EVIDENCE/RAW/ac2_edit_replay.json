@@ -1,0 +1,1902 @@
+[
+  {
+    "sequence": 1,
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 2,
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 3,
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 4,
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 5,
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 6,
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 7,
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 8,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 9,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 10,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 11,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 12,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 13,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 14,
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 15,
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 16,
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 17,
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 18,
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 19,
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 20,
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 21,
+    "path": "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 22,
+    "path": "03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 23,
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 24,
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 25,
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 26,
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 27,
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 28,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 29,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 30,
+    "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 31,
+    "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 32,
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 33,
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 34,
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 35,
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 36,
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 37,
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 38,
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 39,
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 40,
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 41,
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 42,
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 43,
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 44,
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 45,
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 46,
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 47,
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 48,
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 49,
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 50,
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 51,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 52,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 53,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 54,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 55,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 56,
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 57,
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 58,
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 59,
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 60,
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 61,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 62,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 63,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 64,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 65,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 66,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 67,
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 68,
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 69,
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 70,
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 71,
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 72,
+    "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 73,
+    "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 74,
+    "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 75,
+    "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 76,
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 77,
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 78,
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 79,
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 80,
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 81,
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 82,
+    "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 83,
+    "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 84,
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 85,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 86,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 87,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 88,
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 89,
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 90,
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 91,
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 92,
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 93,
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 94,
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 95,
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 96,
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 97,
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 98,
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 99,
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 100,
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 101,
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 102,
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 103,
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 104,
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 105,
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 106,
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 107,
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 108,
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 109,
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 110,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 111,
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 112,
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 113,
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 114,
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 115,
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 116,
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 117,
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 118,
+    "path": "05_DESIGN_SYSTEM/THEME_LIBRARY.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 119,
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 120,
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 121,
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 122,
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 123,
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 124,
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 125,
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 126,
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 127,
+    "path": "05_DESIGN_SYSTEM/TOKEN_FILE.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 128,
+    "path": "05_DESIGN_SYSTEM/TOKEN_FILE.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 129,
+    "path": "05_DESIGN_SYSTEM/THEME_LIBRARY.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 130,
+    "path": "05_DESIGN_SYSTEM/THEME_LIBRARY.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 131,
+    "path": "05_DESIGN_SYSTEM/THEME_LIBRARY.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 132,
+    "path": "05_DESIGN_SYSTEM/THEME_LIBRARY.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 133,
+    "path": "05_DESIGN_SYSTEM/THEME_LIBRARY.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 134,
+    "path": "05_DESIGN_SYSTEM/THEME_LIBRARY.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 135,
+    "path": "05_DESIGN_SYSTEM/THEME_LIBRARY.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 136,
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 137,
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 138,
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 139,
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 140,
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 141,
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 142,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 143,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 144,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 145,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 146,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 147,
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 148,
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 149,
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 150,
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 151,
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 152,
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 153,
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 154,
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 155,
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 156,
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 157,
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 158,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 159,
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 160,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 161,
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 162,
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 163,
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 164,
+    "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 165,
+    "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 166,
+    "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 167,
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 168,
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 169,
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 170,
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 171,
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 172,
+    "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 173,
+    "path": "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 174,
+    "path": "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 175,
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 176,
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 177,
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 178,
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 179,
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 180,
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 181,
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 182,
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 183,
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 184,
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 185,
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 186,
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 187,
+    "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 188,
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 189,
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 190,
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 191,
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 192,
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 193,
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 194,
+    "path": "03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 195,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 196,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 197,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 198,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 199,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 200,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 201,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 202,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 203,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 204,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 205,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 206,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 207,
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 208,
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 209,
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 210,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 211,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 212,
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 213,
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 214,
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 215,
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 216,
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 217,
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 218,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 219,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 220,
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 221,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 222,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 223,
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 224,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 225,
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 226,
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 227,
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 228,
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 229,
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 230,
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 231,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 232,
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 233,
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 234,
+    "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 235,
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 236,
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 237,
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 238,
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 239,
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 240,
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 241,
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 242,
+    "path": "03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 243,
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 244,
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 245,
+    "path": "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 246,
+    "path": "03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 247,
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 248,
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 249,
+    "path": "03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 250,
+    "path": "03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 251,
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 252,
+    "path": "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 253,
+    "path": "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 254,
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 255,
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 256,
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 257,
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 258,
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 259,
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 260,
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 261,
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 262,
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 263,
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 264,
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 265,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 266,
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 267,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 268,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 269,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 270,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 271,
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 272,
+    "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 273,
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 274,
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 275,
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 276,
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 277,
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 278,
+    "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 279,
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 280,
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 281,
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 282,
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 283,
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 284,
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 285,
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 286,
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 287,
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 288,
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 289,
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 290,
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 291,
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 292,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 293,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 294,
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 295,
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 296,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 297,
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 298,
+    "path": "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 299,
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 300,
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 301,
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 302,
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 303,
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 304,
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 305,
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 306,
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 307,
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 308,
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 309,
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 310,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 311,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 312,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 313,
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 314,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 315,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 316,
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 317,
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 318,
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 319,
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 320,
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 321,
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 322,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 323,
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 324,
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 325,
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 326,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 327,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 328,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 329,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 330,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 331,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 332,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 333,
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 334,
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 335,
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 336,
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 337,
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 338,
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 339,
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 340,
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 341,
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 342,
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 343,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 344,
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 345,
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 346,
+    "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 347,
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 348,
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 349,
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 350,
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 351,
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 352,
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 353,
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 354,
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 355,
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 356,
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 357,
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 358,
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 359,
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 360,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 361,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 362,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 363,
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 364,
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 365,
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 366,
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 367,
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 368,
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 369,
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 370,
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 371,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 372,
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 373,
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 374,
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 375,
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 376,
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 377,
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 378,
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 379,
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "occurrences": 1
+  },
+  {
+    "sequence": 380,
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "occurrences": 1
+  }
+]

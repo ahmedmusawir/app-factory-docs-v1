@@ -1,0 +1,10 @@
+02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md:101: 9. **Source-Of-Truth Artifacts** — reading order, conflict resolution rules
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:47: - **Doctrine** — the operating rules, forbidden zones, and conflict resolution order
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:180: - Conflict resolution order is stated clearly
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:808: 8. **Conflict Resolution** — what happens when code wants a shape not in this contract
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:863: 11. **Conflict Resolution**
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:905: 11. **Conflict Resolution** — precedence order
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1855: - [ ] `DATA_CONTRACT.md` — tables in/out of play, triggers, TypeScript types, service contracts, mock strategy, future decision points, conflict resolution, changelog
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1857: - [ ] `CLAUDE.md` — project identity, hero, forbidden zones (redundant w/ APP_BRIEF), tech stack, ships, lessons-from-previous, skills, operating rules, TDD flow, gates, conflict resolution, version
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:2275: Conflict resolution: the approved APP_BRIEF governs scope; DATA_CONTRACT and UI_SPEC govern their subjects. Managers route to those contracts and cannot change them. Genuine conflicts stop affected work for attributable Director resolution.
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:2469: ## Conflict Resolution

@@ -1,0 +1,12 @@
+02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md:535: 3. Supabase upsert
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:862: // For UPSERT: from().upsert()
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:863: const upsert = jest.fn().mockResolvedValue({ error: null });
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:864: const from = jest.fn(() => ({ upsert }));
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:893:   const { error } = await supabaseAdmin.from("subscriptions").upsert(
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:1151: ### Upsert Pattern for Sync
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:1184: | Upsert Sync | Data synchronization | `onConflict: 'external_id'` |
+04_REFERENCE_MANUALS/DATABASE_MANUAL.md:755: ### Upsert Pattern
+04_REFERENCE_MANUALS/DATABASE_MANUAL.md:761:   .upsert(
+04_REFERENCE_MANUALS/DATABASE_MANUAL.md:1098: -- Upsert
+04_REFERENCE_MANUALS/DATABASE_MANUAL.md:1118: // Upsert
+04_REFERENCE_MANUALS/DATABASE_MANUAL.md:1119: supabase.from('table').upsert({ id: 1, col: 'val' })

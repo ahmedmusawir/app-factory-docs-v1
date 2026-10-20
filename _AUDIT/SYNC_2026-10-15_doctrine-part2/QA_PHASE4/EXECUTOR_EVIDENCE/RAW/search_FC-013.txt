@@ -1,0 +1,12 @@
+02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md:45: 17. [Handoff Protocol to Operations](#17-handoff-protocol-to-operations)
+02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md:1381: ## 17. Handoff Protocol to Operations
+03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md:505: ## 12. Stage Completion Reports — Kit Improvement Proposals
+03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md:420: - **Section 12** — Kit Improvement Proposals format (stage completion reports)
+03_BUILD_METHODOLOGY/QA_PLAYBOOK.md:38: An engineer completion report is a claim package.
+03_BUILD_METHODOLOGY/QA_PLAYBOOK.md:241: # 6. The Engineer Handoff Is a Claim Package
+03_BUILD_METHODOLOGY/QA_PLAYBOOK.md:372: - engineer completion report,
+03_BUILD_METHODOLOGY/QA_PLAYBOOK.md:1175: 2. Engineer completion report,
+03_BUILD_METHODOLOGY/QA_PLAYBOOK.md:1734: ## L-QA-001 — Engineer reports are claim packages
+03_BUILD_METHODOLOGY/QA_PLAYBOOK.md:1789: | 1.0 | 2026-08-10 | Promoted after hands-on ADK Next.js Harness QA. Adds Engineer Handoff as Claim Package, Acceptance Spec contract extraction, one-test-at-a-time manual protocol, environment-readiness triage, exploratory seam testing, explicit finding classifications, PASS WITH FOLLOW-UP FINDINGS, scope-protection doctrine, browser-state testing, mock/live boundary testing, failure injection, final environment reset verification, field-tested FIX/BIM protocols, and 10 promoted field lessons. |
+05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md:22: 5. **If nothing fits**, surface a Kit Improvement Proposal in the next phase completion report
+05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md:720: 2. **Surface to operator** in your next phase completion report using the Kit Improvement Proposal format:

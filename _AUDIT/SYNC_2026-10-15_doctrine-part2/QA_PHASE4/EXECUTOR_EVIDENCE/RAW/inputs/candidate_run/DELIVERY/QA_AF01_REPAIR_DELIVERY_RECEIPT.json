@@ -1,0 +1,19 @@
+{
+  "created": "2026-10-17T17:36:49+06:00",
+  "local_zip": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/FACTORY_QA_AF01_REPAIR_2026-10-17_173649.zip",
+  "target_zip": "/home/moose/Downloads/FACTORY_QA_AF01_REPAIR_2026-10-17_173649.zip",
+  "sha256": "9782260ccbd12fd6b76a844c0439e69796d8e6904e6912c9c78631215fdcf4ed",
+  "bytes": 3263712,
+  "members": 46,
+  "inventory_entries": 45,
+  "preservation_paths": 846,
+  "response": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-17_173649_qa-af01-engineer-repair.md",
+  "receipt": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/QA_AF01_REPAIR_DELIVERY_RECEIPT.json",
+  "status": "DELIVERED; Engineer verification PASS; independent QA retest/acceptance PENDING",
+  "engineer": "Cody",
+  "independent_QA_acceptance": "PENDING",
+  "phase3": "NOT RELEASED",
+  "delivered_at": "2026-10-17T17:37:19+06:00",
+  "delivery_verification": "Downloads SHA, ZIP CRC, 45/45 inventory hashes and current payload bytes PASS; 1148 protected originals unchanged",
+  "corrected_patch_sha256": "cf6413c9340c80f5c1bf53a55385876470e9b3aad364bc8963f52a68580f2a6d"
+}

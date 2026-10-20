@@ -1,0 +1,83 @@
+[
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "26b050fe70de66e74ec8d65bcf9287d4369a91f7\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "branch",
+      "--show-current"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "docs/sync-doctrine-part2-2026-10-15\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "push",
+      "origin",
+      "HEAD:refs/heads/docs/sync-doctrine-part2-2026-10-15"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": "To https://github.com/ahmedmusawir/app-factory-docs-v1.git\n   8dff354..26b050f  HEAD -> docs/sync-doctrine-part2-2026-10-15\n"
+  },
+  {
+    "command": [
+      "git",
+      "ls-remote",
+      "--heads",
+      "origin",
+      "refs/heads/docs/sync-doctrine-part2-2026-10-15",
+      "refs/heads/main"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "26b050fe70de66e74ec8d65bcf9287d4369a91f7\trefs/heads/docs/sync-doctrine-part2-2026-10-15\n9c179392f79b70da099121fc357d3107ad3bb86e\trefs/heads/main\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "26b050fe70de66e74ec8d65bcf9287d4369a91f7\n",
+    "stderr": ""
+  }
+]

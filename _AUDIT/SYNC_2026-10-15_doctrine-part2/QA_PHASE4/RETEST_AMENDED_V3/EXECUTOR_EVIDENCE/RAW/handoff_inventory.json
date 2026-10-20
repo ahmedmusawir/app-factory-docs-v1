@@ -1,0 +1,277 @@
+{
+  "zip": "/home/moose/Downloads/FACTORY_AMENDED_V3_EXECUTION_HANDOFF_2026-10-20_104051.zip",
+  "sha256": "5efa6fee26d94598fc6687e22b9cd50bec0b282bb4cf2196ba1b06283cd60485",
+  "safe_paths": true,
+  "exact_inventory": true,
+  "rows": [
+    {
+      "path": "AMENDED_V3/AMENDMENT_IDENTITIES.json",
+      "expected": "aa5f89b43b98118af342e8513514280b352e2c1630c2acbde865d9fd98f86ced",
+      "actual": "aa5f89b43b98118af342e8513514280b352e2c1630c2acbde865d9fd98f86ced",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3/AMENDMENT_V3_EDITS.json",
+      "expected": "2a1ef7192f75505f44d6da4b31836e68af31e23de3bc3afb0afd8f5b330ae4fd",
+      "actual": "2a1ef7192f75505f44d6da4b31836e68af31e23de3bc3afb0afd8f5b330ae4fd",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3/BOUND_EXECUTION_INDEX.json",
+      "expected": "55537c6411724ab78837d0191d61375654839202acbf15b13a76d98aa8d483e6",
+      "actual": "55537c6411724ab78837d0191d61375654839202acbf15b13a76d98aa8d483e6",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3/DIRECTOR_DECISIONS_V3.md",
+      "expected": "1fa28bc81dedd96f017f9ffc9a69b7a86326917a61093e9aeb9390bcfbe300a4",
+      "actual": "1fa28bc81dedd96f017f9ffc9a69b7a86326917a61093e9aeb9390bcfbe300a4",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3/EXECUTION_PROPOSAL.patch",
+      "expected": "afd8f9249854d4e99c385b1e21c459fa297fa5ed5ddcac782d1509747c43faed",
+      "actual": "afd8f9249854d4e99c385b1e21c459fa297fa5ed5ddcac782d1509747c43faed",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3/EXECUTION_PROPOSAL_INDEX.json",
+      "expected": "55537c6411724ab78837d0191d61375654839202acbf15b13a76d98aa8d483e6",
+      "actual": "55537c6411724ab78837d0191d61375654839202acbf15b13a76d98aa8d483e6",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3_EXECUTION/APPLICATION_COMMANDS.json",
+      "expected": "24f4f1f886d8330ab17b22588b41a1c19e103ed29c526fc88b582541413a5826",
+      "actual": "24f4f1f886d8330ab17b22588b41a1c19e103ed29c526fc88b582541413a5826",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3_EXECUTION/APPROVED_RECORD_PATHS.json",
+      "expected": "cda61680dd0983c04d84b891386ced9fa846970911a7b3a7640bd68e94440d81",
+      "actual": "cda61680dd0983c04d84b891386ced9fa846970911a7b3a7640bd68e94440d81",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3_EXECUTION/CLOSEOUT_TRANSITIONS.json",
+      "expected": "ecd172018f9b27822b5fb32c34274fcca107edb99e34ce117779869882cc1287",
+      "actual": "ecd172018f9b27822b5fb32c34274fcca107edb99e34ce117779869882cc1287",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3_EXECUTION/CODE_PRESERVATION.json",
+      "expected": "8f09eb339cd4b4f2225dc1e5cb6cb1bad3aa21994ae8bd51ff62ccb0ecac3cc7",
+      "actual": "8f09eb339cd4b4f2225dc1e5cb6cb1bad3aa21994ae8bd51ff62ccb0ecac3cc7",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3_EXECUTION/COMMANDS.json",
+      "expected": "a09f465f3cf94676e00eb8625ca0e27aa8ec0d33cf5cb3365aeb3259e57d013b",
+      "actual": "a09f465f3cf94676e00eb8625ca0e27aa8ec0d33cf5cb3365aeb3259e57d013b",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3_EXECUTION/COMMIT_COMMANDS.json",
+      "expected": "c85db2d52ca64199228c28962dec2ad9db066b85dd34718f5a049baa5e02df29",
+      "actual": "c85db2d52ca64199228c28962dec2ad9db066b85dd34718f5a049baa5e02df29",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3_EXECUTION/COMMIT_RECEIPT.json",
+      "expected": "d0341bbe694c87b51930f8459244d069f8fa19264029d2ec34d0d75460ff6561",
+      "actual": "d0341bbe694c87b51930f8459244d069f8fa19264029d2ec34d0d75460ff6561",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3_EXECUTION/EXECUTION_PLAN.md",
+      "expected": "3b5b4c0657a25f231fae8cc61bc73d738142fffd4661e891d837a247998eaa18",
+      "actual": "3b5b4c0657a25f231fae8cc61bc73d738142fffd4661e891d837a247998eaa18",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3_EXECUTION/FABLE_HANDOFF.md",
+      "expected": "2502459330394d7fd3274627db86b429db9d94b1d7d6a683c198130f2f674672",
+      "actual": "2502459330394d7fd3274627db86b429db9d94b1d7d6a683c198130f2f674672",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3_EXECUTION/HUMAN_SUMMARY.md",
+      "expected": "6f1f4027cf3738dfca0733262f77b4406e3e1096dd6a3d5a24a25fa5105c9ed5",
+      "actual": "6f1f4027cf3738dfca0733262f77b4406e3e1096dd6a3d5a24a25fa5105c9ed5",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3_EXECUTION/LINT_OUTPUT.txt",
+      "expected": "464d6fe12c6b15c15fa89499cda06a08e54c18376f7b4127c5e915879a23f04e",
+      "actual": "464d6fe12c6b15c15fa89499cda06a08e54c18376f7b4127c5e915879a23f04e",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3_EXECUTION/MANUAL_READS.md",
+      "expected": "76fc64aff91af9c60d5b29caa2f51918a89dc9adb765bbe065307cf9093af3f5",
+      "actual": "76fc64aff91af9c60d5b29caa2f51918a89dc9adb765bbe065307cf9093af3f5",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3_EXECUTION/METADATA.json",
+      "expected": "46de3d6edef39494f54030b1af7781d006ddee51aa473fadc3e318078e4600ea",
+      "actual": "46de3d6edef39494f54030b1af7781d006ddee51aa473fadc3e318078e4600ea",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3_EXECUTION/PACKAGE_INTEGRITY.json",
+      "expected": "9f800791d80e8f446f859962cc09bbb3979b20a57c893fe79941238c50114c4d",
+      "actual": "9f800791d80e8f446f859962cc09bbb3979b20a57c893fe79941238c50114c4d",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3_EXECUTION/PATH_VERIFICATION.json",
+      "expected": "3c3c02d473e32977b093f0df7cbf4c40b47da1c5d8c7226e1de80bd8f2275ddc",
+      "actual": "3c3c02d473e32977b093f0df7cbf4c40b47da1c5d8c7226e1de80bd8f2275ddc",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3_EXECUTION/PRESERVATION_HASHES.json",
+      "expected": "89a53d8ba00e9992e769b066edfd0ea3870eea6653f1f753bcc5c690105c75e7",
+      "actual": "89a53d8ba00e9992e769b066edfd0ea3870eea6653f1f753bcc5c690105c75e7",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3_EXECUTION/PROPAGATION.tsv",
+      "expected": "f12f52f369df88227dbe1708abea2508da9e3ff9ae2b846dac8eb7bcd977186c",
+      "actual": "f12f52f369df88227dbe1708abea2508da9e3ff9ae2b846dac8eb7bcd977186c",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3_EXECUTION/PUSH_COMMANDS.json",
+      "expected": "8c11b8a159f46ed7e00095aeefeec2c0c089e60550c7604c5dc41d06815196fa",
+      "actual": "8c11b8a159f46ed7e00095aeefeec2c0c089e60550c7604c5dc41d06815196fa",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3_EXECUTION/PUSH_RECEIPT.json",
+      "expected": "0c9d74532b725acd380a3a5d6de948d70ac79a17343cb8af1e645430d758adce",
+      "actual": "0c9d74532b725acd380a3a5d6de948d70ac79a17343cb8af1e645430d758adce",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3_EXECUTION/REMOTE_PREFLIGHT.json",
+      "expected": "ebed8b8be3017c8768af15dee8e5e74c9aede93acbb026227c95d678c522d506",
+      "actual": "ebed8b8be3017c8768af15dee8e5e74c9aede93acbb026227c95d678c522d506",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3_EXECUTION/STAGED_SCOPE.json",
+      "expected": "09c32507974ed3d2ea770d2bd08e08d5b6f0a56bd019472f99daeb396f6d3e98",
+      "actual": "09c32507974ed3d2ea770d2bd08e08d5b6f0a56bd019472f99daeb396f6d3e98",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3_EXECUTION/START_STATE.json",
+      "expected": "a09f2669d89911628d574656f0eebb43b14e93bec06bc86ee4948c5b60858695",
+      "actual": "a09f2669d89911628d574656f0eebb43b14e93bec06bc86ee4948c5b60858695",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3_EXECUTION/STATE_CARRY_FORWARD.json",
+      "expected": "d171164c1e408735860c505ec0a0e6e7ad9d9c3e8927ef322f69f3ce77821518",
+      "actual": "d171164c1e408735860c505ec0a0e6e7ad9d9c3e8927ef322f69f3ce77821518",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3_EXECUTION/VERIFICATION.json",
+      "expected": "3389905ae9911b765a7821b8e619bb3fb51ef34033c22c13add75736e145641a",
+      "actual": "3389905ae9911b765a7821b8e619bb3fb51ef34033c22c13add75736e145641a",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3_EXECUTION/push_verify.py",
+      "expected": "58d2f419ead69a9e18703065cd045c457864a9e7a65de173fdc6b3c2e77aebee",
+      "actual": "58d2f419ead69a9e18703065cd045c457864a9e7a65de173fdc6b3c2e77aebee",
+      "match": true
+    },
+    {
+      "path": "AMENDED_V3_EXECUTION/verify_installed.py",
+      "expected": "a85154e377b7ce206069d430a96f331db22c5ce4e4b0a7b0594b6644464af071",
+      "actual": "a85154e377b7ce206069d430a96f331db22c5ce4e4b0a7b0594b6644464af071",
+      "match": true
+    },
+    {
+      "path": "APPROVED_REVIEW/FACTORY_AMENDED_V3_REVIEW_2026-10-19_203340.zip",
+      "expected": "fc6775c1a28275c925983558cfbc7e109398d351f0ea147e57c38a4a3f75290d",
+      "actual": "fc6775c1a28275c925983558cfbc7e109398d351f0ea147e57c38a4a3f75290d",
+      "match": true
+    },
+    {
+      "path": "COMMIT_PATHS.txt",
+      "expected": "5b433d2a9743b1fb324ee6180473344a40213a7ad9b4726e2405054f3cf0f137",
+      "actual": "5b433d2a9743b1fb324ee6180473344a40213a7ad9b4726e2405054f3cf0f137",
+      "match": true
+    },
+    {
+      "path": "README.md",
+      "expected": "6f1f4027cf3738dfca0733262f77b4406e3e1096dd6a3d5a24a25fa5105c9ed5",
+      "actual": "6f1f4027cf3738dfca0733262f77b4406e3e1096dd6a3d5a24a25fa5105c9ed5",
+      "match": true
+    },
+    {
+      "path": "REPAIR_COMMIT.diff",
+      "expected": "acc8437f6194a36b196333c7feb1ccd0431c9422b6fa3772887c9c18e45fa47e",
+      "actual": "acc8437f6194a36b196333c7feb1ccd0431c9422b6fa3772887c9c18e45fa47e",
+      "match": true
+    },
+    {
+      "path": "SOURCES/JARVIS_REPAIR_RECOMMENDATION.md",
+      "expected": "7be1e073ea4432794b14b7eca56979fdd15ca35d6f1327e98bf6550dbbe1be19",
+      "actual": "7be1e073ea4432794b14b7eca56979fdd15ca35d6f1327e98bf6550dbbe1be19",
+      "match": true
+    },
+    {
+      "path": "SOURCES/QA_LEAD_VERDICT_V2.md",
+      "expected": "dac1f1d824b4af5d599504f77839ece3cd875b03bfff3e740d23d366b6d5f7c4",
+      "actual": "dac1f1d824b4af5d599504f77839ece3cd875b03bfff3e740d23d366b6d5f7c4",
+      "match": true
+    }
+  ],
+  "members": [
+    "AMENDED_V3/AMENDMENT_IDENTITIES.json",
+    "AMENDED_V3/AMENDMENT_V3_EDITS.json",
+    "AMENDED_V3/BOUND_EXECUTION_INDEX.json",
+    "AMENDED_V3/DIRECTOR_DECISIONS_V3.md",
+    "AMENDED_V3/EXECUTION_PROPOSAL.patch",
+    "AMENDED_V3/EXECUTION_PROPOSAL_INDEX.json",
+    "AMENDED_V3_EXECUTION/APPLICATION_COMMANDS.json",
+    "AMENDED_V3_EXECUTION/APPROVED_RECORD_PATHS.json",
+    "AMENDED_V3_EXECUTION/CLOSEOUT_TRANSITIONS.json",
+    "AMENDED_V3_EXECUTION/CODE_PRESERVATION.json",
+    "AMENDED_V3_EXECUTION/COMMANDS.json",
+    "AMENDED_V3_EXECUTION/COMMIT_COMMANDS.json",
+    "AMENDED_V3_EXECUTION/COMMIT_RECEIPT.json",
+    "AMENDED_V3_EXECUTION/EXECUTION_PLAN.md",
+    "AMENDED_V3_EXECUTION/FABLE_HANDOFF.md",
+    "AMENDED_V3_EXECUTION/HUMAN_SUMMARY.md",
+    "AMENDED_V3_EXECUTION/LINT_OUTPUT.txt",
+    "AMENDED_V3_EXECUTION/MANUAL_READS.md",
+    "AMENDED_V3_EXECUTION/METADATA.json",
+    "AMENDED_V3_EXECUTION/PACKAGE_INTEGRITY.json",
+    "AMENDED_V3_EXECUTION/PATH_VERIFICATION.json",
+    "AMENDED_V3_EXECUTION/PRESERVATION_HASHES.json",
+    "AMENDED_V3_EXECUTION/PROPAGATION.tsv",
+    "AMENDED_V3_EXECUTION/PUSH_COMMANDS.json",
+    "AMENDED_V3_EXECUTION/PUSH_RECEIPT.json",
+    "AMENDED_V3_EXECUTION/REMOTE_PREFLIGHT.json",
+    "AMENDED_V3_EXECUTION/STAGED_SCOPE.json",
+    "AMENDED_V3_EXECUTION/START_STATE.json",
+    "AMENDED_V3_EXECUTION/STATE_CARRY_FORWARD.json",
+    "AMENDED_V3_EXECUTION/VERIFICATION.json",
+    "AMENDED_V3_EXECUTION/push_verify.py",
+    "AMENDED_V3_EXECUTION/verify_installed.py",
+    "APPROVED_REVIEW/FACTORY_AMENDED_V3_REVIEW_2026-10-19_203340.zip",
+    "COMMIT_PATHS.txt",
+    "README.md",
+    "REPAIR_COMMIT.diff",
+    "SHA256SUMS.txt",
+    "SOURCES/JARVIS_REPAIR_RECOMMENDATION.md",
+    "SOURCES/QA_LEAD_VERDICT_V2.md"
+  ]
+}

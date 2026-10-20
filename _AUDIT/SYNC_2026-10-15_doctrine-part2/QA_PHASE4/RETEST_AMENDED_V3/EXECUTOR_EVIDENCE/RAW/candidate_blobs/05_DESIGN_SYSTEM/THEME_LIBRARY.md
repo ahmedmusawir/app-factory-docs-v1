@@ -1,0 +1,134 @@
+# THEME LIBRARY — the factory theme catalog
+
+> **Version:** 1.3 · **Date:** 2026-10-18 · **Status:** Active
+> **Tier:** 5 — Design System · **Pairs with:** GLOBAL_DESIGN_SYSTEM_HANDBOOK, TOKEN_FILE, THEMING_MANUAL, DESIGNER_PLAYBOOK
+
+> **Scope:** first family — **Metro Warm** (Cyber Pharma: Mist / Slate / Bright / Dark-deep). Further theme families append here as new projects derive them; the pattern is app-agnostic.
+> **Reader:** Designer (me, in future labs) + Claudy.
+> **Pairs with:** the **Global Design System Handbook** (defines the token *contract*) and each project's **token file** (`globals.css` — the live values). This doc is the *catalog*: named themes that each satisfy the contract.
+> **Mental model:** the Handbook says *which tokens must exist*; `globals.css` holds *the active values*; this library is the *menu* of complete value-sets you can drop in. Adding a theme never touches the contract — only values.
+>
+> **v1.1 reconciliation note (2026-06-08):** Two changes only. (1) The live token file is **`globals.css`**, not `TOKEN_FILE.md` — references corrected throughout (the Global Design System Handbook §8 names `globals.css` as the primary deliverable; this aligns to it). (2) Role identity tokens (`--role-*`): the RULES were written here (§2). *(v1.2 note: they are now **defined in the contract** — GDSH §2 — with **reference values minted in TOKEN_FILE**; the reconciliation this note started is complete on both sides, F-043.)*
+
+---
+
+## 1. How a theme entry works
+
+A theme = **one complete semantic token set** (every token the Handbook requires), in HSL-no-wrapper, activated by a class on `<html>`. Components never change; only the variables behind `bg-primary`, `bg-card`, etc. resolve differently. That's the whole "change values, not code" promise.
+
+- **Light-base themes** live on `:root` (or a `.theme-*` override).
+- **Dark-base themes** live on `.dark` (or `.dark.theme-*`).
+- Full values for the two defaults are in `globals.css` (`:root` + `.dark`); the alternates are the small `.theme-*` override blocks there.
+
+---
+
+## 2. The "Metro Warm" family (Cyber Pharma v1)
+
+Shared across **all four** (these never change between modes — brand + meaning + identity hold):
+
+| | Value |
+|---|---|
+| Primary (brand) | coral hue — `12 93% 39%` light / `12 93% 66%` dark |
+| Success (recovered) | green — `131 54% 29%` light / `142 69% 58%` dark |
+| Destructive (money lost) | red — `2 67% 45%` light / `351 95% 71%` dark |
+| Info (neutral count) | blue hue — `214 74% 43%` light / `214 74% 66%` dark |
+| Warning (pending) | amber hue — `41 93% 27%` light / `41 93% 47%` dark |
+| Role — superadmin | identity hue, distinct from brand & status *(set per family; AA on `--card`)* |
+| Role — admin | identity hue — **must not reuse the destructive red** |
+| Role — member | identity hue — may align with `--success` |
+| Typeface | Saira |
+| Radius | `0` (Metro flat) |
+| Labels | uppercase, tracked |
+
+> **Role tokens (added v1.1):** roles are identities, not statuses. They hold their hue across all four modes just like the semantic four. The only hard rule: `--role-admin` must read as visually distinct from `--destructive` so an admin badge never looks like an error. Tune each role's lightness per mode and contrast-check on the style tile.
+
+Semantic hue and meaning hold across modes; lightness and paired foregrounds may differ to meet contrast requirements. TOKEN_FILE contains the reference values. Verify the documented text/fill uses before claiming accessibility:
+
+### 🟫 Mist — *default light*
+- **Base:** light · **Background:** `#e2e5ea` (`217 16% 90%`) · **Surface:** `#ffffff`
+- **Activate:** `:root` (default — no class)
+- **Best for:** the everyday daytime view. Muted, easy on the eyes, looks intentional rather than glaring. **This is the recommended default.**
+
+### 🌑 Slate — *default dark*
+- **Base:** dark · **Background:** `#1d212a` (`222 18% 14%`) · **Surface (card):** `#2e3440` (`220 16% 22%`)
+- **Activate:** `class="dark"`
+- **Best for:** low-light work, long sessions. Sophisticated gunmetal; coral pops hardest here.
+- **Readability note (L16):** background sits *below* the card so panels elevate; `--muted-foreground` is lifted (`221 17% 71%`) and `--border` firmed (`218 13% 33%`). This is the v1.1 real-screen fix — keep it; do not flatten background and card to the same value.
+
+### ⬜ Bright — *alternate light*
+- **Base:** light · **Background:** `#ffffff` · **Surface:** `#ffffff`
+- **Activate:** `class="theme-bright"`
+- **Best for:** maximum contrast, print/export views, screenshots for decks. Crisp but can glare on big screens.
+
+### ⬛ Dark-deep — *alternate dark*
+- **Base:** dark · **Background:** `#191c24` (`224 18% 12%`) · **Surface:** `#23262f`
+- **Activate:** `class="dark theme-deep"`
+- **Best for:** OLED / focus mode / demo drama. Near-black; reserve for when you want the charts to glow.
+
+**Phase 1 ships Mist + Slate** wired to the theme toggle. Bright and Dark-deep are catalogued and ready, not yet wired.
+
+---
+
+## 3. Adding a new theme (the repeatable process)
+
+1. **Pick the neutral direction** — choose the surface stack; preserve brand, semantic and role hue/meaning while adjusting lightness and paired foregrounds for verified contrast.
+2. **Derive the full set** — every token the Handbook lists, light *and*/or dark base. Don't ship a partial theme.
+3. **Contrast-check** — run `success`/`destructive` (and the `--role-*` colors) as small text against the new `card`; tune lightness until all clear WCAG AA. (This is the step a 4-color palette can't give you.)
+4. **Add as a class** — a `.theme-*` override block in `globals.css`. Nothing else changes.
+5. **Catalog it here** — name, base, background, "best for", activation class.
+6. **Render the style tile in it** — eyeball light + dark, then a real-screen pass, before locking.
+
+A new theme is ~30 minutes and zero component changes. That's the payoff.
+
+---
+
+## 4. Per-tenant brand themes (multi-tenant, future)
+
+Cyber Pharma is multi-tenant. When a client wants their own brand color, it's the same mechanism scoped to a class:
+
+```css
+.theme-acme { --primary: <acme hsl>; --ring: <acme hsl>; --accent: <acme hsl>; }
+```
+
+- Swap **only** `--primary` / `--accent` / `--ring`. **Never** the semantic four or the role tokens — underpaid must read red, and an admin must read like an admin, for every client.
+- Apply the class at the tenant boundary (layout reads the org's theme).
+- This keeps a per-pharmacy brand a one-line addition, not a fork.
+
+> Defer building this until multi-tenant brand theming is actually scoped (it's Phase 7-ish). The architecture above means it costs nothing to add later.
+
+---
+
+## 5. Quick reference — activation
+
+| Theme | Class on `<html>` |
+|---|---|
+| Mist (light default) | *(none)* |
+| Slate (dark default) | `dark` |
+| Bright | `theme-bright` |
+| Dark-deep | `dark theme-deep` |
+| Tenant brand (future) | `theme-<tenant>` (+ `dark` if dark base) |
+
+Full token values: `globals.css`. Visual proof of all modes: the style tile + the OwedBook Mist/Slate/Dark artifacts in `_design/`.
+
+---
+
+## Cross-References
+
+- **`GLOBAL_DESIGN_SYSTEM_HANDBOOK.md`** — the token contract this library satisfies.
+- **`STARTER_KIT_HANDBOOK.md`** — kit primitives; its §8 Theme Conventions and §2 Role Colors defer to these tokens.
+- **`globals.css`** — the live token file (per project).
+
+---
+
+## Version History
+
+| Version | Date | Changes |
+|---|---|---|
+| 1.1 | 2026-06-08 | Corrected `TOKEN_FILE.md` → `globals.css` as the live token file (aligns with GDSH §8); added `--role-*` tokens to the Metro Warm family + the add-a-theme contrast step + the multi-tenant rule; folded the L16 Slate readability fix into the Slate entry; added cross-references. Theme values unchanged. |
+| 1.2 | 2026-07-08 | **Wave 5 (audit sync).** The v1.1 one-sided reconciliation is now two-sided: `--role-*` tokens are DEFINED in the contract (GDSH §2 gained them, F-043 closed) with reference values MINTED in TOKEN_FILE (Metro Warm, both modes, AA-computed per this doc's §2 rules — admin teal ≠ destructive red; member aligns w/ success; superadmin purple); the v1.1 note annotated accordingly. Standard header block added (F-018); title scope generalized (first family: Metro Warm; further families append). Theme values and all content otherwise untouched — cleanest doc in the audit stays that way. |
+| (prior) | — | Initial Theme Library (Mist / Slate / Bright / Dark-deep). |
+| 1.3 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-003, FC-074, FC-081, RUL-14 |
+
+---
+
+🥄 *Part of Stark Industries — App Factory doctrine. The Handbook defines the contract; this is the menu.*

@@ -1,0 +1,980 @@
+{
+  "zip_sha256": "fbcabacdd39d74fc7fc63daf3f512cac42dafa0c0d8ab17306d980f842084dff",
+  "files": [
+    {
+      "path": "RETEST_AMENDED_V3/QA_EXECUTOR_PROMPT.md",
+      "sha256": "66bd5e14dab3f93c0858c9b2e799d00c5f47f0f36dcbfdd505613e4843eb6880",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/ASSIGNMENT_PREFLIGHT.json",
+      "sha256": "f9296037a1aade0c0eec202dced2078c2b5bb93dc075e17de6c2896bfc7af6c4",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/rv3_adjudicate.py",
+      "sha256": "b1eb526e4466c08556348380a130bffeea9a737f39d8ee16b76801fca8970b57",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/DELIVERY_RECEIPT_RV3_VERDICT.json",
+      "sha256": "b848aadaf947fc256fcee9722a9854174eeead5bfb1dd643a213f4627331726e",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/QA_LEAD_VERDICT_V3.md",
+      "sha256": "1d6793da6666bb7b41cf6a6eba1c3d07e2f47bef0b9e274234e34897e564f2a3",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/ARCHITECT_HANDBACK.md",
+      "sha256": "a58132b8b1b8e1aec39084646c66d257da7f0d575af3ac6d3a0f01f2be4a5f99",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/RV3_ADJUDICATION_EVIDENCE.json",
+      "sha256": "f63596095c3b299f428b306acf6a0d99f744b229c47a03557886187389e4bd9a",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/ASSIGNMENT_RECEIPT.json",
+      "sha256": "a8b3b5b4713f2d2cec752c63e49cd780bccfc5523bf2b4228f906185f8096d72",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/SHA256SUMS.txt",
+      "sha256": "e535f30334753614c3011e483dfb3ffef358f807d9b07abe7051775edd076c5c",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/REPRODUCE.md",
+      "sha256": "0b926a4130ef0a3c6dc5e97f3a779438c89104f13db5ed4f680a22f2b6332e38",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/WITHDRAWAL_ROWS.json",
+      "sha256": "3ef1b54287421ff2c9f0b11e71b45a1419439030c68fd5bdd4698316f1133699",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/parent_tree.json",
+      "sha256": "8403ac2a312001611e4b00e7b16a457320bb8bd670a86d3172e20703df2d1c43",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/initial_network_attempt.json",
+      "sha256": "c8ce370edcbe48b585e7bb16f22493a1cbb226944287181a7da445b799989506",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/metadata.json",
+      "sha256": "674b09000e504750d3354654febc645fb9ba2b65a215880ba11d164185bcf59d",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/preexisting_paths.json",
+      "sha256": "f064b037368405c87b6be9cdff7670843934ea6a11dda92d516e558a51ea63c9",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/author_identity.json",
+      "sha256": "91befe68bbfd7fbfda6e7790065ae87614cfb1a8f027f7ebd822a275a7f80cfa",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/transitions.json",
+      "sha256": "16b1adbba89d2b079d5dd6cd6c359ac6ba674854c2a437fbf0c3445388091cc6",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/inputs/prior/WITHDRAWAL_ROWS.json",
+      "sha256": "fcbad4e64bd5f6357e43a25636c3b382d993ed683190818bcb51632606555425",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/inputs/prior/SHA256SUMS.txt",
+      "sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/inputs/prior/R_RESULTS.json",
+      "sha256": "90bdd3d56a7237f10e272520aa9253cd3404dd7203e6e625896464e7e0799570",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/inputs/handoff/AMENDED_V3_EXECUTION/FABLE_HANDOFF.md",
+      "sha256": "2502459330394d7fd3274627db86b429db9d94b1d7d6a683c198130f2f674672",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/inputs/handoff/AMENDED_V3_EXECUTION/CODE_PRESERVATION.json",
+      "sha256": "8f09eb339cd4b4f2225dc1e5cb6cb1bad3aa21994ae8bd51ff62ccb0ecac3cc7",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/inputs/handoff/AMENDED_V3_EXECUTION/COMMIT_RECEIPT.json",
+      "sha256": "d0341bbe694c87b51930f8459244d069f8fa19264029d2ec34d0d75460ff6561",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/inputs/handoff/AMENDED_V3_EXECUTION/PUSH_RECEIPT.json",
+      "sha256": "0c9d74532b725acd380a3a5d6de948d70ac79a17343cb8af1e645430d758adce",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/inputs/handoff/AMENDED_V3_EXECUTION/STATE_CARRY_FORWARD.json",
+      "sha256": "d171164c1e408735860c505ec0a0e6e7ad9d9c3e8927ef322f69f3ce77821518",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/inputs/handoff/AMENDED_V3/DIRECTOR_DECISIONS_V3.md",
+      "sha256": "1fa28bc81dedd96f017f9ffc9a69b7a86326917a61093e9aeb9390bcfbe300a4",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/inputs/candidate/QA_RETEST_AF01/DOCSET_SYNC_ACCEPTANCE_SPEC_AMENDED_V1_R1.md",
+      "sha256": "2a3867cacef11c6bb0419a4c71229479efe703cee9fbcc1e4f71c0ac8e63f0fc",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/inputs/candidate/AMENDED_V3/BOUND_EXECUTION_INDEX.json",
+      "sha256": "55537c6411724ab78837d0191d61375654839202acbf15b13a76d98aa8d483e6",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/inputs/candidate/AMENDED_V3/EXECUTION_PROPOSAL.patch",
+      "sha256": "afd8f9249854d4e99c385b1e21c459fa297fa5ed5ddcac782d1509747c43faed",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/inputs/candidate/AMENDED_V3/AMENDMENT_V3_EDITS.json",
+      "sha256": "2a1ef7192f75505f44d6da4b31836e68af31e23de3bc3afb0afd8f5b330ae4fd",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/inputs/candidate/AMENDED_V3/DIRECTOR_DECISIONS_V3.md",
+      "sha256": "1fa28bc81dedd96f017f9ffc9a69b7a86326917a61093e9aeb9390bcfbe300a4",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/inputs/authority/QA_RETEST_AF01/DIRECTOR_DECISIONS.md",
+      "sha256": "a7629a69da28b94e9d638e22bd4a5ff1328fd17d52596c27434ea52c6963e436",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/inputs/authority/EXECUTION_SETUP/GIT_AUTHORIZATION_2026-10-18.md",
+      "sha256": "8c88e8192663ef32773e66d80f67aa805ab61bb528366f45057eebec0f962f1d",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/inputs/authority/PHASE3_EXECUTION/DIRECTOR_RELEASE.md",
+      "sha256": "ca9af3517b97a97d97a5996f6baf1044d95d2a7364fff050c0d76218848008b7",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/inputs/authority/QA_PHASE4/QA_LEAD_VERDICT.md",
+      "sha256": "16866d367251435266668cf5d9543cceb7affc818273ca333ca7a77319d583b5",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/inputs/authority/QA_PHASE4/REPAIR_QA_P4/DIRECTOR_DECISIONS_V2.md",
+      "sha256": "e34922ddb3177930e8ade6e56dae65883c31878f09c2493715df952724d59fef",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/inputs/authority/QA_PHASE4/RETEST_AMENDED_V3/QA_EXECUTOR_PROMPT.md",
+      "sha256": "66bd5e14dab3f93c0858c9b2e799d00c5f47f0f36dcbfdd505613e4843eb6880",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/inputs/authority/QA_PHASE4/RETEST_AMENDED_V2/JARVIS_REPAIR_RECOMMENDATION.md",
+      "sha256": "7be1e073ea4432794b14b7eca56979fdd15ca35d6f1327e98bf6550dbbe1be19",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/inputs/authority/QA_PHASE4/RETEST_AMENDED_V2/QA_LEAD_VERDICT_V2.md",
+      "sha256": "dac1f1d824b4af5d599504f77839ece3cd875b03bfff3e740d23d366b6d5f7c4",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/inputs/authority/QA_PHASE4/OVERRIDES_AND_ALIGNMENT.md",
+      "sha256": "cfd886239d60ab221bc0625ef4337b2a9ffa9d4aa67a76ddb8ffbe33e76722b1",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/edit_accounting.json",
+      "sha256": "8f20a1ea7c769bf5a1238b6b1f386fd8eec16cd159cf24dc084cf03246e854fc",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/prior_inventory.json",
+      "sha256": "8fc81cea56e76655be4778e8a85765ba47ba94b26ba83b735108ca1e97fbb4a0",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_state.md",
+      "sha256": "4dc5566589696045c1ae835bf315cfa68db5d30bca78ff9db137efb064cb666b",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/carry_forward.json",
+      "sha256": "add9ebc16a17931eca2bbe198f873931d2969ca18c75aeb93e318d450356d407",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/changed_paths.txt",
+      "sha256": "5b433d2a9743b1fb324ee6180473344a40213a7ad9b4726e2405054f3cf0f137",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/code_preservation.json",
+      "sha256": "0205ea0e8341a713f848af125200dfbdfeb5c51c4185d0fc8e053209695aaadc",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_tree.json",
+      "sha256": "0c5447bc35214be7ecaecc89346ddf28b219ef658db0933edf706e0b4e584cb4",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/stability.json",
+      "sha256": "ffc52ad3e3c9dfebb2ce7e9a303c49e3a9c5cc3c39ba4c42d203e3003b808493",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/handoff_inventory.json",
+      "sha256": "4a45ed253a22ec8447a85b75dd00f798808292795afde23b7dc6d12b4b11bde5",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/review_protected_start.json",
+      "sha256": "8f9f44bbd5056d1197f82a6c447793277a2f1a63f96a34e4831c2834e0cd3f94",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/live_scope.json",
+      "sha256": "4061dc2401462b117ad55d055ecfcff4774420330e236e9e93c246159681466b",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/propagation_summary.json",
+      "sha256": "c5fd3e5035857f1aba3a2a6efb666db5c2e05ab20e1aa48e000816fe55bd366b",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/propagation_rg.txt",
+      "sha256": "4be6ee5abfb2888f397f7d35513aa2d85b448992f5381c61ce7d5cd20e536f8a",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/edit_locations.json",
+      "sha256": "8dfce126b170381d05c0c71ffdd190a5375ad25400842980ef0b625f23324fab",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/propagation_hits.json",
+      "sha256": "feb42da1be9169d323180c54b82db2a967238b28f58f0d7ec362425baaac870a",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/lints.txt",
+      "sha256": "464d6fe12c6b15c15fa89499cda06a08e54c18376f7b4127c5e915879a23f04e",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/canonical.diff",
+      "sha256": "acc8437f6194a36b196333c7feb1ccd0431c9422b6fa3772887c9c18e45fa47e",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/harness_invocations.json",
+      "sha256": "86768549f2fa7a59e16c6f0ef4b7d48cb34f52a1cc83c2fbd1f8ac26b1128a09",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/parent_tree.raw",
+      "sha256": "a138232f6379fa7d78f1371f39e123e7bcc2104ebaadc54b77b73d8f72402a84",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/script_hashes.json",
+      "sha256": "527028e1ae4d7fc14f6cce3efc5bc657cbec173ef0f38df1ba924fbc25b21543",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/manual_checks.json",
+      "sha256": "77b50b541dddbfd33108e94e4daedd6cdbf3a487d2c0a90f0aefa0edacb74cf2",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/protected_trees.json",
+      "sha256": "46fe67b48b7954028e041ffae2026d824f4deec555b0b607f8fe6da2072fe08e",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md",
+      "sha256": "68876ff845a6ead4977444426ab53cf0862c411469b8489fefc4c2a716a4312a",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+      "sha256": "37bac1c70b0afcee66e6f298c518f08566a292435617da28291040016ca89312",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+      "sha256": "5b736786a6f6cdced703281cfada79af6c5b1c4f959f4b75615ca3a0c93971f7",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_assets/workflows/FFM_CREATION.svg",
+      "sha256": "0d7640fc0460f98aaf6a0b0d1acc8bc7866fc94e0ed61099d9d0e59931d3a1f0",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_assets/workflows/FFM_EXECUTION.svg",
+      "sha256": "d0ac268ef03f2ab6f4cb80970b2be3d242442af8eeaa3f3518526354df2a915c",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_assets/workflows/FFM_DEPLOYMENT.svg",
+      "sha256": "ce17e51c9e72e24cd4fd961f9812d13242914f9e03fcb238a749b49361cb028e",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_assets/workflows/BIM_WORKFLOW.svg",
+      "sha256": "7cba33aa1a396e4467a09eb80ef912b6e06d2dc06f839c569ffcdf5f87b67ec9",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+      "sha256": "6f423ba687dae1e6de472d3840ccda4226f175ef8398d4e47451934c964af202",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+      "sha256": "4c460b040b09782497069b69409381523fbf3bea56897febecb6c51f9458d458",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md",
+      "sha256": "1b7b7438738eaefbf201f8662c323e13b51208e965f565456e17c8f1653343c4",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+      "sha256": "c7ddc8427e9469bae4a0c3476fc4ecad512ef2a45db09eec7ce2c17e84567a5d",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+      "sha256": "18590bd643bd8e4b5b7c54de2ba1fb680faac217b9bea136e576576207496639",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "sha256": "e9c7bc1e58286187f58df06d3f0718bf8c299a4eeb4b057427396bc3411ea85f",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+      "sha256": "0e492b78185ecc152bf50e4cc603329d8328efc565aaa92fc0accbc2fb8f16f2",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "sha256": "955b3c02dd0012616bc8b7a60f99af2a74c651d5a4db5393570ef49f4ee88e97",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+      "sha256": "75bc73865f714fe5935762ae445fd1d4d54807efb31d4f0e98e1caa4772e78fb",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/AC_EVIDENCE_MATRIX.md",
+      "sha256": "bf9685c13d650a109ea0f40d44ed0f813fea31e7fdcb67e0aa8b518ee194cb3a",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/QAM_CLEANUP_REPORT.md",
+      "sha256": "2e5ac571423d245f48563090662679df82d78fcbc415be90ee71f3a33fc1b830",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/FINDINGS.md",
+      "sha256": "e0b10749d2b05183253af6a486b01f92146c58ca3a8c618a73beec584ba46f75",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/ENGINEERING_HANDOFF.md",
+      "sha256": "5bd7766647aad374634061ca31caa3e2f2facef1b5a516f8f8a18d2720f00677",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/REVIEW_START_HERE.md",
+      "sha256": "0ffc1c60f9f4de3bdf10a30af6ecb9b95d036190c79056db1cbd3145a732cac1",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/README.md",
+      "sha256": "4d0eb7a53bba7d94a032353b9fc0316538058475fb2fc40b6d545a6982b9b0aa",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/FILE_INDEX.template.json",
+      "sha256": "2620fd114b8d58a7f022631e3dba1d2d8caa2c1b457d596dde15e190460305b8",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/QAM_PACKAGING.md",
+      "sha256": "be3508938dcc3ea0e2833c5a7f97d7915e2e409204adde9ff69c4941ddd43755",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/CLAUDE.md",
+      "sha256": "79a674620466b01d0a5f2b82f85658177e05f91d689072f1f5a1d1f101e43d2a",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/QAM_MANIFEST.md",
+      "sha256": "9d68426ef53d852b46285ab8f15a5f978811e4fb606e239ccaab97ba21ce6b43",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/evidence/README.md",
+      "sha256": "3c033254f64258d116bbbe069d585fa4df653c5ac84b68e03998bdbc675e9aab",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/QAM_EXECUTION_REPORT.md",
+      "sha256": "24ef00dd53190179498b07e8326e3c87216c9a4e5d70da2aa163f76bb7df076b",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/AGENTS.md",
+      "sha256": "b3415998cf417ea79551d8b4d31b92ff83df1becaf644ad1be499ce9ff0ef03f",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/QAM_RISK_REQUIREMENTS.md",
+      "sha256": "cc910d528ee2ef9398f06f0259896669544e9ad02ee4623d620b98667e1131f0",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/QAM_APPROVAL.md",
+      "sha256": "de505b50c3ed901d77bfc0373ff329901447f2044bc2c3524a0164841628674d",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/GOVERNING/README.md",
+      "sha256": "b9fc64518dda952a7d4a834a2b4cc9fe3ad82148ade00f4381085968e2dd11f6",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/QAM_TEST_PLAN.md",
+      "sha256": "8d3d245926946e99a8cd2cdecc8dda79f47a436c5b3f35ba7ba48886bc23e0e9",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/AUTOMATION/README.md",
+      "sha256": "c9a4f3a0a8d45077cc5cfbee8a93590cd4c9b08c33e8c6757419d537610bbfcb",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/QAM_STATE.md",
+      "sha256": "afc4af6ad54123506bd0b6861ba7a71c9d5dad15e51db1f5bb3704d26a75f62f",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/QAM_CERTIFICATION.md",
+      "sha256": "7781cf756893b883d58f75c8242e257130fb909625246e9a7b3500c9e83465c6",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/PARENT_ENTRY_ROUTING.md",
+      "sha256": "d557319761782cf617ae828a4df81243a9908aa7c033b563d814d2d2fccf3ebe",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/README.md",
+      "sha256": "b7462fc84fb6557d08010623a465588b27ee62edbffa2702ea71f2ba4d5a3d91",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/QAM_PREFLIGHT.md",
+      "sha256": "073a4381f08d0280d83a991e72d3ffd82926fee8c76e2b1fbffe1b0690f6a1b7",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/QAM_RECON_REPORT.md",
+      "sha256": "42b313b6a0e811293319f9ae390674e88a957ee87d619554d53323358c167c67",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/QAM_ENTRY.md",
+      "sha256": "a6b9c6f160d9811bf9d273bb03ea32f63256019b4add8cbdc23f032261fababe",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+      "sha256": "8f585a4a866355683904924c1a4f2ad406ffb42d95e5e5c139baaf85d9aada96",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+      "sha256": "3d2b8b1fd9289b02e87b15d26dc5bb61dcb6efd19a6bec621faeddc3ca85d89b",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+      "sha256": "aa968075698fb4cd791c5b02cc026dd41470089f2a44c4e4270ec4584cfd061a",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+      "sha256": "2b61c38203909ffb95449d779a4c13f91d4f134aac6e397a17ad4fbdd247068b",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+      "sha256": "3fab83a09b26afd82038676c15654b758243b107023310dc2f3a5317f0d87b4c",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+      "sha256": "c5fc80000e293fbfba59a559c81a24fcfcfb42e935b06c438bee561ae6f28d4e",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "sha256": "dcf2c4fa69c9b173c64e4b6c4113cfbe10e0c02e3dba44da2198ea0310714b64",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md",
+      "sha256": "0baaaf1d3b4a32cc2d2b3977608974be7918c4142d2b707d00c66289bd838bcb",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+      "sha256": "7e2ceb6f882e1eafaa60759b163c541eaafa932fb28e0fcab08345f985c18d45",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+      "sha256": "20fa7ca7125510570a3508c0e74b21966e41f717fe65f5070a883e1d97def08f",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/CHANGELOG.md",
+      "sha256": "4c655c1dd23b4f64cdc7d33f93b67c500a2f144ab46f8f013821a7c444f7b006",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+      "sha256": "4dc5566589696045c1ae835bf315cfa68db5d30bca78ff9db137efb064cb666b",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+      "sha256": "0070295f53b3e924d58b473e885072f902f45373530fa91def6667ca220ef80c",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+      "sha256": "f178d51346c252baf75a3e0d6c558da411986e74b634ac64b4fa9fe6b2d50291",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+      "sha256": "01633da70da2d4cb863a2c883c1c2e7194abd602cf422fbb1bb52ae2b2ac43ab",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+      "sha256": "3e028ece38102a7d3d9bf375afb1acb3766a1a28743626aea0b54ba9ce2503f3",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+      "sha256": "1eee0154b965948156b8ef169beb10985e668819ddbce833f6c4d3f432a84771",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+      "sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/05_DESIGN_SYSTEM/TOKEN_FILE.md",
+      "sha256": "2fc5eff41dd6320550c21bfda7cc6e33f7b5be7339fe9e5a280b67dc0475922a",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+      "sha256": "2b7f9f8d5b89a43bb63edbb54950bf6dcbee7e67549d6019b1dada5c51d493b4",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+      "sha256": "2b5da310aa196164cb0d07654d6df73c15f3ac23c67c416da3036ea148f1d491",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/05_DESIGN_SYSTEM/THEME_LIBRARY.md",
+      "sha256": "4063fe5f3dacfb7df9bf433b7073e2a5b608ced12a7944eabecc9087bcf261ce",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+      "sha256": "8d36ff89202b0a1d692252c7d46c8da709cf317438d007b2564340bf47fe62ab",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+      "sha256": "b5688cb6f8a6b0aae9dbe3db24aa8457571e2f0d6099801ccc9e3f11f49c59c9",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/MANIFEST.md",
+      "sha256": "13759dcc55df8747a86ddaa053f89d24c4e280474cde91d9e44bca3211e1b942",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+      "sha256": "c54a379e52318081c9ce89c2a253c65e16d8838079d7d2bcfef90939d42df54b",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+      "sha256": "e9b2b24cbd734b846ccf5215e235474f1aa097bd8be01d7f2d360094a59ee6d9",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+      "sha256": "e1613573a8d56073033a96ee803968feff1ab5f18e82ab3c329e64dd920c6bb1",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/ARCHITECT_PLAYBOOK_v2_2.md",
+      "sha256": "b0754979e3b24cb79234265fe146f39f03718e608a60153a702a518f34979af4",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/DATABASE_MANUAL_v1_1.md",
+      "sha256": "326802ad938bb6b5b9f1b73c74ebee811789185789ef003e907101a0db4a0cf8",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/HANDOFF_PACKAGE_PLAYBOOK_v1_1.md",
+      "sha256": "6a2f4706542395360248dd42e17cbf9fc49f0886c844aa1e0e5315a047892c4f",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/APP_FACTORY_SKILLS_PLAYBOOK_v1_1.md",
+      "sha256": "d93f3d5d81d5add6638fee9c71eecc370fd86f07ad1ac47f7021d6415a446113",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/BUG_FIX_PLAYBOOK_v1_0.md",
+      "sha256": "3ca537dec3958cabb0159a5243b7fe3f76c10e46ebcaa4ba04d258dcd5d1a871",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/QA_PLAYBOOK_v1_1.md",
+      "sha256": "b6c70f14af18bb187ca7980954317af486e43b682821245d9911f2160d5198a5",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/THEMING_MANUAL_v1_2.md",
+      "sha256": "3c71a3a959df8393b4f6810a8122a94895fced02d658d3b512ee5f30784091b1",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/STATE_MANAGEMENT_MANUAL_v1_2.md",
+      "sha256": "2a281857fe0a03d9066ac171e725ca50e42944df204b4eceaebba152b61af196",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/TOKEN_FILE_v1_2.md",
+      "sha256": "066e0e60a49714adb062bc2983b1d5a82bc69f0c73794bac44292f6851dc88b5",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/SOFTWARE_FACTORY_PLAYBOOK_v1_3.md",
+      "sha256": "dd9b355bed9b263756a9622205cc30b4b06dad2a08397b7fb55d7e5bb2a7260e",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/AUTH_MANUAL_v1_4.md",
+      "sha256": "6b81073fe81727d4a4a48d1a0e4c43098f3ce70fafbcc3a7a6c660e661276850",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/APP_FACTORY_BLUEPRINT_v2_1.md",
+      "sha256": "9b732116c6030aee4d6ae0b792272bc372dd647ef95dea522c2bf7949934af93",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/FRONTEND_BUILD_PHASE_PLAYBOOK_v1_2_2.md",
+      "sha256": "362609b6551bd585c5f3c57ce5b751285871335d154ad2a8c97ca62b28a20702",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/TESTING_PLAYBOOK_v2_1.md",
+      "sha256": "5dfc2d198d51eebd4c0b136eeafc50cc2f64dafe44b7bbd153b801f4849692ad",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/FRONTEND_FIRST_PLAYBOOK_v1_1_3.md",
+      "sha256": "2516dcbd50f525328db955592c6c14eafa971c02d4dec722130a87505248a422",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/UI_UX_BUILDING_MANUAL_v1_4.md",
+      "sha256": "8b9a6f647a8999ce35db4dd20df3db058ec7c64a47c4b3ab8051195f97d9d544",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/APP_ARCHITECTURE_MANUAL_v1_3.md",
+      "sha256": "ca1dc1f0a8ce578523a46a3262f2f1d09a63cb6e8f2517157d940c0febfb3134",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/RECON_QUESTIONNAIRE_v0_5.md",
+      "sha256": "974f09e3118e94288beeb3dce919bea32a1571f294a59da6fd0041ee615968db",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/QA_PLAYBOOK_v1_0.md",
+      "sha256": "32d17ef5ca2eb32dfec6d120a71d280daa2973cba90e8f1735b85e07a3098e99",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/THEME_LIBRARY_v1_2.md",
+      "sha256": "480c7bdbc648e2fb7b97a6b120bfa36de35246cbdf3fd163e43aa0a2968ff73e",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/STRIPE_SUBSCRIPTIONS_PLAYBOOK_v1_1.md",
+      "sha256": "ec5a467ffd31ca8a1200f230b5a4ca4e104148bedaa83d3a4780f8e23f9a3e03",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/ENGINEER_PLAYBOOK_v1_2.md",
+      "sha256": "8d73c37a42624fa2c60729d8d2648fc96f72305a732fd5e74460cf0a614f861c",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/FFM_PLAYBOOK_v1_2.md",
+      "sha256": "7be561380ea1568d7df61734b6f1a5b12263194cca3ce469a5731e3bd32eafa0",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/API_AND_SERVICES_MANUAL_v1_1.md",
+      "sha256": "64794a5d33dbd7fdd473975d5ff7c02f49fe433c8f63c780b059d77ead55a4b3",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/ECOMMERCE_AND_PAYMENTS_MANUAL_v1_1.md",
+      "sha256": "d72816173e6a188282718174cbcd8cc4693f9f944858d96fe0bb092edb728f38",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/STARTER_KIT_HANDBOOK_v1_1.md",
+      "sha256": "396e325b4ac28b02c145fcad6181a99abb4f8345b87278d96f1aef2bbefb7efb",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/DESIGNER_PLAYBOOK_v2_1.md",
+      "sha256": "426eb0e7a3da1b31de8efe4ca68550d4b351d6f378b061f0c0de1ab6fbd632ae",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/COMPONENT_REGISTRY_v1_1.md",
+      "sha256": "4b7d5b7c39fa50838ea536d07a9f4086d3802613a8ee86dd986f09553b28767b",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/GLOBAL_DESIGN_SYSTEM_HANDBOOK_v1_1.md",
+      "sha256": "f2dc74390a16836c3213f77652451085680046786d5499b43b1e8a6a6774c8ac",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/BIM_PLAYBOOK_v1_0.md",
+      "sha256": "363619932b39fd7c8b4bafa9f270f814aa1af4aa98159dbfecb28c7f920e4f3b",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/FEAT_PLAYBOOK_v1_0.md",
+      "sha256": "5d70fa061bde72d49507f64b0113daab2646952867c63b8a499ea2feab3ed66f",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_blobs/_ARCHIVE/ARCHITECT_QUESTIONNAIRE_v2_2.md",
+      "sha256": "aa487360f420c1a2e0a48b097eaa2ebc905ebb659bcdc67ae72ce8d6a80f2bfd",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/observations.json",
+      "sha256": "174976a3da4136e0b3d3708a58de64e090f52153bc09e742e414c390b793f9e6",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/authorization.json",
+      "sha256": "111ae4261660de79258dbdacbf7b54c0ef5d05fa13f25b866b97cace42f85a51",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/context.json",
+      "sha256": "0ac08796f4f9b9c5b72e1a6401ed85b8a94a62db52c8655367beef5caf360785",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/ancestry.json",
+      "sha256": "4427c3dc2147b30de4754f1bcd44916fcf5ae7d9f899bc6dde65972be44106bb",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/index_hashes.json",
+      "sha256": "8627445e96aa7bca01d1122705a10b4531914b4a857941f83a5f36a21b87c7f5",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/candidate_tree.raw",
+      "sha256": "0418db1bb9b914b753d63e6519a36f2ca0084f8b3a909a5901eb29051c16d5db",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/findings.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/automated_checks.json",
+      "sha256": "82f2d12b40382f7fc8954f86db3d3a99ded0e94e24f0465061de87674e283863",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/state_passages.json",
+      "sha256": "07cf87a70ba7671778f4e44d2f6d48199781294d8de612ab5780ef612f1d83d5",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/handoff_crosscheck.json",
+      "sha256": "ab56a3b187acadea882d3f62c47e585ea0774b2c9261990046a4b88d0943ae76",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/scope.json",
+      "sha256": "886e00520741ec9a370390eb6bd02b0c4de571697bff43c745639fc4ac2c7f01",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/result_counts.json",
+      "sha256": "4f34b6a4db0c567d18679619642c83145d80094508bc1540093df08211852c47",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/RAW/parent_state.md",
+      "sha256": "0f0fe3992a98a9eff3c7378b41b20b7207545330b30879b246139e2a5475a942",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/PROPAGATION.tsv",
+      "sha256": "d577f468dfbd963dfd1e8903ec8d33da1a3a54277684201f00151107b74cd7c8",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/QA_END.json",
+      "sha256": "33f2e549acff9ff8491d26fc0be7e896553d4c6560c14d53304c535cc6463d04",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/scripts/05_report_and_seal.py",
+      "sha256": "152f44f17ee284c6288753269e24221425229a3cd398bcd9ea5659bb11f44ebd",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/scripts/common.py",
+      "sha256": "d2372ee37bfbe6dbde5a3ed71362a895387a898f4ca8899698e4943c93d65980",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/scripts/06_package.py",
+      "sha256": "d8410f296ea47b95df87b5c3b9719d7c28373389725804669a235c1716e843b2",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/scripts/01_preflight.py",
+      "sha256": "550164be6dae3acd540750e1abfa6c48a9e0833d6cf88277b55946956ed27d5d",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/scripts/02_measure.py",
+      "sha256": "f077cfce17636f863ec8d14fc362f8b8753aca6736d019b665e4e5816698bd3f",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/scripts/03_manual_evidence.py",
+      "sha256": "cb673b9844182389b87391729d2c1c38e0bb0bd7dc2a8e57e52db2f7a271959d",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/scripts/04_end.py",
+      "sha256": "8c72070957112cbb46a1bc9e68e1367b6f9d9915362ad391bef337e3bbf38a27",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/EXECUTOR_REPORT.md",
+      "sha256": "edd862da75da545cbec02484223e8bf7c37da132c0e25e68ba03657365008205",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/COMMANDS.json",
+      "sha256": "78a004c87456f33ae9cb8f56b68a5027d860e8c94aeb394aa165061fc6317122",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/QA_START.json",
+      "sha256": "a086c5f87c444f31e841ce698f7088d12a1cbd0164fd91e8fad21063d4d954d9",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/SHA256SUMS.txt",
+      "sha256": "67e41b4c265264fb3273d6651557d2c766f6423ea7cb2a3ccaa08a75b067aa52",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/R_RESULTS.json",
+      "sha256": "f32d4224de1ecea78634a29d6cb5a24d41874122980e00a458b714ef92545224",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/INPUT_IDENTITIES.json",
+      "sha256": "fa09b41bd1e46365e1553649778085743045807c1c673a864cbc937261446970",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/MANUAL_READS.md",
+      "sha256": "a54048a824bdebfe11a83477b257adf9b7d58d696ce29089585745e9b7ec7b4b",
+      "review_copy_equal": true
+    },
+    {
+      "path": "QA_LEAD_VERDICT.md",
+      "sha256": "16866d367251435266668cf5d9543cceb7affc818273ca333ca7a77319d583b5",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V2/QA_LEAD_VERDICT_V2.md",
+      "sha256": "dac1f1d824b4af5d599504f77839ece3cd875b03bfff3e740d23d366b6d5f7c4",
+      "review_copy_equal": true
+    },
+    {
+      "path": "RETEST_AMENDED_V2/JARVIS_REPAIR_RECOMMENDATION.md",
+      "sha256": "7be1e073ea4432794b14b7eca56979fdd15ca35d6f1327e98bf6550dbbe1be19",
+      "review_copy_equal": true
+    }
+  ]
+}

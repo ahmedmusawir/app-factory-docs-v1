@@ -1,0 +1,98 @@
+[
+  {
+    "family": "roles",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "start": 140,
+    "end": 156,
+    "quote": "Authorization roles live in a dedicated **`user_roles`** table — never in `user_metadata`, never as a column on a profile mirror.\n\n```sql\n-- PATTERN SQL — the kit's supabase/setup.sql is the ground truth.\n-- Verify on disk before building (recon Q5.2/Q5.3); do not treat this as a kit copy.\n\n-- Roles: one row per user, the single source of truth for authorization\nCREATE TABLE user_roles (\n  user_id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,\n  role TEXT NOT NULL DEFAULT 'member',\n  created_at TIMESTAMPTZ DEFAULT NOW()\n);\n```\n\nRoles must resolve from an authoritative server-side store. Creation and mutation require verified per-call authorization and a role input that untrusted signup cannot control. The historical Mark IV transport is not a verified safe recipe for the current kit; obtain pinned trigger and caller evidence before implementation.\n\n> ⛔ **FORBIDDEN:** never store — or READ — roles for authorization from `user_metadata` (the recon Q3.4 smell), and never mirror a `role` column onto a profile table. Two homes for a role guarantees privilege drift. This aligns with AUTH_MANUAL (\"Where Roles Live\").",
+    "byte_equal_span_in_base": false
+  },
+  {
+    "family": "RLS ownership and explicit public access",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "start": 362,
+    "end": 415,
+    "quote": "ALTER TABLE user_profiles ENABLE ROW LEVEL SECURITY;\n```\n\n### Common RLS Policies\n\n#### Users See Only Their Own Data\n\n```sql\nCREATE POLICY \"Users see own records\"\nON orders FOR SELECT\nUSING (auth.uid() = user_id);\n\nCREATE POLICY \"Users insert own records\"\nON orders FOR INSERT\nWITH CHECK (auth.uid() = user_id);\n\nCREATE POLICY \"Users update own records\"\nON orders FOR UPDATE\nUSING (auth.uid() = user_id);\n\nCREATE POLICY \"Users delete own records\"\nON orders FOR DELETE\nUSING (auth.uid() = user_id);\n```\n\n#### Role-Based Access\n\n```sql\n-- Admins can see all records — roles resolve from the user_roles table (THE pattern)\nCREATE POLICY \"Admins see all\"\nON orders FOR SELECT\nUSING (\n  EXISTS (\n    SELECT 1 FROM user_roles\n    WHERE user_id = auth.uid()\n    AND role = 'admin'\n  )\n);\n```\n\n> ⛔ **Do NOT write policies that read roles from `raw_user_meta_data`** (e.g. `raw_user_meta_data->>'is_admin'`) — that is an authorization read from user metadata, the recon Q3.4 smell (F-041). A prior edition of this manual showed that variant as a peer option; it is not one. Roles resolve from `user_roles` — everywhere, including inside RLS.\n\n#### Public Read, Authenticated Write\n\n```sql\n-- Anyone can read\nCREATE POLICY \"Public read\"\nON products FOR SELECT\nUSING (true);\n\n-- Only authenticated users can insert\nCREATE POLICY \"Authenticated insert\"\nON products FOR INSERT\nWITH CHECK (auth.uid() IS NOT NULL);",
+    "byte_equal_span_in_base": true
+  },
+  {
+    "family": "schema first",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "start": 35,
+    "end": 41,
+    "quote": "1. Design the tables\n2. Define relationships\n3. Set up indexes\n4. Generate TypeScript types\n5. THEN build service layer and UI\n\n> **When Schema-First Applies:** schema-first is the law for **backend phases and conversions** (the data shape is known or extracted). For **discovery builds the factory runs frontend-first**: UI against a mock DATA_CONTRACT first, schema authored at the backend transition — see `FRONTEND_FIRST_PLAYBOOK.md` §2 (when frontend-first is allowed) and §8 (the transition point). Both orders are legitimate; the pipeline you're in decides.",
+    "byte_equal_span_in_base": true
+  },
+  {
+    "family": "Navbar invariant",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "start": 636,
+    "end": 644,
+    "quote": "\n1. Route guards return what they resolve (`{ user, role }`) — never compute-and-discard.\n2. Client stores (Zustand) may REACT to session events (`onAuthStateChange` sign-out)\n   and own interaction state — they are never the SOURCE of identity for rendering.\n   (See STATE_MANAGEMENT_MANUAL §1 — Division of Labor.)\n3. Persisted client role state goes stale by design (written at login, survives in\n   localStorage). Any consumer treating it as truth inherits the race. (KIP-2.)\n4. Invariant-test the guarantee: an authed shell component must render its full\n   role-appropriate link set on FIRST render, synchronously (see Navbar.invariant).",
+    "byte_equal_span_in_base": true
+  },
+  {
+    "family": "state labor",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "start": 86,
+    "end": 112,
+    "quote": "interface CounterStore {\n  count: number;\n  increment: () => void;\n  decrement: () => void;\n}\n\nexport const useCounterStore = create<CounterStore>((set) => ({\n  count: 0,\n  increment: () => set((state) => ({ count: state.count + 1 })),\n  decrement: () => set((state) => ({ count: state.count - 1 })),\n}));\n```\n\n### Division of Labor: Server Props vs. Client Stores (HARD RULE)\n\n**The server tells the UI who you are; the store helps the UI react to what you do.**\n\n| Concern | Source | Why |\n|---|---|---|\n| Identity & role for RENDERING (nav links, role-gated UI, portal chrome) | Server-resolved by the route guard, passed as props | No client fetch window → no race, no empty state, no dev/deploy divergence. Re-verified server-side on every navigation. |\n| Session EVENT reactions (sign-out in another tab), interaction state, UI state, in-memory domain state | Client store (Zustand) | Lives and changes in the browser during use — that is what a client store is for. |\n\nPersisted auth state (e.g. a `role` written only at login into localStorage) is a\nSNAPSHOT, not truth: it goes stale across browsers/devices/cleared storage. Rendering\nfrom it produces \"random\" partial-UI bugs that dev latency hides (see AUTH_MANUAL —\nThe Navbar Law; origin: 2026-08-04 staging nav bug).\n",
+    "byte_equal_span_in_base": true
+  },
+  {
+    "family": "selective persistence",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "start": 501,
+    "end": 501,
+    "quote": "**Never persist everything.** Use `partialize` to select only UX-critical state:",
+    "byte_equal_span_in_base": true
+  },
+  {
+    "family": "AUTH-WALK/live DB",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "start": 508,
+    "end": 508,
+    "quote": "> A passing triad is necessary, not sufficient. Cookie/session/RBAC changes also need the operator AUTH-WALK; DB changes need live verification against the Supabase instance.",
+    "byte_equal_span_in_base": true
+  },
+  {
+    "family": "money versus permission",
+    "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "start": 38,
+    "end": 56,
+    "quote": "\n**Stripe owns the truth about money.** Whether a subscription is active, what was charged, when the next renewal is — Stripe is always the authoritative source.\n\n**Supabase owns the cache.** Your app reads subscription state from Supabase for speed and convenience. This is a local mirror, not a source of truth.\n\n**Webhooks keep them in sync.** Stripe sends events to your webhook endpoint whenever subscription state changes. Your webhook handler writes those changes to Supabase. One-way street: Stripe speaks, Supabase listens.\n\n### The Two Systems That Must Stay Separate\n\n**RBAC (Role-Based Access Control)** answers: \"Who are you structurally?\" — superadmin, admin, member. This is about identity and permission within the app.\n\n**Subscriptions** answer: \"What have you paid for?\" — free, starter, pro, enterprise. This is about commercial state.\n\nThese are orthogonal. They cross at right angles. Never implement subscription tiers as roles. A superadmin with no subscription still has full admin power. A member with an Enterprise subscription gets premium content but can't touch admin routes.\n\n**Gate helpers compose, they never replace each other:**\n- `requireUser()` — checks login only\n- `requireRole(role)` — checks structural permission\n- `requireSubscriptionTier(tier)` — checks commercial state",
+    "byte_equal_span_in_base": true
+  },
+  {
+    "family": "raw-body signature",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "start": 374,
+    "end": 390,
+    "quote": "**Always verify webhook signatures.** This prevents attackers from sending fake events.\n\n```typescript\n// The signature verification happens in constructEvent()\n// It uses your STRIPE_WEBHOOK_SECRET to verify the request came from Stripe\n\ntry {\n  event = stripe.webhooks.constructEvent(\n    body,           // Raw request body (must be string, not parsed JSON)\n    signature,      // stripe-signature header\n    webhookSecret   // Your webhook secret from Stripe Dashboard\n  );\n} catch (err) {\n  // Invalid signature - reject the request\n  return NextResponse.json({ error: 'Invalid signature' }, { status: 400 });\n}\n```",
+    "byte_equal_span_in_base": true
+  },
+  {
+    "family": "private data uncached",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "start": 352,
+    "end": 355,
+    "quote": "// User-specific data (cart, orders)\nheaders: {\n  'Cache-Control': 'private, no-cache, no-store, must-revalidate',\n}",
+    "byte_equal_span_in_base": true
+  },
+  {
+    "family": "server secrets",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "start": 396,
+    "end": 400,
+    "quote": "// Server-only credentials (never import in client components)\nexport const getServerCredentials = () => {\n  if (typeof window !== 'undefined') {\n    throw new Error('Server credentials accessed on client!');\n  }",
+    "byte_equal_span_in_base": true
+  },
+  {
+    "family": "wire/UI types",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "start": 570,
+    "end": 574,
+    "quote": "### Wire-Format Conventions (Factory Standard)\n\n- **Wire shapes are `snake_case`** (matches FastAPI/Pydantic and most REST payloads — e.g. `regular_price`, `stock_status`).\n- **UI-internal types are `camelCase`** (e.g. `regularPrice`, `inStock`).\n- **The service layer owns the translation** — the normalize functions below are where the case boundary lives. UI code never sees wire casing; wire payloads never see UI casing.",
+    "byte_equal_span_in_base": true
+  }
+]

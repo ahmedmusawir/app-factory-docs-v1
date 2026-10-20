@@ -1,0 +1,12 @@
+{
+  "commit": "8dff354937bc7baf739370a9886497d9d5359186",
+  "parent": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+  "branch": "docs/sync-doctrine-part2-2026-10-15",
+  "subject": "repair QA-P4 F01\u2013F05 (AMENDED-v2 b4fe406963b13b650f11d7d688026c88ff37fb1698d6191cdec420247c156bc9)",
+  "paths": 68,
+  "canonical_paths": 7,
+  "record_paths": 61,
+  "clean_worktree": true,
+  "time": "2026-10-19T09:05:03.462205+00:00",
+  "status": "COMMITTED \u2014 push pending; independent QA pending"
+}

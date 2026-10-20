@@ -1,0 +1,50 @@
+[
+  {
+    "path": "AMENDED_V3_EXECUTION/FABLE_HANDOFF.md",
+    "zip_sha256": "2502459330394d7fd3274627db86b429db9d94b1d7d6a683c198130f2f674672",
+    "review_equal": true,
+    "committed": false,
+    "committed_equal": null,
+    "basis": "Compare committed bytes where present; handoff and commit/push receipts are post-commit records."
+  },
+  {
+    "path": "AMENDED_V3/DIRECTOR_DECISIONS_V3.md",
+    "zip_sha256": "1fa28bc81dedd96f017f9ffc9a69b7a86326917a61093e9aeb9390bcfbe300a4",
+    "review_equal": true,
+    "committed": true,
+    "committed_equal": true,
+    "basis": "Compare committed bytes where present; handoff and commit/push receipts are post-commit records."
+  },
+  {
+    "path": "AMENDED_V3_EXECUTION/COMMIT_RECEIPT.json",
+    "zip_sha256": "d0341bbe694c87b51930f8459244d069f8fa19264029d2ec34d0d75460ff6561",
+    "review_equal": true,
+    "committed": false,
+    "committed_equal": null,
+    "basis": "Compare committed bytes where present; handoff and commit/push receipts are post-commit records."
+  },
+  {
+    "path": "AMENDED_V3_EXECUTION/PUSH_RECEIPT.json",
+    "zip_sha256": "0c9d74532b725acd380a3a5d6de948d70ac79a17343cb8af1e645430d758adce",
+    "review_equal": true,
+    "committed": false,
+    "committed_equal": null,
+    "basis": "Compare committed bytes where present; handoff and commit/push receipts are post-commit records."
+  },
+  {
+    "path": "AMENDED_V3_EXECUTION/STATE_CARRY_FORWARD.json",
+    "zip_sha256": "d171164c1e408735860c505ec0a0e6e7ad9d9c3e8927ef322f69f3ce77821518",
+    "review_equal": true,
+    "committed": true,
+    "committed_equal": true,
+    "basis": "Compare committed bytes where present; handoff and commit/push receipts are post-commit records."
+  },
+  {
+    "path": "AMENDED_V3_EXECUTION/CODE_PRESERVATION.json",
+    "zip_sha256": "8f09eb339cd4b4f2225dc1e5cb6cb1bad3aa21994ae8bd51ff62ccb0ecac3cc7",
+    "review_equal": true,
+    "committed": true,
+    "committed_equal": true,
+    "basis": "Compare committed bytes where present; handoff and commit/push receipts are post-commit records."
+  }
+]

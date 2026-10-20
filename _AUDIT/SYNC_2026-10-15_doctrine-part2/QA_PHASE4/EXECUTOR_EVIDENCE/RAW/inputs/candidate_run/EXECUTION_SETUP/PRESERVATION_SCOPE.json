@@ -1,0 +1,40 @@
+{
+  "previous_count": 865,
+  "current_count": 888,
+  "added_paths": [
+    "10x Lab/ABM_PLAYBOOK_v1_0.md",
+    "10x Lab/APBM_PLAYBOOK_v1_0.md",
+    "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/APPROVAL_RECORD_CHANGE.json",
+    "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/APPROVED_INPUTS.json",
+    "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/DIRECTOR_DECISIONS.before.md",
+    "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/DIRTY_PATH_RECONCILIATION.json",
+    "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/FINAL_QA_PACKAGE_VERIFICATION.json",
+    "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/PRESERVATION_PATHS.nul",
+    "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/PRESERVATION_PATHS.txt",
+    "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/PRESERVATION_SCOPE.json",
+    "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/PROTECTED_RUN_BEFORE.json",
+    "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/REFERENCE_TRANSFER_PATHS.nul",
+    "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/REFERENCE_TRANSFER_PATHS.txt",
+    "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/SETUP_RECEIPT.json",
+    "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/SETUP_STATUS.md",
+    "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/STAGED_SCOPE_VERIFICATION.json",
+    "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/STANDALONE_10X_AUTHORIZATION.json",
+    "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/TRANSFER_PATHS.nul",
+    "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/TRANSFER_PATHS.txt",
+    "agent_docs/RESPONSES/response_2026-10-18_173926_execution-setup-step-1.md",
+    "agent_docs/RESPONSES/response_2026-10-18_182605_standalone-10x-added.md",
+    "agent_docs/RESPONSES/response_2026-10-18_185802_preservation-commit-next.md",
+    "agent_docs/SESSIONS/session_2026-10-18.md"
+  ],
+  "transfer_count": 642,
+  "transfer_policy": "Approved run and named bookkeeping only in main transfer; exactly two authorized standalone10x files transferred separately for their own commit. No obsolete review-branch canonical/root/skill transfer.",
+  "response": "agent_docs/RESPONSES/response_2026-10-18_173926_execution-setup-step-1.md",
+  "later_new_records": "Add exact durable paths before subsequent scoped checkpoint; do not silently broaden staging.",
+  "reference_transfer_paths": [
+    "10x Lab/ABM_PLAYBOOK_v1_0.md",
+    "10x Lab/APBM_PLAYBOOK_v1_0.md"
+  ],
+  "reference_transfer_count": 2,
+  "additive_authority": "EXECUTION_SETUP/STANDALONE_10X_AUTHORIZATION.json",
+  "latest_response": "agent_docs/RESPONSES/response_2026-10-18_185802_preservation-commit-next.md"
+}

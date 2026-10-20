@@ -1,0 +1,3 @@
+04_REFERENCE_MANUALS/AUTH_MANUAL.md:1081:    - Never trust client-side auth state
+04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md:104: 2. **Validate on server** - Never trust client-side totals
+04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md:501: - [ ] Server-side recalculation of totals (never trust client)

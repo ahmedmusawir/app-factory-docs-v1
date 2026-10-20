@@ -1,0 +1,791 @@
+
+FILE 01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md
+...
+13: 
+14: 1. [Philosophy and Factory Seats](#1-philosophy-and-factory-seats)
+15: 2. [The Build Phases](#2-the-build-phases)
+16: 3. [Phase 1: Planning & User Stories](#3-phase-1-planning--user-stories)
+17: 4. [Phase 2: Design System](#4-phase-2-design-system)
+18: 5. [Phase 3: Database Schema](#5-phase-3-database-schema)
+19: 6. [Phase 4: API & Services](#6-phase-4-api--services)
+20: 7. [Phase 5: State Management](#7-phase-5-state-management)
+21: 8. [Phase 6: UI Implementation](#8-phase-6-ui-implementation)
+22: 9. [Phase 7: Authentication & RBAC](#9-phase-7-authentication--rbac)
+23: 10. [Phase 8: Integration & Testing](#10-phase-8-integration--testing)
+24: 11. [Phase 9: Deployment](#11-phase-9-deployment)
+...
+30: 
+31: ## 1. Philosophy and Factory Seats
+32: 
+33: Resolve authority by the question being answered: disk and recon establish what exists; approved artifacts establish what is authorized; the named domain owner defines the reusable pattern. A conflict between these is not permission to substitute one for another. Stop the affected work, record both sources and their revisions, and obtain the Director’s attributable ruling. Preserve stage-specific authority within its stated scope.
+34: 
+35: ### Shared terminology
+36: 
+37: A seat defines responsibility; a persona or model name does not grant permission. Director is the human scope, access and release authority; Operator and Coordinator are contextual names for that human responsibility. Architect owns assembly and scope interpretation; Engineer owns implementation and factual handoff; QA Lead owns QA doctrine, plan approval, adjudication and certification; QA Executor independently plans and tests. Designer and deployment responsibilities remain distinct. “Architect” does not name the human approver in an authority rule.
+38: 
+39: Keep lifecycle axes separate: Blueprint phases describe the Factory pipeline; SFP implementation phases describe build disciplines; FFM sub-phases and Frontend Build Phase stages describe execution within a module; roadmap phases describe product scope. Record each stage’s parent, entry artifacts, exit evidence and approver in the module contract. Demo deployment is not Gate Q or Gate D. Engine 1 is module engineering and module QA. Engine 2 is independent system review after all Engine 1 phases and their QA are closed. The separate post-FFM review occurs after FFM and its QA. Only dispositioned findings requiring repair produce RRM work.
+40: 
+41: Schema-first, approved specifications, incremental verification and recorded changes remain required.
+42: 
+43: ---
+44: 
+45: Revised workflow documents and stick diagrams: [FFM creation](../03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md), [FFM execution and post-FFM review](../03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md), [deployment](../03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md), [BIM and Engine 2](../03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md). They supersede the historical August pictures when verified and published; originals are retained.
+46: 
+47: ## 1.5 Doctrine Pairing Principle — Playbooks Paired With Worked Examples
+48: 
+49: > **Born from Cyberize Run 001 (May 2026).**
+50: > Pair each methodology with an available, verified worked example. Historical external pointers below are not proof that an example is present in this Hub or in a project. Record repository, immutable revision and path before requiring it.
+51: 
+52: ### The Principle
+53: 
+54: Abstract rules alone produce drift. Concrete examples alone produce cargo culting. The combination — instruction set + worked example — produces durable, transferable competence.
+...
+59: 
+60: | Playbook (Instruction) | Paired Example (Concrete) |
+61: |---|---|
+62: | `HANDOFF_PACKAGE_PLAYBOOK.md` | Historical external example (availability unverified): `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/`. Obtain the source repository, immutable revision and path before use; do not assume this path exists locally. |
+63: | `FRONTEND_FIRST_PLAYBOOK.md` | Cyberize Agentic Automation build (Run 001) |
+64: | `UI-UX-BUILDING-MANUAL.md` | Cyberize screenshots in `_design/` + built screens |
+65: | `AUTH_MANUAL.md` | Starter kit's working auth implementation |
+66: | `APP_ARCHITECTURE_MANUAL.md` | Starter kit's actual folder structure + Run 001 module |
+...
+94: 
+95: ### The Lifecycle Of A Worked Example
+96: 
+97: Examples are not frozen. They evolve as lessons accumulate:
+98: 
+99: 1. **Born during a run** — the run's actual artifacts (handoff package, build artifacts, retrospective)
+100: 2. **Refined post-run** — lessons learned during the run get baked back into the example (with version notes)
+101: 3. **Promoted to canonical reference** — when proven across multiple runs, marked as the reference example for its category
+102: 4. **Archived but preserved** — when superseded, archived rather than deleted (preserves doctrine history)
+103: 
+104: ### When To Update Examples
+105: 
+106: After each Factory run completes:
+...
+115: ### Cross-Reference
+116: 
+117: - **`HANDOFF_PACKAGE_PLAYBOOK.md`** — first explicit application of this principle (instructions + Cyberize handoff as example)
+118: - Historical external example (availability unverified): **`CURRENT_APP/app-factory-frontend-first-module/_project/`** — the inaugural historical worked example Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.
+119: 
+120: ---
+121: 
+122: ## 2. The Build Phases
+123: 
+124: Engine 1 denotes module engineering and module QA across the implementation phases. Review occurs after FFM completion and its QA, and again at Engine 2 after all Engine 1 phase/module engineering and QA are closed. Findings require disposition; only approved findings needing repair produce bounded RRM work, and each RRM includes QAM. A clean review produces no RRM. Module QA certification, broader review completion and deployed-system Gate D remain distinct.
+125: 
+126: Every feature follows this sequence:
+127: 
+128: ```
+...
+130: │                        BUILD PHASE SEQUENCE                                 │
+131: └────────────────────────────────────────────────────────────────────────────┘
+132: 
+133:   PHASE 1          PHASE 2          PHASE 3          PHASE 4
+134:   ────────         ────────         ────────         ────────
+135:   Planning    ──►  Design      ──►  Database    ──►  API
+136:   & Stories        System           Schema           Services
+137: 
+...
+139:        │                                                  │
+140:        ▼                                                  ▼
+141: 
+142:   PHASE 5          PHASE 6          PHASE 7          PHASE 8
+143:   ────────         ────────         ────────         ────────
+144:   State       ──►  UI          ──►  Auth &      ──►  Integration
+145:   Management       Implementation   RBAC             & Testing
+146: 
+...
+158: | Phase | Why It Comes Before the Next |
+159: |-------|------------------------------|
+160: | Planning | Can't design without knowing what to build |
+161: | Design | Consume the Architect’s approved DATA_CONTRACT; proposed contract refinements require approved amendments before implementation. |
+162: | Database | Can't build APIs without knowing the data shape |
+163: | API | Can't manage state without knowing what data exists |
+164: | State | Can't build UI without knowing where data comes from |
+165: | UI | Can't add auth without having something to protect |
+...
+168: 
+169: ### Phase Vocabulary — One Canonical Map
+170: 
+171: The factory uses one canonical project-phase map: the **APP_FACTORY_BLUEPRINT lifecycle** (Phase 0 — Recon → Phase 5 — Deployment). This playbook's 9 phases are the **execution breakdown** within that lifecycle — they do not compete with it. FFM "Sub-Phases" nest inside individual build phases. Nothing is renumbered by this note.
+172: 
+173: | This Playbook (execution breakdown) | Blueprint Lifecycle (canonical) |
+174: |---|---|
+175: | Phase 1 — Planning & User Stories | Phase 1 — Ignition |
+176: | Phase 2 — Design System | Phase 2 — Design |
+177: | Phase 3 — Database Schema | Phase 3 — Engineering (spec) → Phase 4 — Fabrication (build) |
+178: | Phases 4–8 — API / State / UI / Auth / Testing | Phase 4 — Fabrication |
+179: | Phase 9 — Deployment | Phase 5 — Deployment |
+180: | Engine 1 | Module engineering and independent module QA, including required certification/cleanup/closeout; complete every scoped phase/module and its QA before Engine 2. |
+181: | Post-FFM review (checkpoint 1) | Independent review after FFM build and its independent QA finish; findings require disposition. |
+182: | Engine 2 (checkpoint 2) | Independent system review after all Engine 1 phases/modules and their QA are closed. |
+183: | RRM | Repair work only for approved review findings requiring repair; a clean review requires no RRM. Review does not replace Gate Q, Gate D or Director release. |
+184: 
+185: > **Phase 0 — Recon precedes everything:** no Phase 1 planning until the target repo is ground-truthed per `RECON_QUESTIONNAIRE.md` and the Recon Report is consumed (see APP_FACTORY_BLUEPRINT, Phase 0).
+186: 
+187: ---
+188: 
+189: ## 2.5 Module Identity & QA Handoff  *(Factory-wide — governs BIM, FIX, FEAT, and all future module types)*
+...
+192: 
+193: **Canonical ID format: `<TYPE>-<NNN>-<APP-SLUG>`** — e.g., `BIM-006-ADK-HARNESS`, `FIX-004-CYBER-PHARMA`, `FEAT-002-ADK-HARNESS`.
+194: 
+195: 1. The slug comes from the application's canonical identity in its project brief / APP_BRIEF. *(A central `APP_REGISTRY.md` is a proposed future addition, pending separate Operator approval; until it exists, no document may cite it as a source of truth.)*
+196: 2. The ID appears on: the module folder name, every document header inside it, the `ACCEPTANCE_SPEC.md`, QA references, retrospectives, changelog entries, and cross-document links.
+197: 3. Casing: canonical ID UPPERCASE in documents and folder names; git branches lowercase-kebab; commit tags carry the canonical ID.
+198: 4. Rationale (stated, not assumed): module artifacts escape their folders — into QA reports, branches, search results, and handoffs. A naked `FIX-002` becomes ambiguous the day a second application mints one. Provenance travels with the artifact.
+199: 5. Legacy: modules created before this doctrine keep their unsuffixed names as LEGACY IDs — no retroactive mass-renaming. New citations append the app parenthetically: "FIX-002 (ADK-HARNESS, legacy)."
+200: 
+201: ### QA Handoff — the `ACCEPTANCE_SPEC.md` Contract
+...
+204: 2. **Ownership:** acceptance criteria are **seeded from the approved module contract — Architect/Operator-defined — before implementation.** The Engineer maintains the spec in sync with approved scope and finalizes it at handoff, but may not silently add, remove, weaken, or redefine a requirement; scope changes require approval.
+205: 3. **Numbering:** acceptance requirements use **`AC1, AC2, …`** — a Factory decision effective 2026-08-10. Module-internal engineering gates keep their own ID families (`X*`, `V*`, `N*`, `P-G*` …); a gates↔AC mapping table in the spec is encouraged. Bare `A*` is reserved for recon assumption checklists. Legacy specs using gate IDs stand as legacy.
+206: 4. **Minimum contents:** canonical module ID + owning app · objective · in-scope / explicit out-of-scope · numbered ACs, testable and observable · expected behavior per AC incl. error surfaces · **environment/setup prerequisites and every manual Operator step, called out FIRST** · regression expectations · manual-only points · known limitations · follow-up work outside this contract.
+207: 5. **Authority chain:** QA owns the verdict — Factory vocabulary exactly: **PASS / PASS WITH FOLLOW-UP FINDINGS / PASS WITH KNOWN RISK / FAIL / BLOCKED.** The **Operator holds final adjudication and release authority.** The Architect advises on architectural classification and routing. An in-scope acceptance failure needs no one's permission to be a FAIL. Accepted findings reach Engineering only as approved module content.
+208: 6. **Gate Q is mandatory for all code-bearing modules.** Only documentation-only / non-runtime changes may receive a recorded Operator QA waiver.
+209: 
+210: Every newly authored module includes a complete, module-specific `QAM/` prepared by the Architect from `03_BUILD_METHODOLOGY/_templates/QAM/`. QA Lead owns the reusable playbook and standing requirements. Engineer fills factual engineering records and handoff; QA Executor performs independent Q1 recon and test planning; QA Lead approves the plan; Director releases execution; QA Executor performs Q2 and authorized retest; QA Lead adjudicates and certifies. `QAM_PLAYBOOK.md` owns this packaging and sequence. Existing modules already in flight retain their recorded sequence until an attributable amendment.
+211: 
+212: The Director commits and pushes the completed engineering candidate on the numbered product branch, then creates `qa/<module-branch>` at that exact commit. Engineer performs approved repairs and QA Executor independently tests on that same QA branch, with separate writable lanes and one active writer during repair or measurement. The QA branch continues to final integration; do not transfer work back or abandon it as the normal workflow. After the QA Lead’s verdict and required cleanup, the Architect issues closeout instructions, Engineer performs bounded closeout, and the Director performs final commits, merge and push. Preserve product, execution, evidence and closeout identities separately.
+213: 
+214: ---
+215: 
+216: ## 3. Phase 1: Planning & User Stories
+217: 
+218: ### Objective
+219: 
+220: Transform a feature idea into actionable user stories with clear acceptance criteria.
+...
+296: 
+297: ---
+298: 
+299: ## 4. Phase 2: Design System
+300: 
+301: ### Objective
+302: 
+303: Lock the design system and screen set that define the visual implementation.
+...
+306: 
+307: **Design execution is owned by `DESIGNER_PLAYBOOK.md`** — the token file (`globals.css`/`.scss`, all modes) is the PRIMARY deliverable, and screens are built as token-driven HTML rendered to PNG with Playwright via the **Canonical Page Method** (lock one canonical screen, clone-and-adapt the rest). This playbook does not define a competing design process.
+308: 
+309: In summary, Phase 2 runs:
+310: 
+311: 1. Designer receives the approved stories/brief + Tailwind version + token well
+312: 2. Designer locks the token file (all modes) — operator gate
+313: 3. Designer builds the canonical screen: token-driven HTML → Playwright PNG (light + dark) — operator gate
+314: 4. Designer clones-and-adapts the remaining screens; ships style tile + per-screen HTML/PNG + `UI_SPEC.md` + component manifest
+315: 
+316: ### Deliverables
+317: 
+318: - [ ] Token file locked (primary deliverable)
+319: - [ ] Canonical screen approved; full screen set shipped (HTML + PNG)
+320: - [ ] UI_SPEC.md + component manifest delivered
+321: - [ ] Responsive breakpoint decisions
+322: 
+323: **Reference:** `DESIGNER_PLAYBOOK.md`
+324: 
+325: ---
+326: 
+327: ## 5. Phase 3: Database Schema
+328: 
+329: ### Objective
+330: 
+331: Design and implement the database schema before any application code.
+...
+341:                                                         ▼
+342: ┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+343: │  Run SQL in     │ ◄── │  Add Indexes    │ ◄── │  Define         │
+344: │  Supabase       │     │  + RLS          │     │  Relationships  │
+345: └─────────────────┘     └─────────────────┘     └─────────────────┘
+346:                                                         │
+347:                                                         ▼
+348:                                                ┌─────────────────┐
+...
+374: 
+375: - idx_{table}_{column} on {column}
+376: 
+377: ### RLS Policies
+378: 
+379: - [Policy name]: [Description]
+380: 
+381: ### SQL
+...
+392: - [ ] Entity relationship diagram
+393: - [ ] SQL for all tables
+394: - [ ] Indexes defined
+395: - [ ] RLS policies written
+396: - [ ] TypeScript types generated
+397: - [ ] Tables created in Supabase
+398: 
+399: **Reference:** `DATABASE_MANUAL.md`
+400: 
+401: ---
+402: 
+403: ## 6. Phase 4: API & Services
+404: 
+405: ### Objective
+406: 
+407: Build the service layer and API routes that interact with the database and external systems.
+...
+428: 
+429: ### Service Function Template
+430: 
+431: **Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.
+432: 
+433: ### Deliverables
+434: 
+435: - [ ] Service functions for all entities
+...
+442: 
+443: ---
+444: 
+445: ## 7. Phase 5: State Management
+446: 
+447: ### Objective
+448: 
+449: Create Zustand stores that manage client-side state and connect to the service layer.
+...
+529: - [ ] Stores for all major data domains
+530: - [ ] Loading and error states
+531: - [ ] Selectors defined for components
+532: - [ ] Persistence configured if needed
+533: 
+534: **Reference:** `STATE_MANAGEMENT_MANUAL.md`
+535: 
+536: ---
+...
+624: 
+625: For kit-based builds, consume the existing kit authentication and authorization primitives and verify them through AUTH-WALK. Do not rebuild login pages, an auth store, metadata role flags or a client route guard. Page wrappers follow STARTER_KIT_HANDBOOK §5 and §7: resolve authorized server data before rendering the interactive client child. Generic non-kit examples do not apply when the kit supplies the capability.
+626: 
+627: The role table is the only authorization authority. Never authorize from user_metadata or a profile mirror. Superadmin creation is console-only; no app-side superadmin creation route is provided. Retire the metadata-authorized add-user, delete-user and get-users recipes. Future privileged list/delete operations remain possible only with trusted current-role lookup, operation-local authorization before elevated capability, an approved target-role allowlist and privileged-target protection. Profile mirrors contain profile data, not authorization columns. Registration metadata is not authorization.
+628: 
+629: Every privileged operation authorizes its own invocation before acquiring or using elevated capability: authenticate the requester, resolve the current trusted role, authorize the operation and target, and validate input. Layout admission controls page access only. Direct unauthenticated, wrong-role and wrong-target invocations must produce no privileged side effect.
+630: 
+631: Verify authentication state, table-backed current role, object-level authorization, denied targets, session expiry, logout and first server render. The former metadata-role/auth-store checklist is withdrawn. Kit-dependent signatures require the pinned kit evidence; this containment does not close those replacements.
+632: 
+633: ---
+634: 
+635: ## 10. Phase 8: Integration & Testing
+...
+658: #### Data Testing
+659: 
+660: - [ ] CRUD operations work correctly
+661: - [ ] Data persists after refresh
+662: - [ ] Sync with external systems works
+663: - [ ] Data validation prevents bad input
+664: 
+665: #### UI Testing
+...
+695: 
+696: - [ ] Environment variables set in production
+697: - [ ] Database migrations applied
+698: - [ ] RLS policies enabled
+699: - [ ] API keys secured (not in client code)
+700: - [ ] Error logging configured
+701: - [ ] Analytics configured (if needed)
+702: 
+...
+710: npm run start
+711: 
+712: # 3. Deploy to Vercel/Netlify
+713: # (Automatic via Git push or manual deploy)
+714: 
+715: # 4. Verify production
+716: # - Check all pages load
+717: # - Test login flow
+...
+763: [What this feature does NOT include]
+764: 
+765: ## Estimated Effort
+766: - Phase 3 (Database): X hours
+767: - Phase 4 (API): X hours
+768: - Phase 5 (State): X hours
+769: - Phase 6 (UI): X hours
+770: - Phase 7 (Auth): X hours
+771: - Phase 8 (Testing): X hours
+772: 
+...
+786: ```markdown
+787: ## Feature: [Name]
+788: 
+789: ### Phase 1: Planning
+790: - [ ] User stories written
+791: - [ ] Acceptance criteria defined
+792: - [ ] Dependencies identified
+793: 
+794: ### Phase 2: Design
+795: - [ ] Token file locked (Designer)
+796: - [ ] Screen set shipped (HTML + PNG)
+797: - [ ] UI_SPEC + component manifest documented
+798: 
+799: ### Phase 3: Database
+800: - [ ] Schema designed
+801: - [ ] SQL written and run
+802: - [ ] Types generated
+803: - [ ] RLS policies applied
+804: 
+805: ### Phase 4: API
+806: - [ ] Services created
+807: - [ ] API routes created
+808: - [ ] Error handling added
+809: 
+810: ### Phase 5: State
+811: - [ ] Stores created
+812: - [ ] Actions implemented
+813: - [ ] Selectors defined
+814: 
+...
+857: ### Authentication
+858: - [ ] Login works
+859: - [ ] Logout works
+860: - [ ] Session persists on refresh
+861: - [ ] Protected routes redirect
+862: 
+863: ### Data
+864: - [ ] Create works
+...
+905: | RBAC | AUTH | Role-Based Access |
+906: | SuperAdmin | AUTH | SuperAdmin User Management |
+907: | DB schema | DATABASE | Schema Design Patterns |
+908: | RLS | DATABASE | Row Level Security |
+909: | JSONB | DATABASE | JSONB Patterns |
+910: | Service layer | API | Service Layer |
+911: | Webhook | API | Webhook Integration |
+912: | CRM sync | API | CRM Integration |
+913: | Zustand store | STATE | Store Architecture |
+914: | Selectors | STATE | Selector Pattern |
+915: | Persistence | STATE | Persistence |
+916: 
+917: ---
+918: 
+919: ## Summary
+...
+939: | Version | Date | Changes |
+940: |---|---|---|
+941: | 1.4 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-002, FC-005, FC-006, FC-007, FC-009, FC-021, FC-033, FC-036, FC-063, FC-066, MC-01, MC-05, MC-06, MC-07, RUL-01, RUL-05, RUL-07, RUL-08, RUL-09, RUL-11, RUL-12, RUL-14, W01, W23 |
+942: | 1.3 | 2026-08-10 | Added §2.5 "Module Identity & QA Handoff" Factory-wide section (app-suffixed module IDs; mandatory ACCEPTANCE_SPEC contract; QA verdict ownership + Operator final authority; AC* numbering decision). Promoted from the ADK Harness field campaign via R1/R2 QA review and finalization pass. |
+943: | 1.2 | 2026-07-07 | **Wave 1 (audit sync).** Standard header block adopted, version/date moved to top (F-018). Phase 2 rewritten to defer to DESIGNER_PLAYBOOK — token file primary, Canonical Page Method; obsolete Stitch/Figma design-spec workflow deleted (F-009, F-002). "Phase Vocabulary" note + mapping table added to §2: Blueprint lifecycle (incl. Phase 0 Recon) is the canonical phase map, these 9 phases are the execution breakdown, FFM Sub-Phases nest inside build phases (F-010). Phase 8 now points to TESTING_PLAYBOOK (F-035). §1.5 pairing-table refs stripped of version suffixes — canonical names only (F-011). Full mojibake sweep incl. 16 invisible U+0090 control chars left behind by the v1.1 "encoding fix" (F-012). §13 Phase-2 checklist aligned to Designer deliverables. |
+944: | 1.1 | 2026-05-31 | Added Section 1.5 (Doctrine Pairing Principle). Born from Cyberize Run 001 operator insight on instruction+example pairing. Fixed UTF-8 encoding artifacts (incompletely — see 1.2). |
+945: | 1.0 | 2024-12 | Initial playbook |
+946: 
+947: ---
+
+FILE 03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md
+...
+16: The FFM's success metric is: *"when the operator swaps the service layer to a real backend, no component changes."*
+17: The BIM's success metric is: **that swap, executed, with the promise kept.**
+18: 
+19: BIMs cover: mock→live service swaps, middleware replacement, native protocol ports, config-driven architecture (manifests), database-backed features (index tables, RLS), storage integrations, and cross-service wiring. A BIM may include UI surfaces when the integration demands them (the module brief declares it) — module *type* follows the nature of the work, not whether pixels are involved.
+20: 
+21: **BIM vs FFM vs FIX vs FEAT:** FFM builds frontend against mocks before a backend exists. BIM makes backends real behind existing seams. FIX repairs confirmed defects (see `BUG_FIX_PLAYBOOK.md`). FEAT adds user-facing capability to a working system (see `FEAT_PLAYBOOK.md`). When in doubt: if the center of gravity is a seam or a contract, it's a BIM.
+22: 
+23: ## 2. Roles (the chain of custody)
+24: 
+25: | Role | Duty in a BIM |
+26: |---|---|
+27: | **Coordinator (Operator)** | Approves scope, **holds final adjudication and release authority over QA findings**, rules flagged conflicts, launches the Engineer, executes ALL git and ALL cloud actions, runs manual gates, merges, owns the release decision |
+28: | **Architect** | Authors the module from recon evidence, QAs the Engineer's plan, issues binding pre-execution verdicts (GO/AMEND/BLOCK on module readiness), **advises on architectural classification and routing of QA findings — advisory, not adjudicative** |
+29: | **Engineer** | Plans, builds within release, self-verifies, fills factual acceptance/handoff records; may inspect Git read-only; all Git mutations remain Director-only and BIM cloud-zero remains in force |
+30: | **QA Lead (independent seat)** | Owns standing QA requirements, approves the independent plan, adjudicates findings and certifies the governed candidate per `QA_PLAYBOOK.md` and `QAM_PLAYBOOK.md` |
+31: | **QA Executor (independent seat)** | Performs Q1 recon and plan drafting, then approved Q2 execution and authorized retest; records evidence and never repairs product or self-certifies |
+32: 
+33: One person may hold multiple seats; the *responsibilities* never merge. The Engineer never grades his own paper.
+34: 
+35: ## 3. Module Identity (Factory-level doctrine — see `SOFTWARE_FACTORY_PLAYBOOK.md` › Module Identity & QA Handoff)
+...
+38: 
+39: **Canonical ID format: `<TYPE>-<NNN>-<APP-SLUG>`** — e.g., `BIM-006-ADK-HARNESS`, `FIX-004-CYBER-PHARMA`.
+40: 
+41: - Slugs come from the application's **canonical identity in its project brief/APP_BRIEF**. *(A central `APP_REGISTRY.md` is a proposed future doctrine addition, pending separate Operator approval — until it exists, no document may cite it as a source of truth.)*
+42: - The ID appears on: the module folder name, every document header inside it, the `ACCEPTANCE_SPEC.md`, QA references, retrospectives, changelog entries, and cross-document links.
+43: - **Casing:** canonical ID is UPPERCASE in documents and folder names; git branches use lowercase-kebab (`bim-006-adk-harness`); commit tags use the canonical ID.
+44: - **Why (state it, don't assume it):** module artifacts escape their folders — into QA reports, branches, search results, handoffs. A naked `FIX-002` is ambiguous the day a second app mints one. The suffix preserves provenance wherever the artifact travels.
+45: - **Legacy:** pre-doctrine modules (e.g., the pilot campaign's `BIM-004`) keep their names as LEGACY IDs; no retroactive mass-renaming. When citing them in new documents, append the app parenthetically: "BIM-004 (ADK-HARNESS, legacy)."
+46: 
+47: ## 4. The Module Package (one folder, self-contained)
+...
+50: <TYPE>-<NNN>-<APP-SLUG>/
+51: ├── CLAUDE.md                    ← THE MANAGER — always read first (see §5)
+52: ├── MODULE_BRIEF.md              ← scope lock, gates, forbidden zones (larger modules)
+53: ├── DATA_CONTRACT_AMENDMENT.md   ← only when wire contracts change
+54: ├── ACCEPTANCE_SPEC.md           ← Engineer-finalized at handoff; criteria seeded from approved contract (see §8)
+55: ├── RETROSPECTIVE.md             ← Engineer-authored at close
+56: ├── AGENTS.md                   ← same parent routing as CLAUDE.md
+57: ├── QAM/                        ← mandatory module-specific QA package, including matching entry routes
+58: └── (declared writable output lanes: engineering handoff, recon, plans, evidence, findings, rulings)
+59: ```
+60: 
+61: Small modules may fold brief and contract into the manager, but matching entry routes, acceptance spec, prepared module QAM and retrospective remain mandatory. Delivery is one module ZIP plus a file tree; Coordinator notes remain outside it.
+62: 
+63: ## 5. The Manager File (CLAUDE.md) — one module, one manager
+64: 
+65: Every module folder carries one manager body and matching `CLAUDE.md` / `AGENTS.md` entry routing. Engineering routes to the implementation assignment; QA routes into `QAM/`, whose two entries assign QA Executor and point to `QAM_ENTRY.md`. Redirects may share one instruction body. Required manager contents:
+66: 
+67: 1. **Status line** — FINAL stamp date + launch condition (e.g., "only after BIM-005 merges")
+68: 2. **Mission** — one sentence
+69: 3. **Verified ground** — facts from recon/prior closures the Engineer may build on WITHOUT re-verification (each with provenance)
+70: 4. **Rulings table** — decisions already made by Architect/Coordinator, numbered, with "flag disagreement, don't silently deviate"
+71: 5. **TO VERIFY FIRST** — the facts the Engineer's plan must open with, each demanding file:line evidence (the informed-state bridge for anything recon didn't pin)
+72: 6. **Scope** — in, and OUT said loud
+73: 7. **Forbidden zones** — hard stops, path-level
+74: 8. **Numbered hard gates** — measurable, each with its verification method (unit / manual / Coordinator ceremony)
+75: 9. **Launch procedure** — Plan Mode contents demanded of the Engineer's ONE plan message
+...
+82: ```text
+83: Current recon → Architect authors the module just in time, including ACCEPTANCE_SPEC and prepared QAM.
+84: Director approves scope and the Engineer plan → Engineer builds and runs baseline/regression checks.
+85: Requirements and acceptance criteria freeze; declared records/evidence lanes remain writable (RUL-04).
+86: Engineer completes factual handoff → Director commits/pushes the numbered product candidate.
+87: Director creates qa/<module-branch> at that exact engineering candidate commit.
+88: QA Executor Q1: preflight, independent recon and test plan → QA Lead plan approval → Director release.
+89: QA Executor Q2 executes independently on that QA branch.
+90: If needed: QA Lead dispositions → Architect/Director authorize repair → Engineer repairs on the same QA branch.
+91: Director commits repair candidate → QA Executor re-pins and independently retests with regression checks.
+92: QA Lead certifies the product verdict → authorized required cleanup → QA Lead cleanup acceptance.
+93: Architect closeout instructions → bounded Engineer closeout → Director final commits, merge and push.
+94: Authorized deployment, if in scope → independent deployed-revision Gate D → production confirmation as applicable.
+95: No deployment in scope → record Gate D N/A with reason; no deployment merely to satisfy a template.
+96: Module close/retrospective: deployment-requiring work closes only after its required Gate D.
+97: Engine 1 continues through all scoped phases/modules and their QA; author later BIMs just in time.
+98: Review checkpoint 2: Engine 2 independent system review only after all Engine 1 phases/modules and QA are closed.
+99: Findings require disposition; create RRM only for approved findings requiring repairs; clean review requires no RRM.
+100: ```
+101: 
+102: The distinct post-FFM checkpoint is review after FFM build and its independent QA finish. Both review checkpoints follow `RRM_PLAYBOOK.md` §2 and the vocabulary in `SOFTWARE_FACTORY_PLAYBOOK.md` §2. Review completion, module QA, cleanup acceptance, Gate D and release remain distinct.
+103: 
+104: ### The Locked Rules (Lesson L1 — paid for in the field)
+105: 
+106: 1. **Just-in-time authoring.** Implementation-grade module docs are authored only after (a) the previous module's retrospective exists and (b) a fresh recon of the current repo state is in hand. Before that, a phase holds only a **Phase Seed Brief** (mission, why, dependencies, likely scope, open questions), explicitly non-executable.
+107: 2. **Contracts freeze at handoff.** Requirements and acceptance criteria remain immutable except through an attributable approved amendment. Declared lanes inside the module remain writable by their assigned owners for engineering handoff, recon, plans, evidence, findings and rulings. QA records live in the module’s `QAM/` under `agent_docs/`. A test-plan edit cannot amend acceptance criteria.
+108: 3. **DRAFT until stamped.** Docs coexisting with a not-yet-run recon carry DRAFT — CLAIM STATUS until the post-recon verdict stamps them FINAL. After the stamp, requirements and acceptance criteria are frozen; changes require an attributable approved amendment. Declared engineering handoff and QA evidence lanes remain writable by their assigned owners.
+109: 4. **Placeholders from the first keystroke.** Real URLs, credentials, and infrastructure values NEVER enter documents — even as examples. Structural placeholders only; real values live in local env files, supplied by the Coordinator in-session.
+110: 5. **Lessons live at repo level** (`agent_docs/LESSONS/`, timestamped, one lesson per file, append-never-edit) — modules end; lessons compound.
+111: 
+112: Revised workflow references: [FFM creation](_workflows/FFM_CREATION.md), [FFM execution and post-FFM review](_workflows/FFM_EXECUTION.md), [deployment and Gate D](_workflows/FFM_DEPLOYMENT.md), and [BIM through Engine 2](_workflows/BIM_WORKFLOW.md). Each includes a revised stick diagram and links its superseded original as history. The source diagrams are not current instructions.
+113: 
+114: ## 7. Standing Engineer Doctrine (bake into every manager)
+115: 
+116: - **Git/cloud authority:** read-only Git inspection is allowed; the Director performs all Git mutations. The BIM Engineer does not deploy and supplies exact file lists and suggested commit messages.
+117: - **Do not silently deviate:** a change outside the authorized writable surface, including diagnostic, test-runner or build configuration changes, requires explicit authorization before execution. Report the proposed change and its evidence; later ratification is not prior authorization.
+118: - **Baseline-first regression:** full suite before the first change (entering red? repair-or-report before proceeding — a red baseline is a finding, possibly a prior module's defect), full board after the last. Pre-existing failures are proven pre-existing, never silently repaired or suppressed.
+119: - **Failure policy is declared per module contract — degrade is not a universal law.** Degrade-with-console-error-and-safe-fallback applies only where the module contract explicitly declares that losing the dependency is safe (e.g., a convenience index, a receipt). Security, audit, financial, tenant-isolation, and data-integrity-critical dependencies may require **fail-closed** behavior — the contract says which, per dependency, before the Engineer builds.
+120: - **Stop means stop.** Momentum after a stage gate is the enemy; the next stage begins only on the Coordinator's plain words.
+121: 
+...
+131: - Module objective; in-scope behavior; explicit out-of-scope / forbidden behavior
+132: - **Numbered acceptance requirements `AC1, AC2, …`** — testable and observable ("works correctly" and "handles sessions" are banned phrasings). *(Doctrine note: `AC*` is a NEW Factory decision effective with this playbook — the pilot campaign's field record used gate IDs (`X1–X7`, `V*`, `N*`, `P-G*`), which remain the convention for module-internal engineering gates and stay untouched as legacy. Acceptance requirements and gates are related but distinct: a mapping table gates↔ACs in the spec is encouraged. `QA_PLAYBOOK.md` examples to be synchronized at promotion. Never bare `A*` — reserved for recon assumption checklists.)*
+133: - Expected observable behavior per requirement; error/failure behavior where relevant
+134: - **Environment/setup prerequisites** — migrations, env changes, credentials, permissions, and every manual Coordinator step, called out FIRST (field lesson: a merge whose setup steps live only in a spec nobody opened produces three "broken" features that are actually three locked doors)
+135: - Regression expectations — existing behavior that must remain intact
+136: - Manual-only acceptance points where automation cannot prove the claim
+137: - Known limitations; known follow-up work that does NOT belong to this contract
+138: 
+...
+140: 
+141: ## 9. QA Engagement (the Red Team seat)
+142: 
+143: Every newly authored module includes a complete, module-specific `QAM/` prepared by the Architect from `03_BUILD_METHODOLOGY/_templates/QAM/`. QA Lead owns the reusable playbook and standing requirements. Engineer fills factual engineering records and handoff; QA Executor performs independent Q1 recon and test planning; QA Lead approves the plan; Director releases execution; QA Executor performs Q2 and authorized retest; QA Lead adjudicates and certifies. `QAM_PLAYBOOK.md` owns this packaging and sequence. Existing modules already in flight retain their recorded sequence until an attributable amendment.
+144: 
+145: The Director commits and pushes the completed engineering candidate on the numbered product branch, then creates `qa/<module-branch>` at that exact commit. Engineer performs approved repairs and QA Executor independently tests on that same QA branch, with separate writable lanes and one active writer during repair or measurement. The QA branch continues to final integration; do not transfer work back or abandon it as the normal workflow. After the QA Lead’s verdict and required cleanup, the Architect issues closeout instructions, Engineer performs bounded closeout, and the Director performs final commits, merge and push. Preserve product, execution, evidence and closeout identities separately.
+146: 
+147: Required cleanup removes only authorized disposable execution debris, temporary credentials/authentication state, and owned QA processes or browser contexts. Retain durable evidence, required failed attempts and justified helpers. QA Lead governs retention and cleanup acceptance; certification, Architect closeout and Director release remain separate responsibilities. Record command, working directory, exit code and unfiltered safe output, with sensitive data excluded at collection. Prove product, tests, configuration and contract identity unchanged by cleanup. Module QA records live under `agent_docs/` in their module `QAM/`; verify production exclusion under `DEPLOYMENT_PLAYBOOK.md`.
+148: 
+149: - QA receives the spec and authors its own attack: `QA_PLAN.md`, manual sequences, exploratory probes, state-transition and negative-path testing. The most valuable field finding of the pilot campaign came from deliberately breaking state, not from following the happy path.
+150: - QA findings carry a **QA-owned verdict**; the **Operator holds final adjudication and release authority** when a product/scope/risk decision is required; the **Architect advises** where architectural classification or routing is needed. An in-scope acceptance failure does not need anyone's permission to be a FAIL. Accepted work routes to Engineering only as approved module content — rejected findings never land on the Engineer's desk.
+151: - QA independently tests the declared engineering candidate after handoff. Requirements and acceptance criteria remain frozen; QA recon, plans, evidence, findings and rulings remain writable in their declared lanes. QA cannot amend acceptance by changing a test plan.
+152: - Evidence bar is symmetric: QA claims cite file:line, payloads, or reproducible steps; findings without evidence are returned unread.
+153: - Verdict vocabulary — exactly the Factory QA set, no local dialects: **PASS / PASS WITH FOLLOW-UP FINDINGS / PASS WITH KNOWN RISK / FAIL / BLOCKED.** Findings are severity-classified, each explicitly marked blocking-or-not for the module under test.
+154: 
+155: ## 10. Contracts & Seams
+156: 
+157: - Route-handler/API **external contracts freeze** across module boundaries; only internals are ported (field proof: a middleware was replaced under an unchanged seam with zero frontend diff — the entire point of designing the seam one module earlier).
+158: - Contract changes ship as **numbered amendments** (A1, A2 …) that supersede specific sections and inherit the rest, keeping history honest.
+159: - When replacing a system, **the old system is the oracle for its replacement**: equivalence gates + fixture batteries encode its observable behavior; the old system stays deployed and untouched until a Coordinator retirement ceremony AFTER all gates pass.
+160: - Kill switches are designed in: env-flag fallbacks (mock mode), git-revert paths, and the not-yet-retired predecessor. A kill switch that has never been flipped is a prayer — test the flip as a gate.
+161: 
+162: ## 11. Anti-Patterns (block these)
+163: 
+164: - **Pre-authoring against assumptions** — implementation docs written before recon (L1's origin: two defects authored into a module six days before evidence existed)
+165: - **Mid-mandate contract mutation** — changing frozen requirements or acceptance criteria without an attributable approved amendment; declared owner-specific output lanes remain writable
+166: - **Scope smuggling** — "while I'm here" fixes, passengers on risky modules; one variable per experiment
+167: - **The Engineer grading his own paper** — acceptance spec drifting into a QA plan, or QA skipped because the board is green
+168: - **Momentum through a stage gate** — starting the next stage in the same session/on the same nod
+169: - **Real values as examples** — a URL in a doc's example row is a URL in git history forever
+170: - **Naked module IDs in new work** — provenance is doctrine now
+171: - **Happy-path-only QA** — if nobody deliberately stressed the product, it wasn't QA
+172: 
+173: ## 12. Definition of Done (module level)
+...
+185: 
+186: ## 13. Worked Example (LEGACY: the ADK-HARNESS pilot arc)
+187: 
+188: BIM-000 (recon & baseline; the closed-module-with-delivered-artifact pattern) → BIM-001 (mock→live behind a route-handler seam; sentinel conflict flagged-not-resolved, ruled D1(b)) → BIM-002 (middleware ported to native protocol; wrapper as oracle; retirement ceremony) → BIM-003 (agent manifest; env-var *names* in committed config, never URLs; the four-line test) → BIM-004 (index table + RLS; "the index is not the transcript"; degrade-not-block) → BIM-005 (GCS write integration; backup-before-write law; server-side path derivation as injection fence). Full artifacts in the pilot repo's `agent_docs/`; QA acceptance reports for BIM-002 and FIX-002 (ADK-HARNESS, legacy) are the reference QA engagements.
+189: 
+190: ## 14. Version History
+191: 
+192: | Version | Date | Change |
+193: |---|---|---|
+194: | 1.0-DRAFT | 2026-08-10 | Initial draft from the six-module ADK Harness pilot campaign + two doctrine upgrades (ACCEPTANCE_SPEC; app-suffixed IDs). |
+195: | 1.0-DRAFT-R2 | 2026-08-10 | QA review AMEND pass applied (10 findings + polish): QA verdict ownership restored (Operator final authority, Architect advisory); Factory QA verdict vocabulary; spec ownership tightened (seeded pre-implementation, Engineer finalizes without redefining); shared identity/handoff doctrine promoted above BIM to SOFTWARE_FACTORY_PLAYBOOK addendum; APP_REGISTRY demoted to proposed; AC* declared a NEW decision with X*/gate-ID legacy mapping; per-module failure policy replaces universal degrade; lifecycle sequencing fixed (QA before merge); QA waiver restricted to non-runtime changes. |
+196: | 1.0 ACTIVE | 2026-08-10 | Finalization pass (F1 registry refs removed, F2 Gate-D/CLOSE sequencing, F3 setup-prerequisites wording, F5 tree label). Promoted from: ADK Harness field campaign → independent QA engagements → R1 QA review → R2 amendment pass → final consistency pass. |
+197: | 1.1 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-012, FC-014, MC-06, MC-07, RUL-01, RUL-02, RUL-03, RUL-04, RUL-05, RUL-07, RUL-12, RUL-15, W02, W03, W04, W05, W06, W07, W23 |
+
+FILE 03_BUILD_METHODOLOGY/QA_PLAYBOOK.md
+...
+41: 
+42: This playbook was promoted to v1.0 only after hands-on verification of the ADK Next.js Harness, where QA manually exercised:
+43: 
+44: - agent-selection persistence,
+45: - hard refresh behavior,
+46: - loading states,
+47: - user-facing failure wording,
+48: - localStorage persistence boundaries,
+49: - mock-mode regression,
+50: - live-mode recovery,
+51: - slow-network behavior,
+52: - browser-profile differences,
+...
+168: 
+169: ---
+170: 
+171: # 4. Authority
+172: 
+173: ## Operator / Final Approver
+174: 
+175: The Operator:
+...
+206: 
+207: - owns the reusable QA playbook and standing risk requirements,
+208: - treats the engineering handoff as claims to verify,
+209: - reviews and approves the QA Executor’s independent plan,
+210: - adjudicates findings and issues the governed QA verdict and certification,
+211: - governs retention and cleanup acceptance,
+212: - protects the boundary between in-scope defects and follow-up findings.
+213: 
+214: ## QA Executor
+215: 
+216: The QA Executor independently performs Q1 recon and test planning, executes the approved plan after Director release, records evidence, packages checkpoints, and performs authorized retest and cleanup. The Executor does not repair product code, grant release authority or certify its own result.
+217: 
+218: ## DevOps / Deployment Operator
+219: 
+220: DevOps:
+...
+232: 
+233: # 5. Source-of-Truth Order
+234: 
+235: Resolve authority by the question being answered: disk and recon establish what exists; approved artifacts establish what is authorized; the named domain owner defines the reusable pattern. A conflict between these is not permission to substitute one for another. Stop the affected work, record both sources and their revisions, and obtain the Director’s attributable ruling. Preserve stage-specific authority within its stated scope.
+236: 
+237: Approved project briefs govern scope; governing documents control their respective subjects. Acceptance criteria are amended only by attributable approval. QA treats an implementation mismatch as evidence of a finding, not as a change to the acceptance contract.
+238: 
+239: ---
+...
+258: 12. environment/setup requirements,
+259: 13. migrations or secret/env changes,
+260: 14. rollback notes when relevant,
+261: 15. open risks or follow-up items.
+262: 
+263: QA reads this package as:
+264: 
+265: ```text
+...
+292: | X1 | Selected agent survives refresh | Manual + browser state | Local live | Pending |
+293: | X2 | Loading state appears during delayed response | Manual | Local throttled | Pending |
+294: | X3 | User-facing error says Agent Service | Failure injection | Local live | Pending |
+295: | X4 | No transcript content persists in localStorage | Storage inspection | Browser | Pending |
+296: | X5 | Mock mode still works | Regression manual | Local mock | Pending |
+297: | X6 | Automated suite remains green | Jest | Local | Pending |
+298: | X7 | TypeScript + build remain clean | CLI | Local | Pending |
+299: 
+...
+453: 
+454: ---
+455: 
+456: ## Stage 5 — Operator Manual QA
+457: 
+458: For newly authored modules, the QA Lead’s approved QAM plan allocates checks to the QA Executor or to declared human-only verification according to evidence needs, capability and authorized side effects. Agent-capable matrices do not default to the Director. The one-test-at-a-time protocol below applies when the plan calls for Operator execution. It does not replace independent Q1 planning, plan approval or Director release.
+459: 
+460: Manual QA is run **one test at a time**.
+461: 
+462: Do not dump a 25-step checklist on the Operator unless explicitly requested.
+...
+495: - switch mock → live without clearing state,
+496: - switch agents repeatedly,
+497: - hard refresh during loading,
+498: - open a different browser profile,
+499: - throttle network,
+500: - force an upstream failure,
+501: - test stale localStorage,
+502: - clear one persisted pointer but not others,
+503: - test rapid navigation,
+504: - repeat the action after a cold start.
+505: 
+506: Exploratory QA must remain disciplined.
+...
+512: - state boundaries,
+513: - mode boundaries,
+514: - auth boundaries,
+515: - browser persistence,
+516: - environment boundaries,
+517: - timing,
+518: - retries,
+519: - external services,
+...
+573: 
+574: Result:
+575: 
+576: > Route to backlog / Architect. Do not reopen the module.
+577: 
+578: ### G. Observation
+579: 
+580: Interesting behavior with insufficient evidence to call a defect.
+...
+587: 
+588: # 10. The Scope Protection Rule
+589: 
+590: One of QA's most important jobs is preventing a successful module from being reopened by unrelated discoveries.
+591: 
+592: During the ADK Harness verification, exploratory QA found that:
+593: 
+594: ```text
+595: Mock mode session state
+596:         ↓
+597: persisted in shared browser storage
+598:         ↓
+599: mode switched to Live
+600:         ↓
+601: mock session ID sent to live history endpoint
+...
+609: 
+610: It deserved a follow-up FIX.
+611: 
+612: But it was **not** evidence that the original persistence fix had failed.
+613: 
+614: Therefore the correct disposition was:
+615: 
+616: > PASS WITH FOLLOW-UP FINDINGS
+...
+718: 
+719: - [ ] Each manual acceptance criterion was independently exercised.
+720: - [ ] Expected and actual behavior match.
+721: - [ ] Relevant browser persistence was checked.
+722: - [ ] Relevant loading / error / recovery states were checked.
+723: - [ ] Original bug reproduction was rerun for FIX modules.
+724: 
+725: ### Security / Data
+...
+820: 
+821: Examples:
+822: 
+823: - user opens agent and receives reply,
+824: - history restores,
+825: - pharmacy reads its own claims,
+826: - tenant A cannot read tenant B,
+827: - Liberty import reaches expected staging state,
+...
+909: 
+910: # 14. The Final Environment Reset Rule
+911: 
+912: Required cleanup removes only authorized disposable execution debris, temporary credentials/authentication state, and owned QA processes or browser contexts. Retain durable evidence, required failed attempts and justified helpers. QA Lead governs retention and cleanup acceptance; certification, Architect closeout and Director release remain separate responsibilities. Record command, working directory, exit code and unfiltered safe output, with sensitive data excluded at collection. Prove product, tests, configuration and contract identity unchanged by cleanup. Module QA records live under `agent_docs/` in their module `QAM/`; verify production exclusion under `DEPLOYMENT_PLAYBOOK.md`.
+913: 
+914: QA must not leave the system in a test-only or broken state.
+915: 
+916: Before issuing the final verdict, verify the final operating configuration.
+...
+977: 
+978: Use only the probes relevant to the module.
+979: 
+980: ## Persistence
+981: 
+982: - refresh,
+983: - hard refresh,
+984: - browser restart,
+...
+1072: **Severity:** Medium  
+1073: **Classification:** Follow-Up Finding  
+1074: **Environment:** Local Next.js harness  
+1075: **Precondition:** Calc Agent has an active mock session persisted
+1076: 
+1077: **Reproduction**
+1078: 1. Run app in mock mode.
+1079: 2. Use Calc Agent.
+1080: 3. Switch app to live mode without clearing persisted agentSessions.
+1081: 4. Open Calc Agent.
+1082: 
+1083: **Expected**
+1084: Live mode creates or resolves a live-compatible session.
+1085: 
+...
+1130: May ship only when:
+1131: 
+1132: - impact is understood,
+1133: - workaround or containment exists,
+1134: - owner is assigned,
+1135: - follow-up is scheduled.
+1136: 
+1137: ## Low
+...
+1354: 1. verify acceptance contract,
+1355: 2. verify required environment setup,
+1356: 3. verify primary path,
+1357: 4. verify state persistence where applicable,
+1358: 5. verify error path,
+1359: 6. verify negative permission path where applicable,
+1360: 7. verify mock/live or adapter boundaries where applicable,
+1361: 8. verify regression,
+...
+1389: 
+1390: # 26. Browser State Is Part of the System
+1391: 
+1392: Modern web apps persist meaningful state in:
+1393: 
+1394: - cookies,
+1395: - localStorage,
+1396: - sessionStorage,
+...
+1404: - a pointer,
+1405: - a cache,
+1406: - a convenience,
+1407: - safe to persist,
+1408: - unsafe to persist.
+1409: 
+1410: Example field lesson:
+1411: 
+1412: The ADK harness localStorage stored session pointers and selected agent state.
+...
+1509: - DNS,
+1510: - HTTPS,
+1511: - login,
+1512: - session persistence,
+1513: - navigation,
+1514: - one safe core read,
+1515: - one safe negative authorization check,
+1516: - external integration heartbeat,
+...
+1675: 
+1676: ## Scope Explosion
+1677: 
+1678: Reopening a passed module because exploratory QA found an unrelated enhancement.
+1679: 
+1680: Classify it.
+1681: 
+1682: Route it.
+...
+1749: 
+1750: ## L-QA-005 — Exploratory QA must test seams
+1751: 
+1752: The most valuable finding in the ADK harness came from switching Mock → Live with persisted session state.
+1753: 
+1754: The acceptance spec alone did not reveal it.
+1755: 
+1756: ## L-QA-006 — A real finding does not automatically reopen the module
+1757: 
+1758: Out-of-scope, non-blocking findings become follow-up work.
+1759: 
+1760: This preserves velocity without hiding defects.
+1761: 
+1762: ## L-QA-007 — Browser persistence is architecture
+1763: 
+1764: localStorage, cookies, browser profiles, and session pointers must be understood as part of the runtime system.
+1765: 
+1766: ## L-QA-008 — Failure injection belongs in QA

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "E410",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "old_count_parent": 1,
+    "new_count_candidate": 1,
+    "candidate_line": 499
+  },
+  {
+    "id": "E411",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "old_count_parent": 1,
+    "new_count_candidate": 1,
+    "candidate_line": 612
+  },
+  {
+    "id": "E412",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "old_count_parent": 1,
+    "new_count_candidate": 1,
+    "candidate_line": 809
+  },
+  {
+    "id": "E413",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "old_count_parent": 1,
+    "new_count_candidate": 1,
+    "candidate_line": 866
+  },
+  {
+    "id": "E414",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "old_count_parent": 1,
+    "new_count_candidate": 1,
+    "candidate_line": 1289
+  },
+  {
+    "id": "E415",
+    "path": "CHANGELOG.md",
+    "old_count_parent": 1,
+    "new_count_candidate": 1,
+    "candidate_line": 56
+  },
+  {
+    "id": "E416",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "old_count_parent": 1,
+    "new_count_candidate": 1,
+    "candidate_line": 1111
+  },
+  {
+    "id": "E417",
+    "path": "CHANGELOG.md",
+    "old_count_parent": 1,
+    "new_count_candidate": 1,
+    "candidate_line": 60
+  }
+]

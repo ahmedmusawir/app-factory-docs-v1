@@ -1,0 +1,167 @@
+{
+  "hunks": [
+    {
+      "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "old_line": 173,
+      "new_line": 173,
+      "parent_hunk_equal": true,
+      "candidate_hunk_equal": true
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "old_line": 252,
+      "new_line": 252,
+      "parent_hunk_equal": true,
+      "candidate_hunk_equal": true
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "old_line": 1382,
+      "new_line": 1382,
+      "parent_hunk_equal": true,
+      "candidate_hunk_equal": true
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "old_line": 1392,
+      "new_line": 1392,
+      "parent_hunk_equal": true,
+      "candidate_hunk_equal": true
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "old_line": 1599,
+      "new_line": 1601,
+      "parent_hunk_equal": true,
+      "candidate_hunk_equal": true
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+      "old_line": 425,
+      "new_line": 425,
+      "parent_hunk_equal": true,
+      "candidate_hunk_equal": true
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+      "old_line": 888,
+      "new_line": 890,
+      "parent_hunk_equal": true,
+      "candidate_hunk_equal": true
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+      "old_line": 915,
+      "new_line": 900,
+      "parent_hunk_equal": true,
+      "candidate_hunk_equal": true
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+      "old_line": 1652,
+      "new_line": 1627,
+      "parent_hunk_equal": true,
+      "candidate_hunk_equal": true
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+      "old_line": 610,
+      "new_line": 610,
+      "parent_hunk_equal": true,
+      "candidate_hunk_equal": true
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+      "old_line": 782,
+      "new_line": 784,
+      "parent_hunk_equal": true,
+      "candidate_hunk_equal": true
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+      "old_line": 790,
+      "new_line": 794,
+      "parent_hunk_equal": true,
+      "candidate_hunk_equal": true
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+      "old_line": 806,
+      "new_line": 810,
+      "parent_hunk_equal": true,
+      "candidate_hunk_equal": true
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+      "old_line": 850,
+      "new_line": 854,
+      "parent_hunk_equal": true,
+      "candidate_hunk_equal": true
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+      "old_line": 1203,
+      "new_line": 1209,
+      "parent_hunk_equal": true,
+      "candidate_hunk_equal": true
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+      "old_line": 1122,
+      "new_line": 1122,
+      "parent_hunk_equal": true,
+      "candidate_hunk_equal": true
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+      "old_line": 1370,
+      "new_line": 1371,
+      "parent_hunk_equal": true,
+      "candidate_hunk_equal": true
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+      "old_line": 417,
+      "new_line": 417,
+      "parent_hunk_equal": true,
+      "candidate_hunk_equal": true
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+      "old_line": 1158,
+      "new_line": 1159,
+      "parent_hunk_equal": true,
+      "candidate_hunk_equal": true
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+      "old_line": 202,
+      "new_line": 202,
+      "parent_hunk_equal": true,
+      "candidate_hunk_equal": true
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+      "old_line": 560,
+      "new_line": 560,
+      "parent_hunk_equal": true,
+      "candidate_hunk_equal": true
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old_line": 40,
+      "new_line": 40,
+      "parent_hunk_equal": true,
+      "candidate_hunk_equal": true
+    },
+    {
+      "path": "CHANGELOG.md",
+      "old_line": 51,
+      "new_line": 51,
+      "parent_hunk_equal": true,
+      "candidate_hunk_equal": true
+    }
+  ],
+  "all_equal": true,
+  "note": "Initial line-delta sequence comparison differs because Git and difflib align blank lines differently. Exact old/new hunk slices and whole-file exact-edit delta accounting establish equality without applying patch."
+}

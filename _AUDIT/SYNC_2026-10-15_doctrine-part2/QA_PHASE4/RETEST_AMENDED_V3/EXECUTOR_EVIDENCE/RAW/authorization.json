@@ -1,0 +1,13 @@
+{
+  "gate_time": "2026-10-20T10:38:21.679686+06:00",
+  "commit_time": "2026-10-20T10:39:41+06:00",
+  "parent": "8dff354937bc7baf739370a9886497d9d5359186",
+  "subject": "repair QA-P4 RV2-F01 (AMENDED-v3 55537c6411724ab78837d0191d61375654839202acbf15b13a76d98aa8d483e6)",
+  "author_present": true,
+  "author_identity_sha256": "fa4865d43106005b3446fa712b2f364fd050f2ade4cabea70b59ff9ce2fc7d82",
+  "approval_precedes_commit": true,
+  "receipt_matches": true,
+  "push_receipt_matches": true,
+  "push_command_nonforce": true,
+  "limitation": "Present refs, ancestry and receipts establish structure; they cannot prove absence of every historical remote operation."
+}

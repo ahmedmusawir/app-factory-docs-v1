@@ -1,0 +1,68 @@
+[
+ {
+  "id": "S1",
+  "old": "# QAM PLAYBOOK v1.0\n## Mandatory module packaging and two-shot independent QA\n\n**Date:** 2026-10-14 · **Authoring seat:** QA Lead / JARVIS · **Director:** Tony Stark  \n**Audience:** Factory Doc Sync Architect, module-writing Architects, Engineers and QA Executors.  \n**Status:** QA Lead-authored v1.0 for Factory synchronization under the Director's current instruction. This document does not claim that other Factory documents or repositories have already been updated.\n",
+  "new": "# QAM PLAYBOOK\n## Mandatory module packaging and two-shot independent QA\n\n> **Version:** 1.0 · **Date:** <<LANDING_DATE>> · **Status:** Active\n> **Tier:** 3 — Build Methodology · **Pairs with:** `QA_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `RRM_PLAYBOOK.md`, `BIM_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`\n> **Owner:** QA Lead authors and maintains this playbook (Director ruling RUL-01, 2026-10-14) · Stark Industries App Factory\n> **Provenance:** Director-approved source, the intake file `QAM_PLAYBOOK_v1_0` (authoring seat QA Lead / JARVIS, 2026-10-14; SHA-256 `97e111e2a495f9a3fe65f50213e6f2ba68c8e5e963f3d23493b1ee99ad35c897`; preserved as received in this run's intake snapshot). Audience: module-writing Architects, Engineers, QA Leads and QA Executors. The source text is preserved verbatim except the integration substitutions listed in the Version History; the Factory documents this playbook pairs with were reconciled in the same DocSet Sync run.\n> **Template set:** `03_BUILD_METHODOLOGY/_templates/QAM/` — accepted by the QA Lead (ACCEPT WITH EXACT AMENDMENTS, 2026-10-14) with standing requirements QAM-SR v1.0; set version recorded in its `README.md`.\n\n---\n",
+  "note": "Hub single-line header law (D15); audience folded into provenance; the source status sentence (\"does not claim that other Factory documents … have already been updated\") replaced by the landing statement; Pairs-with declared"
+ },
+ {
+  "id": "S2",
+  "old": "**Every new Factory module MUST contain a complete, module-specific `QAM/` from initial authoring.** This applies to RRM, FFM, BIM, TRM, FIX, FEAT, ABM, APBM and future module types. The module's scope changes the tests; it does not remove QAM.\n",
+  "new": "**Every new Factory module MUST contain a complete, module-specific `QAM/` from initial authoring.** This applies to RRM, FFM, BIM, TRM, FIX, FEAT, ABM, APBM and future module types. The module's scope changes the tests; it does not remove QAM.\n\nThis rule governs modules newly authored after the Director's ruling of 2026-10-14. Modules already in flight on that date keep their recorded sequence until amended through their own ruling lane.\n",
+  "note": "N-3 retroactivity sentence (COMBINED_DECISIONS N-3); \"newly authored\" per RUL-01"
+ },
+ {
+  "id": "S3a",
+  "old": "The supplied QA Playbook v1.1 remains the source for evidence discipline, finding severity, gate verdicts and independence. The supplied Doctrine Journal v0.3 contributes QA-branch ownership, bounded repair/retest, errata, evidence retention and cleanup rules. This QAM playbook specifies packaging and execution around those responsibilities.",
+  "new": "`QA_PLAYBOOK.md` remains the source for evidence discipline, finding severity, gate verdicts and independence. QA-branch ownership (`RRM_PLAYBOOK.md` §7; §9 and §14 below), bounded repair/retest (§11), errata (§4), evidence retention and cleanup rules (§14) are stated in the Factory DocSet itself; the pilot's Doctrine Journal v0.3, which first supplied them, is provenance and is not a Hub source. This QAM playbook specifies packaging and execution around those responsibilities.",
+  "note": "N-5: \"QA Playbook v1.1\" → canonical name (VERSIONED-REFS); journal citation → Hub rules"
+ },
+ {
+  "id": "S3b",
+  "old": "The latest Director instruction makes QAM mandatory for future module authoring. Earlier pilot-only or optional-QAM language is historical and must be reconciled by the Factory Doc Sync Architect. Preserve the original RRM-004 records and their dates; do not rewrite the pilot as if v1.0 existed then.",
+  "new": "The Director's ruling of 2026-10-14 (RUL-01) makes QAM mandatory for every newly authored module. Earlier pilot-only or optional-QAM language is historical; the Factory documents this playbook pairs with were reconciled with this rule when it landed. Preserve the original RRM-004 records and their dates; do not rewrite the pilot as if v1.0 existed then.",
+  "note": "landing-time statement; the reconciliation obligation is discharged by this run"
+ },
+ {
+  "id": "S4",
+  "old": "Instantiate `TEMPLATES/QAM/` inside each module directory. The template's unfilled fields are authoring prompts, not a launch-ready pack.",
+  "new": "Instantiate the Hub template set `03_BUILD_METHODOLOGY/_templates/QAM/` as `QAM/` inside each module directory. The template's unfilled fields are authoring prompts, not a launch-ready pack.",
+  "note": "D15 cargo-path translation (AD-01 home); the literal `TEMPLATES/QAM/` is a cargo convention"
+ },
+ {
+  "id": "S5",
+  "old": "The final Q5 retention/cleanup decision remains governed by the QA Lead and the applicable cleanup policy, including J-19 where supplied.",
+  "new": "The final Q5 retention/cleanup decision remains governed by the QA Lead and the applicable cleanup policy: this section, `QA_PLAYBOOK.md` §14 (The Final Environment Reset Rule) and `RRM_PLAYBOOK.md` §10.",
+  "note": "N-5: journal citation J-19 → Hub rules (RUL-03 preserved this section as the required cleanup checkpoint)"
+ },
+ {
+  "id": "S6a",
+  "old": "| TRM | Its explicit Factory definition and contracts; do not guess its expansion or assume a test profile from its acronym |\n",
+  "new": "| TRM | Not yet defined in the Factory DocSet; when defined, it instantiates QAM like every other module type. Do not guess its expansion or assume a test profile from its acronym |\n",
+  "note": "N-6 TRM placeholder (RUL-07: no TRM definition invented)"
+ },
+ {
+  "id": "S6b",
+  "old": "| ABM | Whole-app acceptance and integration seams; critical end-to-end paths; scoped data/cost/side-effect authority |\n| APBM | Phase boundaries and prerequisite evidence; inherited guarantees; cross-module integration and explicit deployed/live requirements |\n",
+  "new": "| ABM, APBM (module types defined on the separate 10X track) | Instantiate QAM under their own track's rules; their methodology is not Factory DocSet doctrine (Director boundary, 2026-10-14) |\n",
+  "note": "N-4: ABM/APBM rows → one line; methodology stays on the 10X track (RUL-07)"
+ },
+ {
+  "id": "S6c",
+  "old": "Every independently authored module gets QAM. An ABM/APBM containing child modules also has its own QAM for aggregate scope.",
+  "new": "Every independently authored module gets QAM. A module that contains child modules also has its own QAM for aggregate scope.",
+  "note": "N-4 generalization of the parent-module sentence (behavior kept; ABM/APBM names removed from the rule)"
+ },
+ {
+  "id": "S7",
+  "old": "The Factory Doc Sync Architect must reconcile older lifecycle diagrams, folder trees, role tables, prompts and handoff templates with this rule, using the companion synchronization brief. A new playbook sitting beside contradictory templates is not a completed synchronization.",
+  "new": "Older lifecycle diagrams, folder trees, role tables, prompts and handoff templates in the Factory DocSet were reconciled with this rule by the DocSet Sync run that landed this playbook (see Version History). A later contradiction between this playbook and another Factory document is a finding to be fixed through DocSet Sync, not a precedence question.",
+  "note": "landing-time statement; the companion synchronization brief (v1.0 §18) was never supplied (CL-21) — the UPDATE MAP §4a propagation substituted for it"
+ },
+ {
+  "id": "S8",
+  "old": "External governing bodies must be available through a versioned local snapshot with provenance or an explicitly approved accessible source.",
+  "new": "External governing bodies must be available through a versioned local snapshot with provenance or an explicitly approved accessible source. In this Factory a snapshot of a Hub document is identified by its canonical name, its header version and the Hub commit SHA it was copied from; no doctrine release tag exists yet.",
+  "note": "CONDITIONAL[DEC-17] — the recommended minimal ruling (pin by canonical name + header version + Hub commit SHA; no tag this run); strike the second sentence if DEC-17 is ruled otherwise"
+ }
+]

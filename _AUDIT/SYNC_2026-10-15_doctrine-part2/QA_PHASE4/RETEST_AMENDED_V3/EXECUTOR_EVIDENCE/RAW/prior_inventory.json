@@ -1,0 +1,710 @@
+[
+  {
+    "path": "COMMANDS.json",
+    "expected": "4263f72c0ae30983fa2690eef692aa621c56d117b3db61e726f93adf016b5495",
+    "actual": "4263f72c0ae30983fa2690eef692aa621c56d117b3db61e726f93adf016b5495",
+    "match": true
+  },
+  {
+    "path": "EXECUTOR_REPORT.md",
+    "expected": "421fc5b4db02fa8042f21b3391b04f3c6b52f206f66b02c048d8a78f13eb4c65",
+    "actual": "421fc5b4db02fa8042f21b3391b04f3c6b52f206f66b02c048d8a78f13eb4c65",
+    "match": true
+  },
+  {
+    "path": "INPUT_IDENTITIES.json",
+    "expected": "592c2a6caf26bf1869b3b5ea0b0cf084b25c052929039c10160554b8881cf33a",
+    "actual": "592c2a6caf26bf1869b3b5ea0b0cf084b25c052929039c10160554b8881cf33a",
+    "match": true
+  },
+  {
+    "path": "MANUAL_READS.md",
+    "expected": "0ae82c8299dbddc4ccd03d1a5b660cddb47564243498b9b1107eb2e23bfe2d75",
+    "actual": "0ae82c8299dbddc4ccd03d1a5b660cddb47564243498b9b1107eb2e23bfe2d75",
+    "match": true
+  },
+  {
+    "path": "PROPAGATION.tsv",
+    "expected": "497c85ee7c7986a9c6d62cc1df2f415e83eaa80114b1bb8dd53fc44c9000a595",
+    "actual": "497c85ee7c7986a9c6d62cc1df2f415e83eaa80114b1bb8dd53fc44c9000a595",
+    "match": true
+  },
+  {
+    "path": "QA_END.json",
+    "expected": "ab16acbd208dac0e47a6b2b19ae0d879dbf5b725ecfe4fa6cd41284f9269d8e5",
+    "actual": "ab16acbd208dac0e47a6b2b19ae0d879dbf5b725ecfe4fa6cd41284f9269d8e5",
+    "match": true
+  },
+  {
+    "path": "QA_START.json",
+    "expected": "37935a70c357c19c388e8ac423a1fc78377d66666dfe5be1fd47b3f3bfb02970",
+    "actual": "37935a70c357c19c388e8ac423a1fc78377d66666dfe5be1fd47b3f3bfb02970",
+    "match": true
+  },
+  {
+    "path": "RAW/10x_authorization.json",
+    "expected": "cf76416b28254329439c20d84d2a8bc5c8060594e06100a9b391e9a6083529ec",
+    "actual": "cf76416b28254329439c20d84d2a8bc5c8060594e06100a9b391e9a6083529ec",
+    "match": true
+  },
+  {
+    "path": "RAW/10x_source_comparison.json",
+    "expected": "1510f5b0bbc94fb570fa42f98f55d3d2873b5e2129802a29e3f6bdaf38dd762e",
+    "actual": "1510f5b0bbc94fb570fa42f98f55d3d2873b5e2129802a29e3f6bdaf38dd762e",
+    "match": true
+  },
+  {
+    "path": "RAW/COMMIT_RECEIPT.json",
+    "expected": "f1830c119e609b9a55a9c719633da56416914dbabab145ba0293a55fd7a4e483",
+    "actual": "f1830c119e609b9a55a9c719633da56416914dbabab145ba0293a55fd7a4e483",
+    "match": true
+  },
+  {
+    "path": "RAW/DIRECTOR_DECISIONS_V2.md",
+    "expected": "e34922ddb3177930e8ade6e56dae65883c31878f09c2493715df952724d59fef",
+    "actual": "e34922ddb3177930e8ade6e56dae65883c31878f09c2493715df952724d59fef",
+    "match": true
+  },
+  {
+    "path": "RAW/FABLE_HANDOFF.md",
+    "expected": "9952390f6f7a26843257ccd672a3c9210ae36c4e5fe34309696f66a974d5ac91",
+    "actual": "9952390f6f7a26843257ccd672a3c9210ae36c4e5fe34309696f66a974d5ac91",
+    "match": true
+  },
+  {
+    "path": "RAW/JARVIS_FABLE_HANDOFF.md",
+    "expected": "6fcd1c83fb38ed4c614628205abacdbc8fe558db4d514e836aa3563a97545f84",
+    "actual": "6fcd1c83fb38ed4c614628205abacdbc8fe558db4d514e836aa3563a97545f84",
+    "match": true
+  },
+  {
+    "path": "RAW/PUSH_RECEIPT.json",
+    "expected": "e08457f338d27bca763590fdf8663c8301af888cb930e50a6d3082ee02167e91",
+    "actual": "e08457f338d27bca763590fdf8663c8301af888cb930e50a6d3082ee02167e91",
+    "match": true
+  },
+  {
+    "path": "RAW/approved_patch_hunks.json",
+    "expected": "87b4111350e3b1dab4da826f4b1194a3f4b5cc5ede028eff6118f9f0e2af04bc",
+    "actual": "87b4111350e3b1dab4da826f4b1194a3f4b5cc5ede028eff6118f9f0e2af04bc",
+    "match": true
+  },
+  {
+    "path": "RAW/archive_originals.json",
+    "expected": "92cd2aa77aa433eafb16aded420e76203d2e174da0e13ad3edb33d1096c81591",
+    "actual": "92cd2aa77aa433eafb16aded420e76203d2e174da0e13ad3edb33d1096c81591",
+    "match": true
+  },
+  {
+    "path": "RAW/authority_DELIVERY_RECEIPT_P4_VERDICT.json",
+    "expected": "4b93e67656a548163a2ef2f14fe62d62464cff6c13c1558d26fe0fac819b4306",
+    "actual": "4b93e67656a548163a2ef2f14fe62d62464cff6c13c1558d26fe0fac819b4306",
+    "match": true
+  },
+  {
+    "path": "RAW/authority_DIRECTOR_DECISIONS.md",
+    "expected": "a7629a69da28b94e9d638e22bd4a5ff1328fd17d52596c27434ea52c6963e436",
+    "actual": "a7629a69da28b94e9d638e22bd4a5ff1328fd17d52596c27434ea52c6963e436",
+    "match": true
+  },
+  {
+    "path": "RAW/authority_EXECUTION_PLAN.md",
+    "expected": "5b8aca951bee99d43fd72687b4e3b05286e114dd9af6f6d362f81d612175538a",
+    "actual": "5b8aca951bee99d43fd72687b4e3b05286e114dd9af6f6d362f81d612175538a",
+    "match": true
+  },
+  {
+    "path": "RAW/authority_PREPARATION_AUTHORITY.md",
+    "expected": "0304c18928b2467fc436f3c943352b05b01a03ded30e4bd97b4542f288a0d6f5",
+    "actual": "0304c18928b2467fc436f3c943352b05b01a03ded30e4bd97b4542f288a0d6f5",
+    "match": true
+  },
+  {
+    "path": "RAW/authority_STAGED_SCOPE.json",
+    "expected": "023a1bd45bebc906d4626a197820d2fa8cd63ea54e5a3822dccb0a03ae47f249",
+    "actual": "023a1bd45bebc906d4626a197820d2fa8cd63ea54e5a3822dccb0a03ae47f249",
+    "match": true
+  },
+  {
+    "path": "RAW/authority_START_STATE.json",
+    "expected": "a3fe1f2714c06aa3cdc1561273d21cc463fb438e8f70e551af99816c20fb7bbb",
+    "actual": "a3fe1f2714c06aa3cdc1561273d21cc463fb438e8f70e551af99816c20fb7bbb",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "expected": "c54a379e52318081c9ce89c2a253c65e16d8838079d7d2bcfef90939d42df54b",
+    "actual": "c54a379e52318081c9ce89c2a253c65e16d8838079d7d2bcfef90939d42df54b",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "expected": "e9b2b24cbd734b846ccf5215e235474f1aa097bd8be01d7f2d360094a59ee6d9",
+    "actual": "e9b2b24cbd734b846ccf5215e235474f1aa097bd8be01d7f2d360094a59ee6d9",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "expected": "e1613573a8d56073033a96ee803968feff1ab5f18e82ab3c329e64dd920c6bb1",
+    "actual": "e1613573a8d56073033a96ee803968feff1ab5f18e82ab3c329e64dd920c6bb1",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "expected": "7e2ceb6f882e1eafaa60759b163c541eaafa932fb28e0fcab08345f985c18d45",
+    "actual": "7e2ceb6f882e1eafaa60759b163c541eaafa932fb28e0fcab08345f985c18d45",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md",
+    "expected": "0baaaf1d3b4a32cc2d2b3977608974be7918c4142d2b707d00c66289bd838bcb",
+    "actual": "0baaaf1d3b4a32cc2d2b3977608974be7918c4142d2b707d00c66289bd838bcb",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "expected": "c5fc80000e293fbfba59a559c81a24fcfcfb42e935b06c438bee561ae6f28d4e",
+    "actual": "c5fc80000e293fbfba59a559c81a24fcfcfb42e935b06c438bee561ae6f28d4e",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "expected": "dcf2c4fa69c9b173c64e4b6c4113cfbe10e0c02e3dba44da2198ea0310714b64",
+    "actual": "dcf2c4fa69c9b173c64e4b6c4113cfbe10e0c02e3dba44da2198ea0310714b64",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "expected": "20fa7ca7125510570a3508c0e74b21966e41f717fe65f5070a883e1d97def08f",
+    "actual": "20fa7ca7125510570a3508c0e74b21966e41f717fe65f5070a883e1d97def08f",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "expected": "3fab83a09b26afd82038676c15654b758243b107023310dc2f3a5317f0d87b4c",
+    "actual": "3fab83a09b26afd82038676c15654b758243b107023310dc2f3a5317f0d87b4c",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md",
+    "expected": "1b7b7438738eaefbf201f8662c323e13b51208e965f565456e17c8f1653343c4",
+    "actual": "1b7b7438738eaefbf201f8662c323e13b51208e965f565456e17c8f1653343c4",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "expected": "18590bd643bd8e4b5b7c54de2ba1fb680faac217b9bea136e576576207496639",
+    "actual": "18590bd643bd8e4b5b7c54de2ba1fb680faac217b9bea136e576576207496639",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+    "expected": "c7ddc8427e9469bae4a0c3476fc4ecad512ef2a45db09eec7ce2c17e84567a5d",
+    "actual": "c7ddc8427e9469bae4a0c3476fc4ecad512ef2a45db09eec7ce2c17e84567a5d",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+    "expected": "955b3c02dd0012616bc8b7a60f99af2a74c651d5a4db5393570ef49f4ee88e97",
+    "actual": "955b3c02dd0012616bc8b7a60f99af2a74c651d5a4db5393570ef49f4ee88e97",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md",
+    "expected": "68876ff845a6ead4977444426ab53cf0862c411469b8489fefc4c2a716a4312a",
+    "actual": "68876ff845a6ead4977444426ab53cf0862c411469b8489fefc4c2a716a4312a",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "expected": "37bac1c70b0afcee66e6f298c518f08566a292435617da28291040016ca89312",
+    "actual": "37bac1c70b0afcee66e6f298c518f08566a292435617da28291040016ca89312",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+    "expected": "0e492b78185ecc152bf50e4cc603329d8328efc565aaa92fc0accbc2fb8f16f2",
+    "actual": "0e492b78185ecc152bf50e4cc603329d8328efc565aaa92fc0accbc2fb8f16f2",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+    "expected": "6f423ba687dae1e6de472d3840ccda4226f175ef8398d4e47451934c964af202",
+    "actual": "6f423ba687dae1e6de472d3840ccda4226f175ef8398d4e47451934c964af202",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+    "expected": "75bc73865f714fe5935762ae445fd1d4d54807efb31d4f0e98e1caa4772e78fb",
+    "actual": "75bc73865f714fe5935762ae445fd1d4d54807efb31d4f0e98e1caa4772e78fb",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "expected": "4c460b040b09782497069b69409381523fbf3bea56897febecb6c51f9458d458",
+    "actual": "4c460b040b09782497069b69409381523fbf3bea56897febecb6c51f9458d458",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+    "expected": "e9c7bc1e58286187f58df06d3f0718bf8c299a4eeb4b057427396bc3411ea85f",
+    "actual": "e9c7bc1e58286187f58df06d3f0718bf8c299a4eeb4b057427396bc3411ea85f",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "expected": "5b736786a6f6cdced703281cfada79af6c5b1c4f959f4b75615ca3a0c93971f7",
+    "actual": "5b736786a6f6cdced703281cfada79af6c5b1c4f959f4b75615ca3a0c93971f7",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/03_BUILD_METHODOLOGY/_assets/workflows/BIM_WORKFLOW.svg",
+    "expected": "7cba33aa1a396e4467a09eb80ef912b6e06d2dc06f839c569ffcdf5f87b67ec9",
+    "actual": "7cba33aa1a396e4467a09eb80ef912b6e06d2dc06f839c569ffcdf5f87b67ec9",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/03_BUILD_METHODOLOGY/_assets/workflows/FFM_CREATION.svg",
+    "expected": "0d7640fc0460f98aaf6a0b0d1acc8bc7866fc94e0ed61099d9d0e59931d3a1f0",
+    "actual": "0d7640fc0460f98aaf6a0b0d1acc8bc7866fc94e0ed61099d9d0e59931d3a1f0",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/03_BUILD_METHODOLOGY/_assets/workflows/FFM_DEPLOYMENT.svg",
+    "expected": "ce17e51c9e72e24cd4fd961f9812d13242914f9e03fcb238a749b49361cb028e",
+    "actual": "ce17e51c9e72e24cd4fd961f9812d13242914f9e03fcb238a749b49361cb028e",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/03_BUILD_METHODOLOGY/_assets/workflows/FFM_EXECUTION.svg",
+    "expected": "d0ac268ef03f2ab6f4cb80970b2be3d242442af8eeaa3f3518526354df2a915c",
+    "actual": "d0ac268ef03f2ab6f4cb80970b2be3d242442af8eeaa3f3518526354df2a915c",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+    "expected": "3d2b8b1fd9289b02e87b15d26dc5bb61dcb6efd19a6bec621faeddc3ca85d89b",
+    "actual": "3d2b8b1fd9289b02e87b15d26dc5bb61dcb6efd19a6bec621faeddc3ca85d89b",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+    "expected": "aa968075698fb4cd791c5b02cc026dd41470089f2a44c4e4270ec4584cfd061a",
+    "actual": "aa968075698fb4cd791c5b02cc026dd41470089f2a44c4e4270ec4584cfd061a",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+    "expected": "2b61c38203909ffb95449d779a4c13f91d4f134aac6e397a17ad4fbdd247068b",
+    "actual": "2b61c38203909ffb95449d779a4c13f91d4f134aac6e397a17ad4fbdd247068b",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+    "expected": "8f585a4a866355683904924c1a4f2ad406ffb42d95e5e5c139baaf85d9aada96",
+    "actual": "8f585a4a866355683904924c1a4f2ad406ffb42d95e5e5c139baaf85d9aada96",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "expected": "0070295f53b3e924d58b473e885072f902f45373530fa91def6667ca220ef80c",
+    "actual": "0070295f53b3e924d58b473e885072f902f45373530fa91def6667ca220ef80c",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "expected": "d4e843586b86495d6702810d523996a5dac686edd3ae9974c57a17bb2d5fc84d",
+    "actual": "d4e843586b86495d6702810d523996a5dac686edd3ae9974c57a17bb2d5fc84d",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "expected": "3e028ece38102a7d3d9bf375afb1acb3766a1a28743626aea0b54ba9ce2503f3",
+    "actual": "3e028ece38102a7d3d9bf375afb1acb3766a1a28743626aea0b54ba9ce2503f3",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "expected": "1eee0154b965948156b8ef169beb10985e668819ddbce833f6c4d3f432a84771",
+    "actual": "1eee0154b965948156b8ef169beb10985e668819ddbce833f6c4d3f432a84771",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "expected": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7",
+    "actual": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "expected": "0f0fe3992a98a9eff3c7378b41b20b7207545330b30879b246139e2a5475a942",
+    "actual": "0f0fe3992a98a9eff3c7378b41b20b7207545330b30879b246139e2a5475a942",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "expected": "01633da70da2d4cb863a2c883c1c2e7194abd602cf422fbb1bb52ae2b2ac43ab",
+    "actual": "01633da70da2d4cb863a2c883c1c2e7194abd602cf422fbb1bb52ae2b2ac43ab",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "expected": "b5688cb6f8a6b0aae9dbe3db24aa8457571e2f0d6099801ccc9e3f11f49c59c9",
+    "actual": "b5688cb6f8a6b0aae9dbe3db24aa8457571e2f0d6099801ccc9e3f11f49c59c9",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+    "expected": "2b5da310aa196164cb0d07654d6df73c15f3ac23c67c416da3036ea148f1d491",
+    "actual": "2b5da310aa196164cb0d07654d6df73c15f3ac23c67c416da3036ea148f1d491",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/05_DESIGN_SYSTEM/THEME_LIBRARY.md",
+    "expected": "4063fe5f3dacfb7df9bf433b7073e2a5b608ced12a7944eabecc9087bcf261ce",
+    "actual": "4063fe5f3dacfb7df9bf433b7073e2a5b608ced12a7944eabecc9087bcf261ce",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+    "expected": "8d36ff89202b0a1d692252c7d46c8da709cf317438d007b2564340bf47fe62ab",
+    "actual": "8d36ff89202b0a1d692252c7d46c8da709cf317438d007b2564340bf47fe62ab",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/05_DESIGN_SYSTEM/TOKEN_FILE.md",
+    "expected": "2fc5eff41dd6320550c21bfda7cc6e33f7b5be7339fe9e5a280b67dc0475922a",
+    "actual": "2fc5eff41dd6320550c21bfda7cc6e33f7b5be7339fe9e5a280b67dc0475922a",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "expected": "2b7f9f8d5b89a43bb63edbb54950bf6dcbee7e67549d6019b1dada5c51d493b4",
+    "actual": "2b7f9f8d5b89a43bb63edbb54950bf6dcbee7e67549d6019b1dada5c51d493b4",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/CHANGELOG.md",
+    "expected": "e60a3289d46c47d0d3b323f203d302b190ab853e5bb12d9da7a266d8a9ef5abe",
+    "actual": "e60a3289d46c47d0d3b323f203d302b190ab853e5bb12d9da7a266d8a9ef5abe",
+    "match": true
+  },
+  {
+    "path": "RAW/candidate/MANIFEST.md",
+    "expected": "13759dcc55df8747a86ddaa053f89d24c4e280474cde91d9e44bca3211e1b942",
+    "actual": "13759dcc55df8747a86ddaa053f89d24c4e280474cde91d9e44bca3211e1b942",
+    "match": true
+  },
+  {
+    "path": "RAW/canonical.diff",
+    "expected": "e1e9642d0c267fff7f36c6c910d0e5fe85bee77eac405a4a349312e9748db1c9",
+    "actual": "e1e9642d0c267fff7f36c6c910d0e5fe85bee77eac405a4a349312e9748db1c9",
+    "match": true
+  },
+  {
+    "path": "RAW/copied_inputs.json",
+    "expected": "2699edb9dce0c72de335f433207fba452ac7ea2a2ba03ca1dada59da2af46da0",
+    "actual": "2699edb9dce0c72de335f433207fba452ac7ea2a2ba03ca1dada59da2af46da0",
+    "match": true
+  },
+  {
+    "path": "RAW/copied_zip_identity.json",
+    "expected": "3e4957a25f4dc04e98fbe31e5613fe8ea4738404bf59f6040eed46078f000c07",
+    "actual": "3e4957a25f4dc04e98fbe31e5613fe8ea4738404bf59f6040eed46078f000c07",
+    "match": true
+  },
+  {
+    "path": "RAW/edit_delta_accounting.json",
+    "expected": "5c578a09ac8167ec87e5b94e7ac2f15ac87f5f266dc158df83c65229de1f1040",
+    "actual": "5c578a09ac8167ec87e5b94e7ac2f15ac87f5f266dc158df83c65229de1f1040",
+    "match": true
+  },
+  {
+    "path": "RAW/end_hashes.json",
+    "expected": "5fb3697c12c035713da2da22b0d25aae3461a341f004221f5187ef002eb595ae",
+    "actual": "5fb3697c12c035713da2da22b0d25aae3461a341f004221f5187ef002eb595ae",
+    "match": true
+  },
+  {
+    "path": "RAW/environment.json",
+    "expected": "b59db037f739390249a01693e4534ef613433b50f6ba2d0106cc93cfed332f85",
+    "actual": "b59db037f739390249a01693e4534ef613433b50f6ba2d0106cc93cfed332f85",
+    "match": true
+  },
+  {
+    "path": "RAW/exact_spans.json",
+    "expected": "edbb3b08e4e1ac4d4e7ceda3340ec954b47e75e80b948cb276a4a5d5ac6eeb69",
+    "actual": "edbb3b08e4e1ac4d4e7ceda3340ec954b47e75e80b948cb276a4a5d5ac6eeb69",
+    "match": true
+  },
+  {
+    "path": "RAW/handoff_inventory.json",
+    "expected": "c1ab90b0f6702b56975cbf215aaaaf8f6caad24f52cad2bcc57962365cdf0112",
+    "actual": "c1ab90b0f6702b56975cbf215aaaaf8f6caad24f52cad2bcc57962365cdf0112",
+    "match": true
+  },
+  {
+    "path": "RAW/handoff_structure.json",
+    "expected": "2aafb46e2c131d0e55a06e6b77900eb4759d2614d5240b2f912acb1086b568cd",
+    "actual": "2aafb46e2c131d0e55a06e6b77900eb4759d2614d5240b2f912acb1086b568cd",
+    "match": true
+  },
+  {
+    "path": "RAW/index_hashes.json",
+    "expected": "62dc59e967409fe250e152552085f074b430e4e6c8f34c68d7e20ac4ca8a4b03",
+    "actual": "62dc59e967409fe250e152552085f074b430e4e6c8f34c68d7e20ac4ca8a4b03",
+    "match": true
+  },
+  {
+    "path": "RAW/input_AC_EXECUTION_CHECKLIST.md",
+    "expected": "eb319c1a4b01a7d84d2baae56ae8408baec1a473ffd8f00d46f577e6883ac665",
+    "actual": "eb319c1a4b01a7d84d2baae56ae8408baec1a473ffd8f00d46f577e6883ac665",
+    "match": true
+  },
+  {
+    "path": "RAW/input_AMENDMENT_V2_EDITS.json",
+    "expected": "7e4905c113f45692bb17eea9f7cf2afe4f1eb6edfee01377509e2a29037a71f3",
+    "actual": "7e4905c113f45692bb17eea9f7cf2afe4f1eb6edfee01377509e2a29037a71f3",
+    "match": true
+  },
+  {
+    "path": "RAW/input_BOUND_EXECUTION_INDEX.json",
+    "expected": "b4fe406963b13b650f11d7d688026c88ff37fb1698d6191cdec420247c156bc9",
+    "actual": "b4fe406963b13b650f11d7d688026c88ff37fb1698d6191cdec420247c156bc9",
+    "match": true
+  },
+  {
+    "path": "RAW/input_DIRECTOR_DECISIONS_V2.md",
+    "expected": "e34922ddb3177930e8ade6e56dae65883c31878f09c2493715df952724d59fef",
+    "actual": "e34922ddb3177930e8ade6e56dae65883c31878f09c2493715df952724d59fef",
+    "match": true
+  },
+  {
+    "path": "RAW/input_DOCSET_SYNC_ACCEPTANCE_SPEC_AMENDED_V1_R1.md",
+    "expected": "2a3867cacef11c6bb0419a4c71229479efe703cee9fbcc1e4f71c0ac8e63f0fc",
+    "actual": "2a3867cacef11c6bb0419a4c71229479efe703cee9fbcc1e4f71c0ac8e63f0fc",
+    "match": true
+  },
+  {
+    "path": "RAW/input_EXECUTION_PROPOSAL.patch",
+    "expected": "86fbfe6f3787c55332bb5d0c741d7ed3296c1f872e3ce26bc4af01b29a0282fd",
+    "actual": "86fbfe6f3787c55332bb5d0c741d7ed3296c1f872e3ce26bc4af01b29a0282fd",
+    "match": true
+  },
+  {
+    "path": "RAW/input_OVERRIDES_AND_ALIGNMENT.md",
+    "expected": "cfd886239d60ab221bc0625ef4337b2a9ffa9d4aa67a76ddb8ffbe33e76722b1",
+    "actual": "cfd886239d60ab221bc0625ef4337b2a9ffa9d4aa67a76ddb8ffbe33e76722b1",
+    "match": true
+  },
+  {
+    "path": "RAW/input_QA_EXECUTOR_PROMPT.md",
+    "expected": "cb1310d08f630921de3732c27792ec583f2b92fcc311fbe6c503362a2f0bf898",
+    "actual": "cb1310d08f630921de3732c27792ec583f2b92fcc311fbe6c503362a2f0bf898",
+    "match": true
+  },
+  {
+    "path": "RAW/input_QA_LEAD_VERDICT.md",
+    "expected": "16866d367251435266668cf5d9543cceb7affc818273ca333ca7a77319d583b5",
+    "actual": "16866d367251435266668cf5d9543cceb7affc818273ca333ca7a77319d583b5",
+    "match": true
+  },
+  {
+    "path": "RAW/input_SEARCH_QUERIES.json",
+    "expected": "55dbb28a206fac448278c605e15722e99910a1c1b5ffeb0758b1c0eb7994cdf7",
+    "actual": "55dbb28a206fac448278c605e15722e99910a1c1b5ffeb0758b1c0eb7994cdf7",
+    "match": true
+  },
+  {
+    "path": "RAW/input_UPDATE_MAP.md",
+    "expected": "cd291270bb6c8e537bcb050685c6464d326254f0d2a703c21f7f304dfe286931",
+    "actual": "cd291270bb6c8e537bcb050685c6464d326254f0d2a703c21f7f304dfe286931",
+    "match": true
+  },
+  {
+    "path": "RAW/lints.txt",
+    "expected": "464d6fe12c6b15c15fa89499cda06a08e54c18376f7b4127c5e915879a23f04e",
+    "actual": "464d6fe12c6b15c15fa89499cda06a08e54c18376f7b4127c5e915879a23f04e",
+    "match": true
+  },
+  {
+    "path": "RAW/live_scope.json",
+    "expected": "1d8e68729476d2f3a0bc733ceaa276a870602785bd241527323b2ec2396124d5",
+    "actual": "1d8e68729476d2f3a0bc733ceaa276a870602785bd241527323b2ec2396124d5",
+    "match": true
+  },
+  {
+    "path": "RAW/metadata.json",
+    "expected": "47df8c362f3546489893bd6c562db0ad72b5c9e81fe2b13dbff569e0f05621e0",
+    "actual": "47df8c362f3546489893bd6c562db0ad72b5c9e81fe2b13dbff569e0f05621e0",
+    "match": true
+  },
+  {
+    "path": "RAW/ownership_dispositions.json",
+    "expected": "6b5af04241171625d23e0a0f182036cc345bec54f68473d11324f13cc98c03e9",
+    "actual": "6b5af04241171625d23e0a0f182036cc345bec54f68473d11324f13cc98c03e9",
+    "match": true
+  },
+  {
+    "path": "RAW/ownership_hits.json",
+    "expected": "8e208c7b066e3a85c1cd7659c5e8263166f708c849e1ca0b909a463a750736e7",
+    "actual": "8e208c7b066e3a85c1cd7659c5e8263166f708c849e1ca0b909a463a750736e7",
+    "match": true
+  },
+  {
+    "path": "RAW/ownership_hits.txt",
+    "expected": "e3a276267f7b16d7461f23b7ee44328277117ffa96af0986ec6b979cc747bb00",
+    "actual": "e3a276267f7b16d7461f23b7ee44328277117ffa96af0986ec6b979cc747bb00",
+    "match": true
+  },
+  {
+    "path": "RAW/patch_delta.json",
+    "expected": "15f548343baf7d00576e56aa80ca387adab63353dc1673f7cef3db99af1b2d6a",
+    "actual": "15f548343baf7d00576e56aa80ca387adab63353dc1673f7cef3db99af1b2d6a",
+    "match": true
+  },
+  {
+    "path": "RAW/preserved_existing_paths.json",
+    "expected": "16f88fe8364cf073ceb3c642aa3b3d5b1c07f2f4f2151f70e014748e62ffe396",
+    "actual": "16f88fe8364cf073ceb3c642aa3b3d5b1c07f2f4f2151f70e014748e62ffe396",
+    "match": true
+  },
+  {
+    "path": "RAW/propagation_hits.json",
+    "expected": "f6d9395822970ef940159a24e80952c2ffd2c412b3115d53642b20b66e0b18c6",
+    "actual": "f6d9395822970ef940159a24e80952c2ffd2c412b3115d53642b20b66e0b18c6",
+    "match": true
+  },
+  {
+    "path": "RAW/propagation_hits.txt",
+    "expected": "479e44a998363bb3c44521d596599253d733f1b13f687bf8338067083d0eec58",
+    "actual": "479e44a998363bb3c44521d596599253d733f1b13f687bf8338067083d0eec58",
+    "match": true
+  },
+  {
+    "path": "RAW/propagation_summary.json",
+    "expected": "8bc9d5171ebe98ad4e188ea1f52de704d34e348d82556cc0c03207d6c7c0c285",
+    "actual": "8bc9d5171ebe98ad4e188ea1f52de704d34e348d82556cc0c03207d6c7c0c285",
+    "match": true
+  },
+  {
+    "path": "RAW/protected_tree_sets.json",
+    "expected": "a0f4a0a386ddc8e53bba72099cfe8f50f7a33c66e8d20623f233fdd344e1dda3",
+    "actual": "a0f4a0a386ddc8e53bba72099cfe8f50f7a33c66e8d20623f233fdd344e1dda3",
+    "match": true
+  },
+  {
+    "path": "RAW/scope.json",
+    "expected": "ac5dd6fbf259094cf49baf45196ba503b39294ba24f2151d380bd26f7bff6519",
+    "actual": "ac5dd6fbf259094cf49baf45196ba503b39294ba24f2151d380bd26f7bff6519",
+    "match": true
+  },
+  {
+    "path": "RAW/staged_comparison.json",
+    "expected": "f38166fb61eaf7b3a8372bc85947c496581d1673e7d882b72cfb24f8466da4c4",
+    "actual": "f38166fb61eaf7b3a8372bc85947c496581d1673e7d882b72cfb24f8466da4c4",
+    "match": true
+  },
+  {
+    "path": "RAW/stale_assertion_sweep.json",
+    "expected": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "actual": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "match": true
+  },
+  {
+    "path": "RAW/transitions.json",
+    "expected": "848665cb8628bc606222a086d72699b4d63fa0e4b04a5da92af49bb7536db22c",
+    "actual": "848665cb8628bc606222a086d72699b4d63fa0e4b04a5da92af49bb7536db22c",
+    "match": true
+  },
+  {
+    "path": "RAW/transitions_source.json",
+    "expected": "d3b6b2720aeee85bdf820032fd50bf5b23ca6f89b9778d229ec87894db1e29b6",
+    "actual": "d3b6b2720aeee85bdf820032fd50bf5b23ca6f89b9778d229ec87894db1e29b6",
+    "match": true
+  },
+  {
+    "path": "RAW/whitespace_classification.json",
+    "expected": "59e35fefc52a3062f185c085c75a17919520f76eafc0760c43dd330748ac5db3",
+    "actual": "59e35fefc52a3062f185c085c75a17919520f76eafc0760c43dd330748ac5db3",
+    "match": true
+  },
+  {
+    "path": "RAW/withdrawal_candidate_packet.txt",
+    "expected": "446b507cfbb6cfd1a24a762ac548fd83828b4d4d9724d5ab36b3841f869dd5ce",
+    "actual": "446b507cfbb6cfd1a24a762ac548fd83828b4d4d9724d5ab36b3841f869dd5ce",
+    "match": true
+  },
+  {
+    "path": "RAW/withdrawal_candidate_passages.json",
+    "expected": "dbfc62f219e37c767aa3456f5194d1b0f62cce76d940c18c6a4aea44e2ecb7f3",
+    "actual": "dbfc62f219e37c767aa3456f5194d1b0f62cce76d940c18c6a4aea44e2ecb7f3",
+    "match": true
+  },
+  {
+    "path": "RAW/withdrawal_query_hits.json",
+    "expected": "41ffe22ada372f74309b3e3946958f603f61e178a3e0a93e7e8533ccf2089f53",
+    "actual": "41ffe22ada372f74309b3e3946958f603f61e178a3e0a93e7e8533ccf2089f53",
+    "match": true
+  },
+  {
+    "path": "REPRODUCE.md",
+    "expected": "98ec90ed1f5c41ebf89b4c8d4d4481a57e1ed599fbad8aa735e25a582d094494",
+    "actual": "98ec90ed1f5c41ebf89b4c8d4d4481a57e1ed599fbad8aa735e25a582d094494",
+    "match": true
+  },
+  {
+    "path": "R_RESULTS.json",
+    "expected": "90bdd3d56a7237f10e272520aa9253cd3404dd7203e6e625896464e7e0799570",
+    "actual": "90bdd3d56a7237f10e272520aa9253cd3404dd7203e6e625896464e7e0799570",
+    "match": true
+  },
+  {
+    "path": "WITHDRAWAL_ROWS.json",
+    "expected": "fcbad4e64bd5f6357e43a25636c3b382d993ed683190818bcb51632606555425",
+    "actual": "fcbad4e64bd5f6357e43a25636c3b382d993ed683190818bcb51632606555425",
+    "match": true
+  },
+  {
+    "path": "scripts/bootstrap.py",
+    "expected": "c0af60ed414634505abd8a751faa5942aadbf049fdc937dab198ed274ad1bc9e",
+    "actual": "c0af60ed414634505abd8a751faa5942aadbf049fdc937dab198ed274ad1bc9e",
+    "match": true
+  },
+  {
+    "path": "scripts/checks.py",
+    "expected": "f6b7021efc2433a800e58104b6562848a262a1f2cf1430c1fd801dbe526354dd",
+    "actual": "f6b7021efc2433a800e58104b6562848a262a1f2cf1430c1fd801dbe526354dd",
+    "match": true
+  },
+  {
+    "path": "scripts/final_checks.py",
+    "expected": "3e5861f0b04f95139724bdb361aeef85f55f774404e243dc7851becf63cad7ee",
+    "actual": "3e5861f0b04f95139724bdb361aeef85f55f774404e243dc7851becf63cad7ee",
+    "match": true
+  },
+  {
+    "path": "scripts/judgments.py",
+    "expected": "430bd09a1c20afb5ee52ba15cab31939c532213dc9a1d8c81ed3eac34dabae79",
+    "actual": "430bd09a1c20afb5ee52ba15cab31939c532213dc9a1d8c81ed3eac34dabae79",
+    "match": true
+  },
+  {
+    "path": "scripts/report.py",
+    "expected": "98dc662972956866dd67deac0426d3262f9dfa185d54932afeb26c0511c55318",
+    "actual": "98dc662972956866dd67deac0426d3262f9dfa185d54932afeb26c0511c55318",
+    "match": true
+  },
+  {
+    "path": "scripts/seal.py",
+    "expected": "7643be6c6358b8c3803e42e6510edfa40498757ffe8166f7071c30bbf72b5a6b",
+    "actual": "7643be6c6358b8c3803e42e6510edfa40498757ffe8166f7071c30bbf72b5a6b",
+    "match": true
+  },
+  {
+    "path": "scripts/supplement.py",
+    "expected": "c6488bc74e5a96296bbc4f6eac63d73d0e6833488dbbb4290c1ae06b4668e4e2",
+    "actual": "c6488bc74e5a96296bbc4f6eac63d73d0e6833488dbbb4290c1ae06b4668e4e2",
+    "match": true
+  }
+]

@@ -1,0 +1,6 @@
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:796:   if (error || products.length === 0) {
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:876:   return <ProductList initialProducts={products} />;
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:886:   initialProducts: Product[];
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:889: export const ProductList = ({ initialProducts }: Props) => {
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:895:     setProducts(initialProducts);
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:896:   }, [initialProducts, setProducts]);

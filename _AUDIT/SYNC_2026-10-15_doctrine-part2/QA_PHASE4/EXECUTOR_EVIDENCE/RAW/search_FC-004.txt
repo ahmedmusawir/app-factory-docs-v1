@@ -1,0 +1,25 @@
+01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md:25: Phase 5 — Deployment: authorized operator deploys only within existing context-specific permissions.
+01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md:131: Phase 5 — Deployment: authorized operator deploys only within existing context-specific permissions.
+01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md:20: 7. [Phase 5: State Management](#7-phase-5-state-management)
+01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md:142:   PHASE 5          PHASE 6          PHASE 7          PHASE 8
+01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md:171: The factory uses one canonical project-phase map: the **APP_FACTORY_BLUEPRINT lifecycle** (Phase 0 — Recon → Phase 5 — Deployment). This playbook's 9 phases are the **execution breakdown** within that lifecycle — they do not compete with it. FFM "Sub-Phases" nest inside individual build phases. Nothing is renumbered by this note.
+01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md:179: | Phase 9 — Deployment | Phase 5 — Deployment |
+01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md:445: ## 7. Phase 5: State Management
+01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md:768: - Phase 5 (State): X hours
+01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md:810: ### Phase 5: State
+02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md:122: > "Does this communicate intent, on real tokens? Ship it."
+02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md:471: ### Phase 5: CLI Wiring
+02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md:1101: **Bad:** "It works locally, ship it"  
+03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md:470:   ship it", "push to cloud run". This is Part 2 of a 2-skill family —
+03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md:13: This document owns deployment, staging-to-production promotion, rollback and the Git / cloud authority rules of the Factory. Before it existed, deployment gates and checklists were scattered across `QA_PLAYBOOK.md` (Gate D), `BUG_FIX_PLAYBOOK.md` §12–§13, `BIM_PLAYBOOK.md` §6–§7 and the Blueprint's Phase 5 with no owning doctrine (FC-011).
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1174: 8. **Phase 5 — Verification** (steps, verification gate)
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1349: 3. Update sub-phase 5 (Components) heavily — this is the most phase-specific
+03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md:77: Doctrine load decay is a real failure mode. In Cyberize Run 001, Phase 5 shipped a desktop-only chat screen because mobile-first doctrine had decayed from working memory. After Phase 5.4 refactor and the introduction of structural re-injection, all subsequent phases held the line. This protocol is the structural enforcement of that lesson.
+03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md:526: This is the Factory's self-improvement loop made explicit. The `AppShellPage` primitive came from Phase 5.4 in Run 001 — what started as a mobile-first fix became a permanent kit primitive. Every future Factory run benefits from primitives discovered this way. Don't lose those discoveries to "I'll mention it later" forgetfulness.
+03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md:544: ### Lesson 5 — The Phase 5 Mobile-First Violation
+05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md:243: ### `AppShellPage` ⭐ NEW (Born In Run 001 Phase 5.4)
+05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md:650: (Lesson from Run 001 Phase 5 — see `STARTER_KIT_FEEDBACK.md` Lesson 7)
+05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md:668: (Lesson from Run 001 Phase 5)
+05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md:1810: ### Lesson 5 — The Phase 5 Mobile-First Violation
+05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md:1812: **Incident:** Phase 5 Chat screen shipped desktop-only with `w-64` fixed sidebar and no media queries. Operator caught it as F-grade work. Phase 5.4 refactor required.
+05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md:1814: **Root cause:** Mobile-first lived in section 7 of this manual. By Phase 5, the doctrine had decayed from Claudy's working memory. No structural forcing function caught the violation before code was authored.

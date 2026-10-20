@@ -1,0 +1,274 @@
+{
+  "authority": "Tony explicit 2026-10-16 MC correction assignment; revised derivatives required; originals preserved",
+  "status": "ENGINEER-PROPOSED published references and stick diagrams; not installed",
+  "workflows": [
+    {
+      "title": "FFM creation and Architect assembly",
+      "source": "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W01_FFM_CREATION.png",
+      "owner": "FFM_PLAYBOOK.md",
+      "steps": [
+        [
+          "Engineer",
+          "Current recon; declared reporting writes"
+        ],
+        [
+          "Architect",
+          "Author APP_BRIEF from current recon"
+        ],
+        [
+          "Director",
+          "Approve scope and brief"
+        ],
+        [
+          "Architect",
+          "DATA_CONTRACT before Design"
+        ],
+        [
+          "Designer",
+          "UI_SPEC, tokens and visual artifacts"
+        ],
+        [
+          "Architect",
+          "Reconcile assembly; prepare module QAM"
+        ],
+        [
+          "Director",
+          "Approve package and release Engineering"
+        ]
+      ],
+      "id": "FFM_CREATION",
+      "document": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+      "asset": "03_BUILD_METHODOLOGY/_assets/workflows/FFM_CREATION.svg"
+    },
+    {
+      "title": "FFM engineering, independent QA and post-FFM review",
+      "source": "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W02_FFM_EXECUTION.png",
+      "owner": "FFM_PLAYBOOK.md",
+      "steps": [
+        [
+          "Engineer",
+          "Build and self-check; factual QAM handoff"
+        ],
+        [
+          "Director",
+          "Commit/push numbered engineering candidate"
+        ],
+        [
+          "Director",
+          "QA branch at exact candidate commit"
+        ],
+        [
+          "QA Executor",
+          "Q1 recon and independent test plan"
+        ],
+        [
+          "QA Lead",
+          "Approve the specific QA plan"
+        ],
+        [
+          "Director",
+          "Release Q2 execution"
+        ],
+        [
+          "QA Executor",
+          "Q2 tests and evidence"
+        ],
+        [
+          "Engineer",
+          "Conditional authorized repair on same QA branch"
+        ],
+        [
+          "Director",
+          "Commit repaired candidate on the continuing QA branch"
+        ],
+        [
+          "QA Executor",
+          "Independent retest of repair and regression"
+        ],
+        [
+          "QA Lead",
+          "Product certification; approve cleanup retention"
+        ],
+        [
+          "QA Executor",
+          "Authorized cleanup; retain durable evidence"
+        ],
+        [
+          "QA Lead",
+          "Accept cleanup; preserve product verdict identity"
+        ],
+        [
+          "Architect",
+          "Closeout instruction"
+        ],
+        [
+          "Engineer",
+          "Bounded closeout"
+        ],
+        [
+          "Director",
+          "Final commits, merge and push"
+        ],
+        [
+          "Reviewers",
+          "Review checkpoint 1 after FFM build and independent QA"
+        ],
+        [
+          "Director",
+          "Disposition review findings; RRM only for approved repairs"
+        ]
+      ],
+      "id": "FFM_EXECUTION",
+      "document": "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+      "asset": "03_BUILD_METHODOLOGY/_assets/workflows/FFM_EXECUTION.svg"
+    },
+    {
+      "title": "Deployment, identity and independent Gate D",
+      "source": "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W03_FFM_DEPLOYMENT.png",
+      "owner": "DEPLOYMENT_PLAYBOOK.md",
+      "steps": [
+        [
+          "Architect",
+          "Declare target, permissions, exclusion and recovery"
+        ],
+        [
+          "QA Lead",
+          "Required product QA verdict remains distinct"
+        ],
+        [
+          "Director",
+          "Release the verified candidate for deployment"
+        ],
+        [
+          "Authorized operator",
+          "Deploy within existing context-specific permissions"
+        ],
+        [
+          "QA Executor",
+          "Verify deployed identity, exclusions and behavior at Gate D"
+        ],
+        [
+          "QA Lead",
+          "Issue deployed-environment verdict"
+        ],
+        [
+          "Director",
+          "Release decision or authorized recovery"
+        ],
+        [
+          "Architect",
+          "Record follow-ups; release is separate from review"
+        ]
+      ],
+      "id": "FFM_DEPLOYMENT",
+      "document": "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+      "asset": "03_BUILD_METHODOLOGY/_assets/workflows/FFM_DEPLOYMENT.svg"
+    },
+    {
+      "title": "BIM lifecycle and Engine 2 system review",
+      "source": "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W04_BIM_WORKFLOW.png",
+      "owner": "BIM_PLAYBOOK.md",
+      "steps": [
+        [
+          "Engineer",
+          "Fresh recon after preceding module closeout"
+        ],
+        [
+          "Architect",
+          "Author BIM just in time; prepare contract and QAM"
+        ],
+        [
+          "Director",
+          "Approve scope and release Engineering"
+        ],
+        [
+          "Engineer",
+          "Implement, verify and complete factual handoff"
+        ],
+        [
+          "Director",
+          "Commit/push candidate; QA branch at that exact commit"
+        ],
+        [
+          "QA Executor",
+          "Q1 recon and independent plan"
+        ],
+        [
+          "QA Lead",
+          "Approve plan"
+        ],
+        [
+          "Director",
+          "Release Q2"
+        ],
+        [
+          "QA Executor",
+          "Q2 tests and findings"
+        ],
+        [
+          "Engineer",
+          "Conditional authorized repairs on continuing QA branch"
+        ],
+        [
+          "Director",
+          "Commit repaired candidate on the continuing QA branch"
+        ],
+        [
+          "QA Executor",
+          "Independent retest of repairs and required regression"
+        ],
+        [
+          "QA Lead",
+          "Product certification; approve cleanup retention"
+        ],
+        [
+          "QA Executor",
+          "Perform authorized required cleanup; retain evidence"
+        ],
+        [
+          "QA Lead",
+          "Accept cleanup separately from product verdict"
+        ],
+        [
+          "Architect",
+          "Closeout instructions"
+        ],
+        [
+          "Engineer",
+          "Bounded closeout"
+        ],
+        [
+          "Director",
+          "Final commits, merge and push"
+        ],
+        [
+          "Authorized operator",
+          "If deployment in scope: deploy within existing permissions"
+        ],
+        [
+          "QA Executor",
+          "If deployed: independently verify the exact revision at Gate D"
+        ],
+        [
+          "QA Lead",
+          "If deployed: Gate D verdict; otherwise documented N/A"
+        ],
+        [
+          "Architect",
+          "Complete all Engine 1 phases/modules and their QA"
+        ],
+        [
+          "Reviewers",
+          "Review checkpoint 2: Engine 2 independent system review"
+        ],
+        [
+          "Director",
+          "Disposition findings; RRM only for approved repairs"
+        ]
+      ],
+      "id": "BIM_WORKFLOW",
+      "document": "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+      "asset": "03_BUILD_METHODOLOGY/_assets/workflows/BIM_WORKFLOW.svg"
+    }
+  ]
+}

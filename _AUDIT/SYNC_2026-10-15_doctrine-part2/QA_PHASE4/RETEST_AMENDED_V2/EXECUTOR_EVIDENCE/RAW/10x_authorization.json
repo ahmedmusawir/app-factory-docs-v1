@@ -1,0 +1,41 @@
+{
+  "authority": "Tony current DIRECTOR-APPROVED ADDITION: TWO STANDALONE 10x PLAYBOOKS instruction; source clarification: and you will find those files under /Documents folder",
+  "recorded_at": "2026-10-18T18:26:05+06:00",
+  "engineer": "Cody",
+  "scope": "Two standalone reference documents only; additional to and separate from frozen 101-path sync",
+  "files": [
+    {
+      "source": "/home/moose/Documents/ABM_PLAYBOOK_v1_0.md",
+      "destination": "10x Lab/ABM_PLAYBOOK_v1_0.md",
+      "bytes": 47242,
+      "source_sha256": "21f8344812a385ec0a3da8ec41e144dc07c7248814a8b0a73db4f2433c5b2051",
+      "destination_sha256": "21f8344812a385ec0a3da8ec41e144dc07c7248814a8b0a73db4f2433c5b2051",
+      "exact_copy": true
+    },
+    {
+      "source": "/home/moose/Documents/APBM_PLAYBOOK_v1_0.md",
+      "destination": "10x Lab/APBM_PLAYBOOK_v1_0.md",
+      "bytes": 25765,
+      "source_sha256": "c12ff3f9bc4355e9bd8e1c276a3917bd443f864715ab1ffb6b84edf49beb4f93",
+      "destination_sha256": "c12ff3f9bc4355e9bd8e1c276a3917bd443f864715ab1ffb6b84edf49beb4f93",
+      "exact_copy": true
+    }
+  ],
+  "prohibitions": [
+    "No integration with canonical Factory doctrine",
+    "No MANIFEST, CHANGELOG, cross-reference, template or skill updates",
+    "No README, review campaign or new repository",
+    "No content reconstruction or rewriting"
+  ],
+  "original_sync_paths": 101,
+  "original_sync_edits": 380,
+  "sync_approved_inputs_unchanged": true,
+  "original_gate2_gate3": "APPROVED; no reopening",
+  "execution_worktree_status": "NOT CREATED; future exact transfer required",
+  "commit_policy": "Dedicated two-file 10x reference commit in execution worktree, separate from sync implementation commit",
+  "git_owner": "Tony",
+  "future_updates": "separately authorized",
+  "source_selection": "Unique matching finalized ABM/APBM playbook files found in Documents; no conflicting matching playbook versions found in Documents/Downloads search",
+  "decision_record_before_sha256": "36bc97fc544c1c46925c96889ced544cb8e9ef882844b893bda2b0cc77b49d96",
+  "decision_record_after_sha256": "a7629a69da28b94e9d638e22bd4a5ff1328fd17d52596c27434ea52c6963e436"
+}

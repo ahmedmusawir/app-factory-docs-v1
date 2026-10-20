@@ -1,0 +1,29 @@
+{
+  "created": "2026-10-17T19:11:13+06:00",
+  "package": "QA final Phase 2 review handoff \u2014 Fable, QA Lead: QA-AF01 CLOSED (PASS) on independent retest; spec AMENDED-v1-R1; ordered Director decision block; preservation/setup instructions",
+  "target_zip": "/home/moose/Downloads/FACTORY_QA_FINAL_HANDOFF_2026-10-17_190959.zip",
+  "sha256": "d8b8c5c268a6ae96d5f72c5b66411d68845f4b707b5e86c1b570878a2ed1923b",
+  "bytes": 1132084,
+  "members": 35,
+  "inventory_entries": 34,
+  "preservation_paths": 865,
+  "specification_r1_sha256": "2a3867cacef11c6bb0419a4c71229479efe703cee9fbcc1e4f71c0ac8e63f0fc",
+  "corrected_patch_sha256": "cf6413c9340c80f5c1bf53a55385876470e9b3aad364bc8963f52a68580f2a6d",
+  "amended_index_sha256": "69244f4edc347b30b81ed6a909bae4fbb5130864319e9f8cd84b5d5c22e59ba6",
+  "retest_verdict": "PASS \u2014 QA-AF01 CLOSED",
+  "retest_time": "2026-10-17T19:07:09+06:00",
+  "response": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-17_190959_qa-final-handoff.md",
+  "builds_on": {
+    "repair_zip": "/home/moose/Downloads/FACTORY_QA_AF01_REPAIR_2026-10-17_173649.zip",
+    "repair_zip_sha256": "9782260ccbd12fd6b76a844c0439e69796d8e6904e6912c9c78631215fdcf4ed",
+    "qa_review_zip": "FACTORY_AMENDED_V1_QA_SPEC_REVIEW_2026-10-17_160835.zip",
+    "qa_review_zip_sha256": "86da25006261a33ab4f0edae89520cbd20682d1cc6d918415aa3b4ceb5cf98c4",
+    "amendment_zip": "FACTORY_AMENDED_V1_REVIEW_2026-10-17_145858.zip",
+    "amendment_zip_sha256": "711914a986cd64071f4372e0c428249ba27c6eba8ace160918c312d098b34f60"
+  },
+  "gate2_amendment": "PENDING",
+  "gate3": "PENDING",
+  "phase3": "NOT RELEASED",
+  "git_mutations": false,
+  "delivery_verification": "ZIP CRC, inventory self-check and payload-vs-run-directory comparison PASS"
+}

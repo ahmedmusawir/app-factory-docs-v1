@@ -1,0 +1,10 @@
+20f71ee932ed21c0878cb3a0f39c6fbe90d0a793 ef35d26d82f1904da6ed33663ad647e4ee16fe98 Ahmed Musawir 2026-10-18 chore(sync): engineering handoff and authorized publication for ef35d26
+
+ef35d26d82f1904da6ed33663ad647e4ee16fe98 2e714b640f8490ea5b30e773736aca5c2381245b Ahmed Musawir 2026-10-18 docs(sync): apply approved 101-path doctrine update [FC/W/RUL/AD-01; AMENDED-v1 380 edits]
+
+2e714b640f8490ea5b30e773736aca5c2381245b 4ec73a40ce2ad91f0ed99b85638efc7fe375140d Ahmed Musawir 2026-10-18 chore(sync): record completed execution setup
+
+4ec73a40ce2ad91f0ed99b85638efc7fe375140d 356206ab293dc3a3987269636bb853c84aaf4ad3 Ahmed Musawir 2026-10-18 docs(10x): add standalone ABM and APBM reference playbooks
+
+356206ab293dc3a3987269636bb853c84aaf4ad3 9c179392f79b70da099121fc357d3107ad3bb86e Ahmed Musawir 2026-10-18 chore(sync): checkpoint approved execution preparation
+

@@ -1,0 +1,37 @@
+{
+  "author_present": true,
+  "email_present": true,
+  "author_name_sha256": "fa4865d43106005b3446fa712b2f364fd050f2ade4cabea70b59ff9ce2fc7d82",
+  "author_email_sha256": "c38d5dc6a479febd29bbf47971bbeef9376dd130d7ca649369dbf4ae03074b8a",
+  "attribution": "Consistent Git author metadata was inspected at the pinned commit; attributable under O-1.",
+  "redacted_files": [
+    {
+      "path": "COMMANDS.json",
+      "fields": [
+        "Git author name/email"
+      ],
+      "reason": "Assignment requires personal-data redaction; author-presence and identity digests retained."
+    },
+    {
+      "path": "QA_END.json",
+      "fields": [
+        "Git author name/email"
+      ],
+      "reason": "Assignment requires personal-data redaction; author-presence and identity digests retained."
+    },
+    {
+      "path": "QA_START.json",
+      "fields": [
+        "Git author name/email"
+      ],
+      "reason": "Assignment requires personal-data redaction; author-presence and identity digests retained."
+    },
+    {
+      "path": "RAW/initial_network_attempt.json",
+      "fields": [
+        "Git author name/email"
+      ],
+      "reason": "Assignment requires personal-data redaction; author-presence and identity digests retained."
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+04_REFERENCE_MANUALS/AUTH_MANUAL.md:511:   const next = searchParams.get("next") ?? "/";
+04_REFERENCE_MANUALS/AUTH_MANUAL.md:526:         const destination = new URL(next, origin);

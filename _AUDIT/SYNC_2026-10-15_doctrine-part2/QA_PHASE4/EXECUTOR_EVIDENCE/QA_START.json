@@ -1,0 +1,62 @@
+{
+  "remote_tip": {
+    "cmd": [
+      "git",
+      "ls-remote",
+      "--heads",
+      "origin",
+      "refs/heads/docs/sync-doctrine-part2-2026-10-15"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793\trefs/heads/docs/sync-doctrine-part2-2026-10-15\n",
+    "stderr": ""
+  },
+  "head": {
+    "cmd": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793\n",
+    "stderr": ""
+  },
+  "branch": {
+    "cmd": [
+      "git",
+      "rev-parse",
+      "--abbrev-ref",
+      "HEAD"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "docs/sync-doctrine-part2-2026-10-15\n",
+    "stderr": ""
+  },
+  "porcelain": {
+    "cmd": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "main": {
+    "cmd": [
+      "git",
+      "ls-remote",
+      "origin",
+      "refs/heads/main"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "9c179392f79b70da099121fc357d3107ad3bb86e\trefs/heads/main\n",
+    "stderr": ""
+  },
+  "session_start_utc": "2026-10-19T05:41:06Z"
+}

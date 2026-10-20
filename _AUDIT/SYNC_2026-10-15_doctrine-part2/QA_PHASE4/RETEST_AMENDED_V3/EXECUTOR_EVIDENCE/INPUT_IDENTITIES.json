@@ -1,0 +1,118 @@
+{
+  "candidate": "26b050fe70de66e74ec8d65bcf9287d4369a91f7",
+  "parent": "8dff354937bc7baf739370a9886497d9d5359186",
+  "base": "9c179392f79b70da099121fc357d3107ad3bb86e",
+  "handoff_zip_sha256": "5efa6fee26d94598fc6687e22b9cd50bec0b282bb4cf2196ba1b06283cd60485",
+  "pinned_records": [
+    {
+      "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/BOUND_EXECUTION_INDEX.json",
+      "expected": "55537c6411724ab78837d0191d61375654839202acbf15b13a76d98aa8d483e6",
+      "observed": {
+        "committed": "55537c6411724ab78837d0191d61375654839202acbf15b13a76d98aa8d483e6",
+        "export": "55537c6411724ab78837d0191d61375654839202acbf15b13a76d98aa8d483e6",
+        "review": "55537c6411724ab78837d0191d61375654839202acbf15b13a76d98aa8d483e6",
+        "zip": "55537c6411724ab78837d0191d61375654839202acbf15b13a76d98aa8d483e6"
+      },
+      "match": true
+    },
+    {
+      "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/EXECUTION_PROPOSAL.patch",
+      "expected": "afd8f9249854d4e99c385b1e21c459fa297fa5ed5ddcac782d1509747c43faed",
+      "observed": {
+        "committed": "afd8f9249854d4e99c385b1e21c459fa297fa5ed5ddcac782d1509747c43faed",
+        "export": "afd8f9249854d4e99c385b1e21c459fa297fa5ed5ddcac782d1509747c43faed",
+        "review": "afd8f9249854d4e99c385b1e21c459fa297fa5ed5ddcac782d1509747c43faed",
+        "zip": "afd8f9249854d4e99c385b1e21c459fa297fa5ed5ddcac782d1509747c43faed"
+      },
+      "match": true
+    },
+    {
+      "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/DIRECTOR_DECISIONS_V3.md",
+      "expected": "1fa28bc81dedd96f017f9ffc9a69b7a86326917a61093e9aeb9390bcfbe300a4",
+      "observed": {
+        "committed": "1fa28bc81dedd96f017f9ffc9a69b7a86326917a61093e9aeb9390bcfbe300a4",
+        "export": "1fa28bc81dedd96f017f9ffc9a69b7a86326917a61093e9aeb9390bcfbe300a4",
+        "review": "1fa28bc81dedd96f017f9ffc9a69b7a86326917a61093e9aeb9390bcfbe300a4",
+        "zip": "1fa28bc81dedd96f017f9ffc9a69b7a86326917a61093e9aeb9390bcfbe300a4"
+      },
+      "match": true
+    },
+    {
+      "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/DOCSET_SYNC_ACCEPTANCE_SPEC_AMENDED_V1_R1.md",
+      "expected": "2a3867cacef11c6bb0419a4c71229479efe703cee9fbcc1e4f71c0ac8e63f0fc",
+      "observed": {
+        "committed": "2a3867cacef11c6bb0419a4c71229479efe703cee9fbcc1e4f71c0ac8e63f0fc",
+        "export": "2a3867cacef11c6bb0419a4c71229479efe703cee9fbcc1e4f71c0ac8e63f0fc",
+        "review": "2a3867cacef11c6bb0419a4c71229479efe703cee9fbcc1e4f71c0ac8e63f0fc"
+      },
+      "match": true
+    }
+  ],
+  "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+  "authority_chain": [
+    {
+      "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/RETEST_AMENDED_V3/QA_EXECUTOR_PROMPT.md",
+      "sha256": "66bd5e14dab3f93c0858c9b2e799d00c5f47f0f36dcbfdd505613e4843eb6880",
+      "read_from": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/RETEST_AMENDED_V3/QA_EXECUTOR_PROMPT.md",
+      "present_at_parent": false,
+      "present_at_candidate": false
+    },
+    {
+      "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/RETEST_AMENDED_V2/QA_LEAD_VERDICT_V2.md",
+      "sha256": "dac1f1d824b4af5d599504f77839ece3cd875b03bfff3e740d23d366b6d5f7c4",
+      "read_from": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/RETEST_AMENDED_V2/QA_LEAD_VERDICT_V2.md",
+      "present_at_parent": false,
+      "present_at_candidate": false
+    },
+    {
+      "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/RETEST_AMENDED_V2/JARVIS_REPAIR_RECOMMENDATION.md",
+      "sha256": "7be1e073ea4432794b14b7eca56979fdd15ca35d6f1327e98bf6550dbbe1be19",
+      "read_from": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/RETEST_AMENDED_V2/JARVIS_REPAIR_RECOMMENDATION.md",
+      "present_at_parent": false,
+      "present_at_candidate": false
+    },
+    {
+      "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/QA_LEAD_VERDICT.md",
+      "sha256": "16866d367251435266668cf5d9543cceb7affc818273ca333ca7a77319d583b5",
+      "read_from": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/QA_LEAD_VERDICT.md",
+      "present_at_parent": false,
+      "present_at_candidate": false
+    },
+    {
+      "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/OVERRIDES_AND_ALIGNMENT.md",
+      "sha256": "cfd886239d60ab221bc0625ef4337b2a9ffa9d4aa67a76ddb8ffbe33e76722b1",
+      "read_from": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/OVERRIDES_AND_ALIGNMENT.md",
+      "present_at_parent": false,
+      "present_at_candidate": false
+    },
+    {
+      "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/DIRECTOR_DECISIONS.md",
+      "sha256": "a7629a69da28b94e9d638e22bd4a5ff1328fd17d52596c27434ea52c6963e436",
+      "read_from": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/DIRECTOR_DECISIONS.md",
+      "present_at_parent": true,
+      "present_at_candidate": true
+    },
+    {
+      "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/GIT_AUTHORIZATION_2026-10-18.md",
+      "sha256": "8c88e8192663ef32773e66d80f67aa805ab61bb528366f45057eebec0f962f1d",
+      "read_from": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/GIT_AUTHORIZATION_2026-10-18.md",
+      "present_at_parent": true,
+      "present_at_candidate": true
+    },
+    {
+      "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE3_EXECUTION/DIRECTOR_RELEASE.md",
+      "sha256": "ca9af3517b97a97d97a5996f6baf1044d95d2a7364fff050c0d76218848008b7",
+      "read_from": "/tmp/qa-amended-v3-krds1x3r/candidate/_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE3_EXECUTION/DIRECTOR_RELEASE.md",
+      "present_at_parent": true,
+      "present_at_candidate": true
+    },
+    {
+      "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/REPAIR_QA_P4/DIRECTOR_DECISIONS_V2.md",
+      "sha256": "e34922ddb3177930e8ade6e56dae65883c31878f09c2493715df952724d59fef",
+      "read_from": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/REPAIR_QA_P4/DIRECTOR_DECISIONS_V2.md",
+      "present_at_parent": true,
+      "present_at_candidate": true
+    }
+  ],
+  "precedence": "Frozen spec + Director rulings + preserved Fable verdicts; attributable AMENDED-v3 Gate 2; bounded assignment. Engineering results are hypotheses only."
+}

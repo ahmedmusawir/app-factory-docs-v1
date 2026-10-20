@@ -1,0 +1,20 @@
+{
+ "seat": "Fable, QA Lead",
+ "issued": "2026-10-19T19:30:51+06:00",
+ "candidate": "8dff354937bc7baf739370a9886497d9d5359186",
+ "verdict": "FAIL (R4/AC16/FC-066 only; 11 PASS preserved)",
+ "finding": "RV2-F01 CONFIRMED, narrowed; repair = AMENDED-v3 labels on APP_ARCHITECTURE_MANUAL.md + STATE_MANAGEMENT_MANUAL.md + CHANGELOG rows",
+ "executor_zip": "/home/moose/Downloads/QA_AMENDED_V2_EXECUTOR_8dff354_2026-10-19.zip",
+ "executor_zip_sha256": "907f8dabce8336955a936d953c0f4a20b08d703a2e5c801fe3d7bcfbc4ac4842",
+ "files": {
+  "verdict": "QA_PHASE4/RETEST_AMENDED_V2/QA_LEAD_VERDICT_V2.md",
+  "verdict_sha256": "dac1f1d824b4af5d599504f77839ece3cd875b03bfff3e740d23d366b6d5f7c4",
+  "repair_recommendation": "QA_PHASE4/RETEST_AMENDED_V2/JARVIS_REPAIR_RECOMMENDATION.md",
+  "repair_sha256": "7be1e073ea4432794b14b7eca56979fdd15ca35d6f1327e98bf6550dbbe1be19",
+  "evidence": "QA_PHASE4/RETEST_AMENDED_V2/RV2_ADJUDICATION_EVIDENCE.json",
+  "evidence_sha256": "a83235ff61b6272a86a81105104b80a5897a105ebf394c48524a2243a0a9c142"
+ },
+ "handback_zip": "/home/moose/Downloads/FACTORY_QA_AMENDED_V2_VERDICT_HANDBACK_2026-10-19_193051.zip",
+ "constraints": "no product edits, no Git mutation, 12 transitions pending, prior approvals/verdict preserved",
+ "note": "ZIP SHA-256 is recorded outside the ZIP (session log, RECOVERY.md, QA_PHASE4/README.md, RESPONSES file)"
+}

@@ -1,0 +1,26 @@
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:501:Independent rendering illustration: the `fetchProducts()` used in this section returns `Promise<Product[]>` and is not the API manual §3 typed-outcome service; a project implementing the §3 contract narrows `status === 'success'` and passes `items` to the list.
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:507:import { fetchProducts } from '@/services/productServices';
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:512:  const products = await fetchProducts();
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:615:  const products = await fetchProducts();
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:631:import { fetchProductBySlug } from '@/services/productServices';
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:241:| Fetch/Load | `fetch`, `load` | `fetchProducts`, `loadMore` |
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:801:  fetchProducts: async () => {
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:809:// src/services/productServices.ts — independent store/service-separation illustration
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:810:// this local fetchProducts() returns the route's raw JSON array; it is not the API manual §3 typed-outcome service
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:811:export const fetchProducts = async () => {
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:827:    fetchProducts().then(setProducts);
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:866:Server Components cannot use hooks, but they can pass initial data to Client Components: This illustration's `fetchProducts()` returns `Promise<Product[]>` (hence `initialProducts: Product[]`) and is not the API manual §3 typed-outcome service; under that contract, narrow `status === 'success'` and pass `outcome.items`.
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:870:import { fetchProducts } from '@/services/productServices';
+04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md:874:  const products = await fetchProducts();
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:183:| Read multiple | `fetch{Resources}` or `fetchAll{Resources}` | `fetchProducts()`, `fetchAllProductSlugs()` |
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:582:// src/services/productServices.ts
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:613:// Independent normalization-step example: fetchProducts() returns Promise<Product[]>.
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:615:export const fetchProducts = async (): Promise<Product[]> => {
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:787:This caller uses the §3 typed-outcome contract: `fetchProducts()` returns a discriminated outcome with `status` equal to `success`, `not-found`, `unavailable`, `invalid` or `forbidden`; only `success` carries `items: Product[]`. This example assumes a project-approved public-catalog failure policy permitting the generic empty-state UI on non-success; this is not an entitlement decision or a cached successful result. It does not call the independent array-returning normalization example.
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:792:import { fetchProducts } from '@/services/productServices';
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:797:  const outcome = await fetchProducts();
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:858:Independent ISR example: this `fetchProducts()` returns the endpoint’s raw JSON payload, with no normalization or typed-outcome envelope; it is not the §3 service or the caller above. The project must declare and validate that endpoint’s wire contract and failure/cache policy before implementation; this example only illustrates the revalidation option.
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:862:export const fetchProducts = async () => {
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:946:export const fetchProductsByIds = async (ids: number[]): Promise<Product[]> => {
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:985:| Service Layer | All external API calls | `fetchProducts()` |
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:1179:| Service Layer | All external API calls | `fetchProducts()` |

@@ -1,0 +1,838 @@
+[
+  {
+    "fc": "FC-001",
+    "status": "CARRIED",
+    "basis": "whole-document byte-identity carry",
+    "documents": [
+      {
+        "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+        "whole_file_equal": true,
+        "parent_sha256": "e9b2b24cbd734b846ccf5215e235474f1aa097bd8be01d7f2d360094a59ee6d9",
+        "candidate_sha256": "e9b2b24cbd734b846ccf5215e235474f1aa097bd8be01d7f2d360094a59ee6d9"
+      },
+      {
+        "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+        "whole_file_equal": true,
+        "parent_sha256": "e1613573a8d56073033a96ee803968feff1ab5f18e82ab3c329e64dd920c6bb1",
+        "candidate_sha256": "e1613573a8d56073033a96ee803968feff1ab5f18e82ab3c329e64dd920c6bb1"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+        "whole_file_equal": true,
+        "parent_sha256": "3fab83a09b26afd82038676c15654b758243b107023310dc2f3a5317f0d87b4c",
+        "candidate_sha256": "3fab83a09b26afd82038676c15654b758243b107023310dc2f3a5317f0d87b4c"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "3e028ece38102a7d3d9bf375afb1acb3766a1a28743626aea0b54ba9ce2503f3",
+        "candidate_sha256": "3e028ece38102a7d3d9bf375afb1acb3766a1a28743626aea0b54ba9ce2503f3"
+      }
+    ],
+    "changed_document_sections": [],
+    "prior_rationale": "Kit auth is consumed, not rebuilt; SFP and kit guard text restrict generic examples. No amendment adds an auth construction path.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-022",
+    "status": "CARRIED",
+    "basis": "whole-document byte-identity carry",
+    "documents": [
+      {
+        "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+        "whole_file_equal": true,
+        "parent_sha256": "5b736786a6f6cdced703281cfada79af6c5b1c4f959f4b75615ca3a0c93971f7",
+        "candidate_sha256": "5b736786a6f6cdced703281cfada79af6c5b1c4f959f4b75615ca3a0c93971f7"
+      }
+    ],
+    "changed_document_sections": [],
+    "prior_rationale": "Both seeding/admin-client fences removed; setup and construction require approved test-project allowlist AND authorized identity, failing closed. Preserved prose describes test intent under that guard, not runnable unguarded setup.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-030",
+    "status": "CARRIED",
+    "basis": "whole-document byte-identity carry",
+    "documents": [
+      {
+        "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+        "whole_file_equal": true,
+        "parent_sha256": "5b736786a6f6cdced703281cfada79af6c5b1c4f959f4b75615ca3a0c93971f7",
+        "candidate_sha256": "5b736786a6f6cdced703281cfada79af6c5b1c4f959f4b75615ca3a0c93971f7"
+      }
+    ],
+    "changed_document_sections": [],
+    "prior_rationale": "Fixture producer and consumer use one count field; missing required role is BLOCKED. Its complete section is unchanged except shifted lines.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-033",
+    "status": "PASS",
+    "basis": "byte-identity carry plus independent read of exact sections in changed documents",
+    "documents": [
+      {
+        "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+        "whole_file_equal": true,
+        "parent_sha256": "e9b2b24cbd734b846ccf5215e235474f1aa097bd8be01d7f2d360094a59ee6d9",
+        "candidate_sha256": "e9b2b24cbd734b846ccf5215e235474f1aa097bd8be01d7f2d360094a59ee6d9"
+      },
+      {
+        "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+        "whole_file_equal": true,
+        "parent_sha256": "e1613573a8d56073033a96ee803968feff1ab5f18e82ab3c329e64dd920c6bb1",
+        "candidate_sha256": "e1613573a8d56073033a96ee803968feff1ab5f18e82ab3c329e64dd920c6bb1"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+        "whole_file_equal": true,
+        "parent_sha256": "3fab83a09b26afd82038676c15654b758243b107023310dc2f3a5317f0d87b4c",
+        "candidate_sha256": "3fab83a09b26afd82038676c15654b758243b107023310dc2f3a5317f0d87b4c"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+        "whole_file_equal": false,
+        "parent_sha256": "d4e843586b86495d6702810d523996a5dac686edd3ae9974c57a17bb2d5fc84d",
+        "candidate_sha256": "f178d51346c252baf75a3e0d6c558da411986e74b634ac64b4fa9fe6b2d50291"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "3e028ece38102a7d3d9bf375afb1acb3766a1a28743626aea0b54ba9ce2503f3",
+        "candidate_sha256": "3e028ece38102a7d3d9bf375afb1acb3766a1a28743626aea0b54ba9ce2503f3"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "1eee0154b965948156b8ef169beb10985e668819ddbce833f6c4d3f432a84771",
+        "candidate_sha256": "1eee0154b965948156b8ef169beb10985e668819ddbce833f6c4d3f432a84771"
+      }
+    ],
+    "changed_document_sections": [
+      {
+        "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+        "parent_lines": [
+          1009,
+          1020
+        ],
+        "candidate_start": 1012,
+        "parent_section_sha256": "7e0cf31d5243b9768bd03001accc5c3f3abe4dedaae6657d312c0f215a17f026",
+        "exact_occurrences_candidate": 1
+      }
+    ],
+    "prior_rationale": "Role authority remains server table; metadata-authorized privileged routes withdrawn. Current-role and operation-local authorization required.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-034",
+    "status": "CARRIED",
+    "basis": "whole-document byte-identity carry",
+    "documents": [
+      {
+        "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+        "whole_file_equal": true,
+        "parent_sha256": "e1613573a8d56073033a96ee803968feff1ab5f18e82ab3c329e64dd920c6bb1",
+        "candidate_sha256": "e1613573a8d56073033a96ee803968feff1ab5f18e82ab3c329e64dd920c6bb1"
+      },
+      {
+        "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+        "whole_file_equal": true,
+        "parent_sha256": "3fab83a09b26afd82038676c15654b758243b107023310dc2f3a5317f0d87b4c",
+        "candidate_sha256": "3fab83a09b26afd82038676c15654b758243b107023310dc2f3a5317f0d87b4c"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "3e028ece38102a7d3d9bf375afb1acb3766a1a28743626aea0b54ba9ce2503f3",
+        "candidate_sha256": "3e028ece38102a7d3d9bf375afb1acb3766a1a28743626aea0b54ba9ce2503f3"
+      }
+    ],
+    "changed_document_sections": [],
+    "prior_rationale": "Public signup forces member and provider path rejects elevated public role keys; protected channel is separate.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-035",
+    "status": "PASS",
+    "basis": "byte-identity carry plus independent read of exact sections in changed documents",
+    "documents": [
+      {
+        "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+        "whole_file_equal": false,
+        "parent_sha256": "d4e843586b86495d6702810d523996a5dac686edd3ae9974c57a17bb2d5fc84d",
+        "candidate_sha256": "f178d51346c252baf75a3e0d6c558da411986e74b634ac64b4fa9fe6b2d50291"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "3e028ece38102a7d3d9bf375afb1acb3766a1a28743626aea0b54ba9ce2503f3",
+        "candidate_sha256": "3e028ece38102a7d3d9bf375afb1acb3766a1a28743626aea0b54ba9ce2503f3"
+      }
+    ],
+    "changed_document_sections": [
+      {
+        "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+        "parent_lines": [
+          452,
+          457
+        ],
+        "candidate_start": 452,
+        "parent_section_sha256": "eb5b9d0b01535280bdd82177236616991fbfffd52a94cd7a993f2f387bd4aec5",
+        "exact_occurrences_candidate": 1
+      }
+    ],
+    "prior_rationale": "Server guard/first-render identity rule preserved; client HOC and post-mount identity recipes remain withdrawn.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-038",
+    "status": "CARRIED",
+    "basis": "whole-document byte-identity carry",
+    "documents": [
+      {
+        "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+        "whole_file_equal": true,
+        "parent_sha256": "e1613573a8d56073033a96ee803968feff1ab5f18e82ab3c329e64dd920c6bb1",
+        "candidate_sha256": "e1613573a8d56073033a96ee803968feff1ab5f18e82ab3c329e64dd920c6bb1"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "3e028ece38102a7d3d9bf375afb1acb3766a1a28743626aea0b54ba9ce2503f3",
+        "candidate_sha256": "3e028ece38102a7d3d9bf375afb1acb3766a1a28743626aea0b54ba9ce2503f3"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "1eee0154b965948156b8ef169beb10985e668819ddbce833f6c4d3f432a84771",
+        "candidate_sha256": "1eee0154b965948156b8ef169beb10985e668819ddbce833f6c4d3f432a84771"
+      }
+    ],
+    "changed_document_sections": [],
+    "prior_rationale": "DATABASE bypass section now conditions BOTH construction comments and background/admin operations on independent elevated-operation authorization; AUTH rejects default API-route bypass.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-039",
+    "status": "CARRIED",
+    "basis": "whole-document byte-identity carry",
+    "documents": [
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "3e028ece38102a7d3d9bf375afb1acb3766a1a28743626aea0b54ba9ce2503f3",
+        "candidate_sha256": "3e028ece38102a7d3d9bf375afb1acb3766a1a28743626aea0b54ba9ce2503f3"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "1eee0154b965948156b8ef169beb10985e668819ddbce833f6c4d3f432a84771",
+        "candidate_sha256": "1eee0154b965948156b8ef169beb10985e668819ddbce833f6c4d3f432a84771"
+      }
+    ],
+    "changed_document_sections": [],
+    "prior_rationale": "Role resolver authority separate from profile mirrors; metadata never grants privilege. No revised executable surface reintroduces it.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-041",
+    "status": "PASS",
+    "basis": "byte-identity carry plus independent read of exact sections in changed documents",
+    "documents": [
+      {
+        "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+        "whole_file_equal": false,
+        "parent_sha256": "d4e843586b86495d6702810d523996a5dac686edd3ae9974c57a17bb2d5fc84d",
+        "candidate_sha256": "f178d51346c252baf75a3e0d6c558da411986e74b634ac64b4fa9fe6b2d50291"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "3e028ece38102a7d3d9bf375afb1acb3766a1a28743626aea0b54ba9ce2503f3",
+        "candidate_sha256": "3e028ece38102a7d3d9bf375afb1acb3766a1a28743626aea0b54ba9ce2503f3"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "2b7f9f8d5b89a43bb63edbb54950bf6dcbee7e67549d6019b1dada5c51d493b4",
+        "candidate_sha256": "2b7f9f8d5b89a43bb63edbb54950bf6dcbee7e67549d6019b1dada5c51d493b4"
+      }
+    ],
+    "changed_document_sections": [
+      {
+        "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+        "parent_lines": [
+          1009,
+          1020
+        ],
+        "candidate_start": 1012,
+        "parent_section_sha256": "7e0cf31d5243b9768bd03001accc5c3f3abe4dedaae6657d312c0f215a17f026",
+        "exact_occurrences_candidate": 1
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+        "parent_lines": [
+          1009,
+          1020
+        ],
+        "candidate_start": 1012,
+        "parent_section_sha256": "7e0cf31d5243b9768bd03001accc5c3f3abe4dedaae6657d312c0f215a17f026",
+        "exact_occurrences_candidate": 1
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+        "parent_lines": [
+          1009,
+          1020
+        ],
+        "candidate_start": 1012,
+        "parent_section_sha256": "7e0cf31d5243b9768bd03001accc5c3f3abe4dedaae6657d312c0f215a17f026",
+        "exact_occurrences_candidate": 1
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+        "parent_lines": [
+          1009,
+          1020
+        ],
+        "candidate_start": 1012,
+        "parent_section_sha256": "7e0cf31d5243b9768bd03001accc5c3f3abe4dedaae6657d312c0f215a17f026",
+        "exact_occurrences_candidate": 1
+      }
+    ],
+    "prior_rationale": "Kit signatures and role transport explicitly require pinned evidence; replacement remains open and no guessed executable kit guard is introduced.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-042",
+    "status": "PASS",
+    "basis": "byte-identity carry plus independent read of exact sections in changed documents",
+    "documents": [
+      {
+        "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+        "whole_file_equal": true,
+        "parent_sha256": "e1613573a8d56073033a96ee803968feff1ab5f18e82ab3c329e64dd920c6bb1",
+        "candidate_sha256": "e1613573a8d56073033a96ee803968feff1ab5f18e82ab3c329e64dd920c6bb1"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+        "whole_file_equal": false,
+        "parent_sha256": "d4e843586b86495d6702810d523996a5dac686edd3ae9974c57a17bb2d5fc84d",
+        "candidate_sha256": "f178d51346c252baf75a3e0d6c558da411986e74b634ac64b4fa9fe6b2d50291"
+      }
+    ],
+    "changed_document_sections": [
+      {
+        "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+        "parent_lines": [
+          1052,
+          1061
+        ],
+        "candidate_start": 1055,
+        "parent_section_sha256": "256ec1f10cc448ac8004e7ba041c4c72ac79139214f4169924b492ae8ef1822f",
+        "exact_occurrences_candidate": 1
+      }
+    ],
+    "prior_rationale": "Cookie architecture requires verified kit; HTTPS/Secure preserved without unverified universal HttpOnly claims.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-045",
+    "status": "CARRIED",
+    "basis": "whole-document byte-identity carry",
+    "documents": [
+      {
+        "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "1eee0154b965948156b8ef169beb10985e668819ddbce833f6c4d3f432a84771",
+        "candidate_sha256": "1eee0154b965948156b8ef169beb10985e668819ddbce833f6c4d3f432a84771"
+      }
+    ],
+    "changed_document_sections": [],
+    "prior_rationale": "Timestamp-only cursor recipe is withdrawn, including dependent cursor semantics; stable composite ordering is required in preserved context.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-047",
+    "status": "PASS",
+    "basis": "byte-identity carry plus independent read of exact sections in changed documents",
+    "documents": [
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7",
+        "candidate_sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+        "whole_file_equal": false,
+        "parent_sha256": "0f0fe3992a98a9eff3c7378b41b20b7207545330b30879b246139e2a5475a942",
+        "candidate_sha256": "4dc5566589696045c1ae835bf315cfa68db5d30bca78ff9db137efb064cb666b"
+      }
+    ],
+    "changed_document_sections": [
+      {
+        "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+        "parent_lines": [
+          633,
+          640
+        ],
+        "candidate_start": 633,
+        "parent_section_sha256": "b3505e0593b7df3aa26b5a1aaedacb7fefd7dec1eacc81414386de2585ea2165",
+        "exact_occurrences_candidate": 1
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+        "parent_lines": [
+          779,
+          790
+        ],
+        "candidate_start": 779,
+        "parent_section_sha256": "b320872fbc5b654ea8fbcdc9e0b3986fee86699de20c6c3e5816d325964d3766",
+        "exact_occurrences_candidate": 1
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+        "parent_lines": [
+          633,
+          640
+        ],
+        "candidate_start": 633,
+        "parent_section_sha256": "b3505e0593b7df3aa26b5a1aaedacb7fefd7dec1eacc81414386de2585ea2165",
+        "exact_occurrences_candidate": 1
+      }
+    ],
+    "prior_rationale": "Business reset and hydration readiness remain separate; signout/account transition invalidates stores even on remote failure; checkout executable template withdrawn.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-050",
+    "status": "CARRIED",
+    "basis": "whole-document byte-identity carry",
+    "documents": [
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7",
+        "candidate_sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7"
+      }
+    ],
+    "changed_document_sections": [],
+    "prior_rationale": "Payment state is derived from verified server evidence, never caller-selected; no changed commerce code reintroduces browser paid mutation.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-051",
+    "status": "CARRIED",
+    "basis": "whole-document byte-identity carry",
+    "documents": [
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7",
+        "candidate_sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7"
+      }
+    ],
+    "changed_document_sections": [],
+    "prior_rationale": "Non-webhook mutation independently authorizes actor/target and state transition; prior unsafe recipe remains withdrawn.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-052",
+    "status": "CARRIED",
+    "basis": "whole-document byte-identity carry",
+    "documents": [
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7",
+        "candidate_sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+        "whole_file_equal": true,
+        "parent_sha256": "01633da70da2d4cb863a2c883c1c2e7194abd602cf422fbb1bb52ae2b2ac43ab",
+        "candidate_sha256": "01633da70da2d4cb863a2c883c1c2e7194abd602cf422fbb1bb52ae2b2ac43ab"
+      }
+    ],
+    "changed_document_sections": [],
+    "prior_rationale": "Ordering/reconciliation distinct from inbound deduplication; late old-subscription event cannot overwrite replacement.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-053",
+    "status": "CARRIED",
+    "basis": "whole-document byte-identity carry",
+    "documents": [
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7",
+        "candidate_sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+        "whole_file_equal": true,
+        "parent_sha256": "01633da70da2d4cb863a2c883c1c2e7194abd602cf422fbb1bb52ae2b2ac43ab",
+        "candidate_sha256": "01633da70da2d4cb863a2c883c1c2e7194abd602cf422fbb1bb52ae2b2ac43ab"
+      }
+    ],
+    "changed_document_sections": [],
+    "prior_rationale": "Payment evidence bound to stored order/attempt, amount/currency; unsafe executable payment mutation remains withdrawn.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-054",
+    "status": "CARRIED",
+    "basis": "whole-document byte-identity carry",
+    "documents": [
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7",
+        "candidate_sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+        "whole_file_equal": true,
+        "parent_sha256": "01633da70da2d4cb863a2c883c1c2e7194abd602cf422fbb1bb52ae2b2ac43ab",
+        "candidate_sha256": "01633da70da2d4cb863a2c883c1c2e7194abd602cf422fbb1bb52ae2b2ac43ab"
+      }
+    ],
+    "changed_document_sections": [],
+    "prior_rationale": "Mirror convergence and missing mapping repair remain explicit; withdrawn event recipes not reintroduced.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-055",
+    "status": "CARRIED",
+    "basis": "whole-document byte-identity carry",
+    "documents": [
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7",
+        "candidate_sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+        "whole_file_equal": true,
+        "parent_sha256": "01633da70da2d4cb863a2c883c1c2e7194abd602cf422fbb1bb52ae2b2ac43ab",
+        "candidate_sha256": "01633da70da2d4cb863a2c883c1c2e7194abd602cf422fbb1bb52ae2b2ac43ab"
+      }
+    ],
+    "changed_document_sections": [],
+    "prior_rationale": "Subscription schema/customer/bootstrap remains deferred under approved project schema; owner reads/server writes preserved.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-056",
+    "status": "CARRIED",
+    "basis": "whole-document byte-identity carry",
+    "documents": [
+      {
+        "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "0070295f53b3e924d58b473e885072f902f45373530fa91def6667ca220ef80c",
+        "candidate_sha256": "0070295f53b3e924d58b473e885072f902f45373530fa91def6667ca220ef80c"
+      }
+    ],
+    "changed_document_sections": [],
+    "prior_rationale": "Stable provider event ID, atomic claim and recoverable states required; no random fallback recipe remains introduced.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-057",
+    "status": "CARRIED",
+    "basis": "whole-document byte-identity carry",
+    "documents": [
+      {
+        "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "0070295f53b3e924d58b473e885072f902f45373530fa91def6667ca220ef80c",
+        "candidate_sha256": "0070295f53b3e924d58b473e885072f902f45373530fa91def6667ca220ef80c"
+      }
+    ],
+    "changed_document_sections": [],
+    "prior_rationale": "Unsafe webhook executable recipe withdrawn; pre-acceptance failure and post-acceptance recovery distinguished in surrounding invariant.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-058",
+    "status": "CARRIED",
+    "basis": "whole-document byte-identity carry",
+    "documents": [
+      {
+        "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "0070295f53b3e924d58b473e885072f902f45373530fa91def6667ca220ef80c",
+        "candidate_sha256": "0070295f53b3e924d58b473e885072f902f45373530fa91def6667ca220ef80c"
+      }
+    ],
+    "changed_document_sections": [],
+    "prior_rationale": "Raw request body exactly once; provider-specific signature verification before parsing; incompatible schemes not combined.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-059",
+    "status": "CARRIED",
+    "basis": "whole-document byte-identity carry",
+    "documents": [
+      {
+        "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "0070295f53b3e924d58b473e885072f902f45373530fa91def6667ca220ef80c",
+        "candidate_sha256": "0070295f53b3e924d58b473e885072f902f45373530fa91def6667ca220ef80c"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7",
+        "candidate_sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+        "whole_file_equal": true,
+        "parent_sha256": "01633da70da2d4cb863a2c883c1c2e7194abd602cf422fbb1bb52ae2b2ac43ab",
+        "candidate_sha256": "01633da70da2d4cb863a2c883c1c2e7194abd602cf422fbb1bb52ae2b2ac43ab"
+      }
+    ],
+    "changed_document_sections": [],
+    "prior_rationale": "Authoritative retrieval/freshness/legal transitions remain required independently of deduplication.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-060",
+    "status": "CARRIED",
+    "basis": "whole-document byte-identity carry",
+    "documents": [
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7",
+        "candidate_sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7"
+      }
+    ],
+    "changed_document_sections": [],
+    "prior_rationale": "Caller cannot choose payment-derived state; server-side binding and operation authorization preserved.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-062",
+    "status": "CARRIED",
+    "basis": "whole-document byte-identity carry",
+    "documents": [
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7",
+        "candidate_sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7"
+      }
+    ],
+    "changed_document_sections": [],
+    "prior_rationale": "Late/stale/missing-map convergence handled by declared reconciliation; no unsafe recipe restored.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-064",
+    "status": "CARRIED",
+    "basis": "whole-document byte-identity carry",
+    "documents": [
+      {
+        "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "0070295f53b3e924d58b473e885072f902f45373530fa91def6667ca220ef80c",
+        "candidate_sha256": "0070295f53b3e924d58b473e885072f902f45373530fa91def6667ca220ef80c"
+      }
+    ],
+    "changed_document_sections": [],
+    "prior_rationale": "Typed failure outcomes and approved degradation policy preserved. Repaired API caller narrows success before items; no entitlement absence inferred from failure.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-066",
+    "status": "PASS",
+    "basis": "independent semantic read",
+    "rationale": "Four repaired containers have matching explicit alternatives; all propagation hits have (a)–(e) dispositions. The prior API/SFP withdrawal text is byte-identical.",
+    "evidence": [
+      "MANUAL_READS.md",
+      "PROPAGATION.tsv",
+      "RAW/code_preservation.json",
+      "RAW/edit_accounting.json"
+    ],
+    "prior_status": "FAIL",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-067",
+    "status": "CARRIED",
+    "basis": "whole-document byte-identity carry",
+    "documents": [
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7",
+        "candidate_sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7"
+      }
+    ],
+    "changed_document_sections": [],
+    "prior_rationale": "Fixed-product discounts require eligible line quantities and server pricing; flat subtotal recipe remains withdrawn.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-068",
+    "status": "PASS",
+    "basis": "byte-identity carry plus independent read of exact sections in changed documents",
+    "documents": [
+      {
+        "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7",
+        "candidate_sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+        "whole_file_equal": false,
+        "parent_sha256": "0f0fe3992a98a9eff3c7378b41b20b7207545330b30879b246139e2a5475a942",
+        "candidate_sha256": "4dc5566589696045c1ae835bf315cfa68db5d30bca78ff9db137efb064cb666b"
+      }
+    ],
+    "changed_document_sections": [
+      {
+        "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+        "parent_lines": [
+          779,
+          790
+        ],
+        "candidate_start": 779,
+        "parent_section_sha256": "b320872fbc5b654ea8fbcdc9e0b3986fee86699de20c6c3e5816d325964d3766",
+        "exact_occurrences_candidate": 1
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+        "parent_lines": [
+          633,
+          640
+        ],
+        "candidate_start": 633,
+        "parent_section_sha256": "b3505e0593b7df3aa26b5a1aaedacb7fefd7dec1eacc81414386de2585ea2165",
+        "exact_occurrences_candidate": 1
+      }
+    ],
+    "prior_rationale": "Server loads prices and validates quantities/shipping/coupon/tax; client totals are display only. Quote-storage design remains deferred, not falsely closed.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-071",
+    "status": "PASS",
+    "basis": "byte-identity carry plus independent read of exact sections in changed documents",
+    "documents": [
+      {
+        "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+        "whole_file_equal": true,
+        "parent_sha256": "0e492b78185ecc152bf50e4cc603329d8328efc565aaa92fc0accbc2fb8f16f2",
+        "candidate_sha256": "0e492b78185ecc152bf50e4cc603329d8328efc565aaa92fc0accbc2fb8f16f2"
+      },
+      {
+        "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+        "whole_file_equal": false,
+        "parent_sha256": "d4e843586b86495d6702810d523996a5dac686edd3ae9974c57a17bb2d5fc84d",
+        "candidate_sha256": "f178d51346c252baf75a3e0d6c558da411986e74b634ac64b4fa9fe6b2d50291"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "2b7f9f8d5b89a43bb63edbb54950bf6dcbee7e67549d6019b1dada5c51d493b4",
+        "candidate_sha256": "2b7f9f8d5b89a43bb63edbb54950bf6dcbee7e67549d6019b1dada5c51d493b4"
+      }
+    ],
+    "changed_document_sections": [
+      {
+        "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+        "parent_lines": [
+          452,
+          457
+        ],
+        "candidate_start": 452,
+        "parent_section_sha256": "eb5b9d0b01535280bdd82177236616991fbfffd52a94cd7a993f2f387bd4aec5",
+        "exact_occurrences_candidate": 1
+      }
+    ],
+    "prior_rationale": "Layout recipe withdrawn; pinned responsive shell verification required; no new breakpoint/shell implementation.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-072",
+    "status": "CARRIED",
+    "basis": "whole-document byte-identity carry",
+    "documents": [
+      {
+        "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+        "whole_file_equal": true,
+        "parent_sha256": "e1613573a8d56073033a96ee803968feff1ab5f18e82ab3c329e64dd920c6bb1",
+        "candidate_sha256": "e1613573a8d56073033a96ee803968feff1ab5f18e82ab3c329e64dd920c6bb1"
+      },
+      {
+        "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+        "whole_file_equal": true,
+        "parent_sha256": "0e492b78185ecc152bf50e4cc603329d8328efc565aaa92fc0accbc2fb8f16f2",
+        "candidate_sha256": "0e492b78185ecc152bf50e4cc603329d8328efc565aaa92fc0accbc2fb8f16f2"
+      },
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "2b7f9f8d5b89a43bb63edbb54950bf6dcbee7e67549d6019b1dada5c51d493b4",
+        "candidate_sha256": "2b7f9f8d5b89a43bb63edbb54950bf6dcbee7e67549d6019b1dada5c51d493b4"
+      }
+    ],
+    "changed_document_sections": [],
+    "prior_rationale": "Shell/rail/drawer authority and viewport behavior preserved; no kit-root change or duplicate shell introduced.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  },
+  {
+    "fc": "FC-076",
+    "status": "CARRIED",
+    "basis": "whole-document byte-identity carry",
+    "documents": [
+      {
+        "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+        "whole_file_equal": true,
+        "parent_sha256": "2b7f9f8d5b89a43bb63edbb54950bf6dcbee7e67549d6019b1dada5c51d493b4",
+        "candidate_sha256": "2b7f9f8d5b89a43bb63edbb54950bf6dcbee7e67549d6019b1dada5c51d493b4"
+      }
+    ],
+    "changed_document_sections": [],
+    "prior_rationale": "Shortened Button installation recipe withdrawn; consume verified kit variants/asChild and preserve Link composition.",
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38",
+    "finding_ids": []
+  }
+]

@@ -1,0 +1,8 @@
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:867: import { revalidatePath, revalidateTag } from 'next/cache';
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:874:   const expectedSecret = process.env.REVALIDATION_SECRET;
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:880:     revalidatePath(path);
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:884:     revalidateTag(tag);
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:906: revalidateTag(`product-${slug}`);
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:909: revalidateTag('products');
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:970: import { revalidateTag } from 'next/cache';
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:971: revalidateTag('products');

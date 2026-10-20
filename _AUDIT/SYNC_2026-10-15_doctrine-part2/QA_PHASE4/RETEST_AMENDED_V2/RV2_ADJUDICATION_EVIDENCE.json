@@ -1,0 +1,675 @@
+{
+ "generated": "2026-10-19T19:28:34.373119+06:00",
+ "candidate": "8dff354937bc7baf739370a9886497d9d5359186",
+ "parent": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+ "base": "9c179392f79b70da099121fc357d3107ad3bb86e",
+ "remote": [
+  "8dff354937bc7baf739370a9886497d9d5359186\trefs/heads/docs/sync-doctrine-part2-2026-10-15",
+  "9c179392f79b70da099121fc357d3107ad3bb86e\trefs/heads/main"
+ ],
+ "blobs": {
+  "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md": {
+   "base": "e86fbef72ab2f84d032baab22d21c51f3423b48f",
+   "parent": "271b7d9f385b36acaed25be8f6203eb055c8bf6b",
+   "cand": "76cc624c5a598d1c404246336e00e909cb6ce9f7"
+  },
+  "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md": {
+   "base": "5dfe67eb93088b8e7f52f59602734ee05cc327ff",
+   "parent": "d661a82006e700ae4c408009de785263a9a8e7c8",
+   "cand": "d661a82006e700ae4c408009de785263a9a8e7c8"
+  },
+  "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md": {
+   "base": "27b883e21cebce11f3b3e134d8557d82b528a6fe",
+   "parent": "cac8f71f66e5997e4558a12acf305674052e83df",
+   "cand": "cac8f71f66e5997e4558a12acf305674052e83df"
+  }
+ },
+ "hits": {
+  "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md": {
+   "base": [
+    {
+     "line": 173,
+     "text": "// src/services/productServices.ts"
+    },
+    {
+     "line": 184,
+     "text": "export const fetchProducts = async ("
+    },
+    {
+     "line": 259,
+     "text": "| Read multiple | `fetch{Resources}` or `fetchAll{Resources}` | `fetchProducts()`, `fetchAllProductSlugs()` |"
+    },
+    {
+     "line": 391,
+     "text": "import { fetchProducts } from '@/services/productServices';"
+    },
+    {
+     "line": 410,
+     "text": "    const result = await fetchProducts(page, perPage, category);"
+    },
+    {
+     "line": 1012,
+     "text": "// src/services/productServices.ts"
+    },
+    {
+     "line": 1043,
+     "text": "export const fetchProducts = async (): Promise<Product[]> => {"
+    },
+    {
+     "line": 1266,
+     "text": "import { fetchProducts } from '@/services/productServices';"
+    },
+    {
+     "line": 1271,
+     "text": "  const { items: products, error } = await fetchProducts();"
+    },
+    {
+     "line": 1334,
+     "text": "export const fetchProducts = async () => {"
+    },
+    {
+     "line": 1552,
+     "text": "| Service Layer | All external API calls | `fetchProducts()` |"
+    },
+    {
+     "line": 2056,
+     "text": "| Service Layer | All external API calls | `fetchProducts()` |"
+    }
+   ],
+   "parent": [
+    {
+     "line": 183,
+     "text": "| Read multiple | `fetch{Resources}` or `fetchAll{Resources}` | `fetchProducts()`, `fetchAllProductSlugs()` |"
+    },
+    {
+     "line": 582,
+     "text": "// src/services/productServices.ts"
+    },
+    {
+     "line": 613,
+     "text": "export const fetchProducts = async (): Promise<Product[]> => {"
+    },
+    {
+     "line": 788,
+     "text": "import { fetchProducts } from '@/services/productServices';"
+    },
+    {
+     "line": 793,
+     "text": "  const { items: products, error } = await fetchProducts();"
+    },
+    {
+     "line": 856,
+     "text": "export const fetchProducts = async () => {"
+    },
+    {
+     "line": 979,
+     "text": "| Service Layer | All external API calls | `fetchProducts()` |"
+    },
+    {
+     "line": 1173,
+     "text": "| Service Layer | All external API calls | `fetchProducts()` |"
+    }
+   ],
+   "cand": [
+    {
+     "line": 183,
+     "text": "| Read multiple | `fetch{Resources}` or `fetchAll{Resources}` | `fetchProducts()`, `fetchAllProductSlugs()` |"
+    },
+    {
+     "line": 582,
+     "text": "// src/services/productServices.ts"
+    },
+    {
+     "line": 613,
+     "text": "// Independent normalization-step example: fetchProducts() returns Promise<Product[]>."
+    },
+    {
+     "line": 615,
+     "text": "export const fetchProducts = async (): Promise<Product[]> => {"
+    },
+    {
+     "line": 787,
+     "text": "This caller uses the §3 typed-outcome contract: `fetchProducts()` returns a discriminated outcome with `status` equal to `success`, `not-found`, `unavailable`, `invalid` or `forbidden`; only `success` carries `items: Product[]`. This example assumes a project-approved public-catalog failure policy permitting the generic empty-state UI on non-success; this is not an entitlement decision or a cached successful result. It does not call the independent array-returning normalization example."
+    },
+    {
+     "line": 792,
+     "text": "import { fetchProducts } from '@/services/productServices';"
+    },
+    {
+     "line": 797,
+     "text": "  const outcome = await fetchProducts();"
+    },
+    {
+     "line": 858,
+     "text": "Independent ISR example: this `fetchProducts()` returns the endpoint’s raw JSON payload, with no normalization or typed-outcome envelope; it is not the §3 service or the caller above. The project must declare and validate that endpoint’s wire contract and failure/cache policy before implementation; this example only illustrates the revalidation option."
+    },
+    {
+     "line": 862,
+     "text": "export const fetchProducts = async () => {"
+    },
+    {
+     "line": 985,
+     "text": "| Service Layer | All external API calls | `fetchProducts()` |"
+    },
+    {
+     "line": 1179,
+     "text": "| Service Layer | All external API calls | `fetchProducts()` |"
+    }
+   ]
+  },
+  "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md": {
+   "base": [
+    {
+     "line": 533,
+     "text": "import { fetchProducts } from '@/services/productServices';"
+    },
+    {
+     "line": 538,
+     "text": "  const products = await fetchProducts();"
+    },
+    {
+     "line": 640,
+     "text": "  const products = await fetchProducts();"
+    },
+    {
+     "line": 656,
+     "text": "import { fetchProductBySlug } from '@/services/productServices';"
+    },
+    {
+     "line": 896,
+     "text": "// src/services/productServices.ts"
+    },
+    {
+     "line": 901,
+     "text": "export const fetchProducts = async ("
+    }
+   ],
+   "parent": [
+    {
+     "line": 505,
+     "text": "import { fetchProducts } from '@/services/productServices';"
+    },
+    {
+     "line": 510,
+     "text": "  const products = await fetchProducts();"
+    },
+    {
+     "line": 612,
+     "text": "  const products = await fetchProducts();"
+    },
+    {
+     "line": 628,
+     "text": "import { fetchProductBySlug } from '@/services/productServices';"
+    }
+   ],
+   "cand": [
+    {
+     "line": 505,
+     "text": "import { fetchProducts } from '@/services/productServices';"
+    },
+    {
+     "line": 510,
+     "text": "  const products = await fetchProducts();"
+    },
+    {
+     "line": 612,
+     "text": "  const products = await fetchProducts();"
+    },
+    {
+     "line": 628,
+     "text": "import { fetchProductBySlug } from '@/services/productServices';"
+    }
+   ]
+  },
+  "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md": {
+   "base": [
+    {
+     "line": 241,
+     "text": "| Fetch/Load | `fetch`, `load` | `fetchProducts`, `loadMore` |"
+    },
+    {
+     "line": 1094,
+     "text": "  fetchProducts: async () => {"
+    },
+    {
+     "line": 1102,
+     "text": "// src/services/productServices.ts"
+    },
+    {
+     "line": 1103,
+     "text": "export const fetchProducts = async () => {"
+    },
+    {
+     "line": 1119,
+     "text": "    fetchProducts().then(setProducts);"
+    },
+    {
+     "line": 1162,
+     "text": "import { fetchProducts } from '@/services/productServices';"
+    },
+    {
+     "line": 1166,
+     "text": "  const products = await fetchProducts();"
+    }
+   ],
+   "parent": [
+    {
+     "line": 241,
+     "text": "| Fetch/Load | `fetch`, `load` | `fetchProducts`, `loadMore` |"
+    },
+    {
+     "line": 801,
+     "text": "  fetchProducts: async () => {"
+    },
+    {
+     "line": 809,
+     "text": "// src/services/productServices.ts"
+    },
+    {
+     "line": 810,
+     "text": "export const fetchProducts = async () => {"
+    },
+    {
+     "line": 826,
+     "text": "    fetchProducts().then(setProducts);"
+    },
+    {
+     "line": 869,
+     "text": "import { fetchProducts } from '@/services/productServices';"
+    },
+    {
+     "line": 873,
+     "text": "  const products = await fetchProducts();"
+    }
+   ],
+   "cand": [
+    {
+     "line": 241,
+     "text": "| Fetch/Load | `fetch`, `load` | `fetchProducts`, `loadMore` |"
+    },
+    {
+     "line": 801,
+     "text": "  fetchProducts: async () => {"
+    },
+    {
+     "line": 809,
+     "text": "// src/services/productServices.ts"
+    },
+    {
+     "line": 810,
+     "text": "export const fetchProducts = async () => {"
+    },
+    {
+     "line": 826,
+     "text": "    fetchProducts().then(setProducts);"
+    },
+    {
+     "line": 869,
+     "text": "import { fetchProducts } from '@/services/productServices';"
+    },
+    {
+     "line": 873,
+     "text": "  const products = await fetchProducts();"
+    }
+   ]
+  }
+ },
+ "declared_contract": {
+  "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+  "lines": {
+   "172": "Services return an explicit typed outcome: success, not-found, unavailable, invalid or forbidden. Routes map it to the approved HTTP/UI behavior with generic client messages and no upstream error text. Do not cache failures as successful public data. Degrade or fail closed according to the module’s approved failure policy; an unavailable entitlement read is not confirmed absence.",
+   "174": "Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results.",
+   "582": "// src/services/productServices.ts",
+   "787": "This caller uses the §3 typed-outcome contract: `fetchProducts()` returns a discriminated outcome with `status` equal to `success`, `not-found`, `unavailable`, "
+  }
+ },
+ "unlabelled_consumers": {
+  "ARCH_server_component": [
+   {
+    "line": 497,
+    "text": "### Server Components (Default)"
+   },
+   {
+    "line": 498,
+    "text": ""
+   },
+   {
+    "line": 499,
+    "text": "By default, all components in the App Router are Server Components:"
+   },
+   {
+    "line": 500,
+    "text": ""
+   },
+   {
+    "line": 501,
+    "text": "```typescript"
+   },
+   {
+    "line": 502,
+    "text": "// src/app/(public)/shop/page.tsx"
+   },
+   {
+    "line": 503,
+    "text": "// This is a Server Component (no 'use client' directive)"
+   },
+   {
+    "line": 504,
+    "text": ""
+   },
+   {
+    "line": 505,
+    "text": "import { fetchProducts } from '@/services/productServices';"
+   },
+   {
+    "line": 506,
+    "text": "import { ProductList } from '@/components/shop/ProductList';"
+   },
+   {
+    "line": 507,
+    "text": ""
+   },
+   {
+    "line": 508,
+    "text": "export default async function ShopPage() {"
+   },
+   {
+    "line": 509,
+    "text": "  // This runs on the server"
+   },
+   {
+    "line": 510,
+    "text": "  const products = await fetchProducts();"
+   },
+   {
+    "line": 511,
+    "text": "  "
+   },
+   {
+    "line": 512,
+    "text": "  return ("
+   },
+   {
+    "line": 513,
+    "text": "    <div className=\"container mx-auto py-8\">"
+   },
+   {
+    "line": 514,
+    "text": "      <h1 className=\"text-3xl font-bold mb-6\">Shop</h1>"
+   },
+   {
+    "line": 515,
+    "text": "      <ProductList products={products} />"
+   },
+   {
+    "line": 516,
+    "text": "    </div>"
+   },
+   {
+    "line": 517,
+    "text": "  );"
+   },
+   {
+    "line": 518,
+    "text": "}"
+   },
+   {
+    "line": 519,
+    "text": "```"
+   }
+  ],
+  "ARCH_streaming": [
+   {
+    "line": 589,
+    "text": ""
+   },
+   {
+    "line": 590,
+    "text": "```typescript"
+   },
+   {
+    "line": 591,
+    "text": "// src/app/(public)/shop/page.tsx"
+   },
+   {
+    "line": 592,
+    "text": ""
+   },
+   {
+    "line": 593,
+    "text": "import { Suspense } from 'react';"
+   },
+   {
+    "line": 594,
+    "text": "import { ProductList } from '@/components/shop/ProductList';"
+   },
+   {
+    "line": 595,
+    "text": "import { ProductListSkeleton } from '@/components/shop/ProductListSkeleton';"
+   },
+   {
+    "line": 596,
+    "text": ""
+   },
+   {
+    "line": 597,
+    "text": "export default function ShopPage() {"
+   },
+   {
+    "line": 598,
+    "text": "  return ("
+   },
+   {
+    "line": 599,
+    "text": "    <div className=\"container mx-auto py-8\">"
+   },
+   {
+    "line": 600,
+    "text": "      <h1 className=\"text-3xl font-bold mb-6\">Shop</h1>"
+   },
+   {
+    "line": 601,
+    "text": "      "
+   },
+   {
+    "line": 602,
+    "text": "      {/* Stream in product list */}"
+   },
+   {
+    "line": 603,
+    "text": "      <Suspense fallback={<ProductListSkeleton />}>"
+   },
+   {
+    "line": 604,
+    "text": "        <ProductListAsync />"
+   },
+   {
+    "line": 605,
+    "text": "      </Suspense>"
+   },
+   {
+    "line": 606,
+    "text": "    </div>"
+   },
+   {
+    "line": 607,
+    "text": "  );"
+   },
+   {
+    "line": 608,
+    "text": "}"
+   },
+   {
+    "line": 609,
+    "text": ""
+   },
+   {
+    "line": 610,
+    "text": "// Async component that fetches data"
+   },
+   {
+    "line": 611,
+    "text": "async function ProductListAsync() {"
+   },
+   {
+    "line": 612,
+    "text": "  const products = await fetchProducts();"
+   },
+   {
+    "line": 613,
+    "text": "  return <ProductList products={products} />;"
+   },
+   {
+    "line": 614,
+    "text": "}"
+   },
+   {
+    "line": 615,
+    "text": "```"
+   }
+  ],
+  "STATE_store_service_good": [
+   {
+    "line": 808,
+    "text": "// ✅ GOOD: Service handles network, store handles state"
+   },
+   {
+    "line": 809,
+    "text": "// src/services/productServices.ts"
+   },
+   {
+    "line": 810,
+    "text": "export const fetchProducts = async () => {"
+   },
+   {
+    "line": 811,
+    "text": "  const response = await fetch('/api/products');"
+   },
+   {
+    "line": 812,
+    "text": "  return response.json();"
+   },
+   {
+    "line": 813,
+    "text": "};"
+   }
+  ],
+  "STATE_store_server_components": [
+   {
+    "line": 863,
+    "text": "### Store + Server Components"
+   },
+   {
+    "line": 864,
+    "text": ""
+   },
+   {
+    "line": 865,
+    "text": "Server Components cannot use hooks, but they can pass initial data to Client Components:"
+   },
+   {
+    "line": 866,
+    "text": ""
+   },
+   {
+    "line": 867,
+    "text": "```typescript"
+   },
+   {
+    "line": 868,
+    "text": "// src/app/(public)/shop/page.tsx (Server Component)"
+   },
+   {
+    "line": 869,
+    "text": "import { fetchProducts } from '@/services/productServices';"
+   },
+   {
+    "line": 870,
+    "text": "import { ProductList } from '@/components/shop/ProductList';"
+   },
+   {
+    "line": 871,
+    "text": ""
+   },
+   {
+    "line": 872,
+    "text": "export default async function ShopPage() {"
+   },
+   {
+    "line": 873,
+    "text": "  const products = await fetchProducts();"
+   },
+   {
+    "line": 874,
+    "text": "  "
+   },
+   {
+    "line": 875,
+    "text": "  // Pass server data to client component"
+   },
+   {
+    "line": 876,
+    "text": "  return <ProductList initialProducts={products} />;"
+   },
+   {
+    "line": 877,
+    "text": "}"
+   },
+   {
+    "line": 878,
+    "text": ""
+   },
+   {
+    "line": 879,
+    "text": "// src/components/shop/ProductList.tsx (Client Component)"
+   },
+   {
+    "line": 880,
+    "text": "'use client';"
+   },
+   {
+    "line": 881,
+    "text": ""
+   },
+   {
+    "line": 882,
+    "text": "import { useEffect } from 'react';"
+   },
+   {
+    "line": 883,
+    "text": "import { useProductStore, selectProducts } from '@/store/useProductStore';"
+   },
+   {
+    "line": 884,
+    "text": ""
+   },
+   {
+    "line": 885,
+    "text": "interface Props {"
+   },
+   {
+    "line": 886,
+    "text": "  initialProducts: Product[];"
+   },
+   {
+    "line": 887,
+    "text": "}"
+   },
+   {
+    "line": 888,
+    "text": ""
+   },
+   {
+    "line": 889,
+    "text": "export const ProductList = ({ initialProducts }: Props) => {"
+   }
+  ]
+ },
+ "prior_dispositions": {
+  "gate2_PROPAGATION_tsv": "FC-066 rows for APP_ARCHITECTURE 533/538/640 and STATE 1094/1103/1119/1162/1166 (BASE numbering): CONSISTENT, note '§F; final review required'",
+  "phase4_executor_F04": "API_AND_SERVICES_MANUAL only (613/793/856)",
+  "phase4_qa_lead_F04c_repair_anchor": "API_AND_SERVICES_MANUAL.md:613, 793, 856 — 'make every fetchProducts occurrence match one declared contract or carry an explicit alternative label'",
+  "amended_v2_PROPAGATION_tsv": "ARCH 505/510/612 and STATE 241/801/810/826/869/873: RETAIN — 'outside the three named API-manual F04c sites; not asserted to implement the API typed service'",
+  "director_decisions_v2": "approves exact AMENDED-v2 seven-path scope; 'authorizes engineering execution, not independent QA acceptance'"
+ }
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "path": "_ARCHIVE/FRONTEND_BUILD_PHASE_PLAYBOOK_v1_2_2.md",
+    "expected_sha256": "362609b6551bd585c5f3c57ce5b751285871335d154ad2a8c97ca62b28a20702",
+    "actual_sha256": "731454ea6e8893ec9754f74c5b55f7fac5fa50335440e5ebdac3b631493282fe",
+    "expected_bytes": 23578,
+    "actual_bytes": 23592,
+    "diff": "--- expected\n+++ patch-output\n@@ -580,4 +580,4 @@\n \n ### END OF DOCUMENT\n \n-\ud83e\udd44 *Part of Stark Industries \u2014 App Factory doctrine.*+\ud83e\udd44 *Part of Stark Industries \u2014 App Factory doctrine.*--- /dev/null\n"
+  },
+  {
+    "path": "_ARCHIVE/FRONTEND_FIRST_PLAYBOOK_v1_1_3.md",
+    "expected_sha256": "2516dcbd50f525328db955592c6c14eafa971c02d4dec722130a87505248a422",
+    "actual_sha256": "76ae7dc8984abdd70ef02333c6a2e36aef010300647a5e78165b32e8800d3c53",
+    "expected_bytes": 15043,
+    "actual_bytes": 15057,
+    "diff": "--- expected\n+++ patch-output\n@@ -444,4 +444,4 @@\n \n ---\n \n-\ud83e\udd44 *Part of Stark Industries \u2014 App Factory doctrine.*+\ud83e\udd44 *Part of Stark Industries \u2014 App Factory doctrine.*--- /dev/null\n"
+  }
+]

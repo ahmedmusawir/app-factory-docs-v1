@@ -1,0 +1,34 @@
+02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md:192: | **Deployment** | Cloud (Vercel, Cloud Run) | Cloud (Cloud Run, Lambda) | User's machine |
+02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md:491: - Hosting: Cloud Run
+02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md:521: | Environment | Runs on Cloud Run, monitored via Slack |
+02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md:530: - Hosting: Cloud Run Jobs
+02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md:591: | Cloud Run | 15min timeout | Long jobs need different approach |
+02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md:625: - Works locally, in CI, and in Cloud Run
+02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md:630: > If it works with ADC locally, it will work in Cloud Run.
+02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md:648: | Cloud Run | Attached Service Account (automatic) |
+02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md:948: **Platform:** [Cloud Run / Vercel / Local]
+02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md:1002: - Deployment pipeline (Vercel/Cloud Run)
+02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md:1417: DEPLOYMENT TARGET: [Cloud Run / Vercel / Local]
+03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md:68: - **Cloud Run deployment** — agent generates files, walks operator through running them
+03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md:165: Example phrasing: *"You are operating as the Cloud Deployment Agent for the Stark Industries App Factory. Your mission: walk the operator through deploying a Next.js application to Google Cloud Run with verified IAM, secret mapping, and SSL provisioning."*
+03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md:468:   Walk through deploying a Next.js app to Cloud Run step by step.
+03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md:470:   ship it", "push to cloud run". This is Part 2 of a 2-skill family —
+03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md:632: > Agent: "IAM verification is core doctrine — it prevents the most common Cloud Run failure mode (build succeeds, deploy succeeds, runtime errors on missing secret access). Skipping it means we may deploy a service that 500s on first request. Confirm explicitly that you want to skip, otherwise I'll run the verification as standard."
+03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md:837: - Demonstrates `references/` usage for content too large for SKILL.md (TEMPLATES.md holds canonical Dockerfile, cloudbuild.yaml, deploy.sh templates)
+03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md:151: - “Occurs only on Cloud Run, not localhost.”
+03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md:242: - Cloud Run configuration,
+03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md:433: - Cloud Run and Supabase connectivity,
+03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md:720: Testing a URL without proving which commit or Cloud Run revision is serving it.
+03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md:71: No platform procedure is Factory doctrine yet. The August DevOps operating model (SRC-W07) proposes a Cloud Run profile (`init-app.sh`, `cloudbuild.yaml`, `Dockerfile`, `deploy.sh`, a checklist) and two platform postures; `APP_FACTORY_SKILLS_PLAYBOOK.md` §14 names the deployment skill family. These are source claims and existing tools, not adopted rules: version-sensitive commands must be verified at implementation time, and profile-specific filenames are not imposed on Vercel or Python deployments. Adoption of any profile is the Director's decision (DEC-18 remainder).
+03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md:77: | O-1 | DevOps authority: the cloud columns of the §3 matrix; "may the Engineer deploy to staging in FFM runs?"; Cloud Run as one platform profile | Director (Architect advises) | DEC-18 remainder; the reported DevOps Architect ruling of 2026-08-23 was not supplied (CL-13) |
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1969: - Cloud Run IAM took 20 min to resolve
+03_BUILD_METHODOLOGY/QA_PLAYBOOK.md:782: - Cloud Run revision or equivalent,
+03_BUILD_METHODOLOGY/QA_PLAYBOOK.md:842: - Cloud Run env vars,
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:1553: 2. If yes — use `page.route()` to abort the script's network request during E2E tests, OR `addInitScript()` to neutralize the specific DOM-side-effect method.
+04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md:212: **In Cloud Run:** Map GCP secrets to generic env vars at deploy time.
+04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md:214: gcloud run deploy starkreads \
+04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md:486: ### GCP Cloud Run Deployment
+04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md:498: **Step 2 — Deploy Cloud Run with Secret Mappings:**
+04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md:500: gcloud run deploy projectname \
+04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md:516: After deployment, your Cloud Run service has a URL like `https://projectname-abc123.run.app`.
+04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md:526: □ Visit the Cloud Run URL — app loads
