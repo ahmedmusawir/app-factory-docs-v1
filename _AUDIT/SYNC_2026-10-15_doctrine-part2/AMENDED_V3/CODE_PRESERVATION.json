@@ -1,0 +1,12 @@
+{
+  "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md": {
+    "fences": 46,
+    "non_line_comment_fence_content_sha256": "f1598c797943a76a6b5a5ee69b0e1f32ab828d221feab50d5ce2b3541634d9b3",
+    "imports_unchanged": true
+  },
+  "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md": {
+    "fences": 25,
+    "non_line_comment_fence_content_sha256": "3e2aea2c2cfd11a60a9a18fa1f14344cabc5bc7ba0655bddebf04d5527c08ba3",
+    "imports_unchanged": true
+  }
+}

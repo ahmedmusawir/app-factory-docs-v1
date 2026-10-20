@@ -1,0 +1,12 @@
+[
+  {
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "header": "> **Version:** 1.4 · **Date:** 2026-10-18 · **Status:** Active",
+    "history": "| 1.4 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-009, FC-021, FC-028, FC-033, FC-035, FC-036, FC-041, FC-042, FC-063, FC-066, FC-071, MC-01, RUL-11; QA-P4 repair: RV2-F01 (AC16/FC-066 labels) |"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "header": "> **Version:** 1.3 · **Date:** 2026-10-18 · **Status:** Active",
+    "history": "| 1.3 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-035, FC-040, FC-046, FC-046-heading, FC-047, FC-048, FC-049, FC-055, FC-067, FC-068, RUL-11, RUL-13; QA-P4 repair: RV2-F01 (AC16/FC-066 labels) |"
+  }
+]
