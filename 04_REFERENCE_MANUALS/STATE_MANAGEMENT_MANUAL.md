@@ -806,7 +806,8 @@ const useProductStore = create((set) => ({
 }));
 
 // ✅ GOOD: Service handles network, store handles state
-// src/services/productServices.ts
+// src/services/productServices.ts — independent store/service-separation illustration
+// this local fetchProducts() returns the route's raw JSON array; it is not the API manual §3 typed-outcome service
 export const fetchProducts = async () => {
   const response = await fetch('/api/products');
   return response.json();
@@ -862,7 +863,7 @@ const useCartSync = () => {
 
 ### Store + Server Components
 
-Server Components cannot use hooks, but they can pass initial data to Client Components:
+Server Components cannot use hooks, but they can pass initial data to Client Components: This illustration's `fetchProducts()` returns `Promise<Product[]>` (hence `initialProducts: Product[]`) and is not the API manual §3 typed-outcome service; under that contract, narrow `status === 'success'` and pass `outcome.items`.
 
 ```typescript
 // src/app/(public)/shop/page.tsx (Server Component)
@@ -1107,7 +1108,7 @@ const unsubscribe = useCartStore.subscribe(
 | 1.0 | (original, date unknown) | Initial manual: three-layer state model, when-to-use table, store architecture, core patterns, persistence, SSR hydration, templates, integration patterns, common stores, best practices. Unversioned until the 2026-07 audit. |
 | 1.1 | 2026-07-08 | **Wave 4 metadata patch (audit sync).** Standard header block — this doc was the F-018 worst-case specimen (no version, date, or history anywhere). Cross-References section added — outbound isolation ended (F-035). This history table (D-018). ZERO content changes — the audit verified the doctrine clean (no derived-flag fictions, no `: any`, service-layer-consistent). |
 | 1.2 | 2026-08-05 | **Navbar Saga promotion.** Division of Labor subsection appended to §1 (server props vs. client stores hard rule — identity renders from server, stores react to browser events). Cross-ref to AUTH_MANUAL Navbar Law added. | navbar-saga |
-| 1.3 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-035, FC-040, FC-046, FC-046-heading, FC-047, FC-048, FC-049, FC-055, FC-067, FC-068, RUL-11, RUL-13 |
+| 1.3 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-035, FC-040, FC-046, FC-046-heading, FC-047, FC-048, FC-049, FC-055, FC-067, FC-068, RUL-11, RUL-13; QA-P4 repair: RV2-F01 (AC16/FC-066 labels) |
 
 ---
 
