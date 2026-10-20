@@ -1,0 +1,170 @@
+[
+  {
+    "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+    "sha256": "68285b2a1c6c759e17518f66c9e69f7338afb48e043f6e317cb607f374346e75"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+    "sha256": "456246341096459742400af061b6605fcf1d56e9de1a09b27621a6680489c9f6"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+    "sha256": "14b53af70e26456c6e610fb3782039df7ce1d5d372f943a4a23038e26bf81416"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/README.md",
+    "sha256": "15fdc40e56000666cca7e02290168e2aed52fc22a73c4a2edefba586011535a2"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+    "sha256": "9d5e760494fe71adaa5e72fee7b82fc6e85e5c250192cc2613dc0bd6fc107441"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+    "sha256": "06bf1d4bb94f9bd6b17f41e0161c42984712a3739274582ddbfe8c4b32f3d018"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+    "sha256": "7427ec11728c186f8fe33a483d1ed9e712e988e39a2e50e45720b8eec916d57e"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+    "sha256": "58e76e3ec55a1f4bc2f3eaf0e05783fee51c7c7fa52eca1f9347af42a557c8d7"
+  },
+  {
+    "path": "MANIFEST.md",
+    "sha256": "2538dc3b3bd0772b65964de2ef217690b30d779cc976ef45b44520218259ebc8"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/ACTUAL_CANONICAL.diff",
+    "sha256": "fda241bb1d93a37948cbb5e06757ab43b4b569f86a3721eb3e26f1c622b7e103"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/APPLIED_TRANSITIONS.json",
+    "sha256": "60bbae8a523e222875c1c5891e26874aa43d2275a4a6fefe4630d711166ae07a"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/APPLY_COMMANDS.json",
+    "sha256": "f252393cf2ff41d6565f4f8949bad49d7e64a409f176a26e02a4c41d3d56cddb"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/ARCHITECT_ACTIVATION_INSTRUCTION.md",
+    "sha256": "3d19b1d439ea460dbec1795aa124207a9d2dfd3bfe79159390199008075de567"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/ARCHITECT_CLEANUP_ACCEPTANCE.md",
+    "sha256": "e2a772f7e37eef19ca3f9521d27ba0b85babeec4f96991357cc87973644bce68"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/BASELINE_101.json",
+    "sha256": "8c85b1c2f52a2170a9b2937884629082d98bf4604bcbbd4c8685683e39ce27e0"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/BASELINE_TRACKED.json",
+    "sha256": "175f3eb97f67a891e5610b0f1de9370576b50e179268e4c1099c5d718a2ada87"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/ENGINEERING_CLOSEOUT_REPORT.md",
+    "sha256": "ab1d6645127ee0211cadd890167a8fc82def6a5269366cd3b7f23ba1da82ad90"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/ENGINEERING_VERIFICATION.json",
+    "sha256": "ac0c261563d89499960972cd5af7cdfb1453df49b38ce2899fdb2649bcad288c"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/EXECUTION_PLAN.md",
+    "sha256": "aaa8952bde97052ea9ee0284ca6d7571355c86aef5762f3c6ffaf6305a13ca2e"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/INPUTS/RUN_SUMMARY.md",
+    "sha256": "649844588b2274d43d68a90bc02edbdb8834ce0e4f5fd6fad1eaf7cff9bd53bf"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/INPUTS/TEMPLATE_INSTALL_VERIFICATION.md",
+    "sha256": "406f34b1e203d943ed5df437dd98f5cb7fbc0c82eb73b4ee1fb0fa1352999545"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/LINT_RESULTS.txt",
+    "sha256": "464d6fe12c6b15c15fa89499cda06a08e54c18376f7b4127c5e915879a23f04e"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/METADATA_HISTORY.json",
+    "sha256": "a62e0de9387f1d13b02fd169478def1d5cae520f8406910ca3bcffb650446fa6"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/PREFLIGHT.json",
+    "sha256": "6977d30b34a80e7b6d86d35b7806d071c31360da1f6932683ebcdd5d02319eb3"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/PREFLIGHT_COMMANDS.json",
+    "sha256": "dca4943381b16605588307bddae51d0c06dee82b9f07392a20e1ebf31e7bab36"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/PRE_APPLICATION_DECISION_RECEIPT.json",
+    "sha256": "853e54788222eb808816c5c75ff0b43f098c49d39b8cccc687e833b4d341cc3b"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/PROTECTED_BASELINE_PATHS.json",
+    "sha256": "7b3be4dd419013915684cb3c82723302c4eb7fcbfef29e20482207c91c720d23"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/REMOTE_PREFLIGHT.json",
+    "sha256": "c615e3ff5e3d2735d9959b05eac95ee1c6f2be14e8edfacde758ea7e7c1ee97a"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/RUN_REPORT_ADDENDA.json",
+    "sha256": "100f27a30c625503e46f0480c7136ec6d9292dda207c4bb9a1d1d53673d7aa82"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/SUCCESSOR_101.json",
+    "sha256": "ab9d88b83cf0999aef5473dee86b933ae172166baa863f7803ba91df3dd3584e"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/TEMPLATE_BEFORE_AFTER.json",
+    "sha256": "2b4aacf758b692eb18aaccf4ef5e1f0a6da2262019876889dabce183a3911809"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/UNCHANGED_92.json",
+    "sha256": "6f0e2138ae683f7e2c9f45ad4c17f4d36fa3a929cf9dfe64cc8bdc8a3a68832b"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/VERIFICATION_COMMANDS.json",
+    "sha256": "75dd4d4d7399be1fbad714f0888ef1edfe224e4061e69211c1ab5f6196e89b24"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/VERIFY_COMMAND.json",
+    "sha256": "e5a7eb5653ab59e5370d5a8996e86258a8dde8dd13b6ec7a891a8073584e99e1"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/VERIFY_COMMAND_INITIAL.json",
+    "sha256": "b079412ccc8e1f552a1d84b58276c25a238b1f7b34c51016770dab5da450ed63"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/VERIFY_COMMAND_SVG_DISCOVERY.json",
+    "sha256": "ecf941bf7d294d6596eeca9fe15b624c93259aa15a901034bd0097f0465b696f"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/WORKFLOW_PRESERVATION.json",
+    "sha256": "1fcc1f08ec57cfbbd4f1382fd0962448d56f4c66a848d65ac389134c52e20e54"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/apply_closeout.py",
+    "sha256": "61eded3212ec406fe109fe098d3de032c91e002ca655a6e5725525e9a7f78c61"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/preflight.py",
+    "sha256": "c0af7fade13ed2f18d7afdc879153f18156de6c176e938eb268f04b93a62975a"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/verify_closeout.py",
+    "sha256": "b90c8da97590b465bc47d16abb8354d55075264b289346a03138b007562d7f77"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RUN_SUMMARY.md",
+    "sha256": "1ed5fb2fddd7ecfeb592802113df9f1ee62192155eecdbf7b29f380b1847a6f8"
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/TEMPLATE_INSTALL_VERIFICATION.md",
+    "sha256": "0b0895a86ea5359fff52e7267646b2c1bb96a892c932fc01bf35a35253a1ed56"
+  }
+]

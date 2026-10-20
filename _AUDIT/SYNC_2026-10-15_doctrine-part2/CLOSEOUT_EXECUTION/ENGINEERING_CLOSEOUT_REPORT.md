@@ -1,0 +1,11 @@
+# Closeout execution — engineering verification
+
+At 2026-10-20T14:24:54.146591+00:00, all 39 engineering checks PASS. The approved patch was applied only after separate Architect cleanup acceptance and activation instruction were recorded in the execution run. See PRE_APPLICATION_DECISION_RECEIPT.json and APPLY_COMMANDS.json for ordered timestamps. Both decisions preserve attribution to Jarvis through Tony's instruction.
+
+12 exact transitions are APPLIED on nine canonical paths. All 101 installed successor SHA-256 hashes match the approved index; 92 are unchanged. Independent replay of each old→new bound span equals installed bytes. The actual canonical diff contains only the nine named paths. Versions, landing dates and history rows are unchanged; MANIFEST statuses equal the three headers and all other MANIFEST bytes are unchanged. Four workflow bodies and links are exact after excluding only status lines; four SVGs remain exact. All 25 templates replay from pinned sources/approved translations; only the exact README provenance change is allowed. Lint suite and configuration are unchanged and all four lints pass.
+
+All other preexisting tracked bytes were checked, including frozen spec/maps/approvals, all 870 QA files, archives and standalone 10x files. Two run reports receive append-only current-state addenda; their full originals are retained in INPUTS. No frozen record is edited. Historical pending labels in BOUND_STATUS_TRANSITIONS.json and PHASE5_CLEANUP remain evidence of the earlier state; APPLIED_TRANSITIONS.json is the new state record.
+
+Verification tooling: an initial Python syntax error and then an incorrect SVG search directory were corrected in the new engineering harness. Both failed invocation outputs are retained; the final harness checks the actual `_assets/workflows/` SVGs and passed. Neither issue required any product change or check exemption.
+
+Commit purpose: activate verified doctrine/workflow statuses and template provenance under the exact Architect instruction. Actual SHA and remote receipt are recorded after commit creation in the delivery receipts. Independent Fable bounded closeout check remains PENDING; this report does not transfer the pre-transition verdict to changed bytes. Optional follow-ups remain deferred. Tony retains PR/merge; no main write, force-push or history rewrite.

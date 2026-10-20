@@ -1,7 +1,7 @@
 # RRM PLAYBOOK
 ## Review Rework Modules — Adjudicated Review Findings into Bounded Repair and Independent Verification
 
-> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED
+> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Active
 > **Tier:** 3 — Build Methodology · **Pairs with:** `SOFTWARE_FACTORY_PLAYBOOK.md` › Module Identity & QA Handoff (Factory-level shared doctrine), `QAM_PLAYBOOK.md`, `QA_PLAYBOOK.md`, `BIM_PLAYBOOK.md` (module mechanics reference), `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`
 > **Owner:** Stark Industries App Factory
 > **Provenance:** Authored for the Factory DocSet from the RRM pilot playbook v0.1 (17 September 2026; harvest source SRC-R01, preserved as received in INTAKE_SNAPSHOT/factory-intake/) and the RRM-001…004 field results (SRC-R03), reconciled to the Director rulings of 2026-10-14 (RUL-01 mandatory QAM, RUL-02 continuing QA branch, RUL-03 required cleanup, RUL-04 frozen contract with writable lanes, RUL-05 two review checkpoints, RUL-06 placement). The pilot playbook's persona names were replaced by seats; every departure from the pilot text is listed in the Version History. The pilot records themselves are unchanged.
@@ -116,7 +116,7 @@ The closeout record distinguishes implementation, evidence, closeout and merge S
 
 ## 11. Reviewer Guidance
 
-Reviewer guidance belongs here under RUL-14 (2026-10-16). The following proposed wording expresses that guidance for map review; pilot source records remain unchanged.
+Reviewer guidance belongs here under RUL-14 (2026-10-16). The reviewer guidance below governs review; pilot source records remain unchanged.
 
 - **Freeze the specimen.** Name the exact revision, export or byte set reviewed; distinguish ordinary change review from broad or retrospective investigation.
 - **Evidence levels.** Label every claim EVIDENCE / INFERENCE / CLAIM / GAP / QUESTION (`QA_PLAYBOOK.md` §8); state the conditions under which a finding holds and what would falsify it.

@@ -1,0 +1,65 @@
+[
+  {
+    "time": "2026-10-20T14:22:57.166409+00:00",
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "dc3b288246ea931962e889e9a88718c0daaf9c37\n",
+    "stderr": ""
+  },
+  {
+    "time": "2026-10-20T14:22:57.183443+00:00",
+    "command": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "time": "2026-10-20T14:22:58.115709+00:00",
+    "command": [
+      "git",
+      "ls-remote",
+      "origin",
+      "refs/heads/docs/sync-doctrine-part2-2026-10-15",
+      "refs/heads/main"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "dc3b288246ea931962e889e9a88718c0daaf9c37\trefs/heads/docs/sync-doctrine-part2-2026-10-15\n9c179392f79b70da099121fc357d3107ad3bb86e\trefs/heads/main\n",
+    "stderr": ""
+  },
+  {
+    "time": "2026-10-20T14:22:58.127331+00:00",
+    "command": [
+      "git",
+      "apply",
+      "--check",
+      "/home/moose/Documents/app-factory-docs-sync-execution/_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE5_CLEANUP/CLOSEOUT.patch"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "time": "2026-10-20T14:22:58.133700+00:00",
+    "command": [
+      "git",
+      "apply",
+      "/home/moose/Documents/app-factory-docs-sync-execution/_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE5_CLEANUP/CLOSEOUT.patch"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

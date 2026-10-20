@@ -1,0 +1,54 @@
+[
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+    "links": [
+      "../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W04_BIM_WORKFLOW.png",
+      "../_assets/workflows/BIM_WORKFLOW.svg"
+    ],
+    "body_preserved": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+    "links": [
+      "../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W01_FFM_CREATION.png",
+      "../_assets/workflows/FFM_CREATION.svg"
+    ],
+    "body_preserved": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+    "links": [
+      "../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W03_FFM_DEPLOYMENT.png",
+      "../_assets/workflows/FFM_DEPLOYMENT.svg"
+    ],
+    "body_preserved": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+    "links": [
+      "../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W02_FFM_EXECUTION.png",
+      "../_assets/workflows/FFM_EXECUTION.svg"
+    ],
+    "body_preserved": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_assets/workflows/BIM_WORKFLOW.svg",
+    "sha256": "7cba33aa1a396e4467a09eb80ef912b6e06d2dc06f839c569ffcdf5f87b67ec9",
+    "unchanged": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_assets/workflows/FFM_CREATION.svg",
+    "sha256": "0d7640fc0460f98aaf6a0b0d1acc8bc7866fc94e0ed61099d9d0e59931d3a1f0",
+    "unchanged": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_assets/workflows/FFM_DEPLOYMENT.svg",
+    "sha256": "ce17e51c9e72e24cd4fd961f9812d13242914f9e03fcb238a749b49361cb028e",
+    "unchanged": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_assets/workflows/FFM_EXECUTION.svg",
+    "sha256": "d0ac268ef03f2ab6f4cb80970b2be3d242442af8eeaa3f3518526354df2a915c",
+    "unchanged": true
+  }
+]

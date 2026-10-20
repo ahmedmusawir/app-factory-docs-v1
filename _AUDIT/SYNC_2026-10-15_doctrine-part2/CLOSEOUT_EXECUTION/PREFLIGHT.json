@@ -1,0 +1,26 @@
+{
+  "time": "2026-10-20T14:22:37.937545+00:00",
+  "baseline": "dc3b288246ea931962e889e9a88718c0daaf9c37",
+  "branch": "docs/sync-doctrine-part2-2026-10-15",
+  "clean": true,
+  "zip_sha256": "dc9544c097af7fb990153e664e95f9659c48f635bb17bc2c6db6f06aaa0fd7bd",
+  "zip_inventory_verified": 1829,
+  "certified_baseline_hashes": 101,
+  "pending_before_application": 12,
+  "paths": [
+    "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+    "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+    "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+    "03_BUILD_METHODOLOGY/_templates/QAM/README.md",
+    "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+    "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+    "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+    "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+    "MANIFEST.md"
+  ],
+  "remote_preflight": "REMOTE_PREFLIGHT.json",
+  "decision_hashes": {
+    "ARCHITECT_CLEANUP_ACCEPTANCE.md": "e2a772f7e37eef19ca3f9521d27ba0b85babeec4f96991357cc87973644bce68",
+    "ARCHITECT_ACTIVATION_INSTRUCTION.md": "3d19b1d439ea460dbec1795aa124207a9d2dfd3bfe79159390199008075de567"
+  }
+}

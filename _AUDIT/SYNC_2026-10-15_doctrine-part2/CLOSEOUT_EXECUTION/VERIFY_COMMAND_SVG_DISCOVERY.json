@@ -1,0 +1,10 @@
+{
+  "command": [
+    "python3",
+    "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/verify_closeout.py"
+  ],
+  "cwd": "/home/moose/Documents/app-factory-docs-v1",
+  "exit": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/verify_closeout.py\", line 52, in <module>\n    check('Four SVGs unchanged',sum('sha256' in r for r in workflows)==4,'WORKFLOW_PRESERVATION.json')\n  File \"/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/verify_closeout.py\", line 10, in check\n    def check(n,ok,detail):assert ok,n;checks.append({'check':n,'result':'PASS','evidence':detail})\n                                  ^^\nAssertionError: Four SVGs unchanged\n"
+}

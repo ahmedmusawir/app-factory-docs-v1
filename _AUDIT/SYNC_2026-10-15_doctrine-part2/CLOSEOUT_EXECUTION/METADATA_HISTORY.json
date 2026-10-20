@@ -1,0 +1,85 @@
+[
+  {
+    "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+    "versions_and_dates": [
+      "**Version:** 1.0 ",
+      "**Date:** 2026-10-18 "
+    ],
+    "history_section_hashes": [
+      "f3e23d80118af2119fb5e25de4dbfe62e780f94e002f8a8303cdd929759af3a7"
+    ]
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+    "versions_and_dates": [
+      "**Version:** 1.0 ",
+      "**Date:** 2026-10-18 "
+    ],
+    "history_section_hashes": [
+      "2e83c8432c7921c9606f830a51b880641cfd7df4c60dfb5b6a12d06520ab8ace"
+    ]
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+    "versions_and_dates": [
+      "**Version:** 1.0 ",
+      "**Date:** 2026-10-18 "
+    ],
+    "history_section_hashes": [
+      "54d9b825f679328ec5145d5fd649fa57574420fcbdda90bc224238552f1d03aa"
+    ]
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/README.md",
+    "versions_and_dates": [],
+    "history_section_hashes": []
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+    "versions_and_dates": [
+      "**Version:** 1.0 ",
+      "**Date:** 2026-10-18 "
+    ],
+    "history_section_hashes": [
+      "ee35d55d4b48fd0e993a41dd24888be0a072a15af17c29e3d5226158d0c651ad"
+    ]
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+    "versions_and_dates": [
+      "**Version:** 1.0 ",
+      "**Date:** 2026-10-18 "
+    ],
+    "history_section_hashes": [
+      "ee35d55d4b48fd0e993a41dd24888be0a072a15af17c29e3d5226158d0c651ad"
+    ]
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+    "versions_and_dates": [
+      "**Version:** 1.0 ",
+      "**Date:** 2026-10-18 "
+    ],
+    "history_section_hashes": [
+      "ee35d55d4b48fd0e993a41dd24888be0a072a15af17c29e3d5226158d0c651ad"
+    ]
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+    "versions_and_dates": [
+      "**Version:** 1.0 ",
+      "**Date:** 2026-10-18 "
+    ],
+    "history_section_hashes": [
+      "ee35d55d4b48fd0e993a41dd24888be0a072a15af17c29e3d5226158d0c651ad"
+    ]
+  },
+  {
+    "path": "MANIFEST.md",
+    "versions_and_dates": [
+      "**Version:** 1.0 ",
+      "**Date:** 2026-10-18 "
+    ],
+    "history_section_hashes": []
+  }
+]
