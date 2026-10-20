@@ -1,6 +1,6 @@
 # BIM lifecycle and Engine 2 system review
 
-> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Proposed — pending verified publication
+> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Active reference
 > **Governed by:** `BIM_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`.
 
 This revised workflow supersedes the August diagram `SRC-W04_BIM_WORKFLOW.png` for current instructions when this proposed sync is approved, landed and verified. The [unaltered original](../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W04_BIM_WORKFLOW.png) remains historical evidence; it grants no current role, Git or cloud permission. This derivative follows RUL-01…15 and Tony’s explicit workflow/diagram correction assignment of 2026-10-16.

@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+    "old": "**Status:** DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED",
+    "new": "**Status:** Active",
+    "occurrences": 1,
+    "status": "APPLIED; independent bounded QA PENDING"
+  },
+  {
+    "id": 2,
+    "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+    "old": "**Status:** DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED",
+    "new": "**Status:** Active",
+    "occurrences": 1,
+    "status": "APPLIED; independent bounded QA PENDING"
+  },
+  {
+    "id": 3,
+    "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+    "old": "**Status:** DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED",
+    "new": "**Status:** Active",
+    "occurrences": 1,
+    "status": "APPLIED; independent bounded QA PENDING"
+  },
+  {
+    "id": 4,
+    "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+    "old": "The following proposed wording expresses that guidance for map review; pilot source records remain unchanged.",
+    "new": "The reviewer guidance below governs review; pilot source records remain unchanged.",
+    "occurrences": 1,
+    "status": "APPLIED; independent bounded QA PENDING"
+  },
+  {
+    "id": 5,
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/README.md",
+    "old": "This proposed set differs only by the status/provenance translations enumerated in this run’s `PHASE_2_TEMPLATE_TRANSLATIONS.json`; installation and translation approval remain pending;",
+    "new": "This installed set uses the approved status/provenance translations enumerated in this run’s `PHASE_2_TEMPLATE_TRANSLATIONS.json`; installation evidence is recorded in the run’s `TEMPLATE_INSTALL_VERIFICATION.md`;",
+    "occurrences": 1,
+    "status": "APPLIED; independent bounded QA PENDING"
+  },
+  {
+    "id": 6,
+    "path": "MANIFEST.md",
+    "old": "| QAM_PLAYBOOK | 1.0 | 2026-10-18 | DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED | Mandatory module QAM and accepted _templates/QAM set | ARCHITECT_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QA_PLAYBOOK, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |",
+    "new": "| QAM_PLAYBOOK | 1.0 | 2026-10-18 | Active | Mandatory module QAM and accepted _templates/QAM set | ARCHITECT_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QA_PLAYBOOK, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |",
+    "occurrences": 1,
+    "status": "APPLIED; independent bounded QA PENDING"
+  },
+  {
+    "id": 7,
+    "path": "MANIFEST.md",
+    "old": "| RRM_PLAYBOOK | 1.0 | 2026-10-18 | DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED | Approved review repairs with QAM; post-FFM and Engine 2 checkpoints | ARCHITECT_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |",
+    "new": "| RRM_PLAYBOOK | 1.0 | 2026-10-18 | Active | Approved review repairs with QAM; post-FFM and Engine 2 checkpoints | ARCHITECT_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |",
+    "occurrences": 1,
+    "status": "APPLIED; independent bounded QA PENDING"
+  },
+  {
+    "id": 8,
+    "path": "MANIFEST.md",
+    "old": "| DEPLOYMENT_PLAYBOOK | 1.0 | 2026-10-18 | DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED (sections marked OPEN are not doctrine until ruled) | Common identity, exclusion, verification and recovery; context-specific permissions retained | APP_FACTORY_SKILLS_PLAYBOOK, BIM_PLAYBOOK, FFM_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, RECON_QUESTIONNAIRE, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK |",
+    "new": "| DEPLOYMENT_PLAYBOOK | 1.0 | 2026-10-18 | Active (sections marked OPEN are not doctrine until ruled) | Common identity, exclusion, verification and recovery; context-specific permissions retained | APP_FACTORY_SKILLS_PLAYBOOK, BIM_PLAYBOOK, FFM_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, RECON_QUESTIONNAIRE, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK |",
+    "occurrences": 1,
+    "status": "APPLIED; independent bounded QA PENDING"
+  },
+  {
+    "id": 9,
+    "path": "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+    "old": "**Status:** Proposed — pending verified publication",
+    "new": "**Status:** Active reference",
+    "occurrences": 1,
+    "status": "APPLIED; independent bounded QA PENDING"
+  },
+  {
+    "id": 10,
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+    "old": "**Status:** Proposed — pending verified publication",
+    "new": "**Status:** Active reference",
+    "occurrences": 1,
+    "status": "APPLIED; independent bounded QA PENDING"
+  },
+  {
+    "id": 11,
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+    "old": "**Status:** Proposed — pending verified publication",
+    "new": "**Status:** Active reference",
+    "occurrences": 1,
+    "status": "APPLIED; independent bounded QA PENDING"
+  },
+  {
+    "id": 12,
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+    "old": "**Status:** Proposed — pending verified publication",
+    "new": "**Status:** Active reference",
+    "occurrences": 1,
+    "status": "APPLIED; independent bounded QA PENDING"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "command": [
+    "python3",
+    "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/verify_closeout.py"
+  ],
+  "cwd": "/home/moose/Documents/app-factory-docs-v1",
+  "exit": 1,
+  "stdout": "",
+  "stderr": "  File \"/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/verify_closeout.py\", line 48\n    links=re.findall(r'\\]\\(([^)]+)\\)',before);check('Workflow links '+p,links==re.findall(r'\\]\\(([^)]+)\\)',after,'Link text/targets preserved exactly; no link rewrite')\n                                                   ^\nSyntaxError: '(' was never closed\n"
+}
