@@ -1,0 +1,192 @@
+[
+  {
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "header": [
+      "# ENGINEER AGENT PLAYBOOK",
+      "",
+      "> **Version:** 1.3 · **Date:** 2026-10-18 · **Status:** Active",
+      "> **Tier:** 2 — Pipeline Agents · **Pairs with:** APP_FACTORY_BLUEPRINT, RECON_QUESTIONNAIRE, DESIGNER_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, FFM_PLAYBOOK, FRONTEND_FIRST_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK",
+      ""
+    ],
+    "header_equal": true,
+    "manifest": [
+      "| ENGINEER_PLAYBOOK | 1.3 | 2026-10-18 | Active | How to BE the Engineer: recon executor (Phase 0), Kit Track + Pipeline Track, Karpathy Protocol home | APP_FACTORY_BLUEPRINT, DESIGNER_PLAYBOOK, FFM_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, FRONTEND_FIRST_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, RECON_QUESTIONNAIRE, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK |",
+      "| ENGINEER_PLAYBOOK | APP_FACTORY_BLUEPRINT, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DESIGNER_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, RRM_PLAYBOOK | 9 |",
+      "| ENGINEER_PLAYBOOK | ARCHITECT_PLAYBOOK, QAM_PLAYBOOK |"
+    ],
+    "parent_run_rows": 1,
+    "candidate_run_rows": 1,
+    "amended_rows": 1,
+    "history_header_counts": [
+      1,
+      1
+    ],
+    "row_columns_equal": true,
+    "fence_counts": [
+      82,
+      82
+    ]
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "header": [
+      "# TESTING PLAYBOOK",
+      "",
+      "> **Version:** 2.2 · **Date:** 2026-10-18 · **Status:** Active",
+      "> **Tier:** 3 — Build Methodology · **Pairs with:** STARTER_KIT_HANDBOOK, SOFTWARE_FACTORY_PLAYBOOK, FFM_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, RECON_QUESTIONNAIRE",
+      ""
+    ],
+    "header_equal": true,
+    "manifest": [
+      "| TESTING_PLAYBOOK | 2.2 | 2026-10-18 | Active | The testing bible: four layers, diagnostic principles, backend appendices, run-verification rituals | FFM_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, RECON_QUESTIONNAIRE, SOFTWARE_FACTORY_PLAYBOOK, STARTER_KIT_HANDBOOK |",
+      "| TESTING_PLAYBOOK | API_AND_SERVICES_MANUAL, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DATABASE_MANUAL, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, FRONTEND_FIRST_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, STRIPE_SUBSCRIPTIONS_PLAYBOOK | 13 |"
+    ],
+    "parent_run_rows": 1,
+    "candidate_run_rows": 1,
+    "amended_rows": 1,
+    "history_header_counts": [
+      1,
+      1
+    ],
+    "row_columns_equal": true,
+    "fence_counts": [
+      100,
+      96
+    ]
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "header": [
+      "# API AND SERVICES MANUAL",
+      "",
+      "> **Version:** 1.2 · **Date:** 2026-10-18 · **Status:** Active",
+      "> **Tier:** 4 — Reference Manuals · **Pairs with:** FRONTEND_FIRST_PLAYBOOK, STARTER_KIT_HANDBOOK, DATABASE_MANUAL, ECOMMERCE_AND_PAYMENTS_MANUAL, TESTING_PLAYBOOK",
+      ""
+    ],
+    "header_equal": true,
+    "manifest": [
+      "| API_AND_SERVICES_MANUAL | 1.2 | 2026-10-18 | Active | Service-layer law (\"components render, services fetch\") + the Kit Exception; integration patterns | DATABASE_MANUAL, ECOMMERCE_AND_PAYMENTS_MANUAL, FRONTEND_FIRST_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK |",
+      "| API_AND_SERVICES_MANUAL | APP_ARCHITECTURE_MANUAL, AUTH_MANUAL, DATABASE_MANUAL, ECOMMERCE_AND_PAYMENTS_MANUAL, STRIPE_SUBSCRIPTIONS_PLAYBOOK | 5 |",
+      "| API_AND_SERVICES_MANUAL | AUTH_MANUAL, HANDOFF_PACKAGE_PLAYBOOK |"
+    ],
+    "parent_run_rows": 1,
+    "candidate_run_rows": 1,
+    "amended_rows": 1,
+    "history_header_counts": [
+      1,
+      1
+    ],
+    "row_columns_equal": true,
+    "fence_counts": [
+      56,
+      56
+    ]
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "header": [
+      "# AUTHENTICATION & SUPABASE INTEGRATION MANUAL",
+      "",
+      "> **Version:** 1.5 · **Date:** 2026-10-18 · **Status:** Active",
+      "> **Tier:** 4 — Reference Manuals · **Pairs with:** STARTER_KIT_HANDBOOK, DATABASE_MANUAL, API_AND_SERVICES_MANUAL, FRONTEND_FIRST_PLAYBOOK, RECON_QUESTIONNAIRE, STATE_MANAGEMENT_MANUAL",
+      ""
+    ],
+    "header_equal": true,
+    "manifest": [
+      "| AUTH_MANUAL | 1.5 | 2026-10-18 | Active | Kit auth authority: table-driven roles (user_roles), anti-authService antibody, RBAC patterns | API_AND_SERVICES_MANUAL, DATABASE_MANUAL, FRONTEND_FIRST_PLAYBOOK, RECON_QUESTIONNAIRE, STARTER_KIT_HANDBOOK, STATE_MANAGEMENT_MANUAL |",
+      "| AUTH_MANUAL | APP_ARCHITECTURE_MANUAL, DATABASE_MANUAL, STARTER_KIT_HANDBOOK, STATE_MANAGEMENT_MANUAL, STRIPE_SUBSCRIPTIONS_PLAYBOOK | 5 |",
+      "| AUTH_MANUAL | BUG_FIX_PLAYBOOK, COMPONENT_REGISTRY, TESTING_PLAYBOOK |"
+    ],
+    "parent_run_rows": 1,
+    "candidate_run_rows": 1,
+    "amended_rows": 1,
+    "history_header_counts": [
+      1,
+      1
+    ],
+    "row_columns_equal": true,
+    "fence_counts": [
+      72,
+      72
+    ]
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "header": [
+      "# DATABASE MANUAL",
+      "",
+      "> **Version:** 1.2 · **Date:** 2026-10-18 · **Status:** Active",
+      "> **Tier:** 4 — Reference Manuals · **Pairs with:** STARTER_KIT_HANDBOOK, AUTH_MANUAL, API_AND_SERVICES_MANUAL, FRONTEND_FIRST_PLAYBOOK, TESTING_PLAYBOOK",
+      ""
+    ],
+    "header_equal": true,
+    "manifest": [
+      "| DATABASE_MANUAL | 1.2 | 2026-10-18 | Active | Supabase PostgreSQL doctrine: schema patterns, user_roles pattern, RLS, migrations | API_AND_SERVICES_MANUAL, AUTH_MANUAL, FRONTEND_FIRST_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK |",
+      "| DATABASE_MANUAL | API_AND_SERVICES_MANUAL, AUTH_MANUAL, STARTER_KIT_HANDBOOK | 3 |"
+    ],
+    "parent_run_rows": 1,
+    "candidate_run_rows": 1,
+    "amended_rows": 1,
+    "history_header_counts": [
+      1,
+      1
+    ],
+    "row_columns_equal": true,
+    "fence_counts": [
+      86,
+      86
+    ]
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "header": [
+      "# ECOMMERCE AND PAYMENTS MANUAL",
+      "",
+      "> **Version:** 1.2 · **Date:** 2026-10-18 · **Status:** Active",
+      "> **Tier:** 4 — Reference Manuals · **Pairs with:** STRIPE_SUBSCRIPTIONS_PLAYBOOK, STATE_MANAGEMENT_MANUAL, API_AND_SERVICES_MANUAL, APP_ARCHITECTURE_MANUAL",
+      ""
+    ],
+    "header_equal": true,
+    "manifest": [
+      "| ECOMMERCE_AND_PAYMENTS_MANUAL | 1.2 | 2026-10-18 | Active | One-time-payments commerce (headless WooCommerce + Stripe); recurring → STRIPE_SUBSCRIPTIONS_PLAYBOOK | API_AND_SERVICES_MANUAL, APP_ARCHITECTURE_MANUAL, STATE_MANAGEMENT_MANUAL, STRIPE_SUBSCRIPTIONS_PLAYBOOK |",
+      "| ECOMMERCE_AND_PAYMENTS_MANUAL | API_AND_SERVICES_MANUAL, APP_ARCHITECTURE_MANUAL, STRIPE_SUBSCRIPTIONS_PLAYBOOK | 3 |",
+      "| ECOMMERCE_AND_PAYMENTS_MANUAL | TESTING_PLAYBOOK |"
+    ],
+    "parent_run_rows": 1,
+    "candidate_run_rows": 1,
+    "amended_rows": 1,
+    "history_header_counts": [
+      1,
+      1
+    ],
+    "row_columns_equal": true,
+    "fence_counts": [
+      22,
+      22
+    ]
+  },
+  {
+    "path": "CHANGELOG.md",
+    "header": [
+      "# CHANGELOG — App Factory Doctrine",
+      "",
+      "> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Active",
+      "> **Tier:** none — repository infrastructure · **Pairs with:** MANIFEST, _ARCHIVE/README",
+      ""
+    ],
+    "header_equal": true,
+    "manifest": [],
+    "parent_run_rows": 39,
+    "candidate_run_rows": 39,
+    "amended_rows": 6,
+    "history_header_counts": [
+      0,
+      0
+    ],
+    "row_columns_equal": true,
+    "fence_counts": [
+      0,
+      0
+    ]
+  }
+]

@@ -1,0 +1,16 @@
+[
+  {
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "parent_fences": 46,
+    "candidate_fences": 46,
+    "non_comment_fenced_bytes_equal": true,
+    "imports_equal": true
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "parent_fences": 25,
+    "candidate_fences": 25,
+    "non_comment_fenced_bytes_equal": true,
+    "imports_equal": true
+  }
+]

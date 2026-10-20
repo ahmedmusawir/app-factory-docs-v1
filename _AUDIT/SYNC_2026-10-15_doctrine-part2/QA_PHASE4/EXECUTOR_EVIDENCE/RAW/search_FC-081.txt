@@ -1,0 +1,2 @@
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1622: Keep a library of useful custom prompts in your factory's `agent_docs/app_factory/brain-drain-prompts/`:
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1625: agent_docs/app_factory/brain-drain-prompts/

@@ -1,0 +1,11 @@
+{
+  "path": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/FACTORY_PHASE2_FABLE_HANDOFF_2026-10-16_164712.zip",
+  "sha256": "87d37eb0cde8130c3730c23fb132234bb24f7181c771b8947daa2505a70f9973",
+  "listed_payload_files": 429,
+  "zip_members": 431,
+  "bytes": 5467036,
+  "zip_integrity": "PASS",
+  "all_listed_hashes": "PASS",
+  "status": "DRAFT FOR REVIEW; map/spec/implementation not approved",
+  "excluded": "DELIVERY outputs, generated __pycache__, self-referential inventory entries"
+}

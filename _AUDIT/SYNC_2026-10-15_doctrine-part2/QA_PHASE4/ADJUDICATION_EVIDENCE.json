@@ -1,0 +1,263 @@
+{
+  "seat": "Fable (QA Lead)",
+  "time": "2026-10-19T12:21:27.686468+06:00",
+  "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+  "base": "9c179392f79b70da099121fc357d3107ad3bb86e",
+  "findings": {
+    "F01": {
+      "spans": [
+        {
+          "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+          "needle": "different author, different moment",
+          "base_count": 1,
+          "cand_count": 1,
+          "cand_lines": [
+            176
+          ]
+        },
+        {
+          "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+          "needle": "the Architect authors `DATA_CONTRACT.md` from the approved APP_BRIEF before Design",
+          "base_count": 0,
+          "cand_count": 1,
+          "cand_lines": [
+            175
+          ]
+        }
+      ],
+      "note": "Line 176 retained from BASE beside the corrected 175; both pipelines now name the Architect."
+    },
+    "F02": {
+      "spans": [
+        {
+          "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+          "needle": "ENGINEER → OPERATIONS HANDOFF",
+          "base_count": 1,
+          "cand_count": 1,
+          "cand_lines": [
+            1390
+          ]
+        },
+        {
+          "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+          "needle": "Engineer hands off to Operations/Deployment",
+          "base_count": 1,
+          "cand_count": 1,
+          "cand_lines": [
+            1385
+          ]
+        },
+        {
+          "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+          "needle": "QAM/",
+          "base_count": 0,
+          "cand_count": 2,
+          "cand_lines": [
+            1383
+          ]
+        }
+      ],
+      "note": "§17 tree and lead sentence unchanged from BASE; QAM sentence inserted above them; tree omits QAM/ and ACCEPTANCE_SPEC; sentence routes to Operations without QA."
+    },
+    "F03": {
+      "spans": [
+        {
+          "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+          "needle": "the filesystem wins",
+          "base_count": 4,
+          "cand_count": 1,
+          "cand_lines": [
+            257
+          ]
+        }
+      ],
+      "base_sites": [
+        103,
+        125,
+        253,
+        1582
+      ],
+      "note": "BASE had 4 sites; the approved proposal replaced 3 (quotes at 103/125/1582) and left the kit-track diagram site."
+    },
+    "F04": {
+      "spans": [
+        {
+          "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+          "needle": "seedSubscription",
+          "base_count": 2,
+          "cand_count": 1,
+          "cand_lines": [
+            892
+          ]
+        },
+        {
+          "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+          "needle": "export const supabaseAdmin = createClient",
+          "base_count": 1,
+          "cand_count": 1,
+          "cand_lines": [
+            925
+          ]
+        },
+        {
+          "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+          "needle": "This is appropriate for:\n- API routes",
+          "base_count": 1,
+          "cand_count": 1,
+          "cand_lines": []
+        },
+        {
+          "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+          "needle": "export const fetchProducts = async (): Promise<Product[]>",
+          "base_count": 1,
+          "cand_count": 1,
+          "cand_lines": [
+            613
+          ]
+        },
+        {
+          "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+          "needle": "const { items: products, error } = await fetchProducts()",
+          "base_count": 1,
+          "cand_count": 1,
+          "cand_lines": [
+            793
+          ]
+        },
+        {
+          "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+          "needle": "export const fetchProducts = async () => {",
+          "base_count": 1,
+          "cand_count": 1,
+          "cand_lines": [
+            856
+          ]
+        }
+      ],
+      "certified": {
+        "FC-022": "E2E recipe seeds subscriptions through an admin client ... nothing checks approved test project (PART1_FINDINGS_DISPOSITION.md)",
+        "FC-038": "DATABASE §5 lists 'API routes' generally as a reason to bypass RLS (named defect surface; map §B FC-038)",
+        "FC-066": "verification intent: every fetchProducts occurrence matches one declared contract or a labeled alternative (map §B FC-066)"
+      },
+      "note": "All three retained recipes pre-exist at BASE; PROPAGATION.tsv marked them CONSISTENT; the certified defect mechanisms remain live beside the inserted invariants."
+    },
+    "F05": {
+      "spans": [
+        {
+          "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+          "needle": "Do not persist raw contact details by default",
+          "base_count": 0,
+          "cand_count": 1,
+          "cand_lines": [
+            783
+          ]
+        },
+        {
+          "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+          "needle": "contact",
+          "base_count": 0,
+          "cand_count": 0,
+          "cand_lines": []
+        },
+        {
+          "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+          "needle": "contact",
+          "base_count": 0,
+          "cand_count": 0,
+          "cand_lines": []
+        },
+        {
+          "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+          "needle": "Personal fields follow the approved account-transition and retention policy",
+          "base_count": 0,
+          "cand_count": 1,
+          "cand_lines": [
+            205
+          ]
+        },
+        {
+          "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+          "needle": "Don't store sensitive data in localStorage",
+          "base_count": 1,
+          "cand_count": 1,
+          "cand_lines": [
+            1122
+          ]
+        }
+      ],
+      "note": "RUL-13 default stated only in STATE; AUTH has the older 'sensitive data' bullet; TESTING none; ECOMMERCE refers to a policy without stating the default."
+    },
+    "F06": {
+      "spans": [
+        {
+          "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+          "needle": "### GCP Cloud Run Deployment",
+          "base_count": 1,
+          "cand_count": 1,
+          "cand_lines": [
+            486
+          ]
+        },
+        {
+          "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+          "needle": "No platform procedure is Factory doctrine yet",
+          "base_count": 0,
+          "cand_count": 1,
+          "cand_lines": [
+            71
+          ]
+        }
+      ],
+      "map": "PROPAGATION.tsv rows 1435/1628 retain STRIPE §13 lines as CONSISTENT; FC-088 map outcome routed to DEPLOYMENT_PLAYBOOK; spec §1 excludes platform procedures (DEC-18 remainder) from failure.",
+      "note": "Pre-existing project-stack checklist; no doctrine claim text; authority gap is real but excluded by contract → follow-up."
+    },
+    "F07": {
+      "spans": [
+        {
+          "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+          "needle": "CURRENT_APP",
+          "base_count": 15,
+          "cand_count": 12,
+          "cand_lines": [
+            42,
+            169,
+            173,
+            461,
+            477,
+            1639,
+            1650,
+            1663,
+            1795,
+            1796,
+            2001,
+            2026
+          ]
+        },
+        {
+          "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+          "needle": "CURRENT_APP",
+          "base_count": 2,
+          "cand_count": 2,
+          "cand_lines": [
+            62,
+            118
+          ]
+        },
+        {
+          "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+          "needle": "CURRENT_APP",
+          "base_count": 3,
+          "cand_count": 3,
+          "cand_lines": [
+            9,
+            346,
+            381
+          ]
+        }
+      ],
+      "ruling_text": "RUL-14: 'Do not invent a universal project landing path or require a release tag.'",
+      "map": "Approved edits removed CURRENT_APP from FFM Appendix B boot/resume prompts and authoring step 15 (AC14 PASS); FFM §1/§3/§16/§17 keep the FFM's own in-kit module location convention (pre-existing, not invented); SFP/HANDOFF hits are labelled historical pointers.",
+      "note": "Module location convention of the FFM pattern ≠ Hub doctrine landing path; not a failure under RUL-14 → follow-up wording harmonization."
+    }
+  }
+}

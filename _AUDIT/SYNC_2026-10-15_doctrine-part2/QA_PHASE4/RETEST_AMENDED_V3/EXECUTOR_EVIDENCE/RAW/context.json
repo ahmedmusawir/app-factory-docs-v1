@@ -1,0 +1,11 @@
+{
+  "root": "/home/moose/Documents/app-factory-docs-v1",
+  "run": "_AUDIT/SYNC_2026-10-15_doctrine-part2",
+  "evidence": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/RETEST_AMENDED_V3/EXECUTOR_EVIDENCE",
+  "scratch": "/tmp/qa-amended-v3-krds1x3r",
+  "execution": "/home/moose/Documents/app-factory-docs-sync-execution",
+  "start_utc": "2026-10-20T09:53:28.071581+00:00",
+  "candidate": "26b050fe70de66e74ec8d65bcf9287d4369a91f7",
+  "parent": "8dff354937bc7baf739370a9886497d9d5359186",
+  "base": "9c179392f79b70da099121fc357d3107ad3bb86e"
+}

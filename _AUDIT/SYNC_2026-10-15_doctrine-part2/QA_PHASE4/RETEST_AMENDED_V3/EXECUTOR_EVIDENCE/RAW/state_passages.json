@@ -1,0 +1,47 @@
+{
+  "whole_file_equal": false,
+  "prefix_lines_1_808_equal": true,
+  "first_differing_line": 809,
+  "passages": [
+    {
+      "title": "Persistence",
+      "start": 475,
+      "end": 620,
+      "parent_sha256": "19dd2350d4a510b095fead7f945abdce60f3432b4622dc5e1e92496b9122dda8",
+      "candidate_sha256": "19dd2350d4a510b095fead7f945abdce60f3432b4622dc5e1e92496b9122dda8",
+      "equal": true
+    },
+    {
+      "title": "Hydration & SSR",
+      "start": 621,
+      "end": 658,
+      "parent_sha256": "d36b3358d3bb70a77196d32ab49a31def28e8be1d919d53c6873d1edf12f98c0",
+      "candidate_sha256": "d36b3358d3bb70a77196d32ab49a31def28e8be1d919d53c6873d1edf12f98c0",
+      "equal": true
+    },
+    {
+      "title": "Store Templates",
+      "start": 659,
+      "end": 790,
+      "parent_sha256": "f6fc7107b19b26e81553ec121559682aa3757f3b09a3da224058d5c85cf7b359",
+      "candidate_sha256": "f6fc7107b19b26e81553ec121559682aa3757f3b09a3da224058d5c85cf7b359",
+      "equal": true
+    },
+    {
+      "title": "Raw-contact exclusion",
+      "start": 519,
+      "end": 519,
+      "parent_sha256": "45efff0dfa0d7626cc58923a8348968e663ebdea52667bd98af396f42978ffef",
+      "candidate_sha256": "45efff0dfa0d7626cc58923a8348968e663ebdea52667bd98af396f42978ffef",
+      "equal": true
+    },
+    {
+      "title": "RUL-13 default",
+      "start": 779,
+      "end": 786,
+      "parent_sha256": "520a7cca3baadf0956e754529cf42b64aeadf4577e769b716067eca2d36ebbe1",
+      "candidate_sha256": "520a7cca3baadf0956e754529cf42b64aeadf4577e769b716067eca2d36ebbe1",
+      "equal": true
+    }
+  ]
+}

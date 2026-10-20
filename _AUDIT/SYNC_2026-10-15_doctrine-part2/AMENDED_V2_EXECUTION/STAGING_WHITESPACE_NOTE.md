@@ -1,0 +1,1 @@
+The full added-record whitespace check reports preserved patch context blank lines, source quotations/trailing spaces, and CRLF TSV records. These immutable approved evidence bytes are retained exactly. The seven canonical path staged whitespace check passes; 101 hashes and exact sealed-record hashes pass. No approved bytes were normalized.

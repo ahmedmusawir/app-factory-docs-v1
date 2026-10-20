@@ -1,0 +1,292 @@
+--- 02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md
++++ 02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md
+@@ -173,7 +173,7 @@
+ 
+ > **CONVERSION:** the Architect **PRE-AUTHORS** `DATA_CONTRACT.md` from Brain Drain evidence — the Engineer consumes and honors it.
+ > **GREENFIELD:** the Architect authors `DATA_CONTRACT.md` from the approved APP_BRIEF before Design. The Designer authors UI_SPEC; the Architect reconciles the assembled package. The Engineer consumes the approved contracts. The canonical DATA_CONTRACT template remains in §12.
+-> Same artifact name — different author, different moment. Router: APP_FACTORY_BLUEPRINT, "Which Pipeline Am I In?".
++> The Architect authors `DATA_CONTRACT.md` in both runs; only the evidence base and moment differ: conversion uses Brain Drain evidence and is pre-authored; greenfield uses the approved APP_BRIEF before Design. Router: APP_FACTORY_BLUEPRINT, "Which Pipeline Am I In?".
+ 
+ ### Pre-Flight Checklist
+ 
+@@ -252,9 +252,9 @@
+         │
+         ▼
+ KIT READ — STARTER_KIT_HANDBOOK
+-   Read the handbook, treat it as ASPIRATIONAL — verify every load-bearing
+-   claim against disk (RECON_QUESTIONNAIRE §0). Where handbook and
+-   filesystem disagree, the filesystem wins.
++   Read the handbook, treat it as ASPIRATIONAL — verify every load-bearing claim against disk (RECON_QUESTIONNAIRE §0).
++   Disk establishes implementation facts; approved briefs govern scope and governing documents control their subjects.
++   Record handbook drift; route genuine requirements conflicts to the Director.
+         │
+         ▼
+ KIT AUDIT — FRONTEND_FIRST_PLAYBOOK §0
+@@ -1382,7 +1382,7 @@
+ 
+ Every newly authored module includes a complete, module-specific `QAM/` prepared by the Architect from `03_BUILD_METHODOLOGY/_templates/QAM/`. QA Lead owns the reusable playbook and standing requirements. Engineer fills factual engineering records and handoff; QA Executor performs independent Q1 recon and test planning; QA Lead approves the plan; Director releases execution; QA Executor performs Q2 and authorized retest; QA Lead adjudicates and certifies. `QAM_PLAYBOOK.md` owns this packaging and sequence. Existing modules already in flight retain their recorded sequence until an attributable amendment.
+ 
+-When code is complete and tested, Engineer hands off to Operations/Deployment.
++When code is complete and self-verified, the Engineer hands the candidate and factual QAM engineering handoff to independent QA on the Director-created QA branch; Operations/Deployment receives the package only after QA Lead certification and Director release (see QAM_PLAYBOOK §3 and DEPLOYMENT_PLAYBOOK §3).
+ 
+ ### Handoff Package Contents
+ 
+@@ -1392,7 +1392,9 @@
+ ├── APP_BRIEF.md (from Architect)
+ ├── UI_SPEC.md (from Designer)
+ ├── DATA_CONTRACT.md
++├── ACCEPTANCE_SPEC.md (from Architect)
+ ├── Working Code (tested)
++├── QAM/ (module QA pack: ENGINEERING_HANDOFF, approved plan, results, certificate)
+ ├── README.md (setup instructions)
+ └── Deployment Guide
+ ```
+@@ -1599,7 +1601,7 @@
+ 
+ | Version | Date | Change |
+ |---|---|---|
+-| 1.3 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-004, FC-005, FC-008, FC-014, FC-015, FC-017, FC-018, FC-027, MC-06, MC-07, RUL-01, RUL-05, RUL-09, RUL-12, W19, W23 |
++| 1.3 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-004, FC-005, FC-008, FC-014, FC-015, FC-017, FC-018, FC-027, MC-06, MC-07, RUL-01, RUL-05, RUL-09, RUL-12, W19, W23; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) |
+ | 1.2 | 2026-07-07 | **Wave 2B — two-track structural restructure (F-028).** Reorganized into PART I Common Doctrine / PART II Kit Track (dominant lane, described first) / PART III Pipeline Track (original Python/CLI doctrine retained verbatim) / PART IV Shared Reference / PART V Agent Conduct / Ship. NEW §2 Phase 0 Recon-Executor role — the Engineer answers RECON_QUESTIONNAIRE read-only and produces the Recon Report the Architect consumes (F-027). §3 inputs rewritten to match DESIGNER_PLAYBOOK §10 + HANDOFF_PACKAGE_PLAYBOOK: greenfield = token file (PRIMARY) + style tile/screen HTML+PNG + UI_SPEC + component manifest (screenshots removed as greenfield input — the F-026 mismatch); conversion = 4-file package + `_design/` + `_extraction/`; per-pipeline DATA_CONTRACT ownership stated in §3 and §12 (F-029). NEW §5 Kit Track: recon → kit read (aspirational, verify) → Kit Audit → FFM execution as the primary work mode, with pointers to FRONTEND_FIRST_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, FFM_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK (F-027; F-035 bridge). §15 Karpathy Protocol marked ALL-AGENT doctrine (D-011), Blueprint pointer connected; §15/§16 numbers PINNED as stable IDs. New anti-pattern: "Wrapping What the Kit Provides / Building on Unverified Kit Claims" (Run 001; F-039 antibody). Moves, all byte-faithful: old §4–§9 → §6–§11, §10 → §12, §11 → §13, §13 → §14, §12 → §17, §14 → Appendix A. §1 updated (Designer v2.0 diagram, recon + FFM responsibilities). Standard header (F-018); "AI App Factory" → "App Factory". |
+ | 1.1 | Feb 2026 | Added Karpathy Protocol (Section 15), Session Memory Protocol (Section 16). |
+ | 1.0 | — | Baseline: role, inputs, systems discipline, CLI-first pattern, file-state contracts, build sequence, testing strategy, cloud-native engineering, provider abstraction, DATA_CONTRACT template, type-specific considerations, operations handoff, anti-patterns, field lessons. |
+--- 03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md
++++ 03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md
+@@ -425,6 +425,8 @@
+ );
+ expect(JSON.parse(stored!).state.couponCode).toBe(expectedCode); // approved non-sensitive project fixture only
+ ```
++
++No persistent raw contact information is stored in browser storage by default; any approved exception names the fields, purpose, retention period and owner, with clearing/invalidation behavior.
+ 
+ The UI proves the user sees the right thing. The persistent state proves the system actually did the right thing. UIs can lie (e.g., showing optimistic state that doesn't match the store).
+ 
+@@ -888,26 +890,9 @@
+ 
+ E2E tests need users with specific subscription tiers. Automating Stripe Checkout in a browser is brittle (Stripe changes their DOM). Solution: insert subscription rows directly into Supabase via the admin client, as if the webhook had already fired.
+ 
+-```typescript
+-export async function seedSubscription(userId: string, tier: TestTier) {
+-  const { error } = await supabaseAdmin.from("subscriptions").upsert(
+-    {
+-      user_id: userId,
+-      tier,
+-      status: "active",
+-      stripe_customer_id: `cus_test_${userId.slice(0, 8)}`,
+-      stripe_subscription_id: `sub_test_${userId.slice(0, 8)}`,
+-      current_period_start: new Date().toISOString(),
+-      current_period_end: new Date(
+-        Date.now() + 30 * 24 * 60 * 60 * 1000,
+-      ).toISOString(),
+-      cancel_at_period_end: false,
+-    },
+-    { onConflict: "user_id" },
+-  );
+-  if (error) throw new Error(`Failed to seed subscription: ${error.message}`);
+-}
+-```
++**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
++
++Privileged seeding and admin-client construction in test helpers run only behind the Director-approved test-project allowlist and authorized-test-identity guard above; fail closed on mismatch, missing identity or unknown target.
+ 
+ Synthetic Stripe IDs (`cus_test_*`, `sub_test_*`) work because the gating logic only reads `tier` and `status` from the row — it never calls the Stripe API to verify the subscription ID.
+ 
+@@ -915,19 +900,9 @@
+ 
+ ### Supabase admin client in E2E helpers
+ 
+-```typescript
+-import { createClient } from "@supabase/supabase-js";
+-import * as dotenv from "dotenv";
+-
+-// Playwright runs outside Next.js — must load .env.local manually
+-dotenv.config({ path: ".env.local" });
+-
+-export const supabaseAdmin = createClient(
+-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+-  process.env.SUPABASE_SECRET_KEY!,
+-  { auth: { autoRefreshToken: false, persistSession: false } },
+-);
+-```
++**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
++
++Privileged seeding and admin-client construction in test helpers run only behind the Director-approved test-project allowlist and authorized-test-identity guard above; fail closed on mismatch, missing identity or unknown target.
+ 
+ The `dotenv` import is required because Playwright runs in its own Node process, not inside Next.js. Without it, env vars from `.env.local` aren't available to the helpers.
+ 
+@@ -1652,7 +1627,7 @@
+ | 1.0 | 2026-05-03 | Initial playbook — four-layer testing strategy codified from StarkReads (Subscription v1: Supabase + Stripe, 136 tests across 3 layers). |
+ | 2.0 | 2026-05-11 | Backend-agnostic generalization: layered principles-then-appendices architecture, REST fetch-mock patterns alongside Supabase chain mocks, Stripe wrapper-vs-constructor decision tree, fixture discovery, diagnostic principles, companion artifacts (CHANGELOG / SECURITY_FINDINGS / CLEANUP_BACKLOG). Synthesized with Dockbloxx field notes (182 tests across 4 layers). Tail carried a stale "DRAFT" label despite operating as doctrine (F-036). |
+ | 2.1 | 2026-07-08 | **Wave 3 (audit sync).** Status resolved: "DRAFT" tail label dropped — the doc has operated as doctrine since May (F-036); this Version History table added (D-018). Isolation ended (F-035): "Where This Doc Sits" section added — outbound refs to STARTER_KIT_HANDBOOK (runner/config ground truth) + RECON_QUESTIONNAIRE (Q1.7), inbound executors named (SFP Phase 8, FFM verification/, FRONTEND_BUILD_PHASE §9 — their pointers to here landed in SFP v1.2 / BUILD_PHASE v1.2.1; FFM verification-guide pointer queued). §3.8 added: run-verification rituals L17/L25/L26 promoted from RECON_QUESTIONNAIRE §12 — canonical doctrine home is now here, written at principle level (RECON keeps the recon-time executable form; its pointer-back is a queued touch). Standard header block (F-018). Content otherwise untouched. |
+-| 2.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: DEC-03, FC-020, FC-021, FC-022, FC-023, FC-024, FC-030, FC-031, FC-040, FC-063, RUL-11, RUL-12, RUL-13 |
++| 2.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: DEC-03, FC-020, FC-021, FC-022, FC-023, FC-024, FC-030, FC-031, FC-040, FC-063, RUL-11, RUL-12, RUL-13; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) |
+ 
+ ---
+ 
+--- 04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md
++++ 04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md
+@@ -610,6 +610,8 @@
+   stockQuantity: wooProduct.stock_quantity,
+ });
+ 
++// Independent normalization-step example: fetchProducts() returns Promise<Product[]>.
++// This array-returning step is not the typed-outcome service used by the route below.
+ export const fetchProducts = async (): Promise<Product[]> => {
+   const response = await fetch(API_ENDPOINTS.PRODUCTS);
+   const wooProducts: WooCommerceProduct[] = await response.json();
+@@ -782,6 +784,8 @@
+ 
+ ### Graceful Degradation Pattern
+ 
++This caller uses the §3 typed-outcome contract: `fetchProducts()` returns a discriminated outcome with `status` equal to `success`, `not-found`, `unavailable`, `invalid` or `forbidden`; only `success` carries `items: Product[]`. This example assumes a project-approved public-catalog failure policy permitting the generic empty-state UI on non-success; this is not an entitlement decision or a cached successful result. It does not call the independent array-returning normalization example.
++
+ ```typescript
+ // src/app/(public)/shop/page.tsx
+ 
+@@ -790,10 +794,10 @@
+ import { EmptyState } from '@/components/common/EmptyState';
+ 
+ export default async function ShopPage() {
+-  const { items: products, error } = await fetchProducts();
+-
+-  // Graceful degradation: show empty state instead of crashing
+-  if (error || products.length === 0) {
++  const outcome = await fetchProducts();
++
++  // Apply the declared public-catalog failure policy; do not treat failure as success.
++  if (outcome.status !== 'success' || outcome.items.length === 0) {
+     return (
+       <EmptyState
+         title="No products available"
+@@ -806,7 +810,7 @@
+     );
+   }
+ 
+-  return <ProductList products={products} />;
++  return <ProductList products={outcome.items} />;
+ }
+ ```
+ 
+@@ -850,6 +854,8 @@
+ ## 9. Performance Patterns
+ 
+ ### ISR and Revalidation
++
++Independent ISR example: this `fetchProducts()` returns the endpoint’s raw JSON payload, with no normalization or typed-outcome envelope; it is not the §3 service or the caller above. The project must declare and validate that endpoint’s wire contract and failure/cache policy before implementation; this example only illustrates the revalidation option.
+ 
+ ```typescript
+ // Static generation with revalidation
+@@ -1203,7 +1209,7 @@
+ |---|---|---|
+ | 1.0 | (original, date unknown) | Initial manual: service-layer philosophy, folder structure, implementation, API route patterns, external integration, Supabase pattern, transformation, error handling, performance, quick reference, webhooks, CRM integration, data sync. Unversioned until the 2026-07 audit. |
+ | 1.1 | 2026-07-08 | **Wave 4 (audit sync).** THE KIT EXCEPTION box added at §1 — the Lesson-2 antibody at its root: kit primitives consumed directly, the kit's auth IS the service layer, Kit Audit before authoring any service (F-039 — the blanket rule that produced the Run 001 authService near-miss is now amended at the source). §7 gained the factory wire-format conventions (snake_case wire / camelCase UI; service layer owns the boundary — HANDOFF DATA_CONTRACT discipline). Cross-References section added — outbound-zero ended (F-035). Standard header (F-018) + this history table (D-018). |
+-| 1.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-021, FC-056, FC-057, FC-058, FC-059, FC-061, FC-063, FC-064, FC-066, FC-070, RUL-11 |
++| 1.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-021, FC-056, FC-057, FC-058, FC-059, FC-061, FC-063, FC-064, FC-066, FC-070, RUL-11; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) |
+ 
+ ---
+ 
+--- 04_REFERENCE_MANUALS/AUTH_MANUAL.md
++++ 04_REFERENCE_MANUALS/AUTH_MANUAL.md
+@@ -1122,6 +1122,7 @@
+ 2. **Don't store sensitive data in localStorage**
+    - Accessible via JavaScript
+    - Use secure cookies instead
++   - No persistent raw contact information is stored in browser storage by default; any approved exception names the fields, purpose, retention period and owner, with clearing/invalidation behavior.
+ 
+ 3. **Don't expose API keys**
+    - Never commit to git
+@@ -1370,7 +1371,7 @@
+ | 1.2 | 2026-06-28 | Removed the deleted `POST /api/auth/superadmin-add-user` route (creation via `addMember`/`addUser` server actions); documented the Mark IV `handle_new_user` trigger applying the metadata `role` + `full_name` at creation. Kit Hardening Gate 10. |
+ | 1.3 | 2026-07-08 | **Wave 4 — the F-042 role-doctrine correction.** Role storage doctrine corrected everywhere it lived: the `user_roles` TABLE is the single source of truth (kit `supabase/setup.sql`; server-side resolution via `get-user-role.ts`); the v1.2 "Metadata-driven roles — NOT separate tables" philosophy line was FALSE against the kit's own filesystem (RECON_WAVE0 Q1 ground-truth). Key Principle #5 rewritten; "User Metadata Schema" section → "Where Roles Live" (table home + creation-time-transport nuance + ⛔ never read authz from `user_metadata`, recon Q3.4); §8 metadata-reading `getUserRole` sample replaced with the canonical-path description + read-the-kit-on-disk pointer (no drifting code copies — D-015); legacy `is_qr_*` (QR-era) store/pattern snippets marked with advisories; troubleshooting realigned to the table model; registration flow wording corrected. Kit hardening ticket referenced without documenting the vector. Canonical cross-refs (F-032/F-011); standard header (F-018). Full code-sample resync vs the kit = queued kit-verification touch. |
+ | 1.4 | 2026-08-05 | **Navbar Saga promotion.** New § "Server-Resolved Identity for UI (The Navbar Law)" inserted after Server-Side Protection (RBAC): identity renders from server props, never from client stores. Four hard rules. | navbar-saga |
+-| 1.5 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-021, FC-033, FC-034, FC-035, FC-036, FC-038, FC-039, FC-041, FC-042, FC-043, FC-044, FC-063, FC-066, RUL-11 |
++| 1.5 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-021, FC-033, FC-034, FC-035, FC-036, FC-038, FC-039, FC-041, FC-042, FC-043, FC-044, FC-063, FC-066, RUL-11; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) |
+ 
+ ---
+ 
+--- 04_REFERENCE_MANUALS/DATABASE_MANUAL.md
++++ 04_REFERENCE_MANUALS/DATABASE_MANUAL.md
+@@ -417,18 +417,19 @@
+ 
+ ### Service Role Bypass
+ 
+-When using the service role key (server-side), RLS is bypassed. This is appropriate for:
+-- API routes
+-- Background jobs
+-- Admin operations
++A service-role client bypasses RLS and is appropriate only inside an independently authorized elevated operation:
++- Background jobs with operation-local authorization
++- Admin operations with operation-local authorization
++
++An API route is not itself a reason to bypass RLS; never use a service-role client as the default route client (see AUTH_MANUAL, Service-Role Capability Boundary).
+ 
+ ```typescript
+-// Server-side: Service role bypasses RLS
++// Construct only inside an independently authorized elevated operation, never as a default route client.
+ import { createClient } from '@supabase/supabase-js';
+ 
+ const supabase = createClient(
+   process.env.SUPABASE_URL!,
+-  process.env.SUPABASE_SERVICE_ROLE_KEY! // Bypasses RLS
++  process.env.SUPABASE_SERVICE_ROLE_KEY! // Operation-local authorization is required before construction.
+ );
+ ```
+ 
+@@ -1158,7 +1159,7 @@
+ |---|---|---|
+ | 1.0 | (original, date unknown) | Initial manual: schema-first philosophy, design patterns, data types, relationships, RLS, indexing, JSONB, type generation, query patterns, migrations, integrity, performance. Unversioned until the 2026-07 audit. |
+ | 1.1 | 2026-07-08 | **Wave 4 — role-doctrine surgery (F-041, security-classed).** §2: new "Roles Table Pattern" — `user_roles` as the single authorization home (labeled PATTERN SQL; kit `setup.sql` = ground truth), `handle_new_user()` creation-time transport explained, ⛔ forbidden box (no role storage OR authz reads from `user_metadata` — recon Q3.4; no role columns on profile mirrors); mirror-table pattern stripped of its `role` column + sync example rewritten to the transport model. §5: the `raw_user_meta_data` RLS policy variant REMOVED (it was shown as a peer option — it is the forbidden pattern); `user_roles` policy stands alone + ⛔ marker (ruling: reconcile BOTH examples). Doc now speaks ONE role doctrine, aligned with AUTH_MANUAL v1.3 (F-042 outcome). "When Schema-First Applies" note + FRONTEND_FIRST pointers added (F-040). GHL/QR fossil examples neutralized (naming table, mapping-table default, comments — recon Q8.5 class). Standard header (F-018); Cross-References section (F-035); this history table (D-018). |
+-| 1.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-003/096, FC-033, FC-034, FC-036, FC-037, FC-038, FC-039, FC-045, RUL-11 |
++| 1.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-003/096, FC-033, FC-034, FC-036, FC-037, FC-038, FC-039, FC-045, RUL-11; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) |
+ 
+ ---
+ 
+--- 04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md
++++ 04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md
+@@ -202,7 +202,7 @@
+ 
+ Use one validated checkout contract across form, state, route and service. The request carries billing.email, validated line identifiers/quantities, shippingMethod and couponCode; it carries no authoritative monetary values. The response identifies the authorized order/payment attempt or a typed generic failure. The server pricing operation from the same contract supplies totals. Revisions to items, shipping or coupon invalidate the old payment binding before a new attempt is released.
+ 
+-The checkout interaction contract includes shippingCost and couponDiscount as display estimates, couponCode, setCoupon(code) and clearCoupon(), alongside the existing checkout fields. The server revalidates shipping and coupons. STATE_MANAGEMENT_MANUAL owns the shared store shape; ECOMMERCE_AND_PAYMENTS_MANUAL refers to it. Personal fields follow the approved account-transition and retention policy.
++The checkout interaction contract includes shippingCost and couponDiscount as display estimates, couponCode, setCoupon(code) and clearCoupon(), alongside the existing checkout fields. The server revalidates shipping and coupons. STATE_MANAGEMENT_MANUAL owns the shared store shape; ECOMMERCE_AND_PAYMENTS_MANUAL refers to it. Personal fields follow the approved account-transition and retention policy in STATE_MANAGEMENT_MANUAL. No persistent raw contact information is stored in browser storage by default; any approved exception names the fields, purpose, retention period and owner, with clearing/invalidation behavior.
+ 
+ ---
+ 
+@@ -560,7 +560,7 @@
+ |---|---|---|
+ | 1.0 | (original, date unknown) | Initial manual: payment architecture, Stripe setup, PaymentIntent flow, checkout, orders, cart logic, checkout store, coupons, webhooks, testing, security checklist. Unversioned until the 2026-07 audit. |
+ | 1.1 | 2026-07-08 | **Wave 4 (audit sync).** Scope Declaration added at top — this manual = headless WooCommerce + Stripe ONE-TIME commerce; recurring → STRIPE_SUBSCRIPTIONS_PLAYBOOK; Supabase-native commerce = extend, don't assume (F-040 undeclared-jurisdiction fix; "THE E-commerce Module" framing dropped). Self-contradicting Stripe pin removed (`apiVersion: '2023-10-16' // Use latest`) → verify-per-repo note (F-038 pattern). Cross-References section (F-035); standard header (F-018); this history table (D-018). |
+-| 1.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-047, FC-050, FC-051, FC-052, FC-053, FC-054, FC-055, FC-059, FC-060, FC-062, FC-063, FC-067, FC-068, RUL-11 |
++| 1.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-047, FC-050, FC-051, FC-052, FC-053, FC-054, FC-055, FC-059, FC-060, FC-062, FC-063, FC-067, FC-068, RUL-11; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) |
+ 
+ ---
+ 
+--- CHANGELOG.md
++++ CHANGELOG.md
+@@ -40,7 +40,7 @@
+ | 2026-10-18 | ARCHITECT_PLAYBOOK v2.3 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-004, FC-005, FC-008, FC-014, FC-017, FC-027, MC-06, RUL-01, RUL-05, RUL-09, RUL-12, W18, W23 |
+ | 2026-10-18 | ARCHITECT_QUESTIONNAIRE v2.3 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-016 |
+ | 2026-10-18 | DESIGNER_PLAYBOOK v2.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-004, FC-005, FC-008, FC-016, FC-017, FC-018, FC-027, FC-084, MC-06, MC-07, RUL-01, RUL-05, RUL-09, RUL-12, W23 |
+-| 2026-10-18 | ENGINEER_PLAYBOOK v1.3 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-004, FC-005, FC-008, FC-014, FC-015, FC-017, FC-018, FC-027, MC-06, MC-07, RUL-01, RUL-05, RUL-09, RUL-12, W19, W23 |
++| 2026-10-18 | ENGINEER_PLAYBOOK v1.3 | Factory DocSet sync; preserved outgoing original; MC correction pass; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) | FC-004, FC-005, FC-008, FC-014, FC-015, FC-017, FC-018, FC-027, MC-06, MC-07, RUL-01, RUL-05, RUL-09, RUL-12, W19, W23 |
+ | 2026-10-18 | HANDOFF_PACKAGE_PLAYBOOK v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-009, FC-017, FC-018, FC-019, FC-027, MC-01, RUL-09, W20 |
+ | 2026-10-18 | RECON_QUESTIONNAIRE v0.6 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-001, FC-005, FC-007, FC-014, FC-033, FC-034, FC-069, MC-02, MC-04, MC-13, RUL-03, RUL-12, W17 |
+ | 2026-10-18 | APP_FACTORY_SKILLS_PLAYBOOK v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-005, FC-006, FC-014, FC-021, FC-087 |
+@@ -51,12 +51,12 @@
+ | 2026-10-18 | FRONTEND_BUILD_PHASE_PLAYBOOK v1.3.0 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-032, FC-071, FC-072, FC-088, RUL-14 |
+ | 2026-10-18 | FRONTEND_FIRST_PLAYBOOK v1.2.0 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-009, MC-01 |
+ | 2026-10-18 | QA_PLAYBOOK v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-005, FC-025, RUL-03, RUL-12, W14, W15, W16 |
+-| 2026-10-18 | TESTING_PLAYBOOK v2.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | DEC-03, FC-020, FC-021, FC-022, FC-023, FC-024, FC-030, FC-031, FC-040, FC-063, RUL-11, RUL-12, RUL-13 |
+-| 2026-10-18 | API_AND_SERVICES_MANUAL v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-021, FC-056, FC-057, FC-058, FC-059, FC-061, FC-063, FC-064, FC-066, FC-070, RUL-11 |
++| 2026-10-18 | TESTING_PLAYBOOK v2.2 | Factory DocSet sync; preserved outgoing original; MC correction pass; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) | DEC-03, FC-020, FC-021, FC-022, FC-023, FC-024, FC-030, FC-031, FC-040, FC-063, RUL-11, RUL-12, RUL-13 |
++| 2026-10-18 | API_AND_SERVICES_MANUAL v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) | FC-021, FC-056, FC-057, FC-058, FC-059, FC-061, FC-063, FC-064, FC-066, FC-070, RUL-11 |
+ | 2026-10-18 | APP_ARCHITECTURE_MANUAL v1.4 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-001, FC-009, FC-021, FC-028, FC-033, FC-035, FC-036, FC-041, FC-042, FC-063, FC-066, FC-071, MC-01, RUL-11 |
+-| 2026-10-18 | AUTH_MANUAL v1.5 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-001, FC-021, FC-033, FC-034, FC-035, FC-036, FC-038, FC-039, FC-041, FC-042, FC-043, FC-044, FC-063, FC-066, RUL-11 |
+-| 2026-10-18 | DATABASE_MANUAL v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-001, FC-003/096, FC-033, FC-034, FC-036, FC-037, FC-038, FC-039, FC-045, RUL-11 |
+-| 2026-10-18 | ECOMMERCE_AND_PAYMENTS_MANUAL v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-047, FC-050, FC-051, FC-052, FC-053, FC-054, FC-055, FC-059, FC-060, FC-062, FC-063, FC-067, FC-068, RUL-11 |
++| 2026-10-18 | AUTH_MANUAL v1.5 | Factory DocSet sync; preserved outgoing original; MC correction pass; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) | FC-001, FC-021, FC-033, FC-034, FC-035, FC-036, FC-038, FC-039, FC-041, FC-042, FC-043, FC-044, FC-063, FC-066, RUL-11 |
++| 2026-10-18 | DATABASE_MANUAL v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) | FC-001, FC-003/096, FC-033, FC-034, FC-036, FC-037, FC-038, FC-039, FC-045, RUL-11 |
++| 2026-10-18 | ECOMMERCE_AND_PAYMENTS_MANUAL v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) | FC-047, FC-050, FC-051, FC-052, FC-053, FC-054, FC-055, FC-059, FC-060, FC-062, FC-063, FC-067, FC-068, RUL-11 |
+ | 2026-10-18 | STATE_MANAGEMENT_MANUAL v1.3 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-035, FC-040, FC-046, FC-046-heading, FC-047, FC-048, FC-049, FC-055, FC-067, FC-068, RUL-11, RUL-13 |
+ | 2026-10-18 | STRIPE_SUBSCRIPTIONS_PLAYBOOK v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-047, FC-052, FC-053, FC-054, FC-055, FC-059, FC-063, FC-065, FC-065-confirmed, FC-065-timeout, FC-067, FC-068, RUL-11 |
+ | 2026-10-18 | COMPONENT_REGISTRY v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-003, FC-072, FC-073, FC-081, FC-082, RUL-14 |

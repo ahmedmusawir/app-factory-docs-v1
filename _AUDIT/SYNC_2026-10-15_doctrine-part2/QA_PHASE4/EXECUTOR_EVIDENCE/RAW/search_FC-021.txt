@@ -1,0 +1,20 @@
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:61: 8. Defensive error message assertions for security-sensitive endpoints
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:151: ## Principle 1.8 — Defensive error message assertions for security-sensitive endpoints
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:153: For routes handling money, identity, or PII, the catch-block test asserts two things: the expected user-facing error IS present, and the internal/upstream error is NOT. This catches a class of security regressions where someone "improves" error messages by including the original and accidentally leaks card digits, customer emails, or internal request IDs.
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:269: 4. **Upstream throw** — `mockRejectedValueOnce(new Error(...))`. Assert route returns 500 + **generic** error message that does NOT leak the upstream error text (defensive assertion — see Principle 1.8).
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:625: 1. **Error handling patterns** — what gets logged vs what gets returned. Look for `{ message: error.message }` patterns or anything that passes through upstream errors verbatim.
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:645: 3. **Error-message leak in a catch block:** report the finding with the certified severity and obtain an authorized repair assignment. Replace unsafe responses/logging only within that assignment; QA does not silently implement the fix.
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:908:   if (error) throw new Error(`Failed to seed subscription: ${error.message}`);
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:1040: Most REST APIs use Authorization headers. WooCommerce uses query strings. Implication: **never include the URL in error messages** — it has credentials baked in.
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:1200: ### Defensive error message assertions (Stripe + any payment processor)
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:1211:   console.error("Payment operation failed", { failureClass: "provider_error" });
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:1268: 3. **Credentials never appear in error messages** — log endpoint + status, never the URL with auth params.
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:1321: Patterns specific to regulated environments (HIPAA, SOC2, PCI, GDPR) will be added after the first regulated-environment project ships v1.0, at which point this section gains real case studies grounded in production experience. Until then, Principle 1.8 (defensive error message assertions) is the closest existing analog — applicable to PHI/PII protection in error responses. See Section 4.3 for the implementation pattern.
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:1516: Route handlers log events via `console.log` / `console.error`. Jest reprints these under each test. Seeing `console.error` under a `PASS` line is not a failure. To silence: `jest.spyOn(console, 'error').mockImplementation(() => {})` per test, or `silent: true` globally in config.
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:1587: WooCommerce REST authenticates via `consumer_key` + `consumer_secret` query parameters, not headers. Implication: never include the full URL in error messages — it has credentials baked in. Log the endpoint path and status code instead.
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:813: ### User-Friendly Error Messages
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:818: export const ERROR_MESSAGES = {
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:844:   return ERROR_MESSAGES[code as keyof typeof ERROR_MESSAGES] || ERROR_MESSAGES.UNKNOWN;
+04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md:333:     console.error('Error validating coupon:', error);
+04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md:439:     // 4. Verify error message displayed
+05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md:502: | `Alert` | Persistent inline callout (with variants: default, destructive, warning) | Error messages, warnings, info |

@@ -1,0 +1,10 @@
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:108: export async function GET() {
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:498: export async function GET(
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:1143: ### Manual Sync with Progress Tracking
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:1147: Manual synchronization is an authenticated, role-authorized POST operation with explicit tenant scope. Apply the context’s CSRF protection, rate and concurrency controls. Job acceptance, progress reads and retries enforce the same authorization boundary. GET is read-only and cannot initiate synchronization.
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:1159: Manual synchronization is an authenticated, role-authorized POST operation with explicit tenant scope. Apply the context’s CSRF protection, rate and concurrency controls. Job acceptance, progress reads and retries enforce the same authorization boundary. GET is read-only and cannot initiate synchronization.
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:708: export async function GET(request: NextRequest) {
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:1235: export async function getUserRole() {
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:1261: export async function getUserRole(): Promise<AppRole | null> {
+04_REFERENCE_MANUALS/AUTH_MANUAL.md:507: export async function GET(request: NextRequest) {
+04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md:286: export async function GET(request: NextRequest) {

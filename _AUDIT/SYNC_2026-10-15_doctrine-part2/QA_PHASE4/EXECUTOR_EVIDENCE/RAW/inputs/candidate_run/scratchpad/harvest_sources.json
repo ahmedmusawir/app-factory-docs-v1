@@ -1,0 +1,290 @@
+[
+  {
+    "id": "IN-2026-10-15-01",
+    "old": "WF-01",
+    "title": "Seats and human authority",
+    "body": "\n**Source:** SRC-W05 \u00a72/9/10; SRC-W06 \u00a72/10; SRC-W07 \u00a72/10; later SRC-Q03 \u00a7\u00a74\u20135. **Status:** source-reported rulings plus proposed Factory consolidation. **Correction link:** FC-006, DEC-07.\n\nDefine Director/Operator/Coordinator terminology once. One human may occupy Development, QA, DevOps and release-authority chairs; the responsibilities remain distinct. Define Architect, Engineer, QA Lead, QA Executor and DevOps functions by responsibility rather than permanent model assignment. Claudy/Cody/Jarvis/Sol/Fable are contextual occupants, not permission sets.\n\nQA Lead owns the evidence verdict; Director owns scope/access/release decisions. Engineer self-checks remain engineering claims. QA independence requires a separate session/context as applicable; naming the same persona in different seats does not waive independence.\n\n**Preserve:** human release authority; separate QA judgment; Designer function; DevOps responsibility. **Verify:** all rosters, diagrams and module instructions use the same seat vocabulary and identify context-specific exceptions. Avoid importing the old pilot plan's isolated \u201chuman QA Lead\u201d phrase as a change from the supplied AI-advisory QA Lead/human Director model.\n\n",
+    "path": "factory-intake/01_FACTORY_WORKFLOWS_INTAKE.md",
+    "line": 17
+  },
+  {
+    "id": "IN-2026-10-15-02",
+    "old": "WF-02",
+    "title": "Recon before authoring, with an executable boundary",
+    "body": "\n**Source:** SRC-W05 \u00a73; SRC-W06 \u00a73; SRC-Q03 \u00a78/9. **Status:** existing principle requiring clarification. **Correction link:** FC-014/023, DEC-14.\n\nRequire current repository evidence before authoring scope. Disk establishes implementation facts, not permission to change approved requirements. An observed conflict with scope or policy goes to its owner.\n\nReplace absolute \u201cnothing is created\u201d wording with explicit lanes: recon report and normal response/session/recovery bookkeeping; authorized diagnostics that may create build/cache output; and prohibited product/contract modifications. Name permitted diagnostics and cleanup rather than claiming every build is read-only. For pre-authored BIM sets, revalidate each module's assumptions against its actual execution baseline.\n\n**Preserve:** no implementation before approval; no speculative improvement during recon. **Verify:** a fresh Engineer can collect and save the required evidence without violating the same document's no-write rule.\n\n",
+    "path": "factory-intake/01_FACTORY_WORKFLOWS_INTAKE.md",
+    "line": 27
+  },
+  {
+    "id": "IN-2026-10-15-03",
+    "old": "WF-03",
+    "title": "Planning artifact ownership and timing",
+    "body": "\n**Source:** SRC-W05 \u00a74/11/12 B-1, B-2, E-1 and \u00a713; SRC-W01. **Status:** DATA_CONTRACT ownership is reported as ruled in the source; UI_SPEC final ownership explicitly remains proposed. **Correction link:** FC-008/015/016/017/019/027, DEC-10/11/12.\n\nPropose a complete producer/consumer/approval table for APP_BRIEF, DATA_CONTRACT, UI_SPEC and any required FILE_TREE. The August model places greenfield DATA_CONTRACT authorship with the Software Architect before Design. Designer receives approved product intent and data shapes, with typed mocks permitted behind the service seam. Do not allow unapproved design fields to become backend requirements by accident.\n\nThe source proposes Designer ownership of final UI_SPEC, reviewed by the Architect. Reconcile this with the existing \u201cArchitect drafts, Designer revises\u201d contract and decide explicitly. Decide whether FILE_TREE remains mandatory and, if retained, who produces it and when. Distinguish project component manifest from Factory component registry. Resolve pipeline-specific variations instead of forcing incompatible flows into one template.\n\n**Preserve:** approved data contract, design approval, clear artifact status and recipient completeness checks. **Verify:** each required artifact has a real template/producer, no circular handoff, and no unresolved authoring ownership disguised as an approved rule.\n\n",
+    "path": "factory-intake/01_FACTORY_WORKFLOWS_INTAKE.md",
+    "line": 37
+  },
+  {
+    "id": "IN-2026-10-15-04",
+    "old": "WF-04",
+    "title": "Architect assembles and freezes the integrated FFM",
+    "body": "\n**Source:** SRC-W05 \u00a74.1\u20134.4 and amendment B-3; SRC-W01. **Status:** source-reported ruling proposed for consistent propagation. **Correction link:** CF-02/04, FC-025/026, DEC-13.\n\nReturn Designer and extraction outputs to the Architect for final assembly, completeness verification and contract freeze before Engineer handoff. The simplified diagram's two streams joining a folder do not eliminate this responsibility.\n\nRetain approved tokens, style tile, screen artifacts, UI_SPEC and component inventory. HTML/PNG obligations apply according to the actual interface/design contract, not indiscriminately to non-visual modules. Preserve the kit infrastructure exception: use complete kit auth primitives directly rather than inventing a redundant project auth service.\n\nFreeze the approved contract; allow declared engineering handoff, QA evidence, rulings and retrospective lanes. A whole-folder immutable rule cannot coexist with required in-folder outputs.\n\n**Verify:** the package contains explicit entry/read order, complete dependencies, approved acceptance requirements and an allowed-output map. Diagram and prose must both show Architect assembly.\n\n",
+    "path": "factory-intake/01_FACTORY_WORKFLOWS_INTAKE.md",
+    "line": 47
+  },
+  {
+    "id": "IN-2026-10-15-05",
+    "old": "WF-05",
+    "title": "Engineering completion includes handoff",
+    "body": "\n**Source:** SRC-W05 \u00a7\u00a75\u20136; SRC-W06 \u00a7\u00a75\u20136; SRC-Q03 \u00a7\u00a75/8. **Status:** proposed consolidation. **Correction link:** FC-025/026 and CF-02.\n\nRetain Plan Mode, approved scope, bounded implementation, internal checks and self-verification. Acceptance requirements come from the pre-build approved contract. Engineer maintains factual completion claims and may propose errata, but cannot redefine success to fit the implementation.\n\nThe original engineering assignment includes the complete QA handoff: candidate reference to be resolved after commit, changed files, environment, reproduction, engineering results, known limitations and factual QAM manifest where applicable. No routine extra mission is needed solely to write that handoff.\n\n**Preserve:** internal Development gates distinct from independent Gate Q; Director Git authority under applicable project rules. **Verify:** QA can reconstruct how to run the candidate and identify which statements are claims rather than independent results.\n\n",
+    "path": "factory-intake/01_FACTORY_WORKFLOWS_INTAKE.md",
+    "line": 59
+  },
+  {
+    "id": "IN-2026-10-15-06",
+    "old": "WF-06",
+    "title": "BIM campaigns and lifecycle terminology",
+    "body": "\n**Source:** SRC-W06 \u00a7\u00a71/4/5/9; SRC-W04. **Status:** proposed consolidation with glossary reconciliation. **Correction link:** FC-007 and CF-02.\n\nRetain sequenced, bounded BIM work; allow author-all-upfront or plan-names/author-just-in-time when the Director chooses. Execution baseline recon and retrospective learning remain meaningful in both patterns. A pre-authored future module is revalidated when released for execution.\n\nThe uploaded model expands BIM as \u201cBackend Integration Module\u201d; other campaign usage includes \u201cBackend Implementation Module.\u201d Reconcile the current Hub glossary and Director usage rather than globally replacing the acronym's expansion from one source. Likewise, distinguish product phases, module internal stages, Factory CREATE/MATURE/OPERATE loops and the proposed review engines. They are different axes, not interchangeable numbering.\n\n**Verify:** one lifecycle crosswalk explains module vs phase vs gate; workflow diagrams do not imply mandatory FFM for every backend-only project.\n\n",
+    "path": "factory-intake/01_FACTORY_WORKFLOWS_INTAKE.md",
+    "line": 69
+  },
+  {
+    "id": "IN-2026-10-15-07",
+    "old": "WF-07",
+    "title": "QA execution by evidence needs",
+    "body": "\n**Source:** SRC-W05 \u00a77; SRC-W06 \u00a7\u00a77\u20139; SRC-Q03 \u00a7\u00a74/8/17. **Status:** older FFM human-execution rule conflicts with later QAM practice; adoption scope open under ND-01/04.\n\nThe August FFM model uses human browser execution and reserves Codex for technical checks. Later RRM reports demonstrate agent browser matrices. Propose that the QA Lead allocates checks according to tool capability, evidence needs and authorized environment. Human product/visual judgment stays where it adds value; repetitive matrices need not default to Tony.\n\nRetain independent plan approval and verdict. Define the active certification branch and cleanup sequence explicitly. The old BIM \u201cabandon QA branch by default\u201d rule is superseded in the supplied RRM/QAM lineage by a forward-moving QA line carrying approved repairs and durable certification records.\n\n**Verify:** QA never edits product code under its execution role, never self-certifies, and never treats automation capability as permission for broader side effects. Do not retroactively reorder an already approved live module.\n\n",
+    "path": "factory-intake/01_FACTORY_WORKFLOWS_INTAKE.md",
+    "line": 79
+  },
+  {
+    "id": "IN-2026-10-15-08",
+    "old": "WF-08",
+    "title": "DevOps as a shared function",
+    "body": "\n**Source:** SRC-W07; SRC-W05 \u00a78; SRC-W03. **Status:** proposed owning doctrine, several reported prior rulings. **Correction link:** FC-011, DEC-18.\n\nUse a DevOps contract covering deployment readiness, package authoring, authorized execution, release identity, rollback planning and Gate D evidence. Identify Director, Architect and Engineer responsibilities. Separate QA verdict from release authorization and deployment execution.\n\nThe supplied model's Cloud Run package uses `init-app.sh`, `cloudbuild.yaml`, `Dockerfile`, `deploy.sh` and a checklist. Correct the diagram's older filenames if this profile is adopted. These are profile-specific names; do not impose them on Vercel or Python deployments. Classify secrets by build/runtime use and public/server-only exposure, and identify human, build-service and runtime actors.\n\n**Preserve:** no implied cloud authority, exact deployed revision, Gate D separate from build/health checks. **Verify:** platform profiles point to real mechanisms and required approval; version-sensitive technical commands are verified at implementation time, not copied from August as current advice.\n\n",
+    "path": "factory-intake/01_FACTORY_WORKFLOWS_INTAKE.md",
+    "line": 89
+  },
+  {
+    "id": "IN-2026-10-15-09",
+    "old": "WF-09",
+    "title": "Deployment identity, rollback and redeployment limits",
+    "body": "\n**Source:** SRC-W07 \u00a7\u00a73/6\u20139/13; SRC-W05 \u00a7\u00a78\u20139. **Status:** proposed correction to overbroad source wording. **Correction link:** CF-14, DEC-17/18.\n\nRecord repo \u2192 commit \u2192 build/image \u2192 deployed revision \u2192 environment \u2192 route/domain identity as applicable. Preserve the tested-product equivalence check through documentation-only successors. Gate D verifies the actual target revision.\n\nDo not generalize \u201credeploy runs Phase 3 only\u201d without checking changed configuration, secrets, permissions, migrations and deployment prerequisites. Do not promise traffic rollback plus Git revert restores all data or external effects. Require a rollback or recovery plan suited to the changed surfaces, with operator responsibility and evidence.\n\nThe source explicitly leaves staging-to-production promotion and monitoring/incident detection incomplete. Record those gaps and scope decisions; do not claim this intake supplies a complete operations manual.\n\n",
+    "path": "factory-intake/01_FACTORY_WORKFLOWS_INTAKE.md",
+    "line": 99
+  },
+  {
+    "id": "IN-2026-10-15-10",
+    "old": "WF-10",
+    "title": "Context-specific Git and sync authority",
+    "body": "\n**Source:** SRC-W05 \u00a75.2; SRC-W06 \u00a76; SRC-W07 \u00a72; SRC-W10; existing correction index. **Status:** reconciliation required. **Correction link:** FC-012, DEC-18/21.\n\nUse a context \u00d7 action \u00d7 seat matrix. Project engineering's Director-controlled Git/cloud rules do not erase the sync skill's bounded Hub-specific Git exception; the exception does not grant arbitrary project Git/cloud permission. Explicit current task instructions remain controlling: the present folder-preparation task authorizes no Git mutations or full sync.\n\nProject `--no-ff` examples are not universal Hub merge policy. The doc-sync flow must follow the installed skill and Director gates. Include post-merge local main refresh and branch-baseline verification in the appropriate workflow so GitHub merge is not mistaken for local synchronization. Preserve uncommitted work before switching or pulling.\n\n",
+    "path": "factory-intake/01_FACTORY_WORKFLOWS_INTAKE.md",
+    "line": 109
+  },
+  {
+    "id": "IN-2026-10-15-11",
+    "old": "WF-11",
+    "title": "Review engines, targeted repair and certification",
+    "body": "\n**Source:** SRC-W08/W09/W11; SRC-R01/RRM_PLAYBOOK.md; current campaign boundary. **Status:** scope decision ND-02; supporting concepts proposed.\n\nThe three-engine text proposes per-module build/QA, per-phase review/improvement and final whole-application review. Other later 10X direction described review after all implementation phases. Do not conflate these or automatically add every review stage to mainstream projects. Present the alternatives with their intended scope to Tony.\n\nWhere review is approved, preserve the useful sequence: identify/freeze specimen, obtain independent review evidence, adjudicate material findings, approve bounded repairs, verify those repairs and required regression. Original reviewer re-review is conditional on the approved verification plan, not an unqualified rule that every issue requires the same old session.\n\nA review \u201cboth PASS\u201d arrow is insufficient to define Gate Q, Gate D or release authority. RRM handles accepted rework; QA certifies the approved contract; Director releases. Define any phase/application certificate separately before using that label.\n\n",
+    "path": "factory-intake/01_FACTORY_WORKFLOWS_INTAKE.md",
+    "line": 117
+  },
+  {
+    "id": "IN-2026-10-15-12",
+    "old": "WF-12",
+    "title": "One owning document and synchronized visuals",
+    "body": "\n**Source:** all workflow sources and their amendment ledgers. **Status:** placement proposal ND-05. **Correction link:** CF-13/16, FC-009/087/093.\n\nDetermine whether FFM/BIM operating models become separate adopted docs or feed their existing playbooks. A DevOps owning document is a candidate to fill FC-011. Avoid creating two normative explanations with overlapping but conflicting authority. Link specialized RRM and QAM procedure from the general workflow rather than copying their entire contents.\n\nKeep the original diagrams as historical sources. If revised diagrams are in scope, make their source editable and label simplified views clearly; the approved textual contract governs omitted detail. Correct missing recon, Architect assembly, module-close QA, Gate Q/release/Gate D transitions, current seat labels and deployment filenames where relevant. Verify links, headers, indexes and assets under actual Hub conventions.\n\n",
+    "path": "factory-intake/01_FACTORY_WORKFLOWS_INTAKE.md",
+    "line": 127
+  },
+  {
+    "id": "IN-2026-10-15-13",
+    "old": "RRM-01",
+    "title": "Route accepted findings into a bounded module",
+    "body": "\n**Sources:** SRC-R01/RRM_PLAYBOOK.md \u00a7\u00a71\u20134; reviewer candidate; SRC-W08/09. **Status:** pilot procedure proposed for adoption.\n\nRequire current-source reconciliation before turning a historical report into a work order. Preserve reviewer IDs, specimen identity, evidence level, uncertainty and limitations. Both reviewers agreeing is not proof; a finding from only one reviewer is not automatically weak. Separate severity, origin and approved scope. An inherited issue may be severe and still require an explicit disposition.\n\nUse ACCEPT REPAIR, NEEDS DECISION/EVIDENCE, DEFER/FUTURE GATE, REJECT/NOT APPLICABLE/ALREADY RESOLVED and DUPLICATE with evidence and reasons. A deferral identifies owner and trigger. Accepted risk requires the Director's recorded decision. Scope comes from accepted objectives, not raw finding counts.\n\n**Preserve:** raw reports unchanged; review timing follows the approved project workflow, not a new universal engine rule. **Verify:** every material finding has a retained identity and disposition; no raw review item silently becomes an authorized edit.\n\n",
+    "path": "factory-intake/02_RRM_INTAKE.md",
+    "line": 32
+  },
+  {
+    "id": "IN-2026-10-15-14",
+    "old": "RRM-02",
+    "title": "Freeze the repair contract before implementation",
+    "body": "\n**Sources:** SRC-R01/RRM_PLAYBOOK.md \u00a7\u00a74\u20135; module kit; SRC-R03 campaign report \u00a76. **Correction interface:** FC-013/025/026, DEC-13.\n\nThe Architect proposes a module with brief, findings ledger, acceptance requirements, preserved behaviors, permitted surfaces, forbidden scope, environment and verification needs. Director approves. Acceptance exists before build; Engineer may challenge ambiguity through an explicit errata lane, not silently redefine it.\n\nFreeze authority inputs and preserve amendment provenance. Engineering logs, QA artifacts and retrospective outputs remain writable in declared lanes. Mid-flight QAM changes in RRM-004 were recorded as an overlay with append-only rulings; use this as evidence for traceable amendment, not a command to repeat that costly overlay on every future pack.\n\n**Verify:** finding \u2192 approved objective \u2192 AC \u2192 repair \u2192 independent result \u2192 final disposition can be followed end to end.\n\n",
+    "path": "factory-intake/02_RRM_INTAKE.md",
+    "line": 42
+  },
+  {
+    "id": "IN-2026-10-15-15",
+    "old": "RRM-03",
+    "title": "Establish current baseline and complete preflight",
+    "body": "\n**Sources:** SRC-R01 \u00a7\u00a72/6; SRC-R03 engineering report \u00a7\u00a73/5; SRC-R02 preflight. **Correction interface:** FC-014/022/030, DEC-14.\n\nInspect current code, dependencies, environment and permissions before authoring/execution. Resolve full baseline identity at the appropriate checkpoint. A placeholder such as \u201cprevious module merge\u201d is not sufficient at certification. Keep the candidate separate from docs/evidence successors.\n\nPreflight rows should measure prerequisites relevant to the module: route status, environment reachability, expected identities, supported library access, builds and evidence tools. Avoid unmeasured constants and stale registry claims. Do not mandate an entire scratch implementation by the Architect for every task: validate risky assumptions in proportion to the actual uncertainty.\n\n**Verify:** failure produces a specific blocker before expensive execution; read-only inspection, diagnostics and write boundaries are described truthfully.\n\n",
+    "path": "factory-intake/02_RRM_INTAKE.md",
+    "line": 52
+  },
+  {
+    "id": "IN-2026-10-15-16",
+    "old": "RRM-04",
+    "title": "Prepared engineering run and same-assignment handoff",
+    "body": "\n**Sources:** SRC-R01 \u00a7\u00a75\u20136; SRC-R03 report \u00a7\u00a73\u20135; SRC-Q03 \u00a75/8.\n\nRetain Plan Mode and Director-approved rulings. Permit continuous execution through already authorized stages, with bounded self-repairs and enumerated material stops. A new unexpected authority/safety conflict still stops; an incomplete list cannot authorize guessing. Ordinary progress does not require repeated permission prompts.\n\nFinish with changed-file inventory, product/configuration diff, engineering checks, limitations, environment/reproduction instructions and factual QA handoff. If QAM is adopted for that module, complete its manifest. Report unresolved values explicitly; Director commit establishes the immutable candidate.\n\n**Preserve:** narrow scope, no weakening tests to claim green, engineering claims distinct from QA evidence. **Verify:** handoff can enter QA without another prompt asking for basic readiness documents.\n\n",
+    "path": "factory-intake/02_RRM_INTAKE.md",
+    "line": 62
+  },
+  {
+    "id": "IN-2026-10-15-17",
+    "old": "RRM-05",
+    "title": "Independent QA and the QAM interface",
+    "body": "\n**Sources:** SRC-R01 \u00a77; SRC-Q03 \u00a7\u00a74\u20138; SRC-R03 QAM authorship opinion.\n\nRRM defines repair objectives and protected behavior. QAM, where approved, packages independent verification; it is not a second engineering module or a replacement scope contract. QA Lead owns plan approval and certification; QA Executor drafts and executes within that approval. Architect supplies risks and scope, Engineer supplies facts, neither pre-grades the independent result.\n\nTests must reach the boundary claimed. Function probes do not automatically prove HTTP/framework behavior; synthetic data does not establish deployed RLS. Require only the environments/checks justified by the approved contract and risk plan, and report limits honestly. Targeted original-reviewer re-review is used where explicitly required or useful, not to force reopening an unavailable session.\n\n",
+    "path": "factory-intake/02_RRM_INTAKE.md",
+    "line": 72
+  },
+  {
+    "id": "IN-2026-10-15-18",
+    "old": "RRM-06",
+    "title": "Forward certification line and bounded repairs",
+    "body": "\n**Sources:** SRC-R01 \u00a7\u00a76\u20138; SRC-Q03 \u00a712; SRC-R03 journals. **Status:** later lineage supersedes the August disposable-branch rule for these campaigns.\n\nNormal pattern: approved main baseline \u2192 engineering branch \u2192 active QA branch \u2192 integration under project policy. After handoff, approved QA-driven repairs stay on the QA line. Engineer repairs; QA Executor measures. Use one active writer when sessions share a worktree.\n\nQA Lead classifies product defect, contract gap, environment blocker, instrument issue or observation. Architect/Director rule actual repair scope; Engineer implements; Director commits; QA re-pins and checks the diff, affected ACs and required regression. Carry forward evidence only with explicit candidate/environment validity reasoning. Helper corrections are logged as instrument events, not disguised product repairs.\n\n**Limit:** RRM-004 did not exercise a product repair round. The generalized QAM repair mechanism remains a proposed procedure until supported by additional evidence. Do not invent a successful Q4 from a zero-repair campaign.\n\n",
+    "path": "factory-intake/02_RRM_INTAKE.md",
+    "line": 80
+  },
+  {
+    "id": "IN-2026-10-15-19",
+    "old": "RRM-07",
+    "title": "Certification, cleanup, closeout and integration",
+    "body": "\n**Sources:** SRC-R01 \u00a79; SRC-Q03 \u00a7\u00a78/15; SRC-R03 final journal entry. **Correction interface:** DEC-13/18 and CF-14.\n\nRetain the separation of product verdict, cleanup acceptance, pilot verdict, Director adoption, merge and deployment. The older RRM playbook places Gate Q before cleanup; the later approved RRM-004 QAM sequence performs credential cleanup before final certification. Future adopted packs need one explicit sequence; do not paste both instructions without reconciliation.\n\nKeep the smallest sufficient durable evidence set, including cited helpers/failed attempts where needed to explain the verdict. Remove only authorized transient/sensitive items. Verify cleanup did not change product, tests, config or contract. The exact QA Lead certificate must be present or accessible for attributed transcription at closeout.\n\nRecord implementation, evidence, closeout and merge identities separately. Do not loop forever adding a commit's own hash to itself. Director controls project Git and release. After merge, refresh local main safely before starting a new branch. Gate D remains separate when deployment is required.\n\n",
+    "path": "factory-intake/02_RRM_INTAKE.md",
+    "line": 90
+  },
+  {
+    "id": "IN-2026-10-15-20",
+    "old": "RRM-08",
+    "title": "One-shot engineering as a scoped option",
+    "body": "\n**Sources:** SRC-R03 report \u00a7\u00a72\u20133/7 and RRM-003 field note; SRC-Q03 \u00a716. **Status:** recommendation under ND-07, not a universal standard.\n\nPreserve the useful recipe: prepare measurable scope, validate prerequisites, retain Plan Mode, record rulings, declare human checkpoints and finish the handoff in the same assignment. The demonstrated uninterrupted run covers execution between checkpoints, not preparation, approval, QA, cleanup and merge combined.\n\nReport total lifecycle effort, planned touches, in-run interruptions, helper corrections, product repairs and missing-package follow-ups. Do not optimize a success label by omitting a valid stop. Two clean engineering examples do not justify forcing uncertain architectural work into an unattended run.\n\n",
+    "path": "factory-intake/02_RRM_INTAKE.md",
+    "line": 100
+  },
+  {
+    "id": "IN-2026-10-15-21",
+    "old": "RRM-09",
+    "title": "Reviewer playbook modernization",
+    "body": "\n**Source:** SRC-R01/REVIEWER_PLAYBOOK_RRM_PILOT_v0.1.md and RRM_FACTORY_DOCSET_CHANGE_MAP.md. **Status:** candidate adoption; inspect current Hub counterpart before replacement.\n\nThe supplied change map asks to distinguish ordinary change review from broad/retrospective investigation; disclose baseline failures without preventing security investigation; separate inherited origin from severity; retain evidence, conditions and falsifiers; route repair through Architect/Director disposition; and avoid unsupported security claims based solely on missing application filters when RLS or another effective boundary may apply.\n\nDo not require three repeated incidents before correcting one severe supported issue. Calibrate claim confidence and specimen equivalence. Keep original reports unchanged; append dispositions/errata. This intake does not approve every sentence in the reviewer candidate verbatim.\n\n",
+    "path": "factory-intake/02_RRM_INTAKE.md",
+    "line": 108
+  },
+  {
+    "id": "IN-2026-10-15-22",
+    "old": "RRM-10",
+    "title": "Owning playbook, kit and references",
+    "body": "\n**Source:** SRC-R01 change map and kit; SRC-R03 lessons. **Status:** proposed placement under ND-05.\n\nCreate or update one RRM_PLAYBOOK and a compatible module kit. Link general Factory workflow, Architect, Engineer, Handoff, QA and Testing guidance to that owner. Include findings ledger, approved acceptance, front door, plan/build prompts, engineering evidence/handoff, QA references and closeout/retrospective expectations. If QAM is adopted, use its common templates instead of maintaining competing QA procedure copies inside every RRM kit.\n\nVerify actual ACTION/ACTIONS conventions and Hub paths. Separate reusable procedure from the Cyber Pharma worked example. Publish a complete example only after obtaining its actual completed records; source-reported summaries may be used now with attribution and evidence limits.\n\n",
+    "path": "factory-intake/02_RRM_INTAKE.md",
+    "line": 116
+  },
+  {
+    "id": "IN-2026-10-15-23",
+    "old": "QAM-01",
+    "title": "Definition and adoption boundary",
+    "body": "\n**Sources:** SRC-Q03 \u00a7\u00a71\u20133/17\u201320; SRC-Q04 \u00a72. **Status:** proposed adoption ND-01.\n\nQAM packages QA readiness, independent planning, execution, evidence, repair routing, cleanup and review transport. It does not replace the product acceptance contract, invent release authority, or turn every module into an unattended task.\n\nRRM-004 was a specifically approved Cyber Pharma experiment. A report of its success is not blanket authorization for future client migrations, commerce writes or deployments. Propose the reusable playbook now and make its scope/adoption status explicit. Carry experimental state/export/runtime mechanisms as proposals until implemented and evidenced.\n\n**Verify:** the adopted document states who may use which parts, what remains experimental and which governing project contract wins at a live run.\n\n",
+    "path": "factory-intake/03_QAM_INTAKE.md",
+    "line": 32
+  },
+  {
+    "id": "IN-2026-10-15-24",
+    "old": "QAM-02",
+    "title": "Authorship and five seats",
+    "body": "\n**Sources:** SRC-Q03 \u00a7\u00a74\u20135; SRC-Q01 \u00a70/1; SRC-R03 authorship opinion. **Correction interface:** FC-006/025, DEC-07/13.\n\n| Seat | Owns | Must not do under that seat |\n|---|---|---|\n| Architect | Approved scope, pre-build acceptance, module/QAM skeleton, scope rulings, closeout instructions | Pre-issue independent QA results |\n| Engineer | Product implementation, self-tests, factual handoff and manifest | Approve QA plan, grade independent results or certify |\n| QA Lead | Standing risks, plan approval, finding classification, retention judgment, certification | Quietly redefine product scope or claim unrun tests |\n| QA Executor | Q1 recon, plan draft, independent checks, evidence, review packages and authorized cleanup | Repair product, self-certify or mutate Git without applicable authorization |\n| Director | Scope/access decisions, approvals, Git, release and meaningful human judgment | No requirement to perform repetitive agent-capable matrices |\n\nQA may reuse useful engineering tests while deriving independent expectations, inspecting instruments and challenging failure cases. Independence does not require redundant copies of every test. Tool/provider replacement preserves role, approval state and candidate identity. The same worktree has one active writer during repair and measurement.\n\n",
+    "path": "factory-intake/03_QAM_INTAKE.md",
+    "line": 42
+  },
+  {
+    "id": "IN-2026-10-15-25",
+    "old": "QAM-03",
+    "title": "Package readiness and ownership",
+    "body": "\n**Source:** SRC-Q03 \u00a7\u00a75\u20136; SRC-R03 report \u00a74. **Status:** proposed template contract under ND-05.\n\nArchitect ships the QAM skeleton with the original engineering pack. Engineer completes factual readiness in the build assignment. The folder becomes ready for recon, not automatically approved for execution. Link to the enclosing frozen acceptance contract instead of creating a second authoritative copy.\n\nProposed common files: matching CLAUDE.md/AGENTS.md, QAM_ENTRY.md, QAM_MANIFEST.md, QAM_RISK_REQUIREMENTS.md, QAM_PREFLIGHT.md, QAM_TEST_PLAN.md, QAM_PROMPTS.md, QAM_CHECKPOINTS.md; evidence matrix, execution report, cleanup report, artifact inventory and certification record; GOVERNING/, AUTOMATION/, evidence/ and HANDOFFS/ lanes. REPAIR_PROPOSAL.md appears when needed. Pilot charter/results are required for experiments, not gratuitous paperwork on every routine run. QAM_STATE.json is a proposed routing aid, not a delivered runtime or new authority.\n\nActual generic templates were not included with SRC-Q03 (GAP-03). If authoring them here is approved, label them newly authored and validate pointers/ownership; do not claim byte identity with missing templates.\n\n**Verify:** no fabricated PASS, pre-issued certificate, real credentials or historical fixed candidate in a blank kit; required missing fields are explicit.\n\n",
+    "path": "factory-intake/03_QAM_INTAKE.md",
+    "line": 56
+  },
+  {
+    "id": "IN-2026-10-15-26",
+    "old": "QAM-04",
+    "title": "Folder-only startup and safe resume",
+    "body": "\n**Sources:** SRC-R04 Observation 004; SRC-Q03 \u00a7\u00a76\u20137/14. **Status:** source-reported Director requirement plus proposed implementation.\n\nBoth CLAUDE.md and AGENTS.md at each independently launched module entry provide the same role and route to a common instruction body. At the engineering root they assign engineering; under QAM they assign QA Executor. Filename or model name does not change authority.\n\nEntry explains module, repository root, current phase, completed work, candidate, governing versions, approval pointers, permitted paths, next action and output location. A fresh session reads durable records rather than pretending to remember its predecessor. Wrong folder/branch/phase produces useful guidance without automatic switching, resetting or restarting.\n\nTest actual discovery in supported tools. If a runtime needs bootstrap instructions, package them explicitly. A folder pointer starts the permitted recon/resume step; it does not approve all later phases, repair, certification or Git.\n\n**Verify:** first launch, resume, completed module, wrong folder and provider substitution preserve the same role and pending approvals.\n\n",
+    "path": "factory-intake/03_QAM_INTAKE.md",
+    "line": 68
+  },
+  {
+    "id": "IN-2026-10-15-27",
+    "old": "QAM-05",
+    "title": "Explicit checkpoint sequence",
+    "body": "\n**Sources:** SRC-Q03 \u00a78/15; later SRC-Q02/R04 rulings. **Status:** proposed adopted sequence under ND-04.\n\n| Stage | Work | Exit/approval |\n|---|---|---|\n| Engineering handoff | Facts, diff, reproduction, limitations, manifest | Director commits candidate; QA resolves full identity |\n| Q1 | Readiness, independent recon, scope contradictions, draft plan | One review package; QA Lead review |\n| Q1b | Record approved plan and any authorized errata | Bind approval to candidate, plan and ruling set; Director releases Q2 |\n| Q2 | Continuous approved verification and evidence collection | One package; Lead adjudication |\n| Repair/Q4 if needed | Ruled Engineer repair, commit, re-pin, targeted and required regression checks | Lead re-adjudication |\n| Q5 | Authorized retention/credential cleanup, identity proof, final package | Lead accepts cleanup/evidence |\n| Certification/closeout | Exact Lead certificate, separate pilot result, Architect instructions, Engineer bookkeeping | Director integration/release actions |\n\nNo repeated \u201cmay I continue?\u201d between already authorized passing checks. No skipped check to preserve one-shot claims. Q5 does not rerun the product board without a concrete reason. Existing approved live modules retain their own sequence until amended through the proper lane.\n\n",
+    "path": "factory-intake/03_QAM_INTAKE.md",
+    "line": 80
+  },
+  {
+    "id": "IN-2026-10-15-28",
+    "old": "QAM-06",
+    "title": "Preflight and concrete stops",
+    "body": "\n**Sources:** SRC-Q03 \u00a79; SRC-R03 report \u00a75; SRC-Q04 stages F/G. **Correction interface:** FC-014/022/030, DEC-14.\n\nCheck identity/ancestry, authority pointers, runtime/browser, required network access, authorized target, test roles, trustworthy instruments, writable evidence lanes and permitted side effects. Use bounded probes that answer actual readiness questions. Eighteen historical rows are not a universal minimum.\n\nQ1 may need explicitly authorized builds or login probes; describe these as diagnostics with effects, not magically write-free recon. Revalidate changed/time-sensitive prerequisites at Q2/resume. A failing environment produces a classified blocker with evidence, owner and smallest next action. Do not endlessly retry unavailable credentials or services.\n\nStop when candidate/approval identity, scope, access, evidence integrity or permitted operations no longer hold. Ordinary instrument correction may continue within its assigned lane and budget. New material uncertainty cannot be ignored merely because a numbered list omitted it.\n\n",
+    "path": "factory-intake/03_QAM_INTAKE.md",
+    "line": 96
+  },
+  {
+    "id": "IN-2026-10-15-29",
+    "old": "QAM-07",
+    "title": "Credential and browser lifecycle",
+    "body": "\n**Sources:** SRC-Q05 Part 1; SRC-Q03 \u00a710; SRC-Q02 later rulings. **Status:** reusable protocol proposal from a scoped pilot, not authorization for a new environment.\n\nDirector chooses the environment and supplies authorized dedicated identities. A temporary ignored QA credential file is one adapter; the pilot's exact five keys and ADMIN/MEMBER roles are project examples. Check ignored/untracked state, required key names, target match and authorized authentication without printing values. Respect the actual tool's credential-handling and browser-auth policy; do not bypass MFA or CAPTCHA.\n\nLogin can write session/audit state. Business-data writes, emails, payments, role changes and destructive operations need explicit scope. Keep credentials, cookies, tokens, browser storage and raw authenticated traces out of export/evidence. Load required secret values only inside the authorized process.\n\nUnder the proposed QAM cleanup sequence: run the applicable value/encoding scan while the credential source is available; remove authorized credential/auth state with evidence; rescan retained output for patterns. On a stopped run, apply the approved pause policy rather than retaining sessions indefinitely. Record Director rotation attestations separately from file deletion. Do not claim a new value scan after deleting the only value source.\n\n",
+    "path": "factory-intake/03_QAM_INTAKE.md",
+    "line": 106
+  },
+  {
+    "id": "IN-2026-10-15-30",
+    "old": "QAM-08",
+    "title": "Independent instruments and literal grading",
+    "body": "\n**Source:** SRC-Q03 \u00a711; SRC-R01 \u00a77; SRC-Q04 \u00a7\u00a76/12. **Correction interface:** CF-05, FC-024.\n\nEach AC row links requirement/ruling, expected outcome, observed outcome, candidate/environment, evidence and qualification. Unrun/blocked evidence is not PASS because engineering reported green. Use independent reference derivations and relevant positive/negative/boundary controls. Retain failed instrument attempts and the correction history.\n\nQA helpers may change within authorized lanes to repair measurement. Changes that alter coverage or acceptance meaning need Lead review. Do not change assertions merely to accept unexpected behavior. Direct function probes, synthetic fixtures, runtime HTTP checks, browser interaction and deployed checks support different claims; name the level actually exercised.\n\nHuman visual/product judgment remains where the approved plan needs it; repetitive browser matrices can be automated. Permanent regression tests should be selected for durable value rather than converting every exploratory click into a maintained test.\n\n",
+    "path": "factory-intake/03_QAM_INTAKE.md",
+    "line": 116
+  },
+  {
+    "id": "IN-2026-10-15-31",
+    "old": "QAM-09",
+    "title": "Finding classification and repair",
+    "body": "\n**Source:** SRC-Q03 \u00a712; SRC-Q01 \u00a75; SRC-R01 \u00a78.\n\nClassify product defect, contract gap, environment blocker, instrument problem or observation before selecting the owner. Executor proposes; Lead adjudicates; Architect/Director scope product repair; Engineer edits; Director commits; Executor re-pins and measures. A helper fix is not a product repair round.\n\nRetest affected ACs, the actual repair diff and regression required by the approved plan. Reuse unaffected evidence with explicit identity/environment reasoning. Preserve attempts. In a shared worktree, pause QA writes while engineering repairs. RRM-004's clean product run does not prove the Q4 path; later evidence may close this gap, otherwise state it as unvalidated.\n\n",
+    "path": "factory-intake/03_QAM_INTAKE.md",
+    "line": 126
+  },
+  {
+    "id": "IN-2026-10-15-32",
+    "old": "QAM-10",
+    "title": "Durable evidence and certification",
+    "body": "\n**Sources:** SRC-Q03 \u00a7\u00a711/15; SRC-R04; SRC-Q02 final entry. **Correction interface:** DEC-13.\n\nLead selects the smallest durable package that can explain/reproduce the verdict. Preserve issued decisions, necessary helper source, meaningful failed attempts, matrix and provenance. Remove only identified temporary or sensitive items; never blanket-delete a cited evidence tree or unknown process/profile. Prove product/config/test/contract identity is unchanged by cleanup.\n\nCertification names full tested identity, authority versions, results, accepted rulings, package references/hashes, qualifications, cleanup outcome and remaining external actions. Engineer may transcribe the exact Lead text with attribution; a summary or a promise that \u201cthe letter was supplied\u201d is insufficient.\n\n",
+    "path": "factory-intake/03_QAM_INTAKE.md",
+    "line": 134
+  },
+  {
+    "id": "IN-2026-10-15-33",
+    "old": "QAM-11",
+    "title": "Automatic checkpoint review packages",
+    "body": "\n**Sources:** SRC-R04 Observations 005\u2013006; SRC-Q03 \u00a713. **Status:** source-reported Director requirement proposed for template propagation.\n\nEach Q1/Q2/Q4/Q5 or material stop needing review produces one indexed package in `QAM/HANDOFFS/` as part of the assignment. Include REVIEW_START_HERE with module, phase/attempt, full candidate and QA HEAD, tree state, time, authorized target label, outcomes, missing material, read order and exact decision requested. Include current authority needed by the recipient, with engineering claims and QA evidence labeled.\n\nUse an explicit file allowlist, preserve relative/original paths, record bytes and SHA-256, exclude the index from its own hash and record final ZIP hash separately. Verify archive paths/integrity and declared scan coverage. Avoid recursive handoffs and secrets/dependency/build/Git directories. Incremental references are acceptable only if the recipient actually has the referenced immutable package; a new reviewer needs the dependency set.\n\nShared-repository access can use an index in place instead of an unnecessary ZIP. Transport never grants approval. Export does not rerun QA, change a verdict or authorize the next phase.\n\n",
+    "path": "factory-intake/03_QAM_INTAKE.md",
+    "line": 142
+  },
+  {
+    "id": "IN-2026-10-15-34",
+    "old": "QAM-12",
+    "title": "Honest metrics and separate verdicts",
+    "body": "\n**Sources:** SRC-Q03 \u00a716; SRC-Q02 final entry; SRC-R03 campaign report. **Status:** proposed measurement standard.\n\nRecord preparation, Q1, review delay, Q2 body and release elapsed, repairs/Q4, cleanup/Q5, Director attention, planned vs unplanned touches, credential entries, instrument corrections and missing-package follow-ups. Mark unknowns and estimates. Measure total effort alongside attractive inner-loop timings.\n\nRRM-004's reported product result is Gate Q PASS, 31 criteria and zero product repairs. Its process verdict remains PARTIAL SUCCESS; Q1 required A-15 scope reconciliation, while Q2 reported zero Director interventions. New experiments may use a clearer component rubric if approved before execution; never rescore the past to improve appearances.\n\n",
+    "path": "factory-intake/03_QAM_INTAKE.md",
+    "line": 152
+  },
+  {
+    "id": "IN-2026-10-15-35",
+    "old": "QAM-13",
+    "title": "Integration with current DocSet and tooling boundaries",
+    "body": "\n**Sources:** SRC-Q03 \u00a7\u00a76/18\u201320; existing correction package. **Status:** new owning playbook/kit proposal ND-05.\n\nPropose one QAM_PLAYBOOK linked from QA_PLAYBOOK, Handoff, Architect, Engineer and applicable module playbooks. Existing QA doctrine remains the owner of Factory-wide independence, verdicts and Gate Q/Gate D unless an approved map explicitly reallocates ownership. Carry governing bodies locally with version/source provenance so the Executor can read what it must obey.\n\nKeep templates aligned with the adopted playbook and module contracts. A generic validator, exporter, state dispatcher, browser adapter or skill implementation is a separately scoped tool deliverable; describing it in a draft is not proof it exists. Do not expand this sync into that engineering project by implication.\n\n",
+    "path": "factory-intake/03_QAM_INTAKE.md",
+    "line": 160
+  },
+  {
+    "id": "IN-2026-10-15-36",
+    "old": "QAM-14",
+    "title": "Portability, validation and promotion",
+    "body": "\n**Source:** SRC-Q03 \u00a7\u00a717\u201320; SRC-Q04 \u00a72. **Status:** proposed promotion policy ND-01.\n\nReusable core can support RRM, FFM and BIM with different environment/side-effect needs. ABM/APBM adaptations stay on the 10X track. Cyber Pharma examples remain attributed pilot evidence. No module inherits main-dev targeting, login-only permissions or specific browser/runtime behavior from an example.\n\nProposed template checks include wrong folder/branch, missing authority, unapproved/stale plan, altered lockfile, unavailable target, planted-secret/clean controls, helper vs product defect routing, complete checkpoint exports, missing certificate, bounded cleanup and provider-resume continuity. The master's \u201ctwo different internal profiles including repair\u201d promotion threshold is a proposal, not an existing mandatory rule or a new blocker imposed here. Bring later validation evidence if available; otherwise distinguish adopted principles from unvalidated mechanisms.\n\n",
+    "path": "factory-intake/03_QAM_INTAKE.md",
+    "line": 168
+  }
+]

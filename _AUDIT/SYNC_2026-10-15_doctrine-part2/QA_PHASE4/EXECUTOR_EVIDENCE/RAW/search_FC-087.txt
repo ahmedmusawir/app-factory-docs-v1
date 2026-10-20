@@ -1,0 +1,6 @@
+03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md:634: ## Blast Radius
+05_DESIGN_SYSTEM/THEMING_MANUAL.md:14: This manual is **standalone but interlocking**. It is referenced by three other Factory manuals:
+05_DESIGN_SYSTEM/THEMING_MANUAL.md:33: Every Stark Industries project is built on a foundation of **semantic color tokens** declared as CSS custom properties. These tokens — not hardcoded hex codes — are referenced by every component, every page, every layout in the project.
+MANIFEST.md:75: ## Dependency Map — Ripple Analysis (Referenced by ←)
+MANIFEST.md:77: Header dependencies are a starting set, not the complete blast radius. Inspect body references, templates, examples, checklists, workflow documents/diagrams and skills; route external changes separately.
+MANIFEST.md:79: | Doc | ← Referenced by (header-declared) | Count |

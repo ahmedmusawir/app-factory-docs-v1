@@ -1,0 +1,14 @@
+{
+  "scope": "36 tier/root documents + 4 workflows + 4 SVGs; case-insensitive; includes fences and Version History",
+  "matching_lines": 26,
+  "occurrences": 29,
+  "categories_per_occurrence": {
+    "d": 4,
+    "b": 18,
+    "a": 4,
+    "e": 2,
+    "c": 1
+  },
+  "all_hits_dispositioned": true,
+  "judgment_basis": "Explicit line decisions above follow full-container reads; counts alone do not establish consistency."
+}

@@ -1,0 +1,1397 @@
+[
+  {
+    "term": "persist",
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 431,
+    "text": "**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.",
+    "heading": "### Service Function Template",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 532,
+    "text": "- [ ] Persistence configured if needed",
+    "heading": "### Deliverables",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 661,
+    "text": "- [ ] Data persists after refresh",
+    "heading": "#### Data Testing",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 860,
+    "text": "- [ ] Session persists on refresh",
+    "heading": "### Authentication",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "persist",
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 915,
+    "text": "| Persistence | STATE | Persistence |",
+    "heading": "### Quick Pattern Lookup",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 109,
+    "text": "> **A green build proves nothing for cookie/session changes.** The real gate for any auth-touching change is the operator AUTH-WALK: login → nav-persist → hard-refresh → logout-bounce → role-resolve.",
+    "heading": "### Auth Pattern Decision Tree",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md",
+    "line": 40,
+    "text": "8. **Persistence Model:** Durable knowledge (DB) vs ephemeral uploads (session-only) — which for v1?",
+    "heading": "### Phase 2: Data Reality (4 questions — if Brain Check = Yes)",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md",
+    "line": 43,
+    "text": "> 📌 **REALITY RULE:** Core objects listed here are considered \"real\" (persisted, backend-managed) unless explicitly marked as UI-only or conceptual.",
+    "heading": "### Phase 2: Data Reality (4 questions — if Brain Check = Yes)",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md",
+    "line": 102,
+    "text": "> Objects listed here are **real** (persisted) unless marked otherwise.",
+    "heading": "## 5. Domain Concepts (Core Objects)",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "persist",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 804,
+    "text": "**Persisted as:** [JSON file / DB table / etc.]",
+    "heading": "### Model: [Name]",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "persist",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 1280,
+    "text": "> \"The human has limited stamina. The AI has unlimited stamina. Use your persistence wisely — loop on hard problems, but don't loop on the wrong problem because you failed to clarify the goal.\"",
+    "heading": "### The Meta Truth",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md",
+    "line": 1070,
+    "text": "- **Auto-loaded** — the skill is in the agent's persistent context (e.g., always loaded for a specific role)",
+    "heading": "#### Activation Behavior",
+    "history": true,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+    "line": 431,
+    "text": "- session persistence,",
+    "heading": "### Deployed Staging",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+    "line": 563,
+    "text": "A FIX executes as a Factory module: one folder, one `CLAUDE.md` manager, frozen from Engineer launch to STOP. The manager carries: mission (one sentence) · the diagnosis (\"why this module exists\" — the named mechanism, so the Engineer builds the right thing) · verified ground with provenance · **TO VERIFY FIRST** (the plan opens with file:line evidence for every fact the diagnosis rests on) · per-fix design with rulings · forbidden zones · numbered gates mapped to the original reproduction · launch procedure (Plan Mode, ONE message) · definition of done · the Operator launch line. Multiple adjudicated findings sharing a surface may bundle (field: FIX-002 carried F01+F02+F03; FIX-003 carried F06+F09) — each finding keeps its own gate. Migration kindness is doctrine: when a fix changes persisted shapes or keys, it adopts existing user state rather than orphaning it.",
+    "heading": "## 16. FIX Module Anatomy (the manager grammar)",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+    "line": 726,
+    "text": "**FIX-001 (ADK-HARNESS, legacy) — the pointer that lost the argument.** Symptom: chat history evaporated on reload. Mechanism chain: persisted session pointer restored correctly, then a mount-effect merge let a *mocked* service's seeded fake ids overwrite it (\"fetched wins\" applied to fiction). Lessons banked: the Engineer's CRITICAL-FINDING behavior (persistence alone was inert without the merge fix — surfaced, not silently handled) is the model for plan-stage honesty; merge precedence against mocked sources must favor persisted truth, with a comment scheduling re-evaluation when the source goes real; final disposition used **BLOCKED-UPSTREAM** honestly when the residual failure proved to live beyond the module's boundary — a FIX may PASS on its own contract while the symptom's remainder transfers to another module's gate (it did: the upstream history defect was confirmed and cured by the next BIM, post-mortem).",
+    "heading": "## 22. Field Case Studies (the validation record)",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+    "line": 730,
+    "text": "**FIX-003 (ADK-HARNESS, legacy) — found by deliberately stressing the product.** F09 (mock pointers poisoning live mode via a shared persistence namespace) was discovered through deliberate mode-switching — formal exploratory/state-transition/contamination testing. Fix: mode-namespaced keys + one-time legacy adoption (migration kindness). F06 (hydration flash) rode along with a store-level hydration gate. The engagement's factory lesson is now §3's QA-Lead doctrine.",
+    "heading": "## 22. Field Case Studies (the validation record)",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 133,
+    "text": "| 05 | CONTEXT-AND-MEMORY.md | Session state, persistence, blob storage |",
+    "heading": "### Role 2 — Extractor",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1462,
+    "text": "| 05 | CONTEXT-AND-MEMORY.md | Session state, persistence, blob storage patterns |",
+    "heading": "### What Brain Drain Produces (The 11 Docs Reminder)",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+    "line": 201,
+    "text": " *   4. 768: sidebar persistent (250px). 1024: max-width container (1200px) centers.",
+    "heading": "#### Example Opening JSDoc",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+    "line": 339,
+    "text": "| localStorage persistence | Adds complexity, no real value for demo |",
+    "heading": "### Explicitly Forbidden (Backend Phase Only)",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+    "line": 402,
+    "text": " *   4. 768: sidebar becomes persistent (250px), message column takes remainder.",
+    "heading": "### Example Opening JSDoc",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+    "line": 89,
+    "text": "A user pointing an agent to QAM and asking it to start authorizes Q1 within the declared scope. A folder path by itself never authorizes Q2, product repair, certification, Git mutation or deployment. The agent reads persisted state before acting:",
+    "heading": "## 6. Reliable entry through either runtime",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+    "line": 202,
+    "text": "Privacy scanners must be validated with synthetic leak fixtures and clean controls. Scan selected export contents and expanded archive members; report safe counts/locations without echoing secrets. Raw authenticated traces can contain sensitive state even after login. Retain only approved sanitized evidence. Avoid persistent browser storage; if unavoidable, declare its temporary path and cleanup before use.",
+    "heading": "## 12. Browser work and credentials",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "line": 44,
+    "text": "- agent-selection persistence,",
+    "heading": "# 0. Why This Playbook Exists",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "line": 48,
+    "text": "- localStorage persistence boundaries,",
+    "heading": "# 0. Why This Playbook Exists",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "line": 295,
+    "text": "| X4 | No transcript content persists in localStorage | Storage inspection | Browser | Pending |",
+    "heading": "# 7. Acceptance Spec = QA Contract",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "line": 502,
+    "text": "- clear one persisted pointer but not others,",
+    "heading": "## Stage 6 — Exploratory QA",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "line": 515,
+    "text": "- browser persistence,",
+    "heading": "## Stage 6 — Exploratory QA",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "line": 597,
+    "text": "persisted in shared browser storage",
+    "heading": "# 10. The Scope Protection Rule",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "line": 612,
+    "text": "But it was **not** evidence that the original persistence fix had failed.",
+    "heading": "# 10. The Scope Protection Rule",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "line": 721,
+    "text": "- [ ] Relevant browser persistence was checked.",
+    "heading": "### Manual Acceptance",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "line": 980,
+    "text": "## Persistence",
+    "heading": "## Persistence",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "line": 1075,
+    "text": "**Precondition:** Calc Agent has an active mock session persisted",
+    "heading": "## QA-F09 — Mock session pointer contaminates Live mode",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "line": 1080,
+    "text": "3. Switch app to live mode without clearing persisted agentSessions.",
+    "heading": "## QA-F09 — Mock session pointer contaminates Live mode",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "line": 1357,
+    "text": "4. verify state persistence where applicable,",
+    "heading": "# 24. BIM / FEAT Verification Protocol",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "line": 1392,
+    "text": "Modern web apps persist meaningful state in:",
+    "heading": "# 26. Browser State Is Part of the System",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "line": 1407,
+    "text": "- safe to persist,",
+    "heading": "# 26. Browser State Is Part of the System",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "line": 1408,
+    "text": "- unsafe to persist.",
+    "heading": "# 26. Browser State Is Part of the System",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "line": 1512,
+    "text": "- session persistence,",
+    "heading": "# 30. Production Confirmation",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "line": 1752,
+    "text": "The most valuable finding in the ADK harness came from switching Mock → Live with persisted session state.",
+    "heading": "## L-QA-005 — Exploratory QA must test seams",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "line": 1762,
+    "text": "## L-QA-007 — Browser persistence is architecture",
+    "heading": "## L-QA-007 — Browser persistence is architecture",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 418,
+    "text": "For tests touching persistent client state (Zustand, Redux with localStorage, IndexedDB), assert against **both** the source of truth AND the UI:",
+    "heading": "### localStorage + UI dual-verification",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "raw contact",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 429,
+    "text": "No persistent raw contact information is stored in browser storage by default; any approved exception names the fields, purpose, retention period and owner, with clearing/invalidation behavior.",
+    "heading": "### localStorage + UI dual-verification",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 429,
+    "text": "No persistent raw contact information is stored in browser storage by default; any approved exception names the fields, purpose, retention period and owner, with clearing/invalidation behavior.",
+    "heading": "### localStorage + UI dual-verification",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 431,
+    "text": "The UI proves the user sees the right thing. The persistent state proves the system actually did the right thing. UIs can lie (e.g., showing optimistic state that doesn't match the store).",
+    "heading": "### localStorage + UI dual-verification",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 827,
+    "text": "The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it.",
+    "heading": "## 3.8 Run-verification rituals (promoted from Run 001)",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 1120,
+    "text": "Test mocks the `stripe` package itself. The factory returns a constructor that hands back a persistent instance whose methods are top-level `jest.fn()`s:",
+    "heading": "### 4.3b — Constructor-mock pattern (Dockbloxx)",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 1479,
+    "text": "`clearMocks: true` in `jest.config.js` clears `mock.calls` and `mock.results`, NOT `mockImplementation` or `mockReturnValue`. A return value set via `.mockReturnValue()` persists across tests unless explicitly reset.",
+    "heading": "### G4: `clearMocks` doesn't reset implementations",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 1485,
+    "text": "A webhook acknowledges success only after checked completion of the required state transition or checked durable capture/enqueue. Failure before that boundary returns a retryable non-success. Failure after durable acceptance is recovered through bounded durable retries, visible failed work, reconciliation and a named recovery owner; it does not retroactively invalidate the acknowledgment. Test status and persisted outcome for pre-acceptance failure, post-acceptance failure, duplicates and recovery.",
+    "heading": "### G5: Webhook acknowledgment follows durable acceptance",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "fetchProducts",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 183,
+    "text": "| Read multiple | `fetch{Resources}` or `fetchAll{Resources}` | `fetchProducts()`, `fetchAllProductSlugs()` |",
+    "heading": "### Function Naming Conventions",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 296,
+    "text": "**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.",
+    "heading": "### POST Route Template",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 371,
+    "text": "**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.",
+    "heading": "### REST API Pattern",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 377,
+    "text": "**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.",
+    "heading": "### GraphQL Pattern",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 446,
+    "text": "**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.",
+    "heading": "### Supabase Service File Structure",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "fetchProducts",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 613,
+    "text": "// Independent normalization-step example: fetchProducts() returns Promise<Product[]>.",
+    "heading": "### Normalizing External Responses",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "fetchProducts",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 615,
+    "text": "export const fetchProducts = async (): Promise<Product[]> => {",
+    "heading": "### Normalizing External Responses",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 740,
+    "text": "**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.",
+    "heading": "### Client-Side Error Boundaries",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "fetchProducts",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 787,
+    "text": "This caller uses the §3 typed-outcome contract: `fetchProducts()` returns a discriminated outcome with `status` equal to `success`, `not-found`, `unavailable`, `invalid` or `forbidden`; only `success` carries `items: Product[]`. This example assumes a project-approved public-catalog failure policy permitting the generic empty-state UI on non-success; this is not an entitlement decision or a cached successful result. It does not call the independent array-returning normalization example.",
+    "heading": "### Graceful Degradation Pattern",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "fetchProducts",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 792,
+    "text": "import { fetchProducts } from '@/services/productServices';",
+    "heading": "### Graceful Degradation Pattern",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "fetchProducts",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 797,
+    "text": "  const outcome = await fetchProducts();",
+    "heading": "### Graceful Degradation Pattern",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "fetchProducts",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 858,
+    "text": "Independent ISR example: this `fetchProducts()` returns the endpoint’s raw JSON payload, with no normalization or typed-outcome envelope; it is not the §3 service or the caller above. The project must declare and validate that endpoint’s wire contract and failure/cache policy before implementation; this example only illustrates the revalidation option.",
+    "heading": "### ISR and Revalidation",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "fetchProducts",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 862,
+    "text": "export const fetchProducts = async () => {",
+    "heading": "### ISR and Revalidation",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "fetchProducts",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 946,
+    "text": "export const fetchProductsByIds = async (ids: number[]): Promise<Product[]> => {",
+    "heading": "### Batch Operations",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 975,
+    "text": "**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.",
+    "heading": "### Service Function Template",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 979,
+    "text": "**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.",
+    "heading": "### API Route Template",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "fetchProducts",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 985,
+    "text": "| Service Layer | All external API calls | `fetchProducts()` |",
+    "heading": "### Common Patterns Cheat Sheet",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 1013,
+    "text": "**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.",
+    "heading": "### Data Extraction Pattern",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 1035,
+    "text": "Use the provider’s stable event ID, never a random fallback. Atomically claim each event with in-progress, completed and retryable states; inspect persistence results. Make effects idempotent or transactional. A bounded lease/recovery process reclaims abandoned work and reconciles partial external success without duplicating completed effects.",
+    "heading": "### Idempotency for Webhooks",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 1159,
+    "text": "**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.",
+    "heading": "### Upsert Pattern for Sync",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 1173,
+    "text": "**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.",
+    "heading": "### API Route Template",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "fetchProducts",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 1179,
+    "text": "| Service Layer | All external API calls | `fetchProducts()` |",
+    "heading": "### Common Patterns Cheat Sheet",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 90,
+    "text": "| Database | Supabase (PostgreSQL) | Data persistence |",
+    "heading": "### Technology Stack Overview",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 474,
+    "text": "| Use case | Persistent UI | Fresh state per page |",
+    "heading": "### Layout vs Template",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "fetchProducts",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 505,
+    "text": "import { fetchProducts } from '@/services/productServices';",
+    "heading": "### Server Components (Default)",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "fetchProducts",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 510,
+    "text": "  const products = await fetchProducts();",
+    "heading": "### Server Components (Default)",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "fetchProducts",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 612,
+    "text": "  const products = await fetchProducts();",
+    "heading": "### Streaming and Suspense",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 732,
+    "text": "│   Source of truth for persistent data                            │",
+    "heading": "### State Synchronization",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 867,
+    "text": "**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.",
+    "heading": "### REST API Integration",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 871,
+    "text": "**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.",
+    "heading": "### GraphQL Integration",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 144,
+    "text": "2. **Session persistence** - Middleware keeps sessions alive",
+    "heading": "### Key Principles",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 449,
+    "text": "**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.",
+    "heading": "### POST /api/auth/login",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 561,
+    "text": "Server guards control page access; server-resolved { user, role } props establish first-render identity. Retire client HOC route protection and post-mount identity fetching as authoritative patterns. Zustand handles interaction and session-event reactions, with no persisted authorization authority. Display helpers are display-only and use explicit role sets; they never authorize an operation.",
+    "heading": "## Client-Side Auth (Zustand Store)",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 641,
+    "text": "3. Persisted client role state goes stale by design (written at login, survives in",
+    "heading": "### Rules",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 817,
+    "text": "**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.",
+    "heading": "### LoginForm Component",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 922,
+    "text": "Server guards control page access; server-resolved { user, role } props establish first-render identity. Retire client HOC route protection and post-mount identity fetching as authoritative patterns. Zustand handles interaction and session-event reactions, with no persisted authorization authority. Display helpers are display-only and use explicit role sets; they never authorize an operation.",
+    "heading": "### Pattern 4: Role-Based UI (Client)",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 930,
+    "text": "Server guards control page access; server-resolved { user, role } props establish first-render identity. Retire client HOC route protection and post-mount identity fetching as authoritative patterns. Zustand handles interaction and session-event reactions, with no persisted authorization authority. Display helpers are display-only and use explicit role sets; they never authorize an operation.",
+    "heading": "### Pattern 5: Conditional Navbar Links",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 966,
+    "text": "**Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.",
+    "heading": "### Pattern 7: Update User Metadata",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1008,
+    "text": "### Issue 2: Session not persisting",
+    "heading": "### Issue 2: Session not persisting",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1053,
+    "text": "- Use localStorage for persistence if needed",
+    "heading": "### Issue 4: Hard reload loses state",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "raw contact",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1125,
+    "text": "   - No persistent raw contact information is stored in browser storage by default; any approved exception names the fields, purpose, retention period and owner, with clearing/invalidation behavior.",
+    "heading": "### ❌ DON'T",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1125,
+    "text": "   - No persistent raw contact information is stored in browser storage by default; any approved exception names the fields, purpose, retention period and owner, with clearing/invalidation behavior.",
+    "heading": "### ❌ DON'T",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1322,
+    "text": "Use an atomic database operation for invariants inside one database. Across external boundaries, use a stable operation identity, check every forward and compensation result, and persist completed, failed or partially-completed outcomes. Partial failure creates durable reconciliation work with a recovery owner; do not report success after an unchecked compensation or deletion.",
+    "heading": "## 13. User Mirror Table Pattern",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1330,
+    "text": "Server guards control page access; server-resolved { user, role } props establish first-render identity. Retire client HOC route protection and post-mount identity fetching as authoritative patterns. Zustand handles interaction and session-event reactions, with no persisted authorization authority. Display helpers are display-only and use explicit role sets; they never authorize an operation.",
+    "heading": "## 14. HOC Route Protection Pattern",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 179,
+    "text": "**Synchronization example withdrawn.** The role table is the only authorization authority. Never authorize from user_metadata or a profile mirror. Superadmin creation is console-only; no app-side superadmin creation route is provided. Retire the metadata-authorized add-user, delete-user and get-users recipes. Future privileged list/delete operations remain possible only with trusted current-role lookup, operation-local authorization before elevated capability, an approved target-role allowlist and privileged-target protection. Profile mirrors contain profile data, not authorization columns. Registration metadata is not authorization. Use the session client for identity and RLS-bound data. Acquire an isolated admin client only after independently authorizing the elevated operation. An API route is not itself a reason to bypass RLS. Do not substitute a service-role client as a general fix for denied access. Use an atomic database operation for invariants inside one database. Across external boundaries, use a stable operation identity, check every forward and compensation result, and persist completed, failed or partially-completed outcomes. Partial failure creates durable reconciliation work with a recovery owner; do not report success after an unchecked compensation or deletion.",
+    "heading": "### User Mirror Table Pattern (profile data — NO role column)",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 1014,
+    "text": "Use an atomic database operation for invariants inside one database. Across external boundaries, use a stable operation identity, check every forward and compensation result, and persist completed, failed or partially-completed outcomes. Partial failure creates durable reconciliation work with a recovery owner; do not report success after an unchecked compensation or deletion.",
+    "heading": "### Transaction Pattern (Pseudo-Transaction)",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 95,
+    "text": "| Shopping Cart | Zustand (client-side) | Cart state, persistence |",
+    "heading": "### System Components",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 189,
+    "text": "Persist one authorized checkout-attempt identity across retries and claim it atomically against concurrent requests. Scope provider idempotency keys to that attempt and operation, reuse or retrieve existing external objects after an unknown outcome, and reconcile before creating a replacement. Use the project-approved customer-identity contract without assuming paid activation; universal subscription schema design is deferred. Handle every documented subscription state, not only active.",
+    "heading": "## 3. PaymentIntent Flow",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 201,
+    "text": "Persist one authorized checkout-attempt identity across retries and claim it atomically against concurrent requests. Scope provider idempotency keys to that attempt and operation, reuse or retrieve existing external objects after an unknown outcome, and reconcile before creating a replacement. Use the project-approved customer-identity contract without assuming paid activation; universal subscription schema design is deferred. Handle every documented subscription state, not only active.",
+    "heading": "## 4. Checkout Implementation",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "raw contact",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 205,
+    "text": "The checkout interaction contract includes shippingCost and couponDiscount as display estimates, couponCode, setCoupon(code) and clearCoupon(), alongside the existing checkout fields. The server revalidates shipping and coupons. STATE_MANAGEMENT_MANUAL owns the shared store shape; ECOMMERCE_AND_PAYMENTS_MANUAL refers to it. Personal fields follow the approved account-transition and retention policy in STATE_MANAGEMENT_MANUAL. No persistent raw contact information is stored in browser storage by default; any approved exception names the fields, purpose, retention period and owner, with clearing/invalidation behavior.",
+    "heading": "## 4. Checkout Implementation",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 205,
+    "text": "The checkout interaction contract includes shippingCost and couponDiscount as display estimates, couponCode, setCoupon(code) and clearCoupon(), alongside the existing checkout fields. The server revalidates shipping and coupons. STATE_MANAGEMENT_MANUAL owns the shared store shape; ECOMMERCE_AND_PAYMENTS_MANUAL refers to it. Personal fields follow the approved account-transition and retention policy in STATE_MANAGEMENT_MANUAL. No persistent raw contact information is stored in browser storage by default; any approved exception names the fields, purpose, retention period and owner, with clearing/invalidation behavior.",
+    "heading": "## 4. Checkout Implementation",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 217,
+    "text": "Persist one authorized checkout-attempt identity across retries and claim it atomically against concurrent requests. Scope provider idempotency keys to that attempt and operation, reuse or retrieve existing external objects after an unknown outcome, and reconcile before creating a replacement. Use the project-approved customer-identity contract without assuming paid activation; universal subscription schema design is deferred. Handle every documented subscription state, not only active.",
+    "heading": "## 5. Order Management",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 362,
+    "text": "For supported events, check business persistence or durable enqueue before acknowledging. Pre-acceptance failure returns a retryable failure. After durable acceptance, worker failures enter bounded durable retries and visible failed-work reconciliation with an alert and recovery owner. Unsupported events are explicitly distinguished from failed supported events. Missing order/user mappings create actionable recovery records, not silent success.",
+    "heading": "### Webhook Endpoint Setup",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 405,
+    "text": "The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it.",
+    "heading": "## 10. Testing Payments",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 16,
+    "text": "4. [Persistence](#4-persistence)",
+    "heading": "## Table of Contents",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 61,
+    "text": "| Modal open/close | `useState` | UI state, doesn't need persistence |",
+    "heading": "### When to Use Zustand vs useState vs Server State",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 62,
+    "text": "| Shopping cart | Zustand + persist | Shared across pages, needs persistence |",
+    "heading": "### When to Use Zustand vs useState vs Server State",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 77,
+    "text": "5. **Middleware Support**: Persistence, devtools, immer out of the box",
+    "heading": "### Why Zustand",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 108,
+    "text": "Persisted auth state (e.g. a `role` written only at login into localStorage) is a",
+    "heading": "### Division of Labor: Server Props vs. Client Stores (HARD RULE)",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 140,
+    "text": "import { persist, createJSONStorage } from 'zustand/middleware';",
+    "heading": "### Store File Structure",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 166,
+    "text": "  persist(",
+    "heading": "### Store File Structure",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 195,
+    "text": "        // Only persist these fields",
+    "heading": "### Store File Structure",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "fetchProducts",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 241,
+    "text": "| Fetch/Load | `fetch`, `load` | `fetchProducts`, `loadMore` |",
+    "heading": "### Action Naming Conventions",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 475,
+    "text": "## 4. Persistence",
+    "heading": "## 4. Persistence",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 477,
+    "text": "### The `persist` Middleware",
+    "heading": "### The `persist` Middleware",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 479,
+    "text": "Zustand's `persist` middleware automatically saves state to storage and rehydrates on page load.",
+    "heading": "### The `persist` Middleware",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 483,
+    "text": "import { persist, createJSONStorage } from 'zustand/middleware';",
+    "heading": "### The `persist` Middleware",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 486,
+    "text": "  persist(",
+    "heading": "### The `persist` Middleware",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 499,
+    "text": "### `partialize` - What to Persist",
+    "heading": "### `partialize` - What to Persist",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 501,
+    "text": "**Never persist everything.** Use `partialize` to select only UX-critical state:",
+    "heading": "### `partialize` - What to Persist",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 505,
+    "text": "  persist(",
+    "heading": "### `partialize` - What to Persist",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 507,
+    "text": "      // Persisted",
+    "heading": "### `partialize` - What to Persist",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 511,
+    "text": "      // NOT persisted (transient)",
+    "heading": "### `partialize` - What to Persist",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "raw contact",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 519,
+    "text": "        // Raw contact information is not persisted by default.",
+    "heading": "### `partialize` - What to Persist",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 519,
+    "text": "        // Raw contact information is not persisted by default.",
+    "heading": "### `partialize` - What to Persist",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 521,
+    "text": "        // DO NOT persist: isProcessing, validationErrors, paymentIntent",
+    "heading": "### `partialize` - What to Persist",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 528,
+    "text": "#### What to Persist vs What NOT to Persist",
+    "heading": "#### What to Persist vs What NOT to Persist",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 530,
+    "text": "| Persist ✅ | Don't Persist ❌ |",
+    "heading": "#### What to Persist vs What NOT to Persist",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 572,
+    "text": "  persist(",
+    "heading": "### localStorage vs IndexedDB Decision",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 608,
+    "text": "  // Check each persisted store for staleness",
+    "heading": "### Storage Size Considerations",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 688,
+    "text": "### Persisted Store Template",
+    "heading": "### Persisted Store Template",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "raw contact",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 783,
+    "text": "Do not persist raw contact details by default. Any approved personal-data persistence declares permitted fields, retention duration and user or guest scope. Sign-out and account transition reset and invalidate every affected store even when remote logout fails; a new account must not hydrate the previous account’s data. Payment and authorization state remain outside persistence. Storage readiness is separate from business-data reset.",
+    "heading": "### Form/Checkout Store Template",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 783,
+    "text": "Do not persist raw contact details by default. Any approved personal-data persistence declares permitted fields, retention duration and user or guest scope. Sign-out and account transition reset and invalidate every affected store even when remote logout fails; a new account must not hydrate the previous account’s data. Payment and authorization state remain outside persistence. Storage readiness is separate from business-data reset.",
+    "heading": "### Form/Checkout Store Template",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "fetchProducts",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 801,
+    "text": "  fetchProducts: async () => {",
+    "heading": "### Store + Service Layer",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "fetchProducts",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 810,
+    "text": "export const fetchProducts = async () => {",
+    "heading": "### Store + Service Layer",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "fetchProducts",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 826,
+    "text": "    fetchProducts().then(setProducts);",
+    "heading": "### Store + Service Layer",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "fetchProducts",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 869,
+    "text": "import { fetchProducts } from '@/services/productServices';",
+    "heading": "### Store + Server Components",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "fetchProducts",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 873,
+    "text": "  const products = await fetchProducts();",
+    "heading": "### Store + Server Components",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 960,
+    "text": "Server guards control page access; server-resolved { user, role } props establish first-render identity. Retire client HOC route protection and post-mount identity fetching as authoritative patterns. Zustand handles interaction and session-event reactions, with no persisted authorization authority. Display helpers are display-only and use explicit role sets; they never authorize an operation.",
+    "heading": "### Auth Store Pattern",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 1026,
+    "text": "- **Persist only UX-critical state** with `partialize`",
+    "heading": "### Do's ✅",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 1037,
+    "text": "- **Don't persist loading states** or validation errors",
+    "heading": "### Don'ts ❌",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 1060,
+    "text": "    persist(",
+    "heading": "### Debugging Zustand",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 1107,
+    "text": "| 1.0 | (original, date unknown) | Initial manual: three-layer state model, when-to-use table, store architecture, core patterns, persistence, SSR hydration, templates, integration patterns, common stores, best practices. Unversioned until the 2026-07 audit. |",
+    "heading": "## Version History",
+    "history": true,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "line": 233,
+    "text": "Persist one authorized checkout-attempt identity across retries and claim it atomically against concurrent requests. Scope provider idempotency keys to that attempt and operation, reuse or retrieve existing external objects after an unknown outcome, and reconcile before creating a replacement. Use the project-approved customer-identity contract without assuming paid activation; universal subscription schema design is deferred. Handle every documented subscription state, not only active.",
+    "heading": "## 5. The Checkout Flow",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "line": 243,
+    "text": "For supported events, check business persistence or durable enqueue before acknowledging. Pre-acceptance failure returns a retryable failure. After durable acceptance, worker failures enter bounded durable retries and visible failed-work reconciliation with an alert and recovery owner. Unsupported events are explicitly distinguished from failed supported events. Missing order/user mappings create actionable recovery records, not silent success.",
+    "heading": "## 6. The Webhook Handler",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "line": 257,
+    "text": "Persist one authorized checkout-attempt identity across retries and claim it atomically against concurrent requests. Scope provider idempotency keys to that attempt and operation, reuse or retrieve existing external objects after an unknown outcome, and reconcile before creating a replacement. Use the project-approved customer-identity contract without assuming paid activation; universal subscription schema design is deferred. Handle every documented subscription state, not only active.",
+    "heading": "## 7. The Tier Upgrade Pattern",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "line": 435,
+    "text": "The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it.",
+    "heading": "## 12. Testing Strategy",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "line": 466,
+    "text": "□ Close browser → reopen → log in → tier persists (reads from Supabase)",
+    "heading": "### Manual Smoke Test Checklist",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "persist",
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "line": 60,
+    "text": "│   ├─ Error notification (persistent)? → Alert variant=\"destructive\"",
+    "heading": "## 🎯 Quick Decision Tree",
+    "history": false,
+    "fence": true
+  },
+  {
+    "term": "persist",
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "line": 250,
+    "text": "- Dashboards with persistent sidebars",
+    "heading": "### `AppShellPage` ⭐ NEW (Born In Run 001 Phase 5.4)",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "line": 502,
+    "text": "| `Alert` | Persistent inline callout (with variants: default, destructive, warning) | Error messages, warnings, info |",
+    "heading": "### Feedback Primitives",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "line": 510,
+    "text": "- ✅ **Failure → Alert variant=\"destructive\"** (persistent)",
+    "heading": "### Feedback Primitives",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "line": 511,
+    "text": "- Don't mix them. Toast for failure is hard to read; Alert for success is too persistent.",
+    "heading": "### Feedback Primitives",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "line": 596,
+    "text": "| Tablet | 768px (`md:`) | Layouts may split; sidebars become persistent |",
+    "heading": "## 7. Mobile Behavior Reference",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "line": 703,
+    "text": "**Right:** Toast for success (transient), Alert variant=\"destructive\" for failure (persistent)",
+    "heading": "### ❌ Mixing success and failure feedback components",
+    "history": false,
+    "fence": false
+  },
+  {
+    "term": "persist",
+    "path": "MANIFEST.md",
+    "line": 61,
+    "text": "| STATE_MANAGEMENT_MANUAL | 1.3 | 2026-10-18 | Active | Zustand doctrine: three-layer state model, store patterns, persistence, SSR hydration | APP_ARCHITECTURE_MANUAL, AUTH_MANUAL, FRONTEND_FIRST_PLAYBOOK, STARTER_KIT_HANDBOOK |",
+    "heading": "### 04_REFERENCE_MANUALS",
+    "history": false,
+    "fence": false
+  }
+]

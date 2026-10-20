@@ -1,0 +1,206 @@
+[
+  {
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 34,
+    "target": "../03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+    "exists": true
+  },
+  {
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 34,
+    "target": "../03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+    "exists": true
+  },
+  {
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 34,
+    "target": "../03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+    "exists": true
+  },
+  {
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 34,
+    "target": "../03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+    "exists": true
+  },
+  {
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 45,
+    "target": "../03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+    "exists": true
+  },
+  {
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 45,
+    "target": "../03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+    "exists": true
+  },
+  {
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 45,
+    "target": "../03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+    "exists": true
+  },
+  {
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 45,
+    "target": "../03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+    "exists": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "line": 112,
+    "target": "_workflows/FFM_CREATION.md",
+    "exists": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "line": 112,
+    "target": "_workflows/FFM_EXECUTION.md",
+    "exists": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "line": 112,
+    "target": "_workflows/FFM_DEPLOYMENT.md",
+    "exists": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "line": 112,
+    "target": "_workflows/BIM_WORKFLOW.md",
+    "exists": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+    "line": 57,
+    "target": "_workflows/FFM_DEPLOYMENT.md",
+    "exists": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 250,
+    "target": "_workflows/FFM_CREATION.md",
+    "exists": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 250,
+    "target": "_workflows/FFM_EXECUTION.md",
+    "exists": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 250,
+    "target": "_workflows/FFM_DEPLOYMENT.md",
+    "exists": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 250,
+    "target": "_workflows/BIM_WORKFLOW.md",
+    "exists": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+    "line": 28,
+    "target": "_workflows/FFM_CREATION.md",
+    "exists": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+    "line": 28,
+    "target": "_workflows/FFM_EXECUTION.md",
+    "exists": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+    "line": 28,
+    "target": "_workflows/FFM_DEPLOYMENT.md",
+    "exists": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+    "line": 28,
+    "target": "_workflows/BIM_WORKFLOW.md",
+    "exists": true
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 775,
+    "target": "JSON.stringify(entry, null, 2",
+    "exists": false
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 778,
+    "target": "JSON.stringify(entry",
+    "exists": false
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+    "line": 6,
+    "target": "../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W02_FFM_EXECUTION.png",
+    "exists": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+    "line": 8,
+    "target": "../_assets/workflows/FFM_EXECUTION.svg",
+    "exists": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+    "line": 6,
+    "target": "../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W04_BIM_WORKFLOW.png",
+    "exists": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+    "line": 8,
+    "target": "../_assets/workflows/BIM_WORKFLOW.svg",
+    "exists": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+    "line": 6,
+    "target": "../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W01_FFM_CREATION.png",
+    "exists": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+    "line": 8,
+    "target": "../_assets/workflows/FFM_CREATION.svg",
+    "exists": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+    "line": 6,
+    "target": "../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W03_FFM_DEPLOYMENT.png",
+    "exists": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+    "line": 8,
+    "target": "../_assets/workflows/FFM_DEPLOYMENT.svg",
+    "exists": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/README.md",
+    "line": 7,
+    "target": "../../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/QA_LEAD_DECISION_2026-10-14.md",
+    "exists": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/README.md",
+    "line": 7,
+    "target": "../../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/ARCHITECT_VERIFICATION_2026-10-14.md",
+    "exists": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/README.md",
+    "line": 7,
+    "target": "../../../_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE_2_TEMPLATE_TRANSLATIONS.json",
+    "exists": true
+  }
+]

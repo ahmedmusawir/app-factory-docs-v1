@@ -1,0 +1,2 @@
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:1017: ### Async Follow-Up Pattern (Fire-and-Forget)
+04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md:1185: | Durable asynchronous work | Required webhook follow-up | Acknowledge only after verified durable acceptance; no unawaited fire-and-forget promise |

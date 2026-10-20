@@ -1,0 +1,56 @@
+01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md:47: ## 1.5 Doctrine Pairing Principle — Playbooks Paired With Worked Examples
+01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md:50: > Pair each methodology with an available, verified worked example. Historical external pointers below are not proof that an example is present in this Hub or in a project. Record repository, immutable revision and path before requiring it.
+01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md:54: Abstract rules alone produce drift. Concrete examples alone produce cargo culting. The combination — instruction set + worked example — produces durable, transferable competence.
+01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md:81: 1. **Treat the project's handoff files as a candidate worked example** — they may become the canonical reference for future runs
+01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md:95: ### The Lifecycle Of A Worked Example
+01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md:118: - Historical external example (availability unverified): **`CURRENT_APP/app-factory-frontend-first-module/_project/`** — the inaugural historical worked example Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.
+01_CONSTITUTION/STARTER_KIT_HANDBOOK.md:167: > **Mark IV is the shipped trigger as of Gate 10 Phase A**, proven live 2026-06-28. It replaced an earlier "dumb" trigger that hard-coded `'member'` and read the wrong key (`'name'`), which caused two now-RESOLVED bugs (`profiles.full_name` NULL at creation; superadmin role-drop). See §11 and `KNOWN_ISSUES.md`.
+01_CONSTITUTION/STARTER_KIT_HANDBOOK.md:583: `KNOWN_ISSUES.md` (repo root) retains the full historical record (what was wrong, how it was fixed, the reference 2nd-step role pattern that Mark IV made unnecessary). Consult it before assuming either bug is live — both are closed.
+01_CONSTITUTION/STARTER_KIT_HANDBOOK.md:639: - If something becomes obsolete, mark it as such or move it to history (e.g. `KNOWN_ISSUES.md`) — don't quietly drop it
+01_CONSTITUTION/STARTER_KIT_HANDBOOK.md:653: - **`KNOWN_ISSUES.md`** (repo root) — historical record of the two now-resolved bugs
+01_CONSTITUTION/STARTER_KIT_HANDBOOK.md:662: | 1.1 | 2026-06-28 | Kit-Perfection harvest (Gates 1–10). Reconciled to disk: removed the `superadmin-add-user` fossil; user creation documented as `addMember`/`addUser` server actions; Mark IV trigger framed as shipped + proven-live (both KNOWN_ISSUES resolved). AppShellPage `<md`→`<xl` + 4 CP scars + owns-`<main>`; real global components (`PublicNav`/`PublicNavAuthSection`/`PublicMobileNav`/`NavbarLoginReg`, dropped `NavbarHome`/`NavbarSuperadmin`); shared `(account)/profile` + `ProfileForm`; test baseline 81/11 → 76/10. NEW §6 Responsive & Mobile-Nav (xl rail vs lg nav, one-`Sheet`, `coarse:` variant + verify-built-CSS); NEW §11 Known Issues — Resolved. Cookie `getAll`/`setAll` + modernize-mechanism-not-behavior; `.next/types` cache lesson; typing-not-casting; AUTH-WALK; console-only superadmin doctrine; shared-links-match-protection. |
+02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md:620: | 2.0 | — | Baseline as audited (REVIEW_004): role definition, Ignition Questionnaire (then embedded), App Type Router, APP_BRIEF template (then embedded), type-specific considerations, approval criteria, Designer handoff protocol, anti-patterns, worked examples. |
+02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md:7: > Historical external example (availability unverified): Paired with the Cyberize Agentic Automation handoff as the historical worked example. Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.
+02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md:9: > Historical external example (availability unverified): **Worked example:** `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/` Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.
+02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md:42: 🎯 **The strategic move:** instruction set + worked example. AI agents perform dramatically better with concrete examples anchoring abstract rules. This playbook gives the rules; the Cyberize handoff gives the worked example.
+02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md:344: ## 10. The Worked Example
+02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md:346: Historical external example (availability unverified): The historical worked example is `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/`. Read all four files there to see what "good" looks like: Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.
+02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md:375: | 1.0 | 2026-05-31 | Cyberize Run 001 | Initial playbook authored from Run 001 worked example |
+02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md:381: - Historical external example (availability unverified): **Worked example:** `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/` Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.
+03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md:269: At least one worked example showing the skill in action. For Stark Skills, this means showing the agent's response to operator inputs, including the "stop and wait" moments. For Agent Skills, this means showing input → output examples.
+03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md:489: - **Concrete examples** — at least one worked example showing the skill in action
+03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md:498: - `examples/` — worked examples too long to embed in SKILL.md
+03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md:993: 4. At least one worked example
+03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md:1139: - **`FFM_PLAYBOOK.md` §11** — the FFM's `skills/` authoring guide; every FFM carries a `stark-frontend-first` skill instance governed by this playbook's contract.
+03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md:186: ## 13. Worked Example (LEGACY: the ADK-HARNESS pilot arc)
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:33: 20. [Worked Examples](#20-worked-examples)
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:181: - The skill (`stark-frontend-first`) is bundled inside the FFM at `skills/`
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:294: │   └── stark-frontend-first/
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:335: | `skills/stark-frontend-first/` | ✅ | | |
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:466: - **Skill folder names:** kebab-case (`stark-frontend-first`)
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:559: 9. Author skills/stark-frontend-first/* (CLAUDE.md, SKILL.md, workflow, references, templates)
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1103: The `skills/` folder holds the **reusable methodology skill** that travels across FFM runs. For frontend-first work, this is `stark-frontend-first`.
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1108: skills/stark-frontend-first/
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1129: ### 11.2 — `stark-frontend-first/CLAUDE.md`
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1148: ### 11.3 — `stark-frontend-first/SKILL.md`
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1156: name: stark-frontend-first
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1175: 9. **Worked Example** — at least one concrete code example
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1225: 1. Copy `skills/stark-frontend-first/` from the previous FFM
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1842: - [ ] Create module-specific `QAM/` from the accepted canonical templates, both QA entry routes and all required records; prepare `ACCEPTANCE_SPEC.md`; create `_project/`, `_design/`, `_extraction/`, `skills/stark-frontend-first/`, `playbook/RETROSPECTIVES/` and `verification/`.
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1843: - [ ] Create skill subfolders: `skills/stark-frontend-first/workflow/`, `references/`, `templates/`
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1867: ### `skills/stark-frontend-first/`
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1870: - [ ] `SKILL.md` (Anthropic v2 frontmatter, phase sequence, worked example)
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1995: ## 20. Worked Examples
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:2015: - `skills/stark-frontend-first/` — the skill that travels with the module
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:2049: ### Reading Order For Worked Examples
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:2100: │   └── stark-frontend-first/          # REUSABLE skill
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:2478: ### C.6 — `skills/stark-frontend-first/SKILL.md` Frontmatter Stub
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:2482: name: stark-frontend-first
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:2508: Use this playbook. Study the worked examples. Author the FFM with discipline. Test it with a real run. Update the playbook with what you learn.
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:2518: | 1.0 | Jun 2026 | Initial playbook: FFM definition, four-role pattern, folder anatomy, two variants + router, phase scoping, authoring sequence, file-by-file guides, Brain Drain integration, kit bridging, stumbles, checklist, evolution rules, worked examples, appendices. |
+03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md:373: Historical external example (availability unverified): The historical worked example of this pattern is at: Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.
+03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md:427: This split is also v1.1's first explicit application of the **Doctrine Pairing Principle** (see `SOFTWARE_FACTORY_PLAYBOOK.md` Section 1.5) — playbooks paired with each other and with worked examples, not bloated into a single mega-doc.
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:1206: Historical external example (availability unverified): The historical worked example of this pattern is at: Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.
+05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md:6: > **What this is:** the stable doctrine for how the factory designs apps. It rarely changes. It pairs with two fast-moving companions — the **Theme Library** (named theme value-sets) and each project's **token file** (`globals.css`). Cyber Pharma is the worked example throughout; the rules are app-agnostic.
+05_DESIGN_SYSTEM/THEMING_MANUAL.md:268: - Historical external example (availability unverified): **Cyberize Run 001 `_project/CLAUDE.md`** — the historical worked example of a Locked Palette table Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.
+05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md:128: - Historical external example (availability unverified): **Cyberize Run 001 `_project/CLAUDE.md`** — the historical worked example of a Locked Palette table Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.

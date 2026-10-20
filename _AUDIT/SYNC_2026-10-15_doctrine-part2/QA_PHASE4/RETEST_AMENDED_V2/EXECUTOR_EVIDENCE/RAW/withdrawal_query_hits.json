@@ -1,0 +1,2126 @@
+[
+  {
+    "fc": "FC-001",
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 627,
+    "text": "The role table is the only authorization authority. Never authorize from user_metadata or a profile mirror. Superadmin creation is console-only; no app-side superadmin creation route is provided. Retire the metadata-authorized add-user, delete-user and get-users recipes. Future privileged list/delete operations remain possible only with trusted current-role lookup, operation-local authorization before elevated capability, an approved target-role allowlist and privileged-target protection. Profile mirrors contain profile data, not authorization columns. Registration metadata is not authorization."
+  },
+  {
+    "fc": "FC-001",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 91,
+    "text": "grep -rn \"user_metadata\\.\\(is_\\|role\\)\" src/ | grep -v node_modules"
+  },
+  {
+    "fc": "FC-001",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 201,
+    "text": "# Q3.4 — SECURITY: any roles read from user_metadata? (forbidden smell)"
+  },
+  {
+    "fc": "FC-001",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 202,
+    "text": "grep -rn \"user_metadata\" src/ | grep -v node_modules"
+  },
+  {
+    "fc": "FC-001",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 434,
+    "text": "#   predicate (no numbered colors, no user_metadata, no forbidden imports), the grep"
+  },
+  {
+    "fc": "FC-001",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 506,
+    "text": "- user_metadata role smells: <count + locations, or \"none\">"
+  },
+  {
+    "fc": "FC-001",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 557,
+    "text": "| 0.5 | 2026-07-07 | **Wave 2A (audit sync).** Standard header block (F-018); recon's place stated: Blueprint lifecycle Phase 0 + FFM Stage 0; mutual pointers with ARCHITECT_PLAYBOOK §2 Recon Mode and the `stark-recon` skill — this doc named as the skill's source content (F-024). Numbering repaired without renumbering (F-023): §7 and §10 marked as retired numbers with the stable-ID rule stated (numbers are IDs, not positions — external citations of Q3.4/Q8.x/Q9.1 stay valid); §13's questions relabeled Q10.x → Q13.1–Q13.4; Recon Report Format \"Section 10 — Surprises\" → \"Section 13 — Surprises\". Q3.4 gained the F-042-resolution nuance box (kit is table-based; smell = authz read from user_metadata or client-writable role write path; metadata = creation-time transport only, via protected channel). Content otherwise untouched — scars preserved. |"
+  },
+  {
+    "fc": "FC-001",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 833,
+    "text": "\"Sample-check one file, then trust the rest\" is brittle — in Run 001 it hid five numbered-color sites in shadcn primitives until close-out panic. For any gate with a grep-verifiable predicate (no numbered colors, no `user_metadata` authz reads, no forbidden imports), the grep RUNS as a standard step when the stage closes. Sample-then-trust is disallowed for these gates."
+  },
+  {
+    "fc": "FC-001",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 1013,
+    "text": "The role table is the only authorization authority. Never authorize from user_metadata or a profile mirror. Superadmin creation is console-only; no app-side superadmin creation route is provided. Retire the metadata-authorized add-user, delete-user and get-users recipes. Future privileged list/delete operations remain possible only with trusted current-role lookup, operation-local authorization before elevated capability, an approved target-role allowlist and privileged-target protection. Profile mirrors contain profile data, not authorization columns. Registration metadata is not authorization."
+  },
+  {
+    "fc": "FC-001",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 660,
+    "text": "> 📁 **The kit file on disk is the ground truth.** Read `src/utils/get-user-role.ts` and `supabase/setup.sql` in the repo you are working on (recon Q3.2/Q5.3). This manual intentionally does not carry an implementation copy that can drift — an earlier edition of this section showed a `user_metadata`-reading implementation that no longer matches the kit (F-042; corrected v1.3)."
+  },
+  {
+    "fc": "FC-001",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 662,
+    "text": "**⛔ FORBIDDEN:** any `getUserRole` variant (or ad-hoc check) that reads roles from `user_metadata` for authorization — that is the recon Q3.4 smell."
+  },
+  {
+    "fc": "FC-001",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 694,
+    "text": "- Reading `user_metadata` for ANY authorization decision, client or server (recon Q3.4 smell)."
+  },
+  {
+    "fc": "FC-001",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1310,
+    "text": "The role table is the only authorization authority. Never authorize from user_metadata or a profile mirror. Superadmin creation is console-only; no app-side superadmin creation route is provided. Retire the metadata-authorized add-user, delete-user and get-users recipes. Future privileged list/delete operations remain possible only with trusted current-role lookup, operation-local authorization before elevated capability, an approved target-role allowlist and privileged-target protection. Profile mirrors contain profile data, not authorization columns. Registration metadata is not authorization."
+  },
+  {
+    "fc": "FC-001",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1320,
+    "text": "The role table is the only authorization authority. Never authorize from user_metadata or a profile mirror. Superadmin creation is console-only; no app-side superadmin creation route is provided. Retire the metadata-authorized add-user, delete-user and get-users recipes. Future privileged list/delete operations remain possible only with trusted current-role lookup, operation-local authorization before elevated capability, an approved target-role allowlist and privileged-target protection. Profile mirrors contain profile data, not authorization columns. Registration metadata is not authorization."
+  },
+  {
+    "fc": "FC-001",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1348,
+    "text": "4. Authorization roles resolved from the authoritative user_roles table; never from user_metadata."
+  },
+  {
+    "fc": "FC-001",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1372,
+    "text": "| 1.3 | 2026-07-08 | **Wave 4 — the F-042 role-doctrine correction.** Role storage doctrine corrected everywhere it lived: the `user_roles` TABLE is the single source of truth (kit `supabase/setup.sql`; server-side resolution via `get-user-role.ts`); the v1.2 \"Metadata-driven roles — NOT separate tables\" philosophy line was FALSE against the kit's own filesystem (RECON_WAVE0 Q1 ground-truth). Key Principle #5 rewritten; \"User Metadata Schema\" section → \"Where Roles Live\" (table home + creation-time-transport nuance + ⛔ never read authz from `user_metadata`, recon Q3.4); §8 metadata-reading `getUserRole` sample replaced with the canonical-path description + read-the-kit-on-disk pointer (no drifting code copies — D-015); legacy `is_qr_*` (QR-era) store/pattern snippets marked with advisories; troubleshooting realigned to the table model; registration flow wording corrected. Kit hardening ticket referenced without documenting the vector. Canonical cross-refs (F-032/F-011); standard header (F-018). Full code-sample resync vs the kit = queued kit-verification touch. |"
+  },
+  {
+    "fc": "FC-001",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 140,
+    "text": "Authorization roles live in a dedicated **`user_roles`** table — never in `user_metadata`, never as a column on a profile mirror."
+  },
+  {
+    "fc": "FC-001",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 156,
+    "text": "> ⛔ **FORBIDDEN:** never store — or READ — roles for authorization from `user_metadata` (the recon Q3.4 smell), and never mirror a `role` column onto a profile table. Two homes for a role guarantees privilege drift. This aligns with AUTH_MANUAL (\"Where Roles Live\")."
+  },
+  {
+    "fc": "FC-001",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 179,
+    "text": "**Synchronization example withdrawn.** The role table is the only authorization authority. Never authorize from user_metadata or a profile mirror. Superadmin creation is console-only; no app-side superadmin creation route is provided. Retire the metadata-authorized add-user, delete-user and get-users recipes. Future privileged list/delete operations remain possible only with trusted current-role lookup, operation-local authorization before elevated capability, an approved target-role allowlist and privileged-target protection. Profile mirrors contain profile data, not authorization columns. Registration metadata is not authorization. Use the session client for identity and RLS-bound data. Acquire an isolated admin client only after independently authorizing the elevated operation. An API route is not itself a reason to bypass RLS. Do not substitute a service-role client as a general fix for denied access. Use an atomic database operation for invariants inside one database. Across external boundaries, use a stable operation identity, check every forward and compensation result, and persist completed, failed or partially-completed outcomes. Partial failure creates durable reconciliation work with a recovery owner; do not report success after an unchecked compensation or deletion."
+  },
+  {
+    "fc": "FC-001",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 1161,
+    "text": "| 1.1 | 2026-07-08 | **Wave 4 — role-doctrine surgery (F-041, security-classed).** §2: new \"Roles Table Pattern\" — `user_roles` as the single authorization home (labeled PATTERN SQL; kit `setup.sql` = ground truth), `handle_new_user()` creation-time transport explained, ⛔ forbidden box (no role storage OR authz reads from `user_metadata` — recon Q3.4; no role columns on profile mirrors); mirror-table pattern stripped of its `role` column + sync example rewritten to the transport model. §5: the `raw_user_meta_data` RLS policy variant REMOVED (it was shown as a peer option — it is the forbidden pattern); `user_roles` policy stands alone + ⛔ marker (ruling: reconcile BOTH examples). Doc now speaks ONE role doctrine, aligned with AUTH_MANUAL v1.3 (F-042 outcome). \"When Schema-First Applies\" note + FRONTEND_FIRST pointers added (F-040). GHL/QR fossil examples neutralized (naming table, mapping-table default, comments — recon Q8.5 class). Standard header (F-018); Cross-References section (F-035); this history table (D-018). |"
+  },
+  {
+    "fc": "FC-022",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 67,
+    "text": "Record the actual server-only Supabase credential variable name used by this project and its approved alias mapping. Reference examples using SUPABASE_SERVICE_ROLE_KEY or SUPABASE_SECRET_KEY are alternative project profiles, not two automatically configured credentials. Confirm each consumer against the same contract; never expose either credential in client bundles or logs."
+  },
+  {
+    "fc": "FC-030",
+    "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+    "line": 202,
+    "text": "Privacy scanners must be validated with synthetic leak fixtures and clean controls. Scan selected export contents and expanded archive members; report safe counts/locations without echoing secrets. Raw authenticated traces can contain sensitive state even after login. Retain only approved sanitized evidence. Avoid persistent browser storage; if unavoidable, declare its temporary path and cleanup before use."
+  },
+  {
+    "fc": "FC-030",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 147,
+    "text": "When testing against a real backend, hardcoded record references (specific product IDs, coupon codes, category slugs) create brittle coupling between test logic and dataset state. A **discovery script** connects to whichever backend is configured in `.env.local`, pulls live records (the first published product, a populated category, a valid coupon), merges them with static fixtures, and writes a JSON file all E2E tests read at module top. Tests reference _roles_ (the populated category) rather than _records_ (`accessories-id-7`)."
+  },
+  {
+    "fc": "FC-030",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 426,
+    "text": "expect(JSON.parse(stored!).state.couponCode).toBe(expectedCode); // approved non-sensitive project fixture only"
+  },
+  {
+    "fc": "FC-030",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 1235,
+    "text": "Fixture discovery returns one normalized record with role identities, scenario eligibility and a single count field named count. Validate role existence and coupon prerequisites before declaring readiness. A missing required role produces BLOCKED with the missing prerequisite; optional absence is recorded explicitly. Producers and consumers read count, not competing count aliases."
+  },
+  {
+    "fc": "FC-033",
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 627,
+    "text": "The role table is the only authorization authority. Never authorize from user_metadata or a profile mirror. Superadmin creation is console-only; no app-side superadmin creation route is provided. Retire the metadata-authorized add-user, delete-user and get-users recipes. Future privileged list/delete operations remain possible only with trusted current-role lookup, operation-local authorization before elevated capability, an approved target-role allowlist and privileged-target protection. Profile mirrors contain profile data, not authorization columns. Registration metadata is not authorization."
+  },
+  {
+    "fc": "FC-033",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 91,
+    "text": "grep -rn \"user_metadata\\.\\(is_\\|role\\)\" src/ | grep -v node_modules"
+  },
+  {
+    "fc": "FC-033",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 201,
+    "text": "# Q3.4 — SECURITY: any roles read from user_metadata? (forbidden smell)"
+  },
+  {
+    "fc": "FC-033",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 202,
+    "text": "grep -rn \"user_metadata\" src/ | grep -v node_modules"
+  },
+  {
+    "fc": "FC-033",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 434,
+    "text": "#   predicate (no numbered colors, no user_metadata, no forbidden imports), the grep"
+  },
+  {
+    "fc": "FC-033",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 506,
+    "text": "- user_metadata role smells: <count + locations, or \"none\">"
+  },
+  {
+    "fc": "FC-033",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 557,
+    "text": "| 0.5 | 2026-07-07 | **Wave 2A (audit sync).** Standard header block (F-018); recon's place stated: Blueprint lifecycle Phase 0 + FFM Stage 0; mutual pointers with ARCHITECT_PLAYBOOK §2 Recon Mode and the `stark-recon` skill — this doc named as the skill's source content (F-024). Numbering repaired without renumbering (F-023): §7 and §10 marked as retired numbers with the stable-ID rule stated (numbers are IDs, not positions — external citations of Q3.4/Q8.x/Q9.1 stay valid); §13's questions relabeled Q10.x → Q13.1–Q13.4; Recon Report Format \"Section 10 — Surprises\" → \"Section 13 — Surprises\". Q3.4 gained the F-042-resolution nuance box (kit is table-based; smell = authz read from user_metadata or client-writable role write path; metadata = creation-time transport only, via protected channel). Content otherwise untouched — scars preserved. |"
+  },
+  {
+    "fc": "FC-033",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 833,
+    "text": "\"Sample-check one file, then trust the rest\" is brittle — in Run 001 it hid five numbered-color sites in shadcn primitives until close-out panic. For any gate with a grep-verifiable predicate (no numbered colors, no `user_metadata` authz reads, no forbidden imports), the grep RUNS as a standard step when the stage closes. Sample-then-trust is disallowed for these gates."
+  },
+  {
+    "fc": "FC-033",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 1013,
+    "text": "The role table is the only authorization authority. Never authorize from user_metadata or a profile mirror. Superadmin creation is console-only; no app-side superadmin creation route is provided. Retire the metadata-authorized add-user, delete-user and get-users recipes. Future privileged list/delete operations remain possible only with trusted current-role lookup, operation-local authorization before elevated capability, an approved target-role allowlist and privileged-target protection. Profile mirrors contain profile data, not authorization columns. Registration metadata is not authorization."
+  },
+  {
+    "fc": "FC-033",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 660,
+    "text": "> 📁 **The kit file on disk is the ground truth.** Read `src/utils/get-user-role.ts` and `supabase/setup.sql` in the repo you are working on (recon Q3.2/Q5.3). This manual intentionally does not carry an implementation copy that can drift — an earlier edition of this section showed a `user_metadata`-reading implementation that no longer matches the kit (F-042; corrected v1.3)."
+  },
+  {
+    "fc": "FC-033",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 662,
+    "text": "**⛔ FORBIDDEN:** any `getUserRole` variant (or ad-hoc check) that reads roles from `user_metadata` for authorization — that is the recon Q3.4 smell."
+  },
+  {
+    "fc": "FC-033",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 694,
+    "text": "- Reading `user_metadata` for ANY authorization decision, client or server (recon Q3.4 smell)."
+  },
+  {
+    "fc": "FC-033",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1310,
+    "text": "The role table is the only authorization authority. Never authorize from user_metadata or a profile mirror. Superadmin creation is console-only; no app-side superadmin creation route is provided. Retire the metadata-authorized add-user, delete-user and get-users recipes. Future privileged list/delete operations remain possible only with trusted current-role lookup, operation-local authorization before elevated capability, an approved target-role allowlist and privileged-target protection. Profile mirrors contain profile data, not authorization columns. Registration metadata is not authorization."
+  },
+  {
+    "fc": "FC-033",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1320,
+    "text": "The role table is the only authorization authority. Never authorize from user_metadata or a profile mirror. Superadmin creation is console-only; no app-side superadmin creation route is provided. Retire the metadata-authorized add-user, delete-user and get-users recipes. Future privileged list/delete operations remain possible only with trusted current-role lookup, operation-local authorization before elevated capability, an approved target-role allowlist and privileged-target protection. Profile mirrors contain profile data, not authorization columns. Registration metadata is not authorization."
+  },
+  {
+    "fc": "FC-033",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1348,
+    "text": "4. Authorization roles resolved from the authoritative user_roles table; never from user_metadata."
+  },
+  {
+    "fc": "FC-033",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1372,
+    "text": "| 1.3 | 2026-07-08 | **Wave 4 — the F-042 role-doctrine correction.** Role storage doctrine corrected everywhere it lived: the `user_roles` TABLE is the single source of truth (kit `supabase/setup.sql`; server-side resolution via `get-user-role.ts`); the v1.2 \"Metadata-driven roles — NOT separate tables\" philosophy line was FALSE against the kit's own filesystem (RECON_WAVE0 Q1 ground-truth). Key Principle #5 rewritten; \"User Metadata Schema\" section → \"Where Roles Live\" (table home + creation-time-transport nuance + ⛔ never read authz from `user_metadata`, recon Q3.4); §8 metadata-reading `getUserRole` sample replaced with the canonical-path description + read-the-kit-on-disk pointer (no drifting code copies — D-015); legacy `is_qr_*` (QR-era) store/pattern snippets marked with advisories; troubleshooting realigned to the table model; registration flow wording corrected. Kit hardening ticket referenced without documenting the vector. Canonical cross-refs (F-032/F-011); standard header (F-018). Full code-sample resync vs the kit = queued kit-verification touch. |"
+  },
+  {
+    "fc": "FC-033",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 140,
+    "text": "Authorization roles live in a dedicated **`user_roles`** table — never in `user_metadata`, never as a column on a profile mirror."
+  },
+  {
+    "fc": "FC-033",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 156,
+    "text": "> ⛔ **FORBIDDEN:** never store — or READ — roles for authorization from `user_metadata` (the recon Q3.4 smell), and never mirror a `role` column onto a profile table. Two homes for a role guarantees privilege drift. This aligns with AUTH_MANUAL (\"Where Roles Live\")."
+  },
+  {
+    "fc": "FC-033",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 179,
+    "text": "**Synchronization example withdrawn.** The role table is the only authorization authority. Never authorize from user_metadata or a profile mirror. Superadmin creation is console-only; no app-side superadmin creation route is provided. Retire the metadata-authorized add-user, delete-user and get-users recipes. Future privileged list/delete operations remain possible only with trusted current-role lookup, operation-local authorization before elevated capability, an approved target-role allowlist and privileged-target protection. Profile mirrors contain profile data, not authorization columns. Registration metadata is not authorization. Use the session client for identity and RLS-bound data. Acquire an isolated admin client only after independently authorizing the elevated operation. An API route is not itself a reason to bypass RLS. Do not substitute a service-role client as a general fix for denied access. Use an atomic database operation for invariants inside one database. Across external boundaries, use a stable operation identity, check every forward and compensation result, and persist completed, failed or partially-completed outcomes. Partial failure creates durable reconciliation work with a recovery owner; do not report success after an unchecked compensation or deletion."
+  },
+  {
+    "fc": "FC-033",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 1161,
+    "text": "| 1.1 | 2026-07-08 | **Wave 4 — role-doctrine surgery (F-041, security-classed).** §2: new \"Roles Table Pattern\" — `user_roles` as the single authorization home (labeled PATTERN SQL; kit `setup.sql` = ground truth), `handle_new_user()` creation-time transport explained, ⛔ forbidden box (no role storage OR authz reads from `user_metadata` — recon Q3.4; no role columns on profile mirrors); mirror-table pattern stripped of its `role` column + sync example rewritten to the transport model. §5: the `raw_user_meta_data` RLS policy variant REMOVED (it was shown as a peer option — it is the forbidden pattern); `user_roles` policy stands alone + ⛔ marker (ruling: reconcile BOTH examples). Doc now speaks ONE role doctrine, aligned with AUTH_MANUAL v1.3 (F-042 outcome). \"When Schema-First Applies\" note + FRONTEND_FIRST pointers added (F-040). GHL/QR fossil examples neutralized (naming table, mapping-table default, comments — recon Q8.5 class). Standard header (F-018); Cross-References section (F-035); this history table (D-018). |"
+  },
+  {
+    "fc": "FC-034",
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 627,
+    "text": "The role table is the only authorization authority. Never authorize from user_metadata or a profile mirror. Superadmin creation is console-only; no app-side superadmin creation route is provided. Retire the metadata-authorized add-user, delete-user and get-users recipes. Future privileged list/delete operations remain possible only with trusted current-role lookup, operation-local authorization before elevated capability, an approved target-role allowlist and privileged-target protection. Profile mirrors contain profile data, not authorization columns. Registration metadata is not authorization."
+  },
+  {
+    "fc": "FC-034",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 79,
+    "text": "- `signup/route.ts` — public signup, creates `member` role; **metadata key MUST be `full_name`**"
+  },
+  {
+    "fc": "FC-034",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 163,
+    "text": "- Reads `full_name` from `raw_user_meta_data` (the key every writer writes)"
+  },
+  {
+    "fc": "FC-034",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 164,
+    "text": "- Historical Mark IV role-from-metadata behavior is unverified for safe public signup. Do not adopt it: privileged assignment must be inaccessible to client-controlled input and proven against pinned trigger/caller source."
+  },
+  {
+    "fc": "FC-034",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 323,
+    "text": "| `RegisterForm` | `src/components/auth/` | Signup UI — wired to `/api/auth/signup` |"
+  },
+  {
+    "fc": "FC-034",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 558,
+    "text": "### Gotcha 4: Signup Metadata Key"
+  },
+  {
+    "fc": "FC-034",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 611,
+    "text": "| Login/signup UI | `LoginForm` / `RegisterForm` in `src/components/auth/` | 🛑 DO NOT BUILD |"
+  },
+  {
+    "fc": "FC-034",
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "line": 240,
+    "text": "- Auth flows (login, signup, forgot password)"
+  },
+  {
+    "fc": "FC-034",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 91,
+    "text": "grep -rn \"user_metadata\\.\\(is_\\|role\\)\" src/ | grep -v node_modules"
+  },
+  {
+    "fc": "FC-034",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 201,
+    "text": "# Q3.4 — SECURITY: any roles read from user_metadata? (forbidden smell)"
+  },
+  {
+    "fc": "FC-034",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 202,
+    "text": "grep -rn \"user_metadata\" src/ | grep -v node_modules"
+  },
+  {
+    "fc": "FC-034",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 216,
+    "text": "> **Q3.4:** inspect both authorization reads and creation-time writes. User-writable metadata must never grant privilege, including through a trigger. A protected caller alone does not make a shared metadata field trustworthy: prove that public signup cannot supply the privileged value. Record the pinned role table, resolver, trigger and caller evidence; otherwise flag the path as unsafe."
+  },
+  {
+    "fc": "FC-034",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 434,
+    "text": "#   predicate (no numbered colors, no user_metadata, no forbidden imports), the grep"
+  },
+  {
+    "fc": "FC-034",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 506,
+    "text": "- user_metadata role smells: <count + locations, or \"none\">"
+  },
+  {
+    "fc": "FC-034",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 557,
+    "text": "| 0.5 | 2026-07-07 | **Wave 2A (audit sync).** Standard header block (F-018); recon's place stated: Blueprint lifecycle Phase 0 + FFM Stage 0; mutual pointers with ARCHITECT_PLAYBOOK §2 Recon Mode and the `stark-recon` skill — this doc named as the skill's source content (F-024). Numbering repaired without renumbering (F-023): §7 and §10 marked as retired numbers with the stable-ID rule stated (numbers are IDs, not positions — external citations of Q3.4/Q8.x/Q9.1 stay valid); §13's questions relabeled Q10.x → Q13.1–Q13.4; Recon Report Format \"Section 10 — Surprises\" → \"Section 13 — Surprises\". Q3.4 gained the F-042-resolution nuance box (kit is table-based; smell = authz read from user_metadata or client-writable role write path; metadata = creation-time transport only, via protected channel). Content otherwise untouched — scars preserved. |"
+  },
+  {
+    "fc": "FC-034",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 833,
+    "text": "\"Sample-check one file, then trust the rest\" is brittle — in Run 001 it hid five numbered-color sites in shadcn primitives until close-out panic. For any gate with a grep-verifiable predicate (no numbered colors, no `user_metadata` authz reads, no forbidden imports), the grep RUNS as a standard step when the stage closes. Sample-then-trust is disallowed for these gates."
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 165,
+    "text": "│   ├── signup/"
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 166,
+    "text": "│   │   └── page.tsx              # /auth/signup"
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 174,
+    "text": "    │   └── signup/route.ts"
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 208,
+    "text": "│   ├── SignupForm.tsx"
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 1013,
+    "text": "The role table is the only authorization authority. Never authorize from user_metadata or a profile mirror. Superadmin creation is console-only; no app-side superadmin creation route is provided. Retire the metadata-authorized add-user, delete-user and get-users recipes. Future privileged list/delete operations remain possible only with trusted current-role lookup, operation-local authorization before elevated capability, an approved target-role allowlist and privileged-target protection. Profile mirrors contain profile data, not authorization columns. Registration metadata is not authorization."
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 29,
+    "text": "| Signup endpoint | `/api/auth/signup` | POST email/password/full_name |"
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 35,
+    "text": "| Signup form UI | `src/components/auth/RegisterForm.tsx` | Pre-wired to `/api/auth/signup` |"
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 147,
+    "text": "Roles must resolve from an authoritative server-side store. Creation and mutation require verified per-call authorization and a role input that untrusted signup cannot control. The historical Mark IV transport is not a verified safe recipe for the current kit; obtain pinned trigger and caller evidence before implementation."
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 396,
+    "text": "At the trusted public-signup boundary, allow only approved profile fields and force the member role independently of submitted metadata. The provider-side creation path must also ignore or reject public role keys, so direct provider signup cannot bypass the endpoint. Privileged role assignment uses a separately authorized protected channel. Trigger hardening and a negative direct-provider test are required before promotion: role=admin submitted publicly must not produce an admin."
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 486,
+    "text": "### POST /api/auth/signup"
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 490,
+    "text": "At the trusted public-signup boundary, allow only approved profile fields and force the member role independently of submitted metadata. The provider-side creation path must also ignore or reject public role keys, so direct provider signup cannot bypass the endpoint. Privileged role assignment uses a separately authorized protected channel. Trigger hardening and a negative direct-provider test are required before promotion: role=admin submitted publicly must not produce an admin."
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 500,
+    "text": "- `type` - Confirmation type (usually \"signup\")"
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 658,
+    "text": "Roles must resolve from an authoritative server-side store. Creation and mutation require verified per-call authorization and a role input that untrusted signup cannot control. The historical Mark IV transport is not a verified safe recipe for the current kit; obtain pinned trigger and caller evidence before implementation."
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 660,
+    "text": "> 📁 **The kit file on disk is the ground truth.** Read `src/utils/get-user-role.ts` and `supabase/setup.sql` in the repo you are working on (recon Q3.2/Q5.3). This manual intentionally does not carry an implementation copy that can drift — an earlier edition of this section showed a `user_metadata`-reading implementation that no longer matches the kit (F-042; corrected v1.3)."
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 662,
+    "text": "**⛔ FORBIDDEN:** any `getUserRole` variant (or ad-hoc check) that reads roles from `user_metadata` for authorization — that is the recon Q3.4 smell."
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 689,
+    "text": "Roles must resolve from an authoritative server-side store. Creation and mutation require verified per-call authorization and a role input that untrusted signup cannot control. The historical Mark IV transport is not a verified safe recipe for the current kit; obtain pinned trigger and caller evidence before implementation."
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 691,
+    "text": "Roles must resolve from an authoritative server-side store. Creation and mutation require verified per-call authorization and a role input that untrusted signup cannot control. The historical Mark IV transport is not a verified safe recipe for the current kit; obtain pinned trigger and caller evidence before implementation."
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 694,
+    "text": "- Reading `user_metadata` for ANY authorization decision, client or server (recon Q3.4 smell)."
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 836,
+    "text": "At the trusted public-signup boundary, allow only approved profile fields and force the member role independently of submitted metadata. The provider-side creation path must also ignore or reject public role keys, so direct provider signup cannot bypass the endpoint. Privileged role assignment uses a separately authorized protected channel. Trigger hardening and a negative direct-provider test are required before promotion: role=admin submitted publicly must not produce an admin."
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1041,
+    "text": "3. Check the user's row in `user_roles` (did the creation-time transport apply at signup?)"
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1283,
+    "text": "│           ├── signup/route.ts     # POST signup"
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1310,
+    "text": "The role table is the only authorization authority. Never authorize from user_metadata or a profile mirror. Superadmin creation is console-only; no app-side superadmin creation route is provided. Retire the metadata-authorized add-user, delete-user and get-users recipes. Future privileged list/delete operations remain possible only with trusted current-role lookup, operation-local authorization before elevated capability, an approved target-role allowlist and privileged-target protection. Profile mirrors contain profile data, not authorization columns. Registration metadata is not authorization."
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1320,
+    "text": "The role table is the only authorization authority. Never authorize from user_metadata or a profile mirror. Superadmin creation is console-only; no app-side superadmin creation route is provided. Retire the metadata-authorized add-user, delete-user and get-users recipes. Future privileged list/delete operations remain possible only with trusted current-role lookup, operation-local authorization before elevated capability, an approved target-role allowlist and privileged-target protection. Profile mirrors contain profile data, not authorization columns. Registration metadata is not authorization."
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1348,
+    "text": "4. Authorization roles resolved from the authoritative user_roles table; never from user_metadata."
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1372,
+    "text": "| 1.3 | 2026-07-08 | **Wave 4 — the F-042 role-doctrine correction.** Role storage doctrine corrected everywhere it lived: the `user_roles` TABLE is the single source of truth (kit `supabase/setup.sql`; server-side resolution via `get-user-role.ts`); the v1.2 \"Metadata-driven roles — NOT separate tables\" philosophy line was FALSE against the kit's own filesystem (RECON_WAVE0 Q1 ground-truth). Key Principle #5 rewritten; \"User Metadata Schema\" section → \"Where Roles Live\" (table home + creation-time-transport nuance + ⛔ never read authz from `user_metadata`, recon Q3.4); §8 metadata-reading `getUserRole` sample replaced with the canonical-path description + read-the-kit-on-disk pointer (no drifting code copies — D-015); legacy `is_qr_*` (QR-era) store/pattern snippets marked with advisories; troubleshooting realigned to the table model; registration flow wording corrected. Kit hardening ticket referenced without documenting the vector. Canonical cross-refs (F-032/F-011); standard header (F-018). Full code-sample resync vs the kit = queued kit-verification touch. |"
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 140,
+    "text": "Authorization roles live in a dedicated **`user_roles`** table — never in `user_metadata`, never as a column on a profile mirror."
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 154,
+    "text": "Roles must resolve from an authoritative server-side store. Creation and mutation require verified per-call authorization and a role input that untrusted signup cannot control. The historical Mark IV transport is not a verified safe recipe for the current kit; obtain pinned trigger and caller evidence before implementation."
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 156,
+    "text": "> ⛔ **FORBIDDEN:** never store — or READ — roles for authorization from `user_metadata` (the recon Q3.4 smell), and never mirror a `role` column onto a profile table. Two homes for a role guarantees privilege drift. This aligns with AUTH_MANUAL (\"Where Roles Live\")."
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 179,
+    "text": "**Synchronization example withdrawn.** The role table is the only authorization authority. Never authorize from user_metadata or a profile mirror. Superadmin creation is console-only; no app-side superadmin creation route is provided. Retire the metadata-authorized add-user, delete-user and get-users recipes. Future privileged list/delete operations remain possible only with trusted current-role lookup, operation-local authorization before elevated capability, an approved target-role allowlist and privileged-target protection. Profile mirrors contain profile data, not authorization columns. Registration metadata is not authorization. Use the session client for identity and RLS-bound data. Acquire an isolated admin client only after independently authorizing the elevated operation. An API route is not itself a reason to bypass RLS. Do not substitute a service-role client as a general fix for denied access. Use an atomic database operation for invariants inside one database. Across external boundaries, use a stable operation identity, check every forward and compensation result, and persist completed, failed or partially-completed outcomes. Partial failure creates durable reconciliation work with a recovery owner; do not report success after an unchecked compensation or deletion."
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 402,
+    "text": "> ⛔ **Do NOT write policies that read roles from `raw_user_meta_data`** (e.g. `raw_user_meta_data->>'is_admin'`) — that is an authorization read from user metadata, the recon Q3.4 smell (F-041). A prior edition of this manual showed that variant as a peer option; it is not one. Roles resolve from `user_roles` — everywhere, including inside RLS."
+  },
+  {
+    "fc": "FC-034",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 1161,
+    "text": "| 1.1 | 2026-07-08 | **Wave 4 — role-doctrine surgery (F-041, security-classed).** §2: new \"Roles Table Pattern\" — `user_roles` as the single authorization home (labeled PATTERN SQL; kit `setup.sql` = ground truth), `handle_new_user()` creation-time transport explained, ⛔ forbidden box (no role storage OR authz reads from `user_metadata` — recon Q3.4; no role columns on profile mirrors); mirror-table pattern stripped of its `role` column + sync example rewritten to the transport model. §5: the `raw_user_meta_data` RLS policy variant REMOVED (it was shown as a peer option — it is the forbidden pattern); `user_roles` policy stands alone + ⛔ marker (ruling: reconcile BOTH examples). Doc now speaks ONE role doctrine, aligned with AUTH_MANUAL v1.3 (F-042 outcome). \"When Schema-First Applies\" note + FRONTEND_FIRST pointers added (F-040). GHL/QR fossil examples neutralized (naming table, mapping-table default, comments — recon Q8.5 class). Standard header (F-018); Cross-References section (F-035); this history table (D-018). |"
+  },
+  {
+    "fc": "FC-034",
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "line": 448,
+    "text": "**Purpose:** Email/password/full_name signup form, wired to `/api/auth/signup`"
+  },
+  {
+    "fc": "FC-034",
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "line": 450,
+    "text": "**🛑 DO NOT** author a custom signup form. Use this one."
+  },
+  {
+    "fc": "FC-034",
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "line": 759,
+    "text": "| Signup form | `RegisterForm` (don't author) |"
+  },
+  {
+    "fc": "FC-038",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 226,
+    "text": "Service role bypasses RLS — used in admin API routes / server actions."
+  },
+  {
+    "fc": "FC-038",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 562,
+    "text": "### Gotcha 5: Service Role Bypasses RLS"
+  },
+  {
+    "fc": "FC-038",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 418,
+    "text": "### Service Role Bypass"
+  },
+  {
+    "fc": "FC-039",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1322,
+    "text": "Use an atomic database operation for invariants inside one database. Across external boundaries, use a stable operation identity, check every forward and compensation result, and persist completed, failed or partially-completed outcomes. Partial failure creates durable reconciliation work with a recovery owner; do not report success after an unchecked compensation or deletion."
+  },
+  {
+    "fc": "FC-039",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 179,
+    "text": "**Synchronization example withdrawn.** The role table is the only authorization authority. Never authorize from user_metadata or a profile mirror. Superadmin creation is console-only; no app-side superadmin creation route is provided. Retire the metadata-authorized add-user, delete-user and get-users recipes. Future privileged list/delete operations remain possible only with trusted current-role lookup, operation-local authorization before elevated capability, an approved target-role allowlist and privileged-target protection. Profile mirrors contain profile data, not authorization columns. Registration metadata is not authorization. Use the session client for identity and RLS-bound data. Acquire an isolated admin client only after independently authorizing the elevated operation. An API route is not itself a reason to bypass RLS. Do not substitute a service-role client as a general fix for denied access. Use an atomic database operation for invariants inside one database. Across external boundaries, use a stable operation identity, check every forward and compensation result, and persist completed, failed or partially-completed outcomes. Partial failure creates durable reconciliation work with a recovery owner; do not report success after an unchecked compensation or deletion."
+  },
+  {
+    "fc": "FC-039",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 1010,
+    "text": "### Transaction Pattern (Pseudo-Transaction)"
+  },
+  {
+    "fc": "FC-039",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 1014,
+    "text": "Use an atomic database operation for invariants inside one database. Across external boundaries, use a stable operation identity, check every forward and compensation result, and persist completed, failed or partially-completed outcomes. Partial failure creates durable reconciliation work with a recovery owner; do not report success after an unchecked compensation or deletion."
+  },
+  {
+    "fc": "FC-041",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 107,
+    "text": "**Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance."
+  },
+  {
+    "fc": "FC-041",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 117,
+    "text": "- Custom role-checking logic in components — use `useAuthStore` flags or `protectPage`"
+  },
+  {
+    "fc": "FC-041",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 124,
+    "text": "Three roles, defined in the `AppRole` enum at `src/utils/app-role.ts` (universal — safe in client components):"
+  },
+  {
+    "fc": "FC-041",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 176,
+    "text": "import { getUserRole } from \"@/utils/get-user-role\";"
+  },
+  {
+    "fc": "FC-041",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 177,
+    "text": "const role = await getUserRole();"
+  },
+  {
+    "fc": "FC-041",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 178,
+    "text": "if (role === AppRole.ADMIN) { /* ... */ }"
+  },
+  {
+    "fc": "FC-041",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 190,
+    "text": "**Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance."
+  },
+  {
+    "fc": "FC-041",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 345,
+    "text": "**Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance."
+  },
+  {
+    "fc": "FC-041",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 451,
+    "text": "| `actions.test.ts` | `protectPage` |"
+  },
+  {
+    "fc": "FC-041",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 519,
+    "text": "- `src/utils/get-user-role.ts` — `getUserRole()` (server-only)"
+  },
+  {
+    "fc": "FC-041",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 520,
+    "text": "- `src/utils/app-role.ts` — `AppRole` enum (universal — safe in client components)"
+  },
+  {
+    "fc": "FC-041",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 607,
+    "text": "| Custom role checker | `useAuthStore` flags + `getUserRole()` | 🛑 DO NOT BUILD |"
+  },
+  {
+    "fc": "FC-041",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 168,
+    "text": "grep -rn \"export.*AppRole\" src/ | grep -v node_modules"
+  },
+  {
+    "fc": "FC-041",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 169,
+    "text": "grep -rn \"export.*getUserRole\" src/ | grep -v node_modules"
+  },
+  {
+    "fc": "FC-041",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 195,
+    "text": "grep -rn \"getUserRole\\|resolveRole\\|AppRole\\|user_roles\" src/ | grep -v node_modules | head -20"
+  },
+  {
+    "fc": "FC-041",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 205,
+    "text": "grep -rn \"protectPage\\|requireAuth\\|redirect.*login\" src/ | grep -v node_modules | head -10"
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 1017,
+    "text": "The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance."
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 1223,
+    "text": "🛑 **Wrong** — `AppRole` enum mixed with server-only function in one file:"
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 1229,
+    "text": "export enum AppRole {"
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 1235,
+    "text": "export async function getUserRole() {"
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 1241,
+    "text": "When a Client Component does `import { AppRole } from \"@/utils/get-user-role\"`, the `headers` import gets bundled for the client and the build fails."
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 1249,
+    "text": "export enum AppRole {"
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 1259,
+    "text": "import { AppRole } from \"./app-role\";"
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 1261,
+    "text": "export async function getUserRole(): Promise<AppRole | null> {"
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 1266,
+    "text": "Now Client Components import `AppRole` from `app-role.ts` (universal). Server Components import `getUserRole` from `get-user-role.ts` (server-only)."
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 33,
+    "text": "| Server-side page protection | `src/utils/supabase/actions.ts` | `protectPage([AppRole.X])` |"
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 66,
+    "text": "**Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance."
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 567,
+    "text": "### protectPage Function"
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 571,
+    "text": "**Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance."
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 585,
+    "text": "**Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance."
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 588,
+    "text": "**Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance."
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 591,
+    "text": "**Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance."
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 597,
+    "text": "**Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance."
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 629,
+    "text": "**Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance."
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 655,
+    "text": "export type AppRole = \"superadmin\" | \"admin\" | \"member\";"
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 662,
+    "text": "**⛔ FORBIDDEN:** any `getUserRole` variant (or ad-hoc check) that reads roles from `user_metadata` for authorization — that is the recon Q3.4 smell."
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 683,
+    "text": "**Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance."
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 914,
+    "text": "**Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance."
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1034,
+    "text": "1. `protectPage()` in wrong place"
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1039,
+    "text": "1. Only use `protectPage()` in layouts, not in /auth routes"
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1061,
+    "text": "- User has role but `getUserRole()` returns null"
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1082,
+    "text": "   - Use `protectPage()` in layouts"
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1234,
+    "text": "import { protectPage } from \"@/utils/supabase/actions\";"
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1235,
+    "text": "import { getUserRole } from \"@/utils/get-user-role\";"
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1249,
+    "text": "**Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance."
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1299,
+    "text": "│       ├── actions.ts              # protectPage"
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1350,
+    "text": "6. protectPage() for route protection"
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1369,
+    "text": "| 1.0 | (original, date unknown) | Initial manual: Supabase clients, auth flows, API routes, Zustand store, protectPage RBAC, session middleware, components, patterns, troubleshooting, security practices. |"
+  },
+  {
+    "fc": "FC-041",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1372,
+    "text": "| 1.3 | 2026-07-08 | **Wave 4 — the F-042 role-doctrine correction.** Role storage doctrine corrected everywhere it lived: the `user_roles` TABLE is the single source of truth (kit `supabase/setup.sql`; server-side resolution via `get-user-role.ts`); the v1.2 \"Metadata-driven roles — NOT separate tables\" philosophy line was FALSE against the kit's own filesystem (RECON_WAVE0 Q1 ground-truth). Key Principle #5 rewritten; \"User Metadata Schema\" section → \"Where Roles Live\" (table home + creation-time-transport nuance + ⛔ never read authz from `user_metadata`, recon Q3.4); §8 metadata-reading `getUserRole` sample replaced with the canonical-path description + read-the-kit-on-disk pointer (no drifting code copies — D-015); legacy `is_qr_*` (QR-era) store/pattern snippets marked with advisories; troubleshooting realigned to the table model; registration flow wording corrected. Kit hardening ticket referenced without documenting the vector. Canonical cross-refs (F-032/F-011); standard header (F-018). Full code-sample resync vs the kit = queued kit-verification touch. |"
+  },
+  {
+    "fc": "FC-041",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "line": 443,
+    "text": "**Guard-call example withdrawn pending pinned-kit verification.** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance."
+  },
+  {
+    "fc": "FC-042",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 73,
+    "text": "**Session/cookie architecture:** verify the pinned server and browser clients, cookie adapters, attributes and refresh behavior together. Neither blanket `httpOnly: true` nor blanket `httpOnly: false` is approved here. Do not change attributes without a compatible verified session contract and tests."
+  },
+  {
+    "fc": "FC-042",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 381,
+    "text": "### proxy.ts vs middleware.ts (Next.js 16)"
+  },
+  {
+    "fc": "FC-042",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 383,
+    "text": "- The kit ships `src/proxy.ts` — **correct for Next.js 16+** (the renamed middleware convention)"
+  },
+  {
+    "fc": "FC-042",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 384,
+    "text": "- Older docs may say `middleware.ts` — **on-disk code is the source of truth**"
+  },
+  {
+    "fc": "FC-042",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 385,
+    "text": "- DO NOT propose renaming `proxy.ts` → `middleware.ts` (Run 001 Lesson 1 trap)"
+  },
+  {
+    "fc": "FC-042",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 608,
+    "text": "| Custom session refresh | `src/proxy.ts` + middleware utils | 🛑 DO NOT BUILD |"
+  },
+  {
+    "fc": "FC-042",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 178,
+    "text": "# Q2.5 — Middleware vs proxy (Next 16 ships src/proxy.ts, not middleware.ts)"
+  },
+  {
+    "fc": "FC-042",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 179,
+    "text": "ls -la src/middleware.ts src/proxy.ts 2>/dev/null"
+  },
+  {
+    "fc": "FC-042",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 1058,
+    "text": "Session-cookie attributes must follow the verified pinned kit’s session architecture. HTTPS and Secure transport remain required in production; do not impose an unverified HttpOnly architecture on a browser-client session model. Record the verification gap rather than guessing compatible options."
+  },
+  {
+    "fc": "FC-042",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 1288,
+    "text": "| 1.3 | 2026-07-08 | **Wave 4 (audit sync).** Framework version de-pinned (F-038 — this manual was the exact offender RECON §1 was written about): subtitle + stack table + §3 intro now say \"Next.js App Router\"; version-sensitive facts labeled (\"Next.js 15+\" for params-as-Promise); header carries the version rule — `package.json` is the only truth (recon Q1.1). §10 Route Protection gains the `src/middleware.ts` vs `src/proxy.ts` (Next 16 kit convention) note with a verify-on-disk pointer (recon Q2.5). Encoding repaired: 21 mojibake sequences (▼/►/✅) + 17 invisible U+0090 C1 controls — a Gate-10 doc whose v1.1 changelog claimed the UTF-8 fix; F-012 systemic diagnosis reconfirmed a third time (the editing pipeline re-corrupts on save). Handbook cross-ref canonical (F-032). Standard header (F-018). |"
+  },
+  {
+    "fc": "FC-042",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 25,
+    "text": "| Middleware session refresh | `src/utils/supabase/middleware.ts` | Already wired in `src/proxy.ts` |"
+  },
+  {
+    "fc": "FC-042",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 161,
+    "text": "| Middleware | `src/utils/supabase/middleware.ts` | Session refresh | ✅ Yes |"
+  },
+  {
+    "fc": "FC-042",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 268,
+    "text": "**File:** `src/utils/supabase/middleware.ts`"
+  },
+  {
+    "fc": "FC-042",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 710,
+    "text": "updateSession() (src/utils/supabase/middleware.ts)"
+  },
+  {
+    "fc": "FC-042",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 751,
+    "text": "- HttpOnly attributes — verify against the approved kit session architecture; no blanket value is prescribed here"
+  },
+  {
+    "fc": "FC-042",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1105,
+    "text": "   - HttpOnly only where compatible with the verified session architecture"
+  },
+  {
+    "fc": "FC-042",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1298,
+    "text": "│       ├── middleware.ts           # Session refresh"
+  },
+  {
+    "fc": "FC-045",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 738,
+    "text": "  .order('created_at', { ascending: false })"
+  },
+  {
+    "fc": "FC-045",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 1036,
+    "text": "  .order('created_at', { ascending: false })"
+  },
+  {
+    "fc": "FC-045",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 1040,
+    "text": "// Use a project-validated cursor over (created_at, id), ordered by both fields,"
+  },
+  {
+    "fc": "FC-047",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 641,
+    "text": "### `onRehydrateStorage` Callback"
+  },
+  {
+    "fc": "FC-051",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1081,
+    "text": "   - Never trust client-side auth state"
+  },
+  {
+    "fc": "FC-051",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 104,
+    "text": "2. **Validate on server** - Never trust client-side totals"
+  },
+  {
+    "fc": "FC-051",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 501,
+    "text": "- [ ] Server-side recalculation of totals (never trust client)"
+  },
+  {
+    "fc": "FC-052",
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "line": 535,
+    "text": "3. Supabase upsert"
+  },
+  {
+    "fc": "FC-052",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 864,
+    "text": "// For UPSERT: from().upsert()"
+  },
+  {
+    "fc": "FC-052",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 865,
+    "text": "const upsert = jest.fn().mockResolvedValue({ error: null });"
+  },
+  {
+    "fc": "FC-052",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 866,
+    "text": "const from = jest.fn(() => ({ upsert }));"
+  },
+  {
+    "fc": "FC-052",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 1157,
+    "text": "### Upsert Pattern for Sync"
+  },
+  {
+    "fc": "FC-052",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 1190,
+    "text": "| Upsert Sync | Data synchronization | `onConflict: 'external_id'` |"
+  },
+  {
+    "fc": "FC-052",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 756,
+    "text": "### Upsert Pattern"
+  },
+  {
+    "fc": "FC-052",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 762,
+    "text": "  .upsert("
+  },
+  {
+    "fc": "FC-052",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 1099,
+    "text": "-- Upsert"
+  },
+  {
+    "fc": "FC-052",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 1119,
+    "text": "// Upsert"
+  },
+  {
+    "fc": "FC-052",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 1120,
+    "text": "supabase.from('table').upsert({ id: 1, col: 'val' })"
+  },
+  {
+    "fc": "FC-053",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 1098,
+    "text": "(stripe.checkout.sessions.create as jest.Mock).mockResolvedValue({"
+  },
+  {
+    "fc": "FC-053",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 1117,
+    "text": "// route handler uses stripe.customers.list(), stripe.paymentIntents.create(), etc."
+  },
+  {
+    "fc": "FC-053",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 1031,
+    "text": "### Idempotency for Webhooks"
+  },
+  {
+    "fc": "FC-053",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 107,
+    "text": "5. **Idempotency** - Use idempotency keys for retries"
+  },
+  {
+    "fc": "FC-053",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 189,
+    "text": "Persist one authorized checkout-attempt identity across retries and claim it atomically against concurrent requests. Scope provider idempotency keys to that attempt and operation, reuse or retrieve existing external objects after an unknown outcome, and reconcile before creating a replacement. Use the project-approved customer-identity contract without assuming paid activation; universal subscription schema design is deferred. Handle every documented subscription state, not only active."
+  },
+  {
+    "fc": "FC-053",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 201,
+    "text": "Persist one authorized checkout-attempt identity across retries and claim it atomically against concurrent requests. Scope provider idempotency keys to that attempt and operation, reuse or retrieve existing external objects after an unknown outcome, and reconcile before creating a replacement. Use the project-approved customer-identity contract without assuming paid activation; universal subscription schema design is deferred. Handle every documented subscription state, not only active."
+  },
+  {
+    "fc": "FC-053",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 217,
+    "text": "Persist one authorized checkout-attempt identity across retries and claim it atomically against concurrent requests. Scope provider idempotency keys to that attempt and operation, reuse or retrieve existing external objects after an unknown outcome, and reconcile before creating a replacement. Use the project-approved customer-identity contract without assuming paid activation; universal subscription schema design is deferred. Handle every documented subscription state, not only active."
+  },
+  {
+    "fc": "FC-053",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 511,
+    "text": "- [ ] Idempotency keys for retries"
+  },
+  {
+    "fc": "FC-053",
+    "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "line": 233,
+    "text": "Persist one authorized checkout-attempt identity across retries and claim it atomically against concurrent requests. Scope provider idempotency keys to that attempt and operation, reuse or retrieve existing external objects after an unknown outcome, and reconcile before creating a replacement. Use the project-approved customer-identity contract without assuming paid activation; universal subscription schema design is deferred. Handle every documented subscription state, not only active."
+  },
+  {
+    "fc": "FC-053",
+    "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "line": 257,
+    "text": "Persist one authorized checkout-attempt identity across retries and claim it atomically against concurrent requests. Scope provider idempotency keys to that attempt and operation, reuse or retrieve existing external objects after an unknown outcome, and reconcile before creating a replacement. Use the project-approved customer-identity contract without assuming paid activation; universal subscription schema design is deferred. Handle every documented subscription state, not only active."
+  },
+  {
+    "fc": "FC-054",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 396,
+    "text": "| `payment_intent.succeeded` | Payment completed | Update order to \"processing\" |"
+  },
+  {
+    "fc": "FC-054",
+    "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "line": 520,
+    "text": "- **Events:** Select `checkout.session.completed`, `customer.subscription.updated`, `customer.subscription.deleted`"
+  },
+  {
+    "fc": "FC-054",
+    "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "line": 549,
+    "text": "Handle `invoice.payment_failed` webhook event. Update subscription status to `past_due`. Show a banner: \"Your payment failed. Please update your payment method.\" Link to Customer Portal. After N failures, Stripe automatically cancels — handle `customer.subscription.deleted`."
+  },
+  {
+    "fc": "FC-057",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 108,
+    "text": "export async function GET() {"
+  },
+  {
+    "fc": "FC-057",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 498,
+    "text": "export async function GET("
+  },
+  {
+    "fc": "FC-057",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 1149,
+    "text": "### Manual Sync with Progress Tracking"
+  },
+  {
+    "fc": "FC-057",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 1153,
+    "text": "Manual synchronization is an authenticated, role-authorized POST operation with explicit tenant scope. Apply the context’s CSRF protection, rate and concurrency controls. Job acceptance, progress reads and retries enforce the same authorization boundary. GET is read-only and cannot initiate synchronization."
+  },
+  {
+    "fc": "FC-057",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 1165,
+    "text": "Manual synchronization is an authenticated, role-authorized POST operation with explicit tenant scope. Apply the context’s CSRF protection, rate and concurrency controls. Job acceptance, progress reads and retries enforce the same authorization boundary. GET is read-only and cannot initiate synchronization."
+  },
+  {
+    "fc": "FC-057",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 708,
+    "text": "export async function GET(request: NextRequest) {"
+  },
+  {
+    "fc": "FC-057",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 1235,
+    "text": "export async function getUserRole() {"
+  },
+  {
+    "fc": "FC-057",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 1261,
+    "text": "export async function getUserRole(): Promise<AppRole | null> {"
+  },
+  {
+    "fc": "FC-057",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 507,
+    "text": "export async function GET(request: NextRequest) {"
+  },
+  {
+    "fc": "FC-057",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 286,
+    "text": "export async function GET(request: NextRequest) {"
+  },
+  {
+    "fc": "FC-059",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 1023,
+    "text": "### Async Follow-Up Pattern (Fire-and-Forget)"
+  },
+  {
+    "fc": "FC-059",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 1191,
+    "text": "| Durable asynchronous work | Required webhook follow-up | Acknowledge only after verified durable acceptance; no unawaited fire-and-forget promise |"
+  },
+  {
+    "fc": "FC-060",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 191,
+    "text": "Use one validated checkout contract across form, state, route and service. The request carries billing.email, validated line identifiers/quantities, shippingMethod and couponCode; it carries no authoritative monetary values. The response identifies the authorized order/payment attempt or a typed generic failure. The server pricing operation from the same contract supplies totals. Revisions to items, shipping or coupon invalidate the old payment binding before a new attempt is released."
+  },
+  {
+    "fc": "FC-060",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 203,
+    "text": "Use one validated checkout contract across form, state, route and service. The request carries billing.email, validated line identifiers/quantities, shippingMethod and couponCode; it carries no authoritative monetary values. The response identifies the authorized order/payment attempt or a typed generic failure. The server pricing operation from the same contract supplies totals. Revisions to items, shipping or coupon invalidate the old payment binding before a new attempt is released."
+  },
+  {
+    "fc": "FC-060",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 219,
+    "text": "Use one validated checkout contract across form, state, route and service. The request carries billing.email, validated line identifiers/quantities, shippingMethod and couponCode; it carries no authoritative monetary values. The response identifies the authorized order/payment attempt or a typed generic failure. The server pricing operation from the same contract supplies totals. Revisions to items, shipping or coupon invalidate the old payment binding before a new attempt is released."
+  },
+  {
+    "fc": "FC-060",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 250,
+    "text": "  shippingMethodId: string | null;"
+  },
+  {
+    "fc": "FC-060",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 215,
+    "text": "  shippingMethodId: string;    // Reference ID, not nested object"
+  },
+  {
+    "fc": "FC-060",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 238,
+    "text": "| Update/Set | `update`, `set` | `updateQuantity`, `setShippingMethod` |"
+  },
+  {
+    "fc": "FC-060",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 283,
+    "text": "export const selectShippingMethodId = (state: CartState) => state.shippingMethodId;"
+  },
+  {
+    "fc": "FC-060",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 351,
+    "text": "export const calculateCartTotals = (items: CartItem[], coupon?: Coupon) => {"
+  },
+  {
+    "fc": "FC-062",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 368,
+    "text": "Refund and dispute handling is INCOMPLETE and not a production recipe until the module contract defines partial/full refund effects, dispute transitions, notification and recovery owners. Do not acknowledge a supported event until its required local work is completed or durably accepted under the webhook contract."
+  },
+  {
+    "fc": "FC-062",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 398,
+    "text": "| `charge.refunded` | Refund processed | Update order, notify customer |"
+  },
+  {
+    "fc": "FC-062",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 399,
+    "text": "| `charge.dispute.created` | Chargeback initiated | Flag order, notify admin |"
+  },
+  {
+    "fc": "FC-064",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 61,
+    "text": "8. Defensive error message assertions for security-sensitive endpoints"
+  },
+  {
+    "fc": "FC-064",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 151,
+    "text": "## Principle 1.8 — Defensive error message assertions for security-sensitive endpoints"
+  },
+  {
+    "fc": "FC-064",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 153,
+    "text": "For routes handling money, identity, or PII, the catch-block test asserts two things: the expected user-facing error IS present, and the internal/upstream error is NOT. This catches a class of security regressions where someone \"improves\" error messages by including the original and accidentally leaks card digits, customer emails, or internal request IDs."
+  },
+  {
+    "fc": "FC-064",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 269,
+    "text": "4. **Upstream throw** — `mockRejectedValueOnce(new Error(...))`. Assert route returns 500 + **generic** error message that does NOT leak the upstream error text (defensive assertion — see Principle 1.8)."
+  },
+  {
+    "fc": "FC-064",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 627,
+    "text": "1. **Error handling patterns** — what gets logged vs what gets returned. Look for `{ message: error.message }` patterns or anything that passes through upstream errors verbatim."
+  },
+  {
+    "fc": "FC-064",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 647,
+    "text": "3. **Error-message leak in a catch block:** report the finding with the certified severity and obtain an authorized repair assignment. Replace unsafe responses/logging only within that assignment; QA does not silently implement the fix."
+  },
+  {
+    "fc": "FC-064",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 1015,
+    "text": "Most REST APIs use Authorization headers. WooCommerce uses query strings. Implication: **never include the URL in error messages** — it has credentials baked in."
+  },
+  {
+    "fc": "FC-064",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 1175,
+    "text": "### Defensive error message assertions (Stripe + any payment processor)"
+  },
+  {
+    "fc": "FC-064",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 1243,
+    "text": "3. **Credentials never appear in error messages** — log endpoint + status, never the URL with auth params."
+  },
+  {
+    "fc": "FC-064",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 1296,
+    "text": "Patterns specific to regulated environments (HIPAA, SOC2, PCI, GDPR) will be added after the first regulated-environment project ships v1.0, at which point this section gains real case studies grounded in production experience. Until then, Principle 1.8 (defensive error message assertions) is the closest existing analog — applicable to PHI/PII protection in error responses. See Section 4.3 for the implementation pattern."
+  },
+  {
+    "fc": "FC-064",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 1562,
+    "text": "WooCommerce REST authenticates via `consumer_key` + `consumer_secret` query parameters, not headers. Implication: never include the full URL in error messages — it has credentials baked in. Log the endpoint path and status code instead."
+  },
+  {
+    "fc": "FC-064",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 172,
+    "text": "Services return an explicit typed outcome: success, not-found, unavailable, invalid or forbidden. Routes map it to the approved HTTP/UI behavior with generic client messages and no upstream error text. Do not cache failures as successful public data. Degrade or fail closed according to the module’s approved failure policy; an unavailable entitlement read is not confirmed absence."
+  },
+  {
+    "fc": "FC-064",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 243,
+    "text": "Services return an explicit typed outcome: success, not-found, unavailable, invalid or forbidden. Routes map it to the approved HTTP/UI behavior with generic client messages and no upstream error text. Do not cache failures as successful public data. Degrade or fail closed according to the module’s approved failure policy; an unavailable entitlement read is not confirmed absence."
+  },
+  {
+    "fc": "FC-064",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 288,
+    "text": "Services return an explicit typed outcome: success, not-found, unavailable, invalid or forbidden. Routes map it to the approved HTTP/UI behavior with generic client messages and no upstream error text. Do not cache failures as successful public data. Degrade or fail closed according to the module’s approved failure policy; an unavailable entitlement read is not confirmed absence."
+  },
+  {
+    "fc": "FC-064",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 787,
+    "text": "This caller uses the §3 typed-outcome contract: `fetchProducts()` returns a discriminated outcome with `status` equal to `success`, `not-found`, `unavailable`, `invalid` or `forbidden`; only `success` carries `items: Product[]`. This example assumes a project-approved public-catalog failure policy permitting the generic empty-state UI on non-success; this is not an entitlement decision or a cached successful result. It does not call the independent array-returning normalization example."
+  },
+  {
+    "fc": "FC-064",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 817,
+    "text": "### User-Friendly Error Messages"
+  },
+  {
+    "fc": "FC-064",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 822,
+    "text": "export const ERROR_MESSAGES = {"
+  },
+  {
+    "fc": "FC-064",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 848,
+    "text": "  return ERROR_MESSAGES[code as keyof typeof ERROR_MESSAGES] || ERROR_MESSAGES.UNKNOWN;"
+  },
+  {
+    "fc": "FC-064",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 947,
+    "text": "  if (ids.length === 0) return [];"
+  },
+  {
+    "fc": "FC-064",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 439,
+    "text": "    // 4. Verify error message displayed"
+  },
+  {
+    "fc": "FC-064",
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "line": 502,
+    "text": "| `Alert` | Persistent inline callout (with variants: default, destructive, warning) | Error messages, warnings, info |"
+  },
+  {
+    "fc": "FC-066",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 183,
+    "text": "| Read multiple | `fetch{Resources}` or `fetchAll{Resources}` | `fetchProducts()`, `fetchAllProductSlugs()` |"
+  },
+  {
+    "fc": "FC-066",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 613,
+    "text": "// Independent normalization-step example: fetchProducts() returns Promise<Product[]>."
+  },
+  {
+    "fc": "FC-066",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 615,
+    "text": "export const fetchProducts = async (): Promise<Product[]> => {"
+  },
+  {
+    "fc": "FC-066",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 787,
+    "text": "This caller uses the §3 typed-outcome contract: `fetchProducts()` returns a discriminated outcome with `status` equal to `success`, `not-found`, `unavailable`, `invalid` or `forbidden`; only `success` carries `items: Product[]`. This example assumes a project-approved public-catalog failure policy permitting the generic empty-state UI on non-success; this is not an entitlement decision or a cached successful result. It does not call the independent array-returning normalization example."
+  },
+  {
+    "fc": "FC-066",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 792,
+    "text": "import { fetchProducts } from '@/services/productServices';"
+  },
+  {
+    "fc": "FC-066",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 797,
+    "text": "  const outcome = await fetchProducts();"
+  },
+  {
+    "fc": "FC-066",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 858,
+    "text": "Independent ISR example: this `fetchProducts()` returns the endpoint’s raw JSON payload, with no normalization or typed-outcome envelope; it is not the §3 service or the caller above. The project must declare and validate that endpoint’s wire contract and failure/cache policy before implementation; this example only illustrates the revalidation option."
+  },
+  {
+    "fc": "FC-066",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 862,
+    "text": "export const fetchProducts = async () => {"
+  },
+  {
+    "fc": "FC-066",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 946,
+    "text": "export const fetchProductsByIds = async (ids: number[]): Promise<Product[]> => {"
+  },
+  {
+    "fc": "FC-066",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 985,
+    "text": "| Service Layer | All external API calls | `fetchProducts()` |"
+  },
+  {
+    "fc": "FC-066",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 1179,
+    "text": "| Service Layer | All external API calls | `fetchProducts()` |"
+  },
+  {
+    "fc": "FC-066",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 505,
+    "text": "import { fetchProducts } from '@/services/productServices';"
+  },
+  {
+    "fc": "FC-066",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 510,
+    "text": "  const products = await fetchProducts();"
+  },
+  {
+    "fc": "FC-066",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 612,
+    "text": "  const products = await fetchProducts();"
+  },
+  {
+    "fc": "FC-066",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 241,
+    "text": "| Fetch/Load | `fetch`, `load` | `fetchProducts`, `loadMore` |"
+  },
+  {
+    "fc": "FC-066",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 801,
+    "text": "  fetchProducts: async () => {"
+  },
+  {
+    "fc": "FC-066",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 810,
+    "text": "export const fetchProducts = async () => {"
+  },
+  {
+    "fc": "FC-066",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 826,
+    "text": "    fetchProducts().then(setProducts);"
+  },
+  {
+    "fc": "FC-066",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 869,
+    "text": "import { fetchProducts } from '@/services/productServices';"
+  },
+  {
+    "fc": "FC-066",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 873,
+    "text": "  const products = await fetchProducts();"
+  },
+  {
+    "fc": "FC-067",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 346,
+    "text": "A fixed-product coupon uses validated eligible line items and quantities in the authoritative server pricing operation. Do not advertise fixed_product through a flat-cart subtotal branch. A client calculation is a display estimate only. Verify equal-subtotal carts with different eligible quantities; preserve valid fixed-cart and percentage behavior."
+  },
+  {
+    "fc": "FC-068",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 205,
+    "text": "The checkout interaction contract includes shippingCost and couponDiscount as display estimates, couponCode, setCoupon(code) and clearCoupon(), alongside the existing checkout fields. The server revalidates shipping and coupons. STATE_MANAGEMENT_MANUAL owns the shared store shape; ECOMMERCE_AND_PAYMENTS_MANUAL refers to it. Personal fields follow the approved account-transition and retention policy in STATE_MANAGEMENT_MANUAL. No persistent raw contact information is stored in browser storage by default; any approved exception names the fields, purpose, retention period and owner, with clearing/invalidation behavior."
+  },
+  {
+    "fc": "FC-068",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 251,
+    "text": "  shippingCost: number;"
+  },
+  {
+    "fc": "FC-068",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 258,
+    "text": "  couponDiscount: number;"
+  },
+  {
+    "fc": "FC-068",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 787,
+    "text": "The checkout interaction contract includes shippingCost and couponDiscount as display estimates, couponCode, setCoupon(code) and clearCoupon(), alongside the existing checkout fields. The server revalidates shipping and coupons. STATE_MANAGEMENT_MANUAL owns the shared store shape; ECOMMERCE_AND_PAYMENTS_MANUAL refers to it. Personal fields follow the approved account-transition and retention policy."
+  },
+  {
+    "fc": "FC-071",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 259,
+    "text": "| `AppShellPage` | Full-bleed app shell with sidebar + main | Chat, mission control, dashboards, ops consoles |"
+  },
+  {
+    "fc": "FC-071",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 262,
+    "text": "### AppShellPage (REAL as of Gates 2–3)"
+  },
+  {
+    "fc": "FC-071",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 267,
+    "text": "<AppShellPage"
+  },
+  {
+    "fc": "FC-071",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 273,
+    "text": "</AppShellPage>"
+  },
+  {
+    "fc": "FC-071",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 283,
+    "text": "> **🛑 AppShellPage owns the `<main>`.** A page adopting the shell must NOT bring its own `<main>` (nested `<main>` is invalid HTML). Heavy in-file JSDoc at `src/components/common/AppShellPage.tsx` documents the decision tree, the mobile contract, the breakpoint, and the scars."
+  },
+  {
+    "fc": "FC-071",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 289,
+    "text": "  YES → AppShellPage  (chat, mission control, dashboards, ops consoles)"
+  },
+  {
+    "fc": "FC-071",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 400,
+    "text": "Every mobile slide-over in the kit is the `Sheet` primitive (`ui/sheet.tsx`, Radix dialog) — both the `AppShellPage` drawer and `PublicMobileNav`. Do NOT reintroduce an older dropdown-style mobile menu. \"Match, don't invent\" = match the kit's *own* blessed pattern."
+  },
+  {
+    "fc": "FC-071",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 410,
+    "text": "Any app-shell drawer carries these (already baked into `AppShellPage`): close-on-nav (`usePathname`), a passable `close` for render-fn sidebars, ~25rem capped to 85vw, native dismiss (outside-tap + Esc)."
+  },
+  {
+    "fc": "FC-071",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 613,
+    "text": "| App shell layout | `AppShellPage` primitive | 🛑 DO NOT BUILD |"
+  },
+  {
+    "fc": "FC-071",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 662,
+    "text": "| 1.1 | 2026-06-28 | Kit-Perfection harvest (Gates 1–10). Reconciled to disk: removed the `superadmin-add-user` fossil; user creation documented as `addMember`/`addUser` server actions; Mark IV trigger framed as shipped + proven-live (both KNOWN_ISSUES resolved). AppShellPage `<md`→`<xl` + 4 CP scars + owns-`<main>`; real global components (`PublicNav`/`PublicNavAuthSection`/`PublicMobileNav`/`NavbarLoginReg`, dropped `NavbarHome`/`NavbarSuperadmin`); shared `(account)/profile` + `ProfileForm`; test baseline 81/11 → 76/10. NEW §6 Responsive & Mobile-Nav (xl rail vs lg nav, one-`Sheet`, `coarse:` variant + verify-built-CSS); NEW §11 Known Issues — Resolved. Cookie `getAll`/`setAll` + modernize-mechanism-not-behavior; `.next/types` cache lesson; typing-not-casting; AUTH-WALK; console-only superadmin doctrine; shared-links-match-protection. |"
+  },
+  {
+    "fc": "FC-071",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 200,
+    "text": "- Every UI element maps to a specific Shadcn primitive OR a kit common primitive (Page, Row, Box, AppShellPage)"
+  },
+  {
+    "fc": "FC-071",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 872,
+    "text": "- **Every UI element maps to a Shadcn primitive** OR a kit common primitive (Page, Row, Box, AppShellPage); if no primitive fits, surface as a Kit Improvement Proposal"
+  },
+  {
+    "fc": "FC-071",
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+    "line": 197,
+    "text": " *   1. Primitives used: AppShellPage (page wrapper), Row (rows), Box (bubbles)."
+  },
+  {
+    "fc": "FC-071",
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+    "line": 207,
+    "text": "- ❌ Authoring raw flex layouts when AppShellPage / Page / Row / Box primitives exist"
+  },
+  {
+    "fc": "FC-071",
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+    "line": 507,
+    "text": "> **Born from Run 001 — the AppShellPage primitive was born from accidentally surfacing a kit gap. Make it deliberate.**"
+  },
+  {
+    "fc": "FC-071",
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+    "line": 526,
+    "text": "This is the Factory's self-improvement loop made explicit. The `AppShellPage` primitive came from Phase 5.4 in Run 001 — what started as a mobile-first fix became a permanent kit primitive. Every future Factory run benefits from primitives discovered this way. Don't lose those discoveries to \"I'll mention it later\" forgetfulness."
+  },
+  {
+    "fc": "FC-071",
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+    "line": 397,
+    "text": " *   1. Primitives used: AppShellPage (page wrapper), Row (message rows), Box (bubbles)."
+  },
+  {
+    "fc": "FC-071",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 456,
+    "text": "**Example withdrawn:** consume the verified responsive kit shell and server-resolved identity props. Client-store role hints are not page authority; navigation must remain reachable on mobile. Every positive layout example keeps every navigation destination reachable at mobile widths. Consume AppShellPage or provide a complete accessible mobile trigger/drawer or equivalent navigation alongside the desktop sidebar. hidden md:block is acceptable only when that same example supplies the mobile alternative. Retire an incomplete layout as a copyable positive example."
+  },
+  {
+    "fc": "FC-071",
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 952,
+    "text": "**Example withdrawn:** consume the verified responsive kit shell and server-resolved identity props. Client-store role hints are not page authority; navigation must remain reachable on mobile. Every positive layout example keeps every navigation destination reachable at mobile widths. Consume AppShellPage or provide a complete accessible mobile trigger/drawer or equivalent navigation alongside the desktop sidebar. hidden md:block is acceptable only when that same example supplies the mobile alternative. Retire an incomplete layout as a copyable positive example."
+  },
+  {
+    "fc": "FC-071",
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "line": 32,
+    "text": "│   ├─ Full-bleed app shell (sidebar + main)? → AppShellPage"
+  },
+  {
+    "fc": "FC-071",
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "line": 101,
+    "text": "- Full-bleed app shells (sidebar + scrolling main) → use `AppShellPage` instead"
+  },
+  {
+    "fc": "FC-071",
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "line": 243,
+    "text": "### `AppShellPage` ⭐ NEW (Born In Run 001 Phase 5.4)"
+  },
+  {
+    "fc": "FC-071",
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "line": 283,
+    "text": "<AppShellPage"
+  },
+  {
+    "fc": "FC-071",
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "line": 291,
+    "text": "</AppShellPage>"
+  },
+  {
+    "fc": "FC-071",
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "line": 294,
+    "text": "**Heavy in-file JSDoc** at `src/components/common/AppShellPage.tsx` documents the decision tree, mobile behavior contract, accessibility notes, and promotion path."
+  },
+  {
+    "fc": "FC-071",
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "line": 430,
+    "text": "Create a `<ProjectName>Sidebar.tsx` in `src/components/layout/` (e.g., `CyberizeSidebar`) and consume it via `<AppShellPage sidebar={<CyberizeSidebar />} />`."
+  },
+  {
+    "fc": "FC-071",
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "line": 603,
+    "text": "| `AppShellPage` | Sidebar → slide-over drawer; mobile top bar appears |"
+  },
+  {
+    "fc": "FC-071",
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "line": 645,
+    "text": "<AppShellPage sidebar={<MySidebar />} mobileTitle=\"App\">"
+  },
+  {
+    "fc": "FC-071",
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "line": 647,
+    "text": "</AppShellPage>"
+  },
+  {
+    "fc": "FC-071",
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "line": 749,
+    "text": "| Wrap a full chat or dashboard page | `AppShellPage` |"
+  },
+  {
+    "fc": "FC-071",
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "line": 780,
+    "text": "- **`src/components/common/AppShellPage.tsx`** — heavy in-file JSDoc with decision tree"
+  },
+  {
+    "fc": "FC-071",
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "line": 789,
+    "text": "| 1.1 | 2026-06-28 | Kit-Perfection reconciliation: `AppShellPage` + `Sheet` are REAL (built Gates 2–3); breakpoint `md`→`xl`, two-bar + render-fn sidebar + 4 CP scars; removed non-existent `NavbarHome`/`NavbarSuperadmin`; added real global components (`PublicNav`/`PublicNavAuthSection`/`NavbarLoginReg`/`PublicMobileNav`); re-pointed the page-composition cross-ref from the deleted `/demo` to the live home. *(2026-07-08 Wave 5 content-tag, version unchanged: standard header block adopted with a formal Version line (F-018); \"Role badge\" row added to the Quick Decision Tree now that `--role-*` tokens exist in the contract (post-F-013a — GDSH §2 / TOKEN_FILE values). Nothing else — MODEL doc.)* |"
+  },
+  {
+    "fc": "FC-071",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "line": 74,
+    "text": "- **`STARTER_KIT_HANDBOOK.md`** — kit primitives that are already mobile-first (AppShellPage, Sheet, etc.)"
+  },
+  {
+    "fc": "FC-071",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "line": 470,
+    "text": "Every positive layout example keeps every navigation destination reachable at mobile widths. Consume AppShellPage or provide a complete accessible mobile trigger/drawer or equivalent navigation alongside the desktop sidebar. hidden md:block is acceptable only when that same example supplies the mobile alternative. Retire an incomplete layout as a copyable positive example."
+  },
+  {
+    "fc": "FC-071",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "line": 478,
+    "text": "Every positive layout example keeps every navigation destination reachable at mobile widths. Consume AppShellPage or provide a complete accessible mobile trigger/drawer or equivalent navigation alongside the desktop sidebar. hidden md:block is acceptable only when that same example supplies the mobile alternative. Retire an incomplete layout as a copyable positive example."
+  },
+  {
+    "fc": "FC-071",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "line": 642,
+    "text": "<div className=\"hidden md:block\">"
+  },
+  {
+    "fc": "FC-071",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "line": 762,
+    "text": "Every positive layout example keeps every navigation destination reachable at mobile widths. Consume AppShellPage or provide a complete accessible mobile trigger/drawer or equivalent navigation alongside the desktop sidebar. hidden md:block is acceptable only when that same example supplies the mobile alternative. Retire an incomplete layout as a copyable positive example."
+  },
+  {
+    "fc": "FC-071",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "line": 933,
+    "text": "Every positive layout example keeps every navigation destination reachable at mobile widths. Consume AppShellPage or provide a complete accessible mobile trigger/drawer or equivalent navigation alongside the desktop sidebar. hidden md:block is acceptable only when that same example supplies the mobile alternative. Retire an incomplete layout as a copyable positive example."
+  },
+  {
+    "fc": "FC-072",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 277,
+    "text": "- Historical kit rail dimensions/breakpoints require verification against the pinned shell implementation; no current kit value is certified here. Verify trigger, dismissal and layout on both sides of the actual fit breakpoint."
+  },
+  {
+    "fc": "FC-072",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 278,
+    "text": "- Historical kit rail dimensions/breakpoints require verification against the pinned shell implementation; no current kit value is certified here. Verify trigger, dismissal and layout on both sides of the actual fit breakpoint."
+  },
+  {
+    "fc": "FC-072",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 393,
+    "text": "### Breakpoint contract — the rail vs. the nav"
+  },
+  {
+    "fc": "FC-072",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 395,
+    "text": "- Historical kit rail dimensions/breakpoints require verification against the pinned shell implementation; no current kit value is certified here. Verify trigger, dismissal and layout on both sides of the actual fit breakpoint."
+  },
+  {
+    "fc": "FC-072",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 396,
+    "text": "- **Per-component fit-breakpoints override a blanket rule.** The public nav correctly goes full-horizontal at **`lg` (1024)** — three short links fit there. `xl` is the *rail's* fit rule, not a kit-wide law. Pick the breakpoint where the actual content fits; don't cargo-cult one number everywhere."
+  },
+  {
+    "fc": "FC-072",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 662,
+    "text": "| 1.1 | 2026-06-28 | Kit-Perfection harvest (Gates 1–10). Reconciled to disk: removed the `superadmin-add-user` fossil; user creation documented as `addMember`/`addUser` server actions; Mark IV trigger framed as shipped + proven-live (both KNOWN_ISSUES resolved). AppShellPage `<md`→`<xl` + 4 CP scars + owns-`<main>`; real global components (`PublicNav`/`PublicNavAuthSection`/`PublicMobileNav`/`NavbarLoginReg`, dropped `NavbarHome`/`NavbarSuperadmin`); shared `(account)/profile` + `ProfileForm`; test baseline 81/11 → 76/10. NEW §6 Responsive & Mobile-Nav (xl rail vs lg nav, one-`Sheet`, `coarse:` variant + verify-built-CSS); NEW §11 Known Issues — Resolved. Cookie `getAll`/`setAll` + modernize-mechanism-not-behavior; `.next/types` cache lesson; typing-not-casting; AUTH-WALK; console-only superadmin doctrine; shared-links-match-protection. |"
+  },
+  {
+    "fc": "FC-072",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 1345,
+    "text": "3. **Audit Trail:** Know what changed and why"
+  },
+  {
+    "fc": "FC-072",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 318,
+    "text": "> Intentionally vacant. Section numbers in this doc are **stable IDs, not positions** — the audit trail, F-042's resolution, and the repo-side `stark-recon` skill all cite Q-numbers (Q3.4, Q8.x, Q9.1…), so retired numbers are never reused and existing sections are never renumbered. The original §7 (Open-Ended Sweep) moved to §10 at v0.2, then to §13 at v0.4. New sections append at the end."
+  },
+  {
+    "fc": "FC-072",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 135,
+    "text": "| 07 | GUARDRAILS-AND-SANDBOXING.md | Auth gates, RLS, transport security |"
+  },
+  {
+    "fc": "FC-072",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 858,
+    "text": "6. **Mobile Breakpoints** — `sm` 640px, `md` 768px, `lg` 1024px, `xl` 1280px, `2xl` 1536px"
+  },
+  {
+    "fc": "FC-072",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1048,
+    "text": "├── 07-GUARDRAILS-AND-SANDBOXING.md"
+  },
+  {
+    "fc": "FC-072",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1064,
+    "text": "├── PRIOR_VERSION_07-GUARDRAILS.md             ← security smells to NOT repeat"
+  },
+  {
+    "fc": "FC-072",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1378,
+    "text": "- **Responsive rail:** determine the fit breakpoint from the pinned component and actual content. Below that breakpoint supply a reachable, keyboard-accessible drawer trigger; no vanished or untriggered sidebar. Verify on both sides of the breakpoint and at 375px. Do not infer a universal `md`, `lg` or `xl` rail rule."
+  },
+  {
+    "fc": "FC-072",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1464,
+    "text": "| 07 | GUARDRAILS-AND-SANDBOXING.md | Auth gates, RLS policies, transport security, secret management |"
+  },
+  {
+    "fc": "FC-072",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1558,
+    "text": "Document 07 (GUARDRAILS-AND-SANDBOXING) gets EXTRA depth."
+  },
+  {
+    "fc": "FC-072",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1606,
+    "text": "- Document 07 (GUARDRAILS-AND-SANDBOXING) — full coverage"
+  },
+  {
+    "fc": "FC-072",
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+    "line": 208,
+    "text": "- **Responsive rail:** determine the fit breakpoint from the pinned component and actual content. Below that breakpoint supply a reachable, keyboard-accessible drawer trigger; no vanished or untriggered sidebar. Verify on both sides of the breakpoint and at 375px. Do not infer a universal `md`, `lg` or `xl` rail rule."
+  },
+  {
+    "fc": "FC-072",
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+    "line": 574,
+    "text": "| 1.2.1 | 2026-07-08 | **Wave 3 micro-patch (audit sync).** Standard header block adopted — the top header previously claimed v1.1/June 2 while history/content/filename were v1.2 (F-033, the header-lies case; corrected). F-034 character-loss repair: restored \"- \" bullets on ~20 de-bulleted lists, arrows (member → admin → superadmin; Page → Row → Box), slashes (status/severity, Hide/show, Success/error ×2, Audit/history, WebSockets / real-time sync, data/security), lost quotes (\"No data\", \"Are you sure\"), Golden Rule blockquote markers; REBUILT the three de-piped tables (§7 Allowed + Forbidden, §10) — cell content restored from the surviving words (evidence-based); separator glyphs standardized to markdown/ASCII (original glyph class unrecoverable — see 1.2.1 concerns note in audit trail). \"Phase 0\" → \"build Stage 0 (Discovery)\" + naming note distinguishing lifecycle Phase 0 Recon (F-010 coordination with SFP §2). \"Cascade\" → \"the build agent\" ×2 (tool-agnostic). Stage 2 activity de-Stitched — \"Reference the Designer's screen HTML/PNG\" (F-002, hit not listed in REVIEW_012). §1 Related Documents + §9 checklist gain TESTING_PLAYBOOK pointers (F-035 inbound). Footer de-versioned. |"
+  },
+  {
+    "fc": "FC-072",
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "line": 269,
+    "text": "- Historical kit rail dimensions/breakpoints require verification against the pinned shell implementation; no current kit value is certified here. Verify trigger, dismissal and layout on both sides of the actual fit breakpoint."
+  },
+  {
+    "fc": "FC-072",
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "line": 272,
+    "text": "- Historical kit rail dimensions/breakpoints require verification against the pinned shell implementation; no current kit value is certified here. Verify trigger, dismissal and layout on both sides of the actual fit breakpoint."
+  },
+  {
+    "fc": "FC-072",
+    "path": "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+    "line": 66,
+    "text": "- **Mobile-first. Base design target 375px**, then scale up. Breakpoints map to Tailwind: `sm 640 / md 768 / lg 1024 / xl 1280`."
+  },
+  {
+    "fc": "FC-072",
+    "path": "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+    "line": 68,
+    "text": "- **Responsive rail:** determine the fit breakpoint from the pinned component and actual content. Below that breakpoint supply a reachable, keyboard-accessible drawer trigger; no vanished or untriggered sidebar. Verify on both sides of the breakpoint and at 375px. Do not infer a universal `md`, `lg` or `xl` rail rule."
+  },
+  {
+    "fc": "FC-072",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "line": 30,
+    "text": "- **Responsive rail:** determine the fit breakpoint from the pinned component and actual content. Below that breakpoint supply a reachable, keyboard-accessible drawer trigger; no vanished or untriggered sidebar. Verify on both sides of the breakpoint and at 375px. Do not infer a universal `md`, `lg` or `xl` rail rule."
+  },
+  {
+    "fc": "FC-072",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "line": 31,
+    "text": "- **Responsive rail:** determine the fit breakpoint from the pinned component and actual content. Below that breakpoint supply a reachable, keyboard-accessible drawer trigger; no vanished or untriggered sidebar. Verify on both sides of the breakpoint and at 375px. Do not infer a universal `md`, `lg` or `xl` rail rule."
+  },
+  {
+    "fc": "FC-072",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "line": 44,
+    "text": "- **Responsive rail:** determine the fit breakpoint from the pinned component and actual content. Below that breakpoint supply a reachable, keyboard-accessible drawer trigger; no vanished or untriggered sidebar. Verify on both sides of the breakpoint and at 375px. Do not infer a universal `md`, `lg` or `xl` rail rule."
+  },
+  {
+    "fc": "FC-072",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "line": 472,
+    "text": "The former copyable layout is withdrawn because it hid navigation on small screens or bypassed the installed shell. Use the verified responsive shell/rail/drawer contract for the pinned kit; do not invent a breakpoint or duplicate the shell. Verify reachable navigation, focus management, keyboard/escape behavior and no page overflow at every supported width."
+  },
+  {
+    "fc": "FC-072",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "line": 480,
+    "text": "The former copyable layout is withdrawn because it hid navigation on small screens or bypassed the installed shell. Use the verified responsive shell/rail/drawer contract for the pinned kit; do not invent a breakpoint or duplicate the shell. Verify reachable navigation, focus management, keyboard/escape behavior and no page overflow at every supported width."
+  },
+  {
+    "fc": "FC-072",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "line": 631,
+    "text": "| `xl:` | 1280px | Desktops |"
+  },
+  {
+    "fc": "FC-072",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "line": 764,
+    "text": "The former copyable layout is withdrawn because it hid navigation on small screens or bypassed the installed shell. Use the verified responsive shell/rail/drawer contract for the pinned kit; do not invent a breakpoint or duplicate the shell. Verify reachable navigation, focus management, keyboard/escape behavior and no page overflow at every supported width."
+  },
+  {
+    "fc": "FC-072",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "line": 935,
+    "text": "The former copyable layout is withdrawn because it hid navigation on small screens or bypassed the installed shell. Use the verified responsive shell/rail/drawer contract for the pinned kit; do not invent a breakpoint or duplicate the shell. Verify reachable navigation, focus management, keyboard/escape behavior and no page overflow at every supported width."
+  },
+  {
+    "fc": "FC-072",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "line": 987,
+    "text": "- [ ] Desktop (1280px+): Full layout, 3-5 columns"
+  },
+  {
+    "fc": "FC-072",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "line": 1787,
+    "text": "- Test at custom `lg` breakpoint (1150px)"
+  },
+  {
+    "fc": "FC-072",
+    "path": "03_BUILD_METHODOLOGY/_assets/workflows/BIM_WORKFLOW.svg",
+    "line": 61,
+    "text": "<path d=\"M642.8571428571429 1120V1136H900.0000000000001V1150\" stroke=\"#334155\" fill=\"none\" marker-end=\"url(#arrow)\"/>"
+  },
+  {
+    "fc": "FC-072",
+    "path": "03_BUILD_METHODOLOGY/_assets/workflows/BIM_WORKFLOW.svg",
+    "line": 62,
+    "text": "<rect x=\"777.4285714285716\" y=\"1150\" width=\"245.14285714285717\" height=\"76\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\"/>"
+  },
+  {
+    "fc": "FC-072",
+    "path": "03_BUILD_METHODOLOGY/_assets/workflows/BIM_WORKFLOW.svg",
+    "line": 66,
+    "text": "<text x=\"20\" y=\"1280\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#0f172a\">10. Conditional</text>"
+  },
+  {
+    "fc": "FC-072",
+    "path": "03_BUILD_METHODOLOGY/_assets/workflows/FFM_DEPLOYMENT.svg",
+    "line": 10,
+    "text": "<path d=\"M180.0 237V1150\" stroke=\"#cbd5e1\" stroke-dasharray=\"7 7\"/>"
+  },
+  {
+    "fc": "FC-072",
+    "path": "03_BUILD_METHODOLOGY/_assets/workflows/FFM_DEPLOYMENT.svg",
+    "line": 13,
+    "text": "<path d=\"M540.0 237V1150\" stroke=\"#cbd5e1\" stroke-dasharray=\"7 7\"/>"
+  },
+  {
+    "fc": "FC-072",
+    "path": "03_BUILD_METHODOLOGY/_assets/workflows/FFM_DEPLOYMENT.svg",
+    "line": 16,
+    "text": "<path d=\"M900.0 237V1150\" stroke=\"#cbd5e1\" stroke-dasharray=\"7 7\"/>"
+  },
+  {
+    "fc": "FC-072",
+    "path": "03_BUILD_METHODOLOGY/_assets/workflows/FFM_DEPLOYMENT.svg",
+    "line": 19,
+    "text": "<path d=\"M1260.0 237V1150\" stroke=\"#cbd5e1\" stroke-dasharray=\"7 7\"/>"
+  },
+  {
+    "fc": "FC-072",
+    "path": "03_BUILD_METHODOLOGY/_assets/workflows/FFM_DEPLOYMENT.svg",
+    "line": 22,
+    "text": "<path d=\"M1620.0 237V1150\" stroke=\"#cbd5e1\" stroke-dasharray=\"7 7\"/>"
+  },
+  {
+    "fc": "FC-072",
+    "path": "03_BUILD_METHODOLOGY/_assets/workflows/FFM_EXECUTION.svg",
+    "line": 55,
+    "text": "<path d=\"M150.0 1120V1136H450.0V1150\" stroke=\"#334155\" fill=\"none\" marker-end=\"url(#arrow)\"/>"
+  },
+  {
+    "fc": "FC-072",
+    "path": "03_BUILD_METHODOLOGY/_assets/workflows/FFM_EXECUTION.svg",
+    "line": 56,
+    "text": "<rect x=\"306.0\" y=\"1150\" width=\"288.0\" height=\"76\" rx=\"8\" fill=\"#eff6ff\" stroke=\"#2563eb\"/>"
+  },
+  {
+    "fc": "FC-072",
+    "path": "03_BUILD_METHODOLOGY/_assets/workflows/FFM_EXECUTION.svg",
+    "line": 61,
+    "text": "<text x=\"616.0\" y=\"1280\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#0f172a\">10. Independent retest of</text>"
+  },
+  {
+    "fc": "FC-076",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "line": 792,
+    "text": "          <Button asChild><Link href=\"/auth\">Get started</Link></Button>"
+  },
+  {
+    "fc": "FC-076",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "line": 793,
+    "text": "          <Button asChild variant=\"outline\">"
+  },
+  {
+    "fc": "FC-076",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "line": 1375,
+    "text": "Consume the kit Button, including its verified variants, sizes and asChild composition. Do not replace it with this shortened implementation. An educational internal excerpt must be source-matched and labeled as an excerpt, not installation code. Preserve Link composition through the kit API."
+  },
+  {
+    "fc": "FC-076",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "line": 1377,
+    "text": "Use the installed Shadcn Button as the component, retaining its verified Slot/asChild, ref and native-prop behavior. Do not replace it with the former simplified button implementation. Add a bounded variant only after verifying the installed API. All actionable sizes keep a 44×44px minimum target."
+  }
+]

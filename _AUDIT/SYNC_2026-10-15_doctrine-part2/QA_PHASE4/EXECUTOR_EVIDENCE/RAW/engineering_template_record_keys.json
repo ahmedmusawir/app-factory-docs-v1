@@ -1,0 +1,10 @@
+[
+  "source",
+  "destination",
+  "source_sha256",
+  "proposed_destination_sha256",
+  "translations",
+  "status",
+  "installed_sha256",
+  "source_verified"
+]

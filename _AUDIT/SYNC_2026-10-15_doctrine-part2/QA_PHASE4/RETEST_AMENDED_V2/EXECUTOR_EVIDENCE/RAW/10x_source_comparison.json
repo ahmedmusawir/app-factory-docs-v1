@@ -1,0 +1,14 @@
+[
+  {
+    "path": "10x Lab/APBM_PLAYBOOK_v1_0.md",
+    "source": "/home/moose/Documents/APBM_PLAYBOOK_v1_0.md",
+    "equal": true,
+    "sha256": "c12ff3f9bc4355e9bd8e1c276a3917bd443f864715ab1ffb6b84edf49beb4f93"
+  },
+  {
+    "path": "10x Lab/ABM_PLAYBOOK_v1_0.md",
+    "source": "/home/moose/Documents/ABM_PLAYBOOK_v1_0.md",
+    "equal": true,
+    "sha256": "21f8344812a385ec0a3da8ec41e144dc07c7248814a8b0a73db4f2433c5b2051"
+  }
+]

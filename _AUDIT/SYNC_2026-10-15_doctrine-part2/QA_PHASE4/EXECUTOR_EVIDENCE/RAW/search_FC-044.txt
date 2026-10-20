@@ -1,0 +1,5 @@
+04_REFERENCE_MANUALS/AUTH_MANUAL.md:47:   signOut: async () => { /* ... */ },
+04_REFERENCE_MANUALS/AUTH_MANUAL.md:409: 4. API route calls supabase.auth.signOut()
+04_REFERENCE_MANUALS/AUTH_MANUAL.md:462:   message: "Logged out successfully"
+04_REFERENCE_MANUALS/AUTH_MANUAL.md:470:   const { error } = await supabase.auth.signOut();
+04_REFERENCE_MANUALS/AUTH_MANUAL.md:478:     { message: "Logged out successfully" },

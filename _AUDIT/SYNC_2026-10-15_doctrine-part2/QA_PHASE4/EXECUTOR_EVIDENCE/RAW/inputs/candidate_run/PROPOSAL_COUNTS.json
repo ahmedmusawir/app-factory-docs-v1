@@ -1,0 +1,16 @@
+{
+  "existing_tier": 31,
+  "new_playbooks": 3,
+  "templates": 25,
+  "outgoing_archives": 31,
+  "restored_archive": 1,
+  "infrastructure": 2,
+  "workflow_documents": 4,
+  "workflow_assets": 4,
+  "paths": 101,
+  "ordered_edits": 372,
+  "changelog_rows": 39,
+  "tier_docs": 34,
+  "transitions": 12,
+  "transition_paths": 9
+}

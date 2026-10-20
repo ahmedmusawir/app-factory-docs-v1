@@ -1,0 +1,27 @@
+Command: python3 lints/run_all.py
+Working directory: /home/moose/Documents/app-factory-docs-v1
+Exit code: 1
+[ENCODING] PASS — 0 hits across 33 live docs
+[RETIRED-TERMS] PASS — 0 hits across 33 live docs
+01_CONSTITUTION/STARTER_KIT_HANDBOOK.md:258: [VERSIONED-REFS] versioned filename reference 'COMPONENT_REGISTRY_v1.1.md'
+01_CONSTITUTION/STARTER_KIT_HANDBOOK.md:261: [VERSIONED-REFS] versioned filename reference 'UI-UX-BUILDING-MANUAL_v1_3.md'
+01_CONSTITUTION/STARTER_KIT_HANDBOOK.md:688: [VERSIONED-REFS] versioned filename reference 'AUTH_MANUAL_v1.2.md'
+01_CONSTITUTION/STARTER_KIT_HANDBOOK.md:690: [VERSIONED-REFS] versioned filename reference 'UI-UX-BUILDING-MANUAL_v1_3.md'
+01_CONSTITUTION/STARTER_KIT_HANDBOOK.md:692: [VERSIONED-REFS] versioned filename reference 'COMPONENT_REGISTRY_v1.1.md'
+04_REFERENCE_MANUALS/DATABASE_MANUAL.md:8: [VERSIONED-REFS] versioned prose reference 'AUTH_MANUAL v1.3' — canonical names only
+04_REFERENCE_MANUALS/DATABASE_MANUAL.md:156: [VERSIONED-REFS] versioned prose reference 'AUTH_MANUAL v1.3' — canonical names only
+05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md:2092: [VERSIONED-REFS] versioned filename reference 'THEMING_MANUAL_v1.0.md'
+[VERSIONED-REFS] FAIL — 8 hit(s)
+01_CONSTITUTION/STARTER_KIT_HANDBOOK.md:1: [HEADER-PRESENCE] missing standard 'Version / Date / Status' header line in the first 10 lines
+[HEADER-PRESENCE] FAIL — 1 miss(es)
+=== DOCTRINE LINTS ===
+
+--- encoding_lint.py ---
+
+--- retired_terms_lint.py ---
+
+--- versioned_refs_lint.py ---
+
+--- header_lint.py ---
+
+=== RESULT: FAIL ===

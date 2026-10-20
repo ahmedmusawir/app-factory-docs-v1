@@ -1,0 +1,11 @@
+01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md:16: Phase 3 — Engineering (spec): Architect completes the module, ACCEPTANCE_SPEC and prepared QAM; FILE_TREE optional.
+01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md:55: **Artifact ownership:** the Architect owns DATA_CONTRACT before Design. The Designer owns UI_SPEC. The Architect reconciles the assembled package and Engineering consumes its approved revision. Conversion evidence informs those contracts; greenfield does not transfer authorship to Engineering. FILE_TREE is optional; implementation structure and boundaries must remain explicit in the approved package.
+01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md:89: | `FILE_TREE.md` (optional) | Supplementary structure view; approved package still states implementation structure and boundaries | Architect assembly |
+01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md:122: Phase 3 — Engineering (spec): Architect completes the module, ACCEPTANCE_SPEC and prepared QAM; FILE_TREE optional.
+01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md:142: The Architect assembles the approved contract artifacts below for the Engineer to implement. DATA_CONTRACT is authored before Design; FILE_TREE is optional when implementation structure and boundaries are otherwise explicit.
+01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md:182: ### **FILE_TREE.md** (optional)
+01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md:184: The Architect may include a structure view when useful. The approved package must still define implementation structure and boundaries. Root tool-instruction alignment is separately tracked; an older required-FILE_TREE statement does not change the Director-approved artifact model.
+01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md:217: 3. **Before Design:** Architect prepares DATA_CONTRACT. After the Designer authors UI_SPEC and the screen set is approved, the Architect reconciles the full package. FILE_TREE is optional; structure and boundaries remain explicit.
+02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md:43: FILE_TREE is optional; implementation structure and boundaries remain explicit.
+02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md:48: FILE_TREE is optional; implementation structure and boundaries remain explicit.
+02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md:74: FILE_TREE is optional; implementation structure and boundaries remain explicit.

@@ -1,0 +1,867 @@
+[
+  {
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "old_version": "2.1",
+    "proposed_version": "2.2",
+    "archive": "_ARCHIVE/APP_FACTORY_BLUEPRINT_v2_1.md",
+    "source_sha256": "9b732116c6030aee4d6ae0b792272bc372dd647ef95dea522c2bf7949934af93",
+    "proposed_sha256": "de0321e3b2b9220121606c5255d2ddc3d0d01ce57d69be11200d0c2aed5a2ac4",
+    "ids": [
+      "FC-004",
+      "FC-008",
+      "FC-017",
+      "FC-027",
+      "MC-04",
+      "MC-06",
+      "MC-07",
+      "RUL-01",
+      "RUL-05",
+      "RUL-07",
+      "RUL-09",
+      "RUL-10",
+      "RUL-12",
+      "RUL-14"
+    ],
+    "status_preserved": "Active",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Change"
+    ],
+    "history_order": "newest-last"
+  },
+  {
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "old_version": "1.3",
+    "proposed_version": "1.4",
+    "archive": "_ARCHIVE/SOFTWARE_FACTORY_PLAYBOOK_v1_3.md",
+    "source_sha256": "dd9b355bed9b263756a9622205cc30b4b06dad2a08397b7fb55d7e5bb2a7260e",
+    "proposed_sha256": "542fa8e421c067f6b7a141bdc46a266c2043c9e32fe7cabc43f82dba20b74efd",
+    "ids": [
+      "FC-001",
+      "FC-002",
+      "FC-005",
+      "FC-006",
+      "FC-007",
+      "FC-009",
+      "FC-021",
+      "FC-033",
+      "FC-036",
+      "FC-063",
+      "FC-066",
+      "MC-01",
+      "MC-05",
+      "MC-06",
+      "MC-07",
+      "RUL-01",
+      "RUL-05",
+      "RUL-07",
+      "RUL-08",
+      "RUL-09",
+      "RUL-11",
+      "RUL-12",
+      "RUL-14",
+      "W01",
+      "W23"
+    ],
+    "status_preserved": "Active",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Changes"
+    ],
+    "history_order": "newest-first"
+  },
+  {
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "old_version": "1.1",
+    "proposed_version": "1.2",
+    "archive": "_ARCHIVE/STARTER_KIT_HANDBOOK_v1_1.md",
+    "source_sha256": "396e325b4ac28b02c145fcad6181a99abb4f8345b87278d96f1aef2bbefb7efb",
+    "proposed_sha256": "29ce1d9f602696da3ed6241dd70e4a8f603626a962ca4f43de04edfde5a0d0ab",
+    "ids": [
+      "DEC-04",
+      "FC-001",
+      "FC-003",
+      "FC-003/096",
+      "FC-005",
+      "FC-033",
+      "FC-034",
+      "FC-036",
+      "FC-038",
+      "FC-041",
+      "FC-042",
+      "FC-072",
+      "FC-073",
+      "FC-081",
+      "RUL-12",
+      "RUL-14"
+    ],
+    "status_preserved": "Active",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Changes"
+    ],
+    "history_order": "newest-first"
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "old_version": "2.2",
+    "proposed_version": "2.3",
+    "archive": "_ARCHIVE/ARCHITECT_PLAYBOOK_v2_2.md",
+    "source_sha256": "b0754979e3b24cb79234265fe146f39f03718e608a60153a702a518f34979af4",
+    "proposed_sha256": "ad0712bf79a03233c6dd4799eb04113ad966d23017f26a5ba1a6f433481dce48",
+    "ids": [
+      "FC-004",
+      "FC-005",
+      "FC-008",
+      "FC-014",
+      "FC-017",
+      "FC-027",
+      "MC-06",
+      "RUL-01",
+      "RUL-05",
+      "RUL-09",
+      "RUL-12",
+      "W18",
+      "W23"
+    ],
+    "status_preserved": "Active",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Change"
+    ],
+    "history_order": "newest-first"
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md",
+    "old_version": "2.2",
+    "proposed_version": "2.3",
+    "archive": "_ARCHIVE/ARCHITECT_QUESTIONNAIRE_v2_2.md",
+    "source_sha256": "aa487360f420c1a2e0a48b097eaa2ebc905ebb659bcdc67ae72ce8d6a80f2bfd",
+    "proposed_sha256": "6242a0a67c43ee22b7d930f53f8b6c36b029ff16e1435108b069b8047b562f15",
+    "ids": [
+      "FC-016"
+    ],
+    "status_preserved": "Active",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Change"
+    ],
+    "history_order": "newest-first"
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "old_version": "2.1",
+    "proposed_version": "2.2",
+    "archive": "_ARCHIVE/DESIGNER_PLAYBOOK_v2_1.md",
+    "source_sha256": "426eb0e7a3da1b31de8efe4ca68550d4b351d6f378b061f0c0de1ab6fbd632ae",
+    "proposed_sha256": "f1e692d175c41ca0d0d9718889be3ba778c454a8078adb5f381f36897bdeccd1",
+    "ids": [
+      "FC-004",
+      "FC-005",
+      "FC-008",
+      "FC-016",
+      "FC-017",
+      "FC-018",
+      "FC-027",
+      "FC-084",
+      "MC-06",
+      "MC-07",
+      "RUL-01",
+      "RUL-05",
+      "RUL-09",
+      "RUL-12",
+      "W23"
+    ],
+    "status_preserved": "Active",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Change"
+    ],
+    "history_order": "newest-last"
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "old_version": "1.2",
+    "proposed_version": "1.3",
+    "archive": "_ARCHIVE/ENGINEER_PLAYBOOK_v1_2.md",
+    "source_sha256": "8d73c37a42624fa2c60729d8d2648fc96f72305a732fd5e74460cf0a614f861c",
+    "proposed_sha256": "72477ec8dccc0381d6a5a4476d64b84751b376dfb78f83a49b337beb8651a1e9",
+    "ids": [
+      "FC-004",
+      "FC-005",
+      "FC-008",
+      "FC-014",
+      "FC-015",
+      "FC-017",
+      "FC-018",
+      "FC-027",
+      "MC-06",
+      "MC-07",
+      "RUL-01",
+      "RUL-05",
+      "RUL-09",
+      "RUL-12",
+      "W19",
+      "W23"
+    ],
+    "status_preserved": "Active",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Change"
+    ],
+    "history_order": "newest-first"
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "old_version": "1.1",
+    "proposed_version": "1.2",
+    "archive": "_ARCHIVE/HANDOFF_PACKAGE_PLAYBOOK_v1_1.md",
+    "source_sha256": "6a2f4706542395360248dd42e17cbf9fc49f0886c844aa1e0e5315a047892c4f",
+    "proposed_sha256": "5ccae41d0b7e309a2a98f2aac49776f61c7623325a9b0f9e1a400612149e639c",
+    "ids": [
+      "FC-009",
+      "FC-017",
+      "FC-018",
+      "FC-019",
+      "FC-027",
+      "MC-01",
+      "RUL-09",
+      "W20"
+    ],
+    "status_preserved": "Active",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Born From",
+      "Changes"
+    ],
+    "history_order": "newest-first"
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "old_version": "0.5",
+    "proposed_version": "0.6",
+    "archive": "_ARCHIVE/RECON_QUESTIONNAIRE_v0_5.md",
+    "source_sha256": "974f09e3118e94288beeb3dce919bea32a1571f294a59da6fd0041ee615968db",
+    "proposed_sha256": "97cd19e2a2f9b8f34fbfcbff0a6f73c8681fd768cee48db2b316a815c4df81b3",
+    "ids": [
+      "FC-001",
+      "FC-005",
+      "FC-007",
+      "FC-014",
+      "FC-033",
+      "FC-034",
+      "FC-069",
+      "MC-02",
+      "MC-04",
+      "MC-13",
+      "RUL-03",
+      "RUL-12",
+      "W17"
+    ],
+    "status_preserved": "Active (living document \u2014 grows with every FFM run's lessons)",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Changes"
+    ],
+    "history_order": "newest-last"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md",
+    "old_version": "1.1",
+    "proposed_version": "1.2",
+    "archive": "_ARCHIVE/APP_FACTORY_SKILLS_PLAYBOOK_v1_1.md",
+    "source_sha256": "d93f3d5d81d5add6638fee9c71eecc370fd86f07ad1ac47f7021d6415a446113",
+    "proposed_sha256": "5e56266b8c9aaec1e1249128e3aff089919ba13dc4d9e93c03201d4a06261756",
+    "ids": [
+      "FC-005",
+      "FC-006",
+      "FC-014",
+      "FC-021",
+      "FC-087"
+    ],
+    "status_preserved": "Active",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Change"
+    ],
+    "history_order": "newest-last"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "old_version": "1.0",
+    "proposed_version": "1.1",
+    "archive": "_ARCHIVE/BIM_PLAYBOOK_v1_0.md",
+    "source_sha256": "363619932b39fd7c8b4bafa9f270f814aa1af4aa98159dbfecb28c7f920e4f3b",
+    "proposed_sha256": "5dcc7acd84de42b4cabd765c8e3899b315855cac14b2687df2e0e7966be7c4f9",
+    "ids": [
+      "FC-012",
+      "FC-014",
+      "MC-06",
+      "MC-07",
+      "RUL-01",
+      "RUL-02",
+      "RUL-03",
+      "RUL-04",
+      "RUL-05",
+      "RUL-07",
+      "RUL-12",
+      "RUL-15",
+      "W02",
+      "W03",
+      "W04",
+      "W05",
+      "W06",
+      "W07",
+      "W23"
+    ],
+    "status_preserved": "Active",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Change"
+    ],
+    "history_order": "newest-last"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+    "old_version": "1.0",
+    "proposed_version": "1.1",
+    "archive": "_ARCHIVE/BUG_FIX_PLAYBOOK_v1_0.md",
+    "source_sha256": "3ca537dec3958cabb0159a5243b7fe3f76c10e46ebcaa4ba04d258dcd5d1a871",
+    "proposed_sha256": "c1eff9134d09bdc148e7c6a6da6cfbf277d32e77f5b87e94428139e97b37f610",
+    "ids": [
+      "FC-012",
+      "FC-014",
+      "RUL-12",
+      "W21"
+    ],
+    "status_preserved": "Active \u2014 field-validated (FIX-001/002/003, ADK Harness)",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Change"
+    ],
+    "history_order": "newest-last"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md",
+    "old_version": "1.0",
+    "proposed_version": "1.1",
+    "archive": "_ARCHIVE/FEAT_PLAYBOOK_v1_0.md",
+    "source_sha256": "5d70fa061bde72d49507f64b0113daab2646952867c63b8a499ea2feab3ed66f",
+    "proposed_sha256": "0855d943710abf9256b4df588d6dacc09019abbf3f5e7649b790308f427f2473",
+    "ids": [
+      "FC-014",
+      "RUL-12",
+      "W22"
+    ],
+    "status_preserved": "Active",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Change"
+    ],
+    "history_order": "newest-last"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "old_version": "1.2",
+    "proposed_version": "1.3",
+    "archive": "_ARCHIVE/FFM_PLAYBOOK_v1_2.md",
+    "source_sha256": "7be561380ea1568d7df61734b6f1a5b12263194cca3ce469a5731e3bd32eafa0",
+    "proposed_sha256": "95ab785713237a4ecb874746eb4938e3d4010c47fa9057d88cf6bea885fa67e8",
+    "ids": [
+      "FC-003",
+      "FC-004",
+      "FC-005",
+      "FC-009",
+      "FC-014",
+      "FC-016",
+      "FC-017",
+      "FC-019",
+      "FC-025",
+      "FC-026",
+      "FC-027",
+      "FC-028",
+      "FC-029",
+      "FC-071",
+      "FC-072",
+      "FC-081",
+      "MC-01",
+      "MC-06",
+      "RUL-01",
+      "RUL-02",
+      "RUL-03",
+      "RUL-05",
+      "RUL-07",
+      "RUL-09",
+      "RUL-12",
+      "RUL-14",
+      "RUL-15",
+      "W08",
+      "W09",
+      "W10",
+      "W11",
+      "W12",
+      "W13",
+      "W23"
+    ],
+    "status_preserved": "Active",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Changes"
+    ],
+    "history_order": "newest-last"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+    "old_version": "1.2.2",
+    "proposed_version": "1.3.0",
+    "archive": "_ARCHIVE/FRONTEND_BUILD_PHASE_PLAYBOOK_v1_2_2.md",
+    "source_sha256": "362609b6551bd585c5f3c57ce5b751285871335d154ad2a8c97ca62b28a20702",
+    "proposed_sha256": "be293bcb3c86c8dd71d9eaac64495d4d61c6a0b06b83af8a7b7ea71ddde2b366",
+    "ids": [
+      "FC-032",
+      "FC-071",
+      "FC-072",
+      "FC-088",
+      "RUL-14"
+    ],
+    "status_preserved": "Active",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Changes"
+    ],
+    "history_order": "newest-first"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+    "old_version": "1.1.3",
+    "proposed_version": "1.2.0",
+    "archive": "_ARCHIVE/FRONTEND_FIRST_PLAYBOOK_v1_1_3.md",
+    "source_sha256": "2516dcbd50f525328db955592c6c14eafa971c02d4dec722130a87505248a422",
+    "proposed_sha256": "89ab65e614cca62a7b2cd0036fdae9f75751f9534cd0e5b9e4cc501f071da471",
+    "ids": [
+      "FC-009",
+      "MC-01"
+    ],
+    "status_preserved": "Active",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Changes"
+    ],
+    "history_order": "newest-first"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "old_version": "1.1",
+    "proposed_version": "1.2",
+    "archive": "_ARCHIVE/QA_PLAYBOOK_v1_1.md",
+    "source_sha256": "b6c70f14af18bb187ca7980954317af486e43b682821245d9911f2160d5198a5",
+    "proposed_sha256": "5bc581426435d75b2873ca29b57b28c2942981e604fb64eb9f308dc62d20f994",
+    "ids": [
+      "FC-005",
+      "FC-025",
+      "RUL-03",
+      "RUL-12",
+      "W14",
+      "W15",
+      "W16"
+    ],
+    "status_preserved": "Active \u2014 field-tested (ADK Harness BIM/FIX verification)",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Change"
+    ],
+    "history_order": "newest-last"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "old_version": "2.1",
+    "proposed_version": "2.2",
+    "archive": "_ARCHIVE/TESTING_PLAYBOOK_v2_1.md",
+    "source_sha256": "5dfc2d198d51eebd4c0b136eeafc50cc2f64dafe44b7bbd153b801f4849692ad",
+    "proposed_sha256": "ae5ca593c7930dd594b6afcf89f722eeba698af2f4e74f854a6cc8408e7646bf",
+    "ids": [
+      "DEC-03",
+      "FC-020",
+      "FC-021",
+      "FC-022",
+      "FC-023",
+      "FC-024",
+      "FC-030",
+      "FC-031",
+      "FC-040",
+      "FC-063",
+      "RUL-11",
+      "RUL-12",
+      "RUL-13"
+    ],
+    "status_preserved": "Active",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Changes"
+    ],
+    "history_order": "newest-last"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "old_version": "1.1",
+    "proposed_version": "1.2",
+    "archive": "_ARCHIVE/API_AND_SERVICES_MANUAL_v1_1.md",
+    "source_sha256": "64794a5d33dbd7fdd473975d5ff7c02f49fe433c8f63c780b059d77ead55a4b3",
+    "proposed_sha256": "41105eb4857a3a04a35bf3b0615fe9d93f5c7a5b048fa3f5d4d14513ba177a32",
+    "ids": [
+      "FC-021",
+      "FC-056",
+      "FC-057",
+      "FC-058",
+      "FC-059",
+      "FC-061",
+      "FC-063",
+      "FC-064",
+      "FC-066",
+      "FC-070",
+      "RUL-11"
+    ],
+    "status_preserved": "Active",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Changes"
+    ],
+    "history_order": "newest-last"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "old_version": "1.3",
+    "proposed_version": "1.4",
+    "archive": "_ARCHIVE/APP_ARCHITECTURE_MANUAL_v1_3.md",
+    "source_sha256": "ca1dc1f0a8ce578523a46a3262f2f1d09a63cb6e8f2517157d940c0febfb3134",
+    "proposed_sha256": "3c6e4c4702a887e929877a60dca065af57a8fcd23e100f8176019ac898d2c163",
+    "ids": [
+      "FC-001",
+      "FC-009",
+      "FC-021",
+      "FC-028",
+      "FC-033",
+      "FC-035",
+      "FC-036",
+      "FC-041",
+      "FC-042",
+      "FC-063",
+      "FC-066",
+      "FC-071",
+      "MC-01",
+      "RUL-11"
+    ],
+    "status_preserved": "Active",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Changes"
+    ],
+    "history_order": "newest-first"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "old_version": "1.4",
+    "proposed_version": "1.5",
+    "archive": "_ARCHIVE/AUTH_MANUAL_v1_4.md",
+    "source_sha256": "6b81073fe81727d4a4a48d1a0e4c43098f3ce70fafbcc3a7a6c660e661276850",
+    "proposed_sha256": "e119d65970ab57a33954e2bcc4f4ffefabb31b357892318374b69db6af4ea60f",
+    "ids": [
+      "FC-001",
+      "FC-021",
+      "FC-033",
+      "FC-034",
+      "FC-035",
+      "FC-036",
+      "FC-038",
+      "FC-039",
+      "FC-041",
+      "FC-042",
+      "FC-043",
+      "FC-044",
+      "FC-063",
+      "FC-066",
+      "RUL-11"
+    ],
+    "status_preserved": "Active",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Changes"
+    ],
+    "history_order": "newest-last"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "old_version": "1.1",
+    "proposed_version": "1.2",
+    "archive": "_ARCHIVE/DATABASE_MANUAL_v1_1.md",
+    "source_sha256": "326802ad938bb6b5b9f1b73c74ebee811789185789ef003e907101a0db4a0cf8",
+    "proposed_sha256": "f774bb0298ef39e3db2505b2cb9686e9d5046f359560b00bfe55ac52f7aa3dd8",
+    "ids": [
+      "FC-001",
+      "FC-003/096",
+      "FC-033",
+      "FC-034",
+      "FC-036",
+      "FC-037",
+      "FC-038",
+      "FC-039",
+      "FC-045",
+      "RUL-11"
+    ],
+    "status_preserved": "Active",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Changes"
+    ],
+    "history_order": "newest-last"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "old_version": "1.1",
+    "proposed_version": "1.2",
+    "archive": "_ARCHIVE/ECOMMERCE_AND_PAYMENTS_MANUAL_v1_1.md",
+    "source_sha256": "d72816173e6a188282718174cbcd8cc4693f9f944858d96fe0bb092edb728f38",
+    "proposed_sha256": "4e0782fe935c50f971daf4f4dc347c5b4757c96648d8db4d04c0be86953b36eb",
+    "ids": [
+      "FC-047",
+      "FC-050",
+      "FC-051",
+      "FC-052",
+      "FC-053",
+      "FC-054",
+      "FC-055",
+      "FC-059",
+      "FC-060",
+      "FC-062",
+      "FC-063",
+      "FC-067",
+      "FC-068",
+      "RUL-11"
+    ],
+    "status_preserved": "Active",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Changes"
+    ],
+    "history_order": "newest-last"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "old_version": "1.2",
+    "proposed_version": "1.3",
+    "archive": "_ARCHIVE/STATE_MANAGEMENT_MANUAL_v1_2.md",
+    "source_sha256": "2a281857fe0a03d9066ac171e725ca50e42944df204b4eceaebba152b61af196",
+    "proposed_sha256": "3f8071658df4331f920538cc2bdc1130a2534dc6764bca21236a0e563bcb5a71",
+    "ids": [
+      "FC-035",
+      "FC-040",
+      "FC-046",
+      "FC-046-heading",
+      "FC-047",
+      "FC-048",
+      "FC-049",
+      "FC-055",
+      "FC-067",
+      "FC-068",
+      "RUL-11",
+      "RUL-13"
+    ],
+    "status_preserved": "Active",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Changes"
+    ],
+    "history_order": "newest-last"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "old_version": "1.1",
+    "proposed_version": "1.2",
+    "archive": "_ARCHIVE/STRIPE_SUBSCRIPTIONS_PLAYBOOK_v1_1.md",
+    "source_sha256": "ec5a467ffd31ca8a1200f230b5a4ca4e104148bedaa83d3a4780f8e23f9a3e03",
+    "proposed_sha256": "b501058c57dba78f130a6a9dbe16957d1b76bd4aa282f88c68a2a6c2a188cc3a",
+    "ids": [
+      "FC-047",
+      "FC-052",
+      "FC-053",
+      "FC-054",
+      "FC-055",
+      "FC-059",
+      "FC-063",
+      "FC-065",
+      "FC-065-confirmed",
+      "FC-065-timeout",
+      "FC-067",
+      "FC-068",
+      "RUL-11"
+    ],
+    "status_preserved": "Active",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Changes"
+    ],
+    "history_order": "newest-last"
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "old_version": "1.1",
+    "proposed_version": "1.2",
+    "archive": "_ARCHIVE/COMPONENT_REGISTRY_v1_1.md",
+    "source_sha256": "4b7d5b7c39fa50838ea536d07a9f4086d3802613a8ee86dd986f09553b28767b",
+    "proposed_sha256": "e1afba393fd6ba1314ab9fea2fb3bb10135e422cf0909400d952c9206da705f3",
+    "ids": [
+      "FC-003",
+      "FC-072",
+      "FC-073",
+      "FC-081",
+      "FC-082",
+      "RUL-14"
+    ],
+    "status_preserved": "Active",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Changes"
+    ],
+    "history_order": "newest-first"
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+    "old_version": "1.1",
+    "proposed_version": "1.2",
+    "archive": "_ARCHIVE/GLOBAL_DESIGN_SYSTEM_HANDBOOK_v1_1.md",
+    "source_sha256": "f2dc74390a16836c3213f77652451085680046786d5499b43b1e8a6a6774c8ac",
+    "proposed_sha256": "b46501c6eeca8a4fbe0244cbeb207f73ec382b44ec2a3a8c7a856561ca5072c3",
+    "ids": [
+      "FC-017",
+      "FC-027",
+      "FC-071",
+      "FC-072",
+      "FC-077",
+      "RUL-09"
+    ],
+    "status_preserved": "Active",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Changes"
+    ],
+    "history_order": "newest-last"
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/THEME_LIBRARY.md",
+    "old_version": "1.2",
+    "proposed_version": "1.3",
+    "archive": "_ARCHIVE/THEME_LIBRARY_v1_2.md",
+    "source_sha256": "480c7bdbc648e2fb7b97a6b120bfa36de35246cbdf3fd163e43aa0a2968ff73e",
+    "proposed_sha256": "0d01b93c12d5f45d65eee0fad7ed00985996703160ca5710c287935ce49d9926",
+    "ids": [
+      "FC-003",
+      "FC-074",
+      "FC-081",
+      "RUL-14"
+    ],
+    "status_preserved": "Active",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Changes"
+    ],
+    "history_order": "newest-last"
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+    "old_version": "1.2",
+    "proposed_version": "1.3",
+    "archive": "_ARCHIVE/THEMING_MANUAL_v1_2.md",
+    "source_sha256": "3c71a3a959df8393b4f6810a8122a94895fced02d658d3b512ee5f30784091b1",
+    "proposed_sha256": "dd52a6ac007383cf22e57c34fee1489ca94311f65945e87af339247dc4a44e42",
+    "ids": [
+      "FC-009",
+      "FC-075",
+      "FC-083",
+      "MC-01"
+    ],
+    "status_preserved": "Active",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Changes"
+    ],
+    "history_order": "newest-last"
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/TOKEN_FILE.md",
+    "old_version": "1.2",
+    "proposed_version": "1.3",
+    "archive": "_ARCHIVE/TOKEN_FILE_v1_2.md",
+    "source_sha256": "066e0e60a49714adb062bc2983b1d5a82bc69f0c73794bac44292f6851dc88b5",
+    "proposed_sha256": "b784dac7dc9e55b2d417a785211b4d18ae4b945ca63c62536096c55ad554ea9f",
+    "ids": [
+      "FC-074"
+    ],
+    "status_preserved": "Active",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Changes"
+    ],
+    "history_order": "newest-last"
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "old_version": "1.4",
+    "proposed_version": "1.5",
+    "archive": "_ARCHIVE/UI_UX_BUILDING_MANUAL_v1_4.md",
+    "source_sha256": "8b9a6f647a8999ce35db4dd20df3db058ec7c64a47c4b3ab8051195f97d9d544",
+    "proposed_sha256": "9715e12e3fd4307b574decefa2f916338fcf9f6f8768972f91ed410247ed08ff",
+    "ids": [
+      "FC-003/096",
+      "FC-009",
+      "FC-041",
+      "FC-071",
+      "FC-072",
+      "FC-073",
+      "FC-076",
+      "FC-077",
+      "FC-078",
+      "FC-079",
+      "FC-080",
+      "FC-082",
+      "FC-083",
+      "MC-01"
+    ],
+    "status_preserved": "Active",
+    "history_columns": [
+      "Version",
+      "Date",
+      "Changes"
+    ],
+    "history_order": "newest-first"
+  }
+]

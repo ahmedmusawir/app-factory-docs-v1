@@ -1,0 +1,2090 @@
+[
+  {
+    "command": [
+      "git",
+      "ls-remote",
+      "--heads",
+      "origin",
+      "refs/heads/docs/sync-doctrine-part2-2026-10-15",
+      "refs/heads/main"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:54:35.898308+00:00",
+    "exit": 128,
+    "stderr": "fatal: unable to access 'https://github.com/ahmedmusawir/app-factory-docs-v1.git/': Could not resolve host: github.com\n",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD",
+      "HEAD^"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:54:35.920526+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout": "26b050fe70de66e74ec8d65bcf9287d4369a91f7\n8dff354937bc7baf739370a9886497d9d5359186\n"
+  },
+  {
+    "command": [
+      "git",
+      "branch",
+      "--show-current"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:54:35.926019+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout": "docs/sync-doctrine-part2-2026-10-15\n"
+  },
+  {
+    "command": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:54:35.931008+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "main"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:54:35.951719+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout": "9c179392f79b70da099121fc357d3107ad3bb86e\n"
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "-s",
+      "--format=%H%n%P%n%an%n%ae%n%aI%n%cI%n%s",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:54:35.956200+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout": "26b050fe70de66e74ec8d65bcf9287d4369a91f7\n8dff354937bc7baf739370a9886497d9d5359186\n[REDACTED AUTHOR NAME]\n[REDACTED AUTHOR EMAIL]\n2026-10-20T10:39:41+06:00\n2026-10-20T10:39:41+06:00\nrepair QA-P4 RV2-F01 (AMENDED-v3 55537c6411724ab78837d0191d61375654839202acbf15b13a76d98aa8d483e6)\n"
+  },
+  {
+    "command": [
+      "git",
+      "ls-remote",
+      "--heads",
+      "origin",
+      "refs/heads/docs/sync-doctrine-part2-2026-10-15",
+      "refs/heads/main"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:55:21.383358+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout": "26b050fe70de66e74ec8d65bcf9287d4369a91f7\trefs/heads/docs/sync-doctrine-part2-2026-10-15\n9c179392f79b70da099121fc357d3107ad3bb86e\trefs/heads/main\n"
+  },
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD",
+      "HEAD^"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:55:24.355087+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout": "26b050fe70de66e74ec8d65bcf9287d4369a91f7\n8dff354937bc7baf739370a9886497d9d5359186\n"
+  },
+  {
+    "command": [
+      "git",
+      "branch",
+      "--show-current"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:55:24.362422+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout": "docs/sync-doctrine-part2-2026-10-15\n"
+  },
+  {
+    "command": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:55:24.372275+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "main"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:55:24.395364+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout": "9c179392f79b70da099121fc357d3107ad3bb86e\n"
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "-s",
+      "--format=%H%n%P%n%an%n%ae%n%aI%n%cI%n%s",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:55:24.401711+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout": "26b050fe70de66e74ec8d65bcf9287d4369a91f7\n8dff354937bc7baf739370a9886497d9d5359186\n[REDACTED AUTHOR NAME]\n[REDACTED AUTHOR EMAIL]\n2026-10-20T10:39:41+06:00\n2026-10-20T10:39:41+06:00\nrepair QA-P4 RV2-F01 (AMENDED-v3 55537c6411724ab78837d0191d61375654839202acbf15b13a76d98aa8d483e6)\n"
+  },
+  {
+    "command": [
+      "git",
+      "merge-base",
+      "--is-ancestor",
+      "9c179392f79b70da099121fc357d3107ad3bb86e",
+      "ef35d26d82f1904da6ed33663ad647e4ee16fe98"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:55:24.411272+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "git",
+      "merge-base",
+      "--is-ancestor",
+      "ef35d26d82f1904da6ed33663ad647e4ee16fe98",
+      "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:55:24.418445+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "git",
+      "merge-base",
+      "--is-ancestor",
+      "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+      "8dff354937bc7baf739370a9886497d9d5359186"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:55:24.424938+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "git",
+      "merge-base",
+      "--is-ancestor",
+      "8dff354937bc7baf739370a9886497d9d5359186",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:55:24.432747+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "-s",
+      "--format=%P",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:55:24.442352+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout": "8dff354937bc7baf739370a9886497d9d5359186\n"
+  },
+  {
+    "command": [
+      "git",
+      "archive",
+      "--format=tar",
+      "8dff354937bc7baf739370a9886497d9d5359186"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:55:24.454668+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_sha256": "68c3ae8090e83a634acb0e36959a77d4cdfc3b7590c5de2b30b30348b5fbdcf4",
+    "stdout_bytes": 51077120,
+    "stdout_format": "tar",
+    "stdout_export": "/tmp/qa-amended-v3-krds1x3r/parent"
+  },
+  {
+    "command": [
+      "git",
+      "archive",
+      "--format=tar",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:55:27.272743+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_sha256": "f65dda47990271c031693e1b0cc0638275f5a62b505652630ee72dc0b5e6d6ba",
+    "stdout_bytes": 57651200,
+    "stdout_format": "tar",
+    "stdout_export": "/tmp/qa-amended-v3-krds1x3r/candidate"
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/BOUND_EXECUTION_INDEX.json"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:02.803621+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/inputs/candidate/AMENDED_V3/BOUND_EXECUTION_INDEX.json",
+    "stdout_sha256": "55537c6411724ab78837d0191d61375654839202acbf15b13a76d98aa8d483e6",
+    "stdout_bytes": 39385
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/EXECUTION_PROPOSAL.patch"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:02.812396+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/inputs/candidate/AMENDED_V3/EXECUTION_PROPOSAL.patch",
+    "stdout_sha256": "afd8f9249854d4e99c385b1e21c459fa297fa5ed5ddcac782d1509747c43faed",
+    "stdout_bytes": 8446
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/DIRECTOR_DECISIONS_V3.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:02.820003+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/inputs/candidate/AMENDED_V3/DIRECTOR_DECISIONS_V3.md",
+    "stdout_sha256": "1fa28bc81dedd96f017f9ffc9a69b7a86326917a61093e9aeb9390bcfbe300a4",
+    "stdout_bytes": 1844
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/DOCSET_SYNC_ACCEPTANCE_SPEC_AMENDED_V1_R1.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:02.827573+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/inputs/candidate/QA_RETEST_AF01/DOCSET_SYNC_ACCEPTANCE_SPEC_AMENDED_V1_R1.md",
+    "stdout_sha256": "2a3867cacef11c6bb0419a4c71229479efe703cee9fbcc1e4f71c0ac8e63f0fc",
+    "stdout_bytes": 55016
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/BOUND_EXECUTION_INDEX.json"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.537252+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/inputs/candidate/AMENDED_V3/BOUND_EXECUTION_INDEX.json",
+    "stdout_sha256": "55537c6411724ab78837d0191d61375654839202acbf15b13a76d98aa8d483e6",
+    "stdout_bytes": 39385
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/EXECUTION_PROPOSAL.patch"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.545228+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/inputs/candidate/AMENDED_V3/EXECUTION_PROPOSAL.patch",
+    "stdout_sha256": "afd8f9249854d4e99c385b1e21c459fa297fa5ed5ddcac782d1509747c43faed",
+    "stdout_bytes": 8446
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/DIRECTOR_DECISIONS_V3.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.551646+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/inputs/candidate/AMENDED_V3/DIRECTOR_DECISIONS_V3.md",
+    "stdout_sha256": "1fa28bc81dedd96f017f9ffc9a69b7a86326917a61093e9aeb9390bcfbe300a4",
+    "stdout_bytes": 1844
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/DOCSET_SYNC_ACCEPTANCE_SPEC_AMENDED_V1_R1.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.560019+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/inputs/candidate/QA_RETEST_AF01/DOCSET_SYNC_ACCEPTANCE_SPEC_AMENDED_V1_R1.md",
+    "stdout_sha256": "2a3867cacef11c6bb0419a4c71229479efe703cee9fbcc1e4f71c0ac8e63f0fc",
+    "stdout_bytes": 55016
+  },
+  {
+    "command": [
+      "git",
+      "ls-tree",
+      "-r",
+      "-z",
+      "8dff354937bc7baf739370a9886497d9d5359186"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.635967+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/parent_tree.raw",
+    "stdout_sha256": "a138232f6379fa7d78f1371f39e123e7bcc2104ebaadc54b77b73d8f72402a84",
+    "stdout_bytes": 126774
+  },
+  {
+    "command": [
+      "git",
+      "ls-tree",
+      "-r",
+      "-z",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.658352+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_tree.raw",
+    "stdout_sha256": "0418db1bb9b914b753d63e6519a36f2ca0084f8b3a909a5901eb29051c16d5db",
+    "stdout_bytes": 133851
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--no-ext-diff",
+      "--no-renames",
+      "8dff354937bc7baf739370a9886497d9d5359186",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7",
+      "--",
+      "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+      "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+      "CHANGELOG.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.682400+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/canonical.diff",
+    "stdout_sha256": "acc8437f6194a36b196333c7feb1ccd0431c9422b6fa3772887c9c18e45fa47e",
+    "stdout_bytes": 9036
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "--no-ext-diff",
+      "--name-status",
+      "--no-renames",
+      "8dff354937bc7baf739370a9886497d9d5359186",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.693624+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/changed_paths.txt",
+    "stdout_sha256": "5b433d2a9743b1fb324ee6180473344a40213a7ad9b4726e2405054f3cf0f137",
+    "stdout_bytes": 4489
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.702763+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "stdout_sha256": "c54a379e52318081c9ce89c2a253c65e16d8838079d7d2bcfef90939d42df54b",
+    "stdout_bytes": 14636
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.712430+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "stdout_sha256": "e9b2b24cbd734b846ccf5215e235474f1aa097bd8be01d7f2d360094a59ee6d9",
+    "stdout_bytes": 40805
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:01_CONSTITUTION/STARTER_KIT_HANDBOOK.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.723399+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "stdout_sha256": "e1613573a8d56073033a96ee803968feff1ab5f18e82ab3c329e64dd920c6bb1",
+    "stdout_bytes": 34575
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.735455+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "stdout_sha256": "7e2ceb6f882e1eafaa60759b163c541eaafa932fb28e0fcab08345f985c18d45",
+    "stdout_bytes": 26479
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.744929+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md",
+    "stdout_sha256": "0baaaf1d3b4a32cc2d2b3977608974be7918c4142d2b707d00c66289bd838bcb",
+    "stdout_bytes": 8279
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.754428+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "stdout_sha256": "c5fc80000e293fbfba59a559c81a24fcfcfb42e935b06c438bee561ae6f28d4e",
+    "stdout_bytes": 19768
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.767822+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "stdout_sha256": "dcf2c4fa69c9b173c64e4b6c4113cfbe10e0c02e3dba44da2198ea0310714b64",
+    "stdout_bytes": 51667
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.778253+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "stdout_sha256": "20fa7ca7125510570a3508c0e74b21966e41f717fe65f5070a883e1d97def08f",
+    "stdout_bytes": 22291
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.788283+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "stdout_sha256": "3fab83a09b26afd82038676c15654b758243b107023310dc2f3a5317f0d87b4c",
+    "stdout_bytes": 34174
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.798157+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md",
+    "stdout_sha256": "1b7b7438738eaefbf201f8662c323e13b51208e965f565456e17c8f1653343c4",
+    "stdout_bytes": 57300
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.807288+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "stdout_sha256": "18590bd643bd8e4b5b7c54de2ba1fb680faac217b9bea136e576576207496639",
+    "stdout_bytes": 23815
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.815604+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+    "stdout_sha256": "c7ddc8427e9469bae4a0c3476fc4ecad512ef2a45db09eec7ce2c17e84567a5d",
+    "stdout_bytes": 24590
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.823949+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+    "stdout_sha256": "955b3c02dd0012616bc8b7a60f99af2a74c651d5a4db5393570ef49f4ee88e97",
+    "stdout_bytes": 10747
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.832616+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md",
+    "stdout_sha256": "68876ff845a6ead4977444426ab53cf0862c411469b8489fefc4c2a716a4312a",
+    "stdout_bytes": 6702
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.839620+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "stdout_sha256": "37bac1c70b0afcee66e6f298c518f08566a292435617da28291040016ca89312",
+    "stdout_bytes": 115321
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.848624+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+    "stdout_sha256": "0e492b78185ecc152bf50e4cc603329d8328efc565aaa92fc0accbc2fb8f16f2",
+    "stdout_bytes": 23946
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.855388+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+    "stdout_sha256": "6f423ba687dae1e6de472d3840ccda4226f175ef8398d4e47451934c964af202",
+    "stdout_bytes": 15388
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.862029+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+    "stdout_sha256": "75bc73865f714fe5935762ae445fd1d4d54807efb31d4f0e98e1caa4772e78fb",
+    "stdout_bytes": 33398
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/QA_PLAYBOOK.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.869171+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "stdout_sha256": "4c460b040b09782497069b69409381523fbf3bea56897febecb6c51f9458d458",
+    "stdout_bytes": 42559
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.876479+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+    "stdout_sha256": "e9c7bc1e58286187f58df06d3f0718bf8c299a4eeb4b057427396bc3411ea85f",
+    "stdout_bytes": 20075
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.883614+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "stdout_sha256": "5b736786a6f6cdced703281cfada79af6c5b1c4f959f4b75615ca3a0c93971f7",
+    "stdout_bytes": 80229
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_assets/workflows/BIM_WORKFLOW.svg"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.893507+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_assets/workflows/BIM_WORKFLOW.svg",
+    "stdout_sha256": "7cba33aa1a396e4467a09eb80ef912b6e06d2dc06f839c569ffcdf5f87b67ec9",
+    "stdout_bytes": 16598
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_assets/workflows/FFM_CREATION.svg"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.902011+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_assets/workflows/FFM_CREATION.svg",
+    "stdout_sha256": "0d7640fc0460f98aaf6a0b0d1acc8bc7866fc94e0ed61099d9d0e59931d3a1f0",
+    "stdout_bytes": 5336
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_assets/workflows/FFM_DEPLOYMENT.svg"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.908470+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_assets/workflows/FFM_DEPLOYMENT.svg",
+    "stdout_sha256": "ce17e51c9e72e24cd4fd961f9812d13242914f9e03fcb238a749b49361cb028e",
+    "stdout_bytes": 6459
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_assets/workflows/FFM_EXECUTION.svg"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.916619+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_assets/workflows/FFM_EXECUTION.svg",
+    "stdout_sha256": "d0ac268ef03f2ab6f4cb80970b2be3d242442af8eeaa3f3518526354df2a915c",
+    "stdout_bytes": 10588
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_templates/QAM/AC_EVIDENCE_MATRIX.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.924729+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/AC_EVIDENCE_MATRIX.md",
+    "stdout_sha256": "bf9685c13d650a109ea0f40d44ed0f813fea31e7fdcb67e0aa8b518ee194cb3a",
+    "stdout_bytes": 1934
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_templates/QAM/AGENTS.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.934571+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/AGENTS.md",
+    "stdout_sha256": "b3415998cf417ea79551d8b4d31b92ff83df1becaf644ad1be499ce9ff0ef03f",
+    "stdout_bytes": 1348
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_templates/QAM/AUTOMATION/README.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.942994+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/AUTOMATION/README.md",
+    "stdout_sha256": "c9a4f3a0a8d45077cc5cfbee8a93590cd4c9b08c33e8c6757419d537610bbfcb",
+    "stdout_bytes": 1956
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_templates/QAM/CLAUDE.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.951426+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/CLAUDE.md",
+    "stdout_sha256": "79a674620466b01d0a5f2b82f85658177e05f91d689072f1f5a1d1f101e43d2a",
+    "stdout_bytes": 1321
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_templates/QAM/FINDINGS.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.958749+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/FINDINGS.md",
+    "stdout_sha256": "e0b10749d2b05183253af6a486b01f92146c58ca3a8c618a73beec584ba46f75",
+    "stdout_bytes": 4342
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_templates/QAM/GOVERNING/README.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.965927+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/GOVERNING/README.md",
+    "stdout_sha256": "b9fc64518dda952a7d4a834a2b4cc9fe3ad82148ade00f4381085968e2dd11f6",
+    "stdout_bytes": 2367
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/ENGINEERING_HANDOFF.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.979613+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/ENGINEERING_HANDOFF.md",
+    "stdout_sha256": "5bd7766647aad374634061ca31caa3e2f2facef1b5a516f8f8a18d2720f00677",
+    "stdout_bytes": 2613
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/FILE_INDEX.template.json"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.987333+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/FILE_INDEX.template.json",
+    "stdout_sha256": "2620fd114b8d58a7f022631e3dba1d2d8caa2c1b457d596dde15e190460305b8",
+    "stdout_bytes": 2199
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/README.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:28.996176+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/README.md",
+    "stdout_sha256": "4d0eb7a53bba7d94a032353b9fc0316538058475fb2fc40b6d545a6982b9b0aa",
+    "stdout_bytes": 1404
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/REVIEW_START_HERE.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.003814+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/REVIEW_START_HERE.md",
+    "stdout_sha256": "0ffc1c60f9f4de3bdf10a30af6ecb9b95d036190c79056db1cbd3145a732cac1",
+    "stdout_bytes": 2316
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_templates/QAM/PARENT_ENTRY_ROUTING.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.013076+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/PARENT_ENTRY_ROUTING.md",
+    "stdout_sha256": "d557319761782cf617ae828a4df81243a9908aa7c033b563d814d2d2fccf3ebe",
+    "stdout_bytes": 2837
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_templates/QAM/QAM_APPROVAL.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.022515+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/QAM_APPROVAL.md",
+    "stdout_sha256": "de505b50c3ed901d77bfc0373ff329901447f2044bc2c3524a0164841628674d",
+    "stdout_bytes": 3791
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_templates/QAM/QAM_CERTIFICATION.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.029846+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/QAM_CERTIFICATION.md",
+    "stdout_sha256": "7781cf756893b883d58f75c8242e257130fb909625246e9a7b3500c9e83465c6",
+    "stdout_bytes": 4009
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_templates/QAM/QAM_CLEANUP_REPORT.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.037183+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/QAM_CLEANUP_REPORT.md",
+    "stdout_sha256": "2e5ac571423d245f48563090662679df82d78fcbc415be90ee71f3a33fc1b830",
+    "stdout_bytes": 4414
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_templates/QAM/QAM_ENTRY.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.043658+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/QAM_ENTRY.md",
+    "stdout_sha256": "a6b9c6f160d9811bf9d273bb03ea32f63256019b4add8cbdc23f032261fababe",
+    "stdout_bytes": 12222
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_templates/QAM/QAM_EXECUTION_REPORT.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.049724+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/QAM_EXECUTION_REPORT.md",
+    "stdout_sha256": "24ef00dd53190179498b07e8326e3c87216c9a4e5d70da2aa163f76bb7df076b",
+    "stdout_bytes": 4104
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_templates/QAM/QAM_MANIFEST.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.056918+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/QAM_MANIFEST.md",
+    "stdout_sha256": "9d68426ef53d852b46285ab8f15a5f978811e4fb606e239ccaab97ba21ce6b43",
+    "stdout_bytes": 5331
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_templates/QAM/QAM_PACKAGING.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.064645+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/QAM_PACKAGING.md",
+    "stdout_sha256": "be3508938dcc3ea0e2833c5a7f97d7915e2e409204adde9ff69c4941ddd43755",
+    "stdout_bytes": 5351
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_templates/QAM/QAM_PREFLIGHT.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.071390+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/QAM_PREFLIGHT.md",
+    "stdout_sha256": "073a4381f08d0280d83a991e72d3ffd82926fee8c76e2b1fbffe1b0690f6a1b7",
+    "stdout_bytes": 7259
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_templates/QAM/QAM_RECON_REPORT.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.077870+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/QAM_RECON_REPORT.md",
+    "stdout_sha256": "42b313b6a0e811293319f9ae390674e88a957ee87d619554d53323358c167c67",
+    "stdout_bytes": 3880
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_templates/QAM/QAM_RISK_REQUIREMENTS.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.085468+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/QAM_RISK_REQUIREMENTS.md",
+    "stdout_sha256": "cc910d528ee2ef9398f06f0259896669544e9ad02ee4623d620b98667e1131f0",
+    "stdout_bytes": 6693
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_templates/QAM/QAM_STATE.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.094194+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/QAM_STATE.md",
+    "stdout_sha256": "afc4af6ad54123506bd0b6861ba7a71c9d5dad15e51db1f5bb3704d26a75f62f",
+    "stdout_bytes": 6676
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_templates/QAM/QAM_TEST_PLAN.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.100801+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/QAM_TEST_PLAN.md",
+    "stdout_sha256": "8d3d245926946e99a8cd2cdecc8dda79f47a436c5b3f35ba7ba48886bc23e0e9",
+    "stdout_bytes": 4527
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_templates/QAM/README.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.107843+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/README.md",
+    "stdout_sha256": "b7462fc84fb6557d08010623a465588b27ee62edbffa2702ea71f2ba4d5a3d91",
+    "stdout_bytes": 12860
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_templates/QAM/evidence/README.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.115027+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_templates/QAM/evidence/README.md",
+    "stdout_sha256": "3c033254f64258d116bbbe069d585fa4df653c5ac84b68e03998bdbc675e9aab",
+    "stdout_bytes": 2698
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.121559+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+    "stdout_sha256": "3d2b8b1fd9289b02e87b15d26dc5bb61dcb6efd19a6bec621faeddc3ca85d89b",
+    "stdout_bytes": 3842
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.130504+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+    "stdout_sha256": "aa968075698fb4cd791c5b02cc026dd41470089f2a44c4e4270ec4584cfd061a",
+    "stdout_bytes": 2714
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.137549+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+    "stdout_sha256": "2b61c38203909ffb95449d779a4c13f91d4f134aac6e397a17ad4fbdd247068b",
+    "stdout_bytes": 2900
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.146583+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+    "stdout_sha256": "8f585a4a866355683904924c1a4f2ad406ffb42d95e5e5c139baaf85d9aada96",
+    "stdout_bytes": 3402
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.154443+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "stdout_sha256": "0070295f53b3e924d58b473e885072f902f45373530fa91def6667ca220ef80c",
+    "stdout_bytes": 58562
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.164318+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "stdout_sha256": "f178d51346c252baf75a3e0d6c558da411986e74b634ac64b4fa9fe6b2d50291",
+    "stdout_bytes": 44954
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:04_REFERENCE_MANUALS/AUTH_MANUAL.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.172030+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "stdout_sha256": "3e028ece38102a7d3d9bf375afb1acb3766a1a28743626aea0b54ba9ce2503f3",
+    "stdout_bytes": 54719
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:04_REFERENCE_MANUALS/DATABASE_MANUAL.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.181188+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "stdout_sha256": "1eee0154b965948156b8ef169beb10985e668819ddbce833f6c4d3f432a84771",
+    "stdout_bytes": 34283
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.190915+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "stdout_sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7",
+    "stdout_bytes": 30047
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.199718+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "stdout_sha256": "4dc5566589696045c1ae835bf315cfa68db5d30bca78ff9db137efb064cb666b",
+    "stdout_bytes": 38067
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.208379+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "stdout_sha256": "01633da70da2d4cb863a2c883c1c2e7194abd602cf422fbb1bb52ae2b2ac43ab",
+    "stdout_bytes": 32905
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.215731+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "stdout_sha256": "b5688cb6f8a6b0aae9dbe3db24aa8457571e2f0d6099801ccc9e3f11f49c59c9",
+    "stdout_bytes": 24087
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.222174+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+    "stdout_sha256": "2b5da310aa196164cb0d07654d6df73c15f3ac23c67c416da3036ea148f1d491",
+    "stdout_bytes": 12655
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:05_DESIGN_SYSTEM/THEME_LIBRARY.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.231419+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/05_DESIGN_SYSTEM/THEME_LIBRARY.md",
+    "stdout_sha256": "4063fe5f3dacfb7df9bf433b7073e2a5b608ced12a7944eabecc9087bcf261ce",
+    "stdout_bytes": 8856
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:05_DESIGN_SYSTEM/THEMING_MANUAL.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.240393+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+    "stdout_sha256": "8d36ff89202b0a1d692252c7d46c8da709cf317438d007b2564340bf47fe62ab",
+    "stdout_bytes": 17610
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:05_DESIGN_SYSTEM/TOKEN_FILE.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.249356+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/05_DESIGN_SYSTEM/TOKEN_FILE.md",
+    "stdout_sha256": "2fc5eff41dd6320550c21bfda7cc6e33f7b5be7339fe9e5a280b67dc0475922a",
+    "stdout_bytes": 12509
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.260557+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "stdout_sha256": "2b7f9f8d5b89a43bb63edbb54950bf6dcbee7e67549d6019b1dada5c51d493b4",
+    "stdout_bytes": 59335
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:CHANGELOG.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.271214+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/CHANGELOG.md",
+    "stdout_sha256": "4c655c1dd23b4f64cdc7d33f93b67c500a2f144ab46f8f013821a7c444f7b006",
+    "stdout_bytes": 13817
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:MANIFEST.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.279889+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/MANIFEST.md",
+    "stdout_sha256": "13759dcc55df8747a86ddaa053f89d24c4e280474cde91d9e44bca3211e1b942",
+    "stdout_bytes": 18546
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/API_AND_SERVICES_MANUAL_v1_1.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.289029+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/API_AND_SERVICES_MANUAL_v1_1.md",
+    "stdout_sha256": "64794a5d33dbd7fdd473975d5ff7c02f49fe433c8f63c780b059d77ead55a4b3",
+    "stdout_bytes": 57422
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/APP_ARCHITECTURE_MANUAL_v1_3.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.301234+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/APP_ARCHITECTURE_MANUAL_v1_3.md",
+    "stdout_sha256": "ca1dc1f0a8ce578523a46a3262f2f1d09a63cb6e8f2517157d940c0febfb3134",
+    "stdout_bytes": 43476
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/APP_FACTORY_BLUEPRINT_v2_1.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.311173+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/APP_FACTORY_BLUEPRINT_v2_1.md",
+    "stdout_sha256": "9b732116c6030aee4d6ae0b792272bc372dd647ef95dea522c2bf7949934af93",
+    "stdout_bytes": 14704
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/APP_FACTORY_SKILLS_PLAYBOOK_v1_1.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.323927+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/APP_FACTORY_SKILLS_PLAYBOOK_v1_1.md",
+    "stdout_sha256": "d93f3d5d81d5add6638fee9c71eecc370fd86f07ad1ac47f7021d6415a446113",
+    "stdout_bytes": 56666
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/ARCHITECT_PLAYBOOK_v2_2.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.334190+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/ARCHITECT_PLAYBOOK_v2_2.md",
+    "stdout_sha256": "b0754979e3b24cb79234265fe146f39f03718e608a60153a702a518f34979af4",
+    "stdout_bytes": 25105
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/ARCHITECT_QUESTIONNAIRE_v2_2.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.342936+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/ARCHITECT_QUESTIONNAIRE_v2_2.md",
+    "stdout_sha256": "aa487360f420c1a2e0a48b097eaa2ebc905ebb659bcdc67ae72ce8d6a80f2bfd",
+    "stdout_bytes": 8049
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/AUTH_MANUAL_v1_4.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.351739+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/AUTH_MANUAL_v1_4.md",
+    "stdout_sha256": "6b81073fe81727d4a4a48d1a0e4c43098f3ce70fafbcc3a7a6c660e661276850",
+    "stdout_bytes": 58800
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/BIM_PLAYBOOK_v1_0.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.362430+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/BIM_PLAYBOOK_v1_0.md",
+    "stdout_sha256": "363619932b39fd7c8b4bafa9f270f814aa1af4aa98159dbfecb28c7f920e4f3b",
+    "stdout_bytes": 19661
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/BUG_FIX_PLAYBOOK_v1_0.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.371281+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/BUG_FIX_PLAYBOOK_v1_0.md",
+    "stdout_sha256": "3ca537dec3958cabb0159a5243b7fe3f76c10e46ebcaa4ba04d258dcd5d1a871",
+    "stdout_bytes": 23811
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/COMPONENT_REGISTRY_v1_1.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.381053+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/COMPONENT_REGISTRY_v1_1.md",
+    "stdout_sha256": "4b7d5b7c39fa50838ea536d07a9f4086d3802613a8ee86dd986f09553b28767b",
+    "stdout_bytes": 23436
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/DATABASE_MANUAL_v1_1.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.391876+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/DATABASE_MANUAL_v1_1.md",
+    "stdout_sha256": "326802ad938bb6b5b9f1b73c74ebee811789185789ef003e907101a0db4a0cf8",
+    "stdout_bytes": 33603
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/DESIGNER_PLAYBOOK_v2_1.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.400608+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/DESIGNER_PLAYBOOK_v2_1.md",
+    "stdout_sha256": "426eb0e7a3da1b31de8efe4ca68550d4b351d6f378b061f0c0de1ab6fbd632ae",
+    "stdout_bytes": 18569
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/ECOMMERCE_AND_PAYMENTS_MANUAL_v1_1.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.409436+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/ECOMMERCE_AND_PAYMENTS_MANUAL_v1_1.md",
+    "stdout_sha256": "d72816173e6a188282718174cbcd8cc4693f9f944858d96fe0bb092edb728f38",
+    "stdout_bytes": 51838
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/ENGINEER_PLAYBOOK_v1_2.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.417456+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/ENGINEER_PLAYBOOK_v1_2.md",
+    "stdout_sha256": "8d73c37a42624fa2c60729d8d2648fc96f72305a732fd5e74460cf0a614f861c",
+    "stdout_bytes": 48290
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/FEAT_PLAYBOOK_v1_0.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.427063+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/FEAT_PLAYBOOK_v1_0.md",
+    "stdout_sha256": "5d70fa061bde72d49507f64b0113daab2646952867c63b8a499ea2feab3ed66f",
+    "stdout_bytes": 5833
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/FFM_PLAYBOOK_v1_2.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.435648+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/FFM_PLAYBOOK_v1_2.md",
+    "stdout_sha256": "7be561380ea1568d7df61734b6f1a5b12263194cca3ce469a5731e3bd32eafa0",
+    "stdout_bytes": 112581
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/FRONTEND_BUILD_PHASE_PLAYBOOK_v1_2_2.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.447606+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/FRONTEND_BUILD_PHASE_PLAYBOOK_v1_2_2.md",
+    "stdout_sha256": "362609b6551bd585c5f3c57ce5b751285871335d154ad2a8c97ca62b28a20702",
+    "stdout_bytes": 23578
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/FRONTEND_FIRST_PLAYBOOK_v1_1_3.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.458251+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/FRONTEND_FIRST_PLAYBOOK_v1_1_3.md",
+    "stdout_sha256": "2516dcbd50f525328db955592c6c14eafa971c02d4dec722130a87505248a422",
+    "stdout_bytes": 15043
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/GLOBAL_DESIGN_SYSTEM_HANDBOOK_v1_1.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.468529+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/GLOBAL_DESIGN_SYSTEM_HANDBOOK_v1_1.md",
+    "stdout_sha256": "f2dc74390a16836c3213f77652451085680046786d5499b43b1e8a6a6774c8ac",
+    "stdout_bytes": 12072
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/HANDOFF_PACKAGE_PLAYBOOK_v1_1.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.479074+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/HANDOFF_PACKAGE_PLAYBOOK_v1_1.md",
+    "stdout_sha256": "6a2f4706542395360248dd42e17cbf9fc49f0886c844aa1e0e5315a047892c4f",
+    "stdout_bytes": 20068
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/QA_PLAYBOOK_v1_0.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.491024+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/QA_PLAYBOOK_v1_0.md",
+    "stdout_sha256": "32d17ef5ca2eb32dfec6d120a71d280daa2973cba90e8f1735b85e07a3098e99",
+    "stdout_bytes": 40146
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/QA_PLAYBOOK_v1_1.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.502759+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/QA_PLAYBOOK_v1_1.md",
+    "stdout_sha256": "b6c70f14af18bb187ca7980954317af486e43b682821245d9911f2160d5198a5",
+    "stdout_bytes": 40940
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/RECON_QUESTIONNAIRE_v0_5.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.513830+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/RECON_QUESTIONNAIRE_v0_5.md",
+    "stdout_sha256": "974f09e3118e94288beeb3dce919bea32a1571f294a59da6fd0041ee615968db",
+    "stdout_bytes": 32520
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/SOFTWARE_FACTORY_PLAYBOOK_v1_3.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.525009+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/SOFTWARE_FACTORY_PLAYBOOK_v1_3.md",
+    "stdout_sha256": "dd9b355bed9b263756a9622205cc30b4b06dad2a08397b7fb55d7e5bb2a7260e",
+    "stdout_bytes": 38349
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/STARTER_KIT_HANDBOOK_v1_1.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.539059+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/STARTER_KIT_HANDBOOK_v1_1.md",
+    "stdout_sha256": "396e325b4ac28b02c145fcad6181a99abb4f8345b87278d96f1aef2bbefb7efb",
+    "stdout_bytes": 34072
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/STATE_MANAGEMENT_MANUAL_v1_2.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.553376+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/STATE_MANAGEMENT_MANUAL_v1_2.md",
+    "stdout_sha256": "2a281857fe0a03d9066ac171e725ca50e42944df204b4eceaebba152b61af196",
+    "stdout_bytes": 45351
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/STRIPE_SUBSCRIPTIONS_PLAYBOOK_v1_1.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.564849+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/STRIPE_SUBSCRIPTIONS_PLAYBOOK_v1_1.md",
+    "stdout_sha256": "ec5a467ffd31ca8a1200f230b5a4ca4e104148bedaa83d3a4780f8e23f9a3e03",
+    "stdout_bytes": 38843
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/TESTING_PLAYBOOK_v2_1.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.573476+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/TESTING_PLAYBOOK_v2_1.md",
+    "stdout_sha256": "5dfc2d198d51eebd4c0b136eeafc50cc2f64dafe44b7bbd153b801f4849692ad",
+    "stdout_bytes": 79339
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/THEME_LIBRARY_v1_2.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.585896+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/THEME_LIBRARY_v1_2.md",
+    "stdout_sha256": "480c7bdbc648e2fb7b97a6b120bfa36de35246cbdf3fd163e43aa0a2968ff73e",
+    "stdout_bytes": 8467
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/THEMING_MANUAL_v1_2.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.595635+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/THEMING_MANUAL_v1_2.md",
+    "stdout_sha256": "3c71a3a959df8393b4f6810a8122a94895fced02d658d3b512ee5f30784091b1",
+    "stdout_bytes": 17470
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/TOKEN_FILE_v1_2.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.602804+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/TOKEN_FILE_v1_2.md",
+    "stdout_sha256": "066e0e60a49714adb062bc2983b1d5a82bc69f0c73794bac44292f6851dc88b5",
+    "stdout_bytes": 12744
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:_ARCHIVE/UI_UX_BUILDING_MANUAL_v1_4.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:29.611410+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_blobs/_ARCHIVE/UI_UX_BUILDING_MANUAL_v1_4.md",
+    "stdout_sha256": "8b9a6f647a8999ce35db4dd20df3db058ec7c64a47c4b3ab8051195f97d9d544",
+    "stdout_bytes": 60816
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "-I",
+      "lints/run_all.py"
+    ],
+    "cwd": "/tmp/qa-amended-v3-krds1x3r/candidate",
+    "start_utc": "2026-10-20T09:58:30.099355+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/lints.txt",
+    "stdout_sha256": "464d6fe12c6b15c15fa89499cda06a08e54c18376f7b4127c5e915879a23f04e",
+    "stdout_bytes": 408
+  },
+  {
+    "command": [
+      "git",
+      "log",
+      "--format=%H %s",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7..HEAD"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:30.925116+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "-s",
+      "--format=%P%n%cI%n%s%n%an",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:30.938321+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout": "8dff354937bc7baf739370a9886497d9d5359186\n2026-10-20T10:39:41+06:00\nrepair QA-P4 RV2-F01 (AMENDED-v3 55537c6411724ab78837d0191d61375654839202acbf15b13a76d98aa8d483e6)\n[REDACTED AUTHOR NAME]\n"
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "8dff354937bc7baf739370a9886497d9d5359186:04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:30.950239+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/parent_state.md",
+    "stdout_sha256": "0f0fe3992a98a9eff3c7378b41b20b7207545330b30879b246139e2a5475a942",
+    "stdout_bytes": 37618
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7:04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T09:58:30.962897+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/candidate_state.md",
+    "stdout_sha256": "4dc5566589696045c1ae835bf315cfa68db5d30bca78ff9db137efb064cb666b",
+    "stdout_bytes": 38067
+  },
+  {
+    "command": [
+      "rg",
+      "-n",
+      "-i",
+      "fetchProducts|services/productServices",
+      "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+      "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+      "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+      "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+      "02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md",
+      "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+      "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+      "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+      "03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+      "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+      "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+      "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+      "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+      "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+      "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+      "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+      "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+      "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+      "05_DESIGN_SYSTEM/THEME_LIBRARY.md",
+      "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+      "05_DESIGN_SYSTEM/TOKEN_FILE.md",
+      "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+      "MANIFEST.md",
+      "CHANGELOG.md",
+      "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+      "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+      "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+      "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+      "03_BUILD_METHODOLOGY/_assets/workflows/BIM_WORKFLOW.svg",
+      "03_BUILD_METHODOLOGY/_assets/workflows/FFM_CREATION.svg",
+      "03_BUILD_METHODOLOGY/_assets/workflows/FFM_DEPLOYMENT.svg",
+      "03_BUILD_METHODOLOGY/_assets/workflows/FFM_EXECUTION.svg"
+    ],
+    "cwd": "/tmp/qa-amended-v3-krds1x3r/candidate",
+    "start_utc": "2026-10-20T09:58:31.103572+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout_file": "RAW/propagation_rg.txt",
+    "stdout_sha256": "4be6ee5abfb2888f397f7d35513aa2d85b448992f5381c61ce7d5cd20e536f8a",
+    "stdout_bytes": 4132
+  },
+  {
+    "command": [
+      "git",
+      "ls-remote",
+      "--heads",
+      "origin",
+      "refs/heads/docs/sync-doctrine-part2-2026-10-15",
+      "refs/heads/main"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T10:02:12.544699+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout": "26b050fe70de66e74ec8d65bcf9287d4369a91f7\trefs/heads/docs/sync-doctrine-part2-2026-10-15\n9c179392f79b70da099121fc357d3107ad3bb86e\trefs/heads/main\n"
+  },
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD",
+      "HEAD^"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T10:02:13.463871+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout": "26b050fe70de66e74ec8d65bcf9287d4369a91f7\n8dff354937bc7baf739370a9886497d9d5359186\n"
+  },
+  {
+    "command": [
+      "git",
+      "branch",
+      "--show-current"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T10:02:13.471511+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout": "docs/sync-doctrine-part2-2026-10-15\n"
+  },
+  {
+    "command": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T10:02:13.479054+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout": ""
+  },
+  {
+    "command": [
+      "git",
+      "rev-parse",
+      "main"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T10:02:13.496130+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout": "9c179392f79b70da099121fc357d3107ad3bb86e\n"
+  },
+  {
+    "command": [
+      "git",
+      "show",
+      "-s",
+      "--format=%H%n%P%n%an%n%ae%n%aI%n%cI%n%s",
+      "26b050fe70de66e74ec8d65bcf9287d4369a91f7"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "start_utc": "2026-10-20T10:02:13.502035+00:00",
+    "exit": 0,
+    "stderr": "",
+    "stdout": "26b050fe70de66e74ec8d65bcf9287d4369a91f7\n8dff354937bc7baf739370a9886497d9d5359186\n[REDACTED AUTHOR NAME]\n[REDACTED AUTHOR EMAIL]\n2026-10-20T10:39:41+06:00\n2026-10-20T10:39:41+06:00\nrepair QA-P4 RV2-F01 (AMENDED-v3 55537c6411724ab78837d0191d61375654839202acbf15b13a76d98aa8d483e6)\n"
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "-I",
+      "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/scripts/01_preflight.py"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-v1",
+    "exit": 1,
+    "stdout": "Handoff: safe member paths and 38/38 inventory hashes verified\n",
+    "stderr": "BLOCKED initial pins; inspect QA_START.json; do not export or grade\n",
+    "resolution": "Same read-only remote check retried with network access; pins matched before export/testing."
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "-I",
+      "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/scripts/02_measure.py"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-v1",
+    "exit": 1,
+    "stdout": "",
+    "stderr": "FileNotFoundError: review-repo _AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE3_EXECUTION/DIRECTOR_RELEASE.md (copy_input/source.read_bytes)",
+    "resolution": "Read committed candidate copy; complete 02_measure.py rerun exited 0."
+  }
+]

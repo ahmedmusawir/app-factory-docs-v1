@@ -1,0 +1,13 @@
+{
+  "operations_and_verbal_byte_equal": true,
+  "entries": [
+    "├── APP_BRIEF.md (from Architect)",
+    "├── UI_SPEC.md (from Designer)",
+    "├── DATA_CONTRACT.md",
+    "├── ACCEPTANCE_SPEC.md (from Architect)",
+    "├── Working Code (tested)",
+    "├── QAM/ (module QA pack: ENGINEERING_HANDOFF, approved plan, results, certificate)",
+    "├── README.md (setup instructions)",
+    "└── Deployment Guide"
+  ]
+}

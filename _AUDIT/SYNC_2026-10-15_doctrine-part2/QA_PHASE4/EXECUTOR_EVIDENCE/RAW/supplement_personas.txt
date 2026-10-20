@@ -1,0 +1,108 @@
+01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md:43: | **Flow** | Brain Drain → 4-file handoff package → Engineer (Claudy) | Architect → Designer → Engineer |
+01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md:98: | **Claude Code (Claudy)** | Writes code from specs; builds from the Designer's HTML, verifies against the PNG | Engineer Agent |
+01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md:194: | `ENGINEER_PLAYBOOK.md` | Data contract template, file tree rules, Claudy prompting strategy, review protocol |
+01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md:206: | "How does the Engineer talk to Claudy?" | Structured prompts with specs + the Designer's HTML/tokens attached |
+01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md:207: | "Who reviews Claudy's output?" | You + Windsurf/Cascade, with the Designer's PNG as the QC target |
+01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md:208: | "What if Claudy breaks existing code?" | Approved scope and structure boundaries govern; stop, report the regression, and repair only within authorization |
+01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md:218: 4. **Then:** We prompt Claudy together, with the HTML + tokens in hand.
+01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md:227: | 2.0 | 9 Jun 2026 | **Stitch retired.** Pipeline diagram, doc structure, and Phase 2 workflow rebuilt around token-driven HTML → Playwright PNG. Designer deliverables corrected (token file primary; `_design/` HTML+PNG; UI_SPEC; component manifest). `STITCH_PROMPTS/` folder replaced by `_design/`. Stale vendor parentheticals dropped from the diagram (agents shown role-only). Engineer tool labeled Claudy (Claude Code). Pepper's Rig example retained as illustration. |
+02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md:90: - **Run `stark-recon` first.** The Engineer (Claudy) executes it read-only and writes a Recon Report to `agent_docs/recon/RECON_<project>_<phase>_<date>.md`.
+02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md:24: 10. [Handoff Protocol to Claudy (Engineer)](#10-handoff-protocol-to-claudy-engineer)
+02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md:35: The Designer is the **second agent** in the 3-Agent Council. It transforms the APP_BRIEF into a running, token-driven visual system that locks screen intent, user flows, and interaction patterns before Claudy writes the real app.
+02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md:68: | Write the production app | Engineer Agent / Claudy |
+02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md:172: - **Executable, not a picture.** The HTML reads the same semantic tokens Claudy will use, so what you see is what gets built.
+02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md:186: - **HTML is load-bearing for Claudy** — it is the literal build reference.
+02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md:187: - **PNG is the QC target** — the human/at-a-glance proof and the thing Claudy verifies against.
+02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md:313: ## 10. Handoff Protocol to Claudy (Engineer)
+02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md:324: ### What Claudy Actually Needs
+02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md:374: A pretty screen on hardcoded colors is a dead end. A modest screen on a clean token set re-themes in minutes and hands to Claudy without translation. Ship the system, not the screenshot.
+02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md:15: This playbook is the **CONVERSION pipeline's package doctrine**: a source app exists, Brain Drain has extracted it, and the operator/Architect authors the 4-file package that Claudy executes. No Designer in the loop — visuals come from source-app screenshots in `_design/`.
+02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md:32: Together these four documents constitute a **handoff package**. When the package is complete and approved, Claudy can execute the build through 8 supervised phases with minimal operator intervention.
+02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md:58: - ❌ For projects where the architect (operator) intends to author code directly without delegating to Claudy
+02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md:117: If forbidden zones are vague, Claudy will drift. If they're explicit and numbered, Claudy holds the line.
+02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md:215: **Purpose:** The doctrine and conventions specific to this project. Read by Claudy on every session.
+02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md:297: 5. **Operator has explicitly approved** — "this package is ready to hand to Claudy"
+02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md:299: Until all four files are approved, Claudy does not start Phase 0 Discovery on the build.
+02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md:312: The difference: enforceability. Claudy can verify whether it's about to violate the second; the first is interpretable.
+02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md:340: In Run 001, the Mission Control hardcoded 4 agents vs Chat dropdown's 5 was preserved deliberately. Documenting it prevented Claudy from "fixing" it during build.
+02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md:30: **The pattern:** none of these were deep design failures. They were all "the Architect couldn't see the ground truth." The fix is cheap: have the Engineer (Claudy, who IS in the repo) answer a questionnaire before the Architect writes a line.
+02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md:44: 2. Operator (you) runs Claudy in the repo:
+02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md:50: 3. Claudy answers from the filesystem — actual versions, actual file
+02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md:60: - **Verbatim findings.** Claudy reports what it actually found, including when reality contradicts the handbook. Doc-vs-reality drift is the single highest-value finding.
+02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md:182: **Architect uses this to:** stop inheriting handbook errors. Every file path written into the FFM is one Claudy confirmed exists. Drift gets logged as a "kit reconciliation" task for the appropriate sub-phase.
+02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md:469: #         (Claudy reports any surprise: stale scaffolding, unexpected dirs,
+02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md:483: ## Recon Report Format (What Claudy Returns)
+02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md:485: Claudy answers in this structure:
+02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md:543: - <any FFM authoring implications Claudy spotted>
+02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md:575: 🛡️ **The Architect authors blind no more. Claudy verifies ground truth; the Architect writes from facts.**
+03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md:901: - **Type test passes cleanly:** the agent guides a read-only ground-truth pass and the operator boots Claudy to execute it — operator stays in the driver's seat (Stark Skill).
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:42: A **Frontend-First Module (FFM)** is a portable, self-contained folder dropped at `agent_docs/CURRENT_APP/<project>_<phase>_ffm/` inside a starter kit clone. It is the single source of truth that tells an AI coding tool (Claude Code, Codex CLI, Gemini CLI, etc.) **what to build, how to build it, and what not to touch.**
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:57: The FFM is **vendor-neutral** — Claude Code, Codex, Gemini all use the same module via different entry-point files (`CLAUDE.md`, `AGENTS.md`, `GEMINI.md`) that redirect to the same navigation contract.
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:120: **Who:** Claudy operating under the **Brain Drain** skill (or equivalent extraction skill).
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:177: - Forbidden zones are concrete and enforceable (Claudy can verify violations)
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:192: - Claudy hits ambiguity mid-build and stops (best case)
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:193: - Claudy improvises and builds the wrong thing (worst case)
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:195: - The FFM has to be patched after Claudy has already drifted
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:199: **Who:** Claudy (Claude Code in the terminal).
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:270: ├── AGENTS.md             ← Codex CLI pointer → redirects to CLAUDE.md
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:357: | Codex CLI | `AGENTS.md` → redirects to `CLAUDE.md` | Compatible |
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:624: **Audience:** Claudy (primary), Codex CLI / Gemini CLI / other coding agents (secondary).
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:645: - The forbidden zones MUST be enforceable. Claudy can verify violations.
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:661: **Purpose:** The operator's setup guide. Step-by-step instructions for staging the FFM, installing skills, booting Claudy.
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:670: 4. **The Run** — overview of the sub-phases Claudy will execute
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:695: **Purpose:** Entry point for Codex CLI. Redirects to `CLAUDE.md`.
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:704: > Codex CLI entry point.
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:706: This module's primary navigation contract is at `CLAUDE.md` (sibling file). All AI coding tools — Claude Code, Codex CLI, Gemini CLI, Windsurf, Cursor — read the same `CLAUDE.md`.
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:726: This module's primary navigation contract is at `CLAUDE.md` (sibling file). All AI coding tools — Claude Code, Codex CLI, Gemini CLI, Windsurf, Cursor — read the same `CLAUDE.md`.
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:733: Codex CLI looks for `AGENTS.md` by convention. Gemini CLI looks for `GEMINI.md`. Both should redirect to the canonical doctrine in `CLAUDE.md` so the FFM stays single-source-of-truth regardless of which tool opens it.
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:735: If you skip these files, Codex CLI users will either fail to find the FFM or improvise their own conventions, breaking vendor neutrality.
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:747: **Audience:** Claudy (primary), Operator (review).
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:797: **Audience:** Claudy (primary).
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:845: **Audience:** Claudy (primary).
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:884: | Inventing components not in UI_SPEC | If Claudy needs a new component mid-build, STOP and update spec first |
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:891: **Audience:** Claudy (read at every session start).
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:914: - **Approval gates explicit** — Claudy stops at each one and waits for operator approval.
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:923: | Not stating approval gates explicitly | Claudy needs to know where to stop |
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:941: These two folders are **operator-filled**. The Architect's job is to author a `README.md` in each folder telling the operator what to drop in, why, and how Claudy will use it.
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:945: **Purpose:** Tell the operator what design artifacts go in `_design/` and how Claudy uses them.
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:950: 2. **How Claudy Uses This Folder** — when in the run Claudy reads it, what for
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1012: If operator activates Claudy with `_design/` empty:
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1013: - Claudy surfaces during Sub-Phase 0 (Discovery): "No brand tokens / screenshots found in `_design/`. Proceeding with shadcn defaults / inferring from extraction docs. Confirm or provide assets."
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1026: 2. **How Claudy Uses This Folder** — read on demand, not at activation
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1083: If operator activates Claudy with `_extraction/` empty AND it should have content:
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1084: - Claudy surfaces during Sub-Phase 0: "No extraction docs found. Proceeding without source-of-truth evidence — risk of repeating known smells. Confirm or provide extracts."
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1235: The `playbook/` folder holds the **phase-by-phase build instructions** Claudy follows during the run.
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1286: - Claudy reads everything in order, summarizes back, proposes Sub-Phase 1 plan
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1288: - Includes the structured acknowledgment format Claudy outputs
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1291: - Claudy creates TypeScript types from DATA_CONTRACT § 4
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1296: - Claudy wraps starter kit's data access in `/src/services/`
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1393: 1. **Pre-Build Checks** — what must be true before activating Claudy
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1397: 5. **Sign-Off** — table for operator and Claudy to confirm
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1488: 4. Boots Claudy in that repo's directory
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1490: 6. Claudy reads, plans, asks for approval, then produces the 11 docs
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1522: The custom prompt **augments** the standard Brain Drain skill, not replaces it. It tells Claudy what extra emphasis to apply.
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1653: Claudy reads root CLAUDE.md first on session start, sees the pointer, follows it to the FFM.
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1721: Claudy needs concrete prohibitions it can verify before acting.
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1749: In FFM v1.0, Mission Control hardcoded 4 agents vs Chat dropdown's 5 was preserved deliberately. Documenting it prevented Claudy from "fixing" it during build.
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1791: Folder map drift is the #1 source of confusion when Claudy tries to read a referenced file.
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:1861: - [ ] `README.md` authored (operator instructions, expected files, how Claudy uses)
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:2070: ├── AGENTS.md                          # Codex CLI pointer
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:2146: Three boot prompt templates the operator uses to activate Claudy.
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:2351: ## How Claudy Uses This Folder
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:2377: ## How Claudy Uses This Folder
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:2379: Claudy reads `_extraction/` **on demand**, not at activation.
+03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md:2503: - Lets Claudy drift into forbidden zones
+03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md:20: > **Born from Run 001 Lesson 2** — Claudy almost authored redundant `authService.ts` wrapping kit-provided auth. The kit's complete Supabase SSR stack would have been shadowed by a useless wrapper. This section prevents that failure mode permanently.
+03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md:41: In Run 001, Claudy nearly authored `authService.ts` as a wrapper around the kit's already-complete Supabase SSR auth stack. Doctrine said "all external calls go through a service layer." Reality: the kit's auth IS the service layer. Authoring a wrapper would have produced dead code that diverged from the kit baseline.
+05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md:7: > **Who reads it:** the Designer agent (to know the method and deliverables) and Claudy (to know the contract). 
+05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md:109: **HTML is load-bearing for Claudy; PNG is the QC target.** Always ship both for tiles and screens.
+05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md:120: 6. **Hand to Claudy** — HTML to build from, PNG to verify against, tokens to inherit.
+05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md:147: 6. Hands Claudy the HTML + PNG + tokens + spec + manifest.
+05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md:155: Tokens are the system. They live in `globals.css`, map through Tailwind, and components read them semantically — never numbered colors. Light + dark are mandatory; semantic colors hold their meaning across every theme while brand and neutrals swap freely. Build from the kit's shadcn primitives, compose rather than invent, and flag genuine gaps as KIPs. Design mobile-first from 375, with the sidebar-to-drawer and table-to-cards transforms as standard. Prove it all on a token-driven style tile, and hand Claudy HTML to build from plus PNGs to check against. Do this once per project and the next one starts here, not from scratch.
+05_DESIGN_SYSTEM/THEME_LIBRARY.md:7: > **Reader:** Designer (me, in future labs) + Claudy.
+05_DESIGN_SYSTEM/THEMING_MANUAL.md:110: **`tailwind.config.ts`** maps the CSS custom properties to Tailwind utility names. This is what lets Claudy write `className="bg-primary text-primary-foreground"` and have it resolve to the actual brand color.
+05_DESIGN_SYSTEM/THEMING_MANUAL.md:112: **`_project/CLAUDE.md` (the Locked Palette section)** is the human-readable record of what the tokens mean. It cites which hex values were chosen and why. This is the artifact that survives sessions — when Claudy re-reads `_project/CLAUDE.md` at the start of every phase, the palette stays in working memory.
+05_DESIGN_SYSTEM/THEMING_MANUAL.md:168: - Claudy reads them and fabricates without interpretation drift
+05_DESIGN_SYSTEM/THEMING_MANUAL.md:257: - Claudy fabricates all Phase 1 UI using semantic tokens only — no hardcoded colors permitted
+05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md:1814: **Root cause:** Mobile-first lived in section 7 of this manual. By Phase 5, the doctrine had decayed from Claudy's working memory. No structural forcing function caught the violation before code was authored.
+03_BUILD_METHODOLOGY/_templates/QAM/AGENTS.md:1: # QAM/AGENTS.md — QA entry (Codex CLI and other AGENTS.md runtimes)

@@ -1,0 +1,9 @@
+{
+  "start_pins_match": true,
+  "end_pins_match": true,
+  "same_remote_tip": true,
+  "same_canonical_hashes": true,
+  "review_protected_files": 1461,
+  "review_protected_mismatches": [],
+  "review_protected_unchanged": true
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "command": [
+      "python3",
+      "-B",
+      "-I",
+      "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/scripts/01_preflight.py"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-v1",
+    "exit": 1,
+    "stdout": "Handoff: safe member paths and 38/38 inventory hashes verified\n",
+    "stderr": "BLOCKED initial pins; inspect QA_START.json; do not export or grade\n",
+    "resolution": "Same read-only remote check retried with network access; pins matched before export/testing."
+  },
+  {
+    "command": [
+      "python3",
+      "-B",
+      "-I",
+      "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/RETEST_AMENDED_V3/EXECUTOR_EVIDENCE/scripts/02_measure.py"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-v1",
+    "exit": 1,
+    "stdout": "",
+    "stderr": "FileNotFoundError: review-repo _AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE3_EXECUTION/DIRECTOR_RELEASE.md (copy_input/source.read_bytes)",
+    "resolution": "Read committed candidate copy; complete 02_measure.py rerun exited 0."
+  }
+]

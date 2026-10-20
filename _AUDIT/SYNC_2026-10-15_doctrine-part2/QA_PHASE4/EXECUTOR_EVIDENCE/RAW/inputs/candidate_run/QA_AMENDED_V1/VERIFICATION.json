@@ -1,0 +1,111 @@
+{
+  "reviewer": "Cody \u2014 QA Lead (Tony assignment 2026-10-17)",
+  "time_utc": "2026-10-17T10:05:06.916914+00:00",
+  "base_sha": "9c179392f79b70da099121fc357d3107ad3bb86e",
+  "source_zip": "/home/moose/Downloads/FACTORY_AMENDED_V1_REVIEW_2026-10-17_145858.zip",
+  "source_zip_sha256": "711914a986cd64071f4372e0c428249ba27c6eba8ace160918c312d098b34f60",
+  "scratch": "/tmp/cody-qa-amended-v1-6nto20fd",
+  "checks": [
+    {
+      "check": "ZIP identity",
+      "result": "PASS",
+      "detail": "711914a986cd64071f4372e0c428249ba27c6eba8ace160918c312d098b34f60"
+    },
+    {
+      "check": "ZIP integrity and safe paths",
+      "result": "PASS",
+      "detail": "28 members"
+    },
+    {
+      "check": "Inventory completeness",
+      "result": "PASS",
+      "detail": "27 payload entries"
+    },
+    {
+      "check": "Payload hashes and disk equality",
+      "result": "PASS",
+      "detail": "27/27 hashes and local counterparts"
+    },
+    {
+      "check": "Edit prefix and sequence",
+      "result": "PASS",
+      "detail": "372 unchanged + E373\u2013E380"
+    },
+    {
+      "check": "Path set",
+      "result": "PASS",
+      "detail": "101 unchanged paths"
+    },
+    {
+      "check": "Composed hashes and baseline hashes",
+      "result": "PASS",
+      "detail": "101/101 bytes and sizes; 33 before-hashes; only 3 documents differ"
+    },
+    {
+      "check": "Independent ordered replay",
+      "result": "PASS",
+      "detail": "380/380 old spans unique at their application step; 31 content-stage hashes exact"
+    },
+    {
+      "check": "Metadata residual preservation",
+      "result": "PASS",
+      "detail": "31/31 residuals equal frozen proposal; D-4 adds no change"
+    },
+    {
+      "check": "Eight edits over frozen proposed files",
+      "result": "PASS",
+      "detail": "3/3 amended files reproduced byte-exactly"
+    },
+    {
+      "check": "Regenerated and unaffected identities",
+      "result": "PASS",
+      "detail": "8 paired records and 13 unaffected records match"
+    },
+    {
+      "check": "Amendment document identity table",
+      "result": "PASS",
+      "detail": "3/3 hashes and byte sizes match"
+    },
+    {
+      "check": "Distributed patch applies",
+      "result": "PASS",
+      "detail": "patch --batch --fuzz=0 -p0 on disposable BASE tree"
+    },
+    {
+      "check": "Distributed patch output",
+      "result": "FAIL",
+      "detail": "99/101 match; details in PATCH_MISMATCHES.json"
+    },
+    {
+      "check": "Full pinned lint suite",
+      "result": "PASS",
+      "detail": "36 live documents; pinned lint files unchanged"
+    },
+    {
+      "check": "Retained ownership hit locations",
+      "result": "PASS",
+      "detail": "39 dispositions; 31 retained locations verified; semantic review recorded separately"
+    },
+    {
+      "check": "Ownership sweep replay",
+      "result": "PASS",
+      "detail": "31/31 live hits dispositioned; no additional hit"
+    },
+    {
+      "check": "AC37 source-derived actors and steps",
+      "result": "PASS",
+      "detail": "['Architect', 'Authorized operator', 'Designer', 'Director', 'Engineer', 'QA Executor', 'QA Lead', 'Reviewers']; 7/18/8/24 steps; forbidden labels absent"
+    },
+    {
+      "check": "Protected files unchanged",
+      "result": "PASS",
+      "detail": "797 source/canonical/skill/lint/intake/run files"
+    },
+    {
+      "check": "Git refs and staging unchanged",
+      "result": "PASS",
+      "detail": "HEAD/main/origin-main unchanged; nothing staged"
+    }
+  ],
+  "scope": "Amendment proposal confirmation; not installed-candidate Gate Q"
+}

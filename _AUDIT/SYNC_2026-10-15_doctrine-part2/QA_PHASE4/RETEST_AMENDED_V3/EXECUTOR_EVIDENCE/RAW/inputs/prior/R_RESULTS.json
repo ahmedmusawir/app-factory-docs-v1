@@ -1,0 +1,185 @@
+[
+  {
+    "id": "R1",
+    "mapped_acs": [
+      "AC5",
+      "AC6"
+    ],
+    "status": "PASS",
+    "rationale": "Architect/Designer ownership consistent across live containers; eight E373–E380 spans occur once, old spans absent. 450 mapped-query hits classified; stale-assertion sweep zero.",
+    "evidence": [
+      "MANUAL_READS.md",
+      "RAW/ownership_dispositions.json",
+      "RAW/exact_spans.json",
+      "RAW/stale_assertion_sweep.json"
+    ],
+    "finding_ids": []
+  },
+  {
+    "id": "R2",
+    "mapped_acs": [
+      "AC9"
+    ],
+    "status": "PASS",
+    "rationale": "QA-first handoff explicitly precedes Operations; eight tree entries include ACCEPTANCE_SPEC and QAM. Operations Needs/Verbal Brief unchanged.",
+    "evidence": [
+      "MANUAL_READS.md",
+      "RAW/handoff_structure.json"
+    ],
+    "finding_ids": []
+  },
+  {
+    "id": "R3",
+    "mapped_acs": [
+      "AC15"
+    ],
+    "status": "PASS",
+    "rationale": "No active filesystem-wins/disk-wins phrases; three-line diagram states facts vs requirements and Director conflict routing.",
+    "evidence": [
+      "MANUAL_READS.md",
+      "PROPAGATION.tsv"
+    ],
+    "finding_ids": []
+  },
+  {
+    "id": "R4",
+    "mapped_acs": [
+      "AC16"
+    ],
+    "status": "FAIL",
+    "rationale": "FC-022/038 repaired; 30 of 31 withdrawal rows pass containment. FC-066 still has unlabeled array callers in architecture/state, inconsistent with named typed-outcome service.",
+    "evidence": [
+      "MANUAL_READS.md",
+      "WITHDRAWAL_ROWS.json",
+      "RAW/withdrawal_query_hits.json",
+      "PROPAGATION.tsv"
+    ],
+    "finding_ids": [
+      "RV2-F01"
+    ]
+  },
+  {
+    "id": "R5",
+    "mapped_acs": [
+      "AC18"
+    ],
+    "status": "PASS",
+    "rationale": "Four manuals express no raw-contact persistence default; exception requirements and invalidation coherent; no positive default contact write found.",
+    "evidence": [
+      "MANUAL_READS.md",
+      "PROPAGATION.tsv"
+    ],
+    "finding_ids": []
+  },
+  {
+    "id": "R6",
+    "mapped_acs": [
+      "AC2"
+    ],
+    "status": "PASS",
+    "rationale": "101 unique rows; parent blobs match before, candidate blobs and installed files match proposed bytes/lengths; seven changes, 94 unchanged. All 23 patch hunks and 29 exact edits account for delta; original 380 preserved.",
+    "evidence": [
+      "RAW/index_hashes.json",
+      "RAW/approved_patch_hunks.json",
+      "RAW/edit_delta_accounting.json",
+      "RAW/exact_spans.json"
+    ],
+    "finding_ids": []
+  },
+  {
+    "id": "R7",
+    "mapped_acs": [
+      "AC25",
+      "AC26",
+      "AC27"
+    ],
+    "status": "PASS",
+    "rationale": "Headers/date/status and MANIFEST unchanged. 39 current-run CHANGELOG rows, six amended; one amended existing history row per document.",
+    "evidence": [
+      "RAW/metadata.json",
+      "MANUAL_READS.md"
+    ],
+    "finding_ids": []
+  },
+  {
+    "id": "R8",
+    "mapped_acs": [
+      "AC29",
+      "AC31"
+    ],
+    "status": "PASS",
+    "rationale": "Unchanged lint suite passes with zero hits and 36 headers. Seven canonical paths have clean diff --check; full-commit warnings confined to immutable evidence formatting and approved full-file copies.",
+    "evidence": [
+      "RAW/lints.txt",
+      "RAW/whitespace_classification.json",
+      "COMMANDS.json",
+      "RAW/protected_tree_sets.json"
+    ],
+    "finding_ids": []
+  },
+  {
+    "id": "R9",
+    "mapped_acs": [
+      "AC22",
+      "AC23",
+      "AC24",
+      "AC37"
+    ],
+    "status": "PASS",
+    "rationale": "Protected names/modes/blobs unchanged; 31 outgoing archives match BASE and historical QA blob matches source; 25 QAM templates unchanged; frozen approvals/map/spec/source evidence preserved; both 10x files match original sources.",
+    "evidence": [
+      "RAW/protected_tree_sets.json",
+      "RAW/archive_originals.json",
+      "RAW/preserved_existing_paths.json",
+      "RAW/10x_source_comparison.json",
+      "RAW/copied_inputs.json",
+      "RAW/copied_zip_identity.json"
+    ],
+    "finding_ids": []
+  },
+  {
+    "id": "R10",
+    "mapped_acs": [
+      "AC33"
+    ],
+    "status": "PASS",
+    "rationale": "All 12 transitions on nine unchanged paths correctly pending; old/new counts verified, no activation or closeout commit.",
+    "evidence": [
+      "RAW/transitions.json",
+      "MANUAL_READS.md"
+    ],
+    "finding_ids": []
+  },
+  {
+    "id": "R11",
+    "mapped_acs": [
+      "AC32"
+    ],
+    "status": "PASS",
+    "rationale": "Exact attributable Gate 2 approval, subject, parent and single non-merge child; ancestry and local/remote pins match, tree clean, main unchanged. Receipts support fast-forward push; history alone cannot prove absence of every historical remote action.",
+    "evidence": [
+      "QA_START.json",
+      "QA_END.json",
+      "COMMANDS.json",
+      "RAW/COMMIT_RECEIPT.json",
+      "RAW/PUSH_RECEIPT.json",
+      "RAW/DIRECTOR_DECISIONS_V2.md"
+    ],
+    "finding_ids": []
+  },
+  {
+    "id": "R12",
+    "mapped_acs": [
+      "AC1"
+    ],
+    "status": "PASS",
+    "rationale": "68 changed paths independently enumerated: seven allowed canonical modifications plus 61 additive amendment/approval/verification records, including generator source. STAGED_SCOPE agrees; no frozen overwrite or unexplained addition.",
+    "evidence": [
+      "RAW/scope.json",
+      "RAW/staged_comparison.json",
+      "RAW/copied_inputs.json",
+      "RAW/copied_zip_identity.json"
+    ],
+    "finding_ids": []
+  }
+]

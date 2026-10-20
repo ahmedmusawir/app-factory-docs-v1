@@ -1,0 +1,251 @@
+[
+  {
+    "id": "R4′",
+    "mapped_acs": [
+      "AC16"
+    ],
+    "status": "PASS",
+    "rationale": "All four return-contract labels match their consumers, including V3-2. All 29 occurrences on 26 lines across 44 live-scope files are dispositioned. No executable/import changes. FC-066 independently read; other withdrawal rows preserved by file identity or exact-section re-read.",
+    "evidence": [
+      "MANUAL_READS.md",
+      "PROPAGATION.tsv",
+      "WITHDRAWAL_ROWS.json",
+      "RAW/edit_accounting.json",
+      "RAW/code_preservation.json"
+    ],
+    "mechanical_check_keys": [
+      "eight_edits_present",
+      "only_eight_edits",
+      "code_imports_unchanged",
+      "live_scope_counts"
+    ],
+    "finding_ids": [],
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38"
+  },
+  {
+    "id": "R6′",
+    "mapped_acs": [
+      "AC2"
+    ],
+    "status": "PASS",
+    "rationale": "101 installed-file hashes equal independently read candidate blobs and the successor index; 98 are parent-identical. Three changed canonical files equal proposed content. Every pre-existing file outside the 101 remains byte-identical.",
+    "evidence": [
+      "RAW/index_hashes.json",
+      "RAW/preexisting_paths.json",
+      "RAW/candidate_blobs/"
+    ],
+    "mechanical_check_keys": [
+      "installation_101",
+      "unchanged_98",
+      "three_proposals",
+      "outside_101_preserved"
+    ],
+    "finding_ids": [],
+    "prior_manifest_sha256": null
+  },
+  {
+    "id": "R7′",
+    "mapped_acs": [
+      "AC25",
+      "AC26",
+      "AC27"
+    ],
+    "status": "PASS",
+    "rationale": "ARCH v1.4 and STATE v1.3 headers retain 2026-10-18 / Active. One amended existing history row each (1289,1111), no new rows. CHANGELOG retains 39 run rows; only 56/60 changed; six v2 clauses unchanged. MANIFEST exact.",
+    "evidence": [
+      "RAW/metadata.json",
+      "RAW/canonical.diff",
+      "MANUAL_READS.md"
+    ],
+    "mechanical_check_keys": [
+      "manual_metadata",
+      "changelog_metadata",
+      "manifest_unchanged"
+    ],
+    "finding_ids": [],
+    "prior_manifest_sha256": null
+  },
+  {
+    "id": "R8′",
+    "mapped_acs": [
+      "AC29",
+      "AC31"
+    ],
+    "status": "PASS",
+    "rationale": "Unchanged candidate-export lint suite exits 0: zero encoding/retired-term/versioned-reference hits across 36 docs and all headers pass. lints/ and .github/ remain exact.",
+    "evidence": [
+      "RAW/lints.txt",
+      "RAW/protected_trees.json",
+      "COMMANDS.json"
+    ],
+    "mechanical_check_keys": [
+      "lint_exit",
+      "protected_surfaces"
+    ],
+    "finding_ids": [],
+    "prior_manifest_sha256": null
+  },
+  {
+    "id": "R10′",
+    "mapped_acs": [
+      "AC33"
+    ],
+    "status": "PASS",
+    "rationale": "All 12 spans on nine paths retain old wording exactly once; new wording is absent. V3 transition plan agrees. Local and remote branch tips remain the candidate, with no later closeout commit on the tested branch.",
+    "evidence": [
+      "RAW/transitions.json",
+      "QA_START.json",
+      "QA_END.json"
+    ],
+    "mechanical_check_keys": [
+      "transitions_pending",
+      "no_later_local_commit"
+    ],
+    "finding_ids": [],
+    "prior_manifest_sha256": null
+  },
+  {
+    "id": "R11′",
+    "mapped_acs": [
+      "AC32"
+    ],
+    "status": "PASS",
+    "rationale": "One non-merge child of the exact parent, full-index-hash subject, attributable author, committed Tony approval predating the commit. Ancestry, authorized branch, local/remote candidate, clean worktree and BASE main match; receipts agree. O-1 structure-only assessment.",
+    "evidence": [
+      "RAW/authorization.json",
+      "RAW/ancestry.json",
+      "RAW/handoff_crosscheck.json",
+      "QA_START.json",
+      "QA_END.json",
+      "COMMANDS.json"
+    ],
+    "mechanical_check_keys": [
+      "authorization"
+    ],
+    "finding_ids": [],
+    "prior_manifest_sha256": null
+  },
+  {
+    "id": "R12′",
+    "mapped_acs": [
+      "AC1"
+    ],
+    "status": "PASS",
+    "rationale": "56 paths independently enumerated: three canonical modifications plus 53 new records under AMENDED_V3/ and AMENDED_V3_EXECUTION/. No frozen overwrite. Protected archives/templates/workflows/SVGs/10x/skills/root files unchanged; all 1,461 existing review-run files also preserved.",
+    "evidence": [
+      "RAW/scope.json",
+      "RAW/parent_tree.json",
+      "RAW/candidate_tree.json",
+      "RAW/preexisting_paths.json",
+      "RAW/stability.json"
+    ],
+    "mechanical_check_keys": [
+      "scope_56",
+      "scope_canonical",
+      "scope_additions",
+      "scope_no_other",
+      "protected_surfaces",
+      "frozen_records",
+      "root_files"
+    ],
+    "finding_ids": [],
+    "prior_manifest_sha256": null
+  },
+  {
+    "id": "R1",
+    "mapped_acs": [
+      "AC5",
+      "AC6"
+    ],
+    "status": "CARRIED",
+    "rationale": "Accepted parent PASS carried: BLUEPRINT, ARCHITECT, DESIGNER, ENGINEER, HANDOFF_PACKAGE, FFM and BIM are whole-file byte-identical. No ownership re-execution.",
+    "evidence": [
+      "RAW/carry_forward.json",
+      "RAW/prior_inventory.json"
+    ],
+    "mechanical_check_keys": [
+      "carry_R1"
+    ],
+    "finding_ids": [],
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38"
+  },
+  {
+    "id": "R2",
+    "mapped_acs": [
+      "AC9"
+    ],
+    "status": "CARRIED",
+    "rationale": "Accepted parent PASS carried: ENGINEER, QAM and DEPLOYMENT are whole-file byte-identical. No handoff re-execution.",
+    "evidence": [
+      "RAW/carry_forward.json",
+      "RAW/prior_inventory.json"
+    ],
+    "mechanical_check_keys": [
+      "carry_R2"
+    ],
+    "finding_ids": [],
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38"
+  },
+  {
+    "id": "R3",
+    "mapped_acs": [
+      "AC15"
+    ],
+    "status": "CARRIED",
+    "rationale": "Accepted parent PASS carried: ENGINEER is whole-file byte-identical. No filesystem-authority re-execution.",
+    "evidence": [
+      "RAW/carry_forward.json",
+      "RAW/prior_inventory.json"
+    ],
+    "mechanical_check_keys": [
+      "carry_R3"
+    ],
+    "finding_ids": [],
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38"
+  },
+  {
+    "id": "R5′",
+    "mapped_acs": [
+      "AC18"
+    ],
+    "status": "PASS",
+    "rationale": "PASS carried by exact STATE passages: §§4/5/6, raw-contact comment and RUL-13 default range all identical; lines 1–808 identical and first difference at 809. STATE whole-file identity is false. TESTING, AUTH and ECOMMERCE files remain exact.",
+    "evidence": [
+      "RAW/state_passages.json",
+      "RAW/parent_state.md",
+      "RAW/candidate_state.md",
+      "RAW/carry_forward.json",
+      "MANUAL_READS.md"
+    ],
+    "mechanical_check_keys": [
+      "state_passages",
+      "carry_R5_prime_other"
+    ],
+    "finding_ids": [],
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38"
+  },
+  {
+    "id": "R9",
+    "mapped_acs": [
+      "AC22",
+      "AC23",
+      "AC24",
+      "AC37"
+    ],
+    "status": "CARRIED",
+    "rationale": "Accepted parent PASS carried for the 31 outgoing archives plus historical QA restoration, 25 templates, four workflows and four SVGs, two 10x files and frozen records. Protected full tree sets match; no archive-original or workflow semantic re-execution.",
+    "evidence": [
+      "RAW/carry_forward.json",
+      "RAW/protected_trees.json",
+      "RAW/prior_inventory.json",
+      "RAW/stability.json"
+    ],
+    "mechanical_check_keys": [
+      "carry_R9",
+      "protected_surfaces",
+      "frozen_records"
+    ],
+    "finding_ids": [],
+    "prior_manifest_sha256": "379dd10450157d0c394684ed7d460d65e42006c7d2a8974e9c778329ad318c38"
+  }
+]

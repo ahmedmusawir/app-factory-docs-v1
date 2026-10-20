@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1330" viewBox="0 0 1800 1330" role="img" aria-labelledby="title desc">
+<title id="title">Deployment, identity and independent Gate D</title>
+<desc id="desc">Revised stick-actor sequence; original August diagram preserved as history. Required reviews, QA verdicts and release remain distinct.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#334155"/></marker></defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="32" y="42" font-size="28" font-family="sans-serif" fill="#0f172a">Deployment, identity and independent Gate D</text>
+<text x="32" y="77" font-size="18" font-family="sans-serif" fill="#334155">v1.0 · revised workflow reference · RUL-01–15</text>
+<g stroke="#334155" stroke-width="3" fill="none"><circle cx="180.0" cy="116" r="13"/><path d="M180.0 129v39m-22-28h44m-22 28l-20 27m20-27l20 27"/></g>
+<text x="180.0" y="221" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#0f172a">Architect</text>
+<path d="M180.0 237V1150" stroke="#cbd5e1" stroke-dasharray="7 7"/>
+<g stroke="#334155" stroke-width="3" fill="none"><circle cx="540.0" cy="116" r="13"/><path d="M540.0 129v39m-22-28h44m-22 28l-20 27m20-27l20 27"/></g>
+<text x="540.0" y="221" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#0f172a">QA Lead</text>
+<path d="M540.0 237V1150" stroke="#cbd5e1" stroke-dasharray="7 7"/>
+<g stroke="#334155" stroke-width="3" fill="none"><circle cx="900.0" cy="116" r="13"/><path d="M900.0 129v39m-22-28h44m-22 28l-20 27m20-27l20 27"/></g>
+<text x="900.0" y="221" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#0f172a">Director</text>
+<path d="M900.0 237V1150" stroke="#cbd5e1" stroke-dasharray="7 7"/>
+<g stroke="#334155" stroke-width="3" fill="none"><circle cx="1260.0" cy="116" r="13"/><path d="M1260.0 129v39m-22-28h44m-22 28l-20 27m20-27l20 27"/></g>
+<text x="1260.0" y="221" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#0f172a">Authorized operator</text>
+<path d="M1260.0 237V1150" stroke="#cbd5e1" stroke-dasharray="7 7"/>
+<g stroke="#334155" stroke-width="3" fill="none"><circle cx="1620.0" cy="116" r="13"/><path d="M1620.0 129v39m-22-28h44m-22 28l-20 27m20-27l20 27"/></g>
+<text x="1620.0" y="221" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#0f172a">QA Executor</text>
+<path d="M1620.0 237V1150" stroke="#cbd5e1" stroke-dasharray="7 7"/>
+<rect x="10" y="270" width="348.0" height="76" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+<text x="20" y="290" font-family="sans-serif" font-size="15" fill="#0f172a">1. Declare target, permissions,</text>
+<text x="20" y="306" font-family="sans-serif" font-size="15" fill="#0f172a">exclusion and recovery</text>
+<path d="M180.0 350V366H540.0V380" stroke="#334155" fill="none" marker-end="url(#arrow)"/>
+<rect x="366.0" y="380" width="348.0" height="76" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+<text x="376.0" y="400" font-family="sans-serif" font-size="15" fill="#0f172a">2. Required product QA verdict</text>
+<text x="376.0" y="416" font-family="sans-serif" font-size="15" fill="#0f172a">remains distinct</text>
+<path d="M540.0 460V476H900.0V490" stroke="#334155" fill="none" marker-end="url(#arrow)"/>
+<rect x="726.0" y="490" width="348.0" height="76" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+<text x="736.0" y="510" font-family="sans-serif" font-size="15" fill="#0f172a">3. Release the verified candidate</text>
+<text x="736.0" y="526" font-family="sans-serif" font-size="15" fill="#0f172a">for deployment</text>
+<path d="M900.0 570V586H1260.0V600" stroke="#334155" fill="none" marker-end="url(#arrow)"/>
+<rect x="1086.0" y="600" width="348.0" height="76" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+<text x="1096.0" y="620" font-family="sans-serif" font-size="15" fill="#0f172a">4. Deploy within existing context-</text>
+<text x="1096.0" y="636" font-family="sans-serif" font-size="15" fill="#0f172a">specific permissions</text>
+<path d="M1260.0 680V696H1620.0V710" stroke="#334155" fill="none" marker-end="url(#arrow)"/>
+<rect x="1442.0" y="710" width="348.0" height="76" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+<text x="1452.0" y="730" font-family="sans-serif" font-size="15" fill="#0f172a">5. Verify deployed identity,</text>
+<text x="1452.0" y="746" font-family="sans-serif" font-size="15" fill="#0f172a">exclusions and behavior at Gate D</text>
+<path d="M1620.0 790V806H540.0V820" stroke="#334155" fill="none" marker-end="url(#arrow)"/>
+<rect x="366.0" y="820" width="348.0" height="76" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+<text x="376.0" y="840" font-family="sans-serif" font-size="15" fill="#0f172a">6. Issue deployed-environment</text>
+<text x="376.0" y="856" font-family="sans-serif" font-size="15" fill="#0f172a">verdict</text>
+<path d="M540.0 900V916H900.0V930" stroke="#334155" fill="none" marker-end="url(#arrow)"/>
+<rect x="726.0" y="930" width="348.0" height="76" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+<text x="736.0" y="950" font-family="sans-serif" font-size="15" fill="#0f172a">7. Release decision or authorized</text>
+<text x="736.0" y="966" font-family="sans-serif" font-size="15" fill="#0f172a">recovery</text>
+<path d="M900.0 1010V1026H180.0V1040" stroke="#334155" fill="none" marker-end="url(#arrow)"/>
+<rect x="10" y="1040" width="348.0" height="76" rx="8" fill="#eff6ff" stroke="#2563eb"/>
+<text x="20" y="1060" font-family="sans-serif" font-size="15" fill="#0f172a">8. Record follow-ups; release is</text>
+<text x="20" y="1076" font-family="sans-serif" font-size="15" fill="#0f172a">separate from review</text>
+<text x="32" y="1190" font-family="sans-serif" font-size="17" fill="#0f172a">Review checkpoint 1: after FFM build and its independent QA finish.</text>
+<text x="32" y="1219" font-family="sans-serif" font-size="17" fill="#0f172a">Review checkpoint 2: Engine 2 independent system review after all Engine 1 phases/modules and their QA are closed.</text>
+<text x="32" y="1248" font-family="sans-serif" font-size="17" fill="#0f172a">At either checkpoint, disposition findings; RRM only for approved findings requiring repairs. A clean review requires no RRM.</text>
+<text x="32" y="1277" font-family="sans-serif" font-size="17" fill="#0f172a">Review, Gate Q, required cleanup and certification, Gate D and Director release remain separate responsibilities.</text>
+</svg>

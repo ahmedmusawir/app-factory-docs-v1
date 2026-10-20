@@ -1,0 +1,14 @@
+{
+  "pass_check": true,
+  "canonical_assets": [
+    "A\t03_BUILD_METHODOLOGY/_assets/workflows/BIM_WORKFLOW.svg",
+    "A\t03_BUILD_METHODOLOGY/_assets/workflows/FFM_CREATION.svg",
+    "A\t03_BUILD_METHODOLOGY/_assets/workflows/FFM_DEPLOYMENT.svg",
+    "A\t03_BUILD_METHODOLOGY/_assets/workflows/FFM_EXECUTION.svg",
+    "A\t03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+    "A\t03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+    "A\t03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+    "A\t03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md"
+  ],
+  "explanation": "Prior instrument counted archived proposal copies under _AUDIT; canonical published asset set is exactly eight."
+}

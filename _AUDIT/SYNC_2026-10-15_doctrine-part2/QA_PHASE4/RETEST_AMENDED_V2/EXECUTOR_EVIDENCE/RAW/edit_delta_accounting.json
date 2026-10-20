@@ -1,0 +1,30 @@
+[
+  {
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "exact_edits_account_for_entire_delta": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "exact_edits_account_for_entire_delta": true
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "exact_edits_account_for_entire_delta": true
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "exact_edits_account_for_entire_delta": true
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "exact_edits_account_for_entire_delta": true
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "exact_edits_account_for_entire_delta": true
+  },
+  {
+    "path": "CHANGELOG.md",
+    "exact_edits_account_for_entire_delta": true
+  }
+]

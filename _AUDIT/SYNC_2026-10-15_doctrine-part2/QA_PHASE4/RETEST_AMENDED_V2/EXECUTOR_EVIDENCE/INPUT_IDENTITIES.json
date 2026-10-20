@@ -1,0 +1,58 @@
+{
+  "authority_chain": [
+    "Frozen R1 spec plus O-1 through O-8 and settled Director rulings",
+    "Original Fable adjudication (preserved)",
+    "Attributable AMENDED-v2 Director approval of exact index/patch, seven canonical paths and 94 unchanged",
+    "Current bounded Executor prompt and user launch"
+  ],
+  "identities": [
+    {
+      "source": "/tmp/qa-amended-v2-i1gnt5qm/candidate/_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/BOUND_EXECUTION_INDEX.json",
+      "sha256": "b4fe406963b13b650f11d7d688026c88ff37fb1698d6191cdec420247c156bc9"
+    },
+    {
+      "source": "/tmp/qa-amended-v2-i1gnt5qm/candidate/_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/EXECUTION_PROPOSAL.patch",
+      "sha256": "86fbfe6f3787c55332bb5d0c741d7ed3296c1f872e3ce26bc4af01b29a0282fd"
+    },
+    {
+      "source": "/tmp/qa-amended-v2-i1gnt5qm/candidate/_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/DOCSET_SYNC_ACCEPTANCE_SPEC_AMENDED_V1_R1.md",
+      "sha256": "2a3867cacef11c6bb0419a4c71229479efe703cee9fbcc1e4f71c0ac8e63f0fc"
+    },
+    {
+      "source": "/tmp/qa-amended-v2-i1gnt5qm/candidate/_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/REPAIR_QA_P4/DIRECTOR_DECISIONS_V2.md",
+      "sha256": "e34922ddb3177930e8ade6e56dae65883c31878f09c2493715df952724d59fef"
+    },
+    {
+      "source": "/tmp/qa-amended-v2-i1gnt5qm/candidate/_AUDIT/SYNC_2026-10-15_doctrine-part2/SEARCH_QUERIES.json",
+      "sha256": "55dbb28a206fac448278c605e15722e99910a1c1b5ffeb0758b1c0eb7994cdf7"
+    },
+    {
+      "source": "/tmp/qa-amended-v2-i1gnt5qm/candidate/_AUDIT/SYNC_2026-10-15_doctrine-part2/UPDATE_MAP.md",
+      "sha256": "cd291270bb6c8e537bcb050685c6464d326254f0d2a703c21f7f304dfe286931"
+    },
+    {
+      "source": "/tmp/qa-amended-v2-i1gnt5qm/candidate/_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/AMENDMENT_V2_EDITS.json",
+      "sha256": "7e4905c113f45692bb17eea9f7cf2afe4f1eb6edfee01377509e2a29037a71f3"
+    },
+    {
+      "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/QA_LEAD_VERDICT.md",
+      "sha256": "16866d367251435266668cf5d9543cceb7affc818273ca333ca7a77319d583b5"
+    },
+    {
+      "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/OVERRIDES_AND_ALIGNMENT.md",
+      "sha256": "cfd886239d60ab221bc0625ef4337b2a9ffa9d4aa67a76ddb8ffbe33e76722b1"
+    },
+    {
+      "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/AC_EXECUTION_CHECKLIST.md",
+      "sha256": "eb319c1a4b01a7d84d2baae56ae8408baec1a473ffd8f00d46f577e6883ac665"
+    },
+    {
+      "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/RETEST_AMENDED_V2/QA_EXECUTOR_PROMPT.md",
+      "sha256": "cb1310d08f630921de3732c27792ec583f2b92fcc311fbe6c503362a2f0bf898"
+    },
+    {
+      "source": "/home/moose/Downloads/FACTORY_AMENDED_V2_EXECUTION_HANDOFF_2026-10-19_150618.zip",
+      "sha256": "a2b4c4cf57b2c93e25686d4c45c28c7302da1ed97c55f3bd219c57bef9f8a422"
+    }
+  ]
+}

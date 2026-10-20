@@ -1,0 +1,1398 @@
+
+FILE 04_REFERENCE_MANUALS/AUTH_MANUAL.md
+...
+6: > **Project:** Stark SaaS Starter Kit
+7: > **Born from:** Cyberize Run 001 — Lesson 2 (redundant authService)
+8: > **Purpose:** Complete guide for authentication, authorization, and Supabase integration patterns
+9: > **Role doctrine (v1.3):** the `user_roles` TABLE is the single source of truth for authorization. See "Role-Based Access Control" + the Version History for the F-042 correction.
+10: 
+11: ---
+12: 
+13: ## 🛑 CRITICAL — DO NOT AUTHOR authService.ts
+...
+20: 
+21: | Capability | Kit Provides | How To Consume |
+22: |---|---|---|
+23: | Server-side auth (RLS-respecting) | `src/utils/supabase/server.ts` | `createClient()` in Server Components / API routes |
+24: | Browser-side auth | `src/utils/supabase/client.ts` | `createClient()` in Client Components |
+25: | Middleware session refresh | `src/utils/supabase/middleware.ts` | Already wired in `src/proxy.ts` |
+26: | Service-role admin operations | `src/utils/supabase/admin.ts` | `createAdminClient()` for portal admin actions |
+27: | Login endpoint | `/api/auth/login` | POST email/password |
+...
+63: ```
+64: 
+65: **For a protected route:**
+66: **Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance.
+67: 
+68: **In a Client Component:**
+69: ```typescript
+70: import { useAuthStore } from "@/store/useAuthStore";
+...
+82: import { LoginForm } from "@/components/auth/LoginForm";
+83: ```
+84: 
+85: ### When You Might Legitimately Need A Service
+86: 
+87: The ONLY auth-related service that might legitimately exist is for **project-specific auth extensions** that are NOT in the kit. Examples:
+88: 
+89: - ✅ A `magicLinkService.ts` for magic-link auth (kit doesn't provide this)
+90: - ✅ An `oauthService.ts` for Google/GitHub SSO if you add it (kit doesn't provide this)
+91: - ✅ A `mfaService.ts` for two-factor auth (kit doesn't provide this)
+92: 
+93: 🛑 **NEVER** a generic `authService.ts` that wraps what the kit already does.
+94: 
+95: If you're unsure whether a service is legitimate, surface to the operator BEFORE authoring.
+96: 
+97: ### Cross-Reference
+98: 
+99: - **`STARTER_KIT_HANDBOOK.md` Section "Auth — Already Wired"** — full kit auth inventory
+...
+141: ### Key Principles
+142: 
+143: 1. **Server-side first** - All auth checks happen on the server
+144: 2. **Session persistence** - Middleware keeps sessions alive
+145: 3. **Role-based access** - Three-tier role system (superadmin, admin, member)
+146: 4. **Hard reloads** - Force full page reload after auth changes to sync server/client state
+147: Roles must resolve from an authoritative server-side store. Creation and mutation require verified per-call authorization and a role input that untrusted signup cannot control. The historical Mark IV transport is not a verified safe recipe for the current kit; obtain pinned trigger and caller evidence before implementation.
+148: 
+...
+391: 
+392: ### Complete Registration Flow
+393: 
+394: **Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
+395: 
+396: At the trusted public-signup boundary, allow only approved profile fields and force the member role independently of submitted metadata. The provider-side creation path must also ignore or reject public role keys, so direct provider signup cannot bypass the endpoint. Privileged role assignment uses a separately authorized protected channel. Trigger hardening and a negative direct-provider test are required before promotion: role=admin submitted publicly must not produce an admin.
+397: 
+398: ---
+...
+436: ```
+437: 
+438: **Response (Success):**
+439: **Legacy response example withdrawn:** client metadata flags are not authorization or first-render identity. Use the verified server-resolved user/role contract for the pinned kit.
+440: 
+441: **Response (Error):**
+442: ```typescript
+443: {
+...
+446: ```
+447: 
+448: **Implementation:**
+449: **Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.
+450: 
+451: ---
+452: 
+453: ### POST /api/auth/logout
+...
+485: 
+486: ### POST /api/auth/signup
+487: 
+488: **Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
+489: 
+490: At the trusted public-signup boundary, allow only approved profile fields and force the member role independently of submitted metadata. The provider-side creation path must also ignore or reject public role keys, so direct provider signup cannot bypass the endpoint. Privileged role assignment uses a separately authorized protected channel. Trigger hardening and a negative direct-provider test are required before promotion: role=admin submitted publicly must not produce an admin.
+491: 
+492: ---
+...
+550: - Admin → `addMember` (`(admin)/admin-portal/actions.ts`) — creates a `member`
+551: - Superadmin → `addUser` (`(superadmin)/superadmin-portal/actions.ts`) — creates admin/member
+552: 
+553: **Authorization:** the server action itself must authenticate and authorize each invocation before any privileged client call. A route-group layout is not an action authorization boundary. Resolve roles from the authoritative server store and allow only explicitly permitted target roles. Do not use a user-writable metadata trigger to assign privilege. The historical action/trigger recipe is withdrawn pending pinned kit verification.
+554: 
+555: ---
+556: 
+557: ## Client-Side Auth (Zustand Store)
+558: 
+559: **Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
+560: 
+561: Server guards control page access; server-resolved { user, role } props establish first-render identity. Retire client HOC route protection and post-mount identity fetching as authoritative patterns. Zustand handles interaction and session-event reactions, with no persisted authorization authority. Display helpers are display-only and use explicit role sets; they never authorize an operation.
+562: 
+563: ---
+564: 
+565: ## Server-Side Protection (RBAC)
+...
+568: 
+569: **File:** `src/utils/supabase/actions.ts`
+570: 
+571: **Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance.
+572: 
+573: **Key Points:**
+574: - ✅ Runs on server (Server Component or layout)
+575: - ✅ Checks authentication first
+...
+582: ### Usage in Layouts
+583: 
+584: **Members Layout:**
+585: **Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance.
+586: 
+587: **Admin Layout:**
+588: **Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance.
+589: 
+590: **Superadmin Layout:**
+591: **Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance.
+592: 
+593: ---
+594: 
+595: ### Multiple Roles
+596: 
+597: **Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance.
+598: 
+599: ---
+600: 
+601: ## Server-Resolved Identity for UI (The Navbar Law)
+602: 
+603: **Identity and authorization state that UI renders from is server-resolved and passed
+604: down as props. UI is never gated on client-resolved identity.**
+605: 
+...
+618: const navLinks = user ? [...] : [];   // renders EMPTY during the window
+619: ```
+620: 
+621: Failure mechanism: every mount opens a `null` window while a network round-trip
+622: resolves. Zero-latency dev masks it; deployed latency makes it visible and "random."
+623: A failed call renders logged-out UI to an authenticated user. This shipped, broke
+624: staging, and was invisible in dev — see BUG_FIX_PLAYBOOK (mechanism-naming) and the
+625: 2026-08-04 fix.
+626: 
+627: ### ✅ CORRECT — server-resolved, props down
+628: 
+629: **Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance.
+630: 
+631: Do not assume the page guard returns `{ user, role }`; verify the pinned implementation and callers before destructuring its result.
+632: returning them costs zero queries. The same server check that admits the user writes
+633: the user's menu: one source, one moment, correct in the first server-rendered paint.
+...
+638: 2. Client stores (Zustand) may REACT to session events (`onAuthStateChange` sign-out)
+639:    and own interaction state — they are never the SOURCE of identity for rendering.
+640:    (See STATE_MANAGEMENT_MANUAL §1 — Division of Labor.)
+641: 3. Persisted client role state goes stale by design (written at login, survives in
+642:    localStorage). Any consumer treating it as truth inherits the race. (KIP-2.)
+643: 4. Invariant-test the guarantee: an authed shell component must render its full
+644:    role-appropriate link set on FIRST render, synchronously (see Navbar.invariant).
+645: 
+...
+680: 
+681: **⚠️ Important:** Roles are **exclusive** by default. If you want superadmin to access admin routes, you must explicitly allow it:
+682: 
+683: **Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance.
+684: 
+685: ---
+686: 
+687: ### Where Roles Live (v1.3 — the F-042 correction)
+...
+814: ```
+815: 
+816: **Submit Handler:**
+817: **Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.
+818: 
+819: **Redirect Logic:**
+820: ```typescript
+821: useEffect(() => {
+...
+831: 
+832: ### RegisterForm Component
+833: 
+834: **Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
+835: 
+836: At the trusted public-signup boundary, allow only approved profile fields and force the member role independently of submitted metadata. The provider-side creation path must also ignore or reject public role keys, so direct provider signup cannot bypass the endpoint. Privileged role assignment uses a separately authorized protected channel. Trigger hardening and a negative direct-provider test are required before promotion: role=admin submitted publicly must not produce an admin.
+837: 
+838: ---
+...
+911: 
+912: ### Pattern 3: Protected Page (Server Component)
+913: 
+914: **Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance.
+915: 
+916: ---
+917: 
+918: ### Pattern 4: Role-Based UI (Client)
+919: 
+920: **Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
+921: 
+922: Server guards control page access; server-resolved { user, role } props establish first-render identity. Retire client HOC route protection and post-mount identity fetching as authoritative patterns. Zustand handles interaction and session-event reactions, with no persisted authorization authority. Display helpers are display-only and use explicit role sets; they never authorize an operation.
+923: 
+924: ---
+925: 
+926: ### Pattern 5: Conditional Navbar Links
+927: 
+928: **Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
+929: 
+930: Server guards control page access; server-resolved { user, role } props establish first-render identity. Retire client HOC route protection and post-mount identity fetching as authoritative patterns. Zustand handles interaction and session-event reactions, with no persisted authorization authority. Display helpers are display-only and use explicit role sets; they never authorize an operation.
+931: 
+932: ---
+933: 
+934: ### Pattern 6: Fetch User-Specific Data
+...
+963: 
+964: ### Pattern 7: Update User Metadata
+965: 
+966: **Executable error-handling example withdrawn.** Return a generic client error. Log only an allow-listed structured record: correlation ID, operation, normalized failure class and safe provider code. Exclude raw exceptions, request bodies, credentials, payment details and personal data. A negative test plants synthetic sensitive markers and asserts that neither client output nor retained logs contain them. The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it. Declare wire and internal types separately and normalize once at the service boundary. A named operation uses one parameter signature and typed result envelope in its service, route and client examples. Any independent alternative is explicitly labeled with its own contract; callers do not silently mix array, paginated and wrapped results. Implement only against a verified project service contract; distinguish empty success from failure and redact internal/upstream detail from public responses and logs.
+967: 
+968: ---
+969: 
+970: ## Troubleshooting
+...
+1005: 
+1006: ---
+1007: 
+1008: ### Issue 2: Session not persisting
+1009: 
+1010: **Symptoms:**
+1011: - User logs in but appears logged out on refresh
+1012: - Session cookies not being set
+...
+1050: 
+1051: **This is expected behavior:**
+1052: - Hard reload is intentional for session sync
+1053: - Use localStorage for persistence if needed
+1054: - Or refactor to avoid hard reload (advanced)
+1055: 
+1056: ---
+1057: 
+...
+1084: 
+1085: 2. **Use environment variables**
+1086:    - Store Supabase keys in `.env.local`
+1087:    - Never commit secrets to git
+1088:    - Use different keys for dev/prod
+1089: 
+1090: 3. **Implement RLS policies**
+1091:    - Add Row Level Security in Supabase
+1092:    - Restrict data access by user ID
+1093:    - Enforce at database level
+1094: 
+...
+1124:    - Use secure cookies instead
+1125: 
+1126: 3. **Don't expose API keys**
+1127:    - Never commit to git
+1128:    - Don't log in production
+1129:    - Use environment variables
+1130: 
+1131: 4. **Don't skip validation**
+...
+1148: ### Security Checklist
+1149: 
+1150: **Before Production:**
+1151: - [ ] RLS policies implemented on all tables
+1152: - [ ] Environment variables secured
+1153: - [ ] HTTPS enabled
+1154: - [ ] Rate limiting configured
+1155: - [ ] Password requirements enforced
+...
+1202: 
+1203: ### OAuth Providers
+1204: 
+1205: **To add Google/GitHub login:**
+1206: 
+1207: 1. Configure provider in Supabase Dashboard
+1208: 2. Add OAuth button to LoginForm
+1209: 3. Call `supabase.auth.signInWithOAuth({ provider: 'google' })`
+...
+1245: 
+1246: ### Common Commands
+1247: 
+1248: **Kit-signature example withdrawn pending verification:** The kit guard’s async signature, role lookup, AppRole import and { user, role } return contract must be verified together against the pinned kit revision before a replacement recipe is published. Deny by default and never accept a caller-supplied role. Until that evidence is supplied, do not present mismatched signatures as executable kit guidance.
+1249: 
+1250: ---
+1251: 
+1252: ## Environment Variables
+...
+1304: 
+1305: ## 12. SuperAdmin User Management
+1306: 
+1307: **Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
+1308: 
+1309: The role table is the only authorization authority. Never authorize from user_metadata or a profile mirror. Superadmin creation is console-only; no app-side superadmin creation route is provided. Retire the metadata-authorized add-user, delete-user and get-users recipes. Future privileged list/delete operations remain possible only with trusted current-role lookup, operation-local authorization before elevated capability, an approved target-role allowlist and privileged-target protection. Profile mirrors contain profile data, not authorization columns. Registration metadata is not authorization.
+1310: 
+1311: Use the session client for identity and RLS-bound data. Acquire an isolated admin client only after independently authorizing the elevated operation. An API route is not itself a reason to bypass RLS. Do not substitute a service-role client as a general fix for denied access.
+1312: 
+1313: ---
+1314: 
+1315: ## 13. User Mirror Table Pattern
+1316: 
+1317: **Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
+1318: 
+1319: The role table is the only authorization authority. Never authorize from user_metadata or a profile mirror. Superadmin creation is console-only; no app-side superadmin creation route is provided. Retire the metadata-authorized add-user, delete-user and get-users recipes. Future privileged list/delete operations remain possible only with trusted current-role lookup, operation-local authorization before elevated capability, an approved target-role allowlist and privileged-target protection. Profile mirrors contain profile data, not authorization columns. Registration metadata is not authorization.
+1320: 
+1321: Use an atomic database operation for invariants inside one database. Across external boundaries, use a stable operation identity, check every forward and compensation result, and persist completed, failed or partially-completed outcomes. Partial failure creates durable reconciliation work with a recovery owner; do not report success after an unchecked compensation or deletion.
+1322: 
+1323: ---
+1324: 
+1325: ## 14. HOC Route Protection Pattern
+1326: 
+1327: **Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
+1328: 
+1329: Server guards control page access; server-resolved { user, role } props establish first-render identity. Retire client HOC route protection and post-mount identity fetching as authoritative patterns. Zustand handles interaction and session-event reactions, with no persisted authorization authority. Display helpers are display-only and use explicit role sets; they never authorize an operation.
+1330: 
+1331: ---
+1332: 
+1333: ## Summary
+...
+1352: 9. SuperAdmin APIs for user management
+1353: 
+1354: **Next Steps:**
+1355: 1. Implement RLS policies in Supabase
+1356: 2. Add password reset flow
+1357: 3. Enable email verification
+1358: 4. Add rate limiting
+1359: 5. Implement audit logging
+...
+1368: | 1.0 | (original, date unknown) | Initial manual: Supabase clients, auth flows, API routes, Zustand store, protectPage RBAC, session middleware, components, patterns, troubleshooting, security practices. |
+1369: | 1.1 | Jun 2026 | Run 001 era updates (service-layer antibody groundwork). |
+1370: | 1.2 | 2026-06-28 | Removed the deleted `POST /api/auth/superadmin-add-user` route (creation via `addMember`/`addUser` server actions); documented the Mark IV `handle_new_user` trigger applying the metadata `role` + `full_name` at creation. Kit Hardening Gate 10. |
+1371: | 1.3 | 2026-07-08 | **Wave 4 — the F-042 role-doctrine correction.** Role storage doctrine corrected everywhere it lived: the `user_roles` TABLE is the single source of truth (kit `supabase/setup.sql`; server-side resolution via `get-user-role.ts`); the v1.2 "Metadata-driven roles — NOT separate tables" philosophy line was FALSE against the kit's own filesystem (RECON_WAVE0 Q1 ground-truth). Key Principle #5 rewritten; "User Metadata Schema" section → "Where Roles Live" (table home + creation-time-transport nuance + ⛔ never read authz from `user_metadata`, recon Q3.4); §8 metadata-reading `getUserRole` sample replaced with the canonical-path description + read-the-kit-on-disk pointer (no drifting code copies — D-015); legacy `is_qr_*` (QR-era) store/pattern snippets marked with advisories; troubleshooting realigned to the table model; registration flow wording corrected. Kit hardening ticket referenced without documenting the vector. Canonical cross-refs (F-032/F-011); standard header (F-018). Full code-sample resync vs the kit = queued kit-verification touch. |
+1372: | 1.4 | 2026-08-05 | **Navbar Saga promotion.** New § "Server-Resolved Identity for UI (The Navbar Law)" inserted after Server-Side Protection (RBAC): identity renders from server props, never from client stores. Four hard rules. | navbar-saga |
+1373: | 1.5 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-021, FC-033, FC-034, FC-035, FC-036, FC-038, FC-039, FC-041, FC-042, FC-043, FC-044, FC-063, FC-066, RUL-11 |
+1374: 
+1375: ---
+1376: 
+
+FILE 04_REFERENCE_MANUALS/DATABASE_MANUAL.md
+...
+15: 2. [Schema Design Patterns](#2-schema-design-patterns)
+16: 3. [Data Types Reference](#3-data-types-reference)
+17: 4. [Relationships & Foreign Keys](#4-relationships--foreign-keys)
+18: 5. [Row Level Security (RLS)](#5-row-level-security-rls)
+19: 6. [Indexing Strategy](#6-indexing-strategy)
+20: 7. [JSONB Patterns](#7-jsonb-patterns)
+21: 8. [TypeScript Type Generation](#8-typescript-type-generation)
+22: 9. [Query Patterns](#9-query-patterns)
+...
+28: 
+29: ## 1. Philosophy & Strategy
+30: 
+31: ### Schema-First Development
+32: 
+33: **The database schema is the foundation of every feature.** Before writing any application code:
+34: 
+35: 1. Design the tables
+...
+38: 4. Generate TypeScript types
+39: 5. THEN build service layer and UI
+40: 
+41: > **When Schema-First Applies:** schema-first is the law for **backend phases and conversions** (the data shape is known or extracted). For **discovery builds the factory runs frontend-first**: UI against a mock DATA_CONTRACT first, schema authored at the backend transition — see `FRONTEND_FIRST_PLAYBOOK.md` §2 (when frontend-first is allowed) and §8 (the transition point). Both orders are legitimate; the pipeline you're in decides.
+42: 
+43: ```
+44: ┌─────────────────────────────────────────────────────────────────────────────┐
+45: │                        SCHEMA-FIRST WORKFLOW                                 │
+46: └─────────────────────────────────────────────────────────────────────────────┘
+47: 
+48:     ┌──────────────┐     ┌──────────────┐     ┌──────────────┐
+49:     │   Design     │ ──► │   Create     │ ──► │   Generate   │
+...
+57:     └──────────────┘     └──────────────┘     └──────────────┘
+58: ```
+59: 
+60: ### Why Schema-First?
+61: 
+62: | Benefit | Description |
+63: |---------|-------------|
+64: | **Type Safety** | Generated types prevent runtime errors |
+...
+97:   updated_at TIMESTAMPTZ DEFAULT NOW()
+98: );
+99: 
+100: -- Enable RLS
+101: ALTER TABLE {table_name} ENABLE ROW LEVEL SECURITY;
+102: 
+103: -- Create indexes
+104: CREATE INDEX idx_{table_name}_{column} ON {table_name}({column});
+...
+143: -- PATTERN SQL — the kit's supabase/setup.sql is the ground truth.
+144: -- Verify on disk before building (recon Q5.2/Q5.3); do not treat this as a kit copy.
+145: 
+146: -- Roles: one row per user, the single source of truth for authorization
+147: CREATE TABLE user_roles (
+148:   user_id UUID PRIMARY KEY REFERENCES auth.users(id) ON DELETE CASCADE,
+149:   role TEXT NOT NULL DEFAULT 'member',
+150:   created_at TIMESTAMPTZ DEFAULT NOW()
+...
+176: );
+177: ```
+178: 
+179: **Synchronization example withdrawn.** The role table is the only authorization authority. Never authorize from user_metadata or a profile mirror. Superadmin creation is console-only; no app-side superadmin creation route is provided. Retire the metadata-authorized add-user, delete-user and get-users recipes. Future privileged list/delete operations remain possible only with trusted current-role lookup, operation-local authorization before elevated capability, an approved target-role allowlist and privileged-target protection. Profile mirrors contain profile data, not authorization columns. Registration metadata is not authorization. Use the session client for identity and RLS-bound data. Acquire an isolated admin client only after independently authorizing the elevated operation. An API route is not itself a reason to bypass RLS. Do not substitute a service-role client as a general fix for denied access. Use an atomic database operation for invariants inside one database. Across external boundaries, use a stable operation identity, check every forward and compensation result, and persist completed, failed or partially-completed outcomes. Partial failure creates durable reconciliation work with a recovery owner; do not report success after an unchecked compensation or deletion.
+180: 
+181: ### External System Mapping Table
+182: 
+183: For integrating with external APIs (CRM, payment systems, etc.):
+...
+220: -- Index for common queries (exclude deleted)
+221: CREATE INDEX idx_resources_active ON resources(id) WHERE is_deleted = FALSE;
+222: 
+223: -- Restrictive filter: does not grant access. Enable RLS and supply a separate
+224: -- permissive ownership/tenant policy verified for the application.
+225: ALTER TABLE resources ENABLE ROW LEVEL SECURITY;
+226: CREATE POLICY "Exclude deleted records"
+227: ON resources AS RESTRICTIVE FOR SELECT TO authenticated
+...
+341: -- No FK constraint (external system manages the data)
+342: CREATE TABLE orders (
+343:   order_id TEXT PRIMARY KEY,
+344:   external_contact_id TEXT,  -- external CRM contact ID (logical relationship)
+345:   external_product_id TEXT   -- external CRM product ID (logical relationship)
+346: );
+347: 
+348: -- Document the relationship in comments
+349: COMMENT ON COLUMN orders.external_contact_id IS 
+350:   'External CRM contact ID. Logical FK - no constraint.';
+351: ```
+352: 
+353: ---
+354: 
+355: ## 5. Row Level Security (RLS)
+356: 
+357: ### Enable RLS
+358: 
+359: ```sql
+360: -- ALWAYS enable RLS on tables with user data
+361: ALTER TABLE orders ENABLE ROW LEVEL SECURITY;
+362: ALTER TABLE user_profiles ENABLE ROW LEVEL SECURITY;
+363: ```
+364: 
+365: ### Common RLS Policies
+366: 
+367: #### Users See Only Their Own Data
+368: 
+369: ```sql
+...
+399: );
+400: ```
+401: 
+402: > ⛔ **Do NOT write policies that read roles from `raw_user_meta_data`** (e.g. `raw_user_meta_data->>'is_admin'`) — that is an authorization read from user metadata, the recon Q3.4 smell (F-041). A prior edition of this manual showed that variant as a peer option; it is not one. Roles resolve from `user_roles` — everywhere, including inside RLS.
+403: 
+404: #### Public Read, Authenticated Write
+405: 
+406: ```sql
+...
+417: 
+418: ### Service Role Bypass
+419: 
+420: When using the service role key (server-side), RLS is bypassed. This is appropriate for:
+421: - API routes
+422: - Background jobs
+423: - Admin operations
+424: 
+425: ```typescript
+426: // Server-side: Service role bypasses RLS
+427: import { createClient } from '@supabase/supabase-js';
+428: 
+429: const supabase = createClient(
+430:   process.env.SUPABASE_URL!,
+431:   process.env.SUPABASE_SERVICE_ROLE_KEY! // Bypasses RLS
+432: );
+433: ```
+434: 
+435: ---
+...
+557: ### JSONB Index
+558: 
+559: ```sql
+560: -- GIN index for containment queries
+561: CREATE INDEX idx_orders_tickets ON orders USING GIN (ticket_quantities);
+562: 
+563: -- This enables fast queries like:
+564: SELECT * FROM orders WHERE ticket_quantities ? 'VIP';
+...
+678:   payment_status: string | null;
+679:   payment_currency: string | null;
+680:   order_status: string | null;
+681:   contact_id: string | null;
+682:   contact_firstname: string | null;
+683:   contact_lastname: string | null;
+684:   contact_email: string | null;
+685:   contact_phone: string | null;
+686:   date_added: string | null;
+687:   event_id: string | null;
+688:   event_name: string | null;
+689:   ticket_quantities: Record<string, number> | null;
+...
+840: SELECT 
+841:   t.*,
+842:   o.event_name,
+843:   o.contact_email
+844: FROM tickets t
+845: JOIN orders o ON t.order_id = o.order_id
+846: WHERE t.status = 'live';
+847: ```
+...
+876: CREATE INDEX idx_tickets_order_id ON tickets(order_id);
+877: CREATE INDEX idx_tickets_status ON tickets(status);
+878: 
+879: -- 3. Enable RLS
+880: ALTER TABLE orders ENABLE ROW LEVEL SECURITY;
+881: ALTER TABLE tickets ENABLE ROW LEVEL SECURITY;
+882: 
+883: -- 4. Create policies (as needed)
+...
+914: ```sql
+915: -- Rename column
+916: ALTER TABLE orders
+917: RENAME COLUMN customer_email TO contact_email;
+918: 
+919: -- Rename table
+920: ALTER TABLE old_table_name
+921: RENAME TO new_table_name;
+...
+931: 
+932: ```sql
+933: -- Create index without blocking writes
+934: CREATE INDEX CONCURRENTLY idx_orders_email ON orders(contact_email);
+935: ```
+936: 
+937: ---
+938: 
+...
+1008: 
+1009: ### Transaction Pattern (Pseudo-Transaction)
+1010: 
+1011: **Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
+1012: 
+1013: Use an atomic database operation for invariants inside one database. Across external boundaries, use a stable operation identity, check every forward and compensation result, and persist completed, failed or partially-completed outcomes. Partial failure creates durable reconciliation work with a recovery owner; do not report success after an unchecked compensation or deletion.
+1014: 
+1015: ---
+1016: 
+1017: ## 12. Performance Optimization
+...
+1035:   .order('created_at', { ascending: false })
+1036:   .range(0, 19); // First 20 records
+1037: 
+1038: // Cursor recipe withdrawn: a timestamp alone skips rows sharing that value.
+1039: // Use a project-validated cursor over (created_at, id), ordered by both fields,
+1040: // with a matching strict lexicographic boundary. Test tied timestamps and
+1041: // pagination across every boundary before publishing an executable example.
+1042: ```
+...
+1089: -- Add index
+1090: CREATE INDEX idx_name ON table(col);
+1091: 
+1092: -- Enable RLS
+1093: ALTER TABLE name ENABLE ROW LEVEL SECURITY;
+1094: 
+1095: -- Create policy
+1096: CREATE POLICY "name" ON table FOR action USING (condition);
+...
+1144: 
+1145: ## Cross-References (Factory Doctrine)
+1146: 
+1147: - **`STARTER_KIT_HANDBOOK.md`** — the kit's shipped schema (`setup.sql`: `user_roles`, `handle_new_user()`, RLS baseline) — the ground truth this manual's patterns extend (verify on disk, recon Q5.1–Q5.4).
+1148: - **`AUTH_MANUAL.md`** — "Where Roles Live" — the role doctrine this manual's §2/§5 align to (F-041/F-042).
+1149: - **`API_AND_SERVICES_MANUAL.md`** — the service layer that consumes these schemas.
+1150: - **`FRONTEND_FIRST_PLAYBOOK.md`** — §2/§8: when schema-first defers to mock-first (see the note in §1).
+1151: - **`TESTING_PLAYBOOK.md`** — testing the schema's service layer (integration tests, RLS-aware patterns).
+1152: 
+1153: ---
+1154: 
+1155: ## Version History
+1156: 
+1157: | Version | Date | Changes |
+1158: |---|---|---|
+1159: | 1.0 | (original, date unknown) | Initial manual: schema-first philosophy, design patterns, data types, relationships, RLS, indexing, JSONB, type generation, query patterns, migrations, integrity, performance. Unversioned until the 2026-07 audit. |
+1160: | 1.1 | 2026-07-08 | **Wave 4 — role-doctrine surgery (F-041, security-classed).** §2: new "Roles Table Pattern" — `user_roles` as the single authorization home (labeled PATTERN SQL; kit `setup.sql` = ground truth), `handle_new_user()` creation-time transport explained, ⛔ forbidden box (no role storage OR authz reads from `user_metadata` — recon Q3.4; no role columns on profile mirrors); mirror-table pattern stripped of its `role` column + sync example rewritten to the transport model. §5: the `raw_user_meta_data` RLS policy variant REMOVED (it was shown as a peer option — it is the forbidden pattern); `user_roles` policy stands alone + ⛔ marker (ruling: reconcile BOTH examples). Doc now speaks ONE role doctrine, aligned with AUTH_MANUAL v1.3 (F-042 outcome). "When Schema-First Applies" note + FRONTEND_FIRST pointers added (F-040). GHL/QR fossil examples neutralized (naming table, mapping-table default, comments — recon Q8.5 class). Standard header (F-018); Cross-References section (F-035); this history table (D-018). |
+1161: | 1.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-003/096, FC-033, FC-034, FC-036, FC-037, FC-038, FC-039, FC-045, RUL-11 |
+1162: 
+1163: ---
+1164: 
+
+FILE 04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md
+...
+13: 1. [Philosophy & Strategy](#1-philosophy--strategy)
+14: 2. [Store Architecture](#2-store-architecture)
+15: 3. [Core Patterns](#3-core-patterns)
+16: 4. [Persistence](#4-persistence)
+17: 5. [Hydration & SSR](#5-hydration--ssr)
+18: 6. [Store Templates](#6-store-templates)
+19: 7. [Integration Patterns](#7-integration-patterns)
+20: 8. [Common Stores Reference](#8-common-stores-reference)
+...
+33: │                     LOCAL UI STATE                              │
+34: │   useState, useReducer                                          │
+35: │   Scope: Single component                                       │
+36: │   Examples: Form inputs, toggles, modal open/close              │
+37: └─────────────────────────────────────────────────────────────────┘
+38:                               │
+39:                               ▼
+40: ┌─────────────────────────────────────────────────────────────────┐
+...
+58: | Scenario | Solution | Why |
+59: |----------|----------|-----|
+60: | Form input value | `useState` | Local to one component, no sharing needed |
+61: | Modal open/close | `useState` | UI state, doesn't need persistence |
+62: | Shopping cart | Zustand + persist | Shared across pages, needs persistence |
+63: | Checkout form data | Zustand | Shared across checkout steps |
+64: | User auth state | Zustand | Needed globally for route protection |
+65: | Product list | Server State (ISR) | Comes from database, rarely changes |
+66: | User profile | Server State | Fetched from Supabase, RLS protected |
+67: | Real-time notifications | Zustand + Supabase Realtime | Hybrid: server pushes, client stores |
+68: 
+69: ### Why Zustand
+70: 
+...
+74: 2. **Small Bundle**: ~1KB gzipped
+75: 3. **TypeScript-First**: Excellent type inference
+76: 4. **Selector Pattern**: Built-in support for preventing re-renders
+77: 5. **Middleware Support**: Persistence, devtools, immer out of the box
+78: 6. **No Context Hell**: Works outside React components (services, utilities)
+79: 7. **SSR Compatible**: Works with Next.js App Router
+80: 
+81: ```typescript
+...
+105: | Identity & role for RENDERING (nav links, role-gated UI, portal chrome) | Server-resolved by the route guard, passed as props | No client fetch window → no race, no empty state, no dev/deploy divergence. Re-verified server-side on every navigation. |
+106: | Session EVENT reactions (sign-out in another tab), interaction state, UI state, in-memory domain state | Client store (Zustand) | Lives and changes in the browser during use — that is what a client store is for. |
+107: 
+108: Persisted auth state (e.g. a `role` written only at login into localStorage) is a
+109: SNAPSHOT, not truth: it goes stale across browsers/devices/cleared storage. Rendering
+110: from it produces "random" partial-UI bugs that dev latency hides (see AUTH_MANUAL —
+111: The Navbar Law; origin: 2026-08-04 staging nav bug).
+112: 
+113: ---
+114: 
+115: ## 2. Store Architecture
+...
+137: // src/store/useExampleStore.ts
+138: 
+139: import { create } from 'zustand';
+140: import { persist, createJSONStorage } from 'zustand/middleware';
+141: 
+142: // 1. Define the state interface
+143: interface ExampleState {
+144:   // State properties
+...
+163: 
+164: // 3. Create the store
+165: export const useExampleStore = create<ExampleState>()(
+166:   persist(
+167:     (set, get) => ({
+168:       // Spread initial state
+169:       ...initialState,
+170: 
+...
+192:       name: 'example-storage', // localStorage key
+193:       storage: createJSONStorage(() => localStorage),
+194:       partialize: (state) => ({
+195:         // Only persist these fields
+196:         items: state.items,
+197:       }),
+198:     }
+199:   )
+...
+472: 
+473: ---
+474: 
+475: ## 4. Persistence
+476: 
+477: ### The `persist` Middleware
+478: 
+479: Zustand's `persist` middleware automatically saves state to storage and rehydrates on page load.
+480: 
+481: ```typescript
+482: import { create } from 'zustand';
+483: import { persist, createJSONStorage } from 'zustand/middleware';
+484: 
+485: export const useCartStore = create<CartState>()(
+486:   persist(
+487:     (set, get) => ({
+488:       items: [],
+489:       addItem: (item) => set((state) => ({ items: [...state.items, item] })),
+490:     }),
+...
+496: );
+497: ```
+498: 
+499: ### `partialize` - What to Persist
+500: 
+501: **Never persist everything.** Use `partialize` to select only UX-critical state:
+502: 
+503: ```typescript
+504: export const useCheckoutStore = create<CheckoutState>()(
+505:   persist(
+506:     (set) => ({
+507:       // Persisted
+508:       billingAddress: null,
+509:       shippingAddress: null,
+510:       
+511:       // NOT persisted (transient)
+512:       isProcessing: false,
+513:       validationErrors: {},
+514:       paymentIntent: null,
+515:     }),
+516:     {
+517:       name: 'checkout-storage',
+518:       partialize: (state) => ({
+519:         // Raw contact information is not persisted by default.
+520:         // An approved exception must name fields, purpose, retention and owner.
+521:         // DO NOT persist: isProcessing, validationErrors, paymentIntent
+522:       }),
+523:     }
+524:   )
+525: );
+526: ```
+527: 
+528: #### What to Persist vs What NOT to Persist
+529: 
+530: | Persist ✅ | Don't Persist ❌ |
+531: |-----------|-----------------|
+532: | Cart items | Loading states |
+533: | User preferences | Validation errors |
+534: | Form drafts | API responses |
+...
+569: }));
+570: 
+571: export const useProductCacheStore = create<ProductCacheState>()(
+572:   persist(
+573:     (set) => ({
+574:       products: [],
+575:       // ... actions
+576:     }),
+...
+601: };
+602: 
+603: // Clear old/stale data periodically
+604: export const cleanupStorage = () => {
+605:   const maxAge = 7 * 24 * 60 * 60 * 1000; // 7 days
+606:   const now = Date.now();
+607: 
+608:   // Check each persisted store for staleness
+609:   const cartData = localStorage.getItem('cart-storage');
+610:   if (cartData) {
+611:     const parsed = JSON.parse(cartData);
+612:     if (parsed.state?.lastUpdated && now - parsed.state.lastUpdated > maxAge) {
+...
+632: 
+633: ### Hydration Flags
+634: 
+635: **Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
+636: 
+637: Keep hydration readiness outside the resettable business state. A normal reset preserves readiness. Hydration finishes in ready or error; an error exposes bounded recovery and never leaves an indefinite loading state. Verify reset after hydration, invalid stored data and unavailable storage.
+638: 
+639: ---
+640: 
+641: ### `onRehydrateStorage` Callback
+642: 
+643: **Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
+644: 
+645: Keep hydration readiness outside the resettable business state. A normal reset preserves readiness. Hydration finishes in ready or error; an error exposes bounded recovery and never leaves an indefinite loading state. Verify reset after hydration, invalid stored data and unavailable storage.
+646: 
+647: ---
+648: 
+649: ### Gating UI on Hydration State
+650: 
+651: **Dependent executable example withdrawn.** Use a project-approved state/payment contract with explicit hydration errors, server-authoritative pricing, authenticated ownership and recovery. The removed example’s missing contract is still tracked; no universal quote/subscription schema is introduced.
+652: 
+653: ### Alternative: Hydration-Gated Selection
+654: 
+655: **Dependent executable example withdrawn.** Use a project-approved state/payment contract with explicit hydration errors, server-authoritative pricing, authenticated ownership and recovery. The removed example’s missing contract is still tracked; no universal quote/subscription schema is introduced.
+656: 
+657: ---
+658: 
+659: ## 6. Store Templates
+...
+685: export const selectValue = (state: BasicState) => state.value;
+686: ```
+687: 
+688: ### Persisted Store Template
+689: 
+690: **Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
+691: 
+692: Keep hydration readiness outside the resettable business state. A normal reset preserves readiness. Hydration finishes in ready or error; an error exposes bounded recovery and never leaves an indefinite loading state. Verify reset after hydration, invalid stored data and unavailable storage.
+693: 
+694: ---
+...
+778: 
+779: ### Form/Checkout Store Template
+780: 
+781: **Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
+782: 
+783: Do not persist raw contact details by default. Any approved personal-data persistence declares permitted fields, retention duration and user or guest scope. Sign-out and account transition reset and invalidate every affected store even when remote logout fails; a new account must not hydrate the previous account’s data. Payment and authorization state remain outside persistence. Storage readiness is separate from business-data reset.
+784: 
+785: Keep hydration readiness outside the resettable business state. A normal reset preserves readiness. Hydration finishes in ready or error; an error exposes bounded recovery and never leaves an indefinite loading state. Verify reset after hydration, invalid stored data and unavailable storage.
+786: 
+787: The checkout interaction contract includes shippingCost and couponDiscount as display estimates, couponCode, setCoupon(code) and clearCoupon(), alongside the existing checkout fields. The server revalidates shipping and coupons. STATE_MANAGEMENT_MANUAL owns the shared store shape; ECOMMERCE_AND_PAYMENTS_MANUAL refers to it. Personal fields follow the approved account-transition and retention policy.
+...
+947: 
+948: ### Cart Store Pattern
+949: 
+950: **Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
+951: 
+952: Keep hydration readiness outside the resettable business state. A normal reset preserves readiness. Hydration finishes in ready or error; an error exposes bounded recovery and never leaves an indefinite loading state. Verify reset after hydration, invalid stored data and unavailable storage.
+953: 
+954: ---
+955: 
+956: ### Auth Store Pattern
+957: 
+958: **Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
+959: 
+960: Server guards control page access; server-resolved { user, role } props establish first-render identity. Retire client HOC route protection and post-mount identity fetching as authoritative patterns. Zustand handles interaction and session-event reactions, with no persisted authorization authority. Display helpers are display-only and use explicit role sets; they never authorize an operation.
+961: 
+962: ---
+963: 
+964: ### UI Store Pattern
+...
+969: import { create } from 'zustand';
+970: 
+971: interface UIState {
+972:   isSidebarOpen: boolean;
+973:   isCartOpen: boolean;
+974:   isMobileMenuOpen: boolean;
+975:   activeModal: string | null;
+976:   
+977:   toggleSidebar: () => void;
+978:   toggleCart: () => void;
+979:   toggleMobileMenu: () => void;
+980:   openModal: (modalId: string) => void;
+981:   closeModal: () => void;
+982:   closeAll: () => void;
+983: }
+984: 
+985: export const useUIStore = create<UIState>((set) => ({
+986:   isSidebarOpen: false,
+987:   isCartOpen: false,
+988:   isMobileMenuOpen: false,
+989:   activeModal: null,
+990: 
+991:   toggleSidebar: () =>
+992:     set((state) => ({ isSidebarOpen: !state.isSidebarOpen })),
+993:   
+994:   toggleCart: () =>
+995:     set((state) => ({ isCartOpen: !state.isCartOpen })),
+996:   
+997:   toggleMobileMenu: () =>
+998:     set((state) => ({ isMobileMenuOpen: !state.isMobileMenuOpen })),
+999:   
+1000:   openModal: (modalId) => set({ activeModal: modalId }),
+1001:   closeModal: () => set({ activeModal: null }),
+1002:   
+1003:   closeAll: () =>
+1004:     set({
+1005:       isSidebarOpen: false,
+1006:       isCartOpen: false,
+1007:       isMobileMenuOpen: false,
+1008:       activeModal: null,
+1009:     }),
+1010: }));
+1011: 
+1012: // Selectors
+1013: export const selectIsSidebarOpen = (state: UIState) => state.isSidebarOpen;
+1014: export const selectIsCartOpen = (state: UIState) => state.isCartOpen;
+1015: export const selectIsMobileMenuOpen = (state: UIState) => state.isMobileMenuOpen;
+1016: export const selectActiveModal = (state: UIState) => state.activeModal;
+1017: ```
+1018: 
+1019: ---
+...
+1023: ### Do's ✅
+1024: 
+1025: - **Use selectors** for every store subscription
+1026: - **Persist only UX-critical state** with `partialize`
+1027: - **Implement hydration flags** for SSR compatibility
+1028: - **Keep stores domain-focused** (cart, auth, checkout)
+1029: - **Compute derived values** in selectors, not state
+1030: - **Use composite keys** for items with variations
+...
+1034: ### Don'ts ❌
+1035: 
+1036: - **Don't subscribe to entire store** without selectors
+1037: - **Don't persist loading states** or validation errors
+1038: - **Don't make network calls** inside store actions
+1039: - **Don't store server state** that should be fetched fresh
+1040: - **Don't mutate state directly** (unless using immer)
+1041: - **Don't create one giant store** for everything
+...
+1057: 
+1058: export const useCartStore = create<CartState>()(
+1059:   devtools(
+1060:     persist(
+1061:       (set) => ({ /* ... */ }),
+1062:       { name: 'cart-storage' }
+1063:     ),
+1064:     { name: 'CartStore' } // Shows in Redux DevTools
+...
+1094: 
+1095: - **`STARTER_KIT_HANDBOOK.md`** — the kit's shipped `useAuthStore` is the auth-state ground truth (verify shape on disk — recon Q3.6; do not assume derived flags).
+1096: - **`AUTH_MANUAL.md`** — auth state ownership: client store = display hints; authorization = server-side from `user_roles`.
+1097: - **`AUTH_MANUAL.md`** — "Server-Resolved Identity for UI (The Navbar Law)": identity renders from server props, never from client stores.
+1098: - **`FRONTEND_FIRST_PLAYBOOK.md`** — §5 service-layer law: server state enters stores ONLY through services (this manual's three-layer model, enforced).
+1099: - **`APP_ARCHITECTURE_MANUAL.md`** — §6 data-flow patterns these stores participate in.
+1100: 
+1101: ---
+...
+1104: 
+1105: | Version | Date | Changes |
+1106: |---|---|---|
+1107: | 1.0 | (original, date unknown) | Initial manual: three-layer state model, when-to-use table, store architecture, core patterns, persistence, SSR hydration, templates, integration patterns, common stores, best practices. Unversioned until the 2026-07 audit. |
+1108: | 1.1 | 2026-07-08 | **Wave 4 metadata patch (audit sync).** Standard header block — this doc was the F-018 worst-case specimen (no version, date, or history anywhere). Cross-References section added — outbound isolation ended (F-035). This history table (D-018). ZERO content changes — the audit verified the doctrine clean (no derived-flag fictions, no `: any`, service-layer-consistent). |
+1109: | 1.2 | 2026-08-05 | **Navbar Saga promotion.** Division of Labor subsection appended to §1 (server props vs. client stores hard rule — identity renders from server, stores react to browser events). Cross-ref to AUTH_MANUAL Navbar Law added. | navbar-saga |
+1110: | 1.3 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-035, FC-040, FC-046, FC-046-heading, FC-047, FC-048, FC-049, FC-055, FC-067, FC-068, RUL-11, RUL-13 |
+1111: 
+1112: ---
+1113: 
+
+FILE 04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md
+...
+55: └─────────────────────────────────────────────────────────────────────────────┘
+56: 
+57:     ┌──────────────┐     ┌──────────────┐     ┌──────────────┐
+58:     │   Contact    │ ──► │   Shipping   │ ──► │   Payment    │
+59:     │    Info      │     │   Address    │     │   Details    │
+60:     └──────────────┘     └──────────────┘     └──────────────┘
+61:                                                      │
+62:                                                      ▼
+...
+92: | Component | Technology | Purpose |
+93: |-----------|------------|---------|
+94: | Product Catalog | WooCommerce REST API | Product data, inventory, pricing |
+95: | Shopping Cart | Zustand (client-side) | Cart state, persistence |
+96: | Checkout Form | React Hook Form + Zod | Form validation, data collection |
+97: | Payment Processing | Stripe | Secure payment handling |
+98: | Order Management | WooCommerce REST API | Order creation, status updates |
+99: | Webhooks | Next.js API Routes | Async payment confirmations |
+...
+180: 
+181: ## 3. PaymentIntent Flow
+182: 
+183: **Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
+184: 
+185: The browser may display or poll payment status; it may not choose paid or processing state. A payment-derived transition requires verified server-side evidence bound to the stored order and payment attempt, including amount and currency. Non-webhook mutations authenticate and authorize the operation and target, including an explicitly approved guest capability where supported, then validate the state transition.
+186: 
+187: Accept product/variation identifiers, quantities, shipping selection and coupon code, never caller prices, shipping costs or discount amounts. Validate quantities and product eligibility; load authoritative catalog prices; validate the shipping selection and coupon eligibility; apply the declared tax policy; calculate currency-safe totals on the server. Bind the payment to the authorized order and verify payment identity, amount, currency and order association before marking paid. Client totals are display-only. Return generic failures and redact logs. Universal quote-storage design is deferred; the required server pricing and payment binding still apply.
+188: 
+189: Persist one authorized checkout-attempt identity across retries and claim it atomically against concurrent requests. Scope provider idempotency keys to that attempt and operation, reuse or retrieve existing external objects after an unknown outcome, and reconcile before creating a replacement. Use the project-approved customer-identity contract without assuming paid activation; universal subscription schema design is deferred. Handle every documented subscription state, not only active.
+190: 
+191: Use one validated checkout contract across form, state, route and service. The request carries billing.email, validated line identifiers/quantities, shippingMethod and couponCode; it carries no authoritative monetary values. The response identifies the authorized order/payment attempt or a typed generic failure. The server pricing operation from the same contract supplies totals. Revisions to items, shipping or coupon invalidate the old payment binding before a new attempt is released.
+192: 
+193: ---
+194: 
+195: ## 4. Checkout Implementation
+196: 
+197: **Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
+198: 
+199: Accept product/variation identifiers, quantities, shipping selection and coupon code, never caller prices, shipping costs or discount amounts. Validate quantities and product eligibility; load authoritative catalog prices; validate the shipping selection and coupon eligibility; apply the declared tax policy; calculate currency-safe totals on the server. Bind the payment to the authorized order and verify payment identity, amount, currency and order association before marking paid. Client totals are display-only. Return generic failures and redact logs. Universal quote-storage design is deferred; the required server pricing and payment binding still apply.
+200: 
+201: Persist one authorized checkout-attempt identity across retries and claim it atomically against concurrent requests. Scope provider idempotency keys to that attempt and operation, reuse or retrieve existing external objects after an unknown outcome, and reconcile before creating a replacement. Use the project-approved customer-identity contract without assuming paid activation; universal subscription schema design is deferred. Handle every documented subscription state, not only active.
+202: 
+203: Use one validated checkout contract across form, state, route and service. The request carries billing.email, validated line identifiers/quantities, shippingMethod and couponCode; it carries no authoritative monetary values. The response identifies the authorized order/payment attempt or a typed generic failure. The server pricing operation from the same contract supplies totals. Revisions to items, shipping or coupon invalidate the old payment binding before a new attempt is released.
+204: 
+205: The checkout interaction contract includes shippingCost and couponDiscount as display estimates, couponCode, setCoupon(code) and clearCoupon(), alongside the existing checkout fields. The server revalidates shipping and coupons. STATE_MANAGEMENT_MANUAL owns the shared store shape; ECOMMERCE_AND_PAYMENTS_MANUAL refers to it. Personal fields follow the approved account-transition and retention policy.
+...
+208: 
+209: ## 5. Order Management
+210: 
+211: **Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
+212: 
+213: The browser may display or poll payment status; it may not choose paid or processing state. A payment-derived transition requires verified server-side evidence bound to the stored order and payment attempt, including amount and currency. Non-webhook mutations authenticate and authorize the operation and target, including an explicitly approved guest capability where supported, then validate the state transition.
+214: 
+215: Accept product/variation identifiers, quantities, shipping selection and coupon code, never caller prices, shipping costs or discount amounts. Validate quantities and product eligibility; load authoritative catalog prices; validate the shipping selection and coupon eligibility; apply the declared tax policy; calculate currency-safe totals on the server. Bind the payment to the authorized order and verify payment identity, amount, currency and order association before marking paid. Client totals are display-only. Return generic failures and redact logs. Universal quote-storage design is deferred; the required server pricing and payment binding still apply.
+216: 
+217: Persist one authorized checkout-attempt identity across retries and claim it atomically against concurrent requests. Scope provider idempotency keys to that attempt and operation, reuse or retrieve existing external objects after an unknown outcome, and reconcile before creating a replacement. Use the project-approved customer-identity contract without assuming paid activation; universal subscription schema design is deferred. Handle every documented subscription state, not only active.
+218: 
+219: Use one validated checkout contract across form, state, route and service. The request carries billing.email, validated line identifiers/quantities, shippingMethod and couponCode; it carries no authoritative monetary values. The response identifies the authorized order/payment attempt or a typed generic failure. The server pricing operation from the same contract supplies totals. Revisions to items, shipping or coupon invalidate the old payment binding before a new attempt is released.
+220: 
+221: ---
+222: 
+223: ## 6. Cart Logic
+224: 
+225: **Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
+226: 
+227: Keep hydration readiness outside the resettable business state. A normal reset preserves readiness. Hydration finishes in ready or error; an error exposes bounded recovery and never leaves an indefinite loading state. Verify reset after hydration, invalid stored data and unavailable storage.
+228: 
+229: The browser may display or poll payment status; it may not choose paid or processing state. A payment-derived transition requires verified server-side evidence bound to the stored order and payment attempt, including amount and currency. Non-webhook mutations authenticate and authorize the operation and target, including an explicitly approved guest capability where supported, then validate the state transition.
+...
+269: 
+270: ### Totals Calculation
+271: 
+272: **Dependent executable example withdrawn.** Use a project-approved state/payment contract with explicit hydration errors, server-authoritative pricing, authenticated ownership and recovery. The removed example’s missing contract is still tracked; no universal quote/subscription schema is introduced.
+273: 
+274: ---
+275: 
+276: ## 8. Coupon System
+...
+341: 
+342: ### Discount Calculation
+343: 
+344: **Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
+345: 
+346: A fixed-product coupon uses validated eligible line items and quantities in the authoritative server pricing operation. Do not advertise fixed_product through a flat-cart subtotal branch. A client calculation is a display estimate only. Verify equal-subtotal carts with different eligible quantities; preserve valid fixed-cart and percentage behavior.
+347: 
+348: ---
+349: 
+350: ### Coupon UI Component
+351: 
+352: **Dependent executable example withdrawn.** Use a project-approved state/payment contract with explicit hydration errors, server-authoritative pricing, authenticated ownership and recovery. The removed example’s missing contract is still tracked; no universal quote/subscription schema is introduced.
+353: 
+354: ---
+355: 
+356: ## 9. Webhook Handling
+357: 
+358: ### Webhook Endpoint Setup
+359: 
+360: **Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
+361: 
+362: For supported events, check business persistence or durable enqueue before acknowledging. Pre-acceptance failure returns a retryable failure. After durable acceptance, worker failures enter bounded durable retries and visible failed-work reconciliation with an alert and recovery owner. Unsupported events are explicitly distinguished from failed supported events. Missing order/user mappings create actionable recovery records, not silent success.
+363: 
+364: Converge each order or subscription aggregate using authoritative provider retrieval or explicit freshness and legal-transition rules. Reject stale transitions; check zero-row updates and repair missing mappings. A late event for an old subscription may not overwrite its replacement. Define reconciliation of the local mirror independently of inbound deduplication.
+365: 
+366: Distinguish optional telemetry from required follow-up. Complete required work retry-safely or durably enqueue it before acknowledgment. Failed or unconfirmed enqueue returns retryable failure. A later worker failure uses bounded durable retry, visible failed-work state and a named recovery owner. Inspect non-success HTTP responses from follow-up targets; a resolved fetch is not proof of success.
+...
+402: 
+403: ## 10. Testing Payments
+404: 
+405: The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it.
+406: 
+407: ### Test Card Numbers
+408: 
+409: | Card Number | Scenario |
+...
+416: | `4000 0027 6000 3184` | Requires authentication (3D Secure) |
+417: | `4000 0000 0000 0077` | Charge succeeds, then disputed |
+418: 
+419: Use any future expiration date and any 3-digit CVC.
+420: 
+421: ### Test Scenarios
+422: 
+423: ```typescript
+...
+514: 
+515: - [ ] Signature verification enabled
+516: - [ ] Webhook endpoint not publicly documented
+517: - [ ] Raw body used for signature verification (not parsed JSON)
+518: - [ ] Proper error handling without leaking info
+519: 
+520: ### Environment Security
+521: 
+
+FILE 03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md
+...
+41: - **Stripe SDK mocking decision tree** — wrapper-mock vs constructor-mock based on the app's import pattern.
+42: - **Fixture discovery** — test data sourced from the live backend per environment instead of hardcoded.
+43: - **Diagnostic principles** — meta-principles for diagnosing test failures and avoiding false coverage.
+44: - **Companion artifacts** — `CHANGELOG.md`, `SECURITY_FINDINGS.md`, `CLEANUP_BACKLOG.md` as standard project documents.
+45: 
+46: v1.0's specific patterns (Supabase chain mock, Stripe wrapper-mock, E2E user lifecycle, etc.) are preserved verbatim where they're correct; promoted to backend-agnostic principles where they generalize; supplemented with REST-equivalent patterns where they don't.
+47: 
+48: ---
+...
+56: 3. Tests that pass for the wrong reason are worse than tests that fail
+57: 4. `retries: 0` is non-negotiable
+58: 5. Environment drift first
+59: 6. Source recon before test writing
+60: 7. Test data discovered, not declared
+61: 8. Defensive error message assertions for security-sensitive endpoints
+62: 9. Don't test features you're killing
+63: 10. Shadow implementations are false coverage
+...
+82: 
+83: **Part 4 — Backend Examples (deep appendix)**
+84: 
+85: - 4.1 Supabase-backed apps — chain mocks, RLS-aware testing
+86: - 4.2 REST-backed apps — fetch mocks, header-based pagination, WooCommerce patterns
+87: - 4.3 Stripe — wrapper-mock vs constructor-mock decision tree
+88: - 4.4 Test data sourcing — discovered vs declared
+89: - 4.5 E2E framework specifics — Playwright config, strict-mode, trace viewer
+...
+93: 
+94: - 5.1 `CHANGELOG.md` — Keep a Changelog + SemVer discipline
+95: - 5.2 `SECURITY_FINDINGS.md` — severity-graded discovery tracker
+96: - 5.3 `CLEANUP_BACKLOG.md` — deferred technical debt tracker
+97: 
+98: **Part 6 — Gotchas & Generalizable Failure Modes**
+99: 
+100: **Appendix: Quick Reference Card**
+...
+136: 
+137: See Section 3.1 for the full diagnostic order.
+138: 
+139: ## Principle 1.6 — Source recon before test writing
+140: 
+141: Always read the source before writing the test. Match the real signature, validation behavior, and error shape — skipping recon costs 5–10 minutes per shape mismatch. Recon also surfaces issues beyond the test plan (security concerns, dead code, undocumented branches) that belong in tracker docs, not absorbed into the test.
+142: 
+143: See Section 3.3 for the full case study.
+...
+150: 
+151: ## Principle 1.8 — Defensive error message assertions for security-sensitive endpoints
+152: 
+153: For routes handling money, identity, or PII, the catch-block test asserts two things: the expected user-facing error IS present, and the internal/upstream error is NOT. This catches a class of security regressions where someone "improves" error messages by including the original and accidentally leaks card digits, customer emails, or internal request IDs.
+154: 
+155: See Section 4.3 for the implementation pattern. `SECURITY_FINDINGS.md` tracks real-world examples.
+156: 
+157: ## Principle 1.9 — Don't test features you're killing
+158: 
+159: When deprecated code stays in the codebase for deferred-removal reasons, do NOT write tests to lock in its behavior. Tests have maintenance cost; protecting regressions in features you don't care about is **negative ROI.** Document the decision in `CLEANUP_BACKLOG.md`, and test the shape of related output if other consumers depend on it — but skip feature-specific content assertions.
+160: 
+161: ## Principle 1.10 — Shadow implementations are false coverage
+162: 
+163: When tests are hard to write against the real code, the common shortcut is to copy the logic into the test file and test the copy. The copy diverges; tests stay green; **coverage is illusion.** Extract the testable logic into a shared lib that BOTH the route and tests import — detection heuristic: a test-file function whose name matches a source function is a strong smell.
+...
+198:     expect(safeRedirect("")).toBeNull();
+199:   });
+200: 
+201:   it("rejects protocol-relative URLs", () => {
+202:     expect(safeRedirect("//evil.com")).toBeNull();
+203:   });
+204: 
+205:   it("rejects schemed URLs", () => {
+206:     expect(safeRedirect("https://evil.com")).toBeNull();
+207:     expect(safeRedirect("javascript:alert(1)")).toBeNull();
+208:   });
+209: });
+...
+403: 
+404: ### Test data discovery vs declaration
+405: 
+406: Hardcoded fixture data ages badly. The recommended pattern is a **discovery script** that fetches live data from the configured backend and writes it to a gitignored JSON file. Tests then reference _roles_ (the populated category, the first published product) rather than _records_ (specific IDs).
+407: 
+408: ```
+409: e2e/fixtures/
+410: ├── dealers.json         (static, committed — stable knowns the script can't infer)
+411: └── live-data.json       (gitignored, regenerated by `npm run fixtures:fetch`)
+412: ```
+413: 
+414: See Section 4.4 for the full pattern.
+415: 
+416: ### localStorage + UI dual-verification
+417: 
+418: For tests touching persistent client state (Zustand, Redux with localStorage, IndexedDB), assert against **both** the source of truth AND the UI:
+419: 
+420: ```ts
+421: await expect(page.getByText(/Coupon Applied:/)).toBeVisible(); // user-facing claim
+422: 
+...
+426: expect(JSON.parse(stored!).state.couponCode).toBe(expectedCode); // approved non-sensitive project fixture only
+427: ```
+428: 
+429: The UI proves the user sees the right thing. The persistent state proves the system actually did the right thing. UIs can lie (e.g., showing optimistic state that doesn't match the store).
+430: 
+431: ### Playwright `getByText` strict-mode awareness
+432: 
+433: When multiple legitimate elements share text (very common), `getByText(/SomePattern/)` matches all of them and the assertion fails with "strict mode violation: resolved to N elements."
+434: 
+435: Three handling options, ranked best to worst:
+436: 
+437: 1. **Best — assert each variant separately.** If both elements are real signals, name them both:
+...
+477: ├── helpers/                       (when patterns stabilize across specs)
+478: ├── fixtures/
+479: │   ├── dealers.json               (committed)
+480: │   └── live-data.json             (gitignored)
+481: ├── flow-1.spec.ts
+482: ├── flow-2.spec.ts
+483: └── ...
+484: ```
+...
+643: 1. **SDK-direct import (no wrapper)** — changed the mocking approach. Test plan adjusted.
+644: 2. **Multi-step customer flow** (list customers → maybe create → PaymentIntent) — added two more tests for the branch coverage.
+645: 3. **Error-message leak in a catch block:** report the finding with the certified severity and obtain an authorized repair assignment. Replace unsafe responses/logging only within that assignment; QA does not silently implement the fix.
+646: 4. **No input validation** — MEDIUM-severity finding, documented as open item in `SECURITY_FINDINGS.md` Finding #2.
+647: 
+648: Two of those were test-plan adjustments. **Two were production security issues that recon happened to surface.** Without recon, both would have shipped untested.
+649: 
+650: ## 3.4 Audit-then-add when joining an existing project
+...
+669: □ Check assertion style — distinctive selectors, or generic text searches?
+670: □ Note any .skip tests + their documentation status
+671: □ Note any duplicate test names across the suite
+672: □ Flag findings to SECURITY_FINDINGS.md or CLEANUP_BACKLOG.md as appropriate
+673: ```
+674: 
+675: ## 3.5 Limits of seed-and-wait
+676: 
+...
+737: 
+738: ### Why this is better than deleting the test
+739: 
+740: The test body is **preserved verbatim** under `test.skip(...)`. When the architectural fix lands, swap `test.skip` → `test`, and you have a working regression test ready to go. The investment in writing the test isn't lost — just deferred.
+741: 
+742: The test name itself encodes the skip reason. Even without reading the comment, anyone running the suite sees `(skipped: [reason])` next to the test ID.
+743: 
+744: ### Companion: mitigation test that exercises the same surface via a different path
+...
+822: 
+823: ## 3.8 Run-verification rituals (promoted from Run 001)
+824: 
+825: The Architect includes the API trust-boundary matrix in the acceptance contract; the Engineer supplies engineering results, the QA Executor derives independent checks, and the QA Lead approves and grades them. Cover unauthenticated/wrong-role/wrong-owner calls, forged payment status, tampered totals, duplicate and concurrent requests, invalid signatures, pre-acceptance persistence failure, post-acceptance worker failure, and stale/out-of-order events. Each case records status, absence of unauthorized effects, persisted final state and retry/recovery evidence. TESTING_PLAYBOOK owns the matrix; commerce, subscription and API manuals refer to it.
+826: 
+827: Three verification disciplines earned during Cyber Pharma v1 Run 001 (lessons L17, L25, L26). They were first codified as recon-time checks (RECON_QUESTIONNAIRE §12); their canonical doctrine home is here.
+828: 
+829: ### Grep-verifiable gates run their grep at close (L17)
+...
+878: 
+879: ### E2E user lifecycle (Supabase apps)
+880: 
+881: **Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
+882: 
+883: Before privileged test setup or cleanup, verify the target project reference against the Director-approved test-project allowlist and verify the authorized test identity. Fail closed on mismatch, missing identity or unknown target. Record every run-created identity; cleanup may act only on that set. Production verification is a separately authorized, bounded, non-destructive procedure.
+884: 
+885: ---
+886: 
+887: ### Direct DB seeding to bypass Stripe in E2E
+...
+925: export const supabaseAdmin = createClient(
+926:   process.env.NEXT_PUBLIC_SUPABASE_URL!,
+927:   process.env.SUPABASE_SECRET_KEY!,
+928:   { auth: { autoRefreshToken: false, persistSession: false } },
+929: );
+930: ```
+931: 
+932: The `dotenv` import is required because Playwright runs in its own Node process, not inside Next.js. Without it, env vars from `.env.local` aren't available to the helpers.
+...
+1006: | API                                                          | Where total / pagination lives                                                            |
+1007: | ------------------------------------------------------------ | ----------------------------------------------------------------------------------------- |
+1008: | **WordPress / WP REST API / WooCommerce / WPGraphQL bridge** | `X-WP-Total` + `X-WP-TotalPages` HTTP headers                                             |
+1009: | **GitHub REST**                                              | `Link` header with `rel="next" / rel="last"` cursor URLs (derive total from `rel="last"`) |
+1010: | **Stripe**                                                   | `has_more: boolean` in body (cursor-style)                                                |
+1011: | **Shopify**                                                  | `Link` header with cursor pagination                                                      |
+1012: | **Generic Laravel API pagination**                           | `meta.total` in body                                                                      |
+1013: 
+...
+1142: // route handler uses stripe.customers.list(), stripe.paymentIntents.create(), etc.
+1143: ```
+1144: 
+1145: Test mocks the `stripe` package itself. The factory returns a constructor that hands back a persistent instance whose methods are top-level `jest.fn()`s:
+1146: 
+1147: ```ts
+1148: process.env.STRIPE_SECRET_KEY = "sk_test_fake_key";
+1149: 
+...
+1249: | File                          | Source                  | Committed?      | When it changes                                          |
+1250: | ----------------------------- | ----------------------- | --------------- | -------------------------------------------------------- |
+1251: | `e2e/fixtures/dealers.json`   | manually maintained     | YES             | when team adds/removes dealer pages                      |
+1252: | `e2e/fixtures/live-data.json` | discovery script output | NO (gitignored) | regenerated per environment via `npm run fixtures:fetch` |
+1253: 
+1254: Static fixtures are for things the script can't infer (e.g., which dealer slugs the team has agreed to keep stable). Live fixtures are for everything else — let the script figure it out fresh each time.
+1255: 
+1256: ### Discovery script architecture
+1257: 
+1258: **Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.
+1259: 
+1260: Fixture discovery returns one normalized record with role identities, scenario eligibility and a single count field named count. Validate role existence and coupon prerequisites before declaring readiness. A missing required role produces BLOCKED with the missing prerequisite; optional absence is recorded explicitly. Producers and consumers read count, not competing count aliases.
+1261: 
+1262: ---
+...
+1274: "fixtures:fetch": "tsx scripts/fetch_e2e_fixtures.ts"
+1275: ```
+1276: 
+1277: Run on every environment switch (dev → staging → prod), and before any test run where the backend dataset may have changed. The output JSON is gitignored — each environment regenerates its own.
+1278: 
+1279: ---
+1280: 
+1281: ## 4.5 E2E framework specifics — Playwright
+...
+1296: 
+1297: ### Trace viewer
+1298: 
+1299: `trace: 'on-first-retry'` (in config) captures a full trace on the first retry of a failed test. Open with `npx playwright show-trace <path>` to see DOM snapshots, network log, console output, and timeline. **Indispensable for diagnosing flakes.** With `retries: 0`, this only fires when manually re-running a failed test with `--retries=1` for the diagnostic.
+1300: 
+1301: ### Conditional `test.skip` with runtime reason
+1302: 
+1303: For tests that depend on data conditions (e.g., a category needs >12 products for pagination):
+...
+1333: ### Maintenance flow
+1334: 
+1335: - All in-flight changes accumulate under `[Unreleased]`.
+1336: - At deploy time, promote `[Unreleased]` → versioned section, date-stamp it (ISO 8601: `YYYY-MM-DD`), git-tag the commit (`v1.2.0`).
+1337: - Sections: `Added`, `Changed`, `Fixed`, `Security`, `Deprecated`, `Removed`.
+1338: - Skip: typo fixes, dep bumps, internal refactors, doc-only changes, test additions.
+1339: - **Inclusion test:** "would a stakeholder care this changed?"
+1340: 
+...
+1380: 
+1381: - ...
+1382: 
+1383: ### Known Open Items (Not Blockers)
+1384: 
+1385: - ...
+1386: ```
+1387: 
+...
+1395: 
+1396: ### Status key
+1397: 
+1398: - 🔴 **OPEN** — confirmed issue, not yet addressed
+1399: - 🟡 **IN PROGRESS** — fix planned or in flight
+1400: - ✅ **FIXED** — addressed and verified
+1401: 
+1402: ### Template (per finding)
+...
+1404: ```markdown
+1405: ## Finding #N — [Short title]
+1406: 
+1407: **Status:** [🔴 OPEN / 🟡 IN PROGRESS / ✅ FIXED YYYY-MM-DD]
+1408: **Severity:** [LOW / MEDIUM / HIGH / CRITICAL] ([what's exposed])
+1409: 
+1410: ### Problem
+1411: 
+...
+1419: 
+1420: [What was changed; pointer to the test that locks it in.]
+1421: 
+1422: ### Risk (if OPEN)
+1423: 
+1424: [What an attacker could do.]
+1425: 
+1426: ### Recommended Fix (if OPEN)
+1427: 
+1428: [Concrete proposed change, with code snippet if appropriate.]
+1429: 
+1430: ### Mitigation Until Fix (if OPEN)
+1431: 
+1432: [Workarounds at infrastructure or process layer.]
+1433: 
+1434: ### Files
+...
+1440: 
+1441: Recon-phase findings (Section 3.3) belong here. Tests should assert the **correct** post-fix behavior, not document the buggy state. If a test would have to be named "assert the leak happens," the finding belongs in this document and the fix is the priority.
+1442: 
+1443: ## 5.3 `CLEANUP_BACKLOG.md`
+1444: 
+1445: Non-urgent items tracked for future cleanup sessions. Not bugs, not security issues — technical debt with known fix paths.
+1446: 
+1447: ### Template (per item)
+1448: 
+1449: ```markdown
+...
+1459: ### What belongs here vs in SECURITY_FINDINGS.md
+1460: 
+1461: - **Security issues** (data exposure, auth gaps, injection vectors): `SECURITY_FINDINGS.md`.
+1462: - **Tech debt without security impact** (dead code, deprecated dependencies, lint warnings, format inconsistencies): `CLEANUP_BACKLOG.md`.
+1463: 
+1464: If in doubt, file in `SECURITY_FINDINGS.md` with severity LOW — easier to recategorize down than to surface a missed security issue later.
+1465: 
+1466: ### What belongs here vs in CHANGELOG.md `### Deprecated`
+1467: 
+1468: - **Deprecated feature plumbing that ships with the release** (code is in production but the feature is dead): note in `CHANGELOG.md ### Deprecated` AND in `CLEANUP_BACKLOG.md` for the eventual removal.
+1469: - **Pure tech debt** (no behavior change, no feature deprecation): `CLEANUP_BACKLOG.md` only.
+1470: 
+1471: ---
+1472: 
+1473: # Part 6 — Gotchas & Generalizable Failure Modes
+...
+1501: 
+1502: ### G4: `clearMocks` doesn't reset implementations
+1503: 
+1504: `clearMocks: true` in `jest.config.js` clears `mock.calls` and `mock.results`, NOT `mockImplementation` or `mockReturnValue`. A return value set via `.mockReturnValue()` persists across tests unless explicitly reset.
+1505: 
+1506: For per-test configuration that varies, prefer `mockReset()` (clears history + implementation) over `clearMocks`.
+1507: 
+1508: ### G5: Webhook acknowledgment follows durable acceptance
+1509: 
+1510: A webhook acknowledges success only after checked completion of the required state transition or checked durable capture/enqueue. Failure before that boundary returns a retryable non-success. Failure after durable acceptance is recovered through bounded durable retries, visible failed work, reconciliation and a named recovery owner; it does not retroactively invalidate the acknowledgment. Test status and persisted outcome for pre-acceptance failure, post-acceptance failure, duplicates and recovery.
+1511: 
+1512: ---
+1513: 
+1514: ### G6: Console output in passing tests is normal
+...
+1640: - E2E fixtures: `e2e/fixtures/`
+1641: - Shell wrappers: `scripts/`
+1642: - Security findings: `agent_docs/SECURITY_FINDINGS.md`
+1643: - Cleanup backlog: `agent_docs/CLEANUP_BACKLOG.md`
+1644: - Changelog: `CHANGELOG.md`
+1645: 
+1646: ---
+1647: 
+...
+1650: | Version | Date | Changes |
+1651: |---|---|---|
+1652: | 1.0 | 2026-05-03 | Initial playbook — four-layer testing strategy codified from StarkReads (Subscription v1: Supabase + Stripe, 136 tests across 3 layers). |
+1653: | 2.0 | 2026-05-11 | Backend-agnostic generalization: layered principles-then-appendices architecture, REST fetch-mock patterns alongside Supabase chain mocks, Stripe wrapper-vs-constructor decision tree, fixture discovery, diagnostic principles, companion artifacts (CHANGELOG / SECURITY_FINDINGS / CLEANUP_BACKLOG). Synthesized with Dockbloxx field notes (182 tests across 4 layers). Tail carried a stale "DRAFT" label despite operating as doctrine (F-036). |
+1654: | 2.1 | 2026-07-08 | **Wave 3 (audit sync).** Status resolved: "DRAFT" tail label dropped — the doc has operated as doctrine since May (F-036); this Version History table added (D-018). Isolation ended (F-035): "Where This Doc Sits" section added — outbound refs to STARTER_KIT_HANDBOOK (runner/config ground truth) + RECON_QUESTIONNAIRE (Q1.7), inbound executors named (SFP Phase 8, FFM verification/, FRONTEND_BUILD_PHASE §9 — their pointers to here landed in SFP v1.2 / BUILD_PHASE v1.2.1; FFM verification-guide pointer queued). §3.8 added: run-verification rituals L17/L25/L26 promoted from RECON_QUESTIONNAIRE §12 — canonical doctrine home is now here, written at principle level (RECON keeps the recon-time executable form; its pointer-back is a queued touch). Standard header block (F-018). Content otherwise untouched. |
+1655: | 2.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: DEC-03, FC-020, FC-021, FC-022, FC-023, FC-024, FC-030, FC-031, FC-040, FC-063, RUL-11, RUL-12, RUL-13 |
+1656: 
+1657: ---
+1658: 

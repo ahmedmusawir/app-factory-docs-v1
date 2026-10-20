@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-10-20T12:17:51.900303+00:00",
+  "candidate": "26b050fe70de66e74ec8d65bcf9287d4369a91f7",
+  "branch": "docs/sync-doctrine-part2-2026-10-15",
+  "clean": true,
+  "observed_remote_working_branch": "26b050fe70de66e74ec8d65bcf9287d4369a91f7",
+  "observed_remote_main": "9c179392f79b70da099121fc357d3107ad3bb86e"
+}

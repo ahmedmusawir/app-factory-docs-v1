@@ -1,0 +1,98 @@
+[
+  {
+    "path": "_SKILLS/factory-docs-update/CLAUDE.md",
+    "base": "d35689b52ec19a5551372f38f9190b0c5e18ede178769ed00bb161da3a23a9fb",
+    "candidate": "d35689b52ec19a5551372f38f9190b0c5e18ede178769ed00bb161da3a23a9fb",
+    "equal": true
+  },
+  {
+    "path": "_SKILLS/factory-docs-update/README.md",
+    "base": "71b80baea2ddb2f6dcf58d350f30546e9fe9c27f1b580292559c44a0417292f5",
+    "candidate": "71b80baea2ddb2f6dcf58d350f30546e9fe9c27f1b580292559c44a0417292f5",
+    "equal": true
+  },
+  {
+    "path": "_SKILLS/factory-docs-update/sync-engineer/SKILL.md",
+    "base": "f2a899d9c1da20b33990877b9a6d39e1c8bb762ab799057ef148840c8a79d1f8",
+    "candidate": "f2a899d9c1da20b33990877b9a6d39e1c8bb762ab799057ef148840c8a79d1f8",
+    "equal": true
+  },
+  {
+    "path": "_SKILLS/factory-docs-update/sync-qa/SKILL.md",
+    "base": "f410bc5de61f4ebaee7a0c7cd8d56e979ddc30a0d22a2d4788caffb529a5bf1d",
+    "candidate": "f410bc5de61f4ebaee7a0c7cd8d56e979ddc30a0d22a2d4788caffb529a5bf1d",
+    "equal": true
+  },
+  {
+    "path": "_SKILLS/factory-docs-update/_shared/templates/DOCSET_SYNC_ACCEPTANCE_SPEC.md",
+    "base": "638fbbf9cfe72284f7f80d8c92aad582fc9984def546c0336e5750ae571cbda3",
+    "candidate": "638fbbf9cfe72284f7f80d8c92aad582fc9984def546c0336e5750ae571cbda3",
+    "equal": true
+  },
+  {
+    "path": "_SKILLS/factory-docs-update/_shared/templates/SYNC_HANDOFF.md",
+    "base": "62ca9eefddc04554bda190871c70234afde7c524372c519bc6ad8ea4f3a7e920",
+    "candidate": "62ca9eefddc04554bda190871c70234afde7c524372c519bc6ad8ea4f3a7e920",
+    "equal": true
+  },
+  {
+    "path": "_SKILLS/factory-docs-update/_shared/templates/UPDATE_MAP.md",
+    "base": "042a9b2192a6c9ce09d6cc4a4f82fdb65db972442089db30f0e7dca262316e8d",
+    "candidate": "042a9b2192a6c9ce09d6cc4a4f82fdb65db972442089db30f0e7dca262316e8d",
+    "equal": true
+  },
+  {
+    "path": "_SKILLS/factory-docs-update/_shared/references/SHA_AND_PUSH_CONTRACT.md",
+    "base": "e4585bb3f3f397a57b9454d2c9ffbb66644cf15f966eaa61d3df82a61419089f",
+    "candidate": "e4585bb3f3f397a57b9454d2c9ffbb66644cf15f966eaa61d3df82a61419089f",
+    "equal": true
+  },
+  {
+    "path": "_SKILLS/factory-docs-update/_shared/references/ANTI_PATTERNS.md",
+    "base": "a5fde340c63697bbd49409e467c2321a5af2b623c369242ec77b195ca3dbfa18",
+    "candidate": "a5fde340c63697bbd49409e467c2321a5af2b623c369242ec77b195ca3dbfa18",
+    "equal": true
+  },
+  {
+    "path": "_SKILLS/factory-docs-update/_shared/references/STANDING_INVARIANTS.md",
+    "base": "a41d0352590cb999da5efe56c63e713f6dcd764c6a056282491391d72a2e83c8",
+    "candidate": "a41d0352590cb999da5efe56c63e713f6dcd764c6a056282491391d72a2e83c8",
+    "equal": true
+  },
+  {
+    "path": "_SKILLS/factory-docs-update/_shared/references/INTAKE_TAXONOMY.md",
+    "base": "372fab3b993fc1ba86d178cd5ee1aa6978f78a8d3f61b9513d4de95d183c62df",
+    "candidate": "372fab3b993fc1ba86d178cd5ee1aa6978f78a8d3f61b9513d4de95d183c62df",
+    "equal": true
+  },
+  {
+    "path": "_SKILLS/factory-docs-update/sync-engineer/decision-trees/route-selection.md",
+    "base": "8392c8ac905dbcd43d096e0741b4dd74eef7665718305a1360625a62679fd251",
+    "candidate": "8392c8ac905dbcd43d096e0741b4dd74eef7665718305a1360625a62679fd251",
+    "equal": true
+  },
+  {
+    "path": "_SKILLS/factory-docs-update/sync-engineer/templates/LESSONS_LEARNED.md",
+    "base": "334290472a4c4986d582e2c5c3e523447466fb067ed363a588e1808d9a2ca8e6",
+    "candidate": "334290472a4c4986d582e2c5c3e523447466fb067ed363a588e1808d9a2ca8e6",
+    "equal": true
+  },
+  {
+    "path": "_SKILLS/factory-docs-update/sync-engineer/references/TOOL_ROUTING.md",
+    "base": "6068ae91bb9522dc314d0ea7deb437dcbef0b7bdb11cf0077007871562fb1e0e",
+    "candidate": "6068ae91bb9522dc314d0ea7deb437dcbef0b7bdb11cf0077007871562fb1e0e",
+    "equal": true
+  },
+  {
+    "path": "_SKILLS/factory-docs-update/sync-qa/templates/GATE_Q_REPORT.md",
+    "base": "a79f3f4f8f73ad2707ce265b429c3d250f3d735982ec4c767857dd70a3c0b13f",
+    "candidate": "a79f3f4f8f73ad2707ce265b429c3d250f3d735982ec4c767857dd70a3c0b13f",
+    "equal": true
+  },
+  {
+    "path": "_SKILLS/factory-docs-update/sync-qa/templates/QA_MATRIX.md",
+    "base": "3a36c09e0979b81f3839377bf7a98b93d1e821fe96e37735b98fb0bb422136f7",
+    "candidate": "3a36c09e0979b81f3839377bf7a98b93d1e821fe96e37735b98fb0bb422136f7",
+    "equal": true
+  }
+]

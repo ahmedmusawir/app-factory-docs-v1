@@ -1,0 +1,14 @@
+01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md:903: | Table component | UI-UX | Component Library |
+02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md:355: **Why:** Parallel component library. **Fix:** Compose from shadcn primitives; flag genuine gaps as a KIP.
+03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md:6: > **Born from:** Cyberize Run 001 lessons (Lessons 2, 4, 5, 7 + Lesson 9 — speculative authoring discovered during v1.1 retrospective); Lesson 10 added at v1.2 (Cyber Pharma v1 Phase 2.2)
+03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md:554: ### Lesson 9 (New) — Speculative Authoring (Discovered During v1.1 Retrospective)
+03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md:577: | 1.1 | 2026-06-02 | Added Section 1.5 (Pre-Phase Doctrine Refresh), Section 1.6 (Kit Audit), Stage 2 Pre-Write Check Protocol + anti-patterns, Section 12 (Kit Improvement Proposals), Section 13 (Run 001 Lessons appendix including new Lesson 9). Born from Cyberize Run 001 retrospective. |
+03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md:6: > **Born from:** Cyberize Run 001 lessons (Lesson 2 redundant authService, Lesson 4/7 component blindness, Lesson 7 page composition) + v1.1.1 correction (Lesson 9 — over-merged sections relocated to FRONTEND_BUILD_PHASE_PLAYBOOK)
+03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md:421: - **Section 13** — Run 001 Lessons appendix (Lessons 2, 4, 5, 7, plus the new Lesson 9)
+03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md:438: | 1.1.1 | 2026-06-02 | Sections 14 and 15 trimmed to cross-references. Stage execution doctrine (Pre-Phase Doctrine Refresh, Kit Improvement Proposals) relocated to its proper home in FRONTEND_BUILD_PHASE_PLAYBOOK_v1.2.md. Doctrine de-duplication. Born from Lesson 9 (speculative authoring caught in v1.1 retrospective). |
+05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md:57: - **The parts list is the kit's shadcn primitives.** Build from them; don't invent a parallel component library.
+05_DESIGN_SYSTEM/THEMING_MANUAL.md:218: - **Typography scale** — see UI-UX-BUILDING-MANUAL §Typography
+05_DESIGN_SYSTEM/THEMING_MANUAL.md:223: - **Icon systems** — see STARTER_KIT_HANDBOOK §Lucide Icons
+05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md:1111: #### 4. Component Library Documentation
+05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md:1822: ### Lesson 9 — The Theming Doctrine Gap (Run 002)
+05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md:1858: | 1.2 | 2026-06-02 | Added Rule Zero-B (theming as the second foundational posture). Added TOC entries for Rule Zero and Rule Zero-B. Authored companion `THEMING_MANUAL.md`. Added Lesson 9 appendix. Born from Cyber Pharma Run 002. |

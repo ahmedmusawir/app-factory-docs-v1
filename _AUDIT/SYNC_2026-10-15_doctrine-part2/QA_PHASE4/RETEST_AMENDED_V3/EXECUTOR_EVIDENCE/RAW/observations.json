@@ -1,0 +1,26 @@
+[
+  {
+    "id": "OBS-V3-01",
+    "kind": "OBSERVATION",
+    "scope": "execution environment",
+    "text": "Initial sandbox ls-remote exited 128 because GitHub DNS was unavailable. The authorized network-enabled read-only retry succeeded before any grading; final remote check also succeeded. Failure output is retained."
+  },
+  {
+    "id": "OBS-V3-02",
+    "kind": "OBSERVATION",
+    "scope": "harness correction",
+    "text": "The first measurement invocation assumed DIRECTOR_RELEASE.md existed in the review repo and stopped. It exists in the candidate export; input selection was corrected and the complete measurement script rerun. No candidate defect or candidate write occurred."
+  },
+  {
+    "id": "OBS-V3-03",
+    "kind": "OBSERVATION",
+    "scope": "carry-forward boundaries",
+    "text": "STATE and ARCH are changed documents. R5 uses exact STATE passages. Seven other withdrawal rows touching these documents were re-read at preserved sections and marked PASS, rather than claiming whole-file carry; the other 23 withdrawal rows are CARRIED and FC-066 is independently PASS."
+  },
+  {
+    "id": "OBS-V3-04",
+    "kind": "OBSERVATION",
+    "scope": "excluded follow-ups",
+    "text": "FU-1/FU-2 remain optional, excluded and unchanged. No failure or new disposition is assigned to them."
+  }
+]

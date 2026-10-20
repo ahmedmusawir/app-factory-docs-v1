@@ -1,0 +1,17 @@
+{
+  "stamp": "2026-10-17_160835",
+  "zip_name": "FACTORY_AMENDED_V1_QA_SPEC_REVIEW_2026-10-17_160835.zip",
+  "response": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-17_160835_consolidated-amendment-qa.md",
+  "receipt": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/QA_AMENDED_V1_DELIVERY_RECEIPT.json",
+  "local_zip": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/FACTORY_AMENDED_V1_QA_SPEC_REVIEW_2026-10-17_160835.zip",
+  "destination_zip": "/home/moose/Downloads/FACTORY_AMENDED_V1_QA_SPEC_REVIEW_2026-10-17_160835.zip",
+  "sha256": "86da25006261a33ab4f0edae89520cbd20682d1cc6d918415aa3b4ceb5cf98c4",
+  "members": 219,
+  "inventory_count": 218,
+  "preservation_paths": 817,
+  "spec_sha256": "103c7ede8a03e7bd0ea64f482e9d0b5a646b7720b8ae7f07729ea3482c9b8bd3",
+  "delivered_at": "2026-10-17T16:09:12+06:00",
+  "status": "DELIVERED; ownership confirmed; QA-AF01 outstanding; Gate 2 amendment PENDING; Gate 3 PENDING; Phase 3 NOT RELEASED",
+  "verification": "219 members; 218/218 payload hashes and disk bytes; ZIP CRC PASS; Downloads copy SHA matches",
+  "original_zip_sha256": "711914a986cd64071f4372e0c428249ba27c6eba8ace160918c312d098b34f60"
+}

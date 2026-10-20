@@ -1,0 +1,506 @@
+
+FILE 03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md
+...
+1: # RRM PLAYBOOK
+2: ## Review Rework Modules — Adjudicated Review Findings into Bounded Repair and Independent Verification
+3: 
+4: > **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED
+5: > **Tier:** 3 — Build Methodology · **Pairs with:** `SOFTWARE_FACTORY_PLAYBOOK.md` › Module Identity & QA Handoff (Factory-level shared doctrine), `QAM_PLAYBOOK.md`, `QA_PLAYBOOK.md`, `BIM_PLAYBOOK.md` (module mechanics reference), `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`
+6: > **Owner:** Stark Industries App Factory
+7: > **Provenance:** Authored for the Factory DocSet from the RRM pilot playbook v0.1 (17 September 2026; harvest source SRC-R01, preserved as received in INTAKE_SNAPSHOT/factory-intake/) and the RRM-001…004 field results (SRC-R03), reconciled to the Director rulings of 2026-10-14 (RUL-01 mandatory QAM, RUL-02 continuing QA branch, RUL-03 required cleanup, RUL-04 frozen contract with writable lanes, RUL-05 two review checkpoints, RUL-06 placement). The pilot playbook's persona names were replaced by seats; every departure from the pilot text is listed in the Version History. The pilot records themselves are unchanged.
+8: 
+9: ---
+10: 
+11: ## 1. What an RRM Does
+12: 
+13: A **Review Rework Module** converts adjudicated review findings into bounded engineering work and independent verification. Its scope comes from approved dispositions, not raw report counts. It can repair completed frontend, backend, cross-cutting or release work. It does not consume the identity of the next BIM, FIX or FEAT and it does not change a product's phase numbering.
+14: 
+15: Success means: the accepted repair objectives are verified, required existing behavior remains green, unresolved items have explicit dispositions, and the certified QA branch is properly closed out and merged. No RRM automatically proves an entire phase or application production-ready.
+16: 
+17: **Module identity** follows the Factory-level rule (`SOFTWARE_FACTORY_PLAYBOOK.md` › Module Identity & QA Handoff): `RRM-<NNN>-<APP-SLUG>`, uppercase canonical ID, lowercase-kebab branch. Mechanics shared with every module type — one folder, one manager file, Plan Mode, verify-first, Engineer read-only Git inspection, Director-only Git mutations, and existing context-specific cloud restrictions, baseline-first regression, per-module failure policy, Definition of Done — are documented in `BIM_PLAYBOOK.md` §4–§12 and apply by reference. **Every RRM includes a module-specific `QAM/`** (`QAM_PLAYBOOK.md`; Director ruling RUL-01 and RUL-05).
+18: 
+19: ## 2. When an RRM Is Launched — the Two Review Checkpoints
+20: 
+21: The Factory has two planned independent-review checkpoints (Director ruling RUL-05, 2026-10-14):
+22: 
+23: 1. **Review after FFM build and its independent QA finish**; disposition findings and authorize RRM only when approved findings require repair.
+24: 2. **Engine 2 review after all Engine 1 implementation phases and their QA are closed**, followed by approved RRM work. (Definitions and lifecycle vocabulary: `SOFTWARE_FACTORY_PLAYBOOK.md` §2, “Phase Vocabulary — One Canonical Map”.)
+25: 
+26: At each checkpoint: review findings require disposition (§5); approved findings determine the bounded RRM work; **a clean review produces no RRM** — repair work is never manufactured to fill a checkpoint. Review timing follows the approved project workflow; a review "both PASS" result defines neither Gate Q, Gate D nor release authority. Module QA certification (Gate Q), review completion and deployed-system verification (Gate D) remain distinct claims.
+27: 
+28: Revised workflow references: [FFM creation](_workflows/FFM_CREATION.md), [FFM execution and post-FFM review](_workflows/FFM_EXECUTION.md), [deployment and Gate D](_workflows/FFM_DEPLOYMENT.md), and [BIM through Engine 2](_workflows/BIM_WORKFLOW.md). Each includes a revised stick diagram and links its superseded original as history. The source diagrams are not current instructions.
+29: 
+30: ## 3. Inputs and Entry Conditions
+31: 
+32: The project Architect gathers:
+33: 
+34: - the original review reports, prompts, evidence and specimen identities;
+35: - the current application state and project instructions/contracts;
+36: - completed module records, known limitations and already-approved decisions;
+37: - the intended use/release context, relevant environments and permitted actions;
+38: - this playbook, the reviewer guidance (§11) and the governing QA doctrine (`QA_PLAYBOOK.md`, `QAM_PLAYBOOK.md`).
+39: 
+40: **Current-source recon is mandatory before writing the executable packet** (`RECON_QUESTIONNAIRE.md`). A report about old code cannot establish a defect in today's candidate by itself. For a review that was performed without Git access, compare the pertinent source bytes or excerpts with current source and record unresolved equivalence. Missing equivalence does not invalidate all findings, but it prevents pretending that reviewer disagreement is a controlled comparison.
+41: 
+42: ## 4. Lifecycle and Ownership
+43: 
+44: | Stage | Owner and action | Required exit evidence |
+45: |---|---|---|
+46: | Intake | Architect inventories reviews, specimens and limitations | Intake record and current-source reconciliation |
+47: | Disposition | Architect proposes; Director rules | Every material finding has a reasoned disposition (§5) |
+48: | Contract | Architect authors; Director approves; Architect instantiates `QAM/` from the Hub template set | Brief, frozen acceptance requirements, bounded engineering prompts, QAM skeleton |
+49: | Plan / build | Engineer plans (Plan Mode), Director approves, Engineer implements and self-verifies | Execution log, engineering checks, factual `QAM/` handoff (`QAM_MANIFEST.md`, `HANDOFFS/ENGINEERING_HANDOFF.md`) |
+50: | Candidate | Director commits/pushes the completed engineering work and creates `qa/<module-branch>` at that commit | Candidate SHA recorded by the QA Executor in Q1 |
+51: | Q1 | QA Executor performs independent recon and drafts the test plan; QA Lead reviews and approves (with exact amendments if any); Director releases | Q1 review package; `QAM_APPROVAL.md` |
+52: | Q2 | QA Executor executes the approved plan continuously on the QA branch | Evidence matrix, execution report, findings, result package |
+53: | Repair loop (conditional) | QA Lead classifies; Architect/Director rule scope; Engineer repairs on the QA branch; Director commits; QA Executor re-pins and retests (Q4) | New candidate identity; bounded repair and regression evidence |
+54: | Certification | QA Lead adjudicates and issues the Gate Q verdict | Acceptance and repair trace, limitations, verdict |
+55: | Cleanup | QA Lead decides retention; authorized executor performs the required cleanup checkpoint (`QAM_PLAYBOOK.md` §14) | Cleanup report; durable records retained; debris handled |
+56: | Closeout | Architect writes the closeout instruction; Engineer performs bounded closeout; Director reviews and commits | Closeout report, updated project status, clean tree |
+57: | Merge / return | Director merges `qa/<module-branch>` into `main` and pushes; Architect returns lessons | Merge identity, journal inputs, deferred follow-ups |
+58: 
+59: The QA Lead and QA Executor enter at the QA handoff; they are not routine approvers of the Architect's engineering packet. One person may hold several seats; the responsibilities never merge (`QAM_PLAYBOOK.md` §3).
+60: 
+61: ## 5. Disposition Before Repair
+62: 
+63: Use one primary disposition for every material source finding:
+64: 
+65: - **ACCEPT REPAIR** — a current, applicable problem with an approved objective.
+66: - **NEEDS DECISION / EVIDENCE** — an unresolved requirement, deployment fact or contradictory evidence; name the owner and the resolving question.
+67: - **DEFER / FUTURE GATE** — retained with reason, owner and a concrete trigger; state whether current approved use is affected.
+68: - **REJECT / NOT APPLICABLE / ALREADY RESOLVED** — with current evidence and reason.
+69: - **DUPLICATE** — mapped to the retained finding while preserving original IDs and distinct evidence.
+70: 
+71: Record accepted risk only through a Director decision, with conditions and follow-up. Reviewer severity does not automatically approve a repair or a deferral. Both reviewers agreeing is not proof; one reviewer finding something alone is not a reason to dismiss it. Separate severity, origin and approved scope: an inherited issue may be severe and still require an explicit disposition.
+72: 
+73: Raw reports stay unchanged. Corrections and rulings append in the disposition/errata lane. The ledger must distinguish a source observation from a current-project decision. No raw review item silently becomes an authorized edit.
+74: 
+75: ## 6. Author the Engineering Contract
+76: 
+77: The Architect's packet contains a front door (the module manager, `BIM_PLAYBOOK.md` §5), the brief, the disposition ledger, the acceptance specification (`ACCEPTANCE_SPEC.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2.5), the engineering prompts and the instantiated `QAM/`. Requirements are settled before the build. The Engineer delivers the acceptance artifact with the completion handoff but may not redefine success after implementation. Separate required behavior from engineering claims and from QA verdicts.
+78: 
+79: Each accepted objective maps to numbered ACs, preserved behavior, allowed surfaces, forbidden scope, verification level/environment and required evidence. **The contract is frozen at handoff; declared lanes inside the module (engineering handoff, recon, plans, evidence, findings, approved rulings) stay writable by their owners; contract changes require an attributable approved amendment in the append-only errata lane** (Director ruling RUL-04). No unresolved blocking decision enters implementation as an invented assumption.
+80: 
+81: Place the module under the project's established `agent_docs/` module convention; its QA records live in the module's `QAM/` structure (Director ruling RUL-03). Use staged prompts when dependency changes, schema work or distinct risks require checkpoints. Small related findings may share one RRM; split when independence, rollback or verification needs justify it.
+82: 
+83: ## 7. Engineering and Branch Flow
+84: 
+85: The Director starts from the approved current `main` baseline under project Git discipline. The Engineer performs Plan Mode inspection and reports conflicts before writes; the Director approves the plan and checkpoint progression; the Engineer implements only allowed work, verifies it, and logs changes, commands, outcomes, limitations and affected ACs. The Engineer may inspect Git read-only; the Director performs every Git mutation. Existing context-specific cloud restrictions remain in force; this document grants no new cloud permission.
+86: 
+87: **Branch flow (Director ruling RUL-02):** the module has a numbered engineering branch (for example `rrm-001-<app>`). After Engineering, the Director commits and pushes the completed engineering work and creates the matching `qa/<module-branch>` **at that same commit** — the completed engineering candidate. The Engineer performs authorized rework on that QA branch; the QA Executor independently tests on that same branch; role boundaries are preserved and conflicting simultaneous writes are avoided (one active writer when sessions share a worktree). The QA Lead certifies the governed candidate; the Architect issues the closeout instruction; the Engineer performs bounded closeout; the Director commits, merges the QA branch into `main` and pushes `main`. **Repairs are not transferred back to the engineering branch and the QA branch is not abandoned as the normal workflow.** Product, execution, evidence and closeout identities are preserved separately.
+88: 
+89: Review-only exports are separate input artifacts; their lack of `.git` does not change engineering's Git discipline. This is project-module policy; the Doctrine Hub's own synchronization Git rules are separate (`DEPLOYMENT_PLAYBOOK.md` §3).
+90: 
+91: ## 8. QA Handoff and Verification (the QAM interface)
+92: 
+93: Every RRM includes QAM: the Architect instantiates `QAM/` from the Hub template set at packaging; the Engineer completes the factual manifest and engineering handoff as part of the engineering assignment; the QA Executor performs Q1 (independent recon and test plan) and, after QA Lead approval and Director release, Q2 (continuous execution); the QA Lead adjudicates findings and certifies (`QAM_PLAYBOOK.md` §§5–14). The handoff supplies the approved spec and execution log plus references to the brief, the disposition ledger, the exact candidate commit, the repair diff, engineering results, fixtures/environment setup, limitations and the governing QA instructions (carried in `QAM/GOVERNING/` with version and hash provenance).
+94: 
+95: Tests must reach the boundary claimed: a direct function probe is not automatically a framework HTTP test; a synthetic database substitute is not deployed RLS evidence. Browser, SQL and deployment checks are required only where the approved contract or the QA risk plan needs them; report gaps instead of claiming success.
+96: 
+97: **Trace:** source finding ID → disposition → AC → repair → test/evidence → final disposition. Required regression establishes that protected existing behavior still works. Targeted re-review by the original reviewer can strengthen the evidence; the QA Lead specifies when it is required and who can satisfy it. A closed reviewer session does not invalidate the report or require resuming the same model instance.
+98: 
+99: The QA Executor records PASS, FAIL, BLOCKED, NOT RUN or ADJUDICATE with evidence; its recommendation is not the QA Lead's certificate. Verdict vocabulary is the Factory set in `QA_PLAYBOOK.md` §11; outstanding mandatory checks cannot be relabeled passed.
+100: 
+101: ## 9. Repair / Retest Loop (conditional)
+102: 
+103: QA Executor reports → QA Lead classifies → Architect/Director resolve scope or contract questions and issue a bounded repair instruction → Engineer executes the approved repair on the QA branch → Director commits → QA Executor re-pins and retests (Q4) → QA Lead re-adjudicates (`QAM_PLAYBOOK.md` §11).
+104: 
+105: A repair instruction names the affected findings/ACs, allowed files, prohibited changes and required engineering checks. Retest covers the diff, the impacted ACs and the required regression. Unchanged evidence may carry forward with explicit specimen provenance and impact reasoning. Do not restart the entire campaign without a concrete reason. New material issues require a disposition; no quiet scope expansion and no moving acceptance criteria to fit the implementation. Required final live validation runs against the final candidate after outstanding failures are resolved and the QA Lead authorizes it.
+106: 
+107: The RRM-001…004 campaign did not exercise a product repair round; this loop carries forward the governing doctrine and is not a capability proved by that pilot.
+108: 
+109: ## 10. Certification, Cleanup, Closeout and Merge
+110: 
+111: The QA Lead's Gate Q verdict certifies the implementation against the approved contract: it records the exact implementation SHA, accepted errata, results, preserved behavior, gaps and any Director-approved follow-ups. It does not certify deployment and it does not eliminate deferred findings.
+112: 
+113: **Sequence for every module with a `QAM/` (Director ruling RUL-03; `QAM_PLAYBOOK.md` §14):** accepted product verdict (QA Lead) → required cleanup under QA Lead authority, with records (credential and temporary auth-state hygiene; closing owned QA processes and browser contexts; authorized removal of disposable execution debris; retention of durable evidence, required attempts and useful helpers) → durable records committed (Director) → Architect closeout instruction → bounded Engineer closeout → Director merge of `qa/<module-branch>` into `main`. Product Gate Q, cleanup acceptance and Gate D remain separate claims. Verify that cleanup changed no product, test, configuration or contract bytes; a product change found at cleanup returns through QA, never buried in cleanup or closeout.
+114: 
+115: The closeout record distinguishes implementation, evidence, closeout and merge SHAs where they differ. Do not loop adding a commit's own hash to itself. After merge, the Director refreshes local `main` before any new branch starts. Required deployment and Gate D remain separate (`DEPLOYMENT_PLAYBOOK.md`; `QA_PLAYBOOK.md` §13).
+116: 
+117: ## 11. Reviewer Guidance
+118: 
+119: Reviewer guidance belongs here under RUL-14 (2026-10-16). The following proposed wording expresses that guidance for map review; pilot source records remain unchanged.
+120: 
+121: - **Freeze the specimen.** Name the exact revision, export or byte set reviewed; distinguish ordinary change review from broad or retrospective investigation.
+122: - **Evidence levels.** Label every claim EVIDENCE / INFERENCE / CLAIM / GAP / QUESTION (`QA_PLAYBOOK.md` §8); state the conditions under which a finding holds and what would falsify it.
+123: - **Origin ≠ severity.** Separate inherited origin from severity; disclose baseline failures without preventing security investigation; an inherited severe issue still needs a disposition.
+124: - **No unsupported security claims.** A missing application-level filter is not a confirmed exposure when RLS or another effective boundary may apply; say what was and was not verified.
+125: - **Calibrate.** State claim confidence and specimen equivalence; one severe, supported issue warrants correction — a repeated-incident threshold is not required.
+126: - **Route, do not repair.** Reviewers propose; disposition is the Architect's proposal and the Director's ruling (§5). Original reports stay unchanged; dispositions and errata append.
+127: 
+128: ## 12. Continuous Execution Within a Released Assignment
+129: 
+130: Under RUL-15 (2026-10-16), execute continuously within a released assignment, including routine checks, reporting and packaging. Stop for concrete blockers, authority changes or required independent verdicts. This is not permission to cross a release boundary.
+131: 
+132: Prepare measurable scope, prerequisites, writable lanes and enumerated stops before release. Once released, include routine checks, reporting and packaging in continuous execution. Preserve required independent verdicts and authority boundaries. Report the full lifecycle effort, interruptions, repairs and missing-package follow-ups; never omit a valid stop to claim uninterrupted success.
+133: 
+134: ## 13. Return Learning
+135: 
+136: The project returns a concise retrospective: what was accepted, rejected or deferred and why; surprises in execution; the evidence needed to resolve disagreements; rework rounds and their causes; process friction; proposed doctrine changes. Attribute seat-authored lessons. Promote only supported lessons through the DocSet Sync process (`_SKILLS/factory-docs-update/`); a lesson is not doctrine until it lands in the Hub.
+137: 
+138: An RRM is complete only after actual delivery, QA and closeout evidence exists. Receipt of reviews and publication of a packet are preparation milestones, not a completed RRM.
+139: 
+140: ## 14. Version History
+141: 
+142: | Version | Date | Change |
+143: |---|---|---|
+144: | 1.0 | 2026-10-18 | New doc entering Hub: Review Rework Module doctrine, authored from the RRM pilot playbook v0.1 (SRC-R01) and field results (SRC-R03) under the Director rulings of 2026-10-14. Departures from the pilot text: §1 module identity per SFP §2.5 and mandatory QAM (RUL-01/05); §2 new — two review checkpoints, clean review → no RRM (RUL-05); §4 lifecycle re-seated (Engineer / QA Lead / QA Executor / Director / Architect) with Q1/approval/release/Q2 and the RUL-03 sequence; §6 frozen contract with writable lanes (RUL-04), kit reference replaced by the Hub template set and the module's `QAM/`; §7 branch flow restated from RUL-02 (no `--no-ff` project policy as Hub policy); §8 QAM interface; §10 cleanup-before-closeout sequence (RUL-03) replacing the pilot's "Gate Q then cleanup" wording; §11 reviewer guidance as a section; §12 continuous execution within released scope (RUL-15); §13 promotion via DocSet Sync. [IN-2026-10-15-13 … IN-2026-10-15-22 (RRM-01…10); WF-11; WF-07; RUL-01…RUL-06]; current correction pass: MC-01…14; RUL-05, RUL-06, RUL-14, RUL-15 |
+
+FILE 03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md
+...
+1: # QAM PLAYBOOK
+2: ## Mandatory module packaging and two-shot independent QA
+3: 
+4: > **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED
+5: > **Tier:** 3 — Build Methodology · **Pairs with:** `QA_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `RRM_PLAYBOOK.md`, `BIM_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`
+6: > **Owner:** QA Lead authors and maintains this playbook (Director ruling RUL-01, 2026-10-14) · Stark Industries App Factory
+7: > **Provenance:** Director-approved source, the intake file `QAM_PLAYBOOK_v1_0` (authoring seat QA Lead / JARVIS, 2026-10-14; SHA-256 `97e111e2a495f9a3fe65f50213e6f2ba68c8e5e963f3d23493b1ee99ad35c897`; preserved as received in INTAKE_SNAPSHOT/factory-intake/). Audience: module-writing Architects, Engineers, QA Leads and QA Executors. The source text is preserved verbatim except the integration substitutions listed in the Version History; the paired Factory documents must be reconciled and verified in this sync before a completion claim.
+8: > **Template set:** `03_BUILD_METHODOLOGY/_templates/QAM/` — accepted by the QA Lead (ACCEPT WITH EXACT AMENDMENTS, 2026-10-14) with standing requirements QAM-SR v1.0; set version recorded in its `README.md`.
+9: 
+10: ---
+11: 
+12: ## 1. The rule every Architect must understand
+13: 
+14: **Every new Factory module MUST contain a complete, module-specific `QAM/` from initial authoring.** This applies to RRM, FFM, BIM, TRM, FIX, FEAT, ABM, APBM and future module types. The module's scope changes the tests; it does not remove QAM.
+15: 
+16: This rule governs modules newly authored after the Director's ruling of 2026-10-14. Modules already in flight on that date keep their recorded sequence until amended through their own ruling lane.
+17: 
+18: **Every ordinary QA engagement has TWO planned execution shots:**
+19: 
+20: 1. **Q1 — independent recon and test planning.** The QA Executor checks readiness, reads the contract, challenges the Engineer's claims and writes the proposed test plan. It returns one indexed review package and stops for the QA Lead.
+21: 2. **Q2 — independent QA execution.** After the QA Lead approves that specific plan and the Director releases the candidate, the QA Executor executes the approved work continuously and returns one indexed result package.
+22: 
+23: **Repair and retest are conditional, after findings.** They are not mandatory extra shots. QA Lead adjudication, cleanup, certification, Architect closeout and Director Git actions still exist. Two-shot QA does not mean two messages from module creation through merge, and it never means ignoring a genuine stop condition.
+24: 
+25: The practical Director experience is: place one complete module pack, let Engineering finish its handoff, establish the QA branch, point the QA Executor to QAM, upload its Q1 ZIP, relay the QA Lead's approval, release Q2, and upload its result ZIP. The Director should not assemble QA documents, compose a new test campaign prompt, or perform repetitive browser matrices.
+26: 
+27: ## 2. What QAM is
+28: 
+29: QAM is the module's self-contained QA assignment, operating instructions, readiness checks, planning workspace and evidence record. It is a real folder inside the parent module, not merely a renamed empty QA folder or a reference to another chat.
+30: 
+31: The folder contains enough information for a fresh authorized agent to identify its role, determine the current phase, locate the governing contract, explain missing prerequisites and do the next permitted work. Module-relative links to the parent's canonical acceptance spec are acceptable; duplicate acceptance contracts are not required. External governing bodies must be available through a versioned local snapshot with provenance or an explicitly approved accessible source. In this Factory a snapshot of a Hub document is identified by its canonical name, its header version and the Hub commit SHA it was copied from; no doctrine release tag exists yet.
+32: 
+33: The Architect ships a prepared skeleton. The Engineer supplies factual completion inputs. The QA Executor independently drafts and executes tests. The QA Lead owns approval, adjudication and certification. A folder does not transport itself between applications: indexed ZIP export remains the predictable handoff when the QA Lead is in a separate chat.
+34: 
+35: ## 3. Authority and the five seats
+36: 
+37: | Seat | Responsibility | Boundary |
+38: |---|---|---|
+39: | Director | Approves scope/targets and risk decisions; controls credentials, Git, release and destructive authority | Does not have to perform every repeatable UI check |
+40: | Architect | Defines frozen acceptance contract, module scope and protections; instantiates QAM from this playbook; resolves contract ambiguity; directs closeout | Does not substitute an engineering-green result for independent QA |
+41: | Engineer | Implements approved scope, self-verifies, completes manifest and engineering handoff; repairs only ruled scope | Does not approve the QA plan, fill independent QA results or issue a certificate |
+42: | QA Lead | Owns this playbook and standing risks; amends/approves Q1 plan; adjudicates findings; approves cleanup/retention and certifies | Does not invent missing evidence or silently repair the product |
+43: | QA Executor | Performs Q1, drafts plan, executes approved Q2, records findings, executes approved retests and cleanup, exports packages | Does not self-approve, self-certify, mutate Git or make unauthorized product changes |
+44: 
+45: Names and models are interchangeable; authority follows the seat. The agent that engineered a candidate must not independently certify its own work. When one runtime changes seats, record the handoff and preserve an independent verification assignment and QA Lead review.
+46: 
+47: The Architect owns or validates acceptance criteria before implementation. The Engineer may propose clarifications during planning; approval and frozen-contract rules still apply. The Engineer's handoff reports what was built, not what the acceptance criteria ought to become after building it.
+48: 
+49: ## 4. How this fits existing doctrine
+50: 
+51: `QA_PLAYBOOK.md` remains the source for evidence discipline, finding severity, gate verdicts and independence. QA-branch ownership (`RRM_PLAYBOOK.md` §7; §9 and §14 below), bounded repair/retest (§11), errata (§4), evidence retention and cleanup rules (§14) are stated in the Factory DocSet itself; the intake attributes earlier pilot guidance to Doctrine Journal v0.3, which was not supplied for this sync. That historical attribution is unverified; current requirements derive from the recorded Director rulings and approved Hub integration, not the unavailable journal. This QAM playbook specifies packaging and execution around those responsibilities.
+52: 
+53: The Director's ruling of 2026-10-14 (RUL-01) makes QAM mandatory for every newly authored module. Earlier pilot-only or optional-QAM language is historical; the paired Factory documents must be reconciled with this rule before landing. Preserve the original RRM-004 records and their dates; do not rewrite the pilot as if v1.0 existed then.
+54: 
+55: Conflicts affecting scope, permissions or grading must be surfaced with the two sources and owner. A folder-level instruction cannot erase higher-priority tool restrictions or repository authority. Documentation synchronization must settle a real conflict rather than tell an agent to ignore it.
+56: 
+57: Frozen AC text remains unchanged. Record approved corrections in the append-only ruling/erratum lane with original observation, exact corrected interpretation, approving authority, date and affected ACs. Plan amendments alone cannot modify a contract.
+58: 
+59: ## 5. Package structure and ownership
+60: 
+61: Instantiate the Hub template set `03_BUILD_METHODOLOGY/_templates/QAM/` as `QAM/` inside each module directory. The template's unfilled fields are authoring prompts, not a launch-ready pack. Resolve paths and module-specific choices before declaring it ready.
+62: 
+63: | Location | Contents and owner |
+64: |---|---|
+65: | Parent module | Canonical scope, acceptance spec, rulings, implementation instructions and Engineer evidence |
+66: | `QAM/CLAUDE.md` and `QAM/AGENTS.md` | Matching QA entry instructions, generated by Architect |
+67: | `QAM/QAM_ENTRY.md` | Module identity, role routing, read order and phase dispatch |
+68: | `QAM/QAM_STATE.md` | Current workflow state, identities, latest receipts and next owner; references authority, never grants it |
+69: | `QAM/QAM_MANIFEST.md` | Engineer's factual completion record and environment needs |
+70: | `QAM/HANDOFFS/ENGINEERING_HANDOFF.md` | Engineer's claims, commands, evidence, limitations and reproduction |
+71: | `QAM/QAM_PREFLIGHT.md` | Executable readiness checks with expected results and owners |
+72: | `QAM/QAM_RISK_REQUIREMENTS.md` | QA Lead standing requirements, Architect risk input, module-specific risks |
+73: | `QAM/QAM_RECON_REPORT.md` | Executor's independent Q1 observations, contradictions and readiness |
+74: | `QAM/QAM_TEST_PLAN.md` | Executor draft, amended and approved by QA Lead |
+75: | `QAM/QAM_APPROVAL.md` | Exact QA Lead decision, approved plan identity and Director release references |
+76: | `QAM/QAM_EXECUTION_REPORT.md` and `AC_EVIDENCE_MATRIX.md` | Executor measurements and per-AC evidence |
+77: | `QAM/FINDINGS.md` | Findings, classification proposals, Lead dispositions and conditional repair routing |
+78: | `QAM/QAM_CLEANUP_REPORT.md` and `QAM_CERTIFICATION.md` | Cleanup evidence and separately attributed QA Lead verdict |
+79: | `QAM/GOVERNING/` | Applicable bodies and source/version/hash provenance |
+80: | `QAM/AUTOMATION/` and `QAM/evidence/` | Approved helpers, instrument controls, durable measurements and attempt history |
+81: | `QAM/HANDOFFS/` | Indexed checkpoint ZIPs, external receipts and review entry notes |
+82: 
+83: Future QA handoffs belong under QAM. Do not leave the real handoff scattered between root documents, temporary directories and chat. Repository-required response/session records may remain at their governed paths; the QAM package must include or clearly index the records required for review. Do not add write access to protected session or recovery files merely to satisfy a template.
+84: 
+85: ## 6. Reliable entry through either runtime
+86: 
+87: Both `QAM/CLAUDE.md` and `QAM/AGENTS.md` must assign the QA Executor seat and refer to the same canonical `QAM_ENTRY.md`. Keep their routing text identical. At the parent module, both entry conventions must route Engineering to the implementation assignment and QA to QAM.
+88: 
+89: A user pointing an agent to QAM and asking it to start authorizes Q1 within the declared scope. A folder path by itself never authorizes Q2, product repair, certification, Git mutation or deployment. The agent reads persisted state before acting:
+90: 
+91: - Ready for recon: introduce the QA role briefly and perform Q1.
+92: - Q1 already complete, awaiting review: return the existing package and decision needed; do not rerun automatically.
+93: - Approved but unreleased: identify the missing Director release.
+94: - Released for Q2: verify the approval/candidate binding and run Q2.
+95: - Stopped or interrupted: report the recorded stop and resume only after its resolution.
+96: - Already completed/certified: show the result and next owner; do not restart testing or cleanup.
+97: - Wrong folder/role: explain the correct module-relative entry and ask only when intent remains ambiguous.
+98: 
+99: The Architect must validate discovery in each supported runtime. Merely creating a file does not prove the runtime loads it. If a runtime does not auto-discover the entry, the documented fallback is one stable instruction to read `QAM_ENTRY.md`; there must be no long custom kickoff prompt containing missing operating rules.
+100: 
+101: ## 7. Architect authoring and Engineer completion
+102: 
+103: ### Before engineering
+104: 
+105: The Architect includes QAM with the module ZIP. It resolves the actual repo/module identity, acceptance references, baseline, protected paths, intended QA branch, target environment, test data, role requirements, toolchain and permitted effects. It specifies evidence outputs, blocking rules, browser coverage inputs, completion duties and handoff destinations.
+106: 
+107: QA Lead standing requirements are reusable. The QA Lead need not review every engineering packet before work begins. The independent, candidate-specific plan approval happens after Q1. Specialist risks can be supplied earlier when requested.
+108: 
+109: ### As Engineering finishes
+110: 
+111: Completing the factual QAM handoff is part of the original engineering assignment, not another trip to the Architect for a handoff-writing prompt. The Engineer records:
+112: 
+113: - baseline and implementation identity; all changed paths and authorized exceptions;
+114: - claimed behavior, self-verification commands/results and evidence links;
+115: - install/build/serve/reproduction commands and working directory;
+116: - environments, prerequisites, migrations, fixtures, roles and credentials needed, without secret values;
+117: - known limitations, unresolved issues, preserved paths and relevant rollback dependencies;
+118: - the meaning of each engineering evidence item, clearly labeled as a claim for independent QA.
+119: 
+120: The Engineer does not fill Q1 findings, Q2 results, the QA Lead decision, or a passed certification template.
+121: 
+122: The final commit SHA does not exist until the Director commits. Before that, use an explicit pending identity, not an invented SHA. After commit, the Q1 entry resolves the candidate from the Director's receipt/read-only Git evidence, checks it against the handoff and records the full SHA. If the manifest needs a factual amendment, the authorized owner records it; the Executor records independent identity in recon. No repeated documentation commit is required just to embed its own SHA in its own bytes.
+123: 
+124: ## 8. Shot 1 — Q1 recon and test plan
+125: 
+126: Q1 is read-only toward product and live business data, with writes only to the declared QA lane and approved transient setup. It may install/build/serve or perform bounded login/logout probes when the preflight explicitly authorizes them. Q1 is not the full QA campaign.
+127: 
+128: Execute the complete permitted readiness assessment in one run. Aggregate independent blockers instead of returning after each missing document when safe work remains possible. Stop immediately before a forbidden or unsafe action; do not continue through a compromised instrument or wrong target.
+129: 
+130: Check:
+131: 
+132: 1. Repository, branch, full baseline/candidate/HEAD, tracked and untracked state, candidate ancestry and complete changed-path inventory.
+133: 2. Contract, errata, scope, protected paths, pre-ruled exceptions, governing versions and Engineer handoff completeness.
+134: 3. Runtime/tool versions, dependency setup, external build prerequisites, free ports, resources and evidence-lane permissions.
+135: 4. Actual resolved target, configuration precedence, service readiness, role/account availability and suitable test data. A target label alone is insufficient.
+136: 5. Browser driver and basic interactions, privacy instrumentation and permitted auth probes where relevant.
+137: 6. Ability to produce a safe review package and recover after interruption.
+138: 
+139: Record unresolved details as GAP/QUESTION/BLOCKED, with owner and exact resolution. Distinguish “endpoint reachable” from “service ready for the required operation.” An HTTP response of any status proves connectivity only. Main-dev, scratch and replica are module-specific approvals; never choose one by habit.
+140: 
+141: Then independently draft the plan from the contract, risk requirements, source, recon and Engineer claims. Every AC gets a test or a separately authorized applicability ruling. Specify expected results, independently derived references, negative controls, evidence, regression scope, ordering and dependencies. Identify what cannot yet be tested.
+142: 
+143: Return one Q1 ZIP under `QAM/HANDOFFS/`, including the recon response, draft plan, identity evidence, contradictions, governing references and relevant supporting records. Stop for QA Lead review. A successful login during recon does not automatically satisfy the later acceptance walk.
+144: 
+145: ## 9. Approval between the shots
+146: 
+147: The QA Lead reviews the actual Q1 package, not just the Executor's summary. The Lead may approve, approve exact amendments, or hold with specific blockers. This is the module-specific steering point: risk order, negative tests, references, browser matrix and regression coverage become final here.
+148: 
+149: Record approval in `QAM_APPROVAL.md` with full product candidate, plan SHA-256, contract/ruling identity, environment identity, limitations, exact amendments, approval source/date and required release conditions. Use a separate approval file to avoid a self-referential plan hash.
+150: 
+151: **Q1b is amendment bookkeeping within this approval checkpoint, not a mandatory third QA shot.** If no amendments are needed, record that and proceed to release. If the Lead supplies exact edits, the Executor applies only those edits and binds the finalized plan; a delegated exact-edit approval must identify the authorized changes and preserve the diff. Material new tests, interpretation changes or unresolved contradictions return to the Lead. Contract errata follow their separate Architect/Director authority.
+152: 
+153: The Director commits the required records and releases Q2 using the established Git policy. A documentation-only successor must be proved from the complete diff, not assumed from its commit message. New product/config/test changes invalidate the earlier candidate binding and require Lead review of the changed scope. Do not confuse tested product SHA, QA execution HEAD and evidence/closeout commit.
+154: 
+155: ## 10. Shot 2 — Q2 continuous QA
+156: 
+157: At entry, verify the approved plan, current full HEAD, product identity, target and release. Recheck readiness items that could have changed. Reuse still-valid Q1 instrument evidence with provenance; repeat setup when reproducibility, changed inputs or the plan requires it. The RRM-004 fresh-install-per-phase rule was module-specific, not an automatic requirement to reinstall everything for every future module.
+158: 
+159: Execute the approved plan in risk/dependency order: independent assertions, required board/regression, browser/API/data checks, negative paths and bounded exploratory checks. Fresh-build evidence must come from a QA-controlled build when the claim depends on compilation. Commands must state their working directory; existence checks prevent empty diffs or greps over nonexistent paths from passing vacuously.
+160: 
+161: Maintain one coherent run. Repair disposable QA helpers within the authorized lane, preserving the failed attempt and verifying the corrected instrument. Never weaken assertions, add hidden retries, skip tests, or change product code to obtain green. An isolated product FAIL is recorded and unaffected checks continue unless the plan's stop conditions require otherwise.
+162: 
+163: Return the matrix, execution report, findings, evidence inventory, helper corrections, remaining untested areas and safe indexed ZIP automatically. Capture start/end times, full identities and the final changed-file inventory. No self-certification.
+164: 
+165: Human judgment remains available. Automate repetitive role/tab/filter/viewport/theme coverage where feasible. Declare required human checks beforehand and group independent ones near the end. If authentication, MFA or a required decision is a prerequisite, request it when needed; never fake an unattended run. Count those touches accurately.
+166: 
+167: ## 11. Stops, findings and repairs
+168: 
+169: Use `STOP-*` identifiers for stops so they cannot be confused with phase names Q1/Q2/Q4/Q5. Each stop records phase, time, identity, affected checks, evidence, owner, required resolution and safe resume point.
+170: 
+171: | Stop | Trigger |
+172: |---|---|
+173: | STOP-IDENTITY | Wrong branch/candidate, unexpected product change or HEAD moved |
+174: | STOP-CONTRACT | Grading depends on unresolved conflicting requirements or authority |
+175: | STOP-ENV | Required target/data/tool/service unavailable or target mismatch |
+176: | STOP-AUTH | Missing/invalid permitted credentials, unexpected identity, or auth outside authorization |
+177: | STOP-AUTHORITY | Required action exceeds approved mutations, cost, data, Git or write-lane scope |
+178: | STOP-INSTRUMENT | Measurement/helper control is untrustworthy; evidence cannot establish the claim |
+179: | STOP-EVIDENCE | Evidence cannot be saved or exported with integrity |
+180: | STOP-PRIVACY | Secret/protected-data exposure or unsafe retained artifact |
+181: 
+182: Do not use a stop as a reason to hide completed evidence. Supply a safe partial package when possible; withhold unsafe exports. Resume from preserved state after resolution rather than silently repeating the campaign.
+183: 
+184: Executor result labels are observations, not release decisions. Normalize PASS, FAIL, BLOCKED, NOT RUN and ADJUDICATE against the local governing vocabulary; where the governing documents use UNTESTED or PASS-PENDING-ADJUDICATION, preserve an explicit mapping. An unresolved discrepancy cannot become PASS through relabeling.
+185: 
+186: The QA Lead classifies acceptance failure, regression, environment/setup issue, instrument issue, contract gap, proven pre-existing defect, follow-up finding, enhancement or observation. Severity follows impact. Inherited conditions require evidence; neither charge them to a new module nor waive a release-blocking issue without the governing disposition.
+187: 
+188: For a genuine product defect: Lead disposition → Architect ruling/bounded repair instruction → Engineer repairs approved paths on the QA line → Director commits → Executor re-pins and performs Q4. Retest covers the repair diff, affected ACs and the full required regression suite. Carry forward only evidence whose applicability is demonstrated and whose original SHA/attempt remains visible. Live validation that the governing policy reserves for the final repaired candidate runs on that candidate. Preserve all prior attempts.
+189: 
+190: RRM-004 demonstrated no product repair round. This repair protocol carries forward the supplied governing doctrine; it is not a capability proved by that pilot.
+191: 
+192: ## 12. Browser work and credentials
+193: 
+194: The approved plan must define role × route/workflow × data/filter state × viewport × theme coverage and explain reductions. Do not hardcode Cyber Pharma's ADMIN/MEMBER or 375px into every app; use the actual contract. Check rendered behavior, effective theme, keyboard/focus, errors, loading/stale/rejection states and relevant access denials. Screenshots supplement assertions; neither screenshots alone nor green jsdom tests prove all browser behavior.
+195: 
+196: Reuse one in-memory authenticated context per role where safe. Separate roles and tenants. Record actual sign-in counts. Reusable regression tests are preferred when applicable; temporary module helpers are valid evidence tools. Promotion into maintained product tests is a separate authorized engineering change.
+197: 
+198: Credential automation is permitted only when the target, identities, runtime and tool policy allow it. The Director creates the declared ignored QA credential file, normally `.env.qa.local`, with module-specific keys. Do not reuse public `NEXT_PUBLIC_*` variables for QA passwords. Prove the file is ignored AND untracked, validate its schema without emitting values, and have only the authorized local helper read values into process memory. Keep credentials out of the app build/server environment, commands, logs, exceptions, screenshots, traces, JSON and ZIPs. A service-role/admin API key is not a substitute for proving a user's login and authorization.
+199: 
+200: If browser tooling requires human credential entry, use that supported flow and record the checkpoint. No automation plan overrides tool restrictions, MFA or access controls. Login/logout can create session/audit activity even when the business test is read-only. Backend, commerce and agent tests can mutate state or trigger costs; specify permitted effects and test targets before execution.
+201: 
+202: Privacy scanners must be validated with synthetic leak fixtures and clean controls. Scan selected export contents and expanded archive members; report safe counts/locations without echoing secrets. Raw authenticated traces can contain sensitive state even after login. Retain only approved sanitized evidence. Avoid persistent browser storage; if unavoidable, declare its temporary path and cleanup before use.
+203: 
+204: ## 13. Automatic review packages
+205: 
+206: Every Q1 return, Q2 return, material stop and repair/retest return must produce a predictable package, subject to privacy. The Director should never ask “which files?” or search temporary folders.
+207: 
+208: Canonical destination: `QAM/HANDOFFS/<MODULE>_<PHASE>_REVIEW_<ATTEMPT>.zip`. Return its absolute upload path, count, SHA-256 and exact decision requested. A byte-identical convenience copy in the Director's Downloads folder is allowed when requested; the module copy remains canonical. Never nest previous ZIPs by default.
+209: 
+210: Each package includes `REVIEW_START_HERE.md`, current identities/state, phase reports, plan and approval as applicable, frozen contract/rulings, necessary governing sources, findings and supporting evidence. Include the actual recon response files, not only a plan or manifest. Include exact certification/approval text when someone is instructed to transcribe it. No reconstructing a missing letter from another seat's summary.
+211: 
+212: Use an explicit inclusion list. `FILE_INDEX.json` records archive path, source path, purpose, byte size and SHA-256 for every member except itself. Verify exact index membership, hashes, safe paths, duplicates, archive integrity and privacy coverage. The external receipt hashes the completed ZIP to avoid circular hashing. Exclude env/credential files, auth state, browser profiles, dependencies, builds, Git internals, disposable mirrors and unreviewed raw sensitive logs. Missing items are listed honestly. Packaging does not require rerunning passed tests.
+213: 
+214: ## 14. Cleanup, certification and closeout
+215: 
+216: Two-shot QA preserves the distinction between product evidence, cleanup readiness and release. Routine safe hygiene—closing owned browsers, stopping owned QA servers, removing declared transient auth state—belongs in the phase's preauthorized exit steps. The final Q5 retention/cleanup decision remains governed by the QA Lead and the applicable cleanup policy: this section, `QA_PLAYBOOK.md` §14 (The Final Environment Reset Rule) and `RRM_PLAYBOOK.md` §10. It is a closure operation, not another full planning/testing campaign. This kit does not silently replace a required post-Gate-Q cleanup checkpoint.
+217: 
+218: At the approved cleanup point: scan values while the credential source exists; resolve/quarantine actual leaks without publishing them; delete the QA credential file and owned auth state under the declared authority; verify removal; pattern-scan retained outputs and the final export. Do not preserve credential values or hashes as evidence. After deletion, do not claim a new value scan happened; record the actual sequence and earlier source hashes. Active editor recovery files and unrelated processes are not automatically deleted. Director password rotation is separate and must be recorded as Director-reported unless independently evidenced.
+219: 
+220: The Lead defines the smallest durable evidence package sufficient for certification, reproduction and audit. Retain failed attempts and useful helpers when justified; remove disposable generated debris. Record precise paths and exclusions. Check current state before cleanup: already absent is verified absent, not newly deleted. Protected recovery/session files require their own authority.
+221: 
+222: The QA Lead issues the governing verdict: PASS, PASS WITH FOLLOW-UP FINDINGS, PASS WITH KNOWN RISK, FAIL or BLOCKED, with scope, candidate and limitations. No accepted requirement may silently become optional; meaningful risk acceptance follows Director authority. Product Gate Q, pilot-process evaluation, cleanup acceptance and Gate D remain separate claims.
+223: 
+224: Release to Architect closeout requires the accepted product verdict, required cleanup, durable records committed and the governed clean-tree condition. The Architect then directs bounded Engineer closeout; the Director commits, merges and pushes. Verify documentation-only successors before extending the recorded identity. Gate Q does not certify a deployed revision; Gate D is separately scoped and authorized when required.
+225: 
+226: ## 15. State and restart discipline
+227: 
+228: Maintain `QAM_STATE.md` as a small index into authoritative records: phase, attempt, candidate, execution HEAD, contract/plan/approval identity, latest package/receipt, stop, next owner and next permitted action. Do not duplicate entire reports. Immutable exports retain their historical statements; later state entries supersede stale “pending” summaries with dated provenance.
+229: 
+230: Before any resumed instruction, compare its prerequisites to disk and current identity. If a cleanup or test already completed, report that rather than running it twice. A stale instruction requiring obsolete bytes must be reconciled by its owner. Docs-only identity changes need a scope check; product changes need a new candidate and retest decision. This rule prevents both unsafe resumption and unnecessary restarts.
+231: 
+232: ## 16. Adapting the QAM to module type
+233: 
+234: | Module | Architect must supply; QA plan must address |
+235: |---|---|
+236: | RRM | Finding/disposition-to-AC mapping, exact rework boundary, removed behavior and preserved paths |
+237: | FFM | Canonical design/data contracts, frontend states, responsive/keyboard/access behavior; real auth/integrations where present |
+238: | BIM | Actual service/schema/API contracts, environment parity, auth/RLS/tenant negatives, data fixtures, allowed writes, rollback and regression |
+239: | TRM | Not yet defined in the Factory DocSet; when defined, it instantiates QAM like every other module type. Do not guess its expansion or assume a test profile from its acronym |
+240: | FIX/FEAT | Original failure/feature contract, changed behavior and nearest regressions |
+241: | ABM, APBM (module types defined on the separate 10X track) | Instantiate QAM under their own track's rules; their methodology is not Factory DocSet doctrine (Director boundary, 2026-10-14) |
+242: 
+243: Every independently authored module gets QAM. A module that contains child modules also has its own QAM for aggregate scope. Parent plans may reference child certificates with candidate provenance; they cannot treat child PASS as proof that integration works. Avoid repeating unchanged child coverage without reason, while preserving required parent regression. Large phases may have bounded internal stages under one approved Q2 plan; duration and genuine stops are not hidden to preserve a slogan.
+244: 
+245: ## 17. Metrics and evidence limits
+246: 
+247: Measure preparation, Q1, review/wait, Q2 execution, packaging, repair and cleanup separately. Record Director touches by purpose; record helper corrections, product repairs, stops, retries, skipped checks and remaining gaps. Zero interventions is a target, not a reason to suppress an access problem.
+248: 
+249: RRM-004 provides evidence that Q2 ran continuously with zero Director interventions and automated role sign-ins. Its 10m08s measurement body and 17m21s reported release elapsed exclude earlier preparation and Q1 resolution. Its overall pilot was PARTIAL SUCCESS because Q1 raised a contract stop. Preserve all three facts.
+250: 
+251: This v1.0 generalizes the operating process under the Director's mandate. RRM-004 alone does not validate every BIM, TRM, ABM/APBM, runtime, destructive workflow, deployment or repair scenario. New module-specific checks are required; the five-seat process remains in force.
+252: 
+253: ## 18. Definition of a conforming module pack
+254: 
+255: A module pack is ready when QAM is present from authoring; both runtime entry files route correctly; the authoritative contract and all required sources resolve; Engineer completion duties are explicit; target/effects/credentials and write lanes are declared; Q1 produces recon plus a draft plan and ZIP; QA Lead approval is mandatory before Q2; Q2 runs the approved plan and exports results; repair is conditional; cleanup and closeout have owners; no execution or certification result is prefilled; and the Director never has to assemble an ad hoc QA package.
+256: 
+257: Older lifecycle diagrams, folder trees, role tables, prompts and handoff templates must be reconciled with this rule and verified before the sync reports completion. A later contradiction is recorded and routed for an attributable authority ruling before affected doctrine is changed; DocSet Sync propagates the approved resolution.
+258: 
+259: ## Version History
+260: 
+261: | Version | Date | Change |
+262: |---|---|---|
+263: | 1.0 | 2026-10-18 | New doc entering Hub: the Director-approved QAM playbook v1.0 (ruling RUL-01, 2026-10-14; source SHA-256 `97e111e2…5c897`) proposed with integration substitutions S1 (Hub header, provenance, Pairs-with), S2 (retroactivity: newly authored modules), S3 (canonical `QA_PLAYBOOK.md` name; journal citations replaced by Hub rules), S4 (template set home `03_BUILD_METHODOLOGY/_templates/QAM/`), S5 (cleanup policy citations), S6 (TRM placeholder; ABM/APBM one line; parent-module sentence generalized), S7 (synchronization statement), S8 (snapshot identity, DEC-17). Template set installation is proposed; verify the installed translations separately before recording completion. [IN-2026-10-15-23 … IN-2026-10-15-36 (QAM-01…14); WF-05; WF-07; RRM-05; RUL-01…RUL-07; AD-01]; current correction pass: MC-01…14; RUL-01, RUL-04, RUL-06 |
+
+FILE 03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md
+...
+1: # DEPLOYMENT PLAYBOOK
+2: ## Deployment, Promotion, Rollback and Git / Cloud Authority — the Owning Document
+3: 
+4: > **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED (sections marked OPEN are not doctrine until ruled)
+5: > **Tier:** 3 — Build Methodology · **Pairs with:** `QA_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `BIM_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `QAM_PLAYBOOK.md`, `RRM_PLAYBOOK.md`, `RECON_QUESTIONNAIRE.md`, `APP_FACTORY_SKILLS_PLAYBOOK.md`
+6: > **Owner:** Stark Industries App Factory
+7: > **Provenance:** Created by the Director's placement ruling of 2026-10-14 (RUL-06) as the owning document that the Factory lacked (certified finding FC-011). Ruled content: the module Git flow (RUL-02) and the deployment-exclusion rule (RUL-03). Source material for the sections still marked OPEN: the DevOps operating model of 2026-08-24 (harvest source SRC-W07, status REVIEW; preserved in this run's intake snapshot); its claims are not adopted here.
+8: 
+9: ---
+10: 
+11: ## 1. Purpose and Status
+12: 
+13: This document owns deployment, staging-to-production promotion, rollback and the Git / cloud authority rules of the Factory. Before it existed, deployment gates and checklists were scattered across `QA_PLAYBOOK.md` (Gate D), `BUG_FIX_PLAYBOOK.md` §12–§13, `BIM_PLAYBOOK.md` §6–§7 and the Blueprint's Phase 5 with no owning doctrine (FC-011).
+14: 
+15: Each section below carries one of two statuses:
+16: 
+17: - **RULED** — Director-ruled doctrine, in force.
+18: - **OPEN** — a named gap. An OPEN section records the question, its owner and what exists in the sources; it grants no authority and must not be cited as a rule. Open items are closed only by a recorded Director ruling landed through DocSet Sync.
+19: 
+20: ## 2. Seats and Authority — RULED
+21: 
+22: - **Director** holds release authority and performs project-module Git mutations under RUL-02. QA seats do not mutate product or Git. Existing BIM cloud-zero restrictions remain in force in their declared context. Existing context-specific permissions, including any recorded FFM staging permission, remain intact; missing DevOps assignments and platform procedures remain OPEN under DEC-18; this section grants no new cloud permission.
+23: - **DevOps / Deployment Operator** is the responsibility named in `QA_PLAYBOOK.md` §4: deploys the approved revision, records deployment identity, maintains rollback capability, supports environment diagnostics. One person may hold this seat together with the Director seat; the responsibilities remain distinct.
+24: - **QA owns the verification verdict; the Director owns the release decision** (`QA_PLAYBOOK.md` §4). Gate Q (pre-deployment) and Gate D (deployed-environment) are QA verdicts with their own evidence; neither is replaced by a successful deploy command, a healthy container or a green build (`QA_PLAYBOOK.md` §13).
+25: - **DevOps Architect seat occupant** — OPEN (see §8, O-2).
+26: 
+27: ## 3. Context × Action × Seat Matrix
+28: 
+29: | Context | Action | Seat that acts | Status |
+30: |---|---|---|---|
+31: | Project module engineering (FFM, BIM, FIX, FEAT, RRM) | Build, test, self-verify; hand the Director file lists and suggested commit messages | Engineer (read-only Git inspection allowed; Git mutations Director-only; existing context-specific cloud permissions retained) | RULED (`BIM_PLAYBOOK.md` §7) |
+32: | Project module engineering | Commit per concern to the module branch; push | Director | RULED (`BIM_PLAYBOOK.md` §6) |
+33: | Project module QA | Create `qa/<module-branch>` **at the completed engineering candidate commit** after the engineering handoff; commit on it; merge it into `main`; push `main` | Director | RULED (RUL-02, 2026-10-14) |
+34: | Project module QA | Authorized rework on `qa/<module-branch>` only when ruled; never on a transfer back to the engineering branch | Engineer | RULED (RUL-02) |
+35: | Project module QA | Independent testing on `qa/<module-branch>`; no Git mutation | QA Executor | RULED (RUL-02; `QAM_PLAYBOOK.md` §3) |
+36: | Project module QA | Certify the governed candidate; approve cleanup and retention | QA Lead | RULED (RUL-01, RUL-03) |
+37: | Project module closeout | Closeout instruction; bounded closeout; commit, merge, push | Architect → Engineer → Director | RULED (RUL-02, RUL-03) |
+38: | Doctrine Hub synchronization (`app-factory-docs-v1`) | Run branch, commits and the one authorized push inside the Hub only | Director-only Git mutations for this sync (RUL-15); read-only Git inspection is allowed. Historical Hub exceptions do not override this assignment | RULED (Operator ruling 2026-08-05, reconfirmed 2026-09-14; cited, not restated) |
+39: | Cloud contexts beyond an existing explicit restriction | Deploy, promote, roll back, change infrastructure | Per an attributable context-specific authorization; no general grant here | OPEN under DEC-18 (§7–§8) |
+40: | FFM runs | Retain the recorded FFM staging permission; verify its bounds before any action | — | OPEN (§8, O-1) |
+41: | Any context | Cloud columns of this matrix (who prepares the package, who verifies readiness, who executes which phase) | — | OPEN (§8, O-1) |
+42: 
+43: Project `--no-ff` merge examples in pilot records are project policy, not Hub policy. After a merge on the remote, the Director refreshes local `main` before starting a new branch; a GitHub merge is not local synchronization (`RRM_PLAYBOOK.md` §10).
+44: 
+45: ## 4. Deployment Exclusion of `agent_docs/**` — RULED
+46: 
+47: Module packs, QAM folders, QA evidence and session records live under the project's `agent_docs/` tree (RUL-03). **Their exclusion from every built and deployed artifact must be explicitly enforced and verified; the directory name alone is not proof of production exclusion** (Director ruling RUL-03, 2026-10-14).
+48: 
+49: Enforcement covers three surfaces, each verified separately:
+50: 
+51: 1. **Compile and test scope** — `tsconfig` `exclude` and the test runner's scope exclude `agent_docs/**` (`RECON_QUESTIONNAIRE.md` Q9.1–Q9.2).
+52: 2. **Build and deploy inputs** — the platform's ignore rules exclude `agent_docs/**` from the build context and the deployed bundle: `.dockerignore` for container builds, `.gcloudignore` for Cloud Build, `.vercelignore` or the platform's equivalent for Vercel-style deploys (`RECON_QUESTIONNAIRE.md` Q9.4).
+53: 3. **The artifact itself** — the built image, bundle or deployed revision is inspected for any `agent_docs` path; the inspection command, working directory, exit code and output are recorded as EVIDENCE.
+54: 
+55: Where the verification is performed: at module packaging (Architect declares the exclusion mechanism in the module manager), at QA readiness (QA Executor preflight), and at Gate D (Step D1 evidence names the inspected artifact). A pack that cannot show the three surfaces excluded is not deploy-ready.
+56: 
+57: Revised [deployment workflow and stick diagram](_workflows/FFM_DEPLOYMENT.md) supersede the original August deployment picture; platform-specific procedures and new permissions remain outside this run.
+58: 
+59: ## 5. Release Identity and the Gate D Interface
+60: 
+61: Gate D is defined in `QA_PLAYBOOK.md` §13 and is not restated here. Step D1 identifies the deployment (repository, branch, commit SHA, build ID, image digest, revision, environment, URL, time); Gate D verifies the actual deployed revision; Gate Q never certifies a deployed revision (`QAM_PLAYBOOK.md` §14).
+62: 
+63: RUL-10 (2026-10-16) approves the common requirements below, without granting new deployment authority: Record the identity chain repository → commit → build or image → deployed revision → environment → route/domain as applicable. Preserve the tested-product equivalence check through documentation-only successors (proved from the complete diff, not from a commit message). Do not generalize "redeploy runs the last phase only" without checking changed configuration, secrets, permissions, migrations and deployment prerequisites. A traffic rollback plus Git revert does not restore data or external effects; every deployment names a rollback or recovery plan suited to the changed surfaces, its operator and its evidence.
+64: 
+65: ## 6. Hub → Project Distribution and Pinning
+66: 
+67: RUL-14 (2026-10-16): identify governing snapshots by canonical document name, header version and Hub commit. Preserve an intentional approved project pin until an attributable update. Declare the actual project location; no universal landing path or release tag is required. Route genuine conflicts to the Director with both identities recorded.
+68: 
+69: ## 7. Platform Profiles — OPEN
+70: 
+71: No platform procedure is Factory doctrine yet. The August DevOps operating model (SRC-W07) proposes a Cloud Run profile (`init-app.sh`, `cloudbuild.yaml`, `Dockerfile`, `deploy.sh`, a checklist) and two platform postures; `APP_FACTORY_SKILLS_PLAYBOOK.md` §14 names the deployment skill family. These are source claims and existing tools, not adopted rules: version-sensitive commands must be verified at implementation time, and profile-specific filenames are not imposed on Vercel or Python deployments. Adoption of any profile is the Director's decision (DEC-18 remainder).
+72: 
+73: ## 8. Open Items Register — OPEN (not doctrine)
+74: 
+75: | ID | Open item | Owner | Source of the gap |
+76: |---|---|---|---|
+77: | O-1 | DevOps authority: the cloud columns of the §3 matrix; "may the Engineer deploy to staging in FFM runs?"; Cloud Run as one platform profile | Director (Architect advises) | DEC-18 remainder; the reported DevOps Architect ruling of 2026-08-23 was not supplied (CL-13) |
+78: | O-2 | DevOps Architect seat occupant | Director | SRC-W07 F-2 (deliberately unassigned) |
+79: | O-3 | Staging → production promotion doctrine | Director | SRC-W07 F-1 |
+80: | O-4 | Monitoring / incident detection after deploy | Director | SRC-W07 F-3 |
+81: | O-5 | Non-Next.js deployment packages (Python / ADK services) | Director | SRC-W07 F-4 |
+82: | O-6 | Gate D mapping on client platforms beyond Vercel | QA Lead / Director | SRC-W07 F-5 |
+83: 
+84: An OPEN item is closed only by a Director ruling recorded and landed through DocSet Sync; until then no module may cite this section as authority for a deployment action.
+85: 
+86: ## 9. Version History
+87: 
+88: | Version | Date | Change |
+89: |---|---|---|
+90: | 1.0 | 2026-10-18 | New doc entering Hub: owning document for deployment and Git / cloud authority (RUL-06; FC-011). Ruled content: seats and authority (§2), the context × action × seat matrix's ruled rows (§3; RUL-02; Hub D5 cited), deployment exclusion of `agent_docs/**` with three verified surfaces (§4; RUL-03). Gate D pointer (§5). Distribution and pinning (§6, RUL-14). Platform profiles and the DevOps remainder recorded as OPEN (§7–§8; DEC-18). [FC-011; FC-012; FC-088; IN-2026-10-15-08 … IN-2026-10-15-10 (WF-08, WF-09, WF-10); RUL-02; RUL-03; RUL-06]; current correction pass: MC-01…14; RUL-02, RUL-03, RUL-06, RUL-10 |

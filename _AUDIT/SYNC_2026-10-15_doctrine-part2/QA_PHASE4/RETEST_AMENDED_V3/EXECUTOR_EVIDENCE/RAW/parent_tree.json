@@ -1,0 +1,4627 @@
+{
+  ".github/workflows/doctrine-lint.yml": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d47be8e7ec6afaab1d358e560e145a5f0ac0ceac"
+  },
+  "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e6948c1eeb1311c9ef558d1ee9775ab59cfd4745"
+  },
+  "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "fedb1ecb37743c681725651e50e0baee81752215"
+  },
+  "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ec661c70d544d1775dcec4ef4a4a3dc94ec4f0f7"
+  },
+  "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "eaa11d624ab5bb470bec8b822fb65b788d9f8c8f"
+  },
+  "02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "b5ff17ab35599ff5750b6dc13aa1c28e87c53d07"
+  },
+  "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4554c12bc01be5ce3012dd75588a9e1615b16273"
+  },
+  "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "6053117edade1c100510cdb06c867347d6b4ea9e"
+  },
+  "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e15d3150ca90208288dc8c67a1bc37e437cfebee"
+  },
+  "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "483887fe6a876381a157d9c2184c19558620516f"
+  },
+  "03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "37fa39d5ed99d08b04f1cf447be70aa0e2893edb"
+  },
+  "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "38d3a2e5e088e7792e79917d28eaa43661b4f3d6"
+  },
+  "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md": {
+    "mode": "100755",
+    "kind": "blob",
+    "blob": "4b3fbf8dafb0cd9084ed78e03052af65acc66ec3"
+  },
+  "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e14c45c002edcac201a29542ff2ab2ea552925c7"
+  },
+  "03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ca0638694485981ea7338471339bb25cbb27f791"
+  },
+  "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2eeb03d1eda51367840bd08e8c1344f26f992987"
+  },
+  "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "55f85e55661b91ff0f7f77c0b41a4bc0bfeb5d3f"
+  },
+  "03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d94a6c25c150661f95b5248e1e621571d21e58ee"
+  },
+  "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "7cf2be5ef6c4b1af91da3b17423debf922b1e6a5"
+  },
+  "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md": {
+    "mode": "100755",
+    "kind": "blob",
+    "blob": "0415ff4e0962dd98c9fd69818d0822b288f84651"
+  },
+  "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "8af7331fb417b8074da2f624e953611681ab7c30"
+  },
+  "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "7474ff2f4e490870c9e472f75ed2f99bb5b6bcb2"
+  },
+  "03_BUILD_METHODOLOGY/_assets/workflows/BIM_WORKFLOW.svg": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3163f58c5325b619f788aabb97578df90b55675a"
+  },
+  "03_BUILD_METHODOLOGY/_assets/workflows/FFM_CREATION.svg": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "41a98337556c48fceae757b38120ec54de67620d"
+  },
+  "03_BUILD_METHODOLOGY/_assets/workflows/FFM_DEPLOYMENT.svg": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "02a1424d779c0b2d3a73fb593eac4587be364fff"
+  },
+  "03_BUILD_METHODOLOGY/_assets/workflows/FFM_EXECUTION.svg": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3579e77251ff6975c7ac97ecd58fc317bb709f72"
+  },
+  "03_BUILD_METHODOLOGY/_templates/QAM/AC_EVIDENCE_MATRIX.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "6ab74560e3e239bf67906741b44ca7a7ca7a2b82"
+  },
+  "03_BUILD_METHODOLOGY/_templates/QAM/AGENTS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f101d471eac37a762edc84876bec67d9b11bfdd5"
+  },
+  "03_BUILD_METHODOLOGY/_templates/QAM/AUTOMATION/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d7db60a149766c0bef12c4916151b5876631aa8d"
+  },
+  "03_BUILD_METHODOLOGY/_templates/QAM/CLAUDE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "b9427577c9423d9873e43ea3e07f53324540d91d"
+  },
+  "03_BUILD_METHODOLOGY/_templates/QAM/FINDINGS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "5336c8f84812eff7aec8528d26c993e0471afb05"
+  },
+  "03_BUILD_METHODOLOGY/_templates/QAM/GOVERNING/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f8f0ebe4e139b90833a294005ad2f55085a28e5b"
+  },
+  "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/ENGINEERING_HANDOFF.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "19447023b98bca204da03b5b910d010d70a0f87b"
+  },
+  "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/FILE_INDEX.template.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4bb9f16ef54926b5c193144392bb459966c16de8"
+  },
+  "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "697daed5176888240605b31c90244ad860e996e3"
+  },
+  "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/REVIEW_START_HERE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2df4407ef39c90b469719963aebe43375b777763"
+  },
+  "03_BUILD_METHODOLOGY/_templates/QAM/PARENT_ENTRY_ROUTING.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "061fde1559b68dd322fd44fee48608e91724589f"
+  },
+  "03_BUILD_METHODOLOGY/_templates/QAM/QAM_APPROVAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2034c4fb44d9cfc857425fa9e1436776f8007e30"
+  },
+  "03_BUILD_METHODOLOGY/_templates/QAM/QAM_CERTIFICATION.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "1a55400f83bd3df84e319bcf255ce908639fc41c"
+  },
+  "03_BUILD_METHODOLOGY/_templates/QAM/QAM_CLEANUP_REPORT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d9255f1d2c0fd98922bd0737134333f4f144a570"
+  },
+  "03_BUILD_METHODOLOGY/_templates/QAM/QAM_ENTRY.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "892ae63364f2e7bef3a3a06c20ed604d3339cec5"
+  },
+  "03_BUILD_METHODOLOGY/_templates/QAM/QAM_EXECUTION_REPORT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "448ec3e9ac5c34fdecb44a4882acc1c793201082"
+  },
+  "03_BUILD_METHODOLOGY/_templates/QAM/QAM_MANIFEST.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "5f86797b0d62aafb068bdcb4bc702087302b0d4e"
+  },
+  "03_BUILD_METHODOLOGY/_templates/QAM/QAM_PACKAGING.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "75f90808e9707ef1fd8095cd6ff2d843f76c24fa"
+  },
+  "03_BUILD_METHODOLOGY/_templates/QAM/QAM_PREFLIGHT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "fc41a43585530d56f12f9add6184bb1ef16a122f"
+  },
+  "03_BUILD_METHODOLOGY/_templates/QAM/QAM_RECON_REPORT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "71838c9abee56d689000c676892b47572b675a4b"
+  },
+  "03_BUILD_METHODOLOGY/_templates/QAM/QAM_RISK_REQUIREMENTS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "bc76df7f2d55b5a7b19477aa1d4bd26ae2a28d4b"
+  },
+  "03_BUILD_METHODOLOGY/_templates/QAM/QAM_STATE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9adb95625eb4ada3f527d58c1f30c232bcea2645"
+  },
+  "03_BUILD_METHODOLOGY/_templates/QAM/QAM_TEST_PLAN.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4ac351a997be01f333f307d1c4a31aa5c44f398f"
+  },
+  "03_BUILD_METHODOLOGY/_templates/QAM/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "26fdfd56bedfc9824ee87d74abc2b9b897e850cf"
+  },
+  "03_BUILD_METHODOLOGY/_templates/QAM/evidence/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e5dfedcfbfa4545f4609f4ce9bbf743f5331d31c"
+  },
+  "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "62266bcb6a8d6d369de059980df7101aaacffff0"
+  },
+  "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "1af6295630d3ef126984a15983f42419cb4764a0"
+  },
+  "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3cef7816ea42d15319286bb337147debf16e7fe8"
+  },
+  "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d57a003a8586411cab8a37c663e4820cb9c6da56"
+  },
+  "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "76cc624c5a598d1c404246336e00e909cb6ce9f7"
+  },
+  "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d661a82006e700ae4c408009de785263a9a8e7c8"
+  },
+  "04_REFERENCE_MANUALS/AUTH_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "423858f8f21dec47dfdf7c5f568e9b5a06d2fb46"
+  },
+  "04_REFERENCE_MANUALS/DATABASE_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "71bc2a36318dad556dd285b1dd4446de6241a278"
+  },
+  "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "5c201cbe1dbab0a2401ad748235550a7d79aca6b"
+  },
+  "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "cac8f71f66e5997e4558a12acf305674052e83df"
+  },
+  "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e4fff7e2c1831595c1af8368fa31893fb027b6ec"
+  },
+  "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "eed05abf140cc6059892e9749d62a2d7ef782876"
+  },
+  "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2001d1e9134f1070b2cd03056e32848abb46eb16"
+  },
+  "05_DESIGN_SYSTEM/THEME_LIBRARY.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "1794500ca5cdd25b32eb10cdab1301db1c2328f1"
+  },
+  "05_DESIGN_SYSTEM/THEMING_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2c828cf9cc0422ee6c030a074847e2d20e71a026"
+  },
+  "05_DESIGN_SYSTEM/TOKEN_FILE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "17a998b1cd8536f4b2364b3fd74ae8405f8c3955"
+  },
+  "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "591d26a63f5c405e623a66dd41740b78e76b500f"
+  },
+  "10x Lab/ABM_PLAYBOOK_v1_0.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d6a36f9c6f15a9c7cf9d20eb845be1e9fc47cde3"
+  },
+  "10x Lab/APBM_PLAYBOOK_v1_0.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "750c487fd4b38d817c68131675ee63dab46b5669"
+  },
+  "CHANGELOG.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "81d8e4a1db06396e14fc6fdf62e70afd6c379fda"
+  },
+  "CLAUDE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "6dd53af7087dccced2b454d296422601a38f4c12"
+  },
+  "MANIFEST.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "bab9f4904f67ad08cc31a8274dcdb469bad8d7e0"
+  },
+  "README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "bc6a52b0bf24c7143c9b2466c86d90f034e6b38c"
+  },
+  "RECOVERY.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4edb2d977cb29b6bb6175e1270c43a166ab2f51f"
+  },
+  "_ARCHIVE/.gitkeep": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+  },
+  "_ARCHIVE/API_AND_SERVICES_MANUAL_v1_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e86fbef72ab2f84d032baab22d21c51f3423b48f"
+  },
+  "_ARCHIVE/APP_ARCHITECTURE_MANUAL_v1_3.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "5dfe67eb93088b8e7f52f59602734ee05cc327ff"
+  },
+  "_ARCHIVE/APP_FACTORY_BLUEPRINT_v2_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2a499a9c0b2099005c12724923ae27cf5239cfe1"
+  },
+  "_ARCHIVE/APP_FACTORY_SKILLS_PLAYBOOK_v1_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ba8d795b651eb61b650af580cef24c94048b9d1a"
+  },
+  "_ARCHIVE/ARCHITECT_PLAYBOOK_v2_2.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3a11e19df20127f291df5408bbcff24e97245edd"
+  },
+  "_ARCHIVE/ARCHITECT_QUESTIONNAIRE_v2_2.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "15780306c6ad4dc2b5b3ab8d393d7d86a0643852"
+  },
+  "_ARCHIVE/AUTH_MANUAL_v1_3.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a8039dbe0e71aade431110db296d7b7fb80a825c"
+  },
+  "_ARCHIVE/AUTH_MANUAL_v1_4.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "983ae455511f93759f4ced0ca7756d7951113d43"
+  },
+  "_ARCHIVE/BIM_PLAYBOOK_v1_0.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f65445a388cabe6c6689f1b6f17ff1f5224bbf04"
+  },
+  "_ARCHIVE/BUG_FIX_PLAYBOOK_v0_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "78f27b931171b10bddbe2d368b8b752318a971ac"
+  },
+  "_ARCHIVE/BUG_FIX_PLAYBOOK_v1_0.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c8718f0e6178e898ffbcfd4332ff63b0a044c933"
+  },
+  "_ARCHIVE/COMPONENT_REGISTRY_v1_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "783429f99cc501f28323423c5992429a6e459a44"
+  },
+  "_ARCHIVE/DATABASE_MANUAL_v1_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4e11795600a19b928300f9248937da68adf5780e"
+  },
+  "_ARCHIVE/DESIGNER_PLAYBOOK_v2_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "49955e48ac5f518aff304a999c02dc54d766e89e"
+  },
+  "_ARCHIVE/ECOMMERCE_AND_PAYMENTS_MANUAL_v1_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "048e0f8c746d336921913e9362205e2bbdc95f3b"
+  },
+  "_ARCHIVE/ENGINEER_PLAYBOOK_v1_2.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2be9f7787481018b5ddafa721eea1220e88aff7e"
+  },
+  "_ARCHIVE/FEAT_PLAYBOOK_v1_0.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e5c2c9f6dbe588eff5982734e2927cb3e126f053"
+  },
+  "_ARCHIVE/FFM_PLAYBOOK_v1_2.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9c8fc35c3f66d7ffe6609c995a3330d090153976"
+  },
+  "_ARCHIVE/FRONTEND_BUILD_PHASE_PLAYBOOK_v1_2_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f37f79514ff721dda73c1518b8bd6c671070e66e"
+  },
+  "_ARCHIVE/FRONTEND_BUILD_PHASE_PLAYBOOK_v1_2_2.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3edb88c3149a9a6d9a7c760471f30956053c9d60"
+  },
+  "_ARCHIVE/FRONTEND_FIRST_PLAYBOOK_v1_1_3.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c8516c8b8b3950e4b2d08d0bb2c112d7136d8f30"
+  },
+  "_ARCHIVE/GLOBAL_DESIGN_SYSTEM_HANDBOOK_v1_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "885db18780530951a49a94fca78119858d433edf"
+  },
+  "_ARCHIVE/HANDOFF_PACKAGE_PLAYBOOK_v1_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d261b4cce6ac7f7c6cf66dae40c8835ce949be40"
+  },
+  "_ARCHIVE/QA_PLAYBOOK_v0_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a0596492244cf4893f787fcafc55aa8267902ce6"
+  },
+  "_ARCHIVE/QA_PLAYBOOK_v1_0.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "bb41260f6b6f94372a682f04b313a451f2b3c4b1"
+  },
+  "_ARCHIVE/QA_PLAYBOOK_v1_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "07f50ec1c1f005c1fdc9976d28a576a115f40669"
+  },
+  "_ARCHIVE/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "28c91c3ee8231516f9f28ab1b6653ee72915ff8c"
+  },
+  "_ARCHIVE/RECON_QUESTIONNAIRE_v0_5.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "87d8e16e6c5791954f173d564fc83557939b32ad"
+  },
+  "_ARCHIVE/SOFTWARE_FACTORY_PLAYBOOK_v1_2.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "57124afcbc867ddc0f65cce3b8acbb44111904df"
+  },
+  "_ARCHIVE/SOFTWARE_FACTORY_PLAYBOOK_v1_3.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0dcf211e1ba82c811f5d20dc220cbf337ec594b7"
+  },
+  "_ARCHIVE/STARTER_KIT_HANDBOOK_v1_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "6ed6fd2ff14cf9351e00b4c038d331bcd64fa55e"
+  },
+  "_ARCHIVE/STATE_MANAGEMENT_MANUAL_v1_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c09aa3368b70ce7feaffe1000081ba0d0a45edf0"
+  },
+  "_ARCHIVE/STATE_MANAGEMENT_MANUAL_v1_2.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "27b883e21cebce11f3b3e134d8557d82b528a6fe"
+  },
+  "_ARCHIVE/STRIPE_SUBSCRIPTIONS_PLAYBOOK_v1_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a119d65163e5402e87a055527cc2ec24a5432797"
+  },
+  "_ARCHIVE/TESTING_PLAYBOOK_v2_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ae67dcc8c4aebff0b6661e455de6d391a4530659"
+  },
+  "_ARCHIVE/THEME_LIBRARY_v1_2.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f12f2e416ab14622302664c2ca1f8a9e0babeed5"
+  },
+  "_ARCHIVE/THEMING_MANUAL_v1_2.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "1c18038aa6c10a46443e6dd59645d6762ad0c6e7"
+  },
+  "_ARCHIVE/TOKEN_FILE_v1_2.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9712416e644b9f7e7f8c6a8f65e26f390b2c008d"
+  },
+  "_ARCHIVE/UI_UX_BUILDING_MANUAL_v1_4.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "138fedce96704f360a0c9c6c7a715d88403a7956"
+  },
+  "_AUDIT/DOCTRINE_PROMOTION_2026-08-04_NAVBAR_SAGA.md": {
+    "mode": "100755",
+    "kind": "blob",
+    "blob": "0b45389350228a4dc1d162948b1cefca07a1c57e"
+  },
+  "_AUDIT/FINALIZATION_REPORT_2026-08-10_FACTORY_MODULE_DOCTRINE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "7e6767ca8633d9c31d29d0198fbff481b67f4166"
+  },
+  "_AUDIT/FINDINGS_LOG.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0776e0e8522d4668c6f7360838dee4850cbc569d"
+  },
+  "_AUDIT/GRAND_AUDIT_SUMMARY.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "7acd0a21a98066313dda545ab80f4153d1a4dec7"
+  },
+  "_AUDIT/RECONCILIATION_REPORT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "12a9b58e2305cc903a32323c46d924b2161599b4"
+  },
+  "_AUDIT/RECON_WAVE0.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f1df7f0e9b42d2ab15e269eccdeaae38e7337a11"
+  },
+  "_AUDIT/REVIEW_001_AI_APP_FACTORY_BLUEPRINT_v2_0.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "05ce05b142d6e22c117b4ae6557a956f6e90096d"
+  },
+  "_AUDIT/REVIEW_002_SOFTWARE_FACTORY_PLAYBOOK_v1_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "41a06308009951033bf295239e54004ced1af960"
+  },
+  "_AUDIT/REVIEW_003_STARTER_KIT_HANDBOOK_v1_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2f98937e7660af737fd95c55d90be1402acca103"
+  },
+  "_AUDIT/REVIEW_004_ARCHITECT_PLAYBOOK_v2.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "7efab531ebc38cc0ec722f799f97cea3cd621d0d"
+  },
+  "_AUDIT/REVIEW_005_ARCHITECT_QUESTIONNAIRE_v2_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "1315c7a3a311a4310abb9fe6a79d7a2dc1f4c3e2"
+  },
+  "_AUDIT/REVIEW_006_RECON_QUESTIONNAIRE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3dc91361b12db30033a1b1ded8fd4602c39883fd"
+  },
+  "_AUDIT/REVIEW_007_DESIGNER_PLAYBOOK_v2_0.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c92211ec922c20ff72d1c0da84f07b3cd995e2f0"
+  },
+  "_AUDIT/REVIEW_008_ENGINEER_PLAYBOOK_v1_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "51d027c277b5e5e8d9e355710abd7461dd97bba7"
+  },
+  "_AUDIT/REVIEW_009_HANDOFF_PACKAGE_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "6ee3100b94738398d5d4d8d8a2ad59353cb3df21"
+  },
+  "_AUDIT/REVIEW_010_FFM_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "76f15790e23a5bb27bddc4f068f674fb04d849e0"
+  },
+  "_AUDIT/REVIEW_011_FRONTEND_FIRST_PLAYBOOK_v1_1_2.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d315ffe2dda4a2cdc4fc4fba731fe586f71db37e"
+  },
+  "_AUDIT/REVIEW_012_FRONTEND_BUILD_PHASE_PLAYBOOK_v1_2.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "775b18fcd3f28934af5bcdaca4f23f0e22082655"
+  },
+  "_AUDIT/REVIEW_013_TESTING_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "6d09eb712f220f15d8a4d23c0455323e89238b76"
+  },
+  "_AUDIT/REVIEW_014_APP_FACTORY_SKILLS_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "acc8307c1c9d25de20e8cab189e9e38e6b0dcf3c"
+  },
+  "_AUDIT/REVIEW_015_APP_ARCHITECTURE_MANUAL_v1_2.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ac815b0c2bbaab7989e0f1e659dd6a2d34cd1d77"
+  },
+  "_AUDIT/REVIEW_016_STATE_MANAGEMENT_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "abf5fdb90e6f1250333183a52f29305cd49d334b"
+  },
+  "_AUDIT/REVIEW_017_API_AND_SERVICES_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3db0e38a4829a84a21aaa96d058f80e14f99b4ac"
+  },
+  "_AUDIT/REVIEW_018_DATABASE_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9fa924c1843fc35cc846ac44bb4d88a97bfff01e"
+  },
+  "_AUDIT/REVIEW_019_AUTH_MANUAL_v1_2.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "628908e0888669c60a7be4a8c2bdab20ad0df8ee"
+  },
+  "_AUDIT/REVIEW_020_ECOMMERCE_AND_PAYMENTS_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a51ccdb0463f6593c305610d29199d8440951a43"
+  },
+  "_AUDIT/REVIEW_021_STRIPE_SUBSCRIPTIONS_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "fd6e44a337c042b0c4a28d27e8ab1c614ff878db"
+  },
+  "_AUDIT/REVIEW_022_GLOBAL_DESIGN_SYSTEM_HANDBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "02c3ea51a055708f8420b62c742b20a1650c334c"
+  },
+  "_AUDIT/REVIEW_023_UI_UX_BUILDING_MANUAL_v1_3.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "cb547eb93952bd654252413ebb2f2e65d9e10a16"
+  },
+  "_AUDIT/REVIEW_024_THEMING_MANUAL_v1_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "6618a74584019217bd6600b29525b59b37009b84"
+  },
+  "_AUDIT/REVIEW_025_THEME_LIBRARY_v1_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "dfd6b04487fd24cdebab876f32f35432b840a134"
+  },
+  "_AUDIT/REVIEW_026_TOKEN_FILE_v1_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ff251bc8198979439d266563ace14e6f2ced5918"
+  },
+  "_AUDIT/REVIEW_027_COMPONENT_REGISTRY_v1_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4d1e7b1af96779be19aac7d8a40943b0c9d4b98d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/AMENDMENT_IDENTITIES.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "34c74d29e35a1e202f0f5303f88d8f6fc21eb7e6"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/AMENDMENT_V1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e68e5549b935157f6a894ecc4af98cf3c09914d3"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/AMENDMENT_V1_EDITS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "954e2541a0f01b85bd56979bd3055333036cfcb6"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/D4_STARTER_KIT_METADATA_NORMALIZATION.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ce01aa7afc9d63a2ad6ba053823e5503f5247092"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/EXECUTION_PROPOSAL.patch": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "15fff7d7e6fa8f2e871564257475ca55133610c2"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/EXECUTION_PROPOSAL_INDEX.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "02efd17bb839979f70456cb515b104dae794870f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/FABLE_HANDOFF_AMENDED_V1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ee19badaceca78fea22c9d904bc06e0a5dda18c3"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/LANDING_DATE_PLAN.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0426c794792716442ae1c81342e2b876394f8e2d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/OPERATOR_NEXT_STEPS_SUPPLEMENT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "19d012a275b8121a9d813672c0bbefa8c6b67d72"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/OWNERSHIP_PROPAGATION.tsv": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "93c7c5cfe9b8c26318f02e0f69fa82154b175c55"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/PRESERVATION_SUPPLEMENT.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "092dacdfe3b9e17f4eb6ac6edda80db0501ebc66"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/PROPOSAL_COUNTS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "761376c3ff6c3fc0667dd140e4d3ca6044363737"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/PROPOSED_CONTENT/01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "1a601592e92bbb05d3b929da6100ce94d0b5bb45"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/PROPOSED_CONTENT/02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "90dd9b61f05f005a784db33e3b46a13dfd58f545"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/PROPOSED_CONTENT/02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "31083811ce527e888ad892f444d446b51ec36c99"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/README_AMENDED_V1_REVIEW.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ee8cee1d44be36a199934e81062bbfffed593000"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/SCOPE_LEDGER_SUPPLEMENT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4b44655bf3be778c0b836e98e3f2ac27fc43a297"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/SELECTED_CONTENT_DIFF.patch": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "381625d576278666b6f3e581baf4eb61676bb8a7"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/SELECTED_CONTENT_INDEX.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2407b329f9032977f6add5f3b2ff576327d5f97f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/SELECTED_EXACT_EDITS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0339d97a4539bc29235dff1adbd638de5f166aca"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/VERIFICATION.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "abf3c821ed51bec0a0a99eaf630359c60cd2527d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/VERIFICATION_RAW.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "6e55dc08828ffe14d83673b1c406b43912ca110f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/WORKFLOW_RULING_TRACEABILITY.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ac054819b0b6b3a88e8f4bc7c130fff772fec173"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/AMENDMENT_IDENTITIES.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "45a5ed9eed9f381c131d9efed7c26260607f4bdd"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/AMENDMENT_V2.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a4f538467b5e051ada93d62da83a43667d0d59ed"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/AMENDMENT_V2_EDITS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "480b9f93364b7de55974a3d499fe1f18bc36a7a7"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/BOUND_EXECUTION_INDEX.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0d0d0b3547ce55230cba362458f5e72ca125a319"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/CLOSEOUT_TRANSITIONS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "13aafdcac17bbde36515f4c0b74867e64c27f144"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/COMMANDS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "1bcd3734c21b7a594d780360785d317941ac0a66"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/DELIVERY_RECEIPT.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "15a9161eecb008e2a1fb6517d30b2d111d72ad5f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/EXECUTION_PROPOSAL.patch": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "27659bee3ab24150d915928a14597014dd3ed89f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/EXECUTION_PROPOSAL_INDEX.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0d0d0b3547ce55230cba362458f5e72ca125a319"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/EXPORT_HASHES.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "aacf413af94f64635a016043003e22bd6d20774d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/HUMAN_SUMMARY.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "084587807f59c1e4e7e96d1339982e2382334af4"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/INPUTS/FACTORY_QA_P4_VERDICT_HANDBACK_2026-10-19_122452.zip": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "83f62ce914fdfe73c4802562387351cc4f8168ec"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/INPUTS/QA_PHASE4/EXECUTOR_EVIDENCE/MANUAL_READS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f2a169e032346b473961bed0191e564693a35618"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/INPUTS/QA_PHASE4/QA_LEAD_VERDICT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "14c0aadb98c4e19d66526f49e0526bb0f24a4863"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/INPUTS/QA_PHASE4/REPAIR_QA_P4/ENGINEER_REPAIR_PROMPT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c1a587ef807b205bcff63d7866871b3197b9e201"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/INPUTS/QA_PHASE4/REPAIR_QA_P4/REPAIR_FINDINGS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "18baae5932b0bfdd10143c1e556494ec52cb01d3"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/INPUTS/candidate_run/AMENDED_V1/AMENDMENT_V1_EDITS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "954e2541a0f01b85bd56979bd3055333036cfcb6"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/INPUTS/candidate_run/AMENDED_V1/SELECTED_EXACT_EDITS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0339d97a4539bc29235dff1adbd638de5f166aca"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/INPUTS/candidate_run/BOUND_EXECUTION_INDEX.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "24845f4c39fb0dbea76e53456fb8ebcf39655d81"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/INPUTS/candidate_run/GATE2_APPROVAL_RECORD_2026-10-17.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f92fb741883a84121b977f6b93367789b1d9e178"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/INPUTS/candidate_run/POST_VERIFICATION_STATUS_TRANSITIONS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "dc9006fa456596dc653d1057025bb666e91fa4d7"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/INPUTS/candidate_run/QA_RETEST_AF01/DIRECTOR_DECISIONS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "657770334fa911a33fb36e4f9cc2b5bc096539cf"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/INPUTS/candidate_run/QA_RETEST_AF01/DOCSET_SYNC_ACCEPTANCE_SPEC_AMENDED_V1_R1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9a3370a60bc539917084892f7194d11fc4401076"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/INPUTS/candidate_run/UPDATE_MAP.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "19598dfb234b38bf76498485a1c1137d3a688784"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/JARVIS_FABLE_HANDOFF.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "280df05cfa0e536ad4e6562f08812c9e6753ddec"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/LINT_OUTPUT.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c61cfee4344a089fc9e4f031dfe15e58bc3c0b1f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/METADATA_VERIFICATION.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "b023ff8512916d615b2a5d608ac3e087e79742cd"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/PATH_VERIFICATION.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "86e9fb8c6e3c4229549e006ba8e6b25224732701"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/PREPARATION_AUTHORITY.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "33aeb404d08f2dee99485a81f493dd16a888f1dd"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/PROPAGATION.tsv": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "10c1833204938441915b8f9b3fa253035e4cdb46"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/PROPOSED_CONTENT/02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "6053117edade1c100510cdb06c867347d6b4ea9e"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "7474ff2f4e490870c9e472f75ed2f99bb5b6bcb2"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/PROPOSED_CONTENT/04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "76cc624c5a598d1c404246336e00e909cb6ce9f7"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/PROPOSED_CONTENT/04_REFERENCE_MANUALS/AUTH_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "423858f8f21dec47dfdf7c5f568e9b5a06d2fb46"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/PROPOSED_CONTENT/04_REFERENCE_MANUALS/DATABASE_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "71bc2a36318dad556dd285b1dd4446de6241a278"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/PROPOSED_CONTENT/04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "5c201cbe1dbab0a2401ad748235550a7d79aca6b"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/PROPOSED_CONTENT/CHANGELOG.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "81d8e4a1db06396e14fc6fdf62e70afd6c379fda"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/PROTECTED_PATHS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9a24a575293e995cb67655b8263dcdf507248b5c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "845d577dfb5b4a9e112a8e2849dbf38bc740f237"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/REVIEW_INPUT_HASHES.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "726d460b53069d4c385f292ccc5586fcae70510a"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/SELECTED_EXACT_EDITS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "fb15edb2a19cd31f66da66b9f1422bce5fad5ec3"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/VERIFICATION.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "361aa2b61a060133103f41f3273fae3d77ed7d26"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/WITHDRAWAL_ROWS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f043bbb8a5362f2d0689b699783d616e4e23f2e2"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2_EXECUTION/APPROVED_RECORD_PATHS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "1952d4cba00dc89bbb2b22d218ae26cf69d1e4dd"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2_EXECUTION/CLOSEOUT_TRANSITIONS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "13aafdcac17bbde36515f4c0b74867e64c27f144"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2_EXECUTION/COMMANDS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ad37bd08bc5ba100788a923d655402da169bcfef"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2_EXECUTION/EXECUTION_PLAN.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2f394d0500b0f441a9082941119f3559f8ce19a2"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2_EXECUTION/EXISTING_PATH_PRESERVATION.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "126dc5c6e29ceb5ae0acbb29d37984bcb4ecd1e7"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2_EXECUTION/INSTALLED_101_HASHES.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "13a139caade13a330108e51ba27488afd0083c71"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2_EXECUTION/LINT_OUTPUT.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c61cfee4344a089fc9e4f031dfe15e58bc3c0b1f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2_EXECUTION/METADATA_VERIFICATION.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "b023ff8512916d615b2a5d608ac3e087e79742cd"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2_EXECUTION/PACKAGE_INTEGRITY.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "abb20db37457a0a3614ebb380ec5d77b60489c90"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2_EXECUTION/PROPAGATION.tsv": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "10c1833204938441915b8f9b3fa253035e4cdb46"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2_EXECUTION/PROTECTED_PATHS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9a24a575293e995cb67655b8263dcdf507248b5c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2_EXECUTION/START_STATE.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2a418cb6ce17546a6203c0eaf4e4ee40e746cbeb"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2_EXECUTION/VERIFICATION.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a2809cf654a11b85cdd23b02359ea61865175d4f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2_EXECUTION/WITHDRAWAL_ROWS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f043bbb8a5362f2d0689b699783d616e4e23f2e2"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2_EXECUTION/apply_verify.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9609060a3242cb31d72509d5564cb22720695a70"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/ARCHIVE_RESTORATION_PROPOSAL.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "b3a8f1e720ecadc24304a94e40f55fa9b4cb9285"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2a499a9c0b2099005c12724923ae27cf5239cfe1"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0dcf211e1ba82c811f5d20dc220cbf337ec594b7"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/01_CONSTITUTION/STARTER_KIT_HANDBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "6ed6fd2ff14cf9351e00b4c038d331bcd64fa55e"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3a11e19df20127f291df5408bbcff24e97245edd"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "15780306c6ad4dc2b5b3ab8d393d7d86a0643852"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "49955e48ac5f518aff304a999c02dc54d766e89e"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2be9f7787481018b5ddafa721eea1220e88aff7e"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d261b4cce6ac7f7c6cf66dae40c8835ce949be40"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "87d8e16e6c5791954f173d564fc83557939b32ad"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ba8d795b651eb61b650af580cef24c94048b9d1a"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f65445a388cabe6c6689f1b6f17ff1f5224bbf04"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c8718f0e6178e898ffbcfd4332ff63b0a044c933"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e5c2c9f6dbe588eff5982734e2927cb3e126f053"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9c8fc35c3f66d7ffe6609c995a3330d090153976"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3edb88c3149a9a6d9a7c760471f30956053c9d60"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c8516c8b8b3950e4b2d08d0bb2c112d7136d8f30"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/03_BUILD_METHODOLOGY/QA_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "07f50ec1c1f005c1fdc9976d28a576a115f40669"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ae67dcc8c4aebff0b6661e455de6d391a4530659"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e86fbef72ab2f84d032baab22d21c51f3423b48f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "5dfe67eb93088b8e7f52f59602734ee05cc327ff"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/04_REFERENCE_MANUALS/AUTH_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "983ae455511f93759f4ced0ca7756d7951113d43"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/04_REFERENCE_MANUALS/DATABASE_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4e11795600a19b928300f9248937da68adf5780e"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "048e0f8c746d336921913e9362205e2bbdc95f3b"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "27b883e21cebce11f3b3e134d8557d82b528a6fe"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a119d65163e5402e87a055527cc2ec24a5432797"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "783429f99cc501f28323423c5992429a6e459a44"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "885db18780530951a49a94fca78119858d433edf"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/05_DESIGN_SYSTEM/THEME_LIBRARY.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f12f2e416ab14622302664c2ca1f8a9e0babeed5"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/05_DESIGN_SYSTEM/THEMING_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "1c18038aa6c10a46443e6dd59645d6762ad0c6e7"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/05_DESIGN_SYSTEM/TOKEN_FILE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9712416e644b9f7e7f8c6a8f65e26f390b2c008d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "138fedce96704f360a0c9c6c7a715d88403a7956"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/CHANGELOG.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "78fa10c0bcdb14398ae5e1617170f25f23022ab1"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BASELINE_CONTENT/MANIFEST.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9107bbbc84d942df9deb01109bfd8eae2709698a"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BOUND_EXECUTION_INDEX.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "24845f4c39fb0dbea76e53456fb8ebcf39655d81"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/BOUND_STATUS_TRANSITIONS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ed0d94ed9f0f39b4ab60f6d806892fd12d437060"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/CERTIFIED_REVIEW/PART1_CONVERGENCE_QA.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "53ee4ea1d66152238ea935da1c3b0ab56c93ebe1"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/CERTIFIED_REVIEW/PART1_FINDINGS_DISPOSITION.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9bd7283c2d4a4edab15a2d41be173d6033b2fa6f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_PROPOSED_CONTENT/03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "26f83f673284cf2a4adc9f3eaeb214dcafc46f67"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_PROPOSED_CONTENT/03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "bc677e825158d0b62b99c670722c18e88072c009"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_PROPOSED_CONTENT/03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a789b42756194581ebcb2d786ceaaa3f71d32833"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_templates/QAM/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "7c01b10c7e56e8cde478e5220cceb2f4b4b4601b"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "8141ee9d9744e1d7ca353ccbc987f5c523dd829d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9f89b44b1978d8e0bdc6bb749ce01c65f794fbcc"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ebadec3010becbfe4a332426a5d426120e53b60e"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a83540a5312969b041bdfff5e4aa56ff5a546068"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_PROPOSED_CONTENT/MANIFEST.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "b23377a62b61f3cca1da59b44920af67bd4faf9a"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/AMENDED_V1_DELIVERY_RECEIPT.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e43301276fbe6b59326a33fec1b0986ababbad62"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/DELIVERY_RECEIPT.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "347e1c56bf7b88f3ff91581466d7f36718908df8"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/FACTORY_PHASE2_FABLE_HANDOFF_2026-10-16_164712.zip": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "dca5df6760cb84149b246e7c36fab14a24d32a88"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/GATE3_DELIVERY_RECEIPT.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "1c6760d003c475e5c274e14e84dca1e000b748a5"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/MC_DELIVERY_RECEIPT.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "be9aea2ea029cd6d4fa68c311416fbb4d80286fe"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/QA_AF01_REPAIR_DELIVERY_RECEIPT.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3ffdabd282f44353c8f3b084dceb91816fe1abe6"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/QA_AMENDED_V1_DELIVERY_RECEIPT.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "48e47767a845ddde2a4b250b3a5505fdc2c3db57"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/QA_FINAL_HANDOFF_DELIVERY_RECEIPT.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "82b1ee3b6ab818932120a8ebcc1a0b4b7322f01c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/DIRECTOR_RULINGS_2026-10-16.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4de815d89816ce129373459df11b9e7061f7f6ca"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/DOCSET_SYNC_ACCEPTANCE_SPEC.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ebb4859915db04a999eb0977514254412c2798e0"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/DOCUMENT_VERSION_AND_ARCHIVE_PLAN.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "5dbfaeac9119f718f5286e618ef9236d91954db8"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/DRAFTS/DEPLOYMENT_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "fd37eeefddbb9c9a60d05b3f861570dc08cb8324"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/DRAFTS/QAM_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "5794cbadbd2c1ae4bfc9dfc31aa9d7064cad05bf"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/DRAFTS/QAM_PLAYBOOK_substitutions.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3adc5494396bc22653877544d631da86c0e16e50"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/DRAFTS/RRM_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4bd9f09224fa6330a3e0ad1b8c4d7394a995fd99"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/DRAFT_AND_SKILL_HASHES.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3f25edac7e65644e08e97d235ad20bf453036ef7"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/EVIDENCE_STATUS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "778f3a79161c5aceff2677ba86c355fcc2cdb216"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/EVIDENCE_TEMPLATES/RUN_SUMMARY.template.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3943bff3f11130dc1dc60dd346067dfc34ff3ef4"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/EVIDENCE_TEMPLATES/TEMPLATE_INSTALL_VERIFICATION.template.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "6d9a76ae77f0c33e28fbc19a0090143499e4b0ac"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXACT_CORRECTION_EDITS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "8881e022080b73875929700a43b1ad19ca782dd7"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXACT_CORRECTION_EDITS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0f1c90fe277ab3849cda264c153a119185528c68"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXACT_WORKFLOW_EDITS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "b0d84bde1e67cd69058695948454fd3571239e41"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_PROPOSAL.patch": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ce5ed98912ad272579fc31a21c5d65c6bfe85ee7"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_PROPOSAL_INDEX.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a31a9883645a173bedfcca5ca8b7bd3da2511db2"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/APPROVAL_RECORD_CHANGE.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2e141332a1ee4385c3c48f0fbeb8027ac1672661"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/APPROVED_INPUTS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "b441688cd565309376a7e691b6a73069a05090ab"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/DIRECTOR_DECISIONS.before.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "eab93c780f88e2df7309f284f4bea14df06faa3f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/DIRTY_PATH_RECONCILIATION.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "cb10f59998589ee057a5bf9ce29beec6ddab3c27"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/EXECUTION_CHECKPOINT_PATHS.nul": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c96472564a85fdb50d49b93217c98eed4872c1d8"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/FINAL_QA_PACKAGE_VERIFICATION.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "6c761f0abbc7681fc065303ecc26739f5b81ff55"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/GIT_AUTHORIZATION_2026-10-18.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e937dd025dc2fe6a1de233e38ec9e36df26c9709"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/PRESERVATION_PATHS.nul": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2aa0420ee3b7792225aef5f628c45f6ec479f904"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/PRESERVATION_PATHS.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "12bf77aa2dee47229f9c511cfa5f32a8e3b0d7c3"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/PRESERVATION_SCOPE.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "90420a5ec515b1c9c83313f2907e35a4a94e776c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/PROTECTED_RUN_BEFORE.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "825fff43f7da175ac71405e526c4a6d9096e54ee"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/REFERENCE_TRANSFER_PATHS.nul": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c02a3cbc19f18c45a6ebb405ec37ed81ed258909"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/REFERENCE_TRANSFER_PATHS.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a1afacc2ae5e839a5b351037aa4d7c0ee8af487e"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/SETUP_RECEIPT.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4fdb685a9accc6da055fd8276d04b2f54bdf0a27"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/SETUP_STATUS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a953267169ee8a06d6514efb7d8b54617cff5595"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/STAGED_SCOPE_VERIFICATION.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3b13e2acc99376546ec4106b8f1d10b389164d07"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/STANDALONE_10X_AUTHORIZATION.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "bd906b76fa517b7bc85bd032e37504bb9dd2f086"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/TRANSFER_PATHS.nul": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "8d5c37a884806e03731cff9106f7f2f325631312"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/TRANSFER_PATHS.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f08e3ffd0da10cdc51679de601b0264d870bdf31"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/EXTERNAL_FOLLOWUPS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f956d4c3050b17d40112d106b925a2e80f85c66f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/FABLE_CORRECTION_CONFIRMATION_2026-10-17.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9a6c29dbbb1a8a9f8bfd381a28ed97705b9a537d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/FABLE_GATE3_PRESERVATION_SUPPLEMENT.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "03b97567f8071a26b66673ce42fe6ab873c7edf2"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/FABLE_MAP_REVIEW_2026-10-16.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "79da0c1ee5a5156aa0e6dc17ac696c32cff5b9f4"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/FABLE_REVIEW_HANDOFF.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3d78152c60b821976c33a85db5adb2b9d0d5e9af"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/FC074_CONTRAST_PROPOSAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "de3bba91b60dbf5619ba536b6f853a8975bfc9b7"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/FILE_INVENTORY_SHA256.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9bc7fe21d9267a2f853dff213094b025be7005e5"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/GATE2_APPROVAL_RECORD_2026-10-17.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f92fb741883a84121b977f6b93367789b1d9e178"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/GOVERNING_SKILL_MAIN/_SKILLS/factory-docs-update/CLAUDE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "391db64f1aa2ba3dda4d1a8147f7b0bfb9e409db"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/GOVERNING_SKILL_MAIN/_SKILLS/factory-docs-update/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "7bd8dbf2c8ec7f9ca4ad504c99ee7d9965540762"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/GOVERNING_SKILL_MAIN/_SKILLS/factory-docs-update/_shared/references/ANTI_PATTERNS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "420b881ddfcfd5e1997de0c5943ae0dc24178059"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/GOVERNING_SKILL_MAIN/_SKILLS/factory-docs-update/_shared/references/INTAKE_TAXONOMY.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2d7081dfecdd1c14d9c6c83fec8e7a0e9b15f8b6"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/GOVERNING_SKILL_MAIN/_SKILLS/factory-docs-update/_shared/references/SHA_AND_PUSH_CONTRACT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a1f26d87db4656f42fe72569df5f7bacf64cc958"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/GOVERNING_SKILL_MAIN/_SKILLS/factory-docs-update/_shared/references/STANDING_INVARIANTS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0b556e9ca71537d30b8f350740b6d5815607afe7"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/GOVERNING_SKILL_MAIN/_SKILLS/factory-docs-update/_shared/templates/DOCSET_SYNC_ACCEPTANCE_SPEC.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "7165a501213835dd8eab358217ebb5a3882db568"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/GOVERNING_SKILL_MAIN/_SKILLS/factory-docs-update/_shared/templates/SYNC_HANDOFF.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "8aaafe4b7a65eb748d0772efcd965ce4a89c3c53"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/GOVERNING_SKILL_MAIN/_SKILLS/factory-docs-update/_shared/templates/UPDATE_MAP.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2d26b30793ed09eef8449b3e1a7638efccef4528"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/GOVERNING_SKILL_MAIN/_SKILLS/factory-docs-update/sync-engineer/SKILL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a7e96c2c27a6cc2f5ff4a3d0774d6b72fb67a598"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/GOVERNING_SKILL_MAIN/_SKILLS/factory-docs-update/sync-engineer/decision-trees/route-selection.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "8dc0e0c3da70d1c95bb720f06f0976c396a8e29c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/GOVERNING_SKILL_MAIN/_SKILLS/factory-docs-update/sync-engineer/references/TOOL_ROUTING.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f8706a2149c4fc8b516cf56b193ea28e7de1eea6"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/GOVERNING_SKILL_MAIN/_SKILLS/factory-docs-update/sync-engineer/templates/LESSONS_LEARNED.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "7c5b8745429085154f0b051071f730f2f0b1ba3d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/GOVERNING_SKILL_MAIN/_SKILLS/factory-docs-update/sync-qa/SKILL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "51a984649be2c20e977284a76cb0136a37e14e22"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/GOVERNING_SKILL_MAIN/_SKILLS/factory-docs-update/sync-qa/templates/GATE_Q_REPORT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4cc4844e20c826bd57a954204b21380719464799"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/GOVERNING_SKILL_MAIN/_SKILLS/factory-docs-update/sync-qa/templates/QA_MATRIX.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f002b2c4014d03a4544280cb08e1a99472467804"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/HANDOFF_DETAIL_CHECKPOINT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "058733d763d4c25b759bae06b4e72570b2d46c94"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_RECEIPT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "eb267d9feb7bde194bf731b8bfd30861e6bb738c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/DIRECTOR_RULINGS_2026-10-16.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4de815d89816ce129373459df11b9e7061f7f6ca"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-corrections/01_governance_corrections.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "527d1326a3171ede647c429e4028c4d2391dd51b"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-corrections/02_agents_handoffs_corrections.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c89afdd7e18d917cf1a73892481da9d0d73d2564"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-corrections/03_build_method_corrections.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a181ec706573e901bf4daeb4317676be2b1c7809"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-corrections/04_auth_data_security_corrections.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "8ec20c09e208a1dcd363fd47afd20573e46cf8f7"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-corrections/05_api_commerce_corrections.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "6a8113dd2b48e07e306702d53453593eb9436a01"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-corrections/06_design_frontend_corrections.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "46c5e57043fc955a729c6069dc891a917dc3a212"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-corrections/07_skills_doc_governance_corrections.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "bba5897c09aaea90c116ce7e1d4fed715c5b5597"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-corrections/DECISION_RECORD_001.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9210a903796c744ef9a8aed93c03599c2980b7f6"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-corrections/FACTORY_DOCTRINE_CORRECTION_INDEX_001.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c474eb4ed839e67ca3859bb43e934d3704f371c9"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/00_MASTER_INDEX.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "64756c09430bae098eb51b9718bf3ee2eaf67c6d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/01_FACTORY_WORKFLOWS_INTAKE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "898203d49030f849fe7b7afc3d28d69bd72d5d21"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/02_RRM_INTAKE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f05cda9d6297122c473e479e4e9b6208664d3274"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/03_QAM_INTAKE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "01815179b501de08df1c9a3ee30a54710955d91a"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/ARCHIVE_CONTENTS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "aea1613bc4df36e6636fa71a5a31fba2ee3e997a"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/00_START_HERE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "6ce255c86aca333909e74dcf37fb67eec9853e39"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/CYBER_PHARMA_RRM_ARCHITECT_HANDOFF.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4b52967fc1172e2d4ed0c8b32af8c160fd78120f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/JARVIS_MASTER_OPERATING_MODEL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2fd7123aeb6bbcf7fdbc9a85822b91b43fc05193"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/PACKAGE_MANIFEST.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2a6e8c458aa978c9f9c49b8e51207a387454350e"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/REVIEWER_PLAYBOOK_RRM_PILOT_v0.1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "98b059ce28abb1b7646e7d84443d2886621fa184"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_FACTORY_DOCSET_CHANGE_MAP.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "23f19ead5b2e993de573750e115b7be9d4e5fdfa"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/ACCEPTANCE_SPEC.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d4fc8cc10f3999f581ca96d8bb2cb395975c26cc"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/CLAUDE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c7fecc7c92b9e89772f7a74292ed1cd21027b276"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/CLAUDY_PROMPTS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "b72d6b8e223cd723ea8c7b7aaad25c4ec08ff8f5"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/CLOSEOUT_CHECKLIST.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d23ff1b3c0d0d887b6aef9f90b2b8f4e761f0758"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/EXECUTION_LOG.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "93245bcbc8704857fd45db2c553560e226da04d1"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/FINDINGS_DISPOSITION_LEDGER.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e94b0fa2ddaff1bbf53c14e68bda7cf7adf4ab77"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/QA_CERTIFICATION.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c08d52020fa7e67e681185ec532c4719ad68a2be"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/QA_HANDOFF.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f508c38b1a6c920f1f9ca7a68cc1754cc0a08d04"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/QA_TEST_PLAN.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "7f626dea76cac125db41303d23c0ea34c241e7a3"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a0e406204cb4a4d4feed11657c96caca492ef79d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_MODULE_KIT/RRM_BRIEF.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "fa4b92f93a7efbb45bcf761bdb6968b6498be16a"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_PILOT_DOCTRINE_JOURNAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2bec8e47bc6dfb92548f83285c8a8c1e0f4104d6"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R01/RRM_FACTORY_PILOT_v0.1/RRM_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "8d45ffe17f144e8b2ce162341b49cd10eb8228b5"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/ACCEPTANCE_SPEC.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0d0df18d8b81f7e8a881c92cf8c1d3dcee966574"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/AUTHORITY_POINTER.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e4bab5161195a9cf354ee7a9cad8f5c917341aa8"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/CLAUDE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "738a329793e8700ad4a71eba64b6d9f00922706d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/CLAUDY_PROMPTS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "99cc022acd1962adcd677d3db3769d6b099980ee"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/DIRECTOR_ACTIONS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4040f5b377c424ad462e04662d037894f1de0440"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/DIRECTOR_CHECKPOINTS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "997c490716c73aa27028485c724b19fe430a8941"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/ENVIRONMENT_PREFLIGHT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ce62e9121421a7017f1f73551a27ca25d3b72a62"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/EXECUTION_LOG.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f340b8e554273e739ead5ed0ad1b505bf9b9f35e"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA/AC_EVIDENCE_MATRIX.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0c839716af67c3ce779ebd7ba9926182abdea8ec"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA/AGENTS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "084e35bfa80a7e3d187e867d3df60c37b3f87bef"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA/QAM_MANIFEST.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "44af0c51faf388a8864ec5e15c8617d5c429e7b1"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA/QAM_PILOT_CHARTER.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "94e9babc718d567246742c15078c12473427c0fb"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA/QAM_PILOT_RESULTS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "22c59cdd1ad3b63de9059656f002705551334f7d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA/QA_ENVIRONMENT_PREFLIGHT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3c820eea74c4caa0465e3dd3518ec85e7924502e"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA/QA_EXECUTION_REPORT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f02d4d41a96fe53dd1260d3b014d23b291d792ee"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA/QA_TEST_PLAN.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "400ca57d25d42561e72bd46e5dc236c1987e61b6"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "26dad1b51f7aaf8fb4ce86ee7a9cbd8964afa39d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/QA_HANDOFF.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2cfd3fcdcb36c00723264ae0d31eae4eead49321"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9d1110035293658dcf4ee6686e45540c12d60646"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/RRM_BRIEF.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0229f36e09e5de40e5540749127cf5af5834c3b0"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/RULINGS_ADDENDUM.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "7d1e76758cb0b6230134a33a94706f5caffdb2f6"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R02/RRM-004-CYBER-PHARMA/evidence/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ee434fb3bd2ff4c016ed8837d300cf754c2b204c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R03/ARCHITECT_ENGINEERING_10X_LAB_REPORT_RRM_CAMPAIGN.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4c186e6f76443da8876d617042fb3a8578477e63"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R03/ARCHITECT_OPINION_QAM_QA_MODULE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "73755eaf9a18e7c85135b8c49716c15db67fb303"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R03/ONE_SHOT_ENGINEERING_ARCHITECT_FIELD_NOTE_RRM003.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "710e236732e9f9c23d44a20e87bddb2b624cab65"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R03/QAM_OPERATING_MODEL_PROPOSAL_v0_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f4eafb199a0e8523363f33d803ecb8156b7014e7"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/EXTRACTED/SRC-R03/QAM_PILOT_ARCHITECT_JOURNAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "cf89c702718c405ee17f43936668917b906ce341"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/FILE_INDEX.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "b8d6c496dfc8b03c43b97cdadcf9e10755a55466"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/00_ADDENDUM_INDEX.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0876e72727a7c5b1588a61e9ebeefda4d5b56cd9"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/ADDENDUM_FILE_INDEX.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c1f30d32545e0ab9c94cac02bfbb37ea4fa0238c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/COMBINED_INTAKE_MANIFEST_001.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "afb30e1fccc65a6663e26365f9b70b047c74824d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/AC_EVIDENCE_MATRIX.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "399a1a36a577e9075abb220e39c4f54dd82a9d81"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/AGENTS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "421f45da9591d6a6f3efe77184224e6e8d5c14ac"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/AUTOMATION/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "5691f302d6666b1fbb53a97d5c23d0f85a560a5d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/CLAUDE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "5b7066d30f76a0b2a82a1c695b29dd40513db066"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/FINDINGS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "7e292cf84f4581145d63360f623848862bae9ed6"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/GOVERNING/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f1da77c697a72472bde5f851a43479063358fd0a"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/HANDOFFS/ENGINEERING_HANDOFF.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "552d64baf290493f4e424025e2201240efcb735f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/HANDOFFS/FILE_INDEX.template.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a2c73a6071ab1ebb78ff481fd7ba15c9750849b8"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/HANDOFFS/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e4d3a23047c1f779f7a2babf4efdcdd4ba044e15"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/HANDOFFS/REVIEW_START_HERE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "362caca1facef1d288466c52fd4da20a741f6317"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/PARENT_ENTRY_ROUTING.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "25030593357adeefa198c52db5652cd2f277ddf5"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/QAM_APPROVAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "1038549006d922d0dfbcc1dcd0dc2ad8e8487b41"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/QAM_CERTIFICATION.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "84a2a46ea9f81441476858f61de724c9e396a5fc"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/QAM_CLEANUP_REPORT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "7258851206560648c1160880af74b59d630dd33f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/QAM_ENTRY.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3d90d156f0fb7fbcdbb618320ec59457c437896c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/QAM_EXECUTION_REPORT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3a6b4b5caac30f9b1e2846c396407d634da2f6c2"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/QAM_MANIFEST.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d72b370d6a7bfd0297e4e069b40055ab81b60464"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/QAM_PACKAGING.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "1ec772c6522a64f21738048310f439b9d57058f9"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/QAM_PREFLIGHT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "173d7037e59b0bc87e00f64e7df590e225b29a9c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/QAM_RECON_REPORT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "656688e6bce67a54c6ccdd6493797a63e2047591"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/QAM_RISK_REQUIREMENTS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "6496a6bab4f4c0244528e37d08eadfa85ce2d463"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/QAM_STATE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0752715b8f04701a52bdc28318041633238fd3e3"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/QAM_TEST_PLAN.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ad30e7cce82cad951ab1ef36d7c8965f129dab60"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9592d26a4eac6cadf597de556ea76b17882949a5"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATES/QAM/evidence/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "24d07d6877f377dd7ec1c71da684426691e1094a"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_1/TEMPLATE_PLACEMENT_RECOMMENDATION.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "1a187b645082d5870ea502cb48fdc9f376de4519"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/00_ADDENDUM_INDEX.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "7a5d4137bb81495459d9e5d9e6fe2b07b009b4df"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/ADDENDUM_FILE_INDEX.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "17ab272ae7dbaa6b7b3e0a9f636c14e3e8ae3eca"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/COMBINED_INTAKE_MANIFEST_001.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "6a0106e2b826da08e29ebe878ca0c9575dbc7e5d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/QA_LEAD_REVIEW_ENTRY.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "5e35f59a95734fe1bfab73d92645ae65803d1654"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/AC_EVIDENCE_MATRIX.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4cb48738f78d2a2cc9d38173d1b66b57ac10f802"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/AGENTS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "7c14a5650d62886f0f7eee3943704730ec039dea"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/AUTOMATION/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c81857fd7b2d8feff8b2284c24fb7475492521c2"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/CLAUDE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "8d344d6eb50ebdaa0e29577a178dcdcce9cbf8ae"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/FINDINGS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "6e373410250535bc7185cff85b2666abaf422269"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/GOVERNING/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "5a88e17fe0e5d4641f1384d75c39b72158c08ae3"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/HANDOFFS/ENGINEERING_HANDOFF.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "dde290d2f74322d858720c588ef1690083498b97"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/HANDOFFS/FILE_INDEX.template.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "b723b0fceabac4548ce5af54d82ac2bba2dd7bd2"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/HANDOFFS/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ef7f0e8b71673b80ddd3d0517d5046b94f1f2bea"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/HANDOFFS/REVIEW_START_HERE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2914733a38ce6bc7f106ee8ad46804a70f1a0fa1"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/PARENT_ENTRY_ROUTING.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "df03c349393b0b1f0063a1201edde810f28ccb4a"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/QAM_APPROVAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "00cfa947cc0b0c5d156f17e9d1bb14197e50daf4"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/QAM_CERTIFICATION.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3f2148ca9edfd7ad46047b839a4cc5f8997f99f6"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/QAM_CLEANUP_REPORT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "508c1eff27c621137e093aee1f93c68a5ff113b3"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/QAM_ENTRY.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "39fb3e3fa9a3e3d21250e5697af161808e56da1c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/QAM_EXECUTION_REPORT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "674e507effff89ddd47ca517407cb93afe4fbfc5"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/QAM_MANIFEST.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "936a378d29e82db098aa4c31ab341b3649814f4c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/QAM_PACKAGING.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a47b651ba09eacf4d666b99e662d741a0d152b71"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/QAM_PREFLIGHT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f6187dcec25331e1696dd7413c72eee4ccbb5350"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/QAM_RECON_REPORT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "5e10ec78e41646ee3f9bcf00330bbabfe45a7e18"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/QAM_RISK_REQUIREMENTS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2f683aa66abeadbb59acac28cb7540aa4c0e4132"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/QAM_STATE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9a368f083881f32462d75162bf741d292862126f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/QAM_TEST_PLAN.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "1ff2ee449d49e2c80b112aaa504e5439f3081f07"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2d8d4a61614dbb25573bf953a60830021624c69d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATES/QAM/evidence/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0ffe78bf49af49d7ff21cadc24b5be5ffa9844e4"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATE_CORRECTION_RECORD_001.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d02cbd9fa9ed7c90145f183c9cd0537af05c9a7c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_2/TEMPLATE_PLACEMENT_RECOMMENDATION.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0b075768bc5a122891e44a830a816a2e4b5fa09d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/00_ADDENDUM_INDEX.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2d897a2c48e34f3c90a1d7158d230577f3e63bd3"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/ADDENDUM_FILE_INDEX.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "7488529103459e64a8840c6685ff9676004555b3"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/ARCHITECT_IMPLEMENTATION_INSTRUCTION_2026-10-14.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2a3ee13c4459c5d2bce7183af3528b41f02440e9"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/ARCHITECT_VERIFICATION_2026-10-14.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a4e734c319fa4ac5d16cbbe7b9080bef8a382ae7"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/COMBINED_INTAKE_MANIFEST_001.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d2b4048c595798c4ffa0d41646ce1e7629351176"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/ENGINEER_VERIFICATION_v0_3.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "7b2cca1488932fbd9f1785a7c14f7c8590bf6275"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/QA_LEAD_DECISION_2026-10-14.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "035ac3e089c42ac7ec721b2a7874a7f0578ac41f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/QA_LEAD_REVIEW_ENTRY.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9a3b2a3cf6151903a329af726e72e452e08b5451"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/AC_EVIDENCE_MATRIX.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f57ece477d8abdca10ab68dfff2810b0e29c25a0"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/AGENTS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f79bcfd7a84c8d091233025bd6d50643e16c0cdf"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/AUTOMATION/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "cc7e9842b20c77a49b8460303cf403db1d21ee42"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/CLAUDE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "82a38d40558bb3ee616813f931212c4b4d326e5a"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/FINDINGS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9c22bbfee0046dacefefa83e7b9dc70c01ac01d1"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/GOVERNING/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "7dd97296a63138a0543c1f3a0a7a670245248fac"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/HANDOFFS/ENGINEERING_HANDOFF.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "15636b5b6c0487a6e868808b602af83e1464aa1d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/HANDOFFS/FILE_INDEX.template.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "8bf07a3083f8bb6e8d337c9f211632b3a3766845"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/HANDOFFS/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "384b429645217f77f080fc9b6859981734034911"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/HANDOFFS/REVIEW_START_HERE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f19d9fb2a16db8baa9f97c4bea289df4e5cd5795"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/PARENT_ENTRY_ROUTING.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4030a9a1b58e63c553db00e230699e21e4805464"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_APPROVAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "5e1ac28502888ed721408e0b2ecf791ee7e6277b"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_CERTIFICATION.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "6ff8dbece847fbb8ed0eee140a476a5c8af84d7f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_CLEANUP_REPORT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2921d0e43209c8c010bca60fdc1b58c4bafb91ef"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_ENTRY.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "311d81b9b58b80cccb28ade28788938c49b119b6"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_EXECUTION_REPORT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "db81353e9c9aa675544c4f42fa1a17743fd80fb6"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_MANIFEST.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "16dd51baa7504e529dca1b829e5e960943d4010a"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_PACKAGING.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "289d5e117f2a4edb53116d3a4692c599905bc004"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_PREFLIGHT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d834677306c88da98128f3d4004e433d5ea0ad48"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_RECON_REPORT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "06b9f15be7a674974dad261c8ca25cf5b5bd73de"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_RISK_REQUIREMENTS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "65e899573af21d4b83eb0c45c4245e857596217b"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_STATE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0863bcf268f1422cb231efab131cfbfc966dd659"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_TEST_PLAN.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f3097a505ff4f24fc2fc4fc065713ef54ed97090"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e581eb50bc71609be2e2c19cea8e41020ab1fcb6"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/evidence/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0fe7eefb478324e5c9e8da1a57dee06714f35b0f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATE_CORRECTION_RECORD_001.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d02cbd9fa9ed7c90145f183c9cd0537af05c9a7c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATE_CORRECTION_RECORD_002.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f5e1890ba51e678340c3fd18769e6b0a1d18f381"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATE_PLACEMENT_RECOMMENDATION.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0b075768bc5a122891e44a830a816a2e4b5fa09d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/PLANNING_001/ARCHITECT_DECISIONS_2026-10-14.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f757be6afa53333d1761b434c7357c06d2cc258e"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/PLANNING_001/COMBINED_DECISIONS_001.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "11dd1c26f29a94d018d252ba8250e53e72b0ee70"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/PLANNING_001/COMBINED_DEPENDENCY_MAP_001.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "cedb94bc8db49ab0c2fbde3235202904a2090e39"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/PLANNING_001/DIRECTOR_RULINGS_2026-10-14.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "64f8cbf789b7ac0fff79e76907a700c91de59e81"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/PLANNING_001/INTAKE_CLARIFICATIONS_001.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ef929d602c8557df8422c0e7aa5704df296f367a"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/QAM_PLAYBOOK_v1_0.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "cedcd4b9511410710bf2fa436972b2761b5e3266"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "05dc17644fd52dc5b2960c3140572e42a0645eac"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Context/SRC-C01_SCOPED_APPROVALS_ENGINEER_REPORT_2026_10_12.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "073d90a457fc503112e7bf00661ba29d1fb3e068"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/QAM/SRC-Q01_QAM_OPERATING_MODEL_PROPOSAL_v0_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f4eafb199a0e8523363f33d803ecb8156b7014e7"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/QAM/SRC-Q02_QAM_PILOT_ARCHITECT_JOURNAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "cf89c702718c405ee17f43936668917b906ce341"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/QAM/SRC-Q03_STARK_QAM_10X_LAB_MASTER_DRAFT_v0_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d2faf7b36a64c9321c9b3141ad826bdcda79186f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/QAM/SRC-Q04_RRM004_QAM_PILOT_PLAN_v0_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9d2e9e9b97b672db6e5b2d5215f93a9855bdbc19"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/QAM/SRC-Q05_QAM_DIRECTOR_DISCUSSION_1.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "71e7ed2cef26625b30658b278ab27ab9fb3cba2a"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/RRM/SRC-R01_RRM_FACTORY_PILOT_v0_1.zip": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "83ef8463744e332abe1f172ca107679c026d94b5"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/RRM/SRC-R02_RRM004_ORIGINAL_PACK_v1_0.zip": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "1b500a1a0e81784c2a75e9c54ad2af436d9793ba"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/RRM/SRC-R03_ARCHITECT_10X_LAB_BUNDLE_RRM.zip": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "cc8c860a7ec7215b39a7f9b248c135317b6e06dc"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/RRM/SRC-R04_QA_PRODUCTION_OBSERVATION_JOURNAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "65197500e8f9fbcbcaa2fef737384d11d5ad2ce6"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/RRM/SRC-R05_RRM_CAMPAIGN_EMPTY_SCAFFOLD_v1_0.zip": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "fd9c9aba4a35eb1f52e3be34788959c570c463e7"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W01_FFM_CREATION.png": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "67e7c492ddbe9cd873cf989f9d0ea942c0a75ebd"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W02_FFM_EXECUTION.png": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "8d6ce2c1e0ce132934d2d53b1a0643d4bf75df31"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W03_FFM_DEPLOYMENT.png": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "36c88faf714247a10dcfa003d7b30e74bfee4d20"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W04_BIM_WORKFLOW.png": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "dcfc982dac1409b79f54d364316f6216481db9ff"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W05_FFM_OPERATING_MODEL_v1_0_R2.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ddbb44adc38eb53fbd7d8daaf2831b7f91c2f86a"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W06_BIM_OPERATING_MODEL_v1_0.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c1179d3fc020cc82fd8bf49369992f853f30f85d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W07_DEVOPS_OPERATING_MODEL_v1_0.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3e85947e5ba130b152459bb22d144fbaff98d21f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W08_CODE_REVIEW_CYCLE.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "379fda38b0ed7fdaf263ab1b60476a02b57da440"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W09_BOUNDED_REPAIR.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2c710a08b48e96130220feb5abf11065d0efdb09"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W10_DOC_SET_SYNC_PROCESS.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "6aea35eccc4e731a7339aa8dde69efa9be724b2a"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W11_FACTORY_ENGINE_1_2_3.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c5fac460470935b040195222a033ea88af2510e9"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCE_INVENTORY.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "95c5acf75fafa4f4f8fb1c3911ceda143ed5047c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCE_REGISTER.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "14ed91f133c4c04007cc38ac7586425a8be79580"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT_INDEX.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f5460c71a5c0ab1d2c301d84a50e840d272361f8"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_VERIFICATION.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "283a5eebe24ab86ed23449fc18379d4e542a5d03"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/LANDING_DATE_PLAN.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "6e337d03e16b998cf2ea168815e64c76235fe6d3"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/LINT_BASELINE.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "b5a2330e8c78242027c5a5e91c35a54706db4f90"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/MC_CORRECTION_AUTHORITY.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "faee1f9d58e2073dab79c1b15092994ebeaf18a9"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/MC_CORRECTION_DISPOSITIONS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "38502089135ffee6b9b4f2e75b97f727469edf98"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/MC_CORRECTION_PROTECTED.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "03b3f2ec02096e7ca0274867a4225902f75b8ac9"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/MC_DETERMINISTIC_REBUILD.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f034a823a7eb394d2d96fc09617f5e577fd75527"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/MC_DIAGRAM_RENDER.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3a95660fb7129475ddcf00de9efe14e289de7348"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/MC_DIAGRAM_RENDER_RAW.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ff4e93ec16e3b4e29e2a66022383f759146cc6b5"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/MC_EVIDENCE/diagram_previews/BIM_WORKFLOW.png": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9a54a0c98425cc167cf9867e9bb77fe2d706ce2c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/MC_EVIDENCE/diagram_previews/FFM_CREATION.png": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d47e986bdcb719f52558dfc3b3afe9ca75c4aa69"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/MC_EVIDENCE/diagram_previews/FFM_DEPLOYMENT.png": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c8703d61b0230bc7d447462055021bf01e7db090"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/MC_EVIDENCE/diagram_previews/FFM_EXECUTION.png": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "b457fac4cee9e4ff40b881d698a74e9dfa0a8bf1"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/MC_FINAL_GIT_STATUS.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d970731f02fb229d60b8deb726b9b39315aa338b"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/MC_NEW_DOCUMENT_EDITS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "42690b3055c4609c2bc94918136d75bb13f83659"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/MC_PROPAGATION.tsv": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c8608aeeb4ca05ef454c96a1b40e4e299a47b9ba"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/MC_PROPAGATION_QUERIES.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "efdf023b2c832de8335b68d2ba556335e468ca02"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/MC_PROPOSED_LINT_CHECK.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "fc3d501dd2201d9502afccaec6d6ff3c913d882e"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/MC_REBUILD_RAW.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "cd2cb4ced3ef51b93b518c4e63b28817971d8c16"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/MC_VERIFICATION.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "eba0a570d1b4c655894c6a908df83f6310cbd5db"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/MC_VERIFICATION_RAW.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c7a83efdbbaa9049df3afba3fa64c8ef8703c807"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/MC_VISUAL_INSPECTION.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4566a14cda8b2bd17c74c6914f1b2b77a1fb05fe"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/NEW_DOCUMENT_PROPOSALS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9d44e1be7f14e31a9387d0fcce9e996179a55833"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/OPERATOR_NEXT_STEPS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "fa553fa24b0a7af9c855cb5332c02cc5314b451b"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/OPERATOR_PRESERVATION_PATHS.nul": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "dd230c1c6f517fd806126b04b4225ef2ce9666fa"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/OPERATOR_PRESERVATION_PATHS.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "6045d691e31a33097d11095aa575e94ace3cc657"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE1_LEDGER.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d0a4ca93d1b78cac5e49e10f697797ce3151f531"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE3_EXECUTION/ARCHIVE_VERIFICATION.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "b434c1c3a7769932504c4e2810afe4f38773c374"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE3_EXECUTION/CHANGED_PATH_ACCOUNTING.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "70025c5574909ce0429ec70001bfcfeeeac00064"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE3_EXECUTION/COMMANDS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4bb22c68d02d43d9fa9a8bb5d102454196d7e512"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE3_EXECUTION/CONTENT_RECEIPT.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "713723afac94971e91a0d742fcae22a0f2c9affa"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE3_EXECUTION/DIRECTOR_RELEASE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "57685c3ffa148997ea24861c75c02e18be9d4c96"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE3_EXECUTION/IMPLEMENTATION_PATHS.nul": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3ec32e2c740ab48ad01d5d6b084f53858e566b8a"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE3_EXECUTION/IMPLEMENTATION_PATHS.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f0aa53d860b7281129930dd8e4fc432b22623613"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE3_EXECUTION/LANDING_DATE.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "cc4ffa6ea9443827f66ef7fce237d72257ee687b"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE3_EXECUTION/PROTECTED_BEFORE.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a7caa7c106bfaed6602328770c0f78622cd87039"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE3_EXECUTION/SUPPLEMENTARY_CHECKS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "031bd56107365c94f36e28885ac734b0002fc59e"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE3_EXECUTION/TEMPLATE_HASHES.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ae6654555740ca83cd4d781a578f5207407ee342"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE3_EXECUTION/VERIFICATION.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "51d1bf15b669d7775d2c8ffd905f3a643d537b3b"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE3_EXECUTION/VERIFIER_NOTES.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c52b90bf1a9534e9c0eff5c0a996d25b8060a96e"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE3_EXECUTION/VERIFY_ATTEMPT_01.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "398da7491432de81ec39610a20a3d8afbf860d83"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE3_EXECUTION/VERIFY_ATTEMPT_01.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "aa698b4fbc0bcb237f0b2a3a0be6dfb72777e343"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE3_EXECUTION/VERIFY_ATTEMPT_02.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "dc96eefbaf5509bb261ac0a1cc14bca46c85ad3c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE3_EXECUTION/VERIFY_RAW.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "65b281dfc016a57caf71d24adf15288f6132f4f4"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE3_EXECUTION/WORKFLOW_VERIFICATION.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "1cf01db15fc2f7b5e32a7e3808eab1ef61ef5589"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE3_EXECUTION/engineer_apply_verify.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "cc92a441e2fe0d0e5dd50278043790c01814b776"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE3_EXECUTION/engineer_commit.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "37a57864e4fe2d55277b90487f4dd9145db7a838"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE_1_SCOPE_AND_DECISIONS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c297584d304a808a714e7935cb46b2d386c7c723"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE_2_CONTRAST_CHECK.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "b37ef95f1ea874ba911361461db9c34c94083668"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE_2_FINAL_GIT_STATUS.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "89780ebdfad71540eeb6017251ee86bd935bc898"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE_2_GIT_BASELINE.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "7004efd9cd657155aa623c687084d064069e3a32"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE_2_SEMANTIC_REVIEW.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "daf5557044b9676c8ef792b7d44eb983821a9e4d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE_2_TEMPLATE_TRANSLATIONS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d06ed2f69d121185ce16db41c04b01a4890b3cab"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE_2_VERIFICATION.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "622c3dfc453e79504968eae195ebf5070ceb4730"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE_2_VERIFY_RAW.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3a999ece7a8d995a32d1a869170b28759a398646"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE_PLAN.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "fe6c9750a940a3c1e33197d5fe8168787ca51456"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PLANNING_HISTORY/PRE_MC_CORRECTION_2026-10-16/DOCUMENT_VERSION_AND_ARCHIVE_PLAN.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "cde9cd6b614fd6d1797bccfa57f64e89a0e1b727"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PLANNING_HISTORY/PRE_MC_CORRECTION_2026-10-16/EXECUTION_PROPOSAL_INDEX.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "cc12bcd0a1a7d66a2db8964ce96b245617f31f0d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PLANNING_HISTORY/PRE_MC_CORRECTION_2026-10-16/FABLE_REVIEW_HANDOFF.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e61caeb907d4004295c80397b35921a116d7c587"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PLANNING_HISTORY/PRE_MC_CORRECTION_2026-10-16/FILE_INVENTORY_SHA256.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e09209e7d6e32ddc7f959330e214bbde02452b69"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PLANNING_HISTORY/PRE_MC_CORRECTION_2026-10-16/NEW_PLAYBOOKS/DEPLOYMENT_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "935533dc3bf10e108f2e08c6ce69c7467bad617c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PLANNING_HISTORY/PRE_MC_CORRECTION_2026-10-16/NEW_PLAYBOOKS/QAM_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "6c9cdc133868cb5e4d133da8d9792909d9193b07"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PLANNING_HISTORY/PRE_MC_CORRECTION_2026-10-16/NEW_PLAYBOOKS/RRM_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a906388a695712ababf89727777621c5f49d766c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PLANNING_HISTORY/PRE_MC_CORRECTION_2026-10-16/OPERATOR_NEXT_STEPS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "1cf76ab600ff358cd7329233f51593ec91edb78f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PLANNING_HISTORY/PRE_MC_CORRECTION_2026-10-16/PHASE_2_TEMPLATE_TRANSLATIONS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d06ed2f69d121185ce16db41c04b01a4890b3cab"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PLANNING_HISTORY/PRE_MC_CORRECTION_2026-10-16/PHASE_2_VERIFICATION.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "622c3dfc453e79504968eae195ebf5070ceb4730"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PLANNING_HISTORY/PRE_MC_CORRECTION_2026-10-16/PHASE_PLAN.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "80da5f34fb5c5b9bdfb2aba7edc9aaf9f49f41a1"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PLANNING_HISTORY/PRE_MC_CORRECTION_2026-10-16/POST_VERIFICATION_STATUS_TRANSITIONS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "24b20af1bfdc9368a9782375c424e70c85aaedee"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PLANNING_HISTORY/PRE_MC_CORRECTION_2026-10-16/PRIOR_PACKAGE_RECEIPT.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "fed04e0c495dff86a1f50004666f9a45c620b8cc"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PLANNING_HISTORY/PRE_MC_CORRECTION_2026-10-16/PROPAGATION.tsv": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "cd6e892a020499c477e331c32c450516cb55c49c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PLANNING_HISTORY/PRE_MC_CORRECTION_2026-10-16/SELECTED_EXACT_EDITS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "18680cc541a3039339a5eb31ba1f497c752a1355"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PLANNING_HISTORY/PRE_MC_CORRECTION_2026-10-16/SELECTED_SCOPE_LEDGER.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e921ef1b82f3dc6c941408e64d626df2bd74ab55"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PLANNING_HISTORY/PRE_MC_CORRECTION_2026-10-16/SHA256SUMS.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "fdedd726ee7f032703b9d07be6cea1a377507754"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PLANNING_HISTORY/PRE_MC_CORRECTION_2026-10-16/TEMPLATE_INSTALL_PLAN.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c4243f865a3e26e64b4fb916ad576fb78b517c63"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PLANNING_HISTORY/PRE_MC_CORRECTION_2026-10-16/TEMPLATE_INSTALL_PLAN.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "8c7650fa023b16d71cabd7d5fdbb155a5fd839d2"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PLANNING_HISTORY/PRE_MC_CORRECTION_2026-10-16/TOKEN_FILE_PROPOSAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f2b33add46d7c94e95a205f25b9791a3c06f7502"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PLANNING_HISTORY/PRE_MC_CORRECTION_2026-10-16/UPDATE_MAP.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c3e9a5670573eced7a0f19df9c9c34e4fed95528"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PLANNING_HISTORY/PRE_PHASE2_OPERATOR_NEXT_STEPS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "07b5b5c597b2486a3af23e378de6a4cbdec949a9"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PLANNING_HISTORY/PRE_PHASE2_PHASE1_LEDGER.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d0a4ca93d1b78cac5e49e10f697797ce3151f531"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PLANNING_HISTORY/PRE_PHASE2_PROPAGATION.tsv": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9017d1f49ef5733497bdebbcc903f864b431bf89"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PLANNING_HISTORY/PRE_PHASE2_UPDATE_MAP.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c8655667e35a285be173500801f74a143f9e75fb"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/POST_VERIFICATION_PROPOSAL.patch": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4abc4ec3966e775bb42a64604b40db9c8820e311"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/POST_VERIFICATION_PROPOSAL_INDEX.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "5b634c0034e756384c15e0fab206225b92a3b472"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/POST_VERIFICATION_STATUS_TRANSITIONS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "dc9006fa456596dc653d1057025bb666e91fa4d7"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PRESERVATION_BASELINE.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "fc9c888e57758a5640e763721d2848dd9d985140"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PRESERVATION_RESPONSE_PATHS.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ab3ef8ae5afb29e34f423206c0dc0e70c636042c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPAGATION.tsv": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "b6ab8d26bf96e529854c40b054ef9eb527c3fd48"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSAL_COUNTS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "6f881df5c1021036b67dca5c58f59a72cffcbc47"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f3e3a88fa20c799179898c429c0bb790f651ecf7"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "788301a8601a188c740ce1ee5076a60726e1f0e9"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/01_CONSTITUTION/STARTER_KIT_HANDBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "39f22ecd3e3137d45085af4072fc78376f4632cb"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ddcfcfb4eff169a330c338c4a1547a81d8d70671"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "46c45bfe0830cf33ab4d15e80223072e3c19d0e0"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3b9c213b4b10fc243c925d9c1b8afdfd7afaaa4c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "649079c062acc1d3fca17db845271811731af9ad"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3f4295a9aeee973b79f971a288bf3d36a766b7c1"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f53a12e3392d15ca976c1d23071bd7587ec730f5"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "238aa95ebfe9ea5875f4e23f909198e62b5184b8"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d0472d908f8d310d28f7a73b973ecf21b8136675"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d621ba4db1932d0787d7658934f8828ad18f91c8"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "5f84cb3a3eb29f8e264858b8ec9e69657071a854"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "adb0308a2d051292de0dac9ccbe0aa07c8d39683"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "86e9b9a16ca7247a267dd3264420f9afa81b0567"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0029b04729a1fce3c5f6abc2f3e827192818f66a"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "85f93f7a8dbafcee49a32f760ab36929a4c4340d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "8d41968cfa8151a960e16d9807b1f347d726385f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/QA_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e4a92e9cc3be3cbe60b588e90638b9f7e5546da5"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "1ccf2e675e702c1c0d195f071100f14d56ce8cbc"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2c2d1c60854156c11dcdd401bcf9bec21363559f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_assets/workflows/BIM_WORKFLOW.svg": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3163f58c5325b619f788aabb97578df90b55675a"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_assets/workflows/FFM_CREATION.svg": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "41a98337556c48fceae757b38120ec54de67620d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_assets/workflows/FFM_DEPLOYMENT.svg": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "02a1424d779c0b2d3a73fb593eac4587be364fff"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_assets/workflows/FFM_EXECUTION.svg": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3579e77251ff6975c7ac97ecd58fc317bb709f72"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_templates/QAM/AC_EVIDENCE_MATRIX.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "6ab74560e3e239bf67906741b44ca7a7ca7a2b82"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_templates/QAM/AGENTS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f101d471eac37a762edc84876bec67d9b11bfdd5"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_templates/QAM/AUTOMATION/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d7db60a149766c0bef12c4916151b5876631aa8d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_templates/QAM/CLAUDE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "b9427577c9423d9873e43ea3e07f53324540d91d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_templates/QAM/FINDINGS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "5336c8f84812eff7aec8528d26c993e0471afb05"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_templates/QAM/GOVERNING/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f8f0ebe4e139b90833a294005ad2f55085a28e5b"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/ENGINEERING_HANDOFF.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "19447023b98bca204da03b5b910d010d70a0f87b"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/FILE_INDEX.template.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4bb9f16ef54926b5c193144392bb459966c16de8"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "697daed5176888240605b31c90244ad860e996e3"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/REVIEW_START_HERE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2df4407ef39c90b469719963aebe43375b777763"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_templates/QAM/PARENT_ENTRY_ROUTING.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "061fde1559b68dd322fd44fee48608e91724589f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_templates/QAM/QAM_APPROVAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2034c4fb44d9cfc857425fa9e1436776f8007e30"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_templates/QAM/QAM_CERTIFICATION.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "1a55400f83bd3df84e319bcf255ce908639fc41c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_templates/QAM/QAM_CLEANUP_REPORT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d9255f1d2c0fd98922bd0737134333f4f144a570"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_templates/QAM/QAM_ENTRY.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "892ae63364f2e7bef3a3a06c20ed604d3339cec5"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_templates/QAM/QAM_EXECUTION_REPORT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "448ec3e9ac5c34fdecb44a4882acc1c793201082"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_templates/QAM/QAM_MANIFEST.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "5f86797b0d62aafb068bdcb4bc702087302b0d4e"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_templates/QAM/QAM_PACKAGING.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "75f90808e9707ef1fd8095cd6ff2d843f76c24fa"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_templates/QAM/QAM_PREFLIGHT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "fc41a43585530d56f12f9add6184bb1ef16a122f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_templates/QAM/QAM_RECON_REPORT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "71838c9abee56d689000c676892b47572b675a4b"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_templates/QAM/QAM_RISK_REQUIREMENTS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "bc76df7f2d55b5a7b19477aa1d4bd26ae2a28d4b"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_templates/QAM/QAM_STATE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9adb95625eb4ada3f527d58c1f30c232bcea2645"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_templates/QAM/QAM_TEST_PLAN.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4ac351a997be01f333f307d1c4a31aa5c44f398f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_templates/QAM/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "26fdfd56bedfc9824ee87d74abc2b9b897e850cf"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_templates/QAM/evidence/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e5dfedcfbfa4545f4609f4ce9bbf743f5331d31c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "62ab34535944301b3e384105be6725670d6f5a5a"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "94925023a1fc7854ee0d759ca21e8e4adfcc7e1b"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "beba2839a1b933dff29e7e96bfb9cd9596e3539e"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2ba6cfa1dcf7c9abea4ba4aa3167c45a458030bc"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e517d16fc4343291d49429815e62bfae1b0a3baa"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a2b44973cf35b8d13813686039514140a6b0c1c5"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/04_REFERENCE_MANUALS/AUTH_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "419a2ee734c269e2f4982891a3ecb8db10292a9c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/04_REFERENCE_MANUALS/DATABASE_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "98c590b728aae6fff9db98b5b3607f4930d6680e"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c45c0c96cdb4bda34d86be72a2668bed62884ec1"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "41b698b1bf79b6856f31b31a679b2e12a1fc7154"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "72156a4ab005a637051c0febcb9a9b0e95c37fdf"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "5f131dd44175cce899e1223f368e21bc2c87bf1f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2f9f9d26566608ae446f6d469e3a7436e102c5c4"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/05_DESIGN_SYSTEM/THEME_LIBRARY.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3aee5a9f05f7bf7f7a88fa93da160c124c001081"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/05_DESIGN_SYSTEM/THEMING_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "476a7e5a91fe8ae1a4c7a297ce915f706217e79b"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/05_DESIGN_SYSTEM/TOKEN_FILE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f2b33add46d7c94e95a205f25b9791a3c06f7502"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0fbe2a332eedea3ed4c218fd49eac3b1108f78f4"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/CHANGELOG.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "979ae63ec15ad02d139d6955f4fdd8f725b84fdd"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/MANIFEST.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ea79900510bc8f693d4b7157d71431d482b5db64"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/API_AND_SERVICES_MANUAL_v1_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e86fbef72ab2f84d032baab22d21c51f3423b48f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/APP_ARCHITECTURE_MANUAL_v1_3.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "5dfe67eb93088b8e7f52f59602734ee05cc327ff"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/APP_FACTORY_BLUEPRINT_v2_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2a499a9c0b2099005c12724923ae27cf5239cfe1"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/APP_FACTORY_SKILLS_PLAYBOOK_v1_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ba8d795b651eb61b650af580cef24c94048b9d1a"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/ARCHITECT_PLAYBOOK_v2_2.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3a11e19df20127f291df5408bbcff24e97245edd"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/ARCHITECT_QUESTIONNAIRE_v2_2.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "15780306c6ad4dc2b5b3ab8d393d7d86a0643852"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/AUTH_MANUAL_v1_4.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "983ae455511f93759f4ced0ca7756d7951113d43"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/BIM_PLAYBOOK_v1_0.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f65445a388cabe6c6689f1b6f17ff1f5224bbf04"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/BUG_FIX_PLAYBOOK_v1_0.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c8718f0e6178e898ffbcfd4332ff63b0a044c933"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/COMPONENT_REGISTRY_v1_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "783429f99cc501f28323423c5992429a6e459a44"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/DATABASE_MANUAL_v1_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4e11795600a19b928300f9248937da68adf5780e"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/DESIGNER_PLAYBOOK_v2_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "49955e48ac5f518aff304a999c02dc54d766e89e"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/ECOMMERCE_AND_PAYMENTS_MANUAL_v1_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "048e0f8c746d336921913e9362205e2bbdc95f3b"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/ENGINEER_PLAYBOOK_v1_2.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2be9f7787481018b5ddafa721eea1220e88aff7e"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/FEAT_PLAYBOOK_v1_0.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e5c2c9f6dbe588eff5982734e2927cb3e126f053"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/FFM_PLAYBOOK_v1_2.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9c8fc35c3f66d7ffe6609c995a3330d090153976"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/FRONTEND_BUILD_PHASE_PLAYBOOK_v1_2_2.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3edb88c3149a9a6d9a7c760471f30956053c9d60"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/FRONTEND_FIRST_PLAYBOOK_v1_1_3.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c8516c8b8b3950e4b2d08d0bb2c112d7136d8f30"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/GLOBAL_DESIGN_SYSTEM_HANDBOOK_v1_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "885db18780530951a49a94fca78119858d433edf"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/HANDOFF_PACKAGE_PLAYBOOK_v1_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d261b4cce6ac7f7c6cf66dae40c8835ce949be40"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/QA_PLAYBOOK_v1_0.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "bb41260f6b6f94372a682f04b313a451f2b3c4b1"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/QA_PLAYBOOK_v1_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "07f50ec1c1f005c1fdc9976d28a576a115f40669"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/RECON_QUESTIONNAIRE_v0_5.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "87d8e16e6c5791954f173d564fc83557939b32ad"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/SOFTWARE_FACTORY_PLAYBOOK_v1_3.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0dcf211e1ba82c811f5d20dc220cbf337ec594b7"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/STARTER_KIT_HANDBOOK_v1_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "6ed6fd2ff14cf9351e00b4c038d331bcd64fa55e"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/STATE_MANAGEMENT_MANUAL_v1_2.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "27b883e21cebce11f3b3e134d8557d82b528a6fe"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/STRIPE_SUBSCRIPTIONS_PLAYBOOK_v1_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a119d65163e5402e87a055527cc2ec24a5432797"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/TESTING_PLAYBOOK_v2_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ae67dcc8c4aebff0b6661e455de6d391a4530659"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/THEME_LIBRARY_v1_2.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f12f2e416ab14622302664c2ca1f8a9e0babeed5"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/THEMING_MANUAL_v1_2.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "1c18038aa6c10a46443e6dd59645d6762ad0c6e7"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/TOKEN_FILE_v1_2.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9712416e644b9f7e7f8c6a8f65e26f390b2c008d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/_ARCHIVE/UI_UX_BUILDING_MANUAL_v1_4.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "138fedce96704f360a0c9c6c7a715d88403a7956"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/lints/.gitignore": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "7a60b85e148f80966a550e5ab6a762a907c69ca6"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/lints/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "54262bd8dc04ca451a0ae77f012e56e08117fa8f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/lints/encoding_lint.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4ab55f68e2e977f2caba7bd89b27737c2bfe202e"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/lints/header_lint.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "38c6b5fd34eb0a6af75a6e004ecdd7d38b4b576d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/lints/lint_common.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d9593ee3349da12cc997eee3c784af65ad28e57d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/lints/retired_terms_lint.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f21c90be1d655bab6f721e32bff1fee87a4ba5f4"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/lints/run_all.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "8a5ab4b8b48dc51c0fc4338f62fd39064529e882"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_CONTENT/lints/versioned_refs_lint.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3a40a0ad727c6f2a760b716886d714f2ffb115f7"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_EXACT_EDITS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e029f3053fd37d8f5c65b58232b4996fe5df0f30"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/PROPOSED_LINT_CHECK.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "20978d9f9ffb07a3df12ab7ff6b165fec0d47d88"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/AMENDMENT_CONFIRMATION.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9e5efbcf678ed8627766bb1ac120ec94d560fd2b"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/ARCHIVE_BLOB_EVIDENCE.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "73e978bb8086b96fe3ade5d280babc7667b5e3b2"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/COMPLETE_PRESERVATION_PATHS.nul": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "fd2d90ef66cb0b4cd3a2e5609018e1094d22c0a7"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/COMPLETE_PRESERVATION_PATHS.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "72c48befdc19f14eaefd084ed247cbde67c0e805"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/DOCSET_SYNC_ACCEPTANCE_SPEC_AMENDED_V1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "eb1b2f9f65cee9fd856207e2970c40de6da91793"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/FINAL_REVIEW_CHECKS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3720fcce1c272e00c1e9479efce62acd3ac02aab"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/GIT_BEFORE.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "23bded751a8902b6052787844ad59694073f7020"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/LINT_RAW.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "1fd079dc861bc3d28ac41a5b2abe05def09ef3de"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/OPERATOR_INSTRUCTIONS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "5c8204ab7d0ddafce9ca173647fd97f9b1f1f941"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/ORDERED_GATE_DECISIONS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "859f9bb459d08d0151d679bee5b4ad44ba1bfde9"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/OWNERSHIP_REVIEW.tsv": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "cc17c173a55c1725a8b3c99fcd56d89993c5d4fe"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/OWNERSHIP_SWEEP_REPLAY.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "730f2894d239f5c57dfbe185e7777ff16fb50320"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/PATCH_MISMATCHES.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "947de9ef916b6dcf5148903d65952b86fc94d8c0"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/PATCH_PROVENANCE.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f91e02aa0e08036083b0893a5758420ce498e60f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/PATCH_REPLAY_RAW.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4babce74e828395b16372fe2c0b2a7a4a4ef6fd7"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/PRESERVATION_RECONCILIATION.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "35752fd02e887829fbe496f505ba82f9e417ea5a"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/PRESERVATION_SUPPLEMENT.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2c096c897a1fceb3ddef23d2ace184999fb21229"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/PROTECTED_BEFORE.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "b19191f356a836524df3e902593a781ff82506b9"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/QA_AF01_PATCH_FIDELITY.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9c9c24f23902e9a7e824bdb98cb7944e806ae6f8"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/README_CONSOLIDATED_REVIEW.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "5e6509bb76ded363f35079c66c9895f25be09985"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/REPLAY_METADATA_RESIDUALS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "66f3d564785e265ac4d43ef8315a58785c55c68e"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/REVIEW_CHANGELOG.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2efd01859dcb54742d23c8b74207160f7a50249d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/REVIEW_IDENTITIES.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d0bb5405a4f891015dd48371ff72ed057d9266de"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/SPEC_REVISION.diff": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e4d20c38166b97d5a9c463e945d9009b68133017"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/VERIFICATION.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "b713e0ec6305e4bbc73ef0563d64bfe90ae0c5fa"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/VERIFICATION_RAW.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9a90340381e6188fc76871d2251acca4a742f225"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/WORKFLOW_ACTOR_EVIDENCE.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "602c5bf3fa4fe1bc7e029f7c3fa4d1e2cd5db417"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_AMENDED_V1/verify_amendment.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9694e84504c4d90220835d1f218e1eb16fe33098"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/REPAIR_QA_P4/DIRECTOR_DECISIONS_V2.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d0cb4c99508f435477ae528e3cbbb7e5740e1541"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/ARCHIVE_BLOBS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "15bd4fd874c9dcc1ddfa078aab4b81aad199535f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/COMPLETE_PRESERVATION_PATHS.nul": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "5ca72d53632476890f87b530fab915dd28d415ab"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/COMPLETE_PRESERVATION_PATHS.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "8358cadbd4cdd6eac278a9eea08b984d55921b4f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/DIRECTOR_DECISIONS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "657770334fa911a33fb36e4f9cc2b5bc096539cf"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/DOCSET_SYNC_ACCEPTANCE_SPEC_AMENDED_V1_R1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9a3370a60bc539917084892f7194d11fc4401076"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/FINAL_HANDOFF.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ab189ec68990cea8e06640f695392b5a6cd9781c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/FINAL_IDENTITIES.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "49ad52e3095002dacc7d18bd501c0c376104b047"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/LINT_RAW.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9028ea8fbd2c62209b14f35298cc99177e8397d0"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/OPERATOR_INSTRUCTIONS_FINAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "54bdd8e356bb5dab7a8bf372acaa993d752b8c74"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/QA_AF01_RETEST_VERDICT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "078e2b68dfd8108bf20952eb9707a48c9bffa940"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/README_FINAL_HANDOFF.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "08d947c65e3e49988f2d87f043a817e50d1a7d9a"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/REPLAY_101_HASHES.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "1da371cbb90a79278918bcb74678c3dcc569a67b"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/RETEST_COMMANDS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e645343728899a3b69dc823589b30f017e927cf1"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/RETEST_RAW.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2958295f6abcede64d8536a3b66976129967eca9"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/RETEST_VERIFICATION.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "b5875e48becc3fb1e261f8ac5b8dc8be239a10df"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/SPEC_REVISION_R1.diff": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a17289eb7288d9efa3bf1f3cdd0172846a961905"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/qa_retest_af01.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9537a4e4a4cdee1173e741335784f6d9e23b83bb"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECOVERY_STATUS.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "154e0ffca2765f7fb78c48127a25c5b467e838da"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/ARCHIVE_FIDELITY.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a6fe07a463aae671aa1e6f4c6acec5c693e8ba49"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/ATTEMPT_01_COMMANDS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "60f6deae42e84757cd68acdee68928ece3a05564"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/ATTEMPT_01_NOTE.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "267f0be262a00d124c15b871f97bbc03184d8d2b"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/COMMANDS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "7ad9d7b657a06c06168140c8e557603a9d816bee"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/COMPLETE_PRESERVATION_PATHS.nul": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c731cbdebf582a5a2d55c3a305018e4b1d51b2b2"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/COMPLETE_PRESERVATION_PATHS.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9d4435ab0da57b90558c24a12a063a3842464f35"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/EXECUTION_PROPOSAL.corrected.patch": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "1267ea8b14c8f08fb78c88c8a57628676105fb7d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/GIT_BEFORE.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "963b7fb2f4cb2e89d59f26af5e5979496f7ba709"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/INDEPENDENT_RETEST_HANDOFF.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "b73b7b379523297a79b9cfc0ab172456b7ae8ad9"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/LINT_RESULT.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "dff71778c0022f138cbf767d14e1c36f52db816a"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/OPERATOR_SUPPLEMENT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "09260611f9d1c734a8a4a395324fb171fea651f3"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/PACKAGING_CHECK.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "5383ec8d16fad0b5bb94952dd40ff0e4f2760881"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/PATCH_ARTIFACT_AUDIT.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c904833a37db0953488f3b8368fc16cf2a6ef336"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/PRESERVATION_SUPPLEMENT.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9787a7f501bcfd33c1a2025283559d8354b20fd1"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/PROTECTED_BEFORE.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a870d156907cbf748b8b29def39de0eca3dc8bc2"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/QA_LEAD_REFERENCE_UPDATES.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "eceb17c00167d99f9ddc51f2619ab5d1c47174b7"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/README_REPAIR.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d2d00746b6c42e925a249210a48353e5ce3cd5ae"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/REPAIR_CHANGELOG.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e6a3f0dc143092482b95a8ed4ed57c6f3c3fc50a"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/REPAIR_IDENTITIES.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "327dea54c0fe45281a5326ba99506f3c2f4a76f1"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/REPLAY_101_HASHES.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "fdee42259ee70f755a3d75a64b0ca0c055cd1445"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/REPLAY_SCOPE.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "030b2169fd056025decad489b6061623a3775bb2"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/SERIALIZATION_DELTA.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "dc88ba5552bff9e25b5e4ca1df684549cab7ea70"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/SERIALIZATION_REPAIR.diff": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "35abbf8d9b1e12fce5cdba60cf56a09cee6314c3"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/SERIALIZER_CASES.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "429adf1efaf84dd6ce8025066a7364efcd1afe39"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/VERIFICATION.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "de4617c10d3e85e25754b894754c42ebde3ac17e"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/frozen_execution.corrected.patch": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a4e8de499c9ed1e052c310a06f15551fa0042aad"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REPAIR_QA_AF01/repair_and_verify.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f32ea22369e87c7c41ca52bb55027a5653fd3ac1"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REVIEW_DRAFT_VERIFICATION.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "feec6cc6ae5d2c0d20de3325ab8eb002eadeaf66"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/REVIEW_ZIP_DELIVERY.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9ba821916ca8274488934997efc41bb56e37b23c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/RUN_SUMMARY.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "6a437620233dcd41267140fecc6da7c5e6f32108"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/SEARCH_QUERIES.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c7661dd9ec8a438abf2df35bf80bb16fb4c275b7"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/SELECTED_CONTENT_DIFF.patch": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "61f6845bfff3103f6c7f352a58b5160ccc2ad4a0"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/SELECTED_CONTENT_INDEX.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "499291dd476faae308604354282fa3fa1e3de2c8"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/SELECTED_EXACT_EDITS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "684b7bac3b12645aa5983bae8443ce33b758a8a4"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/SELECTED_SCOPE_LEDGER.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0f97d31b3a07cb387235a12c5ee2ff876fd36a87"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/SHA256SUMS.txt": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "8eebdf15431641a09288481b441d67bf375cfb92"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/SKILL_AWARENESS.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "292952704bf682e588b361aa0d92404f3e6c3372"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/SYNC_HANDOFF.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "fe413309a014d8572d82b9f00c771582e96af8b7"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/SYNC_HANDOFF_DISPOSITIONS.template.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "825dc8815298572551ec62ba1d7a2ae7a98e0691"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/TEMPLATE_INSTALL_CHECKS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9f6237b8fef50d982ab32eeee03dbe1804992314"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/TEMPLATE_INSTALL_PLAN.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "1f076e816c9794e34f2c36d93ef8918c45f4672e"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/TEMPLATE_INSTALL_PLAN.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "538ece2774b7faf3976c51e836262682a3424561"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/TEMPLATE_INSTALL_VERIFICATION.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4bf3bfc0a25a1648cfc561bcd26e8603a1479c1f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/UPDATE_MAP.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "19598dfb234b38bf76498485a1c1137d3a688784"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/WORKFLOW_PUBLICATION_PLAN.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c5d8cb22c5cd8a7ad2d910da7c1331813e32de2d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/WORKFLOW_RULING_TRACEABILITY.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "be76bf4bfbea1326424c8ed49525af9b1195ee17"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/CONVENTIONS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "bad2915ef9a613cf742cca09c5c973d4cf55a1c4"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/fc_sources.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0c342fa6cfc13272c2ccbdee6b785ed89fa96c30"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/MC_GENERATORS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "864b6e714f60b14fd809497764492b2600b75d67"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/PHASE_2_GENERATORS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "00217bbaba9a5b03bdfcd4dbbd9d12c62b593e39"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f99ae00c3a4b3436f211b5d31c0ac9235b8ee3f9"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_amend_v1.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d303fac3230a34ec294654538219e7c4bba66120"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_amend_v1_verify.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ded45f60184780df8f6741fe00d6c466f4d1728c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_amend_v2.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e575b9eca368075e431276296d26e185b3fae152"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_amend_v2_verify.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0e20aeac7be1e100cdd0353b38febdb62dd6941b"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_assemble.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "76ffa62f3bd9307e031777c77afffb2c9acb5d73"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_build_map.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d886c06be8dd4dea35ce9081d907bce2cfb880b8"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_contrast.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "09a2f23fcd02e4e7fc6a89fc0cd7cfd02d94837a"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_exact_corrections.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "24aef2f55f4c8fa250222d94da76772385407e5d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_map_data.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "328dfed2ca9bd8c6581ab85cdd2edae9176c4764"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_mc_correct.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "54d115ebf88ca04fad82810c96a7d48254a9bd3b"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_mc_metadata.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "da7b27429dae169d86740961f737dfce0e61c4a3"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_mc_propagation.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4bf8edff1e4dfd004f3d2ceb39d599dd8744835a"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_mc_rebuild_check.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "cf69941de2724dc099f0de1bccd5a719d540117c"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_mc_records.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e5215b2655d74f5ed196b155847c4d3c218a4ce0"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_mc_render.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c1338ce21371ce14f1a221ff5ad03fd64369e5e8"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_mc_update_map.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "eb70c147d12c3b6b97e6674dbec10e04505dc9be"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_mc_verify.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f372f1db6d6814cabdb1dcd52067e0d41c1db165"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_phase2_edits.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "6614a4ebcc1a7d00f0f78c647b0b50f28fd4e085"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_phase2_finalize.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "cad9ae46554416354eea672c5273a9f29dbb6900"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_phase2_metadata.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f7f8d816e0fb398e97d98295961723771807d748"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_phase2_newdocs.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "efa6d251ecc4690333a24fcc63693f452d328b8f"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_phase2_reconcile.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "bb684d1501d11865ff1bd15bf59f8325dcda3d74"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_phase2_verify.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "b3a75f558b10682036ba4498ad0b0ecfc8c091c3"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_search.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c0c6dcb1aca6638bb44a02468db1668559af65e6"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_targets.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "266e53a8ade0250e35d81faf0d873cb243c45562"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_templates.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "83e4eed227cda6688d882b345d2d344a113a61a5"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_validate_map.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "6f301f3779094aca71d40063dd6d2cff2c8ab8e0"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/generators/cody_workflow_edits.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f8002c8dd46e158976dbffed34c3b0a675b3e16e"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/harvest_sources.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0fabc4095b5c569f9160bc3adb583e4d26545fd3"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/map_parts/PART_01.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "14d1ff8f303e6f1e157ecc3dcefd00023c878502"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/map_parts/PART_02.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "15fa1fa9728ddccf9882b6090be21602b8b3048d"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/map_parts/PART_03.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "57c2ffb879ec3b7f1ac647306f22e7e4b49e2de2"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/map_parts/PART_04.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c947dac68385e5804e950b4e1d3c531ed63cbbe4"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/map_parts/PART_05.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f9f20665efb3b986f484fd67c5c8abe4b7b89e05"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/map_parts/PART_06.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "7fa635357bf1cbfa497945eab0251b8e9f7bff45"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/map_parts/PART_07.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4dca87f6d371c2e883064eb4ebaee67630fa3fa0"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/phase2_retained_hits.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "875d7d7282178cdc0b009fcd056cb8f12aea8edc"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/placements.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d7c0d589833d78bd4b13a6e1668c6bd4af1e2b8e"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/proposals.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ab5a500fa44e2b28b817289bfe08336de04185ca"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/token_changes.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "15eee4a5ec5a672cca71fa19056369777e0b67df"
+  },
+  "_AUDIT/SYNC_2026-10-15_doctrine-part2/scratchpad/versions.json": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0b29c2def26fff90ea01b4a5fdc112332ecd627d"
+  },
+  "_OTHERS/DOCTRINE_HUB_DESIGN_v0_1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2b90c13c7aa83927f04dbed5882a9913aad834cc"
+  },
+  "_OTHERS/MASTER_DOC_LIST_v1_0_FINAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "48baadf5f5c4836eed173bca4a5ab5a3b81113fb"
+  },
+  "_SKILLS/factory-docs-update/CLAUDE.md": {
+    "mode": "100755",
+    "kind": "blob",
+    "blob": "391db64f1aa2ba3dda4d1a8147f7b0bfb9e409db"
+  },
+  "_SKILLS/factory-docs-update/README.md": {
+    "mode": "100755",
+    "kind": "blob",
+    "blob": "7bd8dbf2c8ec7f9ca4ad504c99ee7d9965540762"
+  },
+  "_SKILLS/factory-docs-update/_shared/references/ANTI_PATTERNS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "420b881ddfcfd5e1997de0c5943ae0dc24178059"
+  },
+  "_SKILLS/factory-docs-update/_shared/references/INTAKE_TAXONOMY.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2d7081dfecdd1c14d9c6c83fec8e7a0e9b15f8b6"
+  },
+  "_SKILLS/factory-docs-update/_shared/references/SHA_AND_PUSH_CONTRACT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a1f26d87db4656f42fe72569df5f7bacf64cc958"
+  },
+  "_SKILLS/factory-docs-update/_shared/references/STANDING_INVARIANTS.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0b556e9ca71537d30b8f350740b6d5815607afe7"
+  },
+  "_SKILLS/factory-docs-update/_shared/templates/DOCSET_SYNC_ACCEPTANCE_SPEC.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "7165a501213835dd8eab358217ebb5a3882db568"
+  },
+  "_SKILLS/factory-docs-update/_shared/templates/SYNC_HANDOFF.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "8aaafe4b7a65eb748d0772efcd965ce4a89c3c53"
+  },
+  "_SKILLS/factory-docs-update/_shared/templates/UPDATE_MAP.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "2d26b30793ed09eef8449b3e1a7638efccef4528"
+  },
+  "_SKILLS/factory-docs-update/sync-engineer/SKILL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a7e96c2c27a6cc2f5ff4a3d0774d6b72fb67a598"
+  },
+  "_SKILLS/factory-docs-update/sync-engineer/decision-trees/route-selection.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "8dc0e0c3da70d1c95bb720f06f0976c396a8e29c"
+  },
+  "_SKILLS/factory-docs-update/sync-engineer/references/TOOL_ROUTING.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f8706a2149c4fc8b516cf56b193ea28e7de1eea6"
+  },
+  "_SKILLS/factory-docs-update/sync-engineer/templates/LESSONS_LEARNED.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "7c5b8745429085154f0b051071f730f2f0b1ba3d"
+  },
+  "_SKILLS/factory-docs-update/sync-qa/SKILL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "51a984649be2c20e977284a76cb0136a37e14e22"
+  },
+  "_SKILLS/factory-docs-update/sync-qa/templates/GATE_Q_REPORT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4cc4844e20c826bd57a954204b21380719464799"
+  },
+  "_SKILLS/factory-docs-update/sync-qa/templates/QA_MATRIX.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f002b2c4014d03a4544280cb08e1a99472467804"
+  },
+  "agent_docs/RESPONSES/response_2026-08-10_192235_phase1-intake-triage.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "7d19d1807b5faa4c7b2d30e5574e8d64ca7f61f3"
+  },
+  "agent_docs/RESPONSES/response_2026-08-10_194109_phase2-ripple-map.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "a129b5b416e59c256a2ad6d3a885c00236c51c6e"
+  },
+  "agent_docs/RESPONSES/response_2026-08-10_194500_phase3-route-decision.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "5e0a26438372cb05a8ef8f6199c45e28e68678f8"
+  },
+  "agent_docs/RESPONSES/response_2026-08-10_200500_gate4-precheck.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e7c592489b705f559fe80235d77091144e17cdec"
+  },
+  "agent_docs/RESPONSES/response_2026-08-10_201500_phase5-pr-handoff.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "b9e8cd493ab998610725c53f0daf524a560c090a"
+  },
+  "agent_docs/RESPONSES/response_2026-08-10_203000_run-summary.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "12c7a72ff76eadfebbdb6cbe7f023bb091282b9a"
+  },
+  "agent_docs/RESPONSES/response_2026-09-26_173500_final-hardening-plan.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "1e4725988d689f5c60263fe5be24ed1473f6f29f"
+  },
+  "agent_docs/RESPONSES/response_2026-09-26_174500_final-hardening-report.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c692bae31faee20a820e5e88890c175eb23336d6"
+  },
+  "agent_docs/RESPONSES/response_2026-10-18_173926_execution-setup-step-1.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ec4b080dda6c03b79d9a5a2622f66c3b7f65daa3"
+  },
+  "agent_docs/RESPONSES/response_2026-10-18_182605_standalone-10x-added.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9c485248e90440f5c72bf38927504e9e71f44264"
+  },
+  "agent_docs/RESPONSES/response_2026-10-18_185802_preservation-commit-next.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "af7bd018995ca7a67f6da06c5a5f669899195015"
+  },
+  "agent_docs/RESPONSES/response_2026-10-18_190750_preservation-verified-fetch-next.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f8b4a98e41546e29842eb95598cbdd3268e03896"
+  },
+  "agent_docs/RESPONSES/response_2026-10-18_192759_execution-worktree-next.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "eaee43055a57f93f1430e42bc3cd0649f8770f7a"
+  },
+  "agent_docs/RESPONSES/response_2026-10-18_192913_execution-transfer-next.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "e24cbd56e2191fd3d30e8fce5f68d7936c44a30c"
+  },
+  "agent_docs/SESSIONS/session_2026-10-18.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "dfdd3c4e6735cb5b55e6a94e319db2369cc70bac"
+  },
+  "fable-sync-review/run-001/FINAL_HARDENING_REPORT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "c692bae31faee20a820e5e88890c175eb23336d6"
+  },
+  "fable-sync-review/run-001/STAGE_B_IMPLEMENTATION_REPORT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "aaaf2c3f5398f7c64cc07eb8c9d4a7b7509e2726"
+  },
+  "fable-sync-review/run-001/SYNC_PROCESS_PROPOSAL.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "182e03ac2668941e04893264dcd5f6151c14aa7a"
+  },
+  "fable-sync-review/run-001/SYNC_SKILL_REVIEW.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "0fa4bdd3b0fda564346d5e005864f910538d37fe"
+  },
+  "fable-sync-review/run-001/TEST_A_HARDENING_REPORT.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "9db5f984518403b5d7f03861a08f214991bcdc32"
+  },
+  "lints/.gitignore": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "7a60b85e148f80966a550e5ab6a762a907c69ca6"
+  },
+  "lints/README.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "54262bd8dc04ca451a0ae77f012e56e08117fa8f"
+  },
+  "lints/encoding_lint.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "4ab55f68e2e977f2caba7bd89b27737c2bfe202e"
+  },
+  "lints/header_lint.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "38c6b5fd34eb0a6af75a6e004ecdd7d38b4b576d"
+  },
+  "lints/lint_common.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "d9593ee3349da12cc997eee3c784af65ad28e57d"
+  },
+  "lints/retired_terms_lint.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "f21c90be1d655bab6f721e32bff1fee87a4ba5f4"
+  },
+  "lints/run_all.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "8a5ab4b8b48dc51c0fc4338f62fd39064529e882"
+  },
+  "lints/versioned_refs_lint.py": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3a40a0ad727c6f2a760b716886d714f2ffb115f7"
+  },
+  "session_2026-07-07.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "b063eff331f3a718bf002b461c5933fee13e45ec"
+  },
+  "session_2026-07-08.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "07ba864bed3caf478bcc627bd573862ef0231a56"
+  },
+  "session_2026-07-12.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "11c2e121c591049a623f65dc80fedb088adbb272"
+  },
+  "session_2026-08-05.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "3e684dbe9cfa7daf84945de783e8c2e4f7c7fd01"
+  },
+  "session_2026-08-10.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "bf61bbc3892e8050bdc0efe753a7c1f934b50f7f"
+  },
+  "session_2026-09-26.md": {
+    "mode": "100644",
+    "kind": "blob",
+    "blob": "ec7a4f1e38a4db09b4aac132206ad60a729c3405"
+  }
+}

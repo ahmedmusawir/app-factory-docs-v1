@@ -1,0 +1,14 @@
+[
+  {
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "restores_parent_exactly": true
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "restores_parent_exactly": true
+  },
+  {
+    "path": "CHANGELOG.md",
+    "restores_parent_exactly": true
+  }
+]

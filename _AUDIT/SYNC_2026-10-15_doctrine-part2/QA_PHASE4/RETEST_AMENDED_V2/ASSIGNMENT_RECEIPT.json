@@ -1,0 +1,10 @@
+{
+  "created_at": "2026-10-19T18:06:04.290311+06:00",
+  "prompt_path": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/RETEST_AMENDED_V2/QA_EXECUTOR_PROMPT.md",
+  "prompt_sha256": "cb1310d08f630921de3732c27792ec583f2b92fcc311fbe6c503362a2f0bf898",
+  "candidate": "8dff354937bc7baf739370a9886497d9d5359186",
+  "status": "READY FOR FRESH EXECUTOR \u2014 NOT EXECUTED",
+  "scope": "R1\u2013R12; seven canonical paths, 94 unchanged of101",
+  "successor_verdict": "PENDING returned independent evidence",
+  "independence": "Assignment prepared in a conversation that engineered the repair. It is not independent testing or adjudication. Fresh Executor explicitly required."
+}

@@ -1,0 +1,130 @@
+{
+  "prior_manifest_identity": {
+    "ok": true,
+    "detail": null
+  },
+  "prior_inventory": {
+    "ok": true,
+    "detail": 118
+  },
+  "input_pins": {
+    "ok": true,
+    "detail": null
+  },
+  "handoff_crosscheck": {
+    "ok": true,
+    "detail": null
+  },
+  "scope_56": {
+    "ok": true,
+    "detail": null
+  },
+  "scope_canonical": {
+    "ok": true,
+    "detail": null
+  },
+  "scope_additions": {
+    "ok": true,
+    "detail": null
+  },
+  "scope_no_other": {
+    "ok": true,
+    "detail": null
+  },
+  "installation_101": {
+    "ok": true,
+    "detail": null
+  },
+  "unchanged_98": {
+    "ok": true,
+    "detail": null
+  },
+  "three_proposals": {
+    "ok": true,
+    "detail": null
+  },
+  "outside_101_preserved": {
+    "ok": true,
+    "detail": null
+  },
+  "protected_surfaces": {
+    "ok": true,
+    "detail": null
+  },
+  "frozen_records": {
+    "ok": true,
+    "detail": null
+  },
+  "root_files": {
+    "ok": true,
+    "detail": null
+  },
+  "eight_edits_present": {
+    "ok": true,
+    "detail": null
+  },
+  "only_eight_edits": {
+    "ok": true,
+    "detail": null
+  },
+  "code_imports_unchanged": {
+    "ok": true,
+    "detail": null
+  },
+  "manual_metadata": {
+    "ok": true,
+    "detail": null
+  },
+  "changelog_metadata": {
+    "ok": true,
+    "detail": null
+  },
+  "manifest_unchanged": {
+    "ok": true,
+    "detail": null
+  },
+  "lint_exit": {
+    "ok": true,
+    "detail": ""
+  },
+  "transitions_pending": {
+    "ok": true,
+    "detail": null
+  },
+  "no_later_local_commit": {
+    "ok": true,
+    "detail": null
+  },
+  "authorization": {
+    "ok": true,
+    "detail": null
+  },
+  "state_passages": {
+    "ok": true,
+    "detail": null
+  },
+  "carry_R1": {
+    "ok": true,
+    "detail": null
+  },
+  "carry_R2": {
+    "ok": true,
+    "detail": null
+  },
+  "carry_R3": {
+    "ok": true,
+    "detail": null
+  },
+  "carry_R5_prime_other": {
+    "ok": true,
+    "detail": null
+  },
+  "carry_R9": {
+    "ok": true,
+    "detail": null
+  },
+  "live_scope_counts": {
+    "ok": true,
+    "detail": null
+  }
+}

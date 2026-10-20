@@ -1,0 +1,437 @@
+[
+  {
+    "sequence": 381,
+    "edit_id": "E381",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "old": "> Same artifact name — different author, different moment. Router: APP_FACTORY_BLUEPRINT, \"Which Pipeline Am I In?\".",
+    "new": "> The Architect authors `DATA_CONTRACT.md` in both runs; only the evidence base and moment differ: conversion uses Brain Drain evidence and is pre-authored; greenfield uses the approved APP_BRIEF before Design. Router: APP_FACTORY_BLUEPRINT, \"Which Pipeline Am I In?\".",
+    "ids": [
+      "F01"
+    ],
+    "item": "F01",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 176
+  },
+  {
+    "sequence": 382,
+    "edit_id": "E382",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "old": "When code is complete and tested, Engineer hands off to Operations/Deployment.",
+    "new": "When code is complete and self-verified, the Engineer hands the candidate and factual QAM engineering handoff to independent QA on the Director-created QA branch; Operations/Deployment receives the package only after QA Lead certification and Director release (see QAM_PLAYBOOK §3 and DEPLOYMENT_PLAYBOOK §3).",
+    "ids": [
+      "F02"
+    ],
+    "item": "F02",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 1385
+  },
+  {
+    "sequence": 383,
+    "edit_id": "E383",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "old": "├── APP_BRIEF.md (from Architect)\n├── UI_SPEC.md (from Designer)\n├── DATA_CONTRACT.md\n├── Working Code (tested)\n├── README.md (setup instructions)\n└── Deployment Guide",
+    "new": "├── APP_BRIEF.md (from Architect)\n├── UI_SPEC.md (from Designer)\n├── DATA_CONTRACT.md\n├── ACCEPTANCE_SPEC.md (from Architect)\n├── Working Code (tested)\n├── QAM/ (module QA pack: ENGINEERING_HANDOFF, approved plan, results, certificate)\n├── README.md (setup instructions)\n└── Deployment Guide",
+    "ids": [
+      "F02"
+    ],
+    "item": "F02",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 1392
+  },
+  {
+    "sequence": 384,
+    "edit_id": "E384",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "old": "   Read the handbook, treat it as ASPIRATIONAL — verify every load-bearing\n   claim against disk (RECON_QUESTIONNAIRE §0). Where handbook and\n   filesystem disagree, the filesystem wins.",
+    "new": "   Read the handbook, treat it as ASPIRATIONAL — verify every load-bearing claim against disk (RECON_QUESTIONNAIRE §0).\n   Disk establishes implementation facts; approved briefs govern scope and governing documents control their subjects.\n   Record handbook drift; route genuine requirements conflicts to the Director.",
+    "ids": [
+      "F03"
+    ],
+    "item": "F03",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 255
+  },
+  {
+    "sequence": 385,
+    "edit_id": "E385",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "old": "```typescript\nexport async function seedSubscription(userId: string, tier: TestTier) {\n  const { error } = await supabaseAdmin.from(\"subscriptions\").upsert(\n    {\n      user_id: userId,\n      tier,\n      status: \"active\",\n      stripe_customer_id: `cus_test_${userId.slice(0, 8)}`,\n      stripe_subscription_id: `sub_test_${userId.slice(0, 8)}`,\n      current_period_start: new Date().toISOString(),\n      current_period_end: new Date(\n        Date.now() + 30 * 24 * 60 * 60 * 1000,\n      ).toISOString(),\n      cancel_at_period_end: false,\n    },\n    { onConflict: \"user_id\" },\n  );\n  if (error) throw new Error(`Failed to seed subscription: ${error.message}`);\n}\n```",
+    "new": "**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.\n\nPrivileged seeding and admin-client construction in test helpers run only behind the Director-approved test-project allowlist and authorized-test-identity guard above; fail closed on mismatch, missing identity or unknown target.",
+    "ids": [
+      "F04a / FC-022"
+    ],
+    "item": "F04a / FC-022",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 891
+  },
+  {
+    "sequence": 386,
+    "edit_id": "E386",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "old": "```typescript\nimport { createClient } from \"@supabase/supabase-js\";\nimport * as dotenv from \"dotenv\";\n\n// Playwright runs outside Next.js — must load .env.local manually\ndotenv.config({ path: \".env.local\" });\n\nexport const supabaseAdmin = createClient(\n  process.env.NEXT_PUBLIC_SUPABASE_URL!,\n  process.env.SUPABASE_SECRET_KEY!,\n  { auth: { autoRefreshToken: false, persistSession: false } },\n);\n```",
+    "new": "**Executable example withdrawn.** The previous example is not an approved implementation. The outgoing archived document preserves it as history. Replacement code requires the project’s approved contract, verified dependency interfaces and behavioral evidence. This withdrawal contains the misleading recipe; it does not certify the underlying finding resolved.\n\nPrivileged seeding and admin-client construction in test helpers run only behind the Director-approved test-project allowlist and authorized-test-identity guard above; fail closed on mismatch, missing identity or unknown target.",
+    "ids": [
+      "F04a / FC-022"
+    ],
+    "item": "F04a / FC-022",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 918
+  },
+  {
+    "sequence": 387,
+    "edit_id": "E387",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "old": "When using the service role key (server-side), RLS is bypassed. This is appropriate for:\n- API routes\n- Background jobs\n- Admin operations",
+    "new": "A service-role client bypasses RLS and is appropriate only inside an independently authorized elevated operation:\n- Background jobs with operation-local authorization\n- Admin operations with operation-local authorization\n\nAn API route is not itself a reason to bypass RLS; never use a service-role client as the default route client (see AUTH_MANUAL, Service-Role Capability Boundary).",
+    "ids": [
+      "F04b / FC-038"
+    ],
+    "item": "F04b / FC-038",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 420
+  },
+  {
+    "sequence": 388,
+    "edit_id": "E388",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "old": "// Server-side: Service role bypasses RLS",
+    "new": "// Construct only inside an independently authorized elevated operation, never as a default route client.",
+    "ids": [
+      "F04b / FC-038"
+    ],
+    "item": "F04b / FC-038",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 426
+  },
+  {
+    "sequence": 389,
+    "edit_id": "E389",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "old": "process.env.SUPABASE_SERVICE_ROLE_KEY! // Bypasses RLS",
+    "new": "process.env.SUPABASE_SERVICE_ROLE_KEY! // Operation-local authorization is required before construction.",
+    "ids": [
+      "F04b / FC-038"
+    ],
+    "item": "F04b / FC-038",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 431
+  },
+  {
+    "sequence": 390,
+    "edit_id": "E390",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "old": "export const fetchProducts = async (): Promise<Product[]> => {",
+    "new": "// Independent normalization-step example: fetchProducts() returns Promise<Product[]>.\n// This array-returning step is not the typed-outcome service used by the route below.\nexport const fetchProducts = async (): Promise<Product[]> => {",
+    "ids": [
+      "F04c / FC-066"
+    ],
+    "item": "F04c / FC-066",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 613
+  },
+  {
+    "sequence": 391,
+    "edit_id": "E391",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "old": "### Graceful Degradation Pattern\n",
+    "new": "### Graceful Degradation Pattern\n\nThis caller uses the §3 typed-outcome contract: `fetchProducts()` returns a discriminated outcome with `status` equal to `success`, `not-found`, `unavailable`, `invalid` or `forbidden`; only `success` carries `items: Product[]`. This example assumes a project-approved public-catalog failure policy permitting the generic empty-state UI on non-success; this is not an entitlement decision or a cached successful result. It does not call the independent array-returning normalization example.\n",
+    "ids": [
+      "F04c / FC-066"
+    ],
+    "item": "F04c / FC-066",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 783
+  },
+  {
+    "sequence": 392,
+    "edit_id": "E392",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "old": "  const { items: products, error } = await fetchProducts();\n\n  // Graceful degradation: show empty state instead of crashing\n  if (error || products.length === 0) {",
+    "new": "  const outcome = await fetchProducts();\n\n  // Apply the declared public-catalog failure policy; do not treat failure as success.\n  if (outcome.status !== 'success' || outcome.items.length === 0) {",
+    "ids": [
+      "F04c / FC-066"
+    ],
+    "item": "F04c / FC-066",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 793
+  },
+  {
+    "sequence": 393,
+    "edit_id": "E393",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "old": "  return <ProductList products={products} />;",
+    "new": "  return <ProductList products={outcome.items} />;",
+    "ids": [
+      "F04c / FC-066"
+    ],
+    "item": "F04c / FC-066",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 809
+  },
+  {
+    "sequence": 394,
+    "edit_id": "E394",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "old": "### ISR and Revalidation\n",
+    "new": "### ISR and Revalidation\n\nIndependent ISR example: this `fetchProducts()` returns the endpoint’s raw JSON payload, with no normalization or typed-outcome envelope; it is not the §3 service or the caller above. The project must declare and validate that endpoint’s wire contract and failure/cache policy before implementation; this example only illustrates the revalidation option.\n",
+    "ids": [
+      "F04c / FC-066"
+    ],
+    "item": "F04c / FC-066",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 852
+  },
+  {
+    "sequence": 395,
+    "edit_id": "E395",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "old": "2. **Don't store sensitive data in localStorage**\n   - Accessible via JavaScript\n   - Use secure cookies instead",
+    "new": "2. **Don't store sensitive data in localStorage**\n   - Accessible via JavaScript\n   - Use secure cookies instead\n   - No persistent raw contact information is stored in browser storage by default; any approved exception names the fields, purpose, retention period and owner, with clearing/invalidation behavior.",
+    "ids": [
+      "F05 / RUL-13"
+    ],
+    "item": "F05 / RUL-13",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 1122
+  },
+  {
+    "sequence": 396,
+    "edit_id": "E396",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "old": "expect(JSON.parse(stored!).state.couponCode).toBe(expectedCode); // approved non-sensitive project fixture only\n```",
+    "new": "expect(JSON.parse(stored!).state.couponCode).toBe(expectedCode); // approved non-sensitive project fixture only\n```\n\nNo persistent raw contact information is stored in browser storage by default; any approved exception names the fields, purpose, retention period and owner, with clearing/invalidation behavior.",
+    "ids": [
+      "F05 / RUL-13"
+    ],
+    "item": "F05 / RUL-13",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 426
+  },
+  {
+    "sequence": 397,
+    "edit_id": "E397",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "old": "Personal fields follow the approved account-transition and retention policy.",
+    "new": "Personal fields follow the approved account-transition and retention policy in STATE_MANAGEMENT_MANUAL. No persistent raw contact information is stored in browser storage by default; any approved exception names the fields, purpose, retention period and owner, with clearing/invalidation behavior.",
+    "ids": [
+      "F05 / RUL-13"
+    ],
+    "item": "F05 / RUL-13",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 205
+  },
+  {
+    "sequence": 398,
+    "edit_id": "E398",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "old": "| 1.3 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-004, FC-005, FC-008, FC-014, FC-015, FC-017, FC-018, FC-027, MC-06, MC-07, RUL-01, RUL-05, RUL-09, RUL-12, W19, W23 |",
+    "new": "| 1.3 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-004, FC-005, FC-008, FC-014, FC-015, FC-017, FC-018, FC-027, MC-06, MC-07, RUL-01, RUL-05, RUL-09, RUL-12, W19, W23; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) |",
+    "ids": [
+      "HISTORY / F01–F05"
+    ],
+    "item": "HISTORY / F01–F05",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 1602
+  },
+  {
+    "sequence": 399,
+    "edit_id": "E399",
+    "path": "CHANGELOG.md",
+    "old": "| 2026-10-18 | ENGINEER_PLAYBOOK v1.3 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-004, FC-005, FC-008, FC-014, FC-015, FC-017, FC-018, FC-027, MC-06, MC-07, RUL-01, RUL-05, RUL-09, RUL-12, W19, W23 |",
+    "new": "| 2026-10-18 | ENGINEER_PLAYBOOK v1.3 | Factory DocSet sync; preserved outgoing original; MC correction pass; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) | FC-004, FC-005, FC-008, FC-014, FC-015, FC-017, FC-018, FC-027, MC-06, MC-07, RUL-01, RUL-05, RUL-09, RUL-12, W19, W23 |",
+    "ids": [
+      "CHANGELOG / F01–F05"
+    ],
+    "item": "CHANGELOG / F01–F05",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 43
+  },
+  {
+    "sequence": 400,
+    "edit_id": "E400",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "old": "| 2.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: DEC-03, FC-020, FC-021, FC-022, FC-023, FC-024, FC-030, FC-031, FC-040, FC-063, RUL-11, RUL-12, RUL-13 |",
+    "new": "| 2.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: DEC-03, FC-020, FC-021, FC-022, FC-023, FC-024, FC-030, FC-031, FC-040, FC-063, RUL-11, RUL-12, RUL-13; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) |",
+    "ids": [
+      "HISTORY / F01–F05"
+    ],
+    "item": "HISTORY / F01–F05",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 1655
+  },
+  {
+    "sequence": 401,
+    "edit_id": "E401",
+    "path": "CHANGELOG.md",
+    "old": "| 2026-10-18 | TESTING_PLAYBOOK v2.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | DEC-03, FC-020, FC-021, FC-022, FC-023, FC-024, FC-030, FC-031, FC-040, FC-063, RUL-11, RUL-12, RUL-13 |",
+    "new": "| 2026-10-18 | TESTING_PLAYBOOK v2.2 | Factory DocSet sync; preserved outgoing original; MC correction pass; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) | DEC-03, FC-020, FC-021, FC-022, FC-023, FC-024, FC-030, FC-031, FC-040, FC-063, RUL-11, RUL-12, RUL-13 |",
+    "ids": [
+      "CHANGELOG / F01–F05"
+    ],
+    "item": "CHANGELOG / F01–F05",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 54
+  },
+  {
+    "sequence": 402,
+    "edit_id": "E402",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "old": "| 1.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-003/096, FC-033, FC-034, FC-036, FC-037, FC-038, FC-039, FC-045, RUL-11 |",
+    "new": "| 1.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-003/096, FC-033, FC-034, FC-036, FC-037, FC-038, FC-039, FC-045, RUL-11; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) |",
+    "ids": [
+      "HISTORY / F01–F05"
+    ],
+    "item": "HISTORY / F01–F05",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 1161
+  },
+  {
+    "sequence": 403,
+    "edit_id": "E403",
+    "path": "CHANGELOG.md",
+    "old": "| 2026-10-18 | DATABASE_MANUAL v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-001, FC-003/096, FC-033, FC-034, FC-036, FC-037, FC-038, FC-039, FC-045, RUL-11 |",
+    "new": "| 2026-10-18 | DATABASE_MANUAL v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) | FC-001, FC-003/096, FC-033, FC-034, FC-036, FC-037, FC-038, FC-039, FC-045, RUL-11 |",
+    "ids": [
+      "CHANGELOG / F01–F05"
+    ],
+    "item": "CHANGELOG / F01–F05",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 58
+  },
+  {
+    "sequence": 404,
+    "edit_id": "E404",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "old": "| 1.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-021, FC-056, FC-057, FC-058, FC-059, FC-061, FC-063, FC-064, FC-066, FC-070, RUL-11 |",
+    "new": "| 1.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-021, FC-056, FC-057, FC-058, FC-059, FC-061, FC-063, FC-064, FC-066, FC-070, RUL-11; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) |",
+    "ids": [
+      "HISTORY / F01–F05"
+    ],
+    "item": "HISTORY / F01–F05",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 1206
+  },
+  {
+    "sequence": 405,
+    "edit_id": "E405",
+    "path": "CHANGELOG.md",
+    "old": "| 2026-10-18 | API_AND_SERVICES_MANUAL v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-021, FC-056, FC-057, FC-058, FC-059, FC-061, FC-063, FC-064, FC-066, FC-070, RUL-11 |",
+    "new": "| 2026-10-18 | API_AND_SERVICES_MANUAL v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) | FC-021, FC-056, FC-057, FC-058, FC-059, FC-061, FC-063, FC-064, FC-066, FC-070, RUL-11 |",
+    "ids": [
+      "CHANGELOG / F01–F05"
+    ],
+    "item": "CHANGELOG / F01–F05",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 55
+  },
+  {
+    "sequence": 406,
+    "edit_id": "E406",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "old": "| 1.5 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-021, FC-033, FC-034, FC-035, FC-036, FC-038, FC-039, FC-041, FC-042, FC-043, FC-044, FC-063, FC-066, RUL-11 |",
+    "new": "| 1.5 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-001, FC-021, FC-033, FC-034, FC-035, FC-036, FC-038, FC-039, FC-041, FC-042, FC-043, FC-044, FC-063, FC-066, RUL-11; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) |",
+    "ids": [
+      "HISTORY / F01–F05"
+    ],
+    "item": "HISTORY / F01–F05",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 1373
+  },
+  {
+    "sequence": 407,
+    "edit_id": "E407",
+    "path": "CHANGELOG.md",
+    "old": "| 2026-10-18 | AUTH_MANUAL v1.5 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-001, FC-021, FC-033, FC-034, FC-035, FC-036, FC-038, FC-039, FC-041, FC-042, FC-043, FC-044, FC-063, FC-066, RUL-11 |",
+    "new": "| 2026-10-18 | AUTH_MANUAL v1.5 | Factory DocSet sync; preserved outgoing original; MC correction pass; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) | FC-001, FC-021, FC-033, FC-034, FC-035, FC-036, FC-038, FC-039, FC-041, FC-042, FC-043, FC-044, FC-063, FC-066, RUL-11 |",
+    "ids": [
+      "CHANGELOG / F01–F05"
+    ],
+    "item": "CHANGELOG / F01–F05",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 57
+  },
+  {
+    "sequence": 408,
+    "edit_id": "E408",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "old": "| 1.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-047, FC-050, FC-051, FC-052, FC-053, FC-054, FC-055, FC-059, FC-060, FC-062, FC-063, FC-067, FC-068, RUL-11 |",
+    "new": "| 1.2 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-047, FC-050, FC-051, FC-052, FC-053, FC-054, FC-055, FC-059, FC-060, FC-062, FC-063, FC-067, FC-068, RUL-11; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) |",
+    "ids": [
+      "HISTORY / F01–F05"
+    ],
+    "item": "HISTORY / F01–F05",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 563
+  },
+  {
+    "sequence": 409,
+    "edit_id": "E409",
+    "path": "CHANGELOG.md",
+    "old": "| 2026-10-18 | ECOMMERCE_AND_PAYMENTS_MANUAL v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass | FC-047, FC-050, FC-051, FC-052, FC-053, FC-054, FC-055, FC-059, FC-060, FC-062, FC-063, FC-067, FC-068, RUL-11 |",
+    "new": "| 2026-10-18 | ECOMMERCE_AND_PAYMENTS_MANUAL v1.2 | Factory DocSet sync; preserved outgoing original; MC correction pass; QA-P4 repair: F01–F05 (AC5/6/9/15/16/18) | FC-047, FC-050, FC-051, FC-052, FC-053, FC-054, FC-055, FC-059, FC-060, FC-062, FC-063, FC-067, FC-068, RUL-11 |",
+    "ids": [
+      "CHANGELOG / F01–F05"
+    ],
+    "item": "CHANGELOG / F01–F05",
+    "label": "ENGINEER-PROPOSED AMENDED-v2",
+    "authority": "QA Lead verdict F01–F05; Jarvis correction directions confirmed by Tony in current preparation assignment. Exact proposed bytes remain subject to Tony Gate 2; no approval inferred.",
+    "candidate": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "candidate_line": 59
+  }
+]

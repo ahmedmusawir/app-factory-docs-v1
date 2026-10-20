@@ -1,0 +1,146 @@
+[
+  {
+    "sequence": 373,
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "old": "## 📋 ENGINEER AGENT: WHAT IT PRODUCES\n\nThe Engineer's full output list:\n",
+    "new": "## 📋 ENGINEERING PACKAGE: APPROVED CONTRACT ARTIFACTS\n\nThe Architect assembles the approved contract artifacts below for the Engineer to implement. DATA_CONTRACT is authored before Design; FILE_TREE is optional when implementation structure and boundaries are otherwise explicit.\n",
+    "ids": [
+      "D-1",
+      "MC-07",
+      "RUL-09",
+      "FC-008",
+      "FC-017",
+      "FC-027"
+    ],
+    "label": "ENGINEER-PROPOSED AMENDED-v1 ownership amendment",
+    "amendment": "AMENDED-v1",
+    "item": "D-1",
+    "authority": "Architect-recommended replacement text conveyed in Tony's 2026-10-17 brief \"CODY — PREPARE ONE BOUNDED MAP AMENDMENT\"; resolves FABLE_CORRECTION_CONFIRMATION_2026-10-17.md §5 D-1/D-2 (AC6(c)/(d)); applies existing approved policy RUL-09 (DIRECTOR_RULINGS_2026-10-16.md); no new policy."
+  },
+  {
+    "sequence": 374,
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "old": "> **Author:** Engineer Agent",
+    "new": "> **Author:** Architect",
+    "ids": [
+      "D-2",
+      "MC-07",
+      "RUL-09",
+      "FC-027"
+    ],
+    "label": "ENGINEER-PROPOSED AMENDED-v1 ownership amendment",
+    "amendment": "AMENDED-v1",
+    "item": "D-2",
+    "authority": "Architect-recommended replacement text conveyed in Tony's 2026-10-17 brief \"CODY — PREPARE ONE BOUNDED MAP AMENDMENT\"; resolves FABLE_CORRECTION_CONFIRMATION_2026-10-17.md §5 D-1/D-2 (AC6(c)/(d)); applies existing approved policy RUL-09 (DIRECTOR_RULINGS_2026-10-16.md); no new policy."
+  },
+  {
+    "sequence": 375,
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "old": "| Define data schemas | Engineer Agent |",
+    "new": "| Implement approved data schemas as migrations and models | Engineer Agent |",
+    "ids": [
+      "OBS-1",
+      "MC-07",
+      "RUL-09",
+      "FC-017",
+      "FC-027"
+    ],
+    "label": "ENGINEER-PROPOSED AMENDED-v1 ownership amendment",
+    "amendment": "AMENDED-v1",
+    "item": "OBS-1a",
+    "authority": "Jarvis (Architect) resolution of OBS-1 conveyed in Tony's 2026-10-17 brief \"CODY — COMPLETE THE OWNERSHIP CORRECTION IN ONE PASS\": fold OBS-1 into draft AMENDED-v1 with the exact replacement rows; \"The Architect owns the approved contract; Engineering implements it.\" Applies existing approved policy RUL-09; no new policy; no AMENDED-v2."
+  },
+  {
+    "sequence": 376,
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "old": "| Define API contracts | Engineer Agent |",
+    "new": "| Implement approved API contracts | Engineer Agent |",
+    "ids": [
+      "OBS-1",
+      "MC-07",
+      "RUL-09",
+      "FC-017",
+      "FC-027"
+    ],
+    "label": "ENGINEER-PROPOSED AMENDED-v1 ownership amendment",
+    "amendment": "AMENDED-v1",
+    "item": "OBS-1b",
+    "authority": "Jarvis (Architect) resolution of OBS-1 conveyed in Tony's 2026-10-17 brief \"CODY — COMPLETE THE OWNERSHIP CORRECTION IN ONE PASS\": fold OBS-1 into draft AMENDED-v1 with the exact replacement rows; \"The Architect owns the approved contract; Engineering implements it.\" Applies existing approved policy RUL-09; no new policy; no AMENDED-v2."
+  },
+  {
+    "sequence": 377,
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "old": "| `DB_SCHEMA.md` | Database tables, relationships, indexes | Engineer |",
+    "new": "| `DB_SCHEMA.md` | Database tables, relationships, indexes | Architect |",
+    "ids": [
+      "P-1",
+      "OBS-1",
+      "MC-07",
+      "RUL-09",
+      "FC-008",
+      "FC-017",
+      "FC-027"
+    ],
+    "label": "ENGINEER-PROPOSED AMENDED-v1 ownership amendment",
+    "amendment": "AMENDED-v1",
+    "item": "P-1",
+    "authority": "Same brief: \"complete ONE ownership propagation sweep across the selected live documents … Resolve direct contradictions of that approved rule in this same draft amendment.\" Engineer-worded under the Architect's rule (Architect owns the approved contract; Engineering implements it); wording for Architect/Fable confirmation.",
+    "evidence": "Blueprint \"Phase 3: ENGINEERING (Architect Contract Assembly)\" owner table; E373 states the Architect assembles the approved contract artifacts below (DATA_CONTRACT, DB_SCHEMA, API_SPEC, FILE_TREE); an Engineer owner cell for a contract artifact contradicts the rule."
+  },
+  {
+    "sequence": 378,
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "old": "| `API_SPEC.md` | Endpoints, methods, auth, error codes | Engineer |",
+    "new": "| `API_SPEC.md` | Endpoints, methods, auth, error codes | Architect |",
+    "ids": [
+      "P-2",
+      "OBS-1",
+      "MC-07",
+      "RUL-09",
+      "FC-008",
+      "FC-017",
+      "FC-027"
+    ],
+    "label": "ENGINEER-PROPOSED AMENDED-v1 ownership amendment",
+    "amendment": "AMENDED-v1",
+    "item": "P-2",
+    "authority": "Same brief: \"complete ONE ownership propagation sweep across the selected live documents … Resolve direct contradictions of that approved rule in this same draft amendment.\" Engineer-worded under the Architect's rule (Architect owns the approved contract; Engineering implements it); wording for Architect/Fable confirmation.",
+    "evidence": "Same owner table as P-1; API contract ownership."
+  },
+  {
+    "sequence": 379,
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "old": "| **Data Contracts** | Define schemas, APIs, file formats |",
+    "new": "| **Data Contracts** | Implement the approved schemas, APIs and file formats; contract changes return to the Architect |",
+    "ids": [
+      "P-3",
+      "OBS-1",
+      "MC-07",
+      "RUL-09",
+      "FC-027"
+    ],
+    "label": "ENGINEER-PROPOSED AMENDED-v1 ownership amendment",
+    "amendment": "AMENDED-v1",
+    "item": "P-3",
+    "authority": "Same brief: \"complete ONE ownership propagation sweep across the selected live documents … Resolve direct contradictions of that approved rule in this same draft amendment.\" Engineer-worded under the Architect's rule (Architect owns the approved contract; Engineering implements it); wording for Architect/Fable confirmation.",
+    "evidence": "ENGINEER_PLAYBOOK §\"Core Responsibilities\" role table assigns \"Define schemas, APIs\" to the Engineer; contradicts E373/E374/OBS-1 and the playbook's own §\"DATA_CONTRACT Ownership\" and §12 note. Return-to-Architect clause mirrors Blueprint FAQ row (\"contract changes return to the Architect and Director\")."
+  },
+  {
+    "sequence": 380,
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "old": "- Database schema design (Supabase/Firebase)\n",
+    "new": "- Implement approved database schemas as migrations and models (Supabase/Firebase)\n",
+    "ids": [
+      "P-4",
+      "OBS-1",
+      "MC-07",
+      "RUL-09",
+      "FC-027"
+    ],
+    "label": "ENGINEER-PROPOSED AMENDED-v1 ownership amendment",
+    "amendment": "AMENDED-v1",
+    "item": "P-4",
+    "authority": "Same brief: \"complete ONE ownership propagation sweep across the selected live documents … Resolve direct contradictions of that approved rule in this same draft amendment.\" Engineer-worded under the Architect's rule (Architect owns the approved contract; Engineering implements it); wording for Architect/Fable confirmation.",
+    "evidence": "ENGINEER_PLAYBOOK §13 \"Full-Stack Web App → Engineer Focus\" bullet assigns schema *design* to the Engineer; reworded with Jarvis's OBS-1 phrase. The sibling bullets (\"API route implementation\", Backend Bundle \"API contract implementation\") already state implementation and are retained."
+  }
+]

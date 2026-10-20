@@ -1,0 +1,1 @@
+Execute the authorized Phase 4 checklist: pin remote/local identities; export BASE, CONTENT and candidate; independently check all 38 ACs and 10X-COPY with manual reads; retain raw evidence and scripts; report all findings without verdict; package one ZIP. Candidate and Git stay read-only; only assigned evidence and bookkeeping lanes are writable.

@@ -1,0 +1,93 @@
+{
+  "amendment": "AMENDED-v1",
+  "status": "ENGINEER-PROPOSED; re-enters Gate 2; not approved; Gate 3 pending; Phase 3 NOT RELEASED",
+  "base_sha": "9c179392f79b70da099121fc357d3107ad3bb86e",
+  "gate2_frozen_map_sha256": "cd291270bb6c8e537bcb050685c6464d326254f0d2a703c21f7f304dfe286931",
+  "gate2_index_sha256": "84337dcd3b60d059e8c67d1586cd8dba58827c64e14ab46d6d05ab57a611da39",
+  "amended_documents": [
+    {
+      "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+      "before_sha256": "9b732116c6030aee4d6ae0b792272bc372dd647ef95dea522c2bf7949934af93",
+      "gate2_proposed_sha256": "de0321e3b2b9220121606c5255d2ddc3d0d01ce57d69be11200d0c2aed5a2ac4",
+      "gate2_bytes": 14426,
+      "amended_proposed_sha256": "df17ac849c4035a3febcc7042329a43bf9fb2ffbf2cafbc954a01a6d0d7f6911",
+      "amended_bytes": 14636
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+      "before_sha256": "b0754979e3b24cb79234265fe146f39f03718e608a60153a702a518f34979af4",
+      "gate2_proposed_sha256": "ad0712bf79a03233c6dd4799eb04113ad966d23017f26a5ba1a6f433481dce48",
+      "gate2_bytes": 26430,
+      "amended_proposed_sha256": "3ec6bc37f52ad913e06ad43e7b7344477a5804c5b205122ca8b075502d01949c",
+      "amended_bytes": 26479
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "before_sha256": "8d73c37a42624fa2c60729d8d2648fc96f72305a732fd5e74460cf0a614f861c",
+      "gate2_proposed_sha256": "72477ec8dccc0381d6a5a4476d64b84751b376dfb78f83a49b337beb8651a1e9",
+      "gate2_bytes": 50878,
+      "amended_proposed_sha256": "b0f74569d020176a189abc47fa1ea6f27644a81ceb55efc1ccd78e4d5197a5ab",
+      "amended_bytes": 50972
+    }
+  ],
+  "amended_edit_sequences": [
+    373,
+    374,
+    375,
+    376,
+    377,
+    378,
+    379,
+    380
+  ],
+  "regenerated_records": {
+    "SELECTED_EXACT_EDITS.json": {
+      "gate2_sha256": "4bd81b896edc1a47925861cd1136fe01b9231d9c2a3fdb1fee796c5eb5c2c928",
+      "amended_sha256": "2675ffc148f49a95b688e9f252527950ce9c3f1fd61df3fb0ffb067fcc7ff687"
+    },
+    "SELECTED_CONTENT_INDEX.json": {
+      "gate2_sha256": "a5d23872cbd65bd5976f1af62c5382a099b8748b35758070332931f0d54c7544",
+      "amended_sha256": "7620e9399a2bf472f562d836c9413a5750460c17ae35ef9e33230b3951dae631"
+    },
+    "SELECTED_CONTENT_DIFF.patch": {
+      "gate2_sha256": "13f5aab0611b11ec3c3adff08594c0c87861cd4e02055931664ac966e302b668",
+      "amended_sha256": "1e30d8b33900f34f2271d5065fbd6475344c6b7762dfede91cf17535c1f6e878"
+    },
+    "EXECUTION_PROPOSAL_INDEX.json": {
+      "gate2_sha256": "84337dcd3b60d059e8c67d1586cd8dba58827c64e14ab46d6d05ab57a611da39",
+      "amended_sha256": "69244f4edc347b30b81ed6a909bae4fbb5130864319e9f8cd84b5d5c22e59ba6"
+    },
+    "EXECUTION_PROPOSAL.patch": {
+      "gate2_sha256": "c82c98b60bfa54d7b8ea7db60bb35103e4bffc27ccbdd2a2f3a08663d8a748c0",
+      "amended_sha256": "ce4528d8db1183699ea8a90aaed266e91c991fe59b01747d4aa51e70acb3d58c"
+    },
+    "LANDING_DATE_PLAN.json": {
+      "gate2_sha256": "1b60603a679b590b5ae891de04b97e86c777c157aa72ecc4c7fb31296ee383a8",
+      "amended_sha256": "d7cd5a90ccac52972100be1c570c301d1399896d634d71acf87402585b2a99f1"
+    },
+    "WORKFLOW_RULING_TRACEABILITY.json": {
+      "gate2_sha256": "12646ceab7a197c48b4301efe3fd9e76b35fe00ed73a0d84d22a1d85ad4b1bff",
+      "amended_sha256": "caa21bcbb33b276dadc34011e5cb55e7e1c3690671a26663437affcbfd399105"
+    },
+    "PROPOSAL_COUNTS.json": {
+      "gate2_sha256": "3f9a919a4c881d754e03f0d5449c0b7722853747dbdee451dd047a9e4b4adb50",
+      "amended_sha256": "098dbb074e48ce9a7c1d59839ba447b375414c2576696ad9558fb1e8e010e26a"
+    }
+  },
+  "unaffected_records_sha256": {
+    "POST_VERIFICATION_STATUS_TRANSITIONS.json": "36a9d138030b56cc78504a42938a274b3e2dca7846327ab123f912fa72fa7ece",
+    "POST_VERIFICATION_PROPOSAL_INDEX.json": "989471b28beb92a6c3c13fd24d7175af5b8098df535af43375c14994b37996d4",
+    "POST_VERIFICATION_PROPOSAL.patch": "bbe65465bad50cf7ec11abc43ab46e7a3a050d400caf496de0a70d6c6f7f54dc",
+    "PHASE_2_TEMPLATE_TRANSLATIONS.json": "c8fd16c79dcfc51bf2c1aaf4509f498fd501a3490e56f76e117bb611a5f44f8a",
+    "WORKFLOW_PUBLICATION_PLAN.json": "6a522cde1bd43a8ce388584927ed71f5667318b602349a8d968a561d5fd0c1c1",
+    "DOCUMENT_VERSION_AND_ARCHIVE_PLAN.json": "b2d9174daedfd9cb9572200b22fa1a803461763c5f0237cd5501471e580881d0",
+    "NEW_DOCUMENT_PROPOSALS.json": "066c2c1d4e25770ebf312807c7548f22b3236702db4cb44102653a373ffef909",
+    "ARCHIVE_RESTORATION_PROPOSAL.json": "f69e513e9244c558bf5bb9be6ccffcaff6e9ad4dcdb7d12999cc785321fc6741",
+    "UPDATE_MAP.md": "cd291270bb6c8e537bcb050685c6464d326254f0d2a703c21f7f304dfe286931",
+    "GATE2_APPROVAL_RECORD_2026-10-17.md": "6a972e05211135c86c09614fbb449b7921bca790a728929a98d594fa88ac8ba0",
+    "DOCSET_SYNC_ACCEPTANCE_SPEC.md": "3910a62c34ff28acf1f9b956c5650deecae4ebd36872cc0072fd83e35ca19fa0",
+    "FABLE_CORRECTION_CONFIRMATION_2026-10-17.md": "3b8630aa24579ca2c4af72dab4f8461e4d1754ea2380fcf6d56d2941915d8b91",
+    "FABLE_MAP_REVIEW_2026-10-16.md": "3f9c279da43fb2c2d084c77721610d931e759b88bfd952e92ca65698baa0eeea"
+  },
+  "note": "Gate 2 records remain the frozen approved identities; the AMENDED_V1 directory holds the proposed successor records. Neither is implemented."
+}

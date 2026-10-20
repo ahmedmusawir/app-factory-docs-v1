@@ -1,0 +1,26 @@
+[
+  {
+    "archive": "_ARCHIVE/FRONTEND_BUILD_PHASE_PLAYBOOK_v1_2_2.md",
+    "baseline_source": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+    "bytes": 23578,
+    "baseline_sha256": "362609b6551bd585c5f3c57ce5b751285871335d154ad2a8c97ca62b28a20702",
+    "replay_sha256": "362609b6551bd585c5f3c57ce5b751285871335d154ad2a8c97ca62b28a20702",
+    "baseline_blob": "3edb88c3149a9a6d9a7c760471f30956053c9d60",
+    "replay_blob": "3edb88c3149a9a6d9a7c760471f30956053c9d60",
+    "baseline_final_newline": false,
+    "replay_final_newline": false,
+    "equal": true
+  },
+  {
+    "archive": "_ARCHIVE/FRONTEND_FIRST_PLAYBOOK_v1_1_3.md",
+    "baseline_source": "03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+    "bytes": 15043,
+    "baseline_sha256": "2516dcbd50f525328db955592c6c14eafa971c02d4dec722130a87505248a422",
+    "replay_sha256": "2516dcbd50f525328db955592c6c14eafa971c02d4dec722130a87505248a422",
+    "baseline_blob": "c8516c8b8b3950e4b2d08d0bb2c112d7136d8f30",
+    "replay_blob": "c8516c8b8b3950e4b2d08d0bb2c112d7136d8f30",
+    "baseline_final_newline": false,
+    "replay_final_newline": false,
+    "equal": true
+  }
+]

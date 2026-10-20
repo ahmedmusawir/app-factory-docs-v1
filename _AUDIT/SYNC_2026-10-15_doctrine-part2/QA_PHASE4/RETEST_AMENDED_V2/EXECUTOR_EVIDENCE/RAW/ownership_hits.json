@@ -1,0 +1,2702 @@
+[
+  {
+    "fc": "FC-008",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 16,
+    "text": "Phase 3 — Engineering (spec): Architect completes the module, ACCEPTANCE_SPEC and prepared QAM; FILE_TREE optional."
+  },
+  {
+    "fc": "FC-008",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 55,
+    "text": "**Artifact ownership:** the Architect owns DATA_CONTRACT before Design. The Designer owns UI_SPEC. The Architect reconciles the assembled package and Engineering consumes its approved revision. Conversion evidence informs those contracts; greenfield does not transfer authorship to Engineering. FILE_TREE is optional; implementation structure and boundaries must remain explicit in the approved package."
+  },
+  {
+    "fc": "FC-008",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 89,
+    "text": "| `FILE_TREE.md` (optional) | Supplementary structure view; approved package still states implementation structure and boundaries | Architect assembly |"
+  },
+  {
+    "fc": "FC-008",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 122,
+    "text": "Phase 3 — Engineering (spec): Architect completes the module, ACCEPTANCE_SPEC and prepared QAM; FILE_TREE optional."
+  },
+  {
+    "fc": "FC-008",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 142,
+    "text": "The Architect assembles the approved contract artifacts below for the Engineer to implement. DATA_CONTRACT is authored before Design; FILE_TREE is optional when implementation structure and boundaries are otherwise explicit."
+  },
+  {
+    "fc": "FC-008",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 182,
+    "text": "### **FILE_TREE.md** (optional)"
+  },
+  {
+    "fc": "FC-008",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 184,
+    "text": "The Architect may include a structure view when useful. The approved package must still define implementation structure and boundaries. Root tool-instruction alignment is separately tracked; an older required-FILE_TREE statement does not change the Director-approved artifact model."
+  },
+  {
+    "fc": "FC-008",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 217,
+    "text": "3. **Before Design:** Architect prepares DATA_CONTRACT. After the Designer authors UI_SPEC and the screen set is approved, the Architect reconciles the full package. FILE_TREE is optional; structure and boundaries remain explicit."
+  },
+  {
+    "fc": "FC-008",
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "line": 43,
+    "text": "FILE_TREE is optional; implementation structure and boundaries remain explicit."
+  },
+  {
+    "fc": "FC-008",
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "line": 48,
+    "text": "FILE_TREE is optional; implementation structure and boundaries remain explicit."
+  },
+  {
+    "fc": "FC-008",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 74,
+    "text": "FILE_TREE is optional; implementation structure and boundaries remain explicit."
+  },
+  {
+    "fc": "FC-015",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 14,
+    "text": "Phase 1 — Ignition: Architect authors APP_BRIEF and DATA_CONTRACT before Design; Director approves scope."
+  },
+  {
+    "fc": "FC-015",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 55,
+    "text": "**Artifact ownership:** the Architect owns DATA_CONTRACT before Design. The Designer owns UI_SPEC. The Architect reconciles the assembled package and Engineering consumes its approved revision. Conversion evidence informs those contracts; greenfield does not transfer authorship to Engineering. FILE_TREE is optional; implementation structure and boundaries must remain explicit in the approved package."
+  },
+  {
+    "fc": "FC-015",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 86,
+    "text": "| `DATA_CONTRACT.md` | All data shapes, API payloads, state objects; approved before Design | Architect |"
+  },
+  {
+    "fc": "FC-015",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 120,
+    "text": "Phase 1 — Ignition: Architect authors APP_BRIEF and DATA_CONTRACT before Design; Director approves scope."
+  },
+  {
+    "fc": "FC-015",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 142,
+    "text": "The Architect assembles the approved contract artifacts below for the Engineer to implement. DATA_CONTRACT is authored before Design; FILE_TREE is optional when implementation structure and boundaries are otherwise explicit."
+  },
+  {
+    "fc": "FC-015",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 144,
+    "text": "### **DATA_CONTRACT.md**"
+  },
+  {
+    "fc": "FC-015",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 217,
+    "text": "3. **Before Design:** Architect prepares DATA_CONTRACT. After the Designer authors UI_SPEC and the screen set is approved, the Architect reconciles the full package. FILE_TREE is optional; structure and boundaries remain explicit."
+  },
+  {
+    "fc": "FC-015",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 228,
+    "text": "| 2.1 | 7 Jul 2026 | **Wave 1 (audit sync).** Standard header block adopted, version/date moved to top (F-018). Title \"AI App Factory\" → \"App Factory\" (F-008). Phase 0 — Recon added to the lifecycle + workflow diagram: Engineer ground-truths per RECON_QUESTIONNAIRE / stark-recon, Architect consumes the Recon Report (F-003). \"Which Pipeline Am I In?\" router promoted from FFM_PLAYBOOK §4 — Conversion vs Greenfield, ownership split: HANDOFF_PACKAGE_PLAYBOOK = conversion detail, agent playbooks = greenfield detail (F-030). Per-pipeline DATA_CONTRACT ownership stated (F-029). Karpathy Protocol pointer placeholder reserved (D-011). Cross-references canonical-name only (F-011). |"
+  },
+  {
+    "fc": "FC-015",
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 161,
+    "text": "| Design | Consume the Architect’s approved DATA_CONTRACT; proposed contract refinements require approved amendments before implementation. |"
+  },
+  {
+    "fc": "FC-015",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 24,
+    "text": "**Why this exists:** In Factory Run 001 (Cyberize), the agent almost authored a redundant `authService.ts` wrapping the kit's already-complete Supabase auth stack. The kit's capabilities weren't documented in one canonical place, so the agent followed the module's generic DATA_CONTRACT literally. This handbook prevents that failure mode permanently."
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "line": 36,
+    "text": "Engineer: ground-truth recon -> Architect: approved APP_BRIEF + DATA_CONTRACT before Design"
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "line": 85,
+    "text": "**Before preparing or reconciling any project artifact, the Architect requires a current Recon Report for the actual repository state. The Architect owns APP_BRIEF, DATA_CONTRACT and assembly; the Designer owns UI_SPEC.**"
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "line": 41,
+    "text": "Engineer: ground-truth recon -> Architect: approved APP_BRIEF + DATA_CONTRACT before Design"
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "line": 69,
+    "text": "| Define DATA_CONTRACT before Design | Architect |"
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 34,
+    "text": "12. [DATA_CONTRACT Template](#12-data_contract-template)"
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 67,
+    "text": "Engineer: ground-truth recon -> Architect: approved APP_BRIEF + DATA_CONTRACT before Design"
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 166,
+    "text": "| **DATA_CONTRACT.md** (PRE-AUTHORED) | Architect, from Brain Drain evidence | Types, service contracts, mock requirements |"
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 172,
+    "text": "### DATA_CONTRACT Ownership (know which run you're in)"
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 174,
+    "text": "> **CONVERSION:** the Architect **PRE-AUTHORS** `DATA_CONTRACT.md` from Brain Drain evidence — the Engineer consumes and honors it."
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 175,
+    "text": "> **GREENFIELD:** the Architect authors `DATA_CONTRACT.md` from the approved APP_BRIEF before Design. The Designer authors UI_SPEC; the Architect reconciles the assembled package. The Engineer consumes the approved contracts. The canonical DATA_CONTRACT template remains in §12."
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 176,
+    "text": "> The Architect authors `DATA_CONTRACT.md` in both runs; only the evidence base and moment differ: conversion uses Brain Drain evidence and is pre-authored; greenfield uses the approved APP_BRIEF before Design. Router: APP_FACTORY_BLUEPRINT, \"Which Pipeline Am I In?\"."
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 282,
+    "text": "| **Swappable** | Tokens over hardcoded colors; service layer for domain logic only; mock-to-real swap per DATA_CONTRACT |"
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 734,
+    "text": "## 12. DATA_CONTRACT Template"
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 736,
+    "text": "> **Ownership:** the Architect authors DATA_CONTRACT before Design, using the canonical template below. Conversion includes the approved extraction evidence. The Designer authors UI_SPEC; the Architect reconciles the assembled package. Engineering consumes the approved revisions; it does not create missing contracts during implementation."
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 741,
+    "text": "# DATA_CONTRACT: [Project Name]"
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 1394,
+    "text": "├── DATA_CONTRACT.md"
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 1571,
+    "text": "9. ✅ Consume the Architect-authored, approved DATA_CONTRACT; verify it precedes Design and that the Architect reconciled the assembled package."
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 1605,
+    "text": "| 1.2 | 2026-07-07 | **Wave 2B — two-track structural restructure (F-028).** Reorganized into PART I Common Doctrine / PART II Kit Track (dominant lane, described first) / PART III Pipeline Track (original Python/CLI doctrine retained verbatim) / PART IV Shared Reference / PART V Agent Conduct / Ship. NEW §2 Phase 0 Recon-Executor role — the Engineer answers RECON_QUESTIONNAIRE read-only and produces the Recon Report the Architect consumes (F-027). §3 inputs rewritten to match DESIGNER_PLAYBOOK §10 + HANDOFF_PACKAGE_PLAYBOOK: greenfield = token file (PRIMARY) + style tile/screen HTML+PNG + UI_SPEC + component manifest (screenshots removed as greenfield input — the F-026 mismatch); conversion = 4-file package + `_design/` + `_extraction/`; per-pipeline DATA_CONTRACT ownership stated in §3 and §12 (F-029). NEW §5 Kit Track: recon → kit read (aspirational, verify) → Kit Audit → FFM execution as the primary work mode, with pointers to FRONTEND_FIRST_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, FFM_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK (F-027; F-035 bridge). §15 Karpathy Protocol marked ALL-AGENT doctrine (D-011), Blueprint pointer connected; §15/§16 numbers PINNED as stable IDs. New anti-pattern: \"Wrapping What the Kit Provides / Building on Unverified Kit Claims\" (Run 001; F-039 antibody). Moves, all byte-faithful: old §4–§9 → §6–§11, §10 → §12, §11 → §13, §13 → §14, §12 → §17, §14 → Appendix A. §1 updated (Designer v2.0 diagram, recon + FFM responsibilities). Standard header (F-018); \"AI App Factory\" → \"App Factory\". |"
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 1607,
+    "text": "| 1.0 | — | Baseline: role, inputs, systems discipline, CLI-first pattern, file-state contracts, build sequence, testing strategy, cloud-native engineering, provider abstraction, DATA_CONTRACT template, type-specific considerations, operations handoff, anti-patterns, field lessons. |"
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 28,
+    "text": "2. **DATA_CONTRACT.md** — types, service contracts, mock requirements"
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 127,
+    "text": "### 5.2 DATA_CONTRACT.md"
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 131,
+    "text": "Historical external example (availability unverified): **Canonical example:** `_project/DATA_CONTRACT.md` in the Cyberize module. Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 133,
+    "text": "**Ownership:** the Architect authors DATA_CONTRACT before Design. Conversion uses extraction evidence; greenfield uses the approved brief and verified interfaces. Engineering consumes the approved contract. Use the single canonical DATA_CONTRACT template in ENGINEER_PLAYBOOK §12; this section describes authoring requirements, not a competing template."
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 265,
+    "text": "2. **DATA_CONTRACT.md SECOND** — data shapes inform what the UI needs to display"
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 269,
+    "text": "If you author UI_SPEC before DATA_CONTRACT, you'll invent data shapes that don't match the source. If you author CLAUDE.md before the others, you won't know the conventions to encode."
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 283,
+    "text": "In Run 001, every type in DATA_CONTRACT traced to a specific section of `04-TOOL-SYSTEM.md` (the Brain Drain API surface doc). Every screen in UI_SPEC traced to `06-PROMPTS-AND-PERSONA.md` (the screen inventory) and the screenshots. This traceability is why the handoff package was airtight."
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 294,
+    "text": "2. **Operator has read DATA_CONTRACT in full** and confirmed shapes match expectations"
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 316,
+    "text": "❌ Author DATA_CONTRACT with shapes that \"feel right\""
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 317,
+    "text": "✅ Author DATA_CONTRACT from Brain Drain extraction evidence"
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 349,
+    "text": "- **`DATA_CONTRACT.md`** — 500+ lines, 12 types, 4 service contracts, mock data requirements, Phase 2 decision points"
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 374,
+    "text": "| 1.1 | 2026-07-07 | Wave 1 audit sync | **Pipeline duality made explicit.** Standard header block (F-018). \"Which Pipeline Am I In?\" preamble added: this playbook = the CONVERSION pipeline's package doctrine; greenfield routes via the agent playbooks; entry point = APP_FACTORY_BLUEPRINT router (F-030). §5.5 Greenfield Variant added: package additionally carries Designer deliverables per DESIGNER_PLAYBOOK §10 — token file (primary), style tile HTML+PNG, screen HTML+PNG, component manifest; UI_SPEC drafted by Architect, revised by Designer (F-026 closure). Per-pipeline DATA_CONTRACT ownership stated in §5.2 (F-029). Recon Report added to §4 prerequisites — package authoring presupposes Phase 0 recon (F-003 bridge). |"
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 21,
+    "text": "| authService wrapper vs kit's complete auth | Architect trusted DATA_CONTRACT over the kit's actual implementation | Q3.1–3.4 (auth pattern) |"
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 188,
+    "text": "The single most common conflict: DATA_CONTRACT defines a service wrapper for auth the kit already provides complete. Verify what the kit actually does BEFORE writing any service contract."
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 218,
+    "text": "**Architect uses this to:** decide whether DATA_CONTRACT needs ANY service contracts. If the kit provides auth complete (it usually does), DATA_CONTRACT says \"consume the kit's primitives directly — no wrapper.\" Service layer is reserved for project-specific domain logic only. Also: write the FFM's `_project/CLAUDE.md` against the store's ACTUAL shape (Q3.6) — if the handbook claims derived flags the store doesn't have, schedule adding them (or correcting the handbook) as a kit-reconciliation task, and don't write FFM code that reads flags that return `undefined`. Type smells (Q3.7) like `user: any` become reconciliation tasks (replace with the project's `User` type)."
+  },
+  {
+    "fc": "FC-015",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 284,
+    "text": "**Architect uses this to:** write DATA_CONTRACT's \"tables in play / NOT in play\" sections from reality, and confirm which DB functions are inherited vs need building."
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "line": 53,
+    "text": "├── DATA_CONTRACT_AMENDMENT.md   ← only when wire contracts change"
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 48,
+    "text": "- **Specification** — APP_BRIEF (scope), DATA_CONTRACT (data shapes), UI_SPEC (screens)"
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 69,
+    "text": "→ Architect authors DATA_CONTRACT before Design"
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 153,
+    "text": "- DATA_CONTRACT invents fields the source app doesn't have"
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 179,
+    "text": "- Cross-references between files resolve (DATA_CONTRACT references match UI_SPEC references)"
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 204,
+    "text": "- TypeScript types per DATA_CONTRACT"
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 242,
+    "text": "Extraction and evidence gathering may run in parallel with visual research. The Architect prepares DATA_CONTRACT from the approved brief and available verified extraction evidence before Design. The Designer authors UI_SPEC and the complete visual package; the Architect reconciles the assembly and prepares QAM before Engineering release."
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 276,
+    "text": "│   ├── DATA_CONTRACT.md  ← types, service contracts, mock requirements"
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 379,
+    "text": "**DATA_CONTRACT** is authored: From the Brain Drain `04-TOOL-SYSTEM.md` (API surface)."
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 391,
+    "text": "**DATA_CONTRACT** is authored by the Architect before Design, from the approved brief and verified interface/schema evidence."
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 392,
+    "text": "**UI_SPEC** is authored by the Designer from the approved brief, DATA_CONTRACT, screen HTML/PNG and token file; the Architect reconciles the assembled package."
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 402,
+    "text": "| DATA_CONTRACT source | Architect uses approved extraction evidence before Design | Architect uses approved brief and verified interfaces before Design |"
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 554,
+    "text": "4. Author _project/DATA_CONTRACT.md SECOND (data shapes inform UI)"
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 555,
+    "text": "5. Designer authors _project/UI_SPEC.md THIRD from the approved DATA_CONTRACT; Architect reconciles"
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 572,
+    "text": "- **DATA_CONTRACT.md SECOND** — data shapes inform what the UI needs to display"
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 576,
+    "text": "If you author UI_SPEC before DATA_CONTRACT, you'll invent data shapes that don't match the source."
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 579,
+    "text": "> **DATA_CONTRACT ownership:** the Architect authors the complete contract before Design for both pipelines, using conversion extraction evidence where applicable. The Designer authors UI_SPEC; the Architect reconciles both with the approved brief before Engineering begins. A shell is not a completed contract."
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 587,
+    "text": "| DATA_CONTRACT | 45-60 min |"
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 741,
+    "text": "The `_project/` folder is the **project-specific** content of the FFM. Four files. Each has a specific purpose. Author them in order: APP_BRIEF → DATA_CONTRACT → UI_SPEC → CLAUDE.md."
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 793,
+    "text": "### 9.2 — `_project/DATA_CONTRACT.md`"
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 931,
+    "text": "- **Types in DATA_CONTRACT appear in `playbook/02-TYPES.md`** (the playbook references the contract)"
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1291,
+    "text": "- Claudy creates TypeScript types from DATA_CONTRACT § 4"
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1419,
+    "text": "│         Then Architect authors DATA_CONTRACT from extracts."
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1426,
+    "text": "    │         Architect authors DATA_CONTRACT from operator decisions + extracts"
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1430,
+    "text": "              DATA_CONTRACT authored from operator decisions only"
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1479,
+    "text": "Without these labels, the Architect can't tell what's verified versus guessed. With them, the Architect can author DATA_CONTRACT with confidence."
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1665,
+    "text": "On session start, read `CLAUDE.md` in that folder. That file is the project's navigation contract. It tells you which project we're building, what's in scope, what's forbidden, what phase we're in, and where to find the project handoff docs (APP_BRIEF, DATA_CONTRACT, UI_SPEC)."
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1725,
+    "text": "❌ Author DATA_CONTRACT with shapes that \"feel right\""
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1726,
+    "text": "✅ Author DATA_CONTRACT from Brain Drain extraction evidence OR explicit operator decisions"
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1761,
+    "text": "✅ Author APP_BRIEF → DATA_CONTRACT → UI_SPEC → CLAUDE.md, in order"
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1803,
+    "text": "✅ \"Sub-Phase 3 took 2 attempts because the mock auth fixture didn't satisfy the AuthenticatedUser type — root cause was undocumented optionality in DATA_CONTRACT.\""
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1855,
+    "text": "- [ ] `DATA_CONTRACT.md` — tables in/out of play, triggers, TypeScript types, service contracts, mock strategy, future decision points, conflict resolution, changelog"
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1902,
+    "text": "- [ ] Types in DATA_CONTRACT match types referenced in `playbook/02-TYPES.md`"
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2011,
+    "text": "- `_project/DATA_CONTRACT.md` — 500+ lines, 12 types, 4 service contracts, mock data requirements, Phase 2 decision points"
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2037,
+    "text": "- `_project/DATA_CONTRACT.md` — minimal types (auth.users, user_roles only), Frank-domain tables explicitly out of scope"
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2081,
+    "text": "│   ├── DATA_CONTRACT.md               # Types, service contracts, mocks"
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2153,
+    "text": "Read the approved APP_BRIEF, DATA_CONTRACT and applicable UI_SPEC at their declared locations."
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2267,
+    "text": "4. **`_project/DATA_CONTRACT.md`** — data shapes"
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2275,
+    "text": "Conflict resolution: the approved APP_BRIEF governs scope; DATA_CONTRACT and UI_SPEC govern their subjects. Managers route to those contracts and cannot change them. Genuine conflicts stop affected work for attributable Director resolution."
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2326,
+    "text": "Instantiate the single canonical APP_BRIEF template from ARCHITECT_QUESTIONNAIRE.md. Fill its pipeline-specific sections from attributable evidence; record the actual approval and revision. Do not fork the former duplicate stub. The approved package also contains the Architect-owned DATA_CONTRACT, Designer-owned UI_SPEC, ACCEPTANCE_SPEC and prepared QAM."
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2520,
+    "text": "| 1.2 | 2026-07-07 | **Wave 3 (audit sync).** Step 0 — Recon added to §7 authoring sequence + the four-role diagram + both input checklists: current Recon Report required before authoring, per RECON_QUESTIONNAIRE / stark-recon (F-024 closure — the FFM side of the mutual pointer). Role 1 (Designer) + §4 Variant B + §10.1 `_design/` contract rewritten to the complete Designer v2.0 package: token file (PRIMARY), style tile HTML+PNG, per-screen HTML+PNG via the Canonical Page Method, component manifest (F-031); all 4 Stitch references removed (F-002). Per-pipeline DATA_CONTRACT ownership note added to §7, consistent with Blueprint/Handoff/Engineer (F-029). §4 marked as the DETAILED router source with a pointer to the Blueprint's constitution-level version (F-030 coordination). Standard header block (F-018); stale \"v1.0\" tail label corrected; canonical refs (F-011). Existing §7 step numbers and section numbers unchanged (D-019). |"
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+    "line": 36,
+    "text": "- `{APPNAME}_DATA_CONTRACT.md` — Defines the data shape for the specific app"
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+    "line": 134,
+    "text": "* `CYBERBUGS_DATA_CONTRACT.md` — defines entities, fields, and relationships for CyberBugs"
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+    "line": 135,
+    "text": "* Future apps will have their own `{APPNAME}_DATA_CONTRACT.md`"
+  },
+  {
+    "fc": "FC-015",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 575,
+    "text": "- These conventions are the DATA_CONTRACT discipline (`HANDOFF_PACKAGE_PLAYBOOK.md` §5.2) — the contract documents both shapes; both mock and real backends satisfy it."
+  },
+  {
+    "fc": "FC-015",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 1211,
+    "text": "| 1.1 | 2026-07-08 | **Wave 4 (audit sync).** THE KIT EXCEPTION box added at §1 — the Lesson-2 antibody at its root: kit primitives consumed directly, the kit's auth IS the service layer, Kit Audit before authoring any service (F-039 — the blanket rule that produced the Run 001 authService near-miss is now amended at the source). §7 gained the factory wire-format conventions (snake_case wire / camelCase UI; service layer owns the boundary — HANDOFF DATA_CONTRACT discipline). Cross-References section added — outbound-zero ended (F-035). Standard header (F-018) + this history table (D-018). |"
+  },
+  {
+    "fc": "FC-015",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 41,
+    "text": "> **When Schema-First Applies:** schema-first is the law for **backend phases and conversions** (the data shape is known or extracted). For **discovery builds the factory runs frontend-first**: UI against a mock DATA_CONTRACT first, schema authored at the backend transition — see `FRONTEND_FIRST_PLAYBOOK.md` §2 (when frontend-first is allowed) and §8 (the transition point). Both orders are legitimate; the pipeline you're in decides."
+  },
+  {
+    "fc": "FC-015",
+    "path": "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+    "line": 144,
+    "text": "3. Receives the Architect’s approved **DATA_CONTRACT before Design**, then authors UI_SPEC; the Architect reconciles the assembled package."
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+    "line": 15,
+    "text": "4. **Architect:** DATA_CONTRACT before Design."
+  },
+  {
+    "fc": "FC-015",
+    "path": "03_BUILD_METHODOLOGY/_assets/workflows/FFM_CREATION.svg",
+    "line": 31,
+    "text": "<text x=\"495.0\" y=\"620\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#0f172a\">4. DATA_CONTRACT before Design</text>"
+  },
+  {
+    "fc": "FC-016",
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 203,
+    "text": "1. **Every code-bearing module handoff includes `ACCEPTANCE_SPEC.md`** (exact filename locked). It is the contract from Engineering to QA — **never the QA test plan.** Engineering states the claim; QA independently designs the attack."
+  },
+  {
+    "fc": "FC-016",
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 207,
+    "text": "5. **Authority chain:** QA owns the verdict — Factory vocabulary exactly: **PASS / PASS WITH FOLLOW-UP FINDINGS / PASS WITH KNOWN RISK / FAIL / BLOCKED.** The **Operator holds final adjudication and release authority.** The Architect advises on architectural classification and routing. An in-scope acceptance failure needs no one's permission to be a FAIL. Accepted findings reach Engineering only as approved module content."
+  },
+  {
+    "fc": "FC-016",
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 318,
+    "text": "- [ ] Token file locked (primary deliverable)"
+  },
+  {
+    "fc": "FC-016",
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 795,
+    "text": "- [ ] Token file locked (Designer)"
+  },
+  {
+    "fc": "FC-016",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 119,
+    "text": "- New role tables — the two-table pattern is locked"
+  },
+  {
+    "fc": "FC-016",
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "line": 327,
+    "text": "| **APPROVED** | Locked, ready for Designer | Human (to unlock) |"
+  },
+  {
+    "fc": "FC-016",
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "line": 328,
+    "text": "| **AMENDED** | Changed after approval | Requires re-approval |"
+  },
+  {
+    "fc": "FC-016",
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md",
+    "line": 75,
+    "text": "> **Status:** [DRAFT | APPROVED | AMENDED — record approver and revision; never prefill approval]"
+  },
+  {
+    "fc": "FC-016",
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md",
+    "line": 136,
+    "text": "| [Example: Auth = Supabase] | 🔒 Decision | Locked |"
+  },
+  {
+    "fc": "FC-016",
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "line": 144,
+    "text": "Without a single locked reference, multi-screen design drifts — spacing, color, and layout wander screen to screen. (This was true of external generators; it is equally true of any screen built from scratch each time.)"
+  },
+  {
+    "fc": "FC-016",
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "line": 273,
+    "text": "| 1 | [name] | [card grid / form / table] | Locked |"
+  },
+  {
+    "fc": "FC-016",
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "line": 320,
+    "text": "4. **Screen artifacts** (HTML + PNG, the locked set)"
+  },
+  {
+    "fc": "FC-016",
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "line": 329,
+    "text": "- **Locked screen intent** (what each control does)."
+  },
+  {
+    "fc": "FC-016",
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "line": 368,
+    "text": "Coherence is achieved by editing and cloning one locked canonical screen — never by rebuilding each screen from scratch and hoping it matches."
+  },
+  {
+    "fc": "FC-016",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 145,
+    "text": "| **Style tile** (HTML + PNG) | Designer | The locked visual system reference |"
+  },
+  {
+    "fc": "FC-016",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 146,
+    "text": "| **Screen artifacts** (HTML + PNG, the locked set) | Designer | HTML to build from; PNG as the QC target |"
+  },
+  {
+    "fc": "FC-016",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 155,
+    "text": "- **Locked screen intent** (what each control does) and **gating logic** with dependency order"
+  },
+  {
+    "fc": "FC-016",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 77,
+    "text": "| Stack decisions locked | Operator | Framework, UI library, state, auth |"
+  },
+  {
+    "fc": "FC-016",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 264,
+    "text": "1. **APP_BRIEF.md FIRST** — scope must be locked before contracts or screens can be specified"
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md",
+    "line": 771,
+    "text": "**Where this appeared:** Considered (and almost authored) for the GitHub Repo Skill family before the single-CLAUDE.md rule was locked."
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "line": 104,
+    "text": "### The Locked Rules (Lesson L1 — paid for in the field)"
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "line": 124,
+    "text": "**The contract handed from Engineering to QA. It is NOT the QA test plan.** Engineering states what it claims complete; QA independently decides how to attack and verify. Exact filename locked: `ACCEPTANCE_SPEC.md`."
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "line": 134,
+    "text": "- **Environment/setup prerequisites** — migrations, env changes, credentials, permissions, and every manual Coordinator step, called out FIRST (field lesson: a merge whose setup steps live only in a spec nobody opened produces three \"broken\" features that are actually three locked doors)"
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "line": 153,
+    "text": "- Verdict vocabulary — exactly the Factory QA set, no local dialects: **PASS / PASS WITH FOLLOW-UP FINDINGS / PASS WITH KNOWN RISK / FAIL / BLOCKED.** Findings are severity-classified, each explicitly marked blocking-or-not for the module under test."
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+    "line": 81,
+    "text": "QA receives the `ACCEPTANCE_SPEC.md` and independently authors the attack — the spec is Engineering's contract, never Engineering's test plan. **QA owns the verdict** (Factory vocabulary: PASS / PASS WITH FOLLOW-UP FINDINGS / PASS WITH KNOWN RISK / FAIL / BLOCKED). Findings route to the Operator for final adjudication where product/scope/risk decisions are required; they reach the Engineer only as approved module content. Exploratory, state-transition, and negative-path testing are first-class: the pilot campaign's most valuable defect (FIX-003's F09) was found by deliberately stressing state transitions, not by following the happy path."
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+    "line": 581,
+    "text": "3. **`ACCEPTANCE_SPEC.md` — mandatory handoff artifact** (exact filename locked Factory-wide; ownership per Factory doctrine: criteria seeded from the approved contract pre-implementation; the Engineer maintains and finalizes, never silently adds/removes/weakens/redefines a requirement): canonical module ID + owning app; objective; in/out of scope; numbered **`AC1, AC2, …`** acceptance requirements, testable and observable — a NEW Factory decision effective with this playbook; legacy handoffs used gate IDs (`X1–X7` etc.), which remain the convention for module-internal engineering gates, with a gates↔AC mapping table encouraged (never bare `A*` — reserved for recon assumption checklists); expected observable behavior per requirement; environment/setup prerequisites and every manual Coordinator step, called out FIRST; regression expectations; manual-only points; known limitations; follow-up work outside this contract. Established at planning, synchronized during implementation, finalized at handoff — never reverse-engineered afterward."
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+    "line": 726,
+    "text": "**FIX-001 (ADK-HARNESS, legacy) — the pointer that lost the argument.** Symptom: chat history evaporated on reload. Mechanism chain: persisted session pointer restored correctly, then a mount-effect merge let a *mocked* service's seeded fake ids overwrite it (\"fetched wins\" applied to fiction). Lessons banked: the Engineer's CRITICAL-FINDING behavior (persistence alone was inert without the merge fix — surfaced, not silently handled) is the model for plan-stage honesty; merge precedence against mocked sources must favor persisted truth, with a comment scheduling re-evaluation when the source goes real; final disposition used **BLOCKED-UPSTREAM** honestly when the residual failure proved to live beyond the module's boundary — a FIX may PASS on its own contract while the symptom's remainder transfers to another module's gate (it did: the upstream history defect was confirmed and cured by the next BIM, post-mortem)."
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 107,
+    "text": "- The canonical screen is locked at an operator gate BEFORE clone-out"
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 184,
+    "text": "- The locked PHASE_ROADMAP (which phase is this FFM for?)"
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 185,
+    "text": "- The locked MASTER_APP_BRIEF (what's the whole project?)"
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 238,
+    "text": "If a downstream role is blocked because an upstream role's outputs are missing, **the upstream role finishes first.** No \"we'll fix it later.\" Lessons learned with this discipline (and without it) are why this playbook exists."
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 502,
+    "text": "Phase 0 (Ignition)           → No FFM. Planning docs locked."
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 553,
+    "text": "3. Author _project/APP_BRIEF.md FIRST (scope must be locked)"
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 571,
+    "text": "- **APP_BRIEF.md FIRST** — scope must be locked before contracts or screens can be specified"
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 604,
+    "text": "- [ ] Locked PHASE_ROADMAP (which phase is this FFM for?)"
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 605,
+    "text": "- [ ] Locked MASTER_APP_BRIEF (whole project scope)"
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 967,
+    "text": "- Required: **Per-screen HTML + PNG** — the locked set from the Canonical Page Method (canonical screen locked at an operator gate, remaining screens cloned-and-adapted; Playwright-rendered, light + dark)"
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 983,
+    "text": "│   ├── 01-dashboard.html         ← Designer ships (canonical, locked first)"
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1829,
+    "text": "- [ ] PHASE_ROADMAP is locked; this FFM is for phase N"
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1832,
+    "text": "- [ ] MASTER_APP_BRIEF is locked"
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2088,
+    "text": "│   ├── screens/                       # (designer) per-screen HTML + PNG, locked set"
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2343,
+    "text": "3. **Per-screen HTML + PNG** — the locked set (Canonical Page Method; light + dark renders)"
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+    "line": 491,
+    "text": "- Backend work is unblocked and justified"
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+    "line": 253,
+    "text": "* backend work is unblocked"
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+    "line": 16,
+    "text": "This rule governs modules newly authored after the Director's ruling of 2026-10-14. Modules already in flight on that date keep their recorded sequence until amended through their own ruling lane."
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+    "line": 74,
+    "text": "| `QAM/QAM_TEST_PLAN.md` | Executor draft, amended and approved by QA Lead |"
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+    "line": 139,
+    "text": "Record unresolved details as GAP/QUESTION/BLOCKED, with owner and exact resolution. Distinguish “endpoint reachable” from “service ready for the required operation.” An HTTP response of any status proves connectivity only. Main-dev, scratch and replica are module-specific approvals; never choose one by habit."
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+    "line": 184,
+    "text": "Executor result labels are observations, not release decisions. Normalize PASS, FAIL, BLOCKED, NOT RUN and ADJUDICATE against the local governing vocabulary; where the governing documents use UNTESTED or PASS-PENDING-ADJUDICATION, preserve an explicit mapping. An unresolved discrepancy cannot become PASS through relabeling."
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+    "line": 222,
+    "text": "The QA Lead issues the governing verdict: PASS, PASS WITH FOLLOW-UP FINDINGS, PASS WITH KNOWN RISK, FAIL or BLOCKED, with scope, candidate and limitations. No accepted requirement may silently become optional; meaningful risk acceptance follows Director authority. Product Gate Q, pilot-process evaluation, cleanup acceptance and Gate D remain separate claims."
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "line": 237,
+    "text": "Approved project briefs govern scope; governing documents control their respective subjects. Acceptance criteria are amended only by attributable approval. QA treats an implementation mismatch as evidence of a finding, not as a change to the acceptance contract."
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "line": 304,
+    "text": "> QA issues a QUESTION or BLOCKED state."
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "line": 661,
+    "text": "## BLOCKED"
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "line": 1267,
+    "text": "[PASS | PASS WITH FOLLOW-UP FINDINGS | PASS WITH KNOWN RISK | FAIL | BLOCKED]"
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+    "line": 99,
+    "text": "The QA Executor records PASS, FAIL, BLOCKED, NOT RUN or ADJUDICATE with evidence; its recommendation is not the QA Lead's certificate. Verdict vocabulary is the Factory set in `QA_PLAYBOOK.md` §11; outstanding mandatory checks cannot be relabeled passed."
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 709,
+    "text": "A run with a dependency disabled is diagnostic or isolated evidence. The full-environment flow remains FAILED or BLOCKED until repaired or covered by an explicitly approved compensating verification. Carry the omitted dependency, affected claims and coverage limitation into Gate Q evidence. A skipped check records the reason, attempts, coverage gap and approved compensating verification; it is not a passing result."
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 1235,
+    "text": "Fixture discovery returns one normalized record with role identities, scenario eligibility and a single count field named count. Validate role existence and coupon prerequisites before declaring readiness. A missing required role produces BLOCKED with the missing prerequisite; optional absence is recorded explicitly. Producers and consumers read count, not competing count aliases."
+  },
+  {
+    "fc": "FC-016",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 1211,
+    "text": "| 1.1 | 2026-07-08 | **Wave 4 (audit sync).** THE KIT EXCEPTION box added at §1 — the Lesson-2 antibody at its root: kit primitives consumed directly, the kit's auth IS the service layer, Kit Audit before authoring any service (F-039 — the blanket rule that produced the Run 001 authService near-miss is now amended at the source). §7 gained the factory wire-format conventions (snake_case wire / camelCase UI; service layer owns the boundary — HANDOFF DATA_CONTRACT discipline). Cross-References section added — outbound-zero ended (F-035). Standard header (F-018) + this history table (D-018). |"
+  },
+  {
+    "fc": "FC-016",
+    "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "line": 463,
+    "text": "□ Check gating: Pro + Starter content accessible, Enterprise locked"
+  },
+  {
+    "fc": "FC-016",
+    "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "line": 464,
+    "text": "□ Check article paywall: Pro articles unlocked, Enterprise articles show paywall"
+  },
+  {
+    "fc": "FC-016",
+    "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+    "line": 48,
+    "text": "Cyberize Run 001 produced an unplanned doctrine win known as the **Locked Palette WIN**. Mid-project, the operator authored an 11-token hex color palette directly into `_project/CLAUDE.md`. This concrete artifact — specific hex values mapped to specific roles — survived across multiple sessions where abstract guidance (\"use a coherent palette\") had previously decayed."
+  },
+  {
+    "fc": "FC-016",
+    "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+    "line": 112,
+    "text": "**`_project/CLAUDE.md` (the Locked Palette section)** is the human-readable record of what the tokens mean. It cites which hex values were chosen and why. This is the artifact that survives sessions — when Claudy re-reads `_project/CLAUDE.md` at the start of every phase, the palette stays in working memory."
+  },
+  {
+    "fc": "FC-016",
+    "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+    "line": 256,
+    "text": "- `_project/CLAUDE.md` updated with the Locked Palette table (the human-readable record)"
+  },
+  {
+    "fc": "FC-016",
+    "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+    "line": 268,
+    "text": "- Historical external example (availability unverified): **Cyberize Run 001 `_project/CLAUDE.md`** — the historical worked example of a Locked Palette table Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+  },
+  {
+    "fc": "FC-016",
+    "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+    "line": 274,
+    "text": "Every future Stark Industries project inherits this doctrine. The Cyberize Locked Palette WIN that emerged accidentally in Run 001 becomes deliberate doctrine in Run 002 (Cyber Pharma) and every run that follows."
+  },
+  {
+    "fc": "FC-016",
+    "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+    "line": 292,
+    "text": "| 1.0 | 2026-06-02 | Initial manual. Born from Cyber Pharma Run 002. Promotes the Cyberize Run 001 Locked Palette WIN into evergreen Factory doctrine. |"
+  },
+  {
+    "fc": "FC-016",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "line": 128,
+    "text": "- Historical external example (availability unverified): **Cyberize Run 001 `_project/CLAUDE.md`** — the historical worked example of a Locked Palette table Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+  },
+  {
+    "fc": "FC-016",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "line": 1824,
+    "text": "**Incident:** Cyber Pharma Run 002 surfaced that the Factory had no dedicated theming doctrine. The Cyberize Run 001 Locked Palette WIN was buried in retrospective context, not promoted to evergreen methodology. The Cyber Pharma Architect identified this gap mid-Phase-0 planning when discussing how the designer should deliver the visual system."
+  },
+  {
+    "fc": "FC-016",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "line": 1826,
+    "text": "**Root cause:** A win in Run 001 produced a real artifact (the Locked Palette table) but the Factory had no manual to formalize the *pattern* behind the artifact. Result: future projects would re-derive the lesson instead of inheriting it."
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+    "line": 46,
+    "text": "Boot/resume through the module’s declared entry file: Engineering routes to its released implementation assignment; QA routes to `QAM/` as QA Executor. Read-only Git inspection and declared reporting writes are permitted; Tony performs all Git mutations. Requirements/acceptance freeze while declared handoff and QA evidence lanes remain writable. Preserve actual candidate, test-plan, repair/retest, cleanup and closeout identities; never prefill a verdict or planned commit SHA. Deployment additionally requires verified exclusion from build inputs and the actual artifact; a folder name is insufficient. Existing modules in flight keep their recorded sequence unless explicitly amended."
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+    "line": 29,
+    "text": "Boot/resume through the module’s declared entry file: Engineering routes to its released implementation assignment; QA routes to `QAM/` as QA Executor. Read-only Git inspection and declared reporting writes are permitted; Tony performs all Git mutations. Requirements/acceptance freeze while declared handoff and QA evidence lanes remain writable. Preserve actual candidate, test-plan, repair/retest, cleanup and closeout identities; never prefill a verdict or planned commit SHA. Deployment additionally requires verified exclusion from build inputs and the actual artifact; a folder name is insufficient. Existing modules in flight keep their recorded sequence unless explicitly amended."
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+    "line": 30,
+    "text": "Boot/resume through the module’s declared entry file: Engineering routes to its released implementation assignment; QA routes to `QAM/` as QA Executor. Read-only Git inspection and declared reporting writes are permitted; Tony performs all Git mutations. Requirements/acceptance freeze while declared handoff and QA evidence lanes remain writable. Preserve actual candidate, test-plan, repair/retest, cleanup and closeout identities; never prefill a verdict or planned commit SHA. Deployment additionally requires verified exclusion from build inputs and the actual artifact; a folder name is insufficient. Existing modules in flight keep their recorded sequence unless explicitly amended."
+  },
+  {
+    "fc": "FC-016",
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+    "line": 40,
+    "text": "Boot/resume through the module’s declared entry file: Engineering routes to its released implementation assignment; QA routes to `QAM/` as QA Executor. Read-only Git inspection and declared reporting writes are permitted; Tony performs all Git mutations. Requirements/acceptance freeze while declared handoff and QA evidence lanes remain writable. Preserve actual candidate, test-plan, repair/retest, cleanup and closeout identities; never prefill a verdict or planned commit SHA. Deployment additionally requires verified exclusion from build inputs and the actual artifact; a folder name is insufficient. Existing modules in flight keep their recorded sequence unless explicitly amended."
+  },
+  {
+    "fc": "FC-017",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 15,
+    "text": "Phase 2 — Design: Designer authors UI_SPEC and the visual package; Architect reconciles assembly."
+  },
+  {
+    "fc": "FC-017",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 55,
+    "text": "**Artifact ownership:** the Architect owns DATA_CONTRACT before Design. The Designer owns UI_SPEC. The Architect reconciles the assembled package and Engineering consumes its approved revision. Conversion evidence informs those contracts; greenfield does not transfer authorship to Engineering. FILE_TREE is optional; implementation structure and boundaries must remain explicit in the approved package."
+  },
+  {
+    "fc": "FC-017",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 75,
+    "text": "| `UI_SPEC.md` | Component hierarchy, layout, gating, states, UX rules | Designer |"
+  },
+  {
+    "fc": "FC-017",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 121,
+    "text": "Phase 2 — Design: Designer authors UI_SPEC and the visual package; Architect reconciles assembly."
+  },
+  {
+    "fc": "FC-017",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 204,
+    "text": "| \"What does the Designer actually produce?\" | Token file (primary) + style tile + per-screen HTML/PNG + UI_SPEC + component manifest |"
+  },
+  {
+    "fc": "FC-017",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 217,
+    "text": "3. **Before Design:** Architect prepares DATA_CONTRACT. After the Designer authors UI_SPEC and the screen set is approved, the Architect reconciles the full package. FILE_TREE is optional; structure and boundaries remain explicit."
+  },
+  {
+    "fc": "FC-017",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 227,
+    "text": "| 2.0 | 9 Jun 2026 | **Stitch retired.** Pipeline diagram, doc structure, and Phase 2 workflow rebuilt around token-driven HTML → Playwright PNG. Designer deliverables corrected (token file primary; `_design/` HTML+PNG; UI_SPEC; component manifest). `STITCH_PROMPTS/` folder replaced by `_design/`. Stale vendor parentheticals dropped from the diagram (agents shown role-only). Engineer tool labeled Claudy (Claude Code). Pepper's Rig example retained as illustration. |"
+  },
+  {
+    "fc": "FC-017",
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 314,
+    "text": "4. Designer clones-and-adapts the remaining screens; ships style tile + per-screen HTML/PNG + `UI_SPEC.md` + component manifest"
+  },
+  {
+    "fc": "FC-017",
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 320,
+    "text": "- [ ] UI_SPEC.md + component manifest delivered"
+  },
+  {
+    "fc": "FC-017",
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 797,
+    "text": "- [ ] UI_SPEC + component manifest documented"
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "line": 37,
+    "text": "Designer: UI_SPEC + applicable visual artifacts -> Architect: reconciled module + ACCEPTANCE_SPEC + QAM"
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "line": 85,
+    "text": "**Before preparing or reconciling any project artifact, the Architect requires a current Recon Report for the actual repository state. The Architect owns APP_BRIEF, DATA_CONTRACT and assembly; the Designer owns UI_SPEC.**"
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "line": 22,
+    "text": "8. [Deliverables + UI_SPEC Template](#8-deliverables--ui_spec-template)"
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "line": 42,
+    "text": "Designer: UI_SPEC + applicable visual artifacts -> Architect: reconciled module + ACCEPTANCE_SPEC + QAM"
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "line": 81,
+    "text": "The approved interface type determines required design inputs. A visual interface requires its approved UI_SPEC, token/style decisions and HTML/PNG references. A nonvisual backend or CLI explicitly records those inputs as NOT APPLICABLE and supplies its approved data/API/command contract, invocation examples and receiving checklist. Missing required input is not NOT APPLICABLE."
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "line": 236,
+    "text": "- [ ] All required elements and minimum display fields in the approved UI_SPEC are present; record NOT APPLICABLE only where that contract says so."
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "line": 241,
+    "text": "- [ ] Notes documented in UI_SPEC"
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "line": 245,
+    "text": "## 8. Deliverables + UI_SPEC Template"
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "line": 254,
+    "text": "| 4 | **UI_SPEC.md** | Hierarchy, gating, empty/loading/error states, responsive rules, checkpoints |"
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "line": 257,
+    "text": "### UI_SPEC Template"
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "line": 260,
+    "text": "# UI_SPEC: [Project Name]"
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "line": 303,
+    "text": "- May be **desktop-oriented** — but say so explicitly in the UI_SPEC."
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "line": 321,
+    "text": "5. **UI_SPEC.md** (approved)"
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "line": 399,
+    "text": "| 2.0 | 9 Jun 2026 | **Stitch retired.** §5 \"Stitch Protocol\" replaced by \"The Production Method: Token-Driven HTML + Playwright.\" Designer now builds canonical screens directly as token-driven HTML and renders to PNG via Playwright; clone-and-adapt operates on HTML, not tool prompts. Deliverables aligned to the Handbook (token file primary; HTML+PNG artifacts; UI_SPEC; component manifest). Removed Batch & Order image protocol, \"re-upload anchor\" rule, `[CONTEXT][CONSTRAINTS]…` prompt format, and all Stitch keywords. Anti-patterns + field lessons reframed; doctrine cross-references added. |"
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 68,
+    "text": "Designer: UI_SPEC + applicable visual artifacts -> Architect: reconciled module + ACCEPTANCE_SPEC + QAM"
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 137,
+    "text": "The approved interface type determines required design inputs. A visual interface requires its approved UI_SPEC, token/style decisions and HTML/PNG references. A nonvisual backend or CLI explicitly records those inputs as NOT APPLICABLE and supplies its approved data/API/command contract, invocation examples and receiving checklist. Missing required input is not NOT APPLICABLE."
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 147,
+    "text": "| **UI_SPEC.md** (approved) | Designer; Architect reconciles assembly | Screens, flows, gating logic, states |"
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 167,
+    "text": "| **UI_SPEC.md** | Designer, from approved contracts and conversion evidence; Architect reconciles | Screen-by-screen behavior and primitive mapping |"
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 175,
+    "text": "> **GREENFIELD:** the Architect authors `DATA_CONTRACT.md` from the approved APP_BRIEF before Design. The Designer authors UI_SPEC; the Architect reconciles the assembled package. The Engineer consumes the approved contracts. The canonical DATA_CONTRACT template remains in §12."
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 185,
+    "text": "- [ ] UI_SPEC is APPROVED"
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 736,
+    "text": "> **Ownership:** the Architect authors DATA_CONTRACT before Design, using the canonical template below. Conversion includes the approved extraction evidence. The Designer authors UI_SPEC; the Architect reconciles the assembled package. Engineering consumes the approved revisions; it does not create missing contracts during implementation."
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 1393,
+    "text": "├── UI_SPEC.md (from Designer)"
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 1563,
+    "text": "1. ✅ Identify the pipeline (Blueprint router) and receive the matching package — greenfield: token file (PRIMARY) + style tile + screen HTML/PNG + UI_SPEC + component manifest; conversion: the 4-file handoff package"
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 1605,
+    "text": "| 1.2 | 2026-07-07 | **Wave 2B — two-track structural restructure (F-028).** Reorganized into PART I Common Doctrine / PART II Kit Track (dominant lane, described first) / PART III Pipeline Track (original Python/CLI doctrine retained verbatim) / PART IV Shared Reference / PART V Agent Conduct / Ship. NEW §2 Phase 0 Recon-Executor role — the Engineer answers RECON_QUESTIONNAIRE read-only and produces the Recon Report the Architect consumes (F-027). §3 inputs rewritten to match DESIGNER_PLAYBOOK §10 + HANDOFF_PACKAGE_PLAYBOOK: greenfield = token file (PRIMARY) + style tile/screen HTML+PNG + UI_SPEC + component manifest (screenshots removed as greenfield input — the F-026 mismatch); conversion = 4-file package + `_design/` + `_extraction/`; per-pipeline DATA_CONTRACT ownership stated in §3 and §12 (F-029). NEW §5 Kit Track: recon → kit read (aspirational, verify) → Kit Audit → FFM execution as the primary work mode, with pointers to FRONTEND_FIRST_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, FFM_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK (F-027; F-035 bridge). §15 Karpathy Protocol marked ALL-AGENT doctrine (D-011), Blueprint pointer connected; §15/§16 numbers PINNED as stable IDs. New anti-pattern: \"Wrapping What the Kit Provides / Building on Unverified Kit Claims\" (Run 001; F-039 antibody). Moves, all byte-faithful: old §4–§9 → §6–§11, §10 → §12, §11 → §13, §13 → §14, §12 → §17, §14 → Appendix A. §1 updated (Designer v2.0 diagram, recon + FFM responsibilities). Standard header (F-018); \"AI App Factory\" → \"App Factory\". |"
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 29,
+    "text": "3. **UI_SPEC.md** — screen-by-screen behavior, primitive mapping"
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 65,
+    "text": "The approved interface type determines required design inputs. A visual interface requires its approved UI_SPEC, token/style decisions and HTML/PNG references. A nonvisual backend or CLI explicitly records those inputs as NOT APPLICABLE and supplies its approved data/API/command contract, invocation examples and receiving checklist. Missing required input is not NOT APPLICABLE."
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 165,
+    "text": "### 5.3 UI_SPEC.md"
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 169,
+    "text": "Historical external example (availability unverified): **Canonical example:** `_project/UI_SPEC.md` in the Cyberize module. Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 184,
+    "text": "6. **Out Of UI_SPEC Scope** — explicit list of things considered and excluded"
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 242,
+    "text": "- Mobile-first / Rule Zero language should be present here, not just in UI_SPEC."
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 256,
+    "text": "The Designer owns UI_SPEC. For conversion, extraction evidence and source screenshots inform the specification; for greenfield, the Designer’s token file and screen HTML/PNG establish the visual contract. The Architect reconciles the assembled package before Director approval."
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 266,
+    "text": "3. **UI_SPEC.md THIRD** — screens are built from the data contract"
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 269,
+    "text": "If you author UI_SPEC before DATA_CONTRACT, you'll invent data shapes that don't match the source. If you author CLAUDE.md before the others, you won't know the conventions to encode."
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 283,
+    "text": "In Run 001, every type in DATA_CONTRACT traced to a specific section of `04-TOOL-SYSTEM.md` (the Brain Drain API surface doc). Every screen in UI_SPEC traced to `06-PROMPTS-AND-PERSONA.md` (the screen inventory) and the screenshots. This traceability is why the handoff package was airtight."
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 295,
+    "text": "3. **Operator has read UI_SPEC in full** and confirmed screen behavior matches intent"
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 323,
+    "text": "❌ Document UI_SPEC as desktop-first, mention mobile in passing"
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 350,
+    "text": "- **`UI_SPEC.md`** — 600+ lines, 3 screens with full per-screen specs, Shadcn primitive mapping, mobile breakpoints"
+  },
+  {
+    "fc": "FC-017",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 374,
+    "text": "| 1.1 | 2026-07-07 | Wave 1 audit sync | **Pipeline duality made explicit.** Standard header block (F-018). \"Which Pipeline Am I In?\" preamble added: this playbook = the CONVERSION pipeline's package doctrine; greenfield routes via the agent playbooks; entry point = APP_FACTORY_BLUEPRINT router (F-030). §5.5 Greenfield Variant added: package additionally carries Designer deliverables per DESIGNER_PLAYBOOK §10 — token file (primary), style tile HTML+PNG, screen HTML+PNG, component manifest; UI_SPEC drafted by Architect, revised by Designer (F-026 closure). Per-pipeline DATA_CONTRACT ownership stated in §5.2 (F-029). Recon Report added to §4 prerequisites — package authoring presupposes Phase 0 recon (F-003 bridge). |"
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 48,
+    "text": "- **Specification** — APP_BRIEF (scope), DATA_CONTRACT (data shapes), UI_SPEC (screens)"
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 70,
+    "text": "→ Designer authors UI_SPEC, tokens and the complete visual package"
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 154,
+    "text": "- UI_SPEC describes screens that don't match the source"
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 179,
+    "text": "- Cross-references between files resolve (DATA_CONTRACT references match UI_SPEC references)"
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 207,
+    "text": "- Components per UI_SPEC"
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 242,
+    "text": "Extraction and evidence gathering may run in parallel with visual research. The Architect prepares DATA_CONTRACT from the approved brief and available verified extraction evidence before Design. The Designer authors UI_SPEC and the complete visual package; the Architect reconciles the assembly and prepares QAM before Engineering release."
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 277,
+    "text": "│   └── UI_SPEC.md        ← screens, behavior, design system"
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 380,
+    "text": "**UI_SPEC** is authored: From the Brain Drain `06-PROMPTS-AND-PERSONA.md` (screen inventory) plus the screenshots."
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 392,
+    "text": "**UI_SPEC** is authored by the Designer from the approved brief, DATA_CONTRACT, screen HTML/PNG and token file; the Architect reconciles the assembled package."
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 403,
+    "text": "| UI_SPEC source | Designer uses extraction evidence and screenshots; Architect reconciles | Designer authors from approved contracts and screen HTML/PNG; Architect reconciles |"
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 555,
+    "text": "5. Designer authors _project/UI_SPEC.md THIRD from the approved DATA_CONTRACT; Architect reconciles"
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 573,
+    "text": "- **UI_SPEC.md THIRD** — screens are built from the data contract"
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 576,
+    "text": "If you author UI_SPEC before DATA_CONTRACT, you'll invent data shapes that don't match the source."
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 579,
+    "text": "> **DATA_CONTRACT ownership:** the Architect authors the complete contract before Design for both pipelines, using conversion extraction evidence where applicable. The Designer authors UI_SPEC; the Architect reconciles both with the approved brief before Engineering begins. A shell is not a completed contract."
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 588,
+    "text": "| UI_SPEC | 60-90 min |"
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 741,
+    "text": "The `_project/` folder is the **project-specific** content of the FFM. Four files. Each has a specific purpose. Author them in order: APP_BRIEF → DATA_CONTRACT → UI_SPEC → CLAUDE.md."
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 841,
+    "text": "### 9.3 — `_project/UI_SPEC.md`"
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 884,
+    "text": "| Inventing components not in UI_SPEC | If Claudy needs a new component mid-build, STOP and update spec first |"
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 932,
+    "text": "- **Screens in UI_SPEC appear in `playbook/05-COMPONENTS.md`** (the playbook references the spec)"
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1665,
+    "text": "On session start, read `CLAUDE.md` in that folder. That file is the project's navigation contract. It tells you which project we're building, what's in scope, what's forbidden, what phase we're in, and where to find the project handoff docs (APP_BRIEF, DATA_CONTRACT, UI_SPEC)."
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1732,
+    "text": "❌ Document UI_SPEC as desktop-first, mention mobile in passing"
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1761,
+    "text": "✅ Author APP_BRIEF → DATA_CONTRACT → UI_SPEC → CLAUDE.md, in order"
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1856,
+    "text": "- [ ] `UI_SPEC.md` — screen list, layouts, per-screen specs, error boundaries, design system, breakpoints, states, a11y, out of scope, references, changelog"
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1903,
+    "text": "- [ ] Screens in UI_SPEC match screens referenced in `playbook/05-COMPONENTS.md`"
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2012,
+    "text": "- `_project/UI_SPEC.md` — 600+ lines, 3 screens with full per-screen specs, Shadcn primitive mapping, mobile breakpoints"
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2038,
+    "text": "- `_project/UI_SPEC.md` — placeholder pages + inherited starter kit screens, design system spec"
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2082,
+    "text": "│   └── UI_SPEC.md                     # Screens, behavior, design system"
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2153,
+    "text": "Read the approved APP_BRIEF, DATA_CONTRACT and applicable UI_SPEC at their declared locations."
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2268,
+    "text": "5. **`_project/UI_SPEC.md`** — screen behavior"
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2275,
+    "text": "Conflict resolution: the approved APP_BRIEF governs scope; DATA_CONTRACT and UI_SPEC govern their subjects. Managers route to those contracts and cannot change them. Genuine conflicts stop affected work for attributable Director resolution."
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2326,
+    "text": "Instantiate the single canonical APP_BRIEF template from ARCHITECT_QUESTIONNAIRE.md. Fill its pipeline-specific sections from attributable evidence; record the actual approval and revision. Do not fork the former duplicate stub. The approved package also contains the Architect-owned DATA_CONTRACT, Designer-owned UI_SPEC, ACCEPTANCE_SPEC and prepared QAM."
+  },
+  {
+    "fc": "FC-017",
+    "path": "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+    "line": 21,
+    "text": "| **Guidelines** | docs / lint rules | this Handbook, the UI_SPEC, the manifests |"
+  },
+  {
+    "fc": "FC-017",
+    "path": "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+    "line": 104,
+    "text": "| 4 | **UI_SPEC.md** | Designer-authored hierarchy, gating, states, responsive rules and checkpoints; Architect reconciles the assembled package |"
+  },
+  {
+    "fc": "FC-017",
+    "path": "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+    "line": 119,
+    "text": "5. **Designer authors UI_SPEC and component manifest; Architect reconciles the assembled package.**"
+  },
+  {
+    "fc": "FC-017",
+    "path": "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+    "line": 144,
+    "text": "3. Receives the Architect’s approved **DATA_CONTRACT before Design**, then authors UI_SPEC; the Architect reconciles the assembled package."
+  },
+  {
+    "fc": "FC-017",
+    "path": "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+    "line": 145,
+    "text": "4. Produces **token file → canonical screen → style tile → remaining screen artifacts → UI_SPEC → component manifest**, using the full canonical token contract; validates all modes and role/semantic distinctions."
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+    "line": 16,
+    "text": "5. **Designer:** UI_SPEC, tokens and visual artifacts."
+  },
+  {
+    "fc": "FC-017",
+    "path": "03_BUILD_METHODOLOGY/_assets/workflows/FFM_CREATION.svg",
+    "line": 34,
+    "text": "<text x=\"1395.0\" y=\"730\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#0f172a\">5. UI_SPEC, tokens and visual</text>"
+  },
+  {
+    "fc": "FC-019",
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "line": 17,
+    "text": "5. [APP_BRIEF Template](#5-app_brief-template)"
+  },
+  {
+    "fc": "FC-019",
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "line": 214,
+    "text": "## 5. APP_BRIEF Template"
+  },
+  {
+    "fc": "FC-019",
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "line": 216,
+    "text": "> **Doctrine relocated (F-017).** The canonical APP_BRIEF template lives in `ARCHITECT_QUESTIONNAIRE.md`, alongside the questionnaire that fills it. It carries the **Planning State** table (🔒 Decision / ⚠️ Assumption / ❓ Open Question) — the epistemic core the old embedded template here lacked — plus the Phase-4-fed sections (Integrations, Constraints & Deadline, Risks & Unknowns) and the Deployment Class line that records the §4 router verdict."
+  },
+  {
+    "fc": "FC-019",
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "line": 618,
+    "text": "| 2.2 | 2026-07-07 | **Wave 2A (audit sync).** §3 Ignition Questionnaire + §5 APP_BRIEF template relocated to ARCHITECT_QUESTIONNAIRE as the single source — summaries + pointers remain here (F-017; FRONTEND_FIRST §14 relocation pattern; Doctrine Pairing Principle, SOFTWARE_FACTORY_PLAYBOOK §1.5). §1 pipeline diagram redrawn to the Designer v2.0 model: token file primary, HTML/PNG as QC artifacts (F-002; pattern from DESIGNER_PLAYBOOK §1). De-Stitched §2 inputs table + No-Vibe-Design step + §8 handoff package (F-002). §2 Recon Mode now cross-references RECON_QUESTIONNAIRE (the skill's instrument) and Blueprint Phase 0 (F-024). Internal version aligned to 2.2; filename/version mismatch resolves at MANIFEST rename, Wave 6 (F-016). Standard header block (F-018); canonical-name refs (F-011). |"
+  },
+  {
+    "fc": "FC-019",
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "line": 620,
+    "text": "| 2.0 | — | Baseline as audited (REVIEW_004): role definition, Ignition Questionnaire (then embedded), App Type Router, APP_BRIEF template (then embedded), type-specific considerations, approval criteria, Designer handoff protocol, anti-patterns, worked examples. |"
+  },
+  {
+    "fc": "FC-019",
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md",
+    "line": 6,
+    "text": "> **This doc is the SINGLE SOURCE for the Ignition Questionnaire and the APP_BRIEF template.**"
+  },
+  {
+    "fc": "FC-019",
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md",
+    "line": 70,
+    "text": "## 📄 APP_BRIEF.md TEMPLATE"
+  },
+  {
+    "fc": "FC-019",
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md",
+    "line": 175,
+    "text": "| 2.2 | 2026-07-07 | **Wave 2A — F-017 single-source merge.** This doc is now the SINGLE SOURCE for the Ignition Questionnaire + APP_BRIEF template; ARCHITECT_PLAYBOOK §3/§5 shrink to pointers. Absorbed the playbook-only value: Q2 enriched (technical level, environment), Q10 enriched (per-layer exotic spec), new OPTIONAL Phase 4 — Constraints Deep-Dive (Q13 App Type, Q14 Tech Constraints & Deadline, Q15 Integrations, Q16 Security/Compliance, Q17 Risks & Unknowns → Planning State ❓ routing rule). Dropped playbook duplicates (what-building, problem-solved, done-looks-like, must-haves, out-of-scope, anchor checklist — each covered by a sharper standalone question or the template). Template gained Deployment Class line + §9 Integrations, §10 Constraints & Deadline, §11 Risks & Unknowns. De-Stitched Q4 → \"screenshot, style tile, or Figma link\" (F-002). Standard header (F-018); canonical refs (F-011); CRLF→LF normalized. \"Changes Applied — GPT Recommendation\" table retired into this history (see 2.1 row); chat-residue closing line removed. ⛔ Hard Gate, 📌 Reality Rule, and Planning State preserved untouched. |"
+  },
+  {
+    "fc": "FC-019",
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "line": 22,
+    "text": "8. [Deliverables + UI_SPEC Template](#8-deliverables--ui_spec-template)"
+  },
+  {
+    "fc": "FC-019",
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "line": 245,
+    "text": "## 8. Deliverables + UI_SPEC Template"
+  },
+  {
+    "fc": "FC-019",
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "line": 257,
+    "text": "### UI_SPEC Template"
+  },
+  {
+    "fc": "FC-019",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 175,
+    "text": "> **GREENFIELD:** the Architect authors `DATA_CONTRACT.md` from the approved APP_BRIEF before Design. The Designer authors UI_SPEC; the Architect reconciles the assembled package. The Engineer consumes the approved contracts. The canonical DATA_CONTRACT template remains in §12."
+  },
+  {
+    "fc": "FC-019",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2326,
+    "text": "Instantiate the single canonical APP_BRIEF template from ARCHITECT_QUESTIONNAIRE.md. Fill its pipeline-specific sections from attributable evidence; record the actual approval and revision. Do not fork the former duplicate stub. The approved package also contains the Architect-owned DATA_CONTRACT, Designer-owned UI_SPEC, ACCEPTANCE_SPEC and prepared QAM."
+  },
+  {
+    "fc": "FC-019",
+    "path": "MANIFEST.md",
+    "line": 29,
+    "text": "| ARCHITECT_QUESTIONNAIRE | 2.3 | 2026-10-18 | Active | The ignition instrument (single source): 12-Q core + optional Phase 4 + APP_BRIEF template | APP_FACTORY_BLUEPRINT, ARCHITECT_PLAYBOOK, RECON_QUESTIONNAIRE |"
+  },
+  {
+    "fc": "FC-025",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 16,
+    "text": "Phase 3 — Engineering (spec): Architect completes the module, ACCEPTANCE_SPEC and prepared QAM; FILE_TREE optional."
+  },
+  {
+    "fc": "FC-025",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 122,
+    "text": "Phase 3 — Engineering (spec): Architect completes the module, ACCEPTANCE_SPEC and prepared QAM; FILE_TREE optional."
+  },
+  {
+    "fc": "FC-025",
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 196,
+    "text": "2. The ID appears on: the module folder name, every document header inside it, the `ACCEPTANCE_SPEC.md`, QA references, retrospectives, changelog entries, and cross-document links."
+  },
+  {
+    "fc": "FC-025",
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 201,
+    "text": "### QA Handoff — the `ACCEPTANCE_SPEC.md` Contract"
+  },
+  {
+    "fc": "FC-025",
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 203,
+    "text": "1. **Every code-bearing module handoff includes `ACCEPTANCE_SPEC.md`** (exact filename locked). It is the contract from Engineering to QA — **never the QA test plan.** Engineering states the claim; QA independently designs the attack."
+  },
+  {
+    "fc": "FC-025",
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 784,
+    "text": "- [ ] Approved ACCEPTANCE_SPEC and engineering QAM handoff are ready before independent QA."
+  },
+  {
+    "fc": "FC-025",
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 942,
+    "text": "| 1.3 | 2026-08-10 | Added §2.5 \"Module Identity & QA Handoff\" Factory-wide section (app-suffixed module IDs; mandatory ACCEPTANCE_SPEC contract; QA verdict ownership + Operator final authority; AC* numbering decision). Promoted from the ADK Harness field campaign via R1/R2 QA review and finalization pass. |"
+  },
+  {
+    "fc": "FC-025",
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "line": 37,
+    "text": "Designer: UI_SPEC + applicable visual artifacts -> Architect: reconciled module + ACCEPTANCE_SPEC + QAM"
+  },
+  {
+    "fc": "FC-025",
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "line": 42,
+    "text": "Designer: UI_SPEC + applicable visual artifacts -> Architect: reconciled module + ACCEPTANCE_SPEC + QAM"
+  },
+  {
+    "fc": "FC-025",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 68,
+    "text": "Designer: UI_SPEC + applicable visual artifacts -> Architect: reconciled module + ACCEPTANCE_SPEC + QAM"
+  },
+  {
+    "fc": "FC-025",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 1395,
+    "text": "├── ACCEPTANCE_SPEC.md (from Architect)"
+  },
+  {
+    "fc": "FC-025",
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "line": 42,
+    "text": "- The ID appears on: the module folder name, every document header inside it, the `ACCEPTANCE_SPEC.md`, QA references, retrospectives, changelog entries, and cross-document links."
+  },
+  {
+    "fc": "FC-025",
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "line": 54,
+    "text": "├── ACCEPTANCE_SPEC.md           ← Engineer-finalized at handoff; criteria seeded from approved contract (see §8)"
+  },
+  {
+    "fc": "FC-025",
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "line": 83,
+    "text": "Current recon → Architect authors the module just in time, including ACCEPTANCE_SPEC and prepared QAM."
+  },
+  {
+    "fc": "FC-025",
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "line": 122,
+    "text": "## 8. ACCEPTANCE_SPEC.md (mandatory handoff artifact — Factory-level rule, restated)"
+  },
+  {
+    "fc": "FC-025",
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "line": 124,
+    "text": "**The contract handed from Engineering to QA. It is NOT the QA test plan.** Engineering states what it claims complete; QA independently decides how to attack and verify. Exact filename locked: `ACCEPTANCE_SPEC.md`."
+  },
+  {
+    "fc": "FC-025",
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "line": 177,
+    "text": "- [ ] `ACCEPTANCE_SPEC.md` finalized and handed to QA"
+  },
+  {
+    "fc": "FC-025",
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "line": 178,
+    "text": "- [ ] Coordinator commits landed per concern; QA-environment / Coordinator setup prerequisites required by `ACCEPTANCE_SPEC.md` executed and verified (genuinely deploy-dependent steps identified separately under Gate D)"
+  },
+  {
+    "fc": "FC-025",
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "line": 194,
+    "text": "| 1.0-DRAFT | 2026-08-10 | Initial draft from the six-module ADK Harness pilot campaign + two doctrine upgrades (ACCEPTANCE_SPEC; app-suffixed IDs). |"
+  },
+  {
+    "fc": "FC-025",
+    "path": "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+    "line": 81,
+    "text": "QA receives the `ACCEPTANCE_SPEC.md` and independently authors the attack — the spec is Engineering's contract, never Engineering's test plan. **QA owns the verdict** (Factory vocabulary: PASS / PASS WITH FOLLOW-UP FINDINGS / PASS WITH KNOWN RISK / FAIL / BLOCKED). Findings route to the Operator for final adjudication where product/scope/risk decisions are required; they reach the Engineer only as approved module content. Exploratory, state-transition, and negative-path testing are first-class: the pilot campaign's most valuable defect (FIX-003's F09) was found by deliberately stressing state transitions, not by following the happy path."
+  },
+  {
+    "fc": "FC-025",
+    "path": "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+    "line": 490,
+    "text": "> **Clarification:** Gate Q evidence may cite the module's green board + `ACCEPTANCE_SPEC.md`; Gate D applies whenever the defect class is environment-sensitive (per §12's own rule — \"Localhost Closure\" remains an anti-pattern)."
+  },
+  {
+    "fc": "FC-025",
+    "path": "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+    "line": 581,
+    "text": "3. **`ACCEPTANCE_SPEC.md` — mandatory handoff artifact** (exact filename locked Factory-wide; ownership per Factory doctrine: criteria seeded from the approved contract pre-implementation; the Engineer maintains and finalizes, never silently adds/removes/weakens/redefines a requirement): canonical module ID + owning app; objective; in/out of scope; numbered **`AC1, AC2, …`** acceptance requirements, testable and observable — a NEW Factory decision effective with this playbook; legacy handoffs used gate IDs (`X1–X7` etc.), which remain the convention for module-internal engineering gates, with a gates↔AC mapping table encouraged (never bare `A*` — reserved for recon assumption checklists); expected observable behavior per requirement; environment/setup prerequisites and every manual Coordinator step, called out FIRST; regression expectations; manual-only points; known limitations; follow-up work outside this contract. Established at planning, synchronized during implementation, finalized at handoff — never reverse-engineered afterward."
+  },
+  {
+    "fc": "FC-025",
+    "path": "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+    "line": 647,
+    "text": "Link to this FIX's ACCEPTANCE_SPEC.md; the AC-numbers covering this defect."
+  },
+  {
+    "fc": "FC-025",
+    "path": "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+    "line": 739,
+    "text": "| 1.0 | 2026-08-10 | Field-validated against FIX-001/002/003 (ADK-HARNESS, legacy). Added: mandatory ACCEPTANCE_SPEC with Engineering/QA separation; app-suffixed module IDs; git-zero Engineer doctrine; QA-adjudication flow; FIX module anatomy; case studies. All v0.1 lifecycle rules confirmed by field use. Seamless merge of the v1.0 amendments kit (A1–A6, N1–N3). |"
+  },
+  {
+    "fc": "FC-025",
+    "path": "03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md",
+    "line": 20,
+    "text": "**Module identity and the QA-handoff contract are Factory-wide doctrine** (SOFTWARE_FACTORY_PLAYBOOK › Module Identity & QA Handoff): `<TYPE>-<NNN>-<APP-SLUG>` IDs, the mandatory `ACCEPTANCE_SPEC.md` with `AC*` requirements, the Engineering/QA separation, and QA verdict ownership (QA verdict → Operator final authority → Architect advisory). FEAT inherits these from the Factory level — never from BIM. Module *mechanics* shared with BIM (one-folder package, one CLAUDE.md manager, stage-gate lifecycle, freeze rule, Plan Mode, verify-first, read-only Git inspection with Director-only mutations and the existing BIM cloud restrictions, baseline-first regression, per-module failure policy, anti-patterns, Definition of Done) are documented in `BIM_PLAYBOOK.md` §4–§12 and apply to FEATs by reference. Below are the FEAT-specific deltas."
+  },
+  {
+    "fc": "FC-025",
+    "path": "03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md",
+    "line": 41,
+    "text": "Numbered `V1…Vn` in the manager: capability works as specified · capability is interruptible/reversible where relevant (stop, undo, revert) · **failure behavior matches the module's declared failure policy** (safe degradation only where losing the capability is explicitly safe — e.g., SSR/missing-API guards on a convenience feature; fail-closed where security, privacy, financial integrity, authorization, tenant isolation, or data integrity demands it) · mock/live parity · zero regression on the surrounding surface — the law: **regression assertions are never weakened merely to accommodate the feature; changes to existing tests must be justified by changed accepted behavior**, each edit listed in the report · green board · `ACCEPTANCE_SPEC.md` delivered."
+  },
+  {
+    "fc": "FC-025",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 265,
+    "text": "├── ACCEPTANCE_SPEC.md    # approved acceptance contract; Engineer factual handoff"
+  },
+  {
+    "fc": "FC-025",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 565,
+    "text": "15. Architect assembles the final approved package, includes ACCEPTANCE_SPEC.md and module-specific QAM/, verifies dependencies and declares writable output lanes."
+  },
+  {
+    "fc": "FC-025",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1817,
+    "text": "- [ ] Approved pre-implementation `ACCEPTANCE_SPEC.md` is present."
+  },
+  {
+    "fc": "FC-025",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1842,
+    "text": "- [ ] Create module-specific `QAM/` from the accepted canonical templates, both QA entry routes and all required records; prepare `ACCEPTANCE_SPEC.md`; create `_project/`, `_design/`, `_extraction/`, `skills/stark-frontend-first/`, `playbook/RETROSPECTIVES/` and `verification/`."
+  },
+  {
+    "fc": "FC-025",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2071,
+    "text": "├── ACCEPTANCE_SPEC.md    # approved acceptance contract; Engineer factual handoff"
+  },
+  {
+    "fc": "FC-025",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2326,
+    "text": "Instantiate the single canonical APP_BRIEF template from ARCHITECT_QUESTIONNAIRE.md. Fill its pipeline-specific sections from attributable evidence; record the actual approval and revision. Do not fork the former duplicate stub. The approved package also contains the Architect-owned DATA_CONTRACT, Designer-owned UI_SPEC, ACCEPTANCE_SPEC and prepared QAM."
+  },
+  {
+    "fc": "FC-025",
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "line": 300,
+    "text": "> The example above is historical field evidence from FIX-002 (ADK-HARNESS, legacy) — its `X*` identifiers are legacy/internal engineering gate IDs. Acceptance requirements (`AC*`, from ACCEPTANCE_SPEC.md) and module-internal engineering gates (`X*`/`V*`/`N*`/`P-G*`) are distinct ID families; specs are encouraged to carry a gates↔AC mapping table. New generic templates and examples use `AC1, AC2, …` per the Factory decision of 2026-08-10 (see SOFTWARE_FACTORY_PLAYBOOK › Module Identity & QA Handoff)."
+  },
+  {
+    "fc": "FC-025",
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "line": 1174,
+    "text": "1. The module’s mandatory `ACCEPTANCE_SPEC.md`,"
+  },
+  {
+    "fc": "FC-025",
+    "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+    "line": 77,
+    "text": "The Architect's packet contains a front door (the module manager, `BIM_PLAYBOOK.md` §5), the brief, the disposition ledger, the acceptance specification (`ACCEPTANCE_SPEC.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2.5), the engineering prompts and the instantiated `QAM/`. Requirements are settled before the build. The Engineer delivers the acceptance artifact with the completion handoff but may not redefine success after implementation. Separate required behavior from engineering claims and from QA verdicts."
+  },
+  {
+    "fc": "FC-025",
+    "path": "CHANGELOG.md",
+    "line": 31,
+    "text": "| 2026-08-10 | BIM_PLAYBOOK v1.0 | New doc entering Hub: Backend Integration Module doctrine — module identity & package anatomy, stage-gate lifecycle, ACCEPTANCE_SPEC handoff, QA engagement, contracts/seams, anti-patterns. From the ADK Harness pilot campaign | factory-module-doctrine |"
+  },
+  {
+    "fc": "FC-025",
+    "path": "CHANGELOG.md",
+    "line": 35,
+    "text": "| 2026-08-10 | BUG_FIX_PLAYBOOK v1.0 | Seamless merge of the field amendments kit (v0.1 archived): role additions (git-zero Engineer, QA verdict ownership, Architect-advises), cross-module repair commits, ACCEPTANCE_SPEC as required artifact, app-suffixed BUG_REPORT header, new §16 FIX Module Anatomy + §17 Module Identity + §22 Field Case Studies (FIX-001/002/003) | factory-module-doctrine |"
+  },
+  {
+    "fc": "FC-025",
+    "path": "CHANGELOG.md",
+    "line": 36,
+    "text": "| 2026-08-10 | SOFTWARE_FACTORY_PLAYBOOK v1.3 | New §2.5 \"Module Identity & QA Handoff\" (Factory-wide — governs BIM, FIX, FEAT, and future module types): app-suffixed IDs, ACCEPTANCE_SPEC contract, AC* numbering, QA verdict ownership + Operator final authority. Fractional section number follows the file's own §1.5 precedent (v1.2 archived) | factory-module-doctrine |"
+  },
+  {
+    "fc": "FC-025",
+    "path": "MANIFEST.md",
+    "line": 40,
+    "text": "| BIM_PLAYBOOK | 1.1 | 2026-10-18 | Active | Backend Integration Module doctrine: module identity, one-folder package + manager grammar, stage-gate lifecycle, ACCEPTANCE_SPEC handoff, QA engagement, contracts & seams | ARCHITECT_PLAYBOOK, BUG_FIX_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, QA_PLAYBOOK, RECON_QUESTIONNAIRE, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |"
+  },
+  {
+    "fc": "FC-025",
+    "path": "MANIFEST.md",
+    "line": 41,
+    "text": "| BUG_FIX_PLAYBOOK | 1.1 | 2026-10-18 | Active — field-validated (FIX-001/002/003, ADK Harness) | Bug-fix doctrine (field-validated): evidence-first lifecycle, root-cause mechanism rule, regression protection, Gate Q/D, scope control, environment parity, FIX module anatomy, module identity, ACCEPTANCE_SPEC artifact, field case studies | ENGINEER_PLAYBOOK, FFM_PLAYBOOK, QA_PLAYBOOK, RECON_QUESTIONNAIRE, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |"
+  },
+  {
+    "fc": "FC-026",
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 206,
+    "text": "4. **Minimum contents:** canonical module ID + owning app · objective · in-scope / explicit out-of-scope · numbered ACs, testable and observable · expected behavior per AC incl. error surfaces · **environment/setup prerequisites and every manual Operator step, called out FIRST** · regression expectations · manual-only points · known limitations · follow-up work outside this contract."
+  },
+  {
+    "fc": "FC-026",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 281,
+    "text": "**The 4 CP scars** (baked into the primitive): close-on-nav (`usePathname`), passable `close` to a render-fn sidebar, ~25rem width capped to 85vw, native dismiss (outside-tap + Esc)."
+  },
+  {
+    "fc": "FC-026",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 410,
+    "text": "Any app-shell drawer carries these (already baked into `AppShellPage`): close-on-nav (`usePathname`), a passable `close` for render-fn sidebars, ~25rem capped to 85vw, native dismiss (outside-tap + Esc)."
+  },
+  {
+    "fc": "FC-026",
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "line": 189,
+    "text": "- **Tokens are the contract.** If a screen needs a color outside the token set, the token set is wrong — surface it, don't bypass it."
+  },
+  {
+    "fc": "FC-026",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 417,
+    "text": "# Q11.5 — \"Always-visible\" mobile controls sit OUTSIDE the hamburger (L21)"
+  },
+  {
+    "fc": "FC-026",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 422,
+    "text": "**Architect uses this to:** spec navbars correctly the first time — marketing nav gets a hamburger + theme toggle + auth-state region; split heroes default to `lg:`; controls stay outside the menu. Prevents the 3-iteration landing churn."
+  },
+  {
+    "fc": "FC-026",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 556,
+    "text": "| 0.4 | 2026-06-07 | Full Run 001 integration (34 lessons). NEW Section 0 (Day-1 Ground-Truth Sweep — the meta-lesson: handbook is aspirational, verify everything on disk first; consolidates L1/L5/L6/L7/L8/L9/L24/L32). NEW Section 11 (Nav & Auth-State Patterns — marketing-vs-portal nav L19, every-navbar-theme-toggle L20, auth-state region L22, split-hero lg: L18, controls-outside-menu L21). NEW Section 12 (Verification Rituals — grep-at-close L17, process-status check L28, SP5 seam-check L29, rm .next between batches L25, fresh test baseline L26). Section 4 gained CSS-extension match (L14) + dark-mode real-screen check (L16). Open-Ended Sweep renumbered to Section 13. |"
+  },
+  {
+    "fc": "FC-026",
+    "path": "03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md",
+    "line": 799,
+    "text": "### Anti-Pattern 8: Skill That Modifies Files Outside Its Scope"
+  },
+  {
+    "fc": "FC-026",
+    "path": "03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md",
+    "line": 912,
+    "text": "Before changing referenced doctrine, use MANIFEST header dependencies as a starting set, then inspect body-only references, templates, checklists, examples and consuming skills. Record every affected consumer and route changes outside the authorized boundary to a separately approved job. A header graph is not a complete impact analysis."
+  },
+  {
+    "fc": "FC-026",
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "line": 61,
+    "text": "Small modules may fold brief and contract into the manager, but matching entry routes, acceptance spec, prepared module QAM and retrospective remain mandatory. Delivery is one module ZIP plus a file tree; Coordinator notes remain outside it."
+  },
+  {
+    "fc": "FC-026",
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "line": 104,
+    "text": "### The Locked Rules (Lesson L1 — paid for in the field)"
+  },
+  {
+    "fc": "FC-026",
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "line": 117,
+    "text": "- **Do not silently deviate:** a change outside the authorized writable surface, including diagnostic, test-runner or build configuration changes, requires explicit authorization before execution. Report the proposed change and its evidence; later ratification is not prior authorization."
+  },
+  {
+    "fc": "FC-026",
+    "path": "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+    "line": 312,
+    "text": "- “improve” behavior outside the accepted fix."
+  },
+  {
+    "fc": "FC-026",
+    "path": "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+    "line": 581,
+    "text": "3. **`ACCEPTANCE_SPEC.md` — mandatory handoff artifact** (exact filename locked Factory-wide; ownership per Factory doctrine: criteria seeded from the approved contract pre-implementation; the Engineer maintains and finalizes, never silently adds/removes/weakens/redefines a requirement): canonical module ID + owning app; objective; in/out of scope; numbered **`AC1, AC2, …`** acceptance requirements, testable and observable — a NEW Factory decision effective with this playbook; legacy handoffs used gate IDs (`X1–X7` etc.), which remain the convention for module-internal engineering gates, with a gates↔AC mapping table encouraged (never bare `A*` — reserved for recon assumption checklists); expected observable behavior per requirement; environment/setup prerequisites and every manual Coordinator step, called out FIRST; regression expectations; manual-only points; known limitations; follow-up work outside this contract. Established at planning, synchronized during implementation, finalized at handoff — never reverse-engineered afterward."
+  },
+  {
+    "fc": "FC-026",
+    "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+    "line": 57,
+    "text": "Revised [deployment workflow and stick diagram](_workflows/FFM_DEPLOYMENT.md) supersede the original August deployment picture; platform-specific procedures and new permissions remain outside this run."
+  },
+  {
+    "fc": "FC-026",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1609,
+    "text": "Surface anything outside auth scope as INFERENCE labeled \"not in scope for this run.\""
+  },
+  {
+    "fc": "FC-026",
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+    "line": 106,
+    "text": "UI must not invent fields outside the data contract."
+  },
+  {
+    "fc": "FC-026",
+    "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+    "line": 176,
+    "text": "| STOP-AUTH | Missing/invalid permitted credentials, unexpected identity, or auth outside authorization |"
+  },
+  {
+    "fc": "FC-026",
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "line": 564,
+    "text": "A real issue discovered during exploratory QA that is outside the module's accepted scope and does not invalidate its acceptance criteria."
+  },
+  {
+    "fc": "FC-026",
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "line": 640,
+    "text": "QA discovered one or more real, non-blocking findings outside the module's acceptance scope."
+  },
+  {
+    "fc": "FC-026",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 249,
+    "text": "- **`tests/` at project root** — Dockbloxx convention. Tests live outside `src/`. Easier when E2E also lives at root (`e2e/`)."
+  },
+  {
+    "fc": "FC-026",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 488,
+    "text": "E2E tests live **outside `src/`** and outside `tests/` (which is for Jest). Three separate roots: `src/` (source), `tests/` (Jest), `e2e/` (Playwright). Avoid Jest/Playwright collision (see §6)."
+  },
+  {
+    "fc": "FC-026",
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 1369,
+    "text": "Authoritative tracker for security issues discovered outside the test/fix cycle. Maintained at project root in `agent_docs/`."
+  },
+  {
+    "fc": "FC-026",
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 695,
+    "text": "- Writing role values to metadata outside the protected admin channel."
+  },
+  {
+    "fc": "FC-026",
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 227,
+    "text": "Keep hydration readiness outside the resettable business state. A normal reset preserves readiness. Hydration finishes in ready or error; an error exposes bounded recovery and never leaves an indefinite loading state. Verify reset after hydration, invalid stored data and unavailable storage."
+  },
+  {
+    "fc": "FC-026",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 78,
+    "text": "6. **No Context Hell**: Works outside React components (services, utilities)"
+  },
+  {
+    "fc": "FC-026",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 637,
+    "text": "Keep hydration readiness outside the resettable business state. A normal reset preserves readiness. Hydration finishes in ready or error; an error exposes bounded recovery and never leaves an indefinite loading state. Verify reset after hydration, invalid stored data and unavailable storage."
+  },
+  {
+    "fc": "FC-026",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 645,
+    "text": "Keep hydration readiness outside the resettable business state. A normal reset preserves readiness. Hydration finishes in ready or error; an error exposes bounded recovery and never leaves an indefinite loading state. Verify reset after hydration, invalid stored data and unavailable storage."
+  },
+  {
+    "fc": "FC-026",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 692,
+    "text": "Keep hydration readiness outside the resettable business state. A normal reset preserves readiness. Hydration finishes in ready or error; an error exposes bounded recovery and never leaves an indefinite loading state. Verify reset after hydration, invalid stored data and unavailable storage."
+  },
+  {
+    "fc": "FC-026",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 783,
+    "text": "Do not persist raw contact details by default. Any approved personal-data persistence declares permitted fields, retention duration and user or guest scope. Sign-out and account transition reset and invalidate every affected store even when remote logout fails; a new account must not hydrate the previous account’s data. Payment and authorization state remain outside persistence. Storage readiness is separate from business-data reset."
+  },
+  {
+    "fc": "FC-026",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 785,
+    "text": "Keep hydration readiness outside the resettable business state. A normal reset preserves readiness. Hydration finishes in ready or error; an error exposes bounded recovery and never leaves an indefinite loading state. Verify reset after hydration, invalid stored data and unavailable storage."
+  },
+  {
+    "fc": "FC-026",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 952,
+    "text": "Keep hydration readiness outside the resettable business state. A normal reset preserves readiness. Hydration finishes in ready or error; an error exposes bounded recovery and never leaves an indefinite loading state. Verify reset after hydration, invalid stored data and unavailable storage."
+  },
+  {
+    "fc": "FC-026",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 1080,
+    "text": "// Access store outside React"
+  },
+  {
+    "fc": "FC-026",
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 1084,
+    "text": "// Subscribe to changes outside React"
+  },
+  {
+    "fc": "FC-026",
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "line": 271,
+    "text": "  via close-on-nav (`usePathname`), outside-tap, and Esc."
+  },
+  {
+    "fc": "FC-026",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "line": 93,
+    "text": "- **No hardcoded hex codes in component files.** Not in inline styles. Not in Tailwind utility classes that bypass tokens. Not in CSS files outside `globals.css`."
+  },
+  {
+    "fc": "FC-026",
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "line": 121,
+    "text": "3. **Never reach for a literal color value** — if the design calls for a color outside the current tokens, surface to the operator before bypassing the system"
+  },
+  {
+    "fc": "FC-027",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 14,
+    "text": "Phase 1 — Ignition: Architect authors APP_BRIEF and DATA_CONTRACT before Design; Director approves scope."
+  },
+  {
+    "fc": "FC-027",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 55,
+    "text": "**Artifact ownership:** the Architect owns DATA_CONTRACT before Design. The Designer owns UI_SPEC. The Architect reconciles the assembled package and Engineering consumes its approved revision. Conversion evidence informs those contracts; greenfield does not transfer authorship to Engineering. FILE_TREE is optional; implementation structure and boundaries must remain explicit in the approved package."
+  },
+  {
+    "fc": "FC-027",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 86,
+    "text": "| `DATA_CONTRACT.md` | All data shapes, API payloads, state objects; approved before Design | Architect |"
+  },
+  {
+    "fc": "FC-027",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 120,
+    "text": "Phase 1 — Ignition: Architect authors APP_BRIEF and DATA_CONTRACT before Design; Director approves scope."
+  },
+  {
+    "fc": "FC-027",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 142,
+    "text": "The Architect assembles the approved contract artifacts below for the Engineer to implement. DATA_CONTRACT is authored before Design; FILE_TREE is optional when implementation structure and boundaries are otherwise explicit."
+  },
+  {
+    "fc": "FC-027",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 144,
+    "text": "### **DATA_CONTRACT.md**"
+  },
+  {
+    "fc": "FC-027",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 217,
+    "text": "3. **Before Design:** Architect prepares DATA_CONTRACT. After the Designer authors UI_SPEC and the screen set is approved, the Architect reconciles the full package. FILE_TREE is optional; structure and boundaries remain explicit."
+  },
+  {
+    "fc": "FC-027",
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 228,
+    "text": "| 2.1 | 7 Jul 2026 | **Wave 1 (audit sync).** Standard header block adopted, version/date moved to top (F-018). Title \"AI App Factory\" → \"App Factory\" (F-008). Phase 0 — Recon added to the lifecycle + workflow diagram: Engineer ground-truths per RECON_QUESTIONNAIRE / stark-recon, Architect consumes the Recon Report (F-003). \"Which Pipeline Am I In?\" router promoted from FFM_PLAYBOOK §4 — Conversion vs Greenfield, ownership split: HANDOFF_PACKAGE_PLAYBOOK = conversion detail, agent playbooks = greenfield detail (F-030). Per-pipeline DATA_CONTRACT ownership stated (F-029). Karpathy Protocol pointer placeholder reserved (D-011). Cross-references canonical-name only (F-011). |"
+  },
+  {
+    "fc": "FC-027",
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 161,
+    "text": "| Design | Consume the Architect’s approved DATA_CONTRACT; proposed contract refinements require approved amendments before implementation. |"
+  },
+  {
+    "fc": "FC-027",
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 24,
+    "text": "**Why this exists:** In Factory Run 001 (Cyberize), the agent almost authored a redundant `authService.ts` wrapping the kit's already-complete Supabase auth stack. The kit's capabilities weren't documented in one canonical place, so the agent followed the module's generic DATA_CONTRACT literally. This handbook prevents that failure mode permanently."
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "line": 36,
+    "text": "Engineer: ground-truth recon -> Architect: approved APP_BRIEF + DATA_CONTRACT before Design"
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "line": 85,
+    "text": "**Before preparing or reconciling any project artifact, the Architect requires a current Recon Report for the actual repository state. The Architect owns APP_BRIEF, DATA_CONTRACT and assembly; the Designer owns UI_SPEC.**"
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "line": 41,
+    "text": "Engineer: ground-truth recon -> Architect: approved APP_BRIEF + DATA_CONTRACT before Design"
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "line": 69,
+    "text": "| Define DATA_CONTRACT before Design | Architect |"
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 34,
+    "text": "12. [DATA_CONTRACT Template](#12-data_contract-template)"
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 67,
+    "text": "Engineer: ground-truth recon -> Architect: approved APP_BRIEF + DATA_CONTRACT before Design"
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 166,
+    "text": "| **DATA_CONTRACT.md** (PRE-AUTHORED) | Architect, from Brain Drain evidence | Types, service contracts, mock requirements |"
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 172,
+    "text": "### DATA_CONTRACT Ownership (know which run you're in)"
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 174,
+    "text": "> **CONVERSION:** the Architect **PRE-AUTHORS** `DATA_CONTRACT.md` from Brain Drain evidence — the Engineer consumes and honors it."
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 175,
+    "text": "> **GREENFIELD:** the Architect authors `DATA_CONTRACT.md` from the approved APP_BRIEF before Design. The Designer authors UI_SPEC; the Architect reconciles the assembled package. The Engineer consumes the approved contracts. The canonical DATA_CONTRACT template remains in §12."
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 176,
+    "text": "> The Architect authors `DATA_CONTRACT.md` in both runs; only the evidence base and moment differ: conversion uses Brain Drain evidence and is pre-authored; greenfield uses the approved APP_BRIEF before Design. Router: APP_FACTORY_BLUEPRINT, \"Which Pipeline Am I In?\"."
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 282,
+    "text": "| **Swappable** | Tokens over hardcoded colors; service layer for domain logic only; mock-to-real swap per DATA_CONTRACT |"
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 734,
+    "text": "## 12. DATA_CONTRACT Template"
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 736,
+    "text": "> **Ownership:** the Architect authors DATA_CONTRACT before Design, using the canonical template below. Conversion includes the approved extraction evidence. The Designer authors UI_SPEC; the Architect reconciles the assembled package. Engineering consumes the approved revisions; it does not create missing contracts during implementation."
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 741,
+    "text": "# DATA_CONTRACT: [Project Name]"
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 1394,
+    "text": "├── DATA_CONTRACT.md"
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 1571,
+    "text": "9. ✅ Consume the Architect-authored, approved DATA_CONTRACT; verify it precedes Design and that the Architect reconciled the assembled package."
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 1605,
+    "text": "| 1.2 | 2026-07-07 | **Wave 2B — two-track structural restructure (F-028).** Reorganized into PART I Common Doctrine / PART II Kit Track (dominant lane, described first) / PART III Pipeline Track (original Python/CLI doctrine retained verbatim) / PART IV Shared Reference / PART V Agent Conduct / Ship. NEW §2 Phase 0 Recon-Executor role — the Engineer answers RECON_QUESTIONNAIRE read-only and produces the Recon Report the Architect consumes (F-027). §3 inputs rewritten to match DESIGNER_PLAYBOOK §10 + HANDOFF_PACKAGE_PLAYBOOK: greenfield = token file (PRIMARY) + style tile/screen HTML+PNG + UI_SPEC + component manifest (screenshots removed as greenfield input — the F-026 mismatch); conversion = 4-file package + `_design/` + `_extraction/`; per-pipeline DATA_CONTRACT ownership stated in §3 and §12 (F-029). NEW §5 Kit Track: recon → kit read (aspirational, verify) → Kit Audit → FFM execution as the primary work mode, with pointers to FRONTEND_FIRST_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, FFM_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK (F-027; F-035 bridge). §15 Karpathy Protocol marked ALL-AGENT doctrine (D-011), Blueprint pointer connected; §15/§16 numbers PINNED as stable IDs. New anti-pattern: \"Wrapping What the Kit Provides / Building on Unverified Kit Claims\" (Run 001; F-039 antibody). Moves, all byte-faithful: old §4–§9 → §6–§11, §10 → §12, §11 → §13, §13 → §14, §12 → §17, §14 → Appendix A. §1 updated (Designer v2.0 diagram, recon + FFM responsibilities). Standard header (F-018); \"AI App Factory\" → \"App Factory\". |"
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 1607,
+    "text": "| 1.0 | — | Baseline: role, inputs, systems discipline, CLI-first pattern, file-state contracts, build sequence, testing strategy, cloud-native engineering, provider abstraction, DATA_CONTRACT template, type-specific considerations, operations handoff, anti-patterns, field lessons. |"
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 28,
+    "text": "2. **DATA_CONTRACT.md** — types, service contracts, mock requirements"
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 127,
+    "text": "### 5.2 DATA_CONTRACT.md"
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 131,
+    "text": "Historical external example (availability unverified): **Canonical example:** `_project/DATA_CONTRACT.md` in the Cyberize module. Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 133,
+    "text": "**Ownership:** the Architect authors DATA_CONTRACT before Design. Conversion uses extraction evidence; greenfield uses the approved brief and verified interfaces. Engineering consumes the approved contract. Use the single canonical DATA_CONTRACT template in ENGINEER_PLAYBOOK §12; this section describes authoring requirements, not a competing template."
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 265,
+    "text": "2. **DATA_CONTRACT.md SECOND** — data shapes inform what the UI needs to display"
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 269,
+    "text": "If you author UI_SPEC before DATA_CONTRACT, you'll invent data shapes that don't match the source. If you author CLAUDE.md before the others, you won't know the conventions to encode."
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 283,
+    "text": "In Run 001, every type in DATA_CONTRACT traced to a specific section of `04-TOOL-SYSTEM.md` (the Brain Drain API surface doc). Every screen in UI_SPEC traced to `06-PROMPTS-AND-PERSONA.md` (the screen inventory) and the screenshots. This traceability is why the handoff package was airtight."
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 294,
+    "text": "2. **Operator has read DATA_CONTRACT in full** and confirmed shapes match expectations"
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 316,
+    "text": "❌ Author DATA_CONTRACT with shapes that \"feel right\""
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 317,
+    "text": "✅ Author DATA_CONTRACT from Brain Drain extraction evidence"
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 349,
+    "text": "- **`DATA_CONTRACT.md`** — 500+ lines, 12 types, 4 service contracts, mock data requirements, Phase 2 decision points"
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 374,
+    "text": "| 1.1 | 2026-07-07 | Wave 1 audit sync | **Pipeline duality made explicit.** Standard header block (F-018). \"Which Pipeline Am I In?\" preamble added: this playbook = the CONVERSION pipeline's package doctrine; greenfield routes via the agent playbooks; entry point = APP_FACTORY_BLUEPRINT router (F-030). §5.5 Greenfield Variant added: package additionally carries Designer deliverables per DESIGNER_PLAYBOOK §10 — token file (primary), style tile HTML+PNG, screen HTML+PNG, component manifest; UI_SPEC drafted by Architect, revised by Designer (F-026 closure). Per-pipeline DATA_CONTRACT ownership stated in §5.2 (F-029). Recon Report added to §4 prerequisites — package authoring presupposes Phase 0 recon (F-003 bridge). |"
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 21,
+    "text": "| authService wrapper vs kit's complete auth | Architect trusted DATA_CONTRACT over the kit's actual implementation | Q3.1–3.4 (auth pattern) |"
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 188,
+    "text": "The single most common conflict: DATA_CONTRACT defines a service wrapper for auth the kit already provides complete. Verify what the kit actually does BEFORE writing any service contract."
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 218,
+    "text": "**Architect uses this to:** decide whether DATA_CONTRACT needs ANY service contracts. If the kit provides auth complete (it usually does), DATA_CONTRACT says \"consume the kit's primitives directly — no wrapper.\" Service layer is reserved for project-specific domain logic only. Also: write the FFM's `_project/CLAUDE.md` against the store's ACTUAL shape (Q3.6) — if the handbook claims derived flags the store doesn't have, schedule adding them (or correcting the handbook) as a kit-reconciliation task, and don't write FFM code that reads flags that return `undefined`. Type smells (Q3.7) like `user: any` become reconciliation tasks (replace with the project's `User` type)."
+  },
+  {
+    "fc": "FC-027",
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 284,
+    "text": "**Architect uses this to:** write DATA_CONTRACT's \"tables in play / NOT in play\" sections from reality, and confirm which DB functions are inherited vs need building."
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "line": 53,
+    "text": "├── DATA_CONTRACT_AMENDMENT.md   ← only when wire contracts change"
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 48,
+    "text": "- **Specification** — APP_BRIEF (scope), DATA_CONTRACT (data shapes), UI_SPEC (screens)"
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 69,
+    "text": "→ Architect authors DATA_CONTRACT before Design"
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 153,
+    "text": "- DATA_CONTRACT invents fields the source app doesn't have"
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 179,
+    "text": "- Cross-references between files resolve (DATA_CONTRACT references match UI_SPEC references)"
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 204,
+    "text": "- TypeScript types per DATA_CONTRACT"
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 242,
+    "text": "Extraction and evidence gathering may run in parallel with visual research. The Architect prepares DATA_CONTRACT from the approved brief and available verified extraction evidence before Design. The Designer authors UI_SPEC and the complete visual package; the Architect reconciles the assembly and prepares QAM before Engineering release."
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 276,
+    "text": "│   ├── DATA_CONTRACT.md  ← types, service contracts, mock requirements"
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 379,
+    "text": "**DATA_CONTRACT** is authored: From the Brain Drain `04-TOOL-SYSTEM.md` (API surface)."
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 391,
+    "text": "**DATA_CONTRACT** is authored by the Architect before Design, from the approved brief and verified interface/schema evidence."
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 392,
+    "text": "**UI_SPEC** is authored by the Designer from the approved brief, DATA_CONTRACT, screen HTML/PNG and token file; the Architect reconciles the assembled package."
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 402,
+    "text": "| DATA_CONTRACT source | Architect uses approved extraction evidence before Design | Architect uses approved brief and verified interfaces before Design |"
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 554,
+    "text": "4. Author _project/DATA_CONTRACT.md SECOND (data shapes inform UI)"
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 555,
+    "text": "5. Designer authors _project/UI_SPEC.md THIRD from the approved DATA_CONTRACT; Architect reconciles"
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 572,
+    "text": "- **DATA_CONTRACT.md SECOND** — data shapes inform what the UI needs to display"
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 576,
+    "text": "If you author UI_SPEC before DATA_CONTRACT, you'll invent data shapes that don't match the source."
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 579,
+    "text": "> **DATA_CONTRACT ownership:** the Architect authors the complete contract before Design for both pipelines, using conversion extraction evidence where applicable. The Designer authors UI_SPEC; the Architect reconciles both with the approved brief before Engineering begins. A shell is not a completed contract."
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 587,
+    "text": "| DATA_CONTRACT | 45-60 min |"
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 741,
+    "text": "The `_project/` folder is the **project-specific** content of the FFM. Four files. Each has a specific purpose. Author them in order: APP_BRIEF → DATA_CONTRACT → UI_SPEC → CLAUDE.md."
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 793,
+    "text": "### 9.2 — `_project/DATA_CONTRACT.md`"
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 931,
+    "text": "- **Types in DATA_CONTRACT appear in `playbook/02-TYPES.md`** (the playbook references the contract)"
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1291,
+    "text": "- Claudy creates TypeScript types from DATA_CONTRACT § 4"
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1419,
+    "text": "│         Then Architect authors DATA_CONTRACT from extracts."
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1426,
+    "text": "    │         Architect authors DATA_CONTRACT from operator decisions + extracts"
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1430,
+    "text": "              DATA_CONTRACT authored from operator decisions only"
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1479,
+    "text": "Without these labels, the Architect can't tell what's verified versus guessed. With them, the Architect can author DATA_CONTRACT with confidence."
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1665,
+    "text": "On session start, read `CLAUDE.md` in that folder. That file is the project's navigation contract. It tells you which project we're building, what's in scope, what's forbidden, what phase we're in, and where to find the project handoff docs (APP_BRIEF, DATA_CONTRACT, UI_SPEC)."
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1725,
+    "text": "❌ Author DATA_CONTRACT with shapes that \"feel right\""
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1726,
+    "text": "✅ Author DATA_CONTRACT from Brain Drain extraction evidence OR explicit operator decisions"
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1761,
+    "text": "✅ Author APP_BRIEF → DATA_CONTRACT → UI_SPEC → CLAUDE.md, in order"
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1803,
+    "text": "✅ \"Sub-Phase 3 took 2 attempts because the mock auth fixture didn't satisfy the AuthenticatedUser type — root cause was undocumented optionality in DATA_CONTRACT.\""
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1855,
+    "text": "- [ ] `DATA_CONTRACT.md` — tables in/out of play, triggers, TypeScript types, service contracts, mock strategy, future decision points, conflict resolution, changelog"
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 1902,
+    "text": "- [ ] Types in DATA_CONTRACT match types referenced in `playbook/02-TYPES.md`"
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2011,
+    "text": "- `_project/DATA_CONTRACT.md` — 500+ lines, 12 types, 4 service contracts, mock data requirements, Phase 2 decision points"
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2037,
+    "text": "- `_project/DATA_CONTRACT.md` — minimal types (auth.users, user_roles only), Frank-domain tables explicitly out of scope"
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2081,
+    "text": "│   ├── DATA_CONTRACT.md               # Types, service contracts, mocks"
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2153,
+    "text": "Read the approved APP_BRIEF, DATA_CONTRACT and applicable UI_SPEC at their declared locations."
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2267,
+    "text": "4. **`_project/DATA_CONTRACT.md`** — data shapes"
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2275,
+    "text": "Conflict resolution: the approved APP_BRIEF governs scope; DATA_CONTRACT and UI_SPEC govern their subjects. Managers route to those contracts and cannot change them. Genuine conflicts stop affected work for attributable Director resolution."
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2326,
+    "text": "Instantiate the single canonical APP_BRIEF template from ARCHITECT_QUESTIONNAIRE.md. Fill its pipeline-specific sections from attributable evidence; record the actual approval and revision. Do not fork the former duplicate stub. The approved package also contains the Architect-owned DATA_CONTRACT, Designer-owned UI_SPEC, ACCEPTANCE_SPEC and prepared QAM."
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2520,
+    "text": "| 1.2 | 2026-07-07 | **Wave 3 (audit sync).** Step 0 — Recon added to §7 authoring sequence + the four-role diagram + both input checklists: current Recon Report required before authoring, per RECON_QUESTIONNAIRE / stark-recon (F-024 closure — the FFM side of the mutual pointer). Role 1 (Designer) + §4 Variant B + §10.1 `_design/` contract rewritten to the complete Designer v2.0 package: token file (PRIMARY), style tile HTML+PNG, per-screen HTML+PNG via the Canonical Page Method, component manifest (F-031); all 4 Stitch references removed (F-002). Per-pipeline DATA_CONTRACT ownership note added to §7, consistent with Blueprint/Handoff/Engineer (F-029). §4 marked as the DETAILED router source with a pointer to the Blueprint's constitution-level version (F-030 coordination). Standard header block (F-018); stale \"v1.0\" tail label corrected; canonical refs (F-011). Existing §7 step numbers and section numbers unchanged (D-019). |"
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+    "line": 36,
+    "text": "- `{APPNAME}_DATA_CONTRACT.md` — Defines the data shape for the specific app"
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+    "line": 134,
+    "text": "* `CYBERBUGS_DATA_CONTRACT.md` — defines entities, fields, and relationships for CyberBugs"
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+    "line": 135,
+    "text": "* Future apps will have their own `{APPNAME}_DATA_CONTRACT.md`"
+  },
+  {
+    "fc": "FC-027",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 575,
+    "text": "- These conventions are the DATA_CONTRACT discipline (`HANDOFF_PACKAGE_PLAYBOOK.md` §5.2) — the contract documents both shapes; both mock and real backends satisfy it."
+  },
+  {
+    "fc": "FC-027",
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 1211,
+    "text": "| 1.1 | 2026-07-08 | **Wave 4 (audit sync).** THE KIT EXCEPTION box added at §1 — the Lesson-2 antibody at its root: kit primitives consumed directly, the kit's auth IS the service layer, Kit Audit before authoring any service (F-039 — the blanket rule that produced the Run 001 authService near-miss is now amended at the source). §7 gained the factory wire-format conventions (snake_case wire / camelCase UI; service layer owns the boundary — HANDOFF DATA_CONTRACT discipline). Cross-References section added — outbound-zero ended (F-035). Standard header (F-018) + this history table (D-018). |"
+  },
+  {
+    "fc": "FC-027",
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 41,
+    "text": "> **When Schema-First Applies:** schema-first is the law for **backend phases and conversions** (the data shape is known or extracted). For **discovery builds the factory runs frontend-first**: UI against a mock DATA_CONTRACT first, schema authored at the backend transition — see `FRONTEND_FIRST_PLAYBOOK.md` §2 (when frontend-first is allowed) and §8 (the transition point). Both orders are legitimate; the pipeline you're in decides."
+  },
+  {
+    "fc": "FC-027",
+    "path": "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+    "line": 144,
+    "text": "3. Receives the Architect’s approved **DATA_CONTRACT before Design**, then authors UI_SPEC; the Architect reconciles the assembled package."
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+    "line": 15,
+    "text": "4. **Architect:** DATA_CONTRACT before Design."
+  },
+  {
+    "fc": "FC-027",
+    "path": "03_BUILD_METHODOLOGY/_assets/workflows/FFM_CREATION.svg",
+    "line": 31,
+    "text": "<text x=\"495.0\" y=\"620\" font-family=\"sans-serif\" font-size=\"15\" fill=\"#0f172a\">4. DATA_CONTRACT before Design</text>"
+  }
+]

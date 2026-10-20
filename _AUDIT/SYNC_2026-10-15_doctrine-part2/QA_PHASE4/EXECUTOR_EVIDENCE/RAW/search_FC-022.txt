@@ -1,0 +1,2 @@
+02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md:67: Record the actual server-only Supabase credential variable name used by this project and its approved alias mapping. Reference examples using SUPABASE_SERVICE_ROLE_KEY or SUPABASE_SECRET_KEY are alternative project profiles, not two automatically configured credentials. Confirm each consumer against the same contract; never expose either credential in client bundles or logs.
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:927:   process.env.SUPABASE_SECRET_KEY!,

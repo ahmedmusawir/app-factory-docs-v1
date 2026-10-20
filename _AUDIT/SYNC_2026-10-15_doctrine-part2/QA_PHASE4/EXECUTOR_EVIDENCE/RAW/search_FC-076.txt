@@ -1,0 +1,4 @@
+05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md:792:           <Button asChild><Link href="/auth">Get started</Link></Button>
+05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md:793:           <Button asChild variant="outline">
+05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md:1375: Consume the kit Button, including its verified variants, sizes and asChild composition. Do not replace it with this shortened implementation. An educational internal excerpt must be source-matched and labeled as an excerpt, not installation code. Preserve Link composition through the kit API.
+05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md:1377: Use the installed Shadcn Button as the component, retaining its verified Slot/asChild, ref and native-prop behavior. Do not replace it with the former simplified button implementation. Add a bounded variant only after verifying the installed API. All actionable sizes keep a 44×44px minimum target.

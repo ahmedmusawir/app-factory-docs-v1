@@ -1,0 +1,250 @@
+[
+  {
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "line": 229,
+    "order": "newest-last",
+    "table_start": 224,
+    "table_end": 229,
+    "ok": true
+  },
+  {
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "line": 941,
+    "order": "newest-first",
+    "table_start": 939,
+    "table_end": 945,
+    "ok": true
+  },
+  {
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "line": 661,
+    "order": "newest-first",
+    "table_start": 659,
+    "table_end": 663,
+    "ok": true
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "line": 617,
+    "order": "newest-first",
+    "table_start": 615,
+    "table_end": 620,
+    "ok": true
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md",
+    "line": 174,
+    "order": "newest-first",
+    "table_start": 172,
+    "table_end": 177,
+    "ok": true
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "line": 401,
+    "order": "newest-last",
+    "table_start": 396,
+    "table_end": 401,
+    "ok": true
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "line": 1602,
+    "order": "newest-first",
+    "table_start": 1600,
+    "table_end": 1605,
+    "ok": true
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "line": 373,
+    "order": "newest-first",
+    "table_start": 371,
+    "table_end": 375,
+    "ok": true
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "line": 558,
+    "order": "newest-last",
+    "table_start": 551,
+    "table_end": 558,
+    "ok": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md",
+    "line": 1151,
+    "order": "newest-last",
+    "table_start": 1147,
+    "table_end": 1151,
+    "ok": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "line": 197,
+    "order": "newest-last",
+    "table_start": 192,
+    "table_end": 197,
+    "ok": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+    "line": 740,
+    "order": "newest-last",
+    "table_start": 736,
+    "table_end": 740,
+    "ok": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md",
+    "line": 56,
+    "order": "newest-last",
+    "table_start": 51,
+    "table_end": 56,
+    "ok": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "line": 2521,
+    "order": "newest-last",
+    "table_start": 2516,
+    "table_end": 2521,
+    "ok": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+    "line": 573,
+    "order": "newest-first",
+    "table_start": 571,
+    "table_end": 578,
+    "ok": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+    "line": 435,
+    "order": "newest-first",
+    "table_start": 433,
+    "table_end": 440,
+    "ok": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "line": 1791,
+    "order": "newest-last",
+    "table_start": 1786,
+    "table_end": 1791,
+    "ok": true
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "line": 1655,
+    "order": "newest-last",
+    "table_start": 1650,
+    "table_end": 1655,
+    "ok": true
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "line": 1206,
+    "order": "newest-last",
+    "table_start": 1202,
+    "table_end": 1206,
+    "ok": true
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "line": 1286,
+    "order": "newest-first",
+    "table_start": 1284,
+    "table_end": 1290,
+    "ok": true
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "line": 1373,
+    "order": "newest-last",
+    "table_start": 1366,
+    "table_end": 1373,
+    "ok": true
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "line": 1161,
+    "order": "newest-last",
+    "table_start": 1157,
+    "table_end": 1161,
+    "ok": true
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "line": 563,
+    "order": "newest-last",
+    "table_start": 559,
+    "table_end": 563,
+    "ok": true
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "line": 1110,
+    "order": "newest-last",
+    "table_start": 1105,
+    "table_end": 1110,
+    "ok": true
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "line": 611,
+    "order": "newest-last",
+    "table_start": 607,
+    "table_end": 611,
+    "ok": true
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "line": 788,
+    "order": "newest-first",
+    "table_start": 786,
+    "table_end": 790,
+    "ok": true
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+    "line": 165,
+    "order": "newest-last",
+    "table_start": 161,
+    "table_end": 165,
+    "ok": true
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/THEME_LIBRARY.md",
+    "line": 130,
+    "order": "newest-last",
+    "table_start": 125,
+    "table_end": 130,
+    "ok": true
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+    "line": 295,
+    "order": "newest-last",
+    "table_start": 290,
+    "table_end": 295,
+    "ok": true
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/TOKEN_FILE.md",
+    "line": 236,
+    "order": "newest-last",
+    "table_start": 231,
+    "table_end": 236,
+    "ok": true
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "line": 1855,
+    "order": "newest-first",
+    "table_start": 1853,
+    "table_end": 1860,
+    "ok": true
+  }
+]

@@ -1,0 +1,3 @@
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:79: - 3.6 Skip-and-document as a Factory pattern
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:702: │             (c) skip-and-document (Section 3.6) until architectural fix
+03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md:705: ## 3.6 Skip-and-document as a Factory pattern

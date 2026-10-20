@@ -1,0 +1,911 @@
+[
+  {
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "installed": "c54a379e52318081c9ce89c2a253c65e16d8838079d7d2bcfef90939d42df54b",
+    "bound": "c54a379e52318081c9ce89c2a253c65e16d8838079d7d2bcfef90939d42df54b",
+    "content": "c54a379e52318081c9ce89c2a253c65e16d8838079d7d2bcfef90939d42df54b",
+    "bytes": 14636,
+    "review": "df17ac849c4035a3febcc7042329a43bf9fb2ffbf2cafbc954a01a6d0d7f6911",
+    "approved": "df17ac849c4035a3febcc7042329a43bf9fb2ffbf2cafbc954a01a6d0d7f6911"
+  },
+  {
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "installed": "e9b2b24cbd734b846ccf5215e235474f1aa097bd8be01d7f2d360094a59ee6d9",
+    "bound": "e9b2b24cbd734b846ccf5215e235474f1aa097bd8be01d7f2d360094a59ee6d9",
+    "content": "e9b2b24cbd734b846ccf5215e235474f1aa097bd8be01d7f2d360094a59ee6d9",
+    "bytes": 40805,
+    "review": "542fa8e421c067f6b7a141bdc46a266c2043c9e32fe7cabc43f82dba20b74efd",
+    "approved": "542fa8e421c067f6b7a141bdc46a266c2043c9e32fe7cabc43f82dba20b74efd"
+  },
+  {
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "installed": "e1613573a8d56073033a96ee803968feff1ab5f18e82ab3c329e64dd920c6bb1",
+    "bound": "e1613573a8d56073033a96ee803968feff1ab5f18e82ab3c329e64dd920c6bb1",
+    "content": "e1613573a8d56073033a96ee803968feff1ab5f18e82ab3c329e64dd920c6bb1",
+    "bytes": 34575,
+    "review": "29ce1d9f602696da3ed6241dd70e4a8f603626a962ca4f43de04edfde5a0d0ab",
+    "approved": "29ce1d9f602696da3ed6241dd70e4a8f603626a962ca4f43de04edfde5a0d0ab"
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "installed": "7e2ceb6f882e1eafaa60759b163c541eaafa932fb28e0fcab08345f985c18d45",
+    "bound": "7e2ceb6f882e1eafaa60759b163c541eaafa932fb28e0fcab08345f985c18d45",
+    "content": "7e2ceb6f882e1eafaa60759b163c541eaafa932fb28e0fcab08345f985c18d45",
+    "bytes": 26479,
+    "review": "3ec6bc37f52ad913e06ad43e7b7344477a5804c5b205122ca8b075502d01949c",
+    "approved": "3ec6bc37f52ad913e06ad43e7b7344477a5804c5b205122ca8b075502d01949c"
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md",
+    "installed": "0baaaf1d3b4a32cc2d2b3977608974be7918c4142d2b707d00c66289bd838bcb",
+    "bound": "0baaaf1d3b4a32cc2d2b3977608974be7918c4142d2b707d00c66289bd838bcb",
+    "content": "0baaaf1d3b4a32cc2d2b3977608974be7918c4142d2b707d00c66289bd838bcb",
+    "bytes": 8279,
+    "review": "6242a0a67c43ee22b7d930f53f8b6c36b029ff16e1435108b069b8047b562f15",
+    "approved": "6242a0a67c43ee22b7d930f53f8b6c36b029ff16e1435108b069b8047b562f15"
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "installed": "c5fc80000e293fbfba59a559c81a24fcfcfb42e935b06c438bee561ae6f28d4e",
+    "bound": "c5fc80000e293fbfba59a559c81a24fcfcfb42e935b06c438bee561ae6f28d4e",
+    "content": "c5fc80000e293fbfba59a559c81a24fcfcfb42e935b06c438bee561ae6f28d4e",
+    "bytes": 19768,
+    "review": "f1e692d175c41ca0d0d9718889be3ba778c454a8078adb5f381f36897bdeccd1",
+    "approved": "f1e692d175c41ca0d0d9718889be3ba778c454a8078adb5f381f36897bdeccd1"
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "installed": "5e3072aa90c3065ddf37fae36ec0a983b1296db0f6a90c19de7a317d22346804",
+    "bound": "5e3072aa90c3065ddf37fae36ec0a983b1296db0f6a90c19de7a317d22346804",
+    "content": "5e3072aa90c3065ddf37fae36ec0a983b1296db0f6a90c19de7a317d22346804",
+    "bytes": 50972,
+    "review": "b0f74569d020176a189abc47fa1ea6f27644a81ceb55efc1ccd78e4d5197a5ab",
+    "approved": "b0f74569d020176a189abc47fa1ea6f27644a81ceb55efc1ccd78e4d5197a5ab"
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "installed": "20fa7ca7125510570a3508c0e74b21966e41f717fe65f5070a883e1d97def08f",
+    "bound": "20fa7ca7125510570a3508c0e74b21966e41f717fe65f5070a883e1d97def08f",
+    "content": "20fa7ca7125510570a3508c0e74b21966e41f717fe65f5070a883e1d97def08f",
+    "bytes": 22291,
+    "review": "5ccae41d0b7e309a2a98f2aac49776f61c7623325a9b0f9e1a400612149e639c",
+    "approved": "5ccae41d0b7e309a2a98f2aac49776f61c7623325a9b0f9e1a400612149e639c"
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "installed": "3fab83a09b26afd82038676c15654b758243b107023310dc2f3a5317f0d87b4c",
+    "bound": "3fab83a09b26afd82038676c15654b758243b107023310dc2f3a5317f0d87b4c",
+    "content": "3fab83a09b26afd82038676c15654b758243b107023310dc2f3a5317f0d87b4c",
+    "bytes": 34174,
+    "review": "97cd19e2a2f9b8f34fbfcbff0a6f73c8681fd768cee48db2b316a815c4df81b3",
+    "approved": "97cd19e2a2f9b8f34fbfcbff0a6f73c8681fd768cee48db2b316a815c4df81b3"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md",
+    "installed": "1b7b7438738eaefbf201f8662c323e13b51208e965f565456e17c8f1653343c4",
+    "bound": "1b7b7438738eaefbf201f8662c323e13b51208e965f565456e17c8f1653343c4",
+    "content": "1b7b7438738eaefbf201f8662c323e13b51208e965f565456e17c8f1653343c4",
+    "bytes": 57300,
+    "review": "5e56266b8c9aaec1e1249128e3aff089919ba13dc4d9e93c03201d4a06261756",
+    "approved": "5e56266b8c9aaec1e1249128e3aff089919ba13dc4d9e93c03201d4a06261756"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "installed": "18590bd643bd8e4b5b7c54de2ba1fb680faac217b9bea136e576576207496639",
+    "bound": "18590bd643bd8e4b5b7c54de2ba1fb680faac217b9bea136e576576207496639",
+    "content": "18590bd643bd8e4b5b7c54de2ba1fb680faac217b9bea136e576576207496639",
+    "bytes": 23815,
+    "review": "5dcc7acd84de42b4cabd765c8e3899b315855cac14b2687df2e0e7966be7c4f9",
+    "approved": "5dcc7acd84de42b4cabd765c8e3899b315855cac14b2687df2e0e7966be7c4f9"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+    "installed": "c7ddc8427e9469bae4a0c3476fc4ecad512ef2a45db09eec7ce2c17e84567a5d",
+    "bound": "c7ddc8427e9469bae4a0c3476fc4ecad512ef2a45db09eec7ce2c17e84567a5d",
+    "content": "c7ddc8427e9469bae4a0c3476fc4ecad512ef2a45db09eec7ce2c17e84567a5d",
+    "bytes": 24590,
+    "review": "c1eff9134d09bdc148e7c6a6da6cfbf277d32e77f5b87e94428139e97b37f610",
+    "approved": "c1eff9134d09bdc148e7c6a6da6cfbf277d32e77f5b87e94428139e97b37f610"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+    "installed": "955b3c02dd0012616bc8b7a60f99af2a74c651d5a4db5393570ef49f4ee88e97",
+    "bound": "955b3c02dd0012616bc8b7a60f99af2a74c651d5a4db5393570ef49f4ee88e97",
+    "content": "955b3c02dd0012616bc8b7a60f99af2a74c651d5a4db5393570ef49f4ee88e97",
+    "bytes": 10747,
+    "review": "e6db82b211def718a27ab66d079f324164f240e9286fa9a5131a1991692d2538",
+    "approved": "e6db82b211def718a27ab66d079f324164f240e9286fa9a5131a1991692d2538"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md",
+    "installed": "68876ff845a6ead4977444426ab53cf0862c411469b8489fefc4c2a716a4312a",
+    "bound": "68876ff845a6ead4977444426ab53cf0862c411469b8489fefc4c2a716a4312a",
+    "content": "68876ff845a6ead4977444426ab53cf0862c411469b8489fefc4c2a716a4312a",
+    "bytes": 6702,
+    "review": "0855d943710abf9256b4df588d6dacc09019abbf3f5e7649b790308f427f2473",
+    "approved": "0855d943710abf9256b4df588d6dacc09019abbf3f5e7649b790308f427f2473"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "installed": "37bac1c70b0afcee66e6f298c518f08566a292435617da28291040016ca89312",
+    "bound": "37bac1c70b0afcee66e6f298c518f08566a292435617da28291040016ca89312",
+    "content": "37bac1c70b0afcee66e6f298c518f08566a292435617da28291040016ca89312",
+    "bytes": 115321,
+    "review": "95ab785713237a4ecb874746eb4938e3d4010c47fa9057d88cf6bea885fa67e8",
+    "approved": "95ab785713237a4ecb874746eb4938e3d4010c47fa9057d88cf6bea885fa67e8"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+    "installed": "0e492b78185ecc152bf50e4cc603329d8328efc565aaa92fc0accbc2fb8f16f2",
+    "bound": "0e492b78185ecc152bf50e4cc603329d8328efc565aaa92fc0accbc2fb8f16f2",
+    "content": "0e492b78185ecc152bf50e4cc603329d8328efc565aaa92fc0accbc2fb8f16f2",
+    "bytes": 23946,
+    "review": "be293bcb3c86c8dd71d9eaac64495d4d61c6a0b06b83af8a7b7ea71ddde2b366",
+    "approved": "be293bcb3c86c8dd71d9eaac64495d4d61c6a0b06b83af8a7b7ea71ddde2b366"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+    "installed": "6f423ba687dae1e6de472d3840ccda4226f175ef8398d4e47451934c964af202",
+    "bound": "6f423ba687dae1e6de472d3840ccda4226f175ef8398d4e47451934c964af202",
+    "content": "6f423ba687dae1e6de472d3840ccda4226f175ef8398d4e47451934c964af202",
+    "bytes": 15388,
+    "review": "89ab65e614cca62a7b2cd0036fdae9f75751f9534cd0e5b9e4cc501f071da471",
+    "approved": "89ab65e614cca62a7b2cd0036fdae9f75751f9534cd0e5b9e4cc501f071da471"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+    "installed": "75bc73865f714fe5935762ae445fd1d4d54807efb31d4f0e98e1caa4772e78fb",
+    "bound": "75bc73865f714fe5935762ae445fd1d4d54807efb31d4f0e98e1caa4772e78fb",
+    "content": "75bc73865f714fe5935762ae445fd1d4d54807efb31d4f0e98e1caa4772e78fb",
+    "bytes": 33398,
+    "review": "63e75d1c28deec13fae2fc3d5aedaf2f3375918689dd28e57b149edbc40c6e47",
+    "approved": "63e75d1c28deec13fae2fc3d5aedaf2f3375918689dd28e57b149edbc40c6e47"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "installed": "4c460b040b09782497069b69409381523fbf3bea56897febecb6c51f9458d458",
+    "bound": "4c460b040b09782497069b69409381523fbf3bea56897febecb6c51f9458d458",
+    "content": "4c460b040b09782497069b69409381523fbf3bea56897febecb6c51f9458d458",
+    "bytes": 42559,
+    "review": "5bc581426435d75b2873ca29b57b28c2942981e604fb64eb9f308dc62d20f994",
+    "approved": "5bc581426435d75b2873ca29b57b28c2942981e604fb64eb9f308dc62d20f994"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+    "installed": "e9c7bc1e58286187f58df06d3f0718bf8c299a4eeb4b057427396bc3411ea85f",
+    "bound": "e9c7bc1e58286187f58df06d3f0718bf8c299a4eeb4b057427396bc3411ea85f",
+    "content": "e9c7bc1e58286187f58df06d3f0718bf8c299a4eeb4b057427396bc3411ea85f",
+    "bytes": 20075,
+    "review": "ff675d13641da0640b074147e4274061e8bc2e63cddc5285c0049b37f2f8413c",
+    "approved": "ff675d13641da0640b074147e4274061e8bc2e63cddc5285c0049b37f2f8413c"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "installed": "7ec61c00a6ffa7459734ab173b1e85ff108305f6e2361557c37f1c49e63c7444",
+    "bound": "7ec61c00a6ffa7459734ab173b1e85ff108305f6e2361557c37f1c49e63c7444",
+    "content": "7ec61c00a6ffa7459734ab173b1e85ff108305f6e2361557c37f1c49e63c7444",
+    "bytes": 79874,
+    "review": "ae5ca593c7930dd594b6afcf89f722eeba698af2f4e74f854a6cc8408e7646bf",
+    "approved": "ae5ca593c7930dd594b6afcf89f722eeba698af2f4e74f854a6cc8408e7646bf"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_assets/workflows/BIM_WORKFLOW.svg",
+    "installed": "7cba33aa1a396e4467a09eb80ef912b6e06d2dc06f839c569ffcdf5f87b67ec9",
+    "bound": "7cba33aa1a396e4467a09eb80ef912b6e06d2dc06f839c569ffcdf5f87b67ec9",
+    "content": "7cba33aa1a396e4467a09eb80ef912b6e06d2dc06f839c569ffcdf5f87b67ec9",
+    "bytes": 16598,
+    "review": "7cba33aa1a396e4467a09eb80ef912b6e06d2dc06f839c569ffcdf5f87b67ec9",
+    "approved": "7cba33aa1a396e4467a09eb80ef912b6e06d2dc06f839c569ffcdf5f87b67ec9"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_assets/workflows/FFM_CREATION.svg",
+    "installed": "0d7640fc0460f98aaf6a0b0d1acc8bc7866fc94e0ed61099d9d0e59931d3a1f0",
+    "bound": "0d7640fc0460f98aaf6a0b0d1acc8bc7866fc94e0ed61099d9d0e59931d3a1f0",
+    "content": "0d7640fc0460f98aaf6a0b0d1acc8bc7866fc94e0ed61099d9d0e59931d3a1f0",
+    "bytes": 5336,
+    "review": "0d7640fc0460f98aaf6a0b0d1acc8bc7866fc94e0ed61099d9d0e59931d3a1f0",
+    "approved": "0d7640fc0460f98aaf6a0b0d1acc8bc7866fc94e0ed61099d9d0e59931d3a1f0"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_assets/workflows/FFM_DEPLOYMENT.svg",
+    "installed": "ce17e51c9e72e24cd4fd961f9812d13242914f9e03fcb238a749b49361cb028e",
+    "bound": "ce17e51c9e72e24cd4fd961f9812d13242914f9e03fcb238a749b49361cb028e",
+    "content": "ce17e51c9e72e24cd4fd961f9812d13242914f9e03fcb238a749b49361cb028e",
+    "bytes": 6459,
+    "review": "ce17e51c9e72e24cd4fd961f9812d13242914f9e03fcb238a749b49361cb028e",
+    "approved": "ce17e51c9e72e24cd4fd961f9812d13242914f9e03fcb238a749b49361cb028e"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_assets/workflows/FFM_EXECUTION.svg",
+    "installed": "d0ac268ef03f2ab6f4cb80970b2be3d242442af8eeaa3f3518526354df2a915c",
+    "bound": "d0ac268ef03f2ab6f4cb80970b2be3d242442af8eeaa3f3518526354df2a915c",
+    "content": "d0ac268ef03f2ab6f4cb80970b2be3d242442af8eeaa3f3518526354df2a915c",
+    "bytes": 10588,
+    "review": "d0ac268ef03f2ab6f4cb80970b2be3d242442af8eeaa3f3518526354df2a915c",
+    "approved": "d0ac268ef03f2ab6f4cb80970b2be3d242442af8eeaa3f3518526354df2a915c"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/AC_EVIDENCE_MATRIX.md",
+    "installed": "bf9685c13d650a109ea0f40d44ed0f813fea31e7fdcb67e0aa8b518ee194cb3a",
+    "bound": "bf9685c13d650a109ea0f40d44ed0f813fea31e7fdcb67e0aa8b518ee194cb3a",
+    "content": "bf9685c13d650a109ea0f40d44ed0f813fea31e7fdcb67e0aa8b518ee194cb3a",
+    "bytes": 1934,
+    "review": "bf9685c13d650a109ea0f40d44ed0f813fea31e7fdcb67e0aa8b518ee194cb3a",
+    "approved": "bf9685c13d650a109ea0f40d44ed0f813fea31e7fdcb67e0aa8b518ee194cb3a"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/AGENTS.md",
+    "installed": "b3415998cf417ea79551d8b4d31b92ff83df1becaf644ad1be499ce9ff0ef03f",
+    "bound": "b3415998cf417ea79551d8b4d31b92ff83df1becaf644ad1be499ce9ff0ef03f",
+    "content": "b3415998cf417ea79551d8b4d31b92ff83df1becaf644ad1be499ce9ff0ef03f",
+    "bytes": 1348,
+    "review": "b3415998cf417ea79551d8b4d31b92ff83df1becaf644ad1be499ce9ff0ef03f",
+    "approved": "b3415998cf417ea79551d8b4d31b92ff83df1becaf644ad1be499ce9ff0ef03f"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/AUTOMATION/README.md",
+    "installed": "c9a4f3a0a8d45077cc5cfbee8a93590cd4c9b08c33e8c6757419d537610bbfcb",
+    "bound": "c9a4f3a0a8d45077cc5cfbee8a93590cd4c9b08c33e8c6757419d537610bbfcb",
+    "content": "c9a4f3a0a8d45077cc5cfbee8a93590cd4c9b08c33e8c6757419d537610bbfcb",
+    "bytes": 1956,
+    "review": "c9a4f3a0a8d45077cc5cfbee8a93590cd4c9b08c33e8c6757419d537610bbfcb",
+    "approved": "c9a4f3a0a8d45077cc5cfbee8a93590cd4c9b08c33e8c6757419d537610bbfcb"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/CLAUDE.md",
+    "installed": "79a674620466b01d0a5f2b82f85658177e05f91d689072f1f5a1d1f101e43d2a",
+    "bound": "79a674620466b01d0a5f2b82f85658177e05f91d689072f1f5a1d1f101e43d2a",
+    "content": "79a674620466b01d0a5f2b82f85658177e05f91d689072f1f5a1d1f101e43d2a",
+    "bytes": 1321,
+    "review": "79a674620466b01d0a5f2b82f85658177e05f91d689072f1f5a1d1f101e43d2a",
+    "approved": "79a674620466b01d0a5f2b82f85658177e05f91d689072f1f5a1d1f101e43d2a"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/FINDINGS.md",
+    "installed": "e0b10749d2b05183253af6a486b01f92146c58ca3a8c618a73beec584ba46f75",
+    "bound": "e0b10749d2b05183253af6a486b01f92146c58ca3a8c618a73beec584ba46f75",
+    "content": "e0b10749d2b05183253af6a486b01f92146c58ca3a8c618a73beec584ba46f75",
+    "bytes": 4342,
+    "review": "e0b10749d2b05183253af6a486b01f92146c58ca3a8c618a73beec584ba46f75",
+    "approved": "e0b10749d2b05183253af6a486b01f92146c58ca3a8c618a73beec584ba46f75"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/GOVERNING/README.md",
+    "installed": "b9fc64518dda952a7d4a834a2b4cc9fe3ad82148ade00f4381085968e2dd11f6",
+    "bound": "b9fc64518dda952a7d4a834a2b4cc9fe3ad82148ade00f4381085968e2dd11f6",
+    "content": "b9fc64518dda952a7d4a834a2b4cc9fe3ad82148ade00f4381085968e2dd11f6",
+    "bytes": 2367,
+    "review": "b9fc64518dda952a7d4a834a2b4cc9fe3ad82148ade00f4381085968e2dd11f6",
+    "approved": "b9fc64518dda952a7d4a834a2b4cc9fe3ad82148ade00f4381085968e2dd11f6"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/ENGINEERING_HANDOFF.md",
+    "installed": "5bd7766647aad374634061ca31caa3e2f2facef1b5a516f8f8a18d2720f00677",
+    "bound": "5bd7766647aad374634061ca31caa3e2f2facef1b5a516f8f8a18d2720f00677",
+    "content": "5bd7766647aad374634061ca31caa3e2f2facef1b5a516f8f8a18d2720f00677",
+    "bytes": 2613,
+    "review": "5bd7766647aad374634061ca31caa3e2f2facef1b5a516f8f8a18d2720f00677",
+    "approved": "5bd7766647aad374634061ca31caa3e2f2facef1b5a516f8f8a18d2720f00677"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/FILE_INDEX.template.json",
+    "installed": "2620fd114b8d58a7f022631e3dba1d2d8caa2c1b457d596dde15e190460305b8",
+    "bound": "2620fd114b8d58a7f022631e3dba1d2d8caa2c1b457d596dde15e190460305b8",
+    "content": "2620fd114b8d58a7f022631e3dba1d2d8caa2c1b457d596dde15e190460305b8",
+    "bytes": 2199,
+    "review": "2620fd114b8d58a7f022631e3dba1d2d8caa2c1b457d596dde15e190460305b8",
+    "approved": "2620fd114b8d58a7f022631e3dba1d2d8caa2c1b457d596dde15e190460305b8"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/README.md",
+    "installed": "4d0eb7a53bba7d94a032353b9fc0316538058475fb2fc40b6d545a6982b9b0aa",
+    "bound": "4d0eb7a53bba7d94a032353b9fc0316538058475fb2fc40b6d545a6982b9b0aa",
+    "content": "4d0eb7a53bba7d94a032353b9fc0316538058475fb2fc40b6d545a6982b9b0aa",
+    "bytes": 1404,
+    "review": "4d0eb7a53bba7d94a032353b9fc0316538058475fb2fc40b6d545a6982b9b0aa",
+    "approved": "4d0eb7a53bba7d94a032353b9fc0316538058475fb2fc40b6d545a6982b9b0aa"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/REVIEW_START_HERE.md",
+    "installed": "0ffc1c60f9f4de3bdf10a30af6ecb9b95d036190c79056db1cbd3145a732cac1",
+    "bound": "0ffc1c60f9f4de3bdf10a30af6ecb9b95d036190c79056db1cbd3145a732cac1",
+    "content": "0ffc1c60f9f4de3bdf10a30af6ecb9b95d036190c79056db1cbd3145a732cac1",
+    "bytes": 2316,
+    "review": "0ffc1c60f9f4de3bdf10a30af6ecb9b95d036190c79056db1cbd3145a732cac1",
+    "approved": "0ffc1c60f9f4de3bdf10a30af6ecb9b95d036190c79056db1cbd3145a732cac1"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/PARENT_ENTRY_ROUTING.md",
+    "installed": "d557319761782cf617ae828a4df81243a9908aa7c033b563d814d2d2fccf3ebe",
+    "bound": "d557319761782cf617ae828a4df81243a9908aa7c033b563d814d2d2fccf3ebe",
+    "content": "d557319761782cf617ae828a4df81243a9908aa7c033b563d814d2d2fccf3ebe",
+    "bytes": 2837,
+    "review": "d557319761782cf617ae828a4df81243a9908aa7c033b563d814d2d2fccf3ebe",
+    "approved": "d557319761782cf617ae828a4df81243a9908aa7c033b563d814d2d2fccf3ebe"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_APPROVAL.md",
+    "installed": "de505b50c3ed901d77bfc0373ff329901447f2044bc2c3524a0164841628674d",
+    "bound": "de505b50c3ed901d77bfc0373ff329901447f2044bc2c3524a0164841628674d",
+    "content": "de505b50c3ed901d77bfc0373ff329901447f2044bc2c3524a0164841628674d",
+    "bytes": 3791,
+    "review": "de505b50c3ed901d77bfc0373ff329901447f2044bc2c3524a0164841628674d",
+    "approved": "de505b50c3ed901d77bfc0373ff329901447f2044bc2c3524a0164841628674d"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_CERTIFICATION.md",
+    "installed": "7781cf756893b883d58f75c8242e257130fb909625246e9a7b3500c9e83465c6",
+    "bound": "7781cf756893b883d58f75c8242e257130fb909625246e9a7b3500c9e83465c6",
+    "content": "7781cf756893b883d58f75c8242e257130fb909625246e9a7b3500c9e83465c6",
+    "bytes": 4009,
+    "review": "7781cf756893b883d58f75c8242e257130fb909625246e9a7b3500c9e83465c6",
+    "approved": "7781cf756893b883d58f75c8242e257130fb909625246e9a7b3500c9e83465c6"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_CLEANUP_REPORT.md",
+    "installed": "2e5ac571423d245f48563090662679df82d78fcbc415be90ee71f3a33fc1b830",
+    "bound": "2e5ac571423d245f48563090662679df82d78fcbc415be90ee71f3a33fc1b830",
+    "content": "2e5ac571423d245f48563090662679df82d78fcbc415be90ee71f3a33fc1b830",
+    "bytes": 4414,
+    "review": "2e5ac571423d245f48563090662679df82d78fcbc415be90ee71f3a33fc1b830",
+    "approved": "2e5ac571423d245f48563090662679df82d78fcbc415be90ee71f3a33fc1b830"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_ENTRY.md",
+    "installed": "a6b9c6f160d9811bf9d273bb03ea32f63256019b4add8cbdc23f032261fababe",
+    "bound": "a6b9c6f160d9811bf9d273bb03ea32f63256019b4add8cbdc23f032261fababe",
+    "content": "a6b9c6f160d9811bf9d273bb03ea32f63256019b4add8cbdc23f032261fababe",
+    "bytes": 12222,
+    "review": "a6b9c6f160d9811bf9d273bb03ea32f63256019b4add8cbdc23f032261fababe",
+    "approved": "a6b9c6f160d9811bf9d273bb03ea32f63256019b4add8cbdc23f032261fababe"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_EXECUTION_REPORT.md",
+    "installed": "24ef00dd53190179498b07e8326e3c87216c9a4e5d70da2aa163f76bb7df076b",
+    "bound": "24ef00dd53190179498b07e8326e3c87216c9a4e5d70da2aa163f76bb7df076b",
+    "content": "24ef00dd53190179498b07e8326e3c87216c9a4e5d70da2aa163f76bb7df076b",
+    "bytes": 4104,
+    "review": "24ef00dd53190179498b07e8326e3c87216c9a4e5d70da2aa163f76bb7df076b",
+    "approved": "24ef00dd53190179498b07e8326e3c87216c9a4e5d70da2aa163f76bb7df076b"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_MANIFEST.md",
+    "installed": "9d68426ef53d852b46285ab8f15a5f978811e4fb606e239ccaab97ba21ce6b43",
+    "bound": "9d68426ef53d852b46285ab8f15a5f978811e4fb606e239ccaab97ba21ce6b43",
+    "content": "9d68426ef53d852b46285ab8f15a5f978811e4fb606e239ccaab97ba21ce6b43",
+    "bytes": 5331,
+    "review": "9d68426ef53d852b46285ab8f15a5f978811e4fb606e239ccaab97ba21ce6b43",
+    "approved": "9d68426ef53d852b46285ab8f15a5f978811e4fb606e239ccaab97ba21ce6b43"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_PACKAGING.md",
+    "installed": "be3508938dcc3ea0e2833c5a7f97d7915e2e409204adde9ff69c4941ddd43755",
+    "bound": "be3508938dcc3ea0e2833c5a7f97d7915e2e409204adde9ff69c4941ddd43755",
+    "content": "be3508938dcc3ea0e2833c5a7f97d7915e2e409204adde9ff69c4941ddd43755",
+    "bytes": 5351,
+    "review": "be3508938dcc3ea0e2833c5a7f97d7915e2e409204adde9ff69c4941ddd43755",
+    "approved": "be3508938dcc3ea0e2833c5a7f97d7915e2e409204adde9ff69c4941ddd43755"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_PREFLIGHT.md",
+    "installed": "073a4381f08d0280d83a991e72d3ffd82926fee8c76e2b1fbffe1b0690f6a1b7",
+    "bound": "073a4381f08d0280d83a991e72d3ffd82926fee8c76e2b1fbffe1b0690f6a1b7",
+    "content": "073a4381f08d0280d83a991e72d3ffd82926fee8c76e2b1fbffe1b0690f6a1b7",
+    "bytes": 7259,
+    "review": "073a4381f08d0280d83a991e72d3ffd82926fee8c76e2b1fbffe1b0690f6a1b7",
+    "approved": "073a4381f08d0280d83a991e72d3ffd82926fee8c76e2b1fbffe1b0690f6a1b7"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_RECON_REPORT.md",
+    "installed": "42b313b6a0e811293319f9ae390674e88a957ee87d619554d53323358c167c67",
+    "bound": "42b313b6a0e811293319f9ae390674e88a957ee87d619554d53323358c167c67",
+    "content": "42b313b6a0e811293319f9ae390674e88a957ee87d619554d53323358c167c67",
+    "bytes": 3880,
+    "review": "42b313b6a0e811293319f9ae390674e88a957ee87d619554d53323358c167c67",
+    "approved": "42b313b6a0e811293319f9ae390674e88a957ee87d619554d53323358c167c67"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_RISK_REQUIREMENTS.md",
+    "installed": "cc910d528ee2ef9398f06f0259896669544e9ad02ee4623d620b98667e1131f0",
+    "bound": "cc910d528ee2ef9398f06f0259896669544e9ad02ee4623d620b98667e1131f0",
+    "content": "cc910d528ee2ef9398f06f0259896669544e9ad02ee4623d620b98667e1131f0",
+    "bytes": 6693,
+    "review": "cc910d528ee2ef9398f06f0259896669544e9ad02ee4623d620b98667e1131f0",
+    "approved": "cc910d528ee2ef9398f06f0259896669544e9ad02ee4623d620b98667e1131f0"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_STATE.md",
+    "installed": "afc4af6ad54123506bd0b6861ba7a71c9d5dad15e51db1f5bb3704d26a75f62f",
+    "bound": "afc4af6ad54123506bd0b6861ba7a71c9d5dad15e51db1f5bb3704d26a75f62f",
+    "content": "afc4af6ad54123506bd0b6861ba7a71c9d5dad15e51db1f5bb3704d26a75f62f",
+    "bytes": 6676,
+    "review": "afc4af6ad54123506bd0b6861ba7a71c9d5dad15e51db1f5bb3704d26a75f62f",
+    "approved": "afc4af6ad54123506bd0b6861ba7a71c9d5dad15e51db1f5bb3704d26a75f62f"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_TEST_PLAN.md",
+    "installed": "8d3d245926946e99a8cd2cdecc8dda79f47a436c5b3f35ba7ba48886bc23e0e9",
+    "bound": "8d3d245926946e99a8cd2cdecc8dda79f47a436c5b3f35ba7ba48886bc23e0e9",
+    "content": "8d3d245926946e99a8cd2cdecc8dda79f47a436c5b3f35ba7ba48886bc23e0e9",
+    "bytes": 4527,
+    "review": "8d3d245926946e99a8cd2cdecc8dda79f47a436c5b3f35ba7ba48886bc23e0e9",
+    "approved": "8d3d245926946e99a8cd2cdecc8dda79f47a436c5b3f35ba7ba48886bc23e0e9"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/README.md",
+    "installed": "b7462fc84fb6557d08010623a465588b27ee62edbffa2702ea71f2ba4d5a3d91",
+    "bound": "b7462fc84fb6557d08010623a465588b27ee62edbffa2702ea71f2ba4d5a3d91",
+    "content": "b7462fc84fb6557d08010623a465588b27ee62edbffa2702ea71f2ba4d5a3d91",
+    "bytes": 12860,
+    "review": "b7462fc84fb6557d08010623a465588b27ee62edbffa2702ea71f2ba4d5a3d91",
+    "approved": "b7462fc84fb6557d08010623a465588b27ee62edbffa2702ea71f2ba4d5a3d91"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/evidence/README.md",
+    "installed": "3c033254f64258d116bbbe069d585fa4df653c5ac84b68e03998bdbc675e9aab",
+    "bound": "3c033254f64258d116bbbe069d585fa4df653c5ac84b68e03998bdbc675e9aab",
+    "content": "3c033254f64258d116bbbe069d585fa4df653c5ac84b68e03998bdbc675e9aab",
+    "bytes": 2698,
+    "review": "3c033254f64258d116bbbe069d585fa4df653c5ac84b68e03998bdbc675e9aab",
+    "approved": "3c033254f64258d116bbbe069d585fa4df653c5ac84b68e03998bdbc675e9aab"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+    "installed": "3d2b8b1fd9289b02e87b15d26dc5bb61dcb6efd19a6bec621faeddc3ca85d89b",
+    "bound": "3d2b8b1fd9289b02e87b15d26dc5bb61dcb6efd19a6bec621faeddc3ca85d89b",
+    "content": "3d2b8b1fd9289b02e87b15d26dc5bb61dcb6efd19a6bec621faeddc3ca85d89b",
+    "bytes": 3842,
+    "review": "c45111675dd43a7bb889c0f8561ba5059a5ea0d542c99b5964938cc7e767cc48",
+    "approved": "c45111675dd43a7bb889c0f8561ba5059a5ea0d542c99b5964938cc7e767cc48"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+    "installed": "aa968075698fb4cd791c5b02cc026dd41470089f2a44c4e4270ec4584cfd061a",
+    "bound": "aa968075698fb4cd791c5b02cc026dd41470089f2a44c4e4270ec4584cfd061a",
+    "content": "aa968075698fb4cd791c5b02cc026dd41470089f2a44c4e4270ec4584cfd061a",
+    "bytes": 2714,
+    "review": "fcfa76eaa6d67cd2cc1c26934e90a097933c79911c0c283f52816b2a7f76f821",
+    "approved": "fcfa76eaa6d67cd2cc1c26934e90a097933c79911c0c283f52816b2a7f76f821"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+    "installed": "2b61c38203909ffb95449d779a4c13f91d4f134aac6e397a17ad4fbdd247068b",
+    "bound": "2b61c38203909ffb95449d779a4c13f91d4f134aac6e397a17ad4fbdd247068b",
+    "content": "2b61c38203909ffb95449d779a4c13f91d4f134aac6e397a17ad4fbdd247068b",
+    "bytes": 2900,
+    "review": "2f8c1653292da84f839c6b4d327ecbe1675ea24bf6c2c85fdc7f839b38bf7ce5",
+    "approved": "2f8c1653292da84f839c6b4d327ecbe1675ea24bf6c2c85fdc7f839b38bf7ce5"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+    "installed": "8f585a4a866355683904924c1a4f2ad406ffb42d95e5e5c139baaf85d9aada96",
+    "bound": "8f585a4a866355683904924c1a4f2ad406ffb42d95e5e5c139baaf85d9aada96",
+    "content": "8f585a4a866355683904924c1a4f2ad406ffb42d95e5e5c139baaf85d9aada96",
+    "bytes": 3402,
+    "review": "8c78501bc00af1ce510c4099769dfd23009fcf478b47f5f35b8337407a6e50ef",
+    "approved": "8c78501bc00af1ce510c4099769dfd23009fcf478b47f5f35b8337407a6e50ef"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "installed": "bfa9003069edb3a26ae47907228903b380ee2afad4b0bf5eff8ff142dceaaccc",
+    "bound": "bfa9003069edb3a26ae47907228903b380ee2afad4b0bf5eff8ff142dceaaccc",
+    "content": "bfa9003069edb3a26ae47907228903b380ee2afad4b0bf5eff8ff142dceaaccc",
+    "bytes": 57451,
+    "review": "41105eb4857a3a04a35bf3b0615fe9d93f5c7a5b048fa3f5d4d14513ba177a32",
+    "approved": "41105eb4857a3a04a35bf3b0615fe9d93f5c7a5b048fa3f5d4d14513ba177a32"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "installed": "d4e843586b86495d6702810d523996a5dac686edd3ae9974c57a17bb2d5fc84d",
+    "bound": "d4e843586b86495d6702810d523996a5dac686edd3ae9974c57a17bb2d5fc84d",
+    "content": "d4e843586b86495d6702810d523996a5dac686edd3ae9974c57a17bb2d5fc84d",
+    "bytes": 44554,
+    "review": "3c6e4c4702a887e929877a60dca065af57a8fcd23e100f8176019ac898d2c163",
+    "approved": "3c6e4c4702a887e929877a60dca065af57a8fcd23e100f8176019ac898d2c163"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "installed": "d6b37e3da0b9d383e8b51e6d809319b059deaf56ff30ca2bb51be78643a07fe7",
+    "bound": "d6b37e3da0b9d383e8b51e6d809319b059deaf56ff30ca2bb51be78643a07fe7",
+    "content": "d6b37e3da0b9d383e8b51e6d809319b059deaf56ff30ca2bb51be78643a07fe7",
+    "bytes": 54476,
+    "review": "e119d65970ab57a33954e2bcc4f4ffefabb31b357892318374b69db6af4ea60f",
+    "approved": "e119d65970ab57a33954e2bcc4f4ffefabb31b357892318374b69db6af4ea60f"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "installed": "5708380d84d626972f171b0aef060c85751bc19f22afe997b4796276aeafb3e6",
+    "bound": "5708380d84d626972f171b0aef060c85751bc19f22afe997b4796276aeafb3e6",
+    "content": "5708380d84d626972f171b0aef060c85751bc19f22afe997b4796276aeafb3e6",
+    "bytes": 33878,
+    "review": "f774bb0298ef39e3db2505b2cb9686e9d5046f359560b00bfe55ac52f7aa3dd8",
+    "approved": "f774bb0298ef39e3db2505b2cb9686e9d5046f359560b00bfe55ac52f7aa3dd8"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "installed": "da5a5b94b6f71e4e8e95f542fccd6b60e0fc4f2196e62ee2a18f1c805256494b",
+    "bound": "da5a5b94b6f71e4e8e95f542fccd6b60e0fc4f2196e62ee2a18f1c805256494b",
+    "content": "da5a5b94b6f71e4e8e95f542fccd6b60e0fc4f2196e62ee2a18f1c805256494b",
+    "bytes": 29782,
+    "review": "4e0782fe935c50f971daf4f4dc347c5b4757c96648d8db4d04c0be86953b36eb",
+    "approved": "4e0782fe935c50f971daf4f4dc347c5b4757c96648d8db4d04c0be86953b36eb"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "installed": "0f0fe3992a98a9eff3c7378b41b20b7207545330b30879b246139e2a5475a942",
+    "bound": "0f0fe3992a98a9eff3c7378b41b20b7207545330b30879b246139e2a5475a942",
+    "content": "0f0fe3992a98a9eff3c7378b41b20b7207545330b30879b246139e2a5475a942",
+    "bytes": 37618,
+    "review": "3f8071658df4331f920538cc2bdc1130a2534dc6764bca21236a0e563bcb5a71",
+    "approved": "3f8071658df4331f920538cc2bdc1130a2534dc6764bca21236a0e563bcb5a71"
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "installed": "01633da70da2d4cb863a2c883c1c2e7194abd602cf422fbb1bb52ae2b2ac43ab",
+    "bound": "01633da70da2d4cb863a2c883c1c2e7194abd602cf422fbb1bb52ae2b2ac43ab",
+    "content": "01633da70da2d4cb863a2c883c1c2e7194abd602cf422fbb1bb52ae2b2ac43ab",
+    "bytes": 32905,
+    "review": "b501058c57dba78f130a6a9dbe16957d1b76bd4aa282f88c68a2a6c2a188cc3a",
+    "approved": "b501058c57dba78f130a6a9dbe16957d1b76bd4aa282f88c68a2a6c2a188cc3a"
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "installed": "b5688cb6f8a6b0aae9dbe3db24aa8457571e2f0d6099801ccc9e3f11f49c59c9",
+    "bound": "b5688cb6f8a6b0aae9dbe3db24aa8457571e2f0d6099801ccc9e3f11f49c59c9",
+    "content": "b5688cb6f8a6b0aae9dbe3db24aa8457571e2f0d6099801ccc9e3f11f49c59c9",
+    "bytes": 24087,
+    "review": "e1afba393fd6ba1314ab9fea2fb3bb10135e422cf0909400d952c9206da705f3",
+    "approved": "e1afba393fd6ba1314ab9fea2fb3bb10135e422cf0909400d952c9206da705f3"
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+    "installed": "2b5da310aa196164cb0d07654d6df73c15f3ac23c67c416da3036ea148f1d491",
+    "bound": "2b5da310aa196164cb0d07654d6df73c15f3ac23c67c416da3036ea148f1d491",
+    "content": "2b5da310aa196164cb0d07654d6df73c15f3ac23c67c416da3036ea148f1d491",
+    "bytes": 12655,
+    "review": "b46501c6eeca8a4fbe0244cbeb207f73ec382b44ec2a3a8c7a856561ca5072c3",
+    "approved": "b46501c6eeca8a4fbe0244cbeb207f73ec382b44ec2a3a8c7a856561ca5072c3"
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/THEME_LIBRARY.md",
+    "installed": "4063fe5f3dacfb7df9bf433b7073e2a5b608ced12a7944eabecc9087bcf261ce",
+    "bound": "4063fe5f3dacfb7df9bf433b7073e2a5b608ced12a7944eabecc9087bcf261ce",
+    "content": "4063fe5f3dacfb7df9bf433b7073e2a5b608ced12a7944eabecc9087bcf261ce",
+    "bytes": 8856,
+    "review": "0d01b93c12d5f45d65eee0fad7ed00985996703160ca5710c287935ce49d9926",
+    "approved": "0d01b93c12d5f45d65eee0fad7ed00985996703160ca5710c287935ce49d9926"
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+    "installed": "8d36ff89202b0a1d692252c7d46c8da709cf317438d007b2564340bf47fe62ab",
+    "bound": "8d36ff89202b0a1d692252c7d46c8da709cf317438d007b2564340bf47fe62ab",
+    "content": "8d36ff89202b0a1d692252c7d46c8da709cf317438d007b2564340bf47fe62ab",
+    "bytes": 17610,
+    "review": "dd52a6ac007383cf22e57c34fee1489ca94311f65945e87af339247dc4a44e42",
+    "approved": "dd52a6ac007383cf22e57c34fee1489ca94311f65945e87af339247dc4a44e42"
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/TOKEN_FILE.md",
+    "installed": "2fc5eff41dd6320550c21bfda7cc6e33f7b5be7339fe9e5a280b67dc0475922a",
+    "bound": "2fc5eff41dd6320550c21bfda7cc6e33f7b5be7339fe9e5a280b67dc0475922a",
+    "content": "2fc5eff41dd6320550c21bfda7cc6e33f7b5be7339fe9e5a280b67dc0475922a",
+    "bytes": 12509,
+    "review": "b784dac7dc9e55b2d417a785211b4d18ae4b945ca63c62536096c55ad554ea9f",
+    "approved": "b784dac7dc9e55b2d417a785211b4d18ae4b945ca63c62536096c55ad554ea9f"
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "installed": "2b7f9f8d5b89a43bb63edbb54950bf6dcbee7e67549d6019b1dada5c51d493b4",
+    "bound": "2b7f9f8d5b89a43bb63edbb54950bf6dcbee7e67549d6019b1dada5c51d493b4",
+    "content": "2b7f9f8d5b89a43bb63edbb54950bf6dcbee7e67549d6019b1dada5c51d493b4",
+    "bytes": 59335,
+    "review": "9715e12e3fd4307b574decefa2f916338fcf9f6f8768972f91ed410247ed08ff",
+    "approved": "9715e12e3fd4307b574decefa2f916338fcf9f6f8768972f91ed410247ed08ff"
+  },
+  {
+    "path": "CHANGELOG.md",
+    "installed": "efc01203761b8a07f79ceb7e6e6a6b0cbcd4237fbe3ed04f9f30ac8669a18d20",
+    "bound": "efc01203761b8a07f79ceb7e6e6a6b0cbcd4237fbe3ed04f9f30ac8669a18d20",
+    "content": "efc01203761b8a07f79ceb7e6e6a6b0cbcd4237fbe3ed04f9f30ac8669a18d20",
+    "bytes": 13465,
+    "review": "f446f4955d5101e29bd85961f6586c0d4476e86443960f7ab65a9ef1026a06c3",
+    "approved": "f446f4955d5101e29bd85961f6586c0d4476e86443960f7ab65a9ef1026a06c3"
+  },
+  {
+    "path": "MANIFEST.md",
+    "installed": "13759dcc55df8747a86ddaa053f89d24c4e280474cde91d9e44bca3211e1b942",
+    "bound": "13759dcc55df8747a86ddaa053f89d24c4e280474cde91d9e44bca3211e1b942",
+    "content": "13759dcc55df8747a86ddaa053f89d24c4e280474cde91d9e44bca3211e1b942",
+    "bytes": 18546,
+    "review": "e00f72c708fda328742222f570e1d2d6c93e683ecc511891f4f4d4c281532caa",
+    "approved": "e00f72c708fda328742222f570e1d2d6c93e683ecc511891f4f4d4c281532caa"
+  },
+  {
+    "path": "_ARCHIVE/API_AND_SERVICES_MANUAL_v1_1.md",
+    "installed": "64794a5d33dbd7fdd473975d5ff7c02f49fe433c8f63c780b059d77ead55a4b3",
+    "bound": "64794a5d33dbd7fdd473975d5ff7c02f49fe433c8f63c780b059d77ead55a4b3",
+    "content": "64794a5d33dbd7fdd473975d5ff7c02f49fe433c8f63c780b059d77ead55a4b3",
+    "bytes": 57422,
+    "review": "64794a5d33dbd7fdd473975d5ff7c02f49fe433c8f63c780b059d77ead55a4b3",
+    "approved": "64794a5d33dbd7fdd473975d5ff7c02f49fe433c8f63c780b059d77ead55a4b3"
+  },
+  {
+    "path": "_ARCHIVE/APP_ARCHITECTURE_MANUAL_v1_3.md",
+    "installed": "ca1dc1f0a8ce578523a46a3262f2f1d09a63cb6e8f2517157d940c0febfb3134",
+    "bound": "ca1dc1f0a8ce578523a46a3262f2f1d09a63cb6e8f2517157d940c0febfb3134",
+    "content": "ca1dc1f0a8ce578523a46a3262f2f1d09a63cb6e8f2517157d940c0febfb3134",
+    "bytes": 43476,
+    "review": "ca1dc1f0a8ce578523a46a3262f2f1d09a63cb6e8f2517157d940c0febfb3134",
+    "approved": "ca1dc1f0a8ce578523a46a3262f2f1d09a63cb6e8f2517157d940c0febfb3134"
+  },
+  {
+    "path": "_ARCHIVE/APP_FACTORY_BLUEPRINT_v2_1.md",
+    "installed": "9b732116c6030aee4d6ae0b792272bc372dd647ef95dea522c2bf7949934af93",
+    "bound": "9b732116c6030aee4d6ae0b792272bc372dd647ef95dea522c2bf7949934af93",
+    "content": "9b732116c6030aee4d6ae0b792272bc372dd647ef95dea522c2bf7949934af93",
+    "bytes": 14704,
+    "review": "9b732116c6030aee4d6ae0b792272bc372dd647ef95dea522c2bf7949934af93",
+    "approved": "9b732116c6030aee4d6ae0b792272bc372dd647ef95dea522c2bf7949934af93"
+  },
+  {
+    "path": "_ARCHIVE/APP_FACTORY_SKILLS_PLAYBOOK_v1_1.md",
+    "installed": "d93f3d5d81d5add6638fee9c71eecc370fd86f07ad1ac47f7021d6415a446113",
+    "bound": "d93f3d5d81d5add6638fee9c71eecc370fd86f07ad1ac47f7021d6415a446113",
+    "content": "d93f3d5d81d5add6638fee9c71eecc370fd86f07ad1ac47f7021d6415a446113",
+    "bytes": 56666,
+    "review": "d93f3d5d81d5add6638fee9c71eecc370fd86f07ad1ac47f7021d6415a446113",
+    "approved": "d93f3d5d81d5add6638fee9c71eecc370fd86f07ad1ac47f7021d6415a446113"
+  },
+  {
+    "path": "_ARCHIVE/ARCHITECT_PLAYBOOK_v2_2.md",
+    "installed": "b0754979e3b24cb79234265fe146f39f03718e608a60153a702a518f34979af4",
+    "bound": "b0754979e3b24cb79234265fe146f39f03718e608a60153a702a518f34979af4",
+    "content": "b0754979e3b24cb79234265fe146f39f03718e608a60153a702a518f34979af4",
+    "bytes": 25105,
+    "review": "b0754979e3b24cb79234265fe146f39f03718e608a60153a702a518f34979af4",
+    "approved": "b0754979e3b24cb79234265fe146f39f03718e608a60153a702a518f34979af4"
+  },
+  {
+    "path": "_ARCHIVE/ARCHITECT_QUESTIONNAIRE_v2_2.md",
+    "installed": "aa487360f420c1a2e0a48b097eaa2ebc905ebb659bcdc67ae72ce8d6a80f2bfd",
+    "bound": "aa487360f420c1a2e0a48b097eaa2ebc905ebb659bcdc67ae72ce8d6a80f2bfd",
+    "content": "aa487360f420c1a2e0a48b097eaa2ebc905ebb659bcdc67ae72ce8d6a80f2bfd",
+    "bytes": 8049,
+    "review": "aa487360f420c1a2e0a48b097eaa2ebc905ebb659bcdc67ae72ce8d6a80f2bfd",
+    "approved": "aa487360f420c1a2e0a48b097eaa2ebc905ebb659bcdc67ae72ce8d6a80f2bfd"
+  },
+  {
+    "path": "_ARCHIVE/AUTH_MANUAL_v1_4.md",
+    "installed": "6b81073fe81727d4a4a48d1a0e4c43098f3ce70fafbcc3a7a6c660e661276850",
+    "bound": "6b81073fe81727d4a4a48d1a0e4c43098f3ce70fafbcc3a7a6c660e661276850",
+    "content": "6b81073fe81727d4a4a48d1a0e4c43098f3ce70fafbcc3a7a6c660e661276850",
+    "bytes": 58800,
+    "review": "6b81073fe81727d4a4a48d1a0e4c43098f3ce70fafbcc3a7a6c660e661276850",
+    "approved": "6b81073fe81727d4a4a48d1a0e4c43098f3ce70fafbcc3a7a6c660e661276850"
+  },
+  {
+    "path": "_ARCHIVE/BIM_PLAYBOOK_v1_0.md",
+    "installed": "363619932b39fd7c8b4bafa9f270f814aa1af4aa98159dbfecb28c7f920e4f3b",
+    "bound": "363619932b39fd7c8b4bafa9f270f814aa1af4aa98159dbfecb28c7f920e4f3b",
+    "content": "363619932b39fd7c8b4bafa9f270f814aa1af4aa98159dbfecb28c7f920e4f3b",
+    "bytes": 19661,
+    "review": "363619932b39fd7c8b4bafa9f270f814aa1af4aa98159dbfecb28c7f920e4f3b",
+    "approved": "363619932b39fd7c8b4bafa9f270f814aa1af4aa98159dbfecb28c7f920e4f3b"
+  },
+  {
+    "path": "_ARCHIVE/BUG_FIX_PLAYBOOK_v1_0.md",
+    "installed": "3ca537dec3958cabb0159a5243b7fe3f76c10e46ebcaa4ba04d258dcd5d1a871",
+    "bound": "3ca537dec3958cabb0159a5243b7fe3f76c10e46ebcaa4ba04d258dcd5d1a871",
+    "content": "3ca537dec3958cabb0159a5243b7fe3f76c10e46ebcaa4ba04d258dcd5d1a871",
+    "bytes": 23811,
+    "review": "3ca537dec3958cabb0159a5243b7fe3f76c10e46ebcaa4ba04d258dcd5d1a871",
+    "approved": "3ca537dec3958cabb0159a5243b7fe3f76c10e46ebcaa4ba04d258dcd5d1a871"
+  },
+  {
+    "path": "_ARCHIVE/COMPONENT_REGISTRY_v1_1.md",
+    "installed": "4b7d5b7c39fa50838ea536d07a9f4086d3802613a8ee86dd986f09553b28767b",
+    "bound": "4b7d5b7c39fa50838ea536d07a9f4086d3802613a8ee86dd986f09553b28767b",
+    "content": "4b7d5b7c39fa50838ea536d07a9f4086d3802613a8ee86dd986f09553b28767b",
+    "bytes": 23436,
+    "review": "4b7d5b7c39fa50838ea536d07a9f4086d3802613a8ee86dd986f09553b28767b",
+    "approved": "4b7d5b7c39fa50838ea536d07a9f4086d3802613a8ee86dd986f09553b28767b"
+  },
+  {
+    "path": "_ARCHIVE/DATABASE_MANUAL_v1_1.md",
+    "installed": "326802ad938bb6b5b9f1b73c74ebee811789185789ef003e907101a0db4a0cf8",
+    "bound": "326802ad938bb6b5b9f1b73c74ebee811789185789ef003e907101a0db4a0cf8",
+    "content": "326802ad938bb6b5b9f1b73c74ebee811789185789ef003e907101a0db4a0cf8",
+    "bytes": 33603,
+    "review": "326802ad938bb6b5b9f1b73c74ebee811789185789ef003e907101a0db4a0cf8",
+    "approved": "326802ad938bb6b5b9f1b73c74ebee811789185789ef003e907101a0db4a0cf8"
+  },
+  {
+    "path": "_ARCHIVE/DESIGNER_PLAYBOOK_v2_1.md",
+    "installed": "426eb0e7a3da1b31de8efe4ca68550d4b351d6f378b061f0c0de1ab6fbd632ae",
+    "bound": "426eb0e7a3da1b31de8efe4ca68550d4b351d6f378b061f0c0de1ab6fbd632ae",
+    "content": "426eb0e7a3da1b31de8efe4ca68550d4b351d6f378b061f0c0de1ab6fbd632ae",
+    "bytes": 18569,
+    "review": "426eb0e7a3da1b31de8efe4ca68550d4b351d6f378b061f0c0de1ab6fbd632ae",
+    "approved": "426eb0e7a3da1b31de8efe4ca68550d4b351d6f378b061f0c0de1ab6fbd632ae"
+  },
+  {
+    "path": "_ARCHIVE/ECOMMERCE_AND_PAYMENTS_MANUAL_v1_1.md",
+    "installed": "d72816173e6a188282718174cbcd8cc4693f9f944858d96fe0bb092edb728f38",
+    "bound": "d72816173e6a188282718174cbcd8cc4693f9f944858d96fe0bb092edb728f38",
+    "content": "d72816173e6a188282718174cbcd8cc4693f9f944858d96fe0bb092edb728f38",
+    "bytes": 51838,
+    "review": "d72816173e6a188282718174cbcd8cc4693f9f944858d96fe0bb092edb728f38",
+    "approved": "d72816173e6a188282718174cbcd8cc4693f9f944858d96fe0bb092edb728f38"
+  },
+  {
+    "path": "_ARCHIVE/ENGINEER_PLAYBOOK_v1_2.md",
+    "installed": "8d73c37a42624fa2c60729d8d2648fc96f72305a732fd5e74460cf0a614f861c",
+    "bound": "8d73c37a42624fa2c60729d8d2648fc96f72305a732fd5e74460cf0a614f861c",
+    "content": "8d73c37a42624fa2c60729d8d2648fc96f72305a732fd5e74460cf0a614f861c",
+    "bytes": 48290,
+    "review": "8d73c37a42624fa2c60729d8d2648fc96f72305a732fd5e74460cf0a614f861c",
+    "approved": "8d73c37a42624fa2c60729d8d2648fc96f72305a732fd5e74460cf0a614f861c"
+  },
+  {
+    "path": "_ARCHIVE/FEAT_PLAYBOOK_v1_0.md",
+    "installed": "5d70fa061bde72d49507f64b0113daab2646952867c63b8a499ea2feab3ed66f",
+    "bound": "5d70fa061bde72d49507f64b0113daab2646952867c63b8a499ea2feab3ed66f",
+    "content": "5d70fa061bde72d49507f64b0113daab2646952867c63b8a499ea2feab3ed66f",
+    "bytes": 5833,
+    "review": "5d70fa061bde72d49507f64b0113daab2646952867c63b8a499ea2feab3ed66f",
+    "approved": "5d70fa061bde72d49507f64b0113daab2646952867c63b8a499ea2feab3ed66f"
+  },
+  {
+    "path": "_ARCHIVE/FFM_PLAYBOOK_v1_2.md",
+    "installed": "7be561380ea1568d7df61734b6f1a5b12263194cca3ce469a5731e3bd32eafa0",
+    "bound": "7be561380ea1568d7df61734b6f1a5b12263194cca3ce469a5731e3bd32eafa0",
+    "content": "7be561380ea1568d7df61734b6f1a5b12263194cca3ce469a5731e3bd32eafa0",
+    "bytes": 112581,
+    "review": "7be561380ea1568d7df61734b6f1a5b12263194cca3ce469a5731e3bd32eafa0",
+    "approved": "7be561380ea1568d7df61734b6f1a5b12263194cca3ce469a5731e3bd32eafa0"
+  },
+  {
+    "path": "_ARCHIVE/FRONTEND_BUILD_PHASE_PLAYBOOK_v1_2_2.md",
+    "installed": "362609b6551bd585c5f3c57ce5b751285871335d154ad2a8c97ca62b28a20702",
+    "bound": "362609b6551bd585c5f3c57ce5b751285871335d154ad2a8c97ca62b28a20702",
+    "content": "362609b6551bd585c5f3c57ce5b751285871335d154ad2a8c97ca62b28a20702",
+    "bytes": 23578,
+    "review": "362609b6551bd585c5f3c57ce5b751285871335d154ad2a8c97ca62b28a20702",
+    "approved": "362609b6551bd585c5f3c57ce5b751285871335d154ad2a8c97ca62b28a20702"
+  },
+  {
+    "path": "_ARCHIVE/FRONTEND_FIRST_PLAYBOOK_v1_1_3.md",
+    "installed": "2516dcbd50f525328db955592c6c14eafa971c02d4dec722130a87505248a422",
+    "bound": "2516dcbd50f525328db955592c6c14eafa971c02d4dec722130a87505248a422",
+    "content": "2516dcbd50f525328db955592c6c14eafa971c02d4dec722130a87505248a422",
+    "bytes": 15043,
+    "review": "2516dcbd50f525328db955592c6c14eafa971c02d4dec722130a87505248a422",
+    "approved": "2516dcbd50f525328db955592c6c14eafa971c02d4dec722130a87505248a422"
+  },
+  {
+    "path": "_ARCHIVE/GLOBAL_DESIGN_SYSTEM_HANDBOOK_v1_1.md",
+    "installed": "f2dc74390a16836c3213f77652451085680046786d5499b43b1e8a6a6774c8ac",
+    "bound": "f2dc74390a16836c3213f77652451085680046786d5499b43b1e8a6a6774c8ac",
+    "content": "f2dc74390a16836c3213f77652451085680046786d5499b43b1e8a6a6774c8ac",
+    "bytes": 12072,
+    "review": "f2dc74390a16836c3213f77652451085680046786d5499b43b1e8a6a6774c8ac",
+    "approved": "f2dc74390a16836c3213f77652451085680046786d5499b43b1e8a6a6774c8ac"
+  },
+  {
+    "path": "_ARCHIVE/HANDOFF_PACKAGE_PLAYBOOK_v1_1.md",
+    "installed": "6a2f4706542395360248dd42e17cbf9fc49f0886c844aa1e0e5315a047892c4f",
+    "bound": "6a2f4706542395360248dd42e17cbf9fc49f0886c844aa1e0e5315a047892c4f",
+    "content": "6a2f4706542395360248dd42e17cbf9fc49f0886c844aa1e0e5315a047892c4f",
+    "bytes": 20068,
+    "review": "6a2f4706542395360248dd42e17cbf9fc49f0886c844aa1e0e5315a047892c4f",
+    "approved": "6a2f4706542395360248dd42e17cbf9fc49f0886c844aa1e0e5315a047892c4f"
+  },
+  {
+    "path": "_ARCHIVE/QA_PLAYBOOK_v1_0.md",
+    "installed": "32d17ef5ca2eb32dfec6d120a71d280daa2973cba90e8f1735b85e07a3098e99",
+    "bound": "32d17ef5ca2eb32dfec6d120a71d280daa2973cba90e8f1735b85e07a3098e99",
+    "content": "32d17ef5ca2eb32dfec6d120a71d280daa2973cba90e8f1735b85e07a3098e99",
+    "bytes": 40146,
+    "review": "32d17ef5ca2eb32dfec6d120a71d280daa2973cba90e8f1735b85e07a3098e99",
+    "approved": "32d17ef5ca2eb32dfec6d120a71d280daa2973cba90e8f1735b85e07a3098e99"
+  },
+  {
+    "path": "_ARCHIVE/QA_PLAYBOOK_v1_1.md",
+    "installed": "b6c70f14af18bb187ca7980954317af486e43b682821245d9911f2160d5198a5",
+    "bound": "b6c70f14af18bb187ca7980954317af486e43b682821245d9911f2160d5198a5",
+    "content": "b6c70f14af18bb187ca7980954317af486e43b682821245d9911f2160d5198a5",
+    "bytes": 40940,
+    "review": "b6c70f14af18bb187ca7980954317af486e43b682821245d9911f2160d5198a5",
+    "approved": "b6c70f14af18bb187ca7980954317af486e43b682821245d9911f2160d5198a5"
+  },
+  {
+    "path": "_ARCHIVE/RECON_QUESTIONNAIRE_v0_5.md",
+    "installed": "974f09e3118e94288beeb3dce919bea32a1571f294a59da6fd0041ee615968db",
+    "bound": "974f09e3118e94288beeb3dce919bea32a1571f294a59da6fd0041ee615968db",
+    "content": "974f09e3118e94288beeb3dce919bea32a1571f294a59da6fd0041ee615968db",
+    "bytes": 32520,
+    "review": "974f09e3118e94288beeb3dce919bea32a1571f294a59da6fd0041ee615968db",
+    "approved": "974f09e3118e94288beeb3dce919bea32a1571f294a59da6fd0041ee615968db"
+  },
+  {
+    "path": "_ARCHIVE/SOFTWARE_FACTORY_PLAYBOOK_v1_3.md",
+    "installed": "dd9b355bed9b263756a9622205cc30b4b06dad2a08397b7fb55d7e5bb2a7260e",
+    "bound": "dd9b355bed9b263756a9622205cc30b4b06dad2a08397b7fb55d7e5bb2a7260e",
+    "content": "dd9b355bed9b263756a9622205cc30b4b06dad2a08397b7fb55d7e5bb2a7260e",
+    "bytes": 38349,
+    "review": "dd9b355bed9b263756a9622205cc30b4b06dad2a08397b7fb55d7e5bb2a7260e",
+    "approved": "dd9b355bed9b263756a9622205cc30b4b06dad2a08397b7fb55d7e5bb2a7260e"
+  },
+  {
+    "path": "_ARCHIVE/STARTER_KIT_HANDBOOK_v1_1.md",
+    "installed": "396e325b4ac28b02c145fcad6181a99abb4f8345b87278d96f1aef2bbefb7efb",
+    "bound": "396e325b4ac28b02c145fcad6181a99abb4f8345b87278d96f1aef2bbefb7efb",
+    "content": "396e325b4ac28b02c145fcad6181a99abb4f8345b87278d96f1aef2bbefb7efb",
+    "bytes": 34072,
+    "review": "396e325b4ac28b02c145fcad6181a99abb4f8345b87278d96f1aef2bbefb7efb",
+    "approved": "396e325b4ac28b02c145fcad6181a99abb4f8345b87278d96f1aef2bbefb7efb"
+  },
+  {
+    "path": "_ARCHIVE/STATE_MANAGEMENT_MANUAL_v1_2.md",
+    "installed": "2a281857fe0a03d9066ac171e725ca50e42944df204b4eceaebba152b61af196",
+    "bound": "2a281857fe0a03d9066ac171e725ca50e42944df204b4eceaebba152b61af196",
+    "content": "2a281857fe0a03d9066ac171e725ca50e42944df204b4eceaebba152b61af196",
+    "bytes": 45351,
+    "review": "2a281857fe0a03d9066ac171e725ca50e42944df204b4eceaebba152b61af196",
+    "approved": "2a281857fe0a03d9066ac171e725ca50e42944df204b4eceaebba152b61af196"
+  },
+  {
+    "path": "_ARCHIVE/STRIPE_SUBSCRIPTIONS_PLAYBOOK_v1_1.md",
+    "installed": "ec5a467ffd31ca8a1200f230b5a4ca4e104148bedaa83d3a4780f8e23f9a3e03",
+    "bound": "ec5a467ffd31ca8a1200f230b5a4ca4e104148bedaa83d3a4780f8e23f9a3e03",
+    "content": "ec5a467ffd31ca8a1200f230b5a4ca4e104148bedaa83d3a4780f8e23f9a3e03",
+    "bytes": 38843,
+    "review": "ec5a467ffd31ca8a1200f230b5a4ca4e104148bedaa83d3a4780f8e23f9a3e03",
+    "approved": "ec5a467ffd31ca8a1200f230b5a4ca4e104148bedaa83d3a4780f8e23f9a3e03"
+  },
+  {
+    "path": "_ARCHIVE/TESTING_PLAYBOOK_v2_1.md",
+    "installed": "5dfc2d198d51eebd4c0b136eeafc50cc2f64dafe44b7bbd153b801f4849692ad",
+    "bound": "5dfc2d198d51eebd4c0b136eeafc50cc2f64dafe44b7bbd153b801f4849692ad",
+    "content": "5dfc2d198d51eebd4c0b136eeafc50cc2f64dafe44b7bbd153b801f4849692ad",
+    "bytes": 79339,
+    "review": "5dfc2d198d51eebd4c0b136eeafc50cc2f64dafe44b7bbd153b801f4849692ad",
+    "approved": "5dfc2d198d51eebd4c0b136eeafc50cc2f64dafe44b7bbd153b801f4849692ad"
+  },
+  {
+    "path": "_ARCHIVE/THEME_LIBRARY_v1_2.md",
+    "installed": "480c7bdbc648e2fb7b97a6b120bfa36de35246cbdf3fd163e43aa0a2968ff73e",
+    "bound": "480c7bdbc648e2fb7b97a6b120bfa36de35246cbdf3fd163e43aa0a2968ff73e",
+    "content": "480c7bdbc648e2fb7b97a6b120bfa36de35246cbdf3fd163e43aa0a2968ff73e",
+    "bytes": 8467,
+    "review": "480c7bdbc648e2fb7b97a6b120bfa36de35246cbdf3fd163e43aa0a2968ff73e",
+    "approved": "480c7bdbc648e2fb7b97a6b120bfa36de35246cbdf3fd163e43aa0a2968ff73e"
+  },
+  {
+    "path": "_ARCHIVE/THEMING_MANUAL_v1_2.md",
+    "installed": "3c71a3a959df8393b4f6810a8122a94895fced02d658d3b512ee5f30784091b1",
+    "bound": "3c71a3a959df8393b4f6810a8122a94895fced02d658d3b512ee5f30784091b1",
+    "content": "3c71a3a959df8393b4f6810a8122a94895fced02d658d3b512ee5f30784091b1",
+    "bytes": 17470,
+    "review": "3c71a3a959df8393b4f6810a8122a94895fced02d658d3b512ee5f30784091b1",
+    "approved": "3c71a3a959df8393b4f6810a8122a94895fced02d658d3b512ee5f30784091b1"
+  },
+  {
+    "path": "_ARCHIVE/TOKEN_FILE_v1_2.md",
+    "installed": "066e0e60a49714adb062bc2983b1d5a82bc69f0c73794bac44292f6851dc88b5",
+    "bound": "066e0e60a49714adb062bc2983b1d5a82bc69f0c73794bac44292f6851dc88b5",
+    "content": "066e0e60a49714adb062bc2983b1d5a82bc69f0c73794bac44292f6851dc88b5",
+    "bytes": 12744,
+    "review": "066e0e60a49714adb062bc2983b1d5a82bc69f0c73794bac44292f6851dc88b5",
+    "approved": "066e0e60a49714adb062bc2983b1d5a82bc69f0c73794bac44292f6851dc88b5"
+  },
+  {
+    "path": "_ARCHIVE/UI_UX_BUILDING_MANUAL_v1_4.md",
+    "installed": "8b9a6f647a8999ce35db4dd20df3db058ec7c64a47c4b3ab8051195f97d9d544",
+    "bound": "8b9a6f647a8999ce35db4dd20df3db058ec7c64a47c4b3ab8051195f97d9d544",
+    "content": "8b9a6f647a8999ce35db4dd20df3db058ec7c64a47c4b3ab8051195f97d9d544",
+    "bytes": 60816,
+    "review": "8b9a6f647a8999ce35db4dd20df3db058ec7c64a47c4b3ab8051195f97d9d544",
+    "approved": "8b9a6f647a8999ce35db4dd20df3db058ec7c64a47c4b3ab8051195f97d9d544"
+  }
+]

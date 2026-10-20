@@ -1,0 +1,18 @@
+{
+ "_ARCHIVE/FRONTEND_BUILD_PHASE_PLAYBOOK_v1_2_2.md": {
+  "source": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+  "blob": "3edb88c3149a9a6d9a7c760471f30956053c9d60",
+  "replayed_blob": "3edb88c3149a9a6d9a7c760471f30956053c9d60",
+  "bytes": 23578,
+  "final_LF": false,
+  "equals_base_bytes": true
+ },
+ "_ARCHIVE/FRONTEND_FIRST_PLAYBOOK_v1_1_3.md": {
+  "source": "03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+  "blob": "c8516c8b8b3950e4b2d08d0bb2c112d7136d8f30",
+  "replayed_blob": "c8516c8b8b3950e4b2d08d0bb2c112d7136d8f30",
+  "bytes": 15043,
+  "final_LF": false,
+  "equals_base_bytes": true
+ }
+}

@@ -1,0 +1,2 @@
+CHANGELOG.md:33: | 2026-08-10 | QA_PLAYBOOK v1.0 | Field-tested supersession of v0.1 (archived) — claim-package handoff, contract extraction, one-test-at-a-time protocol, environment triage, exploratory seam testing, finding classification, verdict model, scope protection, 10 field lessons. Header translated to Hub single-line; history reordered newest-last | factory-module-doctrine |
+CHANGELOG.md:71: | 2026-10-18 | Historical QA_PLAYBOOK v1.0 | Exact historical restoration; not active instructions | FC-089; RUL-14 |

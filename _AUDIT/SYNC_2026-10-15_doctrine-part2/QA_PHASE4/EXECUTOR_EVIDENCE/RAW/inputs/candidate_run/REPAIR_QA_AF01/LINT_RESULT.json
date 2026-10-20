@@ -1,0 +1,18 @@
+{
+  "command": {
+    "command": [
+      "python3",
+      "-B",
+      "-I",
+      "lints/run_all.py"
+    ],
+    "cwd": "/tmp/cody-af01-full-replay-6fa2rjgo/gnu",
+    "exit_code": 0,
+    "environment_override": {
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "stdout": "[ENCODING] PASS — 0 hits across 36 live docs\n[RETIRED-TERMS] PASS — 0 hits across 36 live docs\n[VERSIONED-REFS] PASS — 0 hits across 36 live docs (34 canonical names loaded)\n[HEADER-PRESENCE] PASS — all 36 live docs carry the standard header\n=== DOCTRINE LINTS ===\n\n--- encoding_lint.py ---\n\n--- retired_terms_lint.py ---\n\n--- versioned_refs_lint.py ---\n\n--- header_lint.py ---\n\n=== RESULT: PASS ===\n",
+    "stderr": ""
+  },
+  "source": "exact lints blobs from pinned BASE"
+}

@@ -1,0 +1,160 @@
+{
+  "pattern": "ENGINEER AGENT: WHAT IT PRODUCES|Engineer's full output list|\\*\\*Author:\\*\\* Engineer|Engineer Agent|\\| *Engineer *\\|? *$|Define data schemas|Define API contracts|Define schemas|schema design|Engineer Focus|Engineer owns|Engineer produces|Engineer authors|owned by the Engineer|Engineering owns|Engineer (defines|designs|writes|creates) [^.]*(schema|contract|API_SPEC|DB_SCHEMA|DATA_CONTRACT)",
+  "hits": [
+    {
+      "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+      "line": 90,
+      "text": "| `ENGINEER_PLAYBOOK.md` | How to BE the Engineer agent | Factory |"
+    },
+    {
+      "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+      "line": 98,
+      "text": "| **Claude Code (Claudy)** | Writes code from specs; builds from the Designer's HTML, verifies against the PNG | Engineer Agent |"
+    },
+    {
+      "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+      "line": 37,
+      "text": "A seat defines responsibility; a persona or model name does not grant permission. Director is the human scope, access and release authority; Operator and Coordinator are contextual names for that human responsibility. Architect owns assembly and scope interpretation; Engineer owns implementation and factual handoff; QA Lead owns QA doctrine, plan approval, adjudication and certification; QA Executor independently plans and tests. Designer and deployment responsibilities remain distinct. \u201cArchitect\u201d does not name the human approver in an authority rule."
+    },
+    {
+      "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+      "line": 333,
+      "text": "### Schema Design Process"
+    },
+    {
+      "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+      "line": 800,
+      "text": "- [ ] Schema designed"
+    },
+    {
+      "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+      "line": 907,
+      "text": "| DB schema | DATABASE | Schema Design Patterns |"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+      "line": 63,
+      "text": "| Implement approved data schemas as migrations and models | Engineer Agent |"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+      "line": 67,
+      "text": "| Implement approved API contracts | Engineer Agent |"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+      "line": 206,
+      "text": "| Type | Engineer Focus |"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+      "line": 68,
+      "text": "| Write the production app | Engineer Agent / Claudy |"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "line": 1,
+      "text": "# ENGINEER AGENT PLAYBOOK"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "line": 7,
+      "text": "> *The definitive manual for the Engineer Agent to build stable, testable, cloud-native AI applications.*"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "line": 59,
+      "text": "### Who is the Engineer Agent?"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "line": 997,
+      "text": "**Engineer Focus:**"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "line": 1019,
+      "text": "**Engineer Focus:**"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "line": 1041,
+      "text": "**Engineer Focus:**"
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "line": 1147,
+      "text": "When the Engineer Agent operates in an agentic coding environment (Claude Code, Windsurf, Cursor, Gemini CLI), it must follow these behaviors."
+    },
+    {
+      "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "line": 1556,
+      "text": "The Engineer Agent's mission is to **build systems that remain stable** \u2014 and to be the factory's ground-truth instrument before anyone authors."
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md",
+      "line": 7,
+      "text": "> Read by skill authors in their assigned seats. Engineer agents consume skills and may author them only under an explicit skill-authoring assignment."
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+      "line": 15,
+      "text": "2. [Schema Design Patterns](#2-schema-design-patterns)"
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+      "line": 83,
+      "text": "## 2. Schema Design Patterns"
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+      "line": 189,
+      "text": "Persist one authorized checkout-attempt identity across retries and claim it atomically against concurrent requests. Scope provider idempotency keys to that attempt and operation, reuse or retrieve existing external objects after an unknown outcome, and reconcile before creating a replacement. Use the project-approved customer-identity contract without assuming paid activation; universal subscription schema design is deferred. Handle every documented subscription state, not only active."
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+      "line": 201,
+      "text": "Persist one authorized checkout-attempt identity across retries and claim it atomically against concurrent requests. Scope provider idempotency keys to that attempt and operation, reuse or retrieve existing external objects after an unknown outcome, and reconcile before creating a replacement. Use the project-approved customer-identity contract without assuming paid activation; universal subscription schema design is deferred. Handle every documented subscription state, not only active."
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+      "line": 217,
+      "text": "Persist one authorized checkout-attempt identity across retries and claim it atomically against concurrent requests. Scope provider idempotency keys to that attempt and operation, reuse or retrieve existing external objects after an unknown outcome, and reconcile before creating a replacement. Use the project-approved customer-identity contract without assuming paid activation; universal subscription schema design is deferred. Handle every documented subscription state, not only active."
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+      "line": 68,
+      "text": "**Customer identity:** use the project-approved ownership and storage contract. Do not prescribe universal storage on a subscription row; universal subscription-schema design is deferred."
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+      "line": 177,
+      "text": "Subscription bootstrap, customer identity and resubscription must agree with the project\u2019s approved schema. Universal subscription-schema design is deferred; no runnable replacement is supplied here. Preserve owner-only reads and server-only subscription writes. Keep this finding open until the project contract and recovery behavior are verified."
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+      "line": 233,
+      "text": "Persist one authorized checkout-attempt identity across retries and claim it atomically against concurrent requests. Scope provider idempotency keys to that attempt and operation, reuse or retrieve existing external objects after an unknown outcome, and reconcile before creating a replacement. Use the project-approved customer-identity contract without assuming paid activation; universal subscription schema design is deferred. Handle every documented subscription state, not only active."
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+      "line": 235,
+      "text": "Subscription bootstrap, customer identity and resubscription must agree with the project\u2019s approved schema. Universal subscription-schema design is deferred; no runnable replacement is supplied here. Preserve owner-only reads and server-only subscription writes. Keep this finding open until the project contract and recovery behavior are verified."
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+      "line": 247,
+      "text": "Subscription bootstrap, customer identity and resubscription must agree with the project\u2019s approved schema. Universal subscription-schema design is deferred; no runnable replacement is supplied here. Preserve owner-only reads and server-only subscription writes. Keep this finding open until the project contract and recovery behavior are verified."
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+      "line": 257,
+      "text": "Persist one authorized checkout-attempt identity across retries and claim it atomically against concurrent requests. Scope provider idempotency keys to that attempt and operation, reuse or retrieve existing external objects after an unknown outcome, and reconcile before creating a replacement. Use the project-approved customer-identity contract without assuming paid activation; universal subscription schema design is deferred. Handle every documented subscription state, not only active."
+    },
+    {
+      "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+      "line": 535,
+      "text": "Schema design and migration SQL are the developer's responsibility. Running migrations against production and managing database access/backups is DevOps. Hand them:"
+    }
+  ]
+}

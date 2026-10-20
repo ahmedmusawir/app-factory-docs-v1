@@ -1,0 +1,219 @@
+[
+  {
+    "path": "_ARCHIVE/APP_FACTORY_BLUEPRINT_v2_1.md",
+    "source": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "base_sha256": "9b732116c6030aee4d6ae0b792272bc372dd647ef95dea522c2bf7949934af93",
+    "archive_sha256": "9b732116c6030aee4d6ae0b792272bc372dd647ef95dea522c2bf7949934af93",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/SOFTWARE_FACTORY_PLAYBOOK_v1_3.md",
+    "source": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "base_sha256": "dd9b355bed9b263756a9622205cc30b4b06dad2a08397b7fb55d7e5bb2a7260e",
+    "archive_sha256": "dd9b355bed9b263756a9622205cc30b4b06dad2a08397b7fb55d7e5bb2a7260e",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/STARTER_KIT_HANDBOOK_v1_1.md",
+    "source": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "base_sha256": "396e325b4ac28b02c145fcad6181a99abb4f8345b87278d96f1aef2bbefb7efb",
+    "archive_sha256": "396e325b4ac28b02c145fcad6181a99abb4f8345b87278d96f1aef2bbefb7efb",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/ARCHITECT_PLAYBOOK_v2_2.md",
+    "source": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "base_sha256": "b0754979e3b24cb79234265fe146f39f03718e608a60153a702a518f34979af4",
+    "archive_sha256": "b0754979e3b24cb79234265fe146f39f03718e608a60153a702a518f34979af4",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/ARCHITECT_QUESTIONNAIRE_v2_2.md",
+    "source": "02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md",
+    "base_sha256": "aa487360f420c1a2e0a48b097eaa2ebc905ebb659bcdc67ae72ce8d6a80f2bfd",
+    "archive_sha256": "aa487360f420c1a2e0a48b097eaa2ebc905ebb659bcdc67ae72ce8d6a80f2bfd",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/DESIGNER_PLAYBOOK_v2_1.md",
+    "source": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "base_sha256": "426eb0e7a3da1b31de8efe4ca68550d4b351d6f378b061f0c0de1ab6fbd632ae",
+    "archive_sha256": "426eb0e7a3da1b31de8efe4ca68550d4b351d6f378b061f0c0de1ab6fbd632ae",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/ENGINEER_PLAYBOOK_v1_2.md",
+    "source": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "base_sha256": "8d73c37a42624fa2c60729d8d2648fc96f72305a732fd5e74460cf0a614f861c",
+    "archive_sha256": "8d73c37a42624fa2c60729d8d2648fc96f72305a732fd5e74460cf0a614f861c",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/HANDOFF_PACKAGE_PLAYBOOK_v1_1.md",
+    "source": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "base_sha256": "6a2f4706542395360248dd42e17cbf9fc49f0886c844aa1e0e5315a047892c4f",
+    "archive_sha256": "6a2f4706542395360248dd42e17cbf9fc49f0886c844aa1e0e5315a047892c4f",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/RECON_QUESTIONNAIRE_v0_5.md",
+    "source": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "base_sha256": "974f09e3118e94288beeb3dce919bea32a1571f294a59da6fd0041ee615968db",
+    "archive_sha256": "974f09e3118e94288beeb3dce919bea32a1571f294a59da6fd0041ee615968db",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/APP_FACTORY_SKILLS_PLAYBOOK_v1_1.md",
+    "source": "03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md",
+    "base_sha256": "d93f3d5d81d5add6638fee9c71eecc370fd86f07ad1ac47f7021d6415a446113",
+    "archive_sha256": "d93f3d5d81d5add6638fee9c71eecc370fd86f07ad1ac47f7021d6415a446113",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/BIM_PLAYBOOK_v1_0.md",
+    "source": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "base_sha256": "363619932b39fd7c8b4bafa9f270f814aa1af4aa98159dbfecb28c7f920e4f3b",
+    "archive_sha256": "363619932b39fd7c8b4bafa9f270f814aa1af4aa98159dbfecb28c7f920e4f3b",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/BUG_FIX_PLAYBOOK_v1_0.md",
+    "source": "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+    "base_sha256": "3ca537dec3958cabb0159a5243b7fe3f76c10e46ebcaa4ba04d258dcd5d1a871",
+    "archive_sha256": "3ca537dec3958cabb0159a5243b7fe3f76c10e46ebcaa4ba04d258dcd5d1a871",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/FEAT_PLAYBOOK_v1_0.md",
+    "source": "03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md",
+    "base_sha256": "5d70fa061bde72d49507f64b0113daab2646952867c63b8a499ea2feab3ed66f",
+    "archive_sha256": "5d70fa061bde72d49507f64b0113daab2646952867c63b8a499ea2feab3ed66f",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/FFM_PLAYBOOK_v1_2.md",
+    "source": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "base_sha256": "7be561380ea1568d7df61734b6f1a5b12263194cca3ce469a5731e3bd32eafa0",
+    "archive_sha256": "7be561380ea1568d7df61734b6f1a5b12263194cca3ce469a5731e3bd32eafa0",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/FRONTEND_BUILD_PHASE_PLAYBOOK_v1_2_2.md",
+    "source": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+    "base_sha256": "362609b6551bd585c5f3c57ce5b751285871335d154ad2a8c97ca62b28a20702",
+    "archive_sha256": "362609b6551bd585c5f3c57ce5b751285871335d154ad2a8c97ca62b28a20702",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/FRONTEND_FIRST_PLAYBOOK_v1_1_3.md",
+    "source": "03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+    "base_sha256": "2516dcbd50f525328db955592c6c14eafa971c02d4dec722130a87505248a422",
+    "archive_sha256": "2516dcbd50f525328db955592c6c14eafa971c02d4dec722130a87505248a422",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/QA_PLAYBOOK_v1_1.md",
+    "source": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "base_sha256": "b6c70f14af18bb187ca7980954317af486e43b682821245d9911f2160d5198a5",
+    "archive_sha256": "b6c70f14af18bb187ca7980954317af486e43b682821245d9911f2160d5198a5",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/TESTING_PLAYBOOK_v2_1.md",
+    "source": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "base_sha256": "5dfc2d198d51eebd4c0b136eeafc50cc2f64dafe44b7bbd153b801f4849692ad",
+    "archive_sha256": "5dfc2d198d51eebd4c0b136eeafc50cc2f64dafe44b7bbd153b801f4849692ad",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/API_AND_SERVICES_MANUAL_v1_1.md",
+    "source": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "base_sha256": "64794a5d33dbd7fdd473975d5ff7c02f49fe433c8f63c780b059d77ead55a4b3",
+    "archive_sha256": "64794a5d33dbd7fdd473975d5ff7c02f49fe433c8f63c780b059d77ead55a4b3",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/APP_ARCHITECTURE_MANUAL_v1_3.md",
+    "source": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "base_sha256": "ca1dc1f0a8ce578523a46a3262f2f1d09a63cb6e8f2517157d940c0febfb3134",
+    "archive_sha256": "ca1dc1f0a8ce578523a46a3262f2f1d09a63cb6e8f2517157d940c0febfb3134",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/AUTH_MANUAL_v1_4.md",
+    "source": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "base_sha256": "6b81073fe81727d4a4a48d1a0e4c43098f3ce70fafbcc3a7a6c660e661276850",
+    "archive_sha256": "6b81073fe81727d4a4a48d1a0e4c43098f3ce70fafbcc3a7a6c660e661276850",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/DATABASE_MANUAL_v1_1.md",
+    "source": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "base_sha256": "326802ad938bb6b5b9f1b73c74ebee811789185789ef003e907101a0db4a0cf8",
+    "archive_sha256": "326802ad938bb6b5b9f1b73c74ebee811789185789ef003e907101a0db4a0cf8",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/ECOMMERCE_AND_PAYMENTS_MANUAL_v1_1.md",
+    "source": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "base_sha256": "d72816173e6a188282718174cbcd8cc4693f9f944858d96fe0bb092edb728f38",
+    "archive_sha256": "d72816173e6a188282718174cbcd8cc4693f9f944858d96fe0bb092edb728f38",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/STATE_MANAGEMENT_MANUAL_v1_2.md",
+    "source": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "base_sha256": "2a281857fe0a03d9066ac171e725ca50e42944df204b4eceaebba152b61af196",
+    "archive_sha256": "2a281857fe0a03d9066ac171e725ca50e42944df204b4eceaebba152b61af196",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/STRIPE_SUBSCRIPTIONS_PLAYBOOK_v1_1.md",
+    "source": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "base_sha256": "ec5a467ffd31ca8a1200f230b5a4ca4e104148bedaa83d3a4780f8e23f9a3e03",
+    "archive_sha256": "ec5a467ffd31ca8a1200f230b5a4ca4e104148bedaa83d3a4780f8e23f9a3e03",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/COMPONENT_REGISTRY_v1_1.md",
+    "source": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "base_sha256": "4b7d5b7c39fa50838ea536d07a9f4086d3802613a8ee86dd986f09553b28767b",
+    "archive_sha256": "4b7d5b7c39fa50838ea536d07a9f4086d3802613a8ee86dd986f09553b28767b",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/GLOBAL_DESIGN_SYSTEM_HANDBOOK_v1_1.md",
+    "source": "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+    "base_sha256": "f2dc74390a16836c3213f77652451085680046786d5499b43b1e8a6a6774c8ac",
+    "archive_sha256": "f2dc74390a16836c3213f77652451085680046786d5499b43b1e8a6a6774c8ac",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/THEME_LIBRARY_v1_2.md",
+    "source": "05_DESIGN_SYSTEM/THEME_LIBRARY.md",
+    "base_sha256": "480c7bdbc648e2fb7b97a6b120bfa36de35246cbdf3fd163e43aa0a2968ff73e",
+    "archive_sha256": "480c7bdbc648e2fb7b97a6b120bfa36de35246cbdf3fd163e43aa0a2968ff73e",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/THEMING_MANUAL_v1_2.md",
+    "source": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+    "base_sha256": "3c71a3a959df8393b4f6810a8122a94895fced02d658d3b512ee5f30784091b1",
+    "archive_sha256": "3c71a3a959df8393b4f6810a8122a94895fced02d658d3b512ee5f30784091b1",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/TOKEN_FILE_v1_2.md",
+    "source": "05_DESIGN_SYSTEM/TOKEN_FILE.md",
+    "base_sha256": "066e0e60a49714adb062bc2983b1d5a82bc69f0c73794bac44292f6851dc88b5",
+    "archive_sha256": "066e0e60a49714adb062bc2983b1d5a82bc69f0c73794bac44292f6851dc88b5",
+    "equal": true
+  },
+  {
+    "path": "_ARCHIVE/UI_UX_BUILDING_MANUAL_v1_4.md",
+    "source": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "base_sha256": "8b9a6f647a8999ce35db4dd20df3db058ec7c64a47c4b3ab8051195f97d9d544",
+    "archive_sha256": "8b9a6f647a8999ce35db4dd20df3db058ec7c64a47c4b3ab8051195f97d9d544",
+    "equal": true
+  }
+]

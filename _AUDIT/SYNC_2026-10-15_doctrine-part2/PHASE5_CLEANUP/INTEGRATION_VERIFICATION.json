@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-10-20T12:19:06.928318+00:00",
+  "transferred_paths": 932,
+  "added_qa_and_receipts": 885,
+  "complete_qa_files_equal": 870,
+  "certified_101_unchanged": true,
+  "protected_original_tracked_files": 976,
+  "only_existing_records_updated": [
+    "_AUDIT/SYNC_2026-10-15_doctrine-part2/RUN_SUMMARY.md",
+    "_AUDIT/SYNC_2026-10-15_doctrine-part2/TEMPLATE_INSTALL_VERIFICATION.md"
+  ],
+  "all_other_existing_tracked_files_exact": true,
+  "standalone_10x": [
+    {
+      "path": "10x Lab/ABM_PLAYBOOK_v1_0.md",
+      "sha256": "21f8344812a385ec0a3da8ec41e144dc07c7248814a8b0a73db4f2433c5b2051"
+    },
+    {
+      "path": "10x Lab/APBM_PLAYBOOK_v1_0.md",
+      "sha256": "c12ff3f9bc4355e9bd8e1c276a3917bd443f864715ab1ffb6b84edf49beb4f93"
+    }
+  ],
+  "pending_transitions": 12,
+  "result": "PASS"
+}

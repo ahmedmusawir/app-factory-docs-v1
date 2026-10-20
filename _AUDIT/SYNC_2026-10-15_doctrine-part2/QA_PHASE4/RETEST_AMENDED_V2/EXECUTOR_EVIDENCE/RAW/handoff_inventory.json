@@ -1,0 +1,221 @@
+{
+  "zip_sha256": "a2b4c4cf57b2c93e25686d4c45c28c7302da1ed97c55f3bd219c57bef9f8a422",
+  "safe": true,
+  "names": [
+    "AMENDED_V2/AMENDMENT_V2_EDITS.json",
+    "AMENDED_V2/BOUND_EXECUTION_INDEX.json",
+    "AMENDED_V2/EXECUTION_PROPOSAL.patch",
+    "AMENDED_V2/JARVIS_FABLE_HANDOFF.md",
+    "AMENDED_V2_EXECUTION/APPROVED_RECORD_PATHS.json",
+    "AMENDED_V2_EXECUTION/CLOSEOUT_TRANSITIONS.json",
+    "AMENDED_V2_EXECUTION/COMMANDS.json",
+    "AMENDED_V2_EXECUTION/COMMIT_COMMANDS.json",
+    "AMENDED_V2_EXECUTION/COMMIT_RECEIPT.json",
+    "AMENDED_V2_EXECUTION/EXECUTION_PLAN.md",
+    "AMENDED_V2_EXECUTION/EXISTING_PATH_PRESERVATION.json",
+    "AMENDED_V2_EXECUTION/FABLE_HANDOFF.md",
+    "AMENDED_V2_EXECUTION/HUMAN_SUMMARY.md",
+    "AMENDED_V2_EXECUTION/INSTALLED_101_HASHES.json",
+    "AMENDED_V2_EXECUTION/LINT_OUTPUT.txt",
+    "AMENDED_V2_EXECUTION/METADATA_VERIFICATION.json",
+    "AMENDED_V2_EXECUTION/PACKAGE_INTEGRITY.json",
+    "AMENDED_V2_EXECUTION/PROPAGATION.tsv",
+    "AMENDED_V2_EXECUTION/PROTECTED_PATHS.json",
+    "AMENDED_V2_EXECUTION/PUSH_RECEIPT.json",
+    "AMENDED_V2_EXECUTION/STAGED_SCOPE.json",
+    "AMENDED_V2_EXECUTION/STAGING_WHITESPACE_DIAGNOSTIC.json",
+    "AMENDED_V2_EXECUTION/STAGING_WHITESPACE_NOTE.md",
+    "AMENDED_V2_EXECUTION/START_STATE.json",
+    "AMENDED_V2_EXECUTION/VERIFICATION.json",
+    "AMENDED_V2_EXECUTION/WITHDRAWAL_ROWS.json",
+    "AMENDED_V2_EXECUTION/apply_verify.py",
+    "APPROVED_REVIEW/FACTORY_AMENDED_V2_REVIEW_2026-10-19_135012.zip",
+    "COMMIT_PATHS.txt",
+    "QA_PHASE4/REPAIR_QA_P4/DIRECTOR_DECISIONS_V2.md",
+    "README.md",
+    "REPAIR_COMMIT.diff",
+    "SHA256SUMS.txt"
+  ],
+  "checks": [
+    {
+      "path": "AMENDED_V2/AMENDMENT_V2_EDITS.json",
+      "expected": "7e4905c113f45692bb17eea9f7cf2afe4f1eb6edfee01377509e2a29037a71f3",
+      "actual": "7e4905c113f45692bb17eea9f7cf2afe4f1eb6edfee01377509e2a29037a71f3"
+    },
+    {
+      "path": "AMENDED_V2/BOUND_EXECUTION_INDEX.json",
+      "expected": "b4fe406963b13b650f11d7d688026c88ff37fb1698d6191cdec420247c156bc9",
+      "actual": "b4fe406963b13b650f11d7d688026c88ff37fb1698d6191cdec420247c156bc9"
+    },
+    {
+      "path": "AMENDED_V2/EXECUTION_PROPOSAL.patch",
+      "expected": "86fbfe6f3787c55332bb5d0c741d7ed3296c1f872e3ce26bc4af01b29a0282fd",
+      "actual": "86fbfe6f3787c55332bb5d0c741d7ed3296c1f872e3ce26bc4af01b29a0282fd"
+    },
+    {
+      "path": "AMENDED_V2/JARVIS_FABLE_HANDOFF.md",
+      "expected": "6fcd1c83fb38ed4c614628205abacdbc8fe558db4d514e836aa3563a97545f84",
+      "actual": "6fcd1c83fb38ed4c614628205abacdbc8fe558db4d514e836aa3563a97545f84"
+    },
+    {
+      "path": "AMENDED_V2_EXECUTION/APPROVED_RECORD_PATHS.json",
+      "expected": "c3b7dee5b5c65e339996985416b04265515f1831aad0f130f0f36422fb416ec9",
+      "actual": "c3b7dee5b5c65e339996985416b04265515f1831aad0f130f0f36422fb416ec9"
+    },
+    {
+      "path": "AMENDED_V2_EXECUTION/CLOSEOUT_TRANSITIONS.json",
+      "expected": "cf804ce657c8b3447a230a400329b8196f1cc0bd0e88b37474082f75f79696dc",
+      "actual": "cf804ce657c8b3447a230a400329b8196f1cc0bd0e88b37474082f75f79696dc"
+    },
+    {
+      "path": "AMENDED_V2_EXECUTION/COMMANDS.json",
+      "expected": "c9f93b4f0f77ce6028a94e2a5951d905c6bfb83cea0cb0cd04069469af396843",
+      "actual": "c9f93b4f0f77ce6028a94e2a5951d905c6bfb83cea0cb0cd04069469af396843"
+    },
+    {
+      "path": "AMENDED_V2_EXECUTION/COMMIT_COMMANDS.json",
+      "expected": "623e0d3f4959421842e1856c5e45467879e3b2138d4535a59eb9587af7cc3e60",
+      "actual": "623e0d3f4959421842e1856c5e45467879e3b2138d4535a59eb9587af7cc3e60"
+    },
+    {
+      "path": "AMENDED_V2_EXECUTION/COMMIT_RECEIPT.json",
+      "expected": "f1830c119e609b9a55a9c719633da56416914dbabab145ba0293a55fd7a4e483",
+      "actual": "f1830c119e609b9a55a9c719633da56416914dbabab145ba0293a55fd7a4e483"
+    },
+    {
+      "path": "AMENDED_V2_EXECUTION/EXECUTION_PLAN.md",
+      "expected": "5b8aca951bee99d43fd72687b4e3b05286e114dd9af6f6d362f81d612175538a",
+      "actual": "5b8aca951bee99d43fd72687b4e3b05286e114dd9af6f6d362f81d612175538a"
+    },
+    {
+      "path": "AMENDED_V2_EXECUTION/EXISTING_PATH_PRESERVATION.json",
+      "expected": "fbfbeb0dea8d6773240ee447a32c5a5171b59503a1c64db34e0d86aff5301526",
+      "actual": "fbfbeb0dea8d6773240ee447a32c5a5171b59503a1c64db34e0d86aff5301526"
+    },
+    {
+      "path": "AMENDED_V2_EXECUTION/FABLE_HANDOFF.md",
+      "expected": "9952390f6f7a26843257ccd672a3c9210ae36c4e5fe34309696f66a974d5ac91",
+      "actual": "9952390f6f7a26843257ccd672a3c9210ae36c4e5fe34309696f66a974d5ac91"
+    },
+    {
+      "path": "AMENDED_V2_EXECUTION/HUMAN_SUMMARY.md",
+      "expected": "9a909e84ae75376fde39026dbd3831268e73fb32ab9ae833f5c15a85ebea2498",
+      "actual": "9a909e84ae75376fde39026dbd3831268e73fb32ab9ae833f5c15a85ebea2498"
+    },
+    {
+      "path": "AMENDED_V2_EXECUTION/INSTALLED_101_HASHES.json",
+      "expected": "a0882140509e75679de408661fe4bbd2b0d8740ef53d30849b2199a5855ea7f5",
+      "actual": "a0882140509e75679de408661fe4bbd2b0d8740ef53d30849b2199a5855ea7f5"
+    },
+    {
+      "path": "AMENDED_V2_EXECUTION/LINT_OUTPUT.txt",
+      "expected": "464d6fe12c6b15c15fa89499cda06a08e54c18376f7b4127c5e915879a23f04e",
+      "actual": "464d6fe12c6b15c15fa89499cda06a08e54c18376f7b4127c5e915879a23f04e"
+    },
+    {
+      "path": "AMENDED_V2_EXECUTION/METADATA_VERIFICATION.json",
+      "expected": "3e3f7f77882a2f529f79c6051134375fb8340346995a275c49d7cb0bc1ee903e",
+      "actual": "3e3f7f77882a2f529f79c6051134375fb8340346995a275c49d7cb0bc1ee903e"
+    },
+    {
+      "path": "AMENDED_V2_EXECUTION/PACKAGE_INTEGRITY.json",
+      "expected": "d8d7da82470e8f62983bebfbd96b9c4db093744f9666a71258ae51973c912d91",
+      "actual": "d8d7da82470e8f62983bebfbd96b9c4db093744f9666a71258ae51973c912d91"
+    },
+    {
+      "path": "AMENDED_V2_EXECUTION/PROPAGATION.tsv",
+      "expected": "fc056a6ed5dcc883a19e10b15d19c3994bbf3d6ee077402c45d7db7a7295ff82",
+      "actual": "fc056a6ed5dcc883a19e10b15d19c3994bbf3d6ee077402c45d7db7a7295ff82"
+    },
+    {
+      "path": "AMENDED_V2_EXECUTION/PROTECTED_PATHS.json",
+      "expected": "8178a419fa7b6528476b7d23a51895a7059d1ddc3862a3231f167639ea6340ba",
+      "actual": "8178a419fa7b6528476b7d23a51895a7059d1ddc3862a3231f167639ea6340ba"
+    },
+    {
+      "path": "AMENDED_V2_EXECUTION/PUSH_RECEIPT.json",
+      "expected": "e08457f338d27bca763590fdf8663c8301af888cb930e50a6d3082ee02167e91",
+      "actual": "e08457f338d27bca763590fdf8663c8301af888cb930e50a6d3082ee02167e91"
+    },
+    {
+      "path": "AMENDED_V2_EXECUTION/STAGED_SCOPE.json",
+      "expected": "023a1bd45bebc906d4626a197820d2fa8cd63ea54e5a3822dccb0a03ae47f249",
+      "actual": "023a1bd45bebc906d4626a197820d2fa8cd63ea54e5a3822dccb0a03ae47f249"
+    },
+    {
+      "path": "AMENDED_V2_EXECUTION/STAGING_WHITESPACE_DIAGNOSTIC.json",
+      "expected": "8cdba2dd0b832d8b6d20ee14710959d5a2a8d14fbc2d8ae736aa5a3cfeab158e",
+      "actual": "8cdba2dd0b832d8b6d20ee14710959d5a2a8d14fbc2d8ae736aa5a3cfeab158e"
+    },
+    {
+      "path": "AMENDED_V2_EXECUTION/STAGING_WHITESPACE_NOTE.md",
+      "expected": "a2c912ef5f6bc7751c7496b7b02a2fd2934541c107f0ee6dfeee426a8227356b",
+      "actual": "a2c912ef5f6bc7751c7496b7b02a2fd2934541c107f0ee6dfeee426a8227356b"
+    },
+    {
+      "path": "AMENDED_V2_EXECUTION/START_STATE.json",
+      "expected": "a3fe1f2714c06aa3cdc1561273d21cc463fb438e8f70e551af99816c20fb7bbb",
+      "actual": "a3fe1f2714c06aa3cdc1561273d21cc463fb438e8f70e551af99816c20fb7bbb"
+    },
+    {
+      "path": "AMENDED_V2_EXECUTION/VERIFICATION.json",
+      "expected": "e2f4bc57e1e031a719689f60c1de8823e5bc7dc1a9e52d8f847b4225c78b900d",
+      "actual": "e2f4bc57e1e031a719689f60c1de8823e5bc7dc1a9e52d8f847b4225c78b900d"
+    },
+    {
+      "path": "AMENDED_V2_EXECUTION/WITHDRAWAL_ROWS.json",
+      "expected": "40d8099d01e144e6f04c6e3e7a01b79621840ddcd8a9669f120885a2fd76c860",
+      "actual": "40d8099d01e144e6f04c6e3e7a01b79621840ddcd8a9669f120885a2fd76c860"
+    },
+    {
+      "path": "AMENDED_V2_EXECUTION/apply_verify.py",
+      "expected": "37f1d23012cc0a32428b80889478a05fdc5b8a497f48d54fff059b036d9e64cf",
+      "actual": "37f1d23012cc0a32428b80889478a05fdc5b8a497f48d54fff059b036d9e64cf"
+    },
+    {
+      "path": "APPROVED_REVIEW/FACTORY_AMENDED_V2_REVIEW_2026-10-19_135012.zip",
+      "expected": "182016aa2bd9ad6119ea1e63583f7155db6e3c86af4b2456f1294c073d695ba7",
+      "actual": "182016aa2bd9ad6119ea1e63583f7155db6e3c86af4b2456f1294c073d695ba7"
+    },
+    {
+      "path": "COMMIT_PATHS.txt",
+      "expected": "020ed70d75c9549d4bfa34974760364c946038acc435913b7418673f4e556f52",
+      "actual": "020ed70d75c9549d4bfa34974760364c946038acc435913b7418673f4e556f52"
+    },
+    {
+      "path": "QA_PHASE4/REPAIR_QA_P4/DIRECTOR_DECISIONS_V2.md",
+      "expected": "e34922ddb3177930e8ade6e56dae65883c31878f09c2493715df952724d59fef",
+      "actual": "e34922ddb3177930e8ade6e56dae65883c31878f09c2493715df952724d59fef"
+    },
+    {
+      "path": "README.md",
+      "expected": "9a909e84ae75376fde39026dbd3831268e73fb32ab9ae833f5c15a85ebea2498",
+      "actual": "9a909e84ae75376fde39026dbd3831268e73fb32ab9ae833f5c15a85ebea2498"
+    },
+    {
+      "path": "REPAIR_COMMIT.diff",
+      "expected": "e1e9642d0c267fff7f36c6c910d0e5fe85bee77eac405a4a349312e9748db1c9",
+      "actual": "e1e9642d0c267fff7f36c6c910d0e5fe85bee77eac405a4a349312e9748db1c9"
+    },
+    {
+      "original": "AMENDED_V2/JARVIS_FABLE_HANDOFF.md",
+      "review_equal": true
+    },
+    {
+      "original": "AMENDED_V2_EXECUTION/COMMIT_RECEIPT.json",
+      "review_equal": true
+    },
+    {
+      "original": "AMENDED_V2_EXECUTION/FABLE_HANDOFF.md",
+      "review_equal": true
+    },
+    {
+      "original": "AMENDED_V2_EXECUTION/PUSH_RECEIPT.json",
+      "review_equal": true
+    },
+    {
+      "original": "QA_PHASE4/REPAIR_QA_P4/DIRECTOR_DECISIONS_V2.md",
+      "review_equal": true
+    }
+  ]
+}

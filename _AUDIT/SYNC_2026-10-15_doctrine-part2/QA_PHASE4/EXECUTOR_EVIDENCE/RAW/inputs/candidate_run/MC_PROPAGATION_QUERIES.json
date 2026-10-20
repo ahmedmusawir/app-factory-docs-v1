@@ -1,0 +1,23 @@
+{
+  "scope": "34 tier +4 workflow documents +25 template Markdown files +MANIFEST/CHANGELOG; archives excluded",
+  "command_shape": "Python re equivalent of rg -n -i -e PATTERN, with actual Markdown table context",
+  "queries": {
+    "MC01-pointer": "Historical external example|Two real FFMs are available",
+    "MC02-history": "^#{1,6} .*Version History|^## 12\\. Versioning|Factory DocSet sync:",
+    "MC04-lifecycle": "Blueprint lifecycle|APP_FACTORY_BLUEPRINT lifecycle|Phase 0|Phase 5|four-role pattern",
+    "MC05-engine-table": "\\| Engine 1|\\| Engine 2|\\| Post-FFM review|\\| RRM",
+    "MC06-review-checkpoints": "after FFM|post-FFM|Engine 2|clean review|approved.*repair",
+    "MC07-ownership-freeze": "Engineer produces alongside|Architect.*DATA_CONTRACT|Designer.*UI_SPEC|folder FREEZES|freeze doctrine applies|acceptance criteria.*froz|declared.*lanes",
+    "MC08-status-closeout": "\\*\\*Status:\\*\\*|proposed set differs|installation.*pending",
+    "MC10-bump-guidance": "How this stays current|bump procedure|CI auto-generation",
+    "MC14-template-plan": "TEMPLATE_INSTALL_PLAN|PHASE_2_TEMPLATE_TRANSLATIONS",
+    "forbidden-active-contradictions": "folder FREEZES here|freeze doctrine applies to attackers|This is the output the Engineer produces alongside working code\\.|Phase 3: ENGINEER \\(Data & Code\\)|\\*\\*Historical external example pointer[^\\n]*\\|"
+  },
+  "files": 64,
+  "hits": 335,
+  "counts": {
+    "CONSISTENT": 288,
+    "HISTORY": 47
+  },
+  "active_forbidden_hits": 0
+}

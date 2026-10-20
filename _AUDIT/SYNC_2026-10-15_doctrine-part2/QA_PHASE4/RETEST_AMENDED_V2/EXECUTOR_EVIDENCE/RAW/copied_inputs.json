@@ -1,0 +1,67 @@
+[
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/INPUTS/FACTORY_QA_P4_VERDICT_HANDBACK_2026-10-19_122452.zip",
+    "source": "/home/moose/Downloads/FACTORY_QA_P4_VERDICT_HANDBACK_2026-10-19_122452.zip",
+    "equal": false
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/INPUTS/candidate_run/BOUND_EXECUTION_INDEX.json",
+    "source": "/tmp/qa-amended-v2-i1gnt5qm/parent/_AUDIT/SYNC_2026-10-15_doctrine-part2/BOUND_EXECUTION_INDEX.json",
+    "equal": true
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/INPUTS/candidate_run/POST_VERIFICATION_STATUS_TRANSITIONS.json",
+    "source": "/tmp/qa-amended-v2-i1gnt5qm/parent/_AUDIT/SYNC_2026-10-15_doctrine-part2/POST_VERIFICATION_STATUS_TRANSITIONS.json",
+    "equal": true
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/INPUTS/candidate_run/UPDATE_MAP.md",
+    "source": "/tmp/qa-amended-v2-i1gnt5qm/parent/_AUDIT/SYNC_2026-10-15_doctrine-part2/UPDATE_MAP.md",
+    "equal": true
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/INPUTS/candidate_run/GATE2_APPROVAL_RECORD_2026-10-17.md",
+    "source": "/tmp/qa-amended-v2-i1gnt5qm/parent/_AUDIT/SYNC_2026-10-15_doctrine-part2/GATE2_APPROVAL_RECORD_2026-10-17.md",
+    "equal": true
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/INPUTS/QA_PHASE4/QA_LEAD_VERDICT.md",
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/QA_LEAD_VERDICT.md",
+    "equal": true
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/INPUTS/candidate_run/QA_RETEST_AF01/DIRECTOR_DECISIONS.md",
+    "source": "/tmp/qa-amended-v2-i1gnt5qm/parent/_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/DIRECTOR_DECISIONS.md",
+    "equal": true
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/INPUTS/candidate_run/QA_RETEST_AF01/DOCSET_SYNC_ACCEPTANCE_SPEC_AMENDED_V1_R1.md",
+    "source": "/tmp/qa-amended-v2-i1gnt5qm/parent/_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01/DOCSET_SYNC_ACCEPTANCE_SPEC_AMENDED_V1_R1.md",
+    "equal": true
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/INPUTS/candidate_run/AMENDED_V1/SELECTED_EXACT_EDITS.json",
+    "source": "/tmp/qa-amended-v2-i1gnt5qm/parent/_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/SELECTED_EXACT_EDITS.json",
+    "equal": true
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/INPUTS/candidate_run/AMENDED_V1/AMENDMENT_V1_EDITS.json",
+    "source": "/tmp/qa-amended-v2-i1gnt5qm/parent/_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V1/AMENDMENT_V1_EDITS.json",
+    "equal": true
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/INPUTS/QA_PHASE4/REPAIR_QA_P4/REPAIR_FINDINGS.json",
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/REPAIR_QA_P4/REPAIR_FINDINGS.json",
+    "equal": true
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/INPUTS/QA_PHASE4/REPAIR_QA_P4/ENGINEER_REPAIR_PROMPT.md",
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/REPAIR_QA_P4/ENGINEER_REPAIR_PROMPT.md",
+    "equal": true
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V2/INPUTS/QA_PHASE4/EXECUTOR_EVIDENCE/MANUAL_READS.md",
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4/EXECUTOR_EVIDENCE/MANUAL_READS.md",
+    "equal": true
+  }
+]

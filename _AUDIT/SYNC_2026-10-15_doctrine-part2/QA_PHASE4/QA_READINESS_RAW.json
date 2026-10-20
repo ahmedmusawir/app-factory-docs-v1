@@ -1,0 +1,318 @@
+[
+  {
+    "cmd": [
+      "git",
+      "ls-remote",
+      "--heads",
+      "origin",
+      "refs/heads/docs/sync-doctrine-part2-2026-10-15"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793\trefs/heads/docs/sync-doctrine-part2-2026-10-15\n",
+    "stderr": ""
+  },
+  {
+    "cmd": [
+      "git",
+      "ls-remote",
+      "origin",
+      "refs/heads/main"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "9c179392f79b70da099121fc357d3107ad3bb86e\trefs/heads/main\n",
+    "stderr": ""
+  },
+  {
+    "cmd": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793\n",
+    "stderr": ""
+  },
+  {
+    "cmd": [
+      "git",
+      "rev-parse",
+      "--abbrev-ref",
+      "HEAD"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "docs/sync-doctrine-part2-2026-10-15\n",
+    "stderr": ""
+  },
+  {
+    "cmd": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "cmd": [
+      "git",
+      "merge-base",
+      "--is-ancestor",
+      "ef35d26d82f1904da6ed33663ad647e4ee16fe98",
+      "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "cmd": [
+      "git",
+      "merge-base",
+      "--is-ancestor",
+      "9c179392f79b70da099121fc357d3107ad3bb86e",
+      "ef35d26d82f1904da6ed33663ad647e4ee16fe98"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "cmd": [
+      "git",
+      "log",
+      "--format=%H %P %an %cs %s",
+      "9c179392f79b70da099121fc357d3107ad3bb86e..20f71ee932ed21c0878cb3a0f39c6fbe90d0a793"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793 ef35d26d82f1904da6ed33663ad647e4ee16fe98 Ahmed Musawir 2026-10-18 chore(sync): engineering handoff and authorized publication for ef35d26\nef35d26d82f1904da6ed33663ad647e4ee16fe98 2e714b640f8490ea5b30e773736aca5c2381245b Ahmed Musawir 2026-10-18 docs(sync): apply approved 101-path doctrine update [FC/W/RUL/AD-01; AMENDED-v1 380 edits]\n2e714b640f8490ea5b30e773736aca5c2381245b 4ec73a40ce2ad91f0ed99b85638efc7fe375140d Ahmed Musawir 2026-10-18 chore(sync): record completed execution setup\n4ec73a40ce2ad91f0ed99b85638efc7fe375140d 356206ab293dc3a3987269636bb853c84aaf4ad3 Ahmed Musawir 2026-10-18 docs(10x): add standalone ABM and APBM reference playbooks\n356206ab293dc3a3987269636bb853c84aaf4ad3 9c179392f79b70da099121fc357d3107ad3bb86e Ahmed Musawir 2026-10-18 chore(sync): checkpoint approved execution preparation\n",
+    "stderr": ""
+  },
+  {
+    "cmd": [
+      "git",
+      "log",
+      "-1",
+      "--format=%cs",
+      "ef35d26d82f1904da6ed33663ad647e4ee16fe98"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "2026-10-18\n",
+    "stderr": ""
+  },
+  {
+    "cmd": [
+      "git",
+      "log",
+      "-1",
+      "--format=%ci",
+      "ef35d26d82f1904da6ed33663ad647e4ee16fe98"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "2026-10-18 21:28:07 +0600\n",
+    "stderr": ""
+  },
+  {
+    "cmd": [
+      "git",
+      "diff",
+      "--name-status",
+      "9c179392f79b70da099121fc357d3107ad3bb86e",
+      "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "M\t01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md\nM\t01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md\nM\t01_CONSTITUTION/STARTER_KIT_HANDBOOK.md\nM\t02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md\nM\t02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md\nM\t02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md\nM\t02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md\nM\t02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md\nM\t02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md\nM\t03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md\nM\t03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md\nM\t03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md\nA\t03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md\nM\t03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md\nM\t03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md\nM\t03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md\nM\t03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md\nA\t03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md\nM\t03_BUILD_METHODOLOGY/QA_PLAYBOOK.md\nA\t03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md\nM\t03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md\nA\t03_BUILD_METHODOLOGY/_assets/workflows/BIM_WORKFLOW.svg\nA\t03_BUILD_METHODOLOGY/_assets/workflows/FFM_CREATION.svg\nA\t03_BUILD_METHODOLOGY/_assets/workflows/FFM_DEPLOYMENT.svg\nA\t03_BUILD_METHODOLOGY/_assets/workflows/FFM_EXECUTION.svg\nA\t03_BUILD_METHODOLOGY/_templates/QAM/AC_EVIDENCE_MATRIX.md\nA\t03_BUILD_METHODOLOGY/_templates/QAM/AGENTS.md\nA\t03_BUILD_METHODOLOGY/_templates/QAM/AUTOMATION/README.md\nA\t03_BUILD_METHODOLOGY/_templates/QAM/CLAUDE.md\nA\t03_BUILD_METHODOLOGY/_templates/QAM/FINDINGS.md\nA\t03_BUILD_METHODOLOGY/_templates/QAM/GOVERNING/README.md\nA\t03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/ENGINEERING_HANDOFF.md\nA\t03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/FILE_INDEX.template.json\nA\t03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/README.md\nA\t03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/REVIEW_START_HERE.md\nA\t03_BUILD_METHODOLOGY/_templates/QAM/PARENT_ENTRY_ROUTING.md\nA\t03_BUILD_METHODOLOGY/_templates/QAM/QAM_APPROVAL.md\nA\t03_BUILD_METHODOLOGY/_templates/QAM/QAM_CERTIFICATION.md\nA\t03_BUILD_METHODOLOGY/_templates/QAM/QAM_CLEANUP_REPORT.md\nA\t03_BUILD_METHODOLOGY/_templates/QAM/QAM_ENTRY.md\nA\t03_BUILD_METHODOLOGY/_templates/QAM/QAM_EXECUTION_REPORT.md\nA\t03_BUILD_METHODOLOGY/_templates/QAM/QAM_MANIFEST.md\nA\t03_BUILD_METHODOLOGY/_templates/QAM/QAM_PACKAGING.md\nA\t03_BUILD_METHODOLOGY/_templates/QAM/QAM_PREFLIGHT.md\nA\t03_BUILD_METHODOLOGY/_templates/QAM/QAM_RECON_REPORT.md\nA\t03_BUILD_METHODOLOGY/_templates/QAM/QAM_RISK_REQUIREMENTS.md\nA\t03_BUILD_METHODOLOGY/_templates/QAM/QAM_STATE.md\nA\t03_BUILD_METHODOLOGY/_templates/QAM/QAM_TEST_PLAN.md\nA\t03_BUILD_METHODOLOGY/_templates/QAM/README.md\nA\t03_BUILD_METHODOLOGY/_templates/QAM/evidence/README.md\nA\t03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md\nA\t03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md\nA\t03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md\nA\t03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md\nM\t04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md\nM\t04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md\nM\t04_REFERENCE_MANUALS/AUTH_MANUAL.md\nM\t04_REFERENCE_MANUALS/DATABASE_MANUAL.md\nM\t04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md\nM\t04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md\nM\t04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md\nM\t05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md\nM\t05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md\nM\t05_DESIGN_SYSTEM/THEME_LIBRARY.md\nM\t05_DESIGN_SYSTEM/THEMING_MANUAL.md\nM\t05_DESIGN_SYSTEM/TOKEN_FILE.md\nM\t05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md\nA\t10x Lab/ABM_PLAYBOOK_v1_0.md\nA\t10x Lab/APBM_PLAYBOOK_v1_0.md\nM\tCHANGELOG.md\nM\tMANIFEST.md\nM\tRECOVERY.md\nA\t_ARCHIVE/API_AND_SERVICES_MANUAL_v1_1.md\nA\t_ARCHIVE/APP_ARCHITECTURE_MANUAL_v1_3.md\nA\t_ARCHIVE/APP_FACTORY_BLUEPRINT_v2_1.md\nA\t_ARCHIVE/APP_FACTORY_SKILLS_PLAYBOOK_v1_1.md\nA\t_ARCHIVE/ARCHITECT_PLAYBOOK_v2_2.md\nA\t_ARCHIVE/ARCHITECT_QUESTIONNAIRE_v2_2.md\nA\t_ARCHIVE/AUTH_MANUAL_v1_4.md\nA\t_ARCHIVE/BIM_PLAYBOOK_v1_0.md\nA\t_ARCHIVE/BUG_FIX_PLAYBOOK_v1_0.md\nA\t_ARCHIVE/COMPONENT_REGISTRY_v1_1.md\nA\t_ARCHIVE/DATABASE_MANUAL_v1_1.md\nA\t_ARCHIVE/DESIGNER_PLAYBOOK_v2_1.md\nA\t_ARCHIVE/ECOMMERCE_AND_PAYMENTS_MANUAL_v1_1.m",
+    "stderr": ""
+  },
+  {
+    "cmd": [
+      "git",
+      "diff",
+      "--name-only",
+      "9c179392f79b70da099121fc357d3107ad3bb86e",
+      "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+      "--",
+      "lints"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "cmd": [
+      "git",
+      "diff",
+      "--name-only",
+      "9c179392f79b70da099121fc357d3107ad3bb86e",
+      "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+      "--",
+      ".github"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "cmd": [
+      "git",
+      "diff",
+      "--name-only",
+      "9c179392f79b70da099121fc357d3107ad3bb86e",
+      "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+      "--",
+      "_SKILLS"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "cmd": [
+      "git",
+      "diff",
+      "--name-only",
+      "9c179392f79b70da099121fc357d3107ad3bb86e",
+      "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+      "--",
+      "CLAUDE.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "cmd": [
+      "git",
+      "diff",
+      "--name-only",
+      "9c179392f79b70da099121fc357d3107ad3bb86e",
+      "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+      "--",
+      "AGENTS.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "cmd": [
+      "git",
+      "diff",
+      "--name-only",
+      "9c179392f79b70da099121fc357d3107ad3bb86e",
+      "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+      "--",
+      "factory-corrections"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "cmd": [
+      "git",
+      "diff",
+      "--name-only",
+      "9c179392f79b70da099121fc357d3107ad3bb86e",
+      "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+      "--",
+      "factory-intake"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "cmd": [
+      "git",
+      "diff",
+      "--name-only",
+      "9c179392f79b70da099121fc357d3107ad3bb86e",
+      "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+      "--",
+      "_INBOX"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "cmd": [
+      "git",
+      "log",
+      "--diff-filter=M",
+      "--format=%h",
+      "9c179392f79b70da099121fc357d3107ad3bb86e..20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+      "--",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "cmd": [
+      "git",
+      "rev-parse",
+      "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793:_ARCHIVE/QA_PLAYBOOK_v1_0.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "bb41260f6b6f94372a682f04b313a451f2b3c4b1\n",
+    "stderr": ""
+  },
+  {
+    "cmd": [
+      "git",
+      "rev-parse",
+      "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793:_ARCHIVE/QA_PLAYBOOK_v1_0.md"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "bb41260f6b6f94372a682f04b313a451f2b3c4b1\n",
+    "stderr": ""
+  },
+  {
+    "cmd": [
+      "python3",
+      "-B",
+      "-I",
+      "lints/run_all.py"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "[ENCODING] PASS \u2014 0 hits across 36 live docs\n[RETIRED-TERMS] PASS \u2014 0 hits across 36 live docs\n[VERSIONED-REFS] PASS \u2014 0 hits across 36 live docs (34 canonical names loaded)\n[HEADER-PRESENCE] PASS \u2014 all 36 live docs carry the standard header\n=== DOCTRINE LINTS ===\n\n--- encoding_lint.py ---\n\n--- retired_terms_lint.py ---\n\n--- versioned_refs_lint.py ---\n\n--- header_lint.py ---\n\n=== RESULT: PASS ===\n",
+    "stderr": ""
+  },
+  {
+    "cmd": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

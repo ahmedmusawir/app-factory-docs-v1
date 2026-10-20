@@ -1,0 +1,197 @@
+[
+  {
+    "ac": "AC1",
+    "result": "PASS",
+    "evidence": "101 scope paths (33 M/68 A), two authorized 10x files, 664 run records, eight bookkeeping paths; protected diff empty. RAW/ac1_classification.json."
+  },
+  {
+    "ac": "AC2",
+    "result": "PASS",
+    "evidence": "101 installed/content/bound hash matches; 380 exact edits; 31 metadata residuals reconciled. RAW/ac2_installed_hashes.json; RAW/ac2_edit_replay.json; RAW/supplement_checks.json."
+  },
+  {
+    "ac": "AC3",
+    "result": "PASS",
+    "evidence": "97 IDs in each table; 89 selected/5 outside/3 NO; 94 YES/3 NO; W01–23/RUL01–15/AD01 covered. RAW/ac3_ledger_tables.json; RAW/reconciled_checks.json. O-7 applied."
+  },
+  {
+    "ac": "AC4",
+    "result": "PASS",
+    "evidence": "No blanket closure/verified-kit/rescore claim; NO rows have no edit IDs. RAW/supplement_claims.txt; RAW/inputs/candidate_run/SELECTED_SCOPE_LEDGER.md."
+  },
+  {
+    "ac": "AC5",
+    "result": "FAIL",
+    "evidence": "F01; MANUAL_READS.md AC5; RAW/finding_excerpts.txt."
+  },
+  {
+    "ac": "AC6",
+    "result": "FAIL",
+    "evidence": "F01; eight exact amendments pass, surrounding ownership contradiction remains. RAW/supplement_checks.json."
+  },
+  {
+    "ac": "AC7",
+    "result": "PASS",
+    "evidence": "Two checkpoint/clean-review/gate distinctions agree. MANUAL_READS.md AC7 and AC37; RAW/read_governance.txt."
+  },
+  {
+    "ac": "AC8",
+    "result": "PASS",
+    "evidence": "Canonical vocabulary/lifecycle references agree. MANUAL_READS.md AC8; RAW/read_ownership.txt."
+  },
+  {
+    "ac": "AC9",
+    "result": "FAIL",
+    "evidence": "F02; QAM prose present but Operations package tree omits artifacts. RAW/finding_excerpts.txt."
+  },
+  {
+    "ac": "AC10",
+    "result": "PASS",
+    "evidence": "Director Git/QA-branch sequence coherent. MANUAL_READS.md AC10; RAW/read_new.txt."
+  },
+  {
+    "ac": "AC11",
+    "result": "PASS",
+    "evidence": "Immutable contracts with writable evidence lanes. MANUAL_READS.md AC11."
+  },
+  {
+    "ac": "AC12",
+    "result": "PASS",
+    "evidence": "Cleanup and three exclusion surfaces; Q9.1–3 unchanged, Q9.4 new. MANUAL_READS.md AC12; RAW/final_checks.json."
+  },
+  {
+    "ac": "AC13",
+    "result": "PASS",
+    "evidence": "Seat duties distinct; no persona-based grant. MANUAL_READS.md AC13; RAW/supplement_personas.txt."
+  },
+  {
+    "ac": "AC14",
+    "result": "PASS",
+    "evidence": "Bounded boot/resume prompts and three entry templates agree. MANUAL_READS.md AC14; RAW/reconciled_checks.json."
+  },
+  {
+    "ac": "AC15",
+    "result": "FAIL",
+    "evidence": "F03; active filesystem-wins instruction. RAW/finding_excerpts.txt."
+  },
+  {
+    "ac": "AC16",
+    "result": "FAIL",
+    "evidence": "F04; 31 withdrawal rows reviewed; FC022/038/066 retain dependent recipes. MANUAL_READS.md withdrawal table."
+  },
+  {
+    "ac": "AC17",
+    "result": "PASS",
+    "evidence": "Domain invariants preserved; six distinctions explicit. MANUAL_READS.md AC17; RAW/ac17_preservation.json."
+  },
+  {
+    "ac": "AC18",
+    "result": "FAIL",
+    "evidence": "F05; required default missing across manuals. RAW/personal_data_matches.txt."
+  },
+  {
+    "ac": "AC19",
+    "result": "FAIL",
+    "evidence": "F06; retained prescriptive platform checklist. RAW/finding_excerpts.txt."
+  },
+  {
+    "ac": "AC20",
+    "result": "FAIL",
+    "evidence": "F07; universal CURRENT_APP instructions remain; all 13 historical containers pass. RAW/ac20_markdown_containers.json; RAW/reconciled_checks.json."
+  },
+  {
+    "ac": "AC21",
+    "result": "PASS",
+    "evidence": "Three draft v1.0 playbooks, single rows, no archives; QAM permitted substitutions. RAW/ac21_qam_draft.diff; RAW/final_checks.json."
+  },
+  {
+    "ac": "AC22",
+    "result": "PASS",
+    "evidence": "25 exact installed/source/translated files; 31 translation spans; AM1–3,11 SR rows,19 states; no populated results. RAW/ac22_template_hashes.json; RAW/ac22_classified_hits.json; RAW/reconciled_checks.json."
+  },
+  {
+    "ac": "AC23",
+    "result": "PASS",
+    "evidence": "31 archive blobs byte-equal BASE; planned live bumps. RAW/ac23_blobs.json."
+  },
+  {
+    "ac": "AC24",
+    "result": "PASS",
+    "evidence": "Restored QA blob bb41260f6b6f94372a682f04b313a451f2b3c4b1; historical restoration wording. RAW/automated_checks.json."
+  },
+  {
+    "ac": "AC25",
+    "result": "PASS",
+    "evidence": "34 tier docs; manifest header cells/reverse dependencies/appendix agree. RAW/ac25_manifest.json; RAW/final_checks.json."
+  },
+  {
+    "ac": "AC26",
+    "result": "PASS",
+    "evidence": "39 contiguous run rows at CHANGELOG lines 37–75; IDs/templates/SVG coverage. RAW/ac26_rows.json."
+  },
+  {
+    "ac": "AC27",
+    "result": "PASS",
+    "evidence": "31 single existing-table rows in required order; RECON fence closed; embedded histories unchanged. RAW/ac27_table_order.json; RAW/reconciled_checks.json."
+  },
+  {
+    "ac": "AC28",
+    "result": "PASS",
+    "evidence": "References resolve; eight canonical assets/workflow docs, embedded/linked; code JSON.stringify is not a Markdown link. RAW/ac28_links.json; RAW/asset_scope_resolution.json."
+  },
+  {
+    "ac": "AC29",
+    "result": "PASS",
+    "evidence": "Four lints pass; history-aware retired-label review. RAW/ac29_lints.txt; RAW/supplement_retired.txt."
+  },
+  {
+    "ac": "AC30",
+    "result": "PASS",
+    "evidence": "151 exact landing substitutions, 101 bound hashes, immutable frozen records; future hashes recomputed in scratch only. RAW/automated_checks.json; RAW/reconciled_checks.json."
+  },
+  {
+    "ac": "AC31",
+    "result": "PASS",
+    "evidence": "Lint exit0/36 docs/zero hits each; lints/.github unchanged; nine-hit baseline preserved. RAW/ac29_lints.txt; RAW/protected_diff.txt."
+  },
+  {
+    "ac": "AC32",
+    "result": "PASS",
+    "evidence": "Five-commit chain, clean worktree, main unchanged, no merges/debris/snapshot modification/skill drift; preservation commit exists outside ancestry. RAW/ac32_*.txt; RAW/end_pin.json."
+  },
+  {
+    "ac": "AC33",
+    "result": "PASS",
+    "evidence": "Correctly pending: all12 old spans present/new absent; required records present, verdict/cleanup/Architect closeout pending, CLOSEOUT_VERIFICATION absent. RAW/ac33_bound_fields.json; RAW/automated_checks.json."
+  },
+  {
+    "ac": "AC34",
+    "result": "PASS",
+    "evidence": "Owners/triggers and exclusions visible; no excluded work graded as required completion. MANUAL_READS.md AC34 and External exclusions."
+  },
+  {
+    "ac": "AC35",
+    "result": "PASS",
+    "evidence": "All _SKILLS bytes unchanged; pinned guards unchanged and no attributed edit. RAW/ac35_guard_hashes.json; RAW/ac32_skills.txt."
+  },
+  {
+    "ac": "AC36",
+    "result": "PASS",
+    "evidence": "Outside/partial rows preserve owner+trigger with no closure claim. RAW/ac36_remainder_rows.json."
+  },
+  {
+    "ac": "AC37",
+    "result": "PASS",
+    "evidence": "4 documents/SVGs; 7/18/8/24 steps exact; valid XML/actor vocabulary and historical PNG hashes. MANUAL_READS.md AC37; RAW/final_checks.json; RAW/snapshot_hashes.json."
+  },
+  {
+    "ac": "AC38",
+    "result": "PASS",
+    "evidence": "Engineering installation evidence inspected; independent25 hash/set/standing-row checks pass. Post-closeout README correctly pending. RAW/ac22_template_hashes.json; RAW/final_checks.json."
+  },
+  {
+    "ac": "10X-COPY",
+    "result": "PASS",
+    "evidence": "Both source/candidate SHA256 values exact; only4ec73a4 adds copies; zero integration hits. RAW/automated_checks.json; RAW/10x_commits.txt."
+  }
+]

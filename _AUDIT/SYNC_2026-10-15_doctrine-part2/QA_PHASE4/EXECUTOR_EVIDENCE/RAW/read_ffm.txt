@@ -1,0 +1,1050 @@
+
+FILE 03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md
+...
+39: 
+40: ## 1. What an FFM Is, In One Page
+41: 
+42: A **Frontend-First Module (FFM)** is a portable, self-contained folder dropped at `agent_docs/CURRENT_APP/<project>_<phase>_ffm/` inside a starter kit clone. It is the single source of truth that tells an AI coding tool (Claude Code, Codex CLI, Gemini CLI, etc.) **what to build, how to build it, and what not to touch.**
+43: 
+44: An FFM bundles:
+45: 
+46: - **Navigation** — entry-point files that route AI tools through the module
+47: - **Doctrine** — the operating rules, forbidden zones, and conflict resolution order
+48: - **Specification** — APP_BRIEF (scope), DATA_CONTRACT (data shapes), UI_SPEC (screens)
+49: - **Methodology** — a frontend-first skill and a phase-by-phase playbook
+50: - **Verification** — approval gates and a build checklist
+51: - **Evidence** — design references and extraction artifacts (when applicable)
+52: 
+...
+60: 
+61: ## 2. The Factory Roles and Delivery Pattern
+62: 
+63: The FFM preparation stream retains Designer, Extractor, Architect and Engineer responsibilities. The complete delivery workflow also includes independent QA Executor and QA Lead responsibilities and the Director’s approval and release authority. Each role’s outputs feed the next role’s inputs; the preparation diagram below is not a complete release lifecycle.
+64: 
+65: ### The Roles
+66: 
+67: ```text
+68: Current recon and approved brief / extraction evidence
+69: → Architect authors DATA_CONTRACT before Design
+70: → Designer authors UI_SPEC, tokens and the complete visual package
+71: → Architect reconciles assembly, prepares module-specific QAM and entry routing
+72: → Director approves package and releases Engineering
+73: → Engineer builds, verifies and fills factual handoff
+74: → Director commits/pushes the numbered engineering candidate
+75: → QA branch starts at that exact candidate; Q1 recon and independent plan
+76: → QA Lead approves; Director releases Q2 execution
+77: → Authorized repair/retest on the same QA branch as needed
+78: → QA Lead product verdict; required cleanup and acceptance
+79: → Architect closeout; bounded Engineering closeout; Director final Git actions
+80: → Review checkpoint 1: after FFM build and its independent QA finish.
+81: → Disposition findings; RRM only for approved findings requiring repairs; a clean review requires no RRM.
+82: → Continue Engine 1 phases/modules and QA; Engine 2 review only after all are closed.
+83: → Review, module QA, cleanup acceptance, Gate D and Director release retain separate responsibilities.
+84: ```
+85: 
+86: ---
+87: 
+...
+130: | 02 | ARCHITECTURE-MAP.md | Flow map of the source app's primary user journeys |
+131: | 03 | AGENT-LOOP.md | Request/response lifecycles (if AI-agent app) |
+132: | 04 | TOOL-SYSTEM.md | API surface (HTTP routes, external services) |
+133: | 05 | CONTEXT-AND-MEMORY.md | Session state, persistence, blob storage |
+134: | 06 | PROMPTS-AND-PERSONA.md | Screen inventory (typically the fattest doc) |
+135: | 07 | GUARDRAILS-AND-SANDBOXING.md | Auth gates, RLS, transport security |
+136: | 08 | ERROR-HANDLING-AND-RECOVERY.md | Try/except map, sentinels, retry patterns |
+137: | 09 | TESTS-AND-EVALS.md | Existing tests; GAP if none |
+138: | 10 | RAW-FINDINGS-AND-QUESTIONS.md | Drifts, dead code, top 5 discoveries |
+139: 
+...
+150: This discipline is what makes extraction trustworthy. Without it, the Architect can't tell what was verified versus guessed.
+151: 
+152: **Failure modes if Extractor work is incomplete:**
+153: - DATA_CONTRACT invents fields the source app doesn't have
+154: - UI_SPEC describes screens that don't match the source
+155: - Known discrepancies get "fixed" silently during conversion
+156: - The Architect spends time re-extracting instead of authoring
+157: 
+158: **When you might skip the Extractor:**
+...
+176: - Every section of every file is filled (no TBDs, no placeholders)
+177: - Forbidden zones are concrete and enforceable (Claudy can verify violations)
+178: - Hard gates are numbered, measurable, machine-verifiable where possible
+179: - Cross-references between files resolve (DATA_CONTRACT references match UI_SPEC references)
+180: - Conflict resolution order is stated clearly
+181: - The skill (`stark-frontend-first`) is bundled inside the FFM at `skills/`
+182: 
+183: **Inputs the Architect needs:**
+...
+201: **Produces:** Working code, tests, deployed services per the FFM's playbook.
+202: 
+203: **Outputs:**
+204: - TypeScript types per DATA_CONTRACT
+205: - Service-layer files per service contracts
+206: - Mock data fixtures
+207: - Components per UI_SPEC
+208: - Tests per the playbook
+209: - Deployed staging URLs
+210: - A retrospective in `playbook/RETROSPECTIVES/RUN_NNN_LESSONS.md`
+211: 
+212: **Handoff target:** Real code in the starter kit clone; deployed services; retrospective for the next FFM.
+213: 
+...
+239: 
+240: ### Parallel Opportunities
+241: 
+242: Extraction and evidence gathering may run in parallel with visual research. The Architect prepares DATA_CONTRACT from the approved brief and available verified extraction evidence before Design. The Designer authors UI_SPEC and the complete visual package; the Architect reconciles the assembly and prepares QAM before Engineering release.
+243: 
+244: The Engineer cannot run until the Architect ships a complete FFM.
+245: 
+246: ---
+247: 
+248: Review checkpoints and repair routing: `RRM_PLAYBOOK.md` §2; Engine vocabulary: `SOFTWARE_FACTORY_PLAYBOOK.md` §2. The FFM completion checklist must retain the post-FFM review and any approved RRM follow-up before downstream progression.
+249: 
+250: Revised workflow references: [FFM creation](_workflows/FFM_CREATION.md), [FFM execution and post-FFM review](_workflows/FFM_EXECUTION.md), [deployment and Gate D](_workflows/FFM_DEPLOYMENT.md), and [BIM through Engine 2](_workflows/BIM_WORKFLOW.md). Each includes a revised stick diagram and links its superseded original as history. The source diagrams are not current instructions.
+251: 
+252: ## 3. FFM Anatomy — The Folder Structure
+253: 
+254: Every newly authored module includes a complete, module-specific `QAM/` prepared by the Architect from `03_BUILD_METHODOLOGY/_templates/QAM/`. QA Lead owns the reusable playbook and standing requirements. Engineer fills factual engineering records and handoff; QA Executor performs independent Q1 recon and test planning; QA Lead approves the plan; Director releases execution; QA Executor performs Q2 and authorized retest; QA Lead adjudicates and certifies. `QAM_PLAYBOOK.md` owns this packaging and sequence. Existing modules already in flight retain their recorded sequence until an attributable amendment.
+255: 
+256: The FFM lives under the project’s `agent_docs/` module convention. Its `QAM/` records and support material are excluded from production inputs and artifacts, with verification under `DEPLOYMENT_PLAYBOOK.md`.
+257: 
+258: Every FFM follows the same folder structure. Names and content vary per project; structure does not.
+259: 
+260: ```
+...
+263: ├── CLAUDE.md             ← navigation contract (entry point for Claude Code)
+264: ├── README.md             ← operator's setup guide
+265: ├── ACCEPTANCE_SPEC.md    # approved acceptance contract; Engineer factual handoff
+266: ├── QAM/                  # Architect-prepared module QAM from accepted templates
+267: │   ├── CLAUDE.md         # QA Executor entry → QAM_ENTRY.md
+268: │   ├── AGENTS.md         # same QA Executor routing
+269: │   └── QAM_ENTRY.md      # module-specific QA instructions and required records
+270: ├── AGENTS.md             ← Codex CLI pointer → redirects to CLAUDE.md
+271: ├── GEMINI.md             ← Gemini CLI pointer → redirects to CLAUDE.md
+272: │
+273: ├── _project/             ← PROJECT-SPECIFIC content (filled per run)
+274: │   ├── CLAUDE.md         ← project spine (forbidden zones, tech stack, doctrine)
+275: │   ├── APP_BRIEF.md      ← scope, hard gates, success criteria
+276: │   ├── DATA_CONTRACT.md  ← types, service contracts, mock requirements
+277: │   └── UI_SPEC.md        ← screens, behavior, design system
+278: │
+279: ├── _design/              ← visual ground truth (filled by Designer + Operator)
+280: │   ├── README.md         ← what goes here, what's expected
+281: │   ├── tokens/           ← globals.css/.scss — THE token file (primary)
+...
+341: 
+342: The structure encodes three principles:
+343: 
+344: 1. **Discoverability** — an AI tool opening the FFM finds the entry point (`CLAUDE.md` at root) and follows the navigation chain. No hunting.
+345: 
+346: 2. **Separation of concerns** — project-specific content is isolated in underscore-prefixed folders so it can be replaced wholesale without touching the reusable parts.
+347: 
+348: 3. **Compounding leverage** — the reusable parts (skill, playbook, verification) get refined with every run. By Run 4 or 5, the playbook is tight enough for autonomous overnight runs.
+...
+376: 
+377: **`_design/` contains:** Screenshots of the source app (the canonical visual reference).
+378: **`_extraction/` contains:** The 11 Brain Drain extracts from the source repo.
+379: **DATA_CONTRACT** is authored: From the Brain Drain `04-TOOL-SYSTEM.md` (API surface).
+380: **UI_SPEC** is authored: From the Brain Drain `06-PROMPTS-AND-PERSONA.md` (screen inventory) plus the screenshots.
+381: **The "Known Discrepancies" section** is critical: drift between the source app and the desired Next.js version is preserved as documentation, not "fixed" silently.
+382: 
+383: ### Variant B — Greenfield FFM
+384: 
+385: **When to use:** No source app exists. The build is greenfield — starting from a starter kit with no prior implementation to mirror.
+386: 
+387: **Examples:** Cyber Pharma v1 Phase 1 FFM (June 2026) — foundation skeleton with no source app.
+388: 
+389: **`_design/` contains:** the Designer v2.0 package — token file (PRIMARY), style tile HTML+PNG, per-screen HTML+PNG (Canonical Page Method), component manifest, logos (the visual ground truth replaces source app screenshots).
+390: **`_extraction/` contains:** Either (a) data-shape evidence from upstream/related repos that inform what the new build should look like, or (b) a `README.md` documenting "N/A — greenfield, no source to extract."
+391: **DATA_CONTRACT** is authored by the Architect before Design, from the approved brief and verified interface/schema evidence.
+392: **UI_SPEC** is authored by the Designer from the approved brief, DATA_CONTRACT, screen HTML/PNG and token file; the Architect reconciles the assembled package.
+393: **The "Known Discrepancies" section** may not apply or may be very thin.
+394: 
+395: ### What Differs Between Variants
+396: 
+...
+399: | Source app exists | Yes | No |
+400: | `_design/` contents | Source app screenshots | Designer v2.0 package: token file (PRIMARY) + style tile HTML+PNG + screen HTML+PNG + component manifest |
+401: | `_extraction/` contents | 11 Brain Drain docs | Data-shape evidence from related repos OR N/A |
+402: | DATA_CONTRACT source | Architect uses approved extraction evidence before Design | Architect uses approved brief and verified interfaces before Design |
+403: | UI_SPEC source | Designer uses extraction evidence and screenshots; Architect reconciles | Designer authors from approved contracts and screen HTML/PNG; Architect reconciles |
+404: | Known Discrepancies relevance | High | Low / N/A |
+405: | Authoring time | Faster (evidence pre-extracted) | Slower (operator decisions take time) |
+406: | Failure mode | Inventing fields not in source | Operator decisions drift mid-build |
+407: 
+...
+424: 
+425: ### A Note On Variant Hybrids
+426: 
+427: Some FFMs are **hybrid**: greenfield work that inherits data shapes from a related repo's extracts. Example: Cyber Pharma v1 Phase 1 is greenfield (no source UI to convert), but uses FRANK_API extracts to inform the eventual Phase 3 data contract.
+428: 
+429: For hybrids:
+430: - Treat structurally as Greenfield (no source app screenshots in `_design/`)
+431: - Repurpose `_extraction/` to hold the related-repo evidence
+...
+442: 
+443: | Example | Project | Phase |
+444: |---|---|---|
+445: | `cyber_pharma_v1_phase1_ffm` | Cyber Pharma v1 | Phase 1 (Foundation Skeleton) |
+446: | `cyber_pharma_v1_phase2_ffm` | Cyber Pharma v1 | Phase 2 (Visual Fidelity) |
+447: | `super_admin_portal_phase1_ffm` | Super Admin Portal | Phase 1 |
+448: | `stark_reads_phase1_ffm` | Stark Reads | Phase 1 |
+449: 
+450: Rules:
+451: - All lowercase
+452: - Underscores between segments (no spaces, no hyphens — spaces break shell tools, hyphens collide with shadcn class conventions)
+...
+492: This is intentional. The alternative — a mega-FFM covering all 8 phases of a project — has been tried in older Factory iterations and consistently fails because:
+493: 
+494: - Scope is too large for any one AI session
+495: - Lessons from Phase 1 can't inform Phase 2 authoring if both are authored upfront
+496: - Operator can't approve at fine-grained boundaries
+497: - Forbidden zones can't be tuned per phase (Phase 1 forbids schema work; Phase 3 requires it)
+498: 
+499: ### Authoring Cadence
+500: 
+501: ```
+502: Phase 0 (Ignition)           → No FFM. Planning docs locked.
+503: Phase 1 (Foundation)         → Phase 1 FFM authored. Engineer runs. Retrospective.
+504: Phase 2 (Visual Fidelity)    → Phase 2 FFM authored, informed by Phase 1 retrospective.
+505: Phase 3 (Schema + RLS)       → Phase 3 FFM authored, informed by Phase 2 retrospective.
+506: ... etc.
+507: ```
+508: 
+509: Each FFM is authored **after** the previous phase's retrospective is in hand. Lessons compound.
+...
+532:     └── cyber_pharma_v1_phase1_ffm/       ← closed, kept for reference
+533: ```
+534: 
+535: The archived FFM is read-only reference material. Future architects can grep it for patterns; future engineers can read its retrospective.
+536: 
+537: Some teams prefer to keep all FFMs in `current_app/` and use git tags / branches to mark phase completion. Either approach works; the discipline is **don't delete FFMs**.
+538: 
+539: ---
+540: 
+541: ## 7. Authoring Sequence
+...
+546: 
+547: ```
+548: 0. RECON (STAGE 0) — confirm a CURRENT Recon Report exists for the target repo
+549:    (Engineer answers RECON_QUESTIONNAIRE read-only via stark-recon; the Architect
+550:    authors from the report — Disk establishes implementation facts; approved briefs govern scope and governing documents control their subjects. Route genuine conflicts to the Director.). No report → STOP; do not author a single FFM line.
+551: 1. Scaffold the folder structure (mkdir, empty files)
+552: 2. Author the root navigation files (CLAUDE.md, README.md, AGENTS.md, GEMINI.md)
+553: 3. Author _project/APP_BRIEF.md FIRST (scope must be locked)
+554: 4. Author _project/DATA_CONTRACT.md SECOND (data shapes inform UI)
+555: 5. Designer authors _project/UI_SPEC.md THIRD from the approved DATA_CONTRACT; Architect reconciles
+556: 6. Author _project/CLAUDE.md LAST (project spine informed by the above three)
+557: 7. Author _design/README.md (instructions for operator on what to drop in)
+558: 8. Author _extraction/README.md (instructions for operator on what to drop in)
+559: 9. Author skills/stark-frontend-first/* (CLAUDE.md, SKILL.md, workflow, references, templates)
+...
+562: 12. Self-check (cross-references resolve, hard gates measurable, structure complete)
+563: 13. Package (zip the folder for handoff to operator)
+564: 14. Return actual Designer and extraction outputs to the Architect for completeness and contract reconciliation.
+565: 15. Architect assembles the final approved package, includes ACCEPTANCE_SPEC.md and module-specific QAM/, verifies dependencies and declares writable output lanes.
+566: 16. Director approves the assembled revision and releases the Engineer on the numbered product branch. Engineering handoff, Q1, plan approval, release, Q2, conditional repair/retest, cleanup and closeout follow QAM_PLAYBOOK.
+567: ```
+568: 
+569: ### Why APP_BRIEF First, CLAUDE.md Last
+570: 
+571: - **APP_BRIEF.md FIRST** — scope must be locked before contracts or screens can be specified
+572: - **DATA_CONTRACT.md SECOND** — data shapes inform what the UI needs to display
+573: - **UI_SPEC.md THIRD** — screens are built from the data contract
+574: - **_project/CLAUDE.md LAST** — the spine is informed by the other three
+575: 
+576: If you author UI_SPEC before DATA_CONTRACT, you'll invent data shapes that don't match the source.
+577: If you author CLAUDE.md before the others, you won't know the conventions to encode.
+578: 
+579: > **DATA_CONTRACT ownership:** the Architect authors the complete contract before Design for both pipelines, using conversion extraction evidence where applicable. The Designer authors UI_SPEC; the Architect reconciles both with the approved brief before Engineering begins. A shell is not a completed contract.
+580: 
+581: ### Time Budget (Rough)
+582: 
+583: | Step | Time (single FFM, by an experienced Architect) |
+584: |---|---|
+585: | Scaffold + root nav files | 30 min |
+586: | APP_BRIEF | 45-60 min |
+587: | DATA_CONTRACT | 45-60 min |
+588: | UI_SPEC | 60-90 min |
+589: | _project/CLAUDE.md | 30-45 min |
+590: | _design/README + _extraction/README | 15 min |
+591: | skills/* | 45 min (mostly copied from previous FFM, lightly adapted) |
+592: | playbook/* | 60-90 min (mostly copied from previous FFM, phase-tuned) |
+...
+619: 
+620: ### 8.1 — Root `CLAUDE.md`
+621: 
+622: **Purpose:** The navigation contract for AI tools opening the FFM. Tells them what this module is, what reading order to follow, and what the precedence rules are.
+623: 
+624: **Audience:** Claudy (primary), Codex CLI / Gemini CLI / other coding agents (secondary).
+625: 
+626: **Required sections (in order):**
+...
+665: **Required sections (in order):**
+666: 
+667: 1. **What This Is** — brief context for the operator
+668: 2. **Quick Start** — numbered steps: stage the module, fill `_project/`, fill `_design/`, fill `_extraction/`, install skills, verify stack, open Claude Code, issue boot prompt
+669: 3. **Bridging The Module Into Your Starter Kit** — the PROJECT_POINTER.md pattern (or older "edit starter kit root CLAUDE.md" pattern, depending on the operator's setup)
+670: 4. **The Run** — overview of the sub-phases Claudy will execute
+671: 5. **Operator Cheat Sheet** — recovery prompts, forbidden zone violation handling, gate-skip recovery
+672: 6. **Troubleshooting** — common issues and fixes
+...
+688: | Boot prompt has `<PLACEHOLDER>` requiring operator find-replace | Specify the actual FFM folder name; less risk of error |
+689: | Troubleshooting is generic | Capture real failure modes from past runs |
+690: | No reference to PROJECT_POINTER pattern | Document if the operator's setup uses it |
+691: | Skills install commands skip the cleanup step | Always include `rm -rf /tmp/anthropic-skills` |
+692: 
+693: ### 8.3 — `AGENTS.md`
+694: 
+695: **Purpose:** Entry point for Codex CLI. Redirects to `CLAUDE.md`.
+...
+730: 
+731: ### Why These Two Redirect Files Exist
+732: 
+733: Codex CLI looks for `AGENTS.md` by convention. Gemini CLI looks for `GEMINI.md`. Both should redirect to the canonical doctrine in `CLAUDE.md` so the FFM stays single-source-of-truth regardless of which tool opens it.
+734: 
+735: If you skip these files, Codex CLI users will either fail to find the FFM or improvise their own conventions, breaking vendor neutrality.
+736: 
+737: ---
+738: 
+739: ## 9. File-By-File Authoring Guide — `_project/`
+740: 
+741: The `_project/` folder is the **project-specific** content of the FFM. Four files. Each has a specific purpose. Author them in order: APP_BRIEF → DATA_CONTRACT → UI_SPEC → CLAUDE.md.
+742: 
+743: ### 9.1 — `_project/APP_BRIEF.md`
+744: 
+745: **Purpose:** Scope and success criteria for this phase. The single source of truth for what's in scope and out of scope.
+746: 
+747: **Audience:** Claudy (primary), Operator (review).
+748: 
+749: **Required sections (in order):**
+...
+790: 
+791: Notice both are concrete, measurable, scoped to one phase.
+792: 
+793: ### 9.2 — `_project/DATA_CONTRACT.md`
+794: 
+795: **Purpose:** Every data shape, every service contract, every mock requirement. The contract that both mock implementations and real backend implementations must satisfy.
+796: 
+797: **Audience:** Claudy (primary).
+...
+804: 4. **TypeScript Types** — every interface needed in this phase, with code blocks
+805: 5. **Service Contracts** — every method the UI calls, signatures, mock behavior, BACKEND_SWAP_NOTES
+806: 6. **Mock Data Strategy** — what mocks are needed, where they live, what they cover
+807: 7. **Future Phase Decision Points** — questions deferred to later phases (explicitly NOT decided now)
+808: 8. **Conflict Resolution** — what happens when code wants a shape not in this contract
+809: 9. **Changelog**
+810: 
+811: **Length:** 300-600 lines for medium phases. Data-heavy phases can be longer.
+...
+827: | Forgetting edge cases | Document empty array, error sentinel, timeout patterns |
+828: | Documenting "ideal" instead of actual source | The contract describes reality, not aspiration |
+829: | Service methods without BACKEND_SWAP_NOTES | Add notes explaining what real backend will need to provide |
+830: | Adding Frank-domain types in Phase 1 | Phase 1 has no Frank tables — only auth-relevant types belong |
+831: 
+832: **Example service contract:**
+833: 
+834: ```typescript
+...
+838: // Declare only genuinely missing, approved project-domain services.
+839: ```
+840: 
+841: ### 9.3 — `_project/UI_SPEC.md`
+842: 
+843: **Purpose:** Screen-by-screen behavior. Every screen specified with layout, content, behavior, state, error handling.
+844: 
+845: **Audience:** Claudy (primary).
+...
+881: | Hand-waving state transitions | Name exact components (Spinner, ErrorState, EmptyState) |
+882: | Forgetting empty / loading / error states | Add for every data-dependent screen |
+883: | Missing markdown rendering spec (when assistant responses are markdown) | Specify `react-markdown + remark-gfm` and what plugins |
+884: | Inventing components not in UI_SPEC | If Claudy needs a new component mid-build, STOP and update spec first |
+885: | No touch target sizing for mobile | Add `min-h-[44px]` for buttons on mobile |
+886: 
+887: ### 9.4 — `_project/CLAUDE.md`
+888: 
+...
+928: 
+929: - **Forbidden zones match** between APP_BRIEF and `_project/CLAUDE.md` (intentional redundancy — must be identical)
+930: - **Hard gates in APP_BRIEF appear in `verification/PHASE_GATES.md`** (they're the same gates from different angles)
+931: - **Types in DATA_CONTRACT appear in `playbook/02-TYPES.md`** (the playbook references the contract)
+932: - **Screens in UI_SPEC appear in `playbook/05-COMPONENTS.md`** (the playbook references the spec)
+933: - **Tech stack in APP_BRIEF matches `_project/CLAUDE.md`** (intentional redundancy — must be identical)
+934: 
+935: If anything is inconsistent, fix BEFORE shipping the FFM.
+936: 
+...
+1010: **Failure handling:**
+1011: 
+1012: If operator activates Claudy with `_design/` empty:
+1013: - Claudy surfaces during Sub-Phase 0 (Discovery): "No brand tokens / screenshots found in `_design/`. Proceeding with shadcn defaults / inferring from extraction docs. Confirm or provide assets."
+1014: - Operator either provides or confirms "proceed with defaults"
+1015: - Sub-Phase 4 (Components) defaults to shadcn zinc baseline
+1016: 
+1017: This is graceful degradation, not failure — but ship time suffers because brand work happens after components instead of before.
+1018: 
+1019: ### 10.2 — `_extraction/README.md`
+...
+1062: ├── UPSTREAM_API_04-TOOL-SYSTEM.md             ← data shapes for future phases
+1063: ├── PRIOR_VERSION_00-REPO-PROFILE.md           ← patterns to preserve / fix
+1064: ├── PRIOR_VERSION_07-GUARDRAILS.md             ← security smells to NOT repeat
+1065: └── PRIOR_VERSION_10-RAW-FINDINGS.md           ← open issues from prior version
+1066: ```
+1067: 
+1068: **For Greenfield FFMs with NO related extracts:**
+1069: The folder may be effectively empty. Document this in `README.md`:
+...
+1071: ```markdown
+1072: # _extraction — N/A For Greenfield
+1073: 
+1074: This is a greenfield Phase 1 build. There is no source app to extract from.
+1075: 
+1076: Operator decisions for data shapes and patterns are documented in `_project/CLAUDE.md` § Operator Decisions, which serves as the evidence base for this phase.
+1077: 
+1078: Future phases may add extraction docs here if related work emerges.
+...
+1081: **Failure handling:**
+1082: 
+1083: If operator activates Claudy with `_extraction/` empty AND it should have content:
+1084: - Claudy surfaces during Sub-Phase 0: "No extraction docs found. Proceeding without source-of-truth evidence — risk of repeating known smells. Confirm or provide extracts."
+1085: - Operator either provides or confirms "proceed without"
+1086: - Risk: Sub-Phase 1 (Types) may invent fields without evidence
+1087: 
+1088: ### Why Operator-Filled
+1089: 
+1090: The Architect doesn't fill `_design/` or `_extraction/` because:
+...
+1154: ```yaml
+1155: ---
+1156: name: stark-frontend-first
+1157: description: Build the frontend of a Next.js application using a service layer with mock data as the sole swap point for later backend integration. Use this skill when a project is in frontend-first phase, when authoring a foundation skeleton (Phase 1 of a multi-phase build), or when the project's FFM declares mock-data mode. Enforces service layer discipline, mock data conventions, type-driven contracts, and forbids backend code authoring for entities not yet in scope.
+1158: ---
+1159: 
+1160: # Stark Frontend-First Skill
+1161: 
+...
+1166: 
+1167: 1. **Role definition** — "You are building the frontend of a Next.js app..."
+1168: 2. **Phase Sequence** — Discovery → Types → Services → Mocks → Components → Verification
+1169: 3. **Phase 0 — Discovery** (steps, verification gate)
+1170: 4. **Phase 1 — Types & Contract** (steps, verification gate)
+1171: 5. **Phase 2 — Service Layer** (steps, verification gate)
+1172: 6. **Phase 3 — Mock Data** (steps, verification gate)
+1173: 7. **Phase 4 — Components** (steps, verification gate)
+1174: 8. **Phase 5 — Verification** (steps, verification gate)
+1175: 9. **Worked Example** — at least one concrete code example
+1176: 10. **Anti-Patterns** — block these
+1177: 11. **When You're Done** — completion criteria
+1178: 12. **Version History**
+...
+1223: The skill is **mostly the same across FFMs**. Don't re-author from scratch. When starting a new FFM:
+1224: 
+1225: 1. Copy `skills/stark-frontend-first/` from the previous FFM
+1226: 2. Only edit phase-specific notes (e.g., "For Cyber Pharma v1 Phase 1, backend is forbidden zone for Frank-domain entities")
+1227: 3. Bump the version (e.g., `v1.0-cp1` for Cyber Pharma run 1)
+1228: 
+1229: The skill compounds value by being mostly stable across runs. Tuning is per-FFM but lightweight.
+1230: 
+...
+1283: ### 12.4 — Per-Sub-Phase Authoring Notes
+1284: 
+1285: **`01-DISCOVERY.md`**
+1286: - Claudy reads everything in order, summarizes back, proposes Sub-Phase 1 plan
+1287: - Produces NO code in this sub-phase — read-only
+1288: - Includes the structured acknowledgment format Claudy outputs
+1289: 
+1290: **`02-TYPES.md`**
+1291: - Claudy creates TypeScript types from DATA_CONTRACT § 4
+1292: - Verifies `npx tsc --noEmit` clean
+1293: - Verifies no Supabase imports in `/src/types/`
+1294: 
+1295: **`03-SERVICES.md`**
+...
+1298: - Verifies no Supabase imports in components
+1299: 
+1300: **`04-MOCKS.md`**
+1301: - Minimal mock data for Phase 1; expands for later phases
+1302: - Document each mock file as DELETABLE
+1303: - Verify no component imports `/src/mocks/`
+1304: 
+1305: **`05-COMPONENTS.md`**
+...
+1335: 5. **Time Estimates vs Actual** — calibration data
+1336: 6. **Anti-Patterns Observed** — propose additions to skill's `ANTI_PATTERNS.md`
+1337: 7. **New Patterns That Worked** — propose additions to skill's references
+1338: 8. **Open Questions For Next FFM**
+1339: 9. **Verdict** — one-sentence overall assessment
+1340: 
+1341: **Length:** 150-300 lines.
+1342: 
+...
+1345: Like the skill, the playbook is **mostly stable across FFMs**. When authoring a new FFM:
+1346: 
+1347: 1. Copy `playbook/` from the previous FFM
+1348: 2. Tune phase-specific content (e.g., "For Phase 1, this sub-phase produces only auth-related types")
+1349: 3. Update sub-phase 5 (Components) heavily — this is the most phase-specific
+1350: 4. Leave 01-04 mostly intact (Types / Services / Mocks discipline is consistent across phases)
+1351: 
+1352: ---
+1353: 
+...
+1378: - **Responsive rail:** determine the fit breakpoint from the pinned component and actual content. Below that breakpoint supply a reachable, keyboard-accessible drawer trigger; no vanished or untriggered sidebar. Verify on both sides of the breakpoint and at 375px. Do not infer a universal `md`, `lg` or `xl` rail rule.
+1379: - No control is desktop-only; no horizontal overflow at 375px; touch targets ≥ 44px.
+1380: - Verified at 375 / tablet / desktop, both themes.
+1381: - **Failure mode — refuse to advance:** "we'll fix mobile in a later cluster" (the named deferred-violation pattern).
+1382: 
+1383: Source of truth: root `CLAUDE.md` forbidden zone + `UI-UX-BUILDING-MANUAL` Rule Zero. (Added after a missed mobile shell shipped past the gates — RUN_002. Rule Zero existed as authoring advice but wasn't an enforced gate; this closes that.)
+1384: 
+1385: **Length:** 200-400 lines.
+1386: 
+1387: ### 13.2 — `verification/BUILD_CHECKLIST.md`
+...
+1416: Does the FFM's phase have a source app to convert?
+1417: │
+1418: ├─ YES → Run Brain Drain on the source. 11 docs → _extraction/
+1419: │         Then Architect authors DATA_CONTRACT from extracts.
+1420: │
+1421: └─ NO → Is the FFM building on patterns from a related repo?
+1422:     │
+1423:     ├─ YES → Pull relevant extracts from that repo's prior Brain Drain
+1424:     │         (or run Brain Drain on it now, custom-scoped to data shapes)
+1425:     │         Extracts → _extraction/
+1426:     │         Architect authors DATA_CONTRACT from operator decisions + extracts
+1427:     │
+1428:     └─ NO → Greenfield with no patterns to inherit.
+1429:               _extraction/ may stay empty (with README documenting "N/A")
+1430:               DATA_CONTRACT authored from operator decisions only
+1431:               Risk: more drift between authoring and reality
+1432: ```
+1433: 
+1434: ### When To Run Brain Drain — The Clearest Cases
+...
+1443: - Greenfield project with no related repos
+1444: - Foundation skeleton phases where the starter kit IS the spec
+1445: - Operator decisions cover all data shape questions
+1446: - Phase doesn't touch new entities (Phase 1 foundation skeleton has no Frank-domain work)
+1447: 
+1448: **Maybe run Brain Drain when:**
+1449: - Greenfield but building on a related team's API
+1450: - Security audit of an existing repo to inform new work
+...
+1459: | 02 | ARCHITECTURE-MAP.md | Flow map of the source app's primary user journeys |
+1460: | 03 | AGENT-LOOP.md | Request/response lifecycles (if AI-agent app) |
+1461: | 04 | TOOL-SYSTEM.md | API surface — HTTP routes, external services, integrations |
+1462: | 05 | CONTEXT-AND-MEMORY.md | Session state, persistence, blob storage patterns |
+1463: | 06 | PROMPTS-AND-PERSONA.md | Screen inventory (the fattest doc — every screen, every element) |
+1464: | 07 | GUARDRAILS-AND-SANDBOXING.md | Auth gates, RLS policies, transport security, secret management |
+1465: | 08 | ERROR-HANDLING-AND-RECOVERY.md | Try/except map, sentinels, retry patterns, failure modes |
+1466: | 09 | TESTS-AND-EVALS.md | Existing tests; GAP if none |
+1467: | 10 | RAW-FINDINGS-AND-QUESTIONS.md | Drifts, dead code, security smells, top 5 discoveries |
+1468: 
+...
+1476: - **GAP** — expected component not found; what was expected and where searched
+1477: - **QUESTION** — needs operator clarification; phrased as an explicit question
+1478: 
+1479: Without these labels, the Architect can't tell what's verified versus guessed. With them, the Architect can author DATA_CONTRACT with confidence.
+1480: 
+1481: ### How To Trigger Brain Drain
+1482: 
+1483: Brain Drain is a Stark Skill. The operator:
+...
+1542: - [Section to deprioritize]
+1543: - [Section to deprioritize]
+1544: 
+1545: Surface gaps or questions during the run. Plan before release, then execute continuously within the released extraction assignment; stop for concrete blockers or authority changes.
+1546: ```
+1547: 
+1548: ### Example Custom Prompts
+1549: 
+...
+1558: Document 07 (GUARDRAILS-AND-SANDBOXING) gets EXTRA depth.
+1559: 
+1560: Specifically:
+1561: - Every auth check, RLS policy, JWT validation, role check — with file:line citation
+1562: - Every secret accessed in code (env vars, config files, etc.) — with how it's read
+1563: - Every external service called — with what credentials are used
+1564: - Every input that crosses a trust boundary — request bodies, query params, file uploads
+1565: - Every "TODO security" or "FIXME auth" comment
+...
+1612: ### Custom Prompt Discipline
+1613: 
+1614: - **Don't replace the skill** — the custom prompt augments
+1615: - **Plan before release** — execute the approved assignment continuously, including checks and reporting; stop for concrete blockers, authority changes or required independent verdicts.
+1616: - **Don't lose evidence discipline** — even targeted runs use the 5-label system
+1617: - **Output to a clearly-named folder** — `_EXTRACTIONS_security_audit/` not just `_EXTRACTIONS/` so it doesn't overwrite the standard one
+1618: - **Document what you skipped** — so the next reader knows what's NOT in the extract
+1619: 
+...
+1662: The current project's Factory module lives at:
+1663: **`agent_docs/CURRENT_APP/<ffm_folder_name>/`**
+1664: 
+1665: On session start, read `CLAUDE.md` in that folder. That file is the project's navigation contract. It tells you which project we're building, what's in scope, what's forbidden, what phase we're in, and where to find the project handoff docs (APP_BRIEF, DATA_CONTRACT, UI_SPEC).
+1666: 
+1667: Before starting the FFM's Discovery sub-phase, also read these kit-level references:
+1668: - Governing starter-kit handbook: use its recorded canonical name, header version and Hub commit at the project-declared location; verify the referenced kit revision.
+1669: - Governing component registry: use its recorded canonical name, header version and Hub commit at the project-declared location.
+...
+1681: - **Self-documenting** — new collaborators see `PROJECT_POINTER.md` immediately
+1682: - **Per-repo state** — each starter kit clone has its own pointer, no syncing across repos
+1683: - **Survives session resets** — no need to remember to paste a long prompt; just point at the file
+1684: - **Easy phase transitions** — when Phase 1 closes, update one file to point at Phase 2 FFM
+1685: 
+1686: ### Pattern B's Companion: Global CLAUDE.md Precedence Block
+1687: 
+1688: If using Pattern B, the operator's global CLAUDE.md should still mention precedence:
+...
+1716: ### Stumble 1 — Vague Forbidden Zones
+1717: 
+1718: ❌ "No backend stuff" — interpretable, unenforceable
+1719: ✅ "No API routes in `/app/api/` beyond starter kit defaults. No Supabase migrations. No SQL beyond starter kit migrations. No RLS policy authoring."
+1720: 
+1721: Claudy needs concrete prohibitions it can verify before acting.
+1722: 
+1723: ### Stumble 2 — Inventing Mock Data Shapes
+1724: 
+1725: ❌ Author DATA_CONTRACT with shapes that "feel right"
+1726: ✅ Author DATA_CONTRACT from Brain Drain extraction evidence OR explicit operator decisions
+1727: 
+1728: Every field traces to evidence. If you can't trace it, STOP and surface.
+1729: 
+1730: ### Stumble 3 — Skipping The Mobile Layout
+1731: 
+1732: ❌ Document UI_SPEC as desktop-first, mention mobile in passing
+1733: ✅ Document mobile sketch FIRST per screen, desktop as progressive enhancement
+1734: 
+1735: If the spec describes desktop, the build will be desktop. Rule Zero is mobile-first.
+1736: 
+...
+1758: ### Stumble 7 — Authoring Out Of Order
+1759: 
+1760: ❌ Author CLAUDE.md first because "it's the most important"
+1761: ✅ Author APP_BRIEF → DATA_CONTRACT → UI_SPEC → CLAUDE.md, in order
+1762: 
+1763: CLAUDE.md is informed by the other three. Author it last with everything else in hand.
+1764: 
+1765: ### Stumble 8 — Skipping The Folder READMEs (`_design/`, `_extraction/`)
+...
+1781: ❌ FFM assumes one repo when the project has two (main app + superadmin app)
+1782: ✅ Decide upfront: same FFM staged in both repos, OR separate FFMs per repo
+1783: 
+1784: For Cyber Pharma v1: Phase 1 FFM is staged in BOTH main app and superadmin app repos (same content, two stagings). Decide before authoring.
+1785: 
+1786: ### Stumble 11 — Folder Tree Doesn't Match Disk
+1787: 
+1788: ❌ FFM's `CLAUDE.md` folder map shows `playbook/05-LOGIN.md` but actual file is `05-COMPONENTS.md`
+...
+1800: ### Stumble 13 — Sycophantic Retrospectives
+1801: 
+1802: ❌ "Everything went great, no issues!"
+1803: ✅ "Sub-Phase 3 took 2 attempts because the mock auth fixture didn't satisfy the AuthenticatedUser type — root cause was undocumented optionality in DATA_CONTRACT."
+1804: 
+1805: Honest retrospectives compound. Sycophantic ones decay the system.
+1806: 
+1807: ### Stumble 14 — Authoring While Tired
+...
+1815: ## 18. The Authoring Checklist
+1816: 
+1817: - [ ] Approved pre-implementation `ACCEPTANCE_SPEC.md` is present.
+1818: - [ ] Module-specific `QAM/` is prepared from the accepted template set; no independent QA result, approval or certification is prefilled.
+1819: - [ ] Parent entry files route Engineering to implementation and QA to `QAM/`; both QAM entry files assign QA Executor.
+1820: - [ ] Frozen contract and owner-specific writable output lanes are declared.
+1821: - [ ] Actual Designer/extraction outputs returned to Architect assembly and are approved before launch.
+1822: - [ ] Compile/test exclusion and build/deploy/artifact exclusion of `agent_docs/**` are declared and verifiable.
+1823: 
+1824: Use this checklist when authoring a new FFM. Walk it top to bottom. Don't skip steps.
+...
+1828: - [ ] Current Recon Report exists for the target repo (Stage 0 — RECON_QUESTIONNAIRE / stark-recon)
+1829: - [ ] PHASE_ROADMAP is locked; this FFM is for phase N
+1830: - [ ] Schedule review after FFM build and independent QA finish; disposition findings and route only approved repairs to RRM.
+1831: - [ ] Keep Engine 2 review after all Engine 1 phases/modules and their QA close; do not substitute review for QA or release.
+1832: - [ ] MASTER_APP_BRIEF is locked
+1833: - [ ] Designer outputs in hand (or operator confirmed "use defaults")
+1834: - [ ] Extractor outputs in hand (or operator confirmed "greenfield, N/A")
+1835: - [ ] Starter kit handbook and component registry available
+...
+1839: ### Scaffold
+1840: 
+1841: - [ ] Create FFM folder named `<project>_<phase>_ffm` (lowercase, underscores)
+1842: - [ ] Create module-specific `QAM/` from the accepted canonical templates, both QA entry routes and all required records; prepare `ACCEPTANCE_SPEC.md`; create `_project/`, `_design/`, `_extraction/`, `skills/stark-frontend-first/`, `playbook/RETROSPECTIVES/` and `verification/`.
+1843: - [ ] Create skill subfolders: `skills/stark-frontend-first/workflow/`, `references/`, `templates/`
+1844: 
+1845: ### Root Files
+1846: 
+...
+1852: ### `_project/` (Author In Order)
+1853: 
+1854: - [ ] `APP_BRIEF.md` — mission, hero outcome, in/out of scope, numbered hard gates, success criteria, risks, stumbles, effort estimate, handoff, constraints, phase transitions, changelog
+1855: - [ ] `DATA_CONTRACT.md` — tables in/out of play, triggers, TypeScript types, service contracts, mock strategy, future decision points, conflict resolution, changelog
+1856: - [ ] `UI_SPEC.md` — screen list, layouts, per-screen specs, error boundaries, design system, breakpoints, states, a11y, out of scope, references, changelog
+1857: - [ ] `CLAUDE.md` — project identity, hero, forbidden zones (redundant w/ APP_BRIEF), tech stack, ships, lessons-from-previous, skills, operating rules, TDD flow, gates, conflict resolution, version
+1858: 
+1859: ### `_design/`
+1860: 
+...
+1899: - [ ] Hard gates in APP_BRIEF match gates in PHASE_GATES.md and BUILD_CHECKLIST.md
+1900: - [ ] Tech stack in APP_BRIEF matches tech stack in `_project/CLAUDE.md`
+1901: - [ ] Forbidden zones in APP_BRIEF match forbidden zones in `_project/CLAUDE.md`
+1902: - [ ] Types in DATA_CONTRACT match types referenced in `playbook/02-TYPES.md`
+1903: - [ ] Screens in UI_SPEC match screens referenced in `playbook/05-COMPONENTS.md`
+1904: - [ ] Folder map in root `CLAUDE.md` matches `find . -type f` output
+1905: - [ ] Activation contract uses real folder name, no placeholders
+1906: - [ ] All cross-references between files resolve
+1907: 
+...
+1988: 
+1989: | Version | Date | Changes |
+1990: |---|---|---|
+1991: | 1.0 | 2026-06-03 | Initial playbook authored from FFM v1.0 (Cyberize conversion) + Cyber Pharma v1 Phase 1 FFM (greenfield foundation). Captures four-role factory pattern, two FFM variants (conversion + greenfield), full file-by-file authoring guides, custom Brain Drain prompts. |
+1992: 
+1993: ---
+1994: 
+1995: ## 20. Worked Examples
+...
+2008: 
+2009: **What to study:**
+2010: - `_project/APP_BRIEF.md` — 200+ lines, 15 hard gates, success criteria table, known discrepancies preserved
+2011: - `_project/DATA_CONTRACT.md` — 500+ lines, 12 types, 4 service contracts, mock data requirements, Phase 2 decision points
+2012: - `_project/UI_SPEC.md` — 600+ lines, 3 screens with full per-screen specs, Shadcn primitive mapping, mobile breakpoints
+2013: - `_project/CLAUDE.md` — 350+ lines, forbidden zones repeated, tech stack, operating rules, approval gates
+2014: - `playbook/01-DISCOVERY.md` through `08-VERIFICATION.md` — the full sub-phase playbook
+2015: - `skills/stark-frontend-first/` — the skill that travels with the module
+2016: 
+...
+2021: - The "Known Discrepancies" section pattern
+2022: - The reusable-vs-per-project separation
+2023: 
+2024: ### Example 2 — Greenfield FFM (Cyber Pharma v1 Phase 1, June 2026)
+2025: 
+2026: **Location:** `agent_docs/CURRENT_APP/cyber_pharma_v1_phase1_ffm/` (in both main app and superadmin app starter kit clones)
+2027: 
+2028: **Variant:** Greenfield (foundation skeleton)
+2029: 
+2030: **Source app:** None — building from audited starter kit clone
+2031: 
+2032: **Phase scope:** Phase 1 of 8 in the Cyber Pharma v1 roadmap (foundation skeleton only)
+2033: 
+2034: **What to study:**
+2035: - `CLAUDE.md` — adapted for greenfield, includes "What's Different About This FFM" section
+2036: - `_project/APP_BRIEF.md` — 15 hard gates including design system scaffolding (greenfield-specific)
+2037: - `_project/DATA_CONTRACT.md` — minimal types (auth.users, user_roles only), Frank-domain tables explicitly out of scope
+2038: - `_project/UI_SPEC.md` — placeholder pages + inherited starter kit screens, design system spec
+2039: - `_design/README.md` — operator-fills instructions for brand tokens and style tile
+2040: - `_extraction/README.md` — repurposed for data-shape evidence from Frank API + TONY_DEMO extracts
+2041: 
+2042: **What it taught us:**
+...
+2069: ├── README.md                          # Operator's setup guide
+2070: ├── AGENTS.md                          # Codex CLI pointer
+2071: ├── ACCEPTANCE_SPEC.md    # approved acceptance contract; Engineer factual handoff
+2072: ├── QAM/                  # Architect-prepared module QAM from accepted templates
+2073: │   ├── CLAUDE.md         # QA Executor entry → QAM_ENTRY.md
+2074: │   ├── AGENTS.md         # same QA Executor routing
+2075: │   └── QAM_ENTRY.md      # module-specific QA instructions and required records
+2076: ├── GEMINI.md                          # Gemini CLI pointer
+2077: │
+2078: ├── _project/                          # PROJECT-SPECIFIC content
+2079: │   ├── CLAUDE.md                      # Project spine, forbidden zones, tech stack
+2080: │   ├── APP_BRIEF.md                   # Scope, hard gates, success criteria
+2081: │   ├── DATA_CONTRACT.md               # Types, service contracts, mocks
+2082: │   └── UI_SPEC.md                     # Screens, behavior, design system
+2083: │
+2084: ├── _design/                           # DESIGNER+OPERATOR-FILLED visual ground truth
+2085: │   ├── README.md                      # What goes here (Architect authors)
+2086: │   ├── tokens/globals.css             # (designer) THE token file — primary
+...
+2141: 
+2142: ## 22. Appendix B — Boot Prompts
+2143: 
+2144: For newly authored modules, use the prepared module entry routes. Engineering launch does not approve QA execution. QA launch enters `QAM/` as QA Executor at the durable recorded state; Q1 produces the independent plan, Q2 requires QA Lead approval and Director release. Resume validates candidate, branch, approval and writable lanes before acting.
+2145: 
+2146: Three boot prompt templates the operator uses to activate Claudy.
+2147: 
+2148: ### B.1 — First Session (Fresh Boot)
+...
+2150: ```text
+2151: Identify your assigned seat and released assignment before acting.
+2152: Read applicable root instructions, then the project’s declared module pointer and its actual entry file.
+2153: Read the approved APP_BRIEF, DATA_CONTRACT and applicable UI_SPEC at their declared locations.
+2154: Engineering routes to implementation; QA routes into the prepared QAM as QA Executor.
+2155: Verify acceptance contract, candidate identity, governing snapshot pins and declared writable lanes.
+2156: Read-only filesystem/Git inspection and declared reporting writes are allowed.
+2157: Diagnostic changes need explicit authorization. Git mutations remain with the Director.
+2158: Missing or contradictory prerequisites: report evidence and STOP the affected work.
+2159: Q1 prepares the independent plan; Q2 requires QA Lead approval and Director release.
+2160: Continue within the released assignment; stop at its required boundaries.
+2161: Retain the post-FFM review after FFM build and independent QA finish.
+2162: Engine 2 review waits until every Engine 1 phase/module and its QA are closed.
+2163: Route review findings for disposition; RRM only for approved repairs; a clean review requires no RRM.
+2164: ```
+2165: 
+2166: The module declares actual project paths and available skills; no universal project-copy path is assumed. Mirror parent routing in CLAUDE.md and AGENTS.md. Do not prefill independent QA approvals or results.
+...
+2174: Confirm assigned seat, branch/candidate, approved contract revision, latest approval and writable lanes.
+2175: Use QAM’s durable state for QA; do not resume from historical prose alone.
+2176: Report the last verified completed step and next authorized action.
+2177: Continue within the still-valid released assignment; stop for a changed authority, concrete blocker or required independent verdict.
+2178: ```
+2179: 
+2180: ---
+2181: 
+...
+2195: ```
+2196: STOP. You skipped a sub-phase boundary without my approval.
+2197: 
+2198: Preserve and inventory the unapproved work. Report the affected paths; the Director authorizes recovery and performs any Git mutation.
+2199: 
+2200: Read the playbook for the current sub-phase and re-propose.
+2201: 
+2202: Do NOT advance until I approve.
+...
+2222: # CLAUDE.md — <PROJECT_NAME> / <PHASE_NAME> FFM
+2223: 
+2224: > **You are reading the entry point to a portable Factory module.**
+2225: > This file is the navigation contract for any AI coding tool that opens this folder.
+2226: > Read this first. Everything else is referenced from here.
+2227: 
+2228: ---
+2229: 
+...
+2264: 1. **This file** — navigation contract
+2265: 2. **`_project/CLAUDE.md`** — project spine
+2266: 3. **`_project/APP_BRIEF.md`** — scope, hard gates
+2267: 4. **`_project/DATA_CONTRACT.md`** — data shapes
+2268: 5. **`_project/UI_SPEC.md`** — screen behavior
+2269: 6. **`playbook/00-OVERVIEW.md`** — build plan
+2270: 7. **Each phase file under `playbook/`** — on demand
+2271: 8. **Skills** under `skills/` — auto-activate when triggers fire
+2272: 9. **`_extraction/`** — referenced on demand for ambiguity
+2273: 10. **`_design/`** — visual reference
+2274: 
+2275: Conflict resolution: the approved APP_BRIEF governs scope; DATA_CONTRACT and UI_SPEC govern their subjects. Managers route to those contracts and cannot change them. Genuine conflicts stop affected work for attributable Director resolution.
+2276: 
+2277: ---
+2278: 
+2279: ## Folder Map
+...
+2284: 
+2285: ## Activation Contract
+2286: 
+2287: When the operator stages this module into the <starter kit> and opens an AI tool, the first prompt should be:
+2288: 
+2289: > *(Insert the boot prompt with the actual FFM folder name.)*
+2290: 
+2291: ---
+...
+2323: 
+2324: ### C.2 — `_project/APP_BRIEF.md` Stub
+2325: 
+2326: Instantiate the single canonical APP_BRIEF template from ARCHITECT_QUESTIONNAIRE.md. Fill its pipeline-specific sections from attributable evidence; record the actual approval and revision. Do not fork the former duplicate stub. The approved package also contains the Architect-owned DATA_CONTRACT, Designer-owned UI_SPEC, ACCEPTANCE_SPEC and prepared QAM.
+2327: 
+2328: ---
+2329: 
+2330: ### C.3 — `_design/README.md` Stub
+...
+2480: ```yaml
+2481: ---
+2482: name: stark-frontend-first
+2483: description: Build the frontend of a Next.js application using a service layer with mock data as the sole swap point for later backend integration. Use this skill when a project is in frontend-first phase, when authoring a foundation skeleton (Phase 1 of a multi-phase build), or when the project's FFM declares mock-data mode. Enforces service layer discipline, mock data conventions, type-driven contracts, and forbids backend code authoring for entities not yet in scope.
+2484: ---
+2485: 
+2486: # Stark Frontend-First Skill
+2487: 
+...
+2517: |---|---|---|
+2518: | 1.0 | Jun 2026 | Initial playbook: FFM definition, four-role pattern, folder anatomy, two variants + router, phase scoping, authoring sequence, file-by-file guides, Brain Drain integration, kit bridging, stumbles, checklist, evolution rules, worked examples, appendices. |
+2519: | 1.1 | 2026-06-18 | Added mandatory **Gate M (mobile shell)** to §13.1 + authoring checklist (Rule Zero as an enforced gate, not just spec advice; after RUN_002 missed shipping a mobile shell). |
+2520: | 1.2 | 2026-07-07 | **Wave 3 (audit sync).** Step 0 — Recon added to §7 authoring sequence + the four-role diagram + both input checklists: current Recon Report required before authoring, per RECON_QUESTIONNAIRE / stark-recon (F-024 closure — the FFM side of the mutual pointer). Role 1 (Designer) + §4 Variant B + §10.1 `_design/` contract rewritten to the complete Designer v2.0 package: token file (PRIMARY), style tile HTML+PNG, per-screen HTML+PNG via the Canonical Page Method, component manifest (F-031); all 4 Stitch references removed (F-002). Per-pipeline DATA_CONTRACT ownership note added to §7, consistent with Blueprint/Handoff/Engineer (F-029). §4 marked as the DETAILED router source with a pointer to the Blueprint's constitution-level version (F-030 coordination). Standard header block (F-018); stale "v1.0" tail label corrected; canonical refs (F-011). Existing §7 step numbers and section numbers unchanged (D-019). |
+2521: | 1.3 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-003, FC-004, FC-005, FC-009, FC-014, FC-016, FC-017, FC-019, FC-025, FC-026, FC-027, FC-028, FC-029, FC-071, FC-072, FC-081, MC-01, MC-06, RUL-01, RUL-02, RUL-03, RUL-05, RUL-07, RUL-09, RUL-12, RUL-14, RUL-15, W08, W09, W10, W11, W12, W13, W23 |
+2522: 
+2523: ---
+2524: 
+
+FILE 03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md
+...
+33: 
+34: It does not replace:
+35: 
+36: - `TESTING_PLAYBOOK.md` — the source of truth for test-layer implementation.
+37: - `QA_PLAYBOOK.md` — the source of truth for independent quality gates and release verdicts.
+38: - `RECON_QUESTIONNAIRE.md` — the source of truth for ground-truth inspection before authoring.
+39: - Project-specific acceptance criteria — the definition of intended behavior.
+40: 
+41: This playbook defines the defect lifecycle that connects those documents.
+42: 
+...
+57: - Reviews whether the proposed fix addresses the real mechanism.
+58: - Identifies structural lessons that should move into factory doctrine.
+59: 
+60: The Architect **advises** on QA findings — architectural classification and routing recommendations (amendment vs new FIX vs FEAT vs ledger) — while the **Operator holds final adjudication authority**. Rejected findings are answered with evidence and never land on the Engineer's desk. Multiple accepted findings sharing one surface region may bundle into a single FIX module with per-finding gates.
+61: 
+62: ### Engineer
+63: 
+64: - Performs ground-truth recon.
+...
+69: - Runs targeted and full regression suites.
+70: - Produces evidence.
+71: 
+72: The Engineer may inspect Git read-only; all Git mutations remain Director-only and existing FIX cloud restrictions remain in force. Engineering fills factual handoff records within the approved acceptance contract. Changes beyond the released writable surface require explicit authorization before execution.
+73: 
+74: ### QA Lead
+75: 
+76: - Reviews the reproduction, root-cause claim, test plan, and evidence independently.
+...
+99:   ↓
+100: Reproduction
+101:   ↓
+102: Read-Only Recon
+103:   ↓
+104: Root-Cause Mechanism
+105:   ↓
+106: Fix Plan and Approval
+...
+151: - “Occurs only on Cloud Run, not localhost.”
+152: - “Appears when the Supabase response exceeds approximately one second.”
+153: 
+154: If the defect cannot be reproduced, keep it open as **Unconfirmed** and define the next evidence-gathering step. Do not invent a cause.
+155: 
+156: ---
+157: 
+158: ## 6. Rule 2 — Separate Evidence from Hypothesis
+...
+241: - SSL,
+242: - Cloud Run configuration,
+243: - secret mapping,
+244: - OAuth callback URLs,
+245: - storage permissions,
+246: - external-service connectivity.
+247: 
+248: ### Data-Integrity Defect
+...
+263: 
+264: Examples:
+265: 
+266: - RLS bypass,
+267: - privilege escalation,
+268: - PHI exposure,
+269: - internal error leakage,
+270: - service-role key exposure.
+...
+316: - another FIX,
+317: - a FEAT module,
+318: - `SECURITY_FINDINGS.md`,
+319: - `CLEANUP_BACKLOG.md`,
+320: - or a documented follow-up question.
+321: 
+322: The smallest correct fix is preferred over the broadest elegant rewrite.
+323: 
+...
+348: - the expected result,
+349: - where the step lives in Gate Q or Gate D.
+350: 
+351: Do not create tests for deprecated behavior that is scheduled for removal. Record that decision in `CLEANUP_BACKLOG.md`.
+352: 
+353: A bug should be discovered once, not repeatedly rediscovered.
+354: 
+355: ---
+...
+428: Required for:
+429: 
+430: - authentication round trips,
+431: - session persistence,
+432: - latency-sensitive behavior,
+433: - Cloud Run and Supabase connectivity,
+434: - secret mapping,
+435: - DNS and HTTPS,
+...
+560: 
+561: ## 16. FIX Module Anatomy (the manager grammar)
+562: 
+563: A FIX executes as a Factory module: one folder, one `CLAUDE.md` manager, frozen from Engineer launch to STOP. The manager carries: mission (one sentence) · the diagnosis ("why this module exists" — the named mechanism, so the Engineer builds the right thing) · verified ground with provenance · **TO VERIFY FIRST** (the plan opens with file:line evidence for every fact the diagnosis rests on) · per-fix design with rulings · forbidden zones · numbered gates mapped to the original reproduction · launch procedure (Plan Mode, ONE message) · definition of done · the Operator launch line. Multiple adjudicated findings sharing a surface may bundle (field: FIX-002 carried F01+F02+F03; FIX-003 carried F06+F09) — each finding keeps its own gate. Migration kindness is doctrine: when a fix changes persisted shapes or keys, it adopts existing user state rather than orphaning it.
+564: 
+565: ---
+566: 
+567: ## 17. Module Identity
+...
+572: 
+573: ## 18. Required FIX Artifacts
+574: 
+575: Every newly authored module includes a complete, module-specific `QAM/` prepared by the Architect from `03_BUILD_METHODOLOGY/_templates/QAM/`. QA Lead owns the reusable playbook and standing requirements. Engineer fills factual engineering records and handoff; QA Executor performs independent Q1 recon and test planning; QA Lead approves the plan; Director releases execution; QA Executor performs Q2 and authorized retest; QA Lead adjudicates and certifies. `QAM_PLAYBOOK.md` owns this packaging and sequence. Existing modules already in flight retain their recorded sequence until an attributable amendment.
+576: 
+577: Every non-trivial FIX module should contain:
+578: 
+579: 1. `BUG_REPORT.md` (or the finding IDs + adjudication record when QA-born)
+580: 2. `FIX_PLAN.md` (the Engineer's Plan-Mode output, opening with TO-VERIFY-FIRST evidence)
+581: 3. **`ACCEPTANCE_SPEC.md` — mandatory handoff artifact** (exact filename locked Factory-wide; ownership per Factory doctrine: criteria seeded from the approved contract pre-implementation; the Engineer maintains and finalizes, never silently adds/removes/weakens/redefines a requirement): canonical module ID + owning app; objective; in/out of scope; numbered **`AC1, AC2, …`** acceptance requirements, testable and observable — a NEW Factory decision effective with this playbook; legacy handoffs used gate IDs (`X1–X7` etc.), which remain the convention for module-internal engineering gates, with a gates↔AC mapping table encouraged (never bare `A*` — reserved for recon assumption checklists); expected observable behavior per requirement; environment/setup prerequisites and every manual Coordinator step, called out FIRST; regression expectations; manual-only points; known limitations; follow-up work outside this contract. Established at planning, synchronized during implementation, finalized at handoff — never reverse-engineered afterward.
+582: 4. Regression test or deterministic regression checklist
+583: 5. Gate Q evidence
+584: 6. Gate D evidence when deployed
+...
+629: Evidence-labeled findings with file paths, logs, screenshots, traces, or database queries.
+630: 
+631: ## Root-Cause Mechanism
+632: The confirmed mechanism. If not confirmed, mark it as INFERENCE and keep status open.
+633: 
+634: ## Blast Radius
+635: Affected users, modules, tenants, data, environments, and workflows.
+636: 
+...
+705: 
+706: ### Drive-By Refactor
+707: 
+708: Expanding the FIX into unrelated cleanup.
+709: 
+710: ### Changelog Burial
+711: 
+712: Recording a structural lesson only in historical notes.
+...
+723: 
+724: ## 22. Field Case Studies (the validation record)
+725: 
+726: **FIX-001 (ADK-HARNESS, legacy) — the pointer that lost the argument.** Symptom: chat history evaporated on reload. Mechanism chain: persisted session pointer restored correctly, then a mount-effect merge let a *mocked* service's seeded fake ids overwrite it ("fetched wins" applied to fiction). Lessons banked: the Engineer's CRITICAL-FINDING behavior (persistence alone was inert without the merge fix — surfaced, not silently handled) is the model for plan-stage honesty; merge precedence against mocked sources must favor persisted truth, with a comment scheduling re-evaluation when the source goes real; final disposition used **BLOCKED-UPSTREAM** honestly when the residual failure proved to live beyond the module's boundary — a FIX may PASS on its own contract while the symptom's remainder transfers to another module's gate (it did: the upstream history defect was confirmed and cured by the next BIM, post-mortem).
+727: 
+728: **FIX-002 (ADK-HARNESS, legacy) — the QA-born triple.** Three adjudicated findings, one surface region, one module, per-finding gates; chatService deliberately unfrozen for exactly one string (scope stated, not smuggled). QA verdict PASS-WITH-FOLLOW-UP-FINDINGS produced four new findings — the lifecycle compounding exactly as designed.
+729: 
+730: **FIX-003 (ADK-HARNESS, legacy) — found by deliberately stressing the product.** F09 (mock pointers poisoning live mode via a shared persistence namespace) was discovered through deliberate mode-switching — formal exploratory/state-transition/contamination testing. Fix: mode-namespaced keys + one-time legacy adoption (migration kindness). F06 (hydration flash) rode along with a store-level hydration gate. The engagement's factory lesson is now §3's QA-Lead doctrine.
+731: 
+732: ---
+733: 
+734: ## 23. Version History
+...
+736: | Version | Date | Change |
+737: |---|---|---|
+738: | 0.1 | 2026-08-04 | Initial draft. Defines evidence-first bug lifecycle, root-cause mechanism rule, regression protection, Gate Q and Gate D, scope control, environment parity, severity, required artifacts, doctrine promotion, and closure criteria. |
+739: | 1.0 | 2026-08-10 | Field-validated against FIX-001/002/003 (ADK-HARNESS, legacy). Added: mandatory ACCEPTANCE_SPEC with Engineering/QA separation; app-suffixed module IDs; git-zero Engineer doctrine; QA-adjudication flow; FIX module anatomy; case studies. All v0.1 lifecycle rules confirmed by field use. Seamless merge of the v1.0 amendments kit (A1–A6, N1–N3). |
+740: | 1.1 | 2026-10-18 | Factory DocSet sync: approved workflow/security/reference corrections; preserved original; explicit exclusions per doctrine-part2 map. IDs: FC-012, FC-014, RUL-12, W21 |
+
+FILE 03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md
+...
+17: 
+18: ## 2. Shared Doctrine (inherited from the FACTORY level — not restated)
+19: 
+20: **Module identity and the QA-handoff contract are Factory-wide doctrine** (SOFTWARE_FACTORY_PLAYBOOK › Module Identity & QA Handoff): `<TYPE>-<NNN>-<APP-SLUG>` IDs, the mandatory `ACCEPTANCE_SPEC.md` with `AC*` requirements, the Engineering/QA separation, and QA verdict ownership (QA verdict → Operator final authority → Architect advisory). FEAT inherits these from the Factory level — never from BIM. Module *mechanics* shared with BIM (one-folder package, one CLAUDE.md manager, stage-gate lifecycle, freeze rule, Plan Mode, verify-first, read-only Git inspection with Director-only mutations and the existing BIM cloud restrictions, baseline-first regression, per-module failure policy, anti-patterns, Definition of Done) are documented in `BIM_PLAYBOOK.md` §4–§12 and apply to FEATs by reference. Below are the FEAT-specific deltas.
+21: 
+22: ## 3. FEAT-Specific Doctrine
+23: 
+24: ### 3.1 Launch conditions are first-class
+25: Features ride on top of moving systems. Every FEAT manager declares its launch condition in the status line AND in the Operator launch line itself (field pattern: *"Operator launch line (ONLY after BIM-002 closes)"*) — so even if future-you forgets, the manager remembers. Features never share a lane with a risky module: the riskiest module of a campaign carries zero passengers.
+26: 
+27: ### 3.2 Version doctrine: v1 now, v2 seeded, NOT built
+28: Ship the simplest capable version using what the platform already provides (field example: browser-native speech before premium TTS). The upgrade path is designed in — the capability isolated behind ONE swap point (a utility, a service function) — and the v2 design lives as a **seed note in the retrospective**, not as built code, not as new dependencies, not as env vars. Garnish (LLM-generated titles, premium voices, optimistic locking) is named as garnish and deferred out loud.
+29: 
+30: ### 3.3 Scope discipline against feature gravity
+31: Features attract siblings ("while we're adding copy, let's also…"). The manager's OUT-of-scope section says it loud, including: adjacent icons that stay decorative, input modalities not in scope (voice OUT ≠ dictation IN), and restyling beyond wiring what exists. QA-finding-born features cite their finding IDs and carry ONLY the adjudicated findings — rejected findings never smuggle in.
+32: 
+33: ### 3.4 Mode parity — where both modes support the feature
+34: When the application's modes (e.g., mock and live) both support a feature's surface, the feature must behave consistently in both — proven by a gate, not assumed. Some features are legitimately mode-specific; the manager declares mode scope explicitly. A feature that *secretly* depends on a live backend while claiming mode-agnosticism is a misclassified BIM.
+35: 
+36: ### 3.5 Accessibility is not a garnish
+37: When a feature IS the accessibility path (audio-first operators, keyboard paths), it carries normal-priority scheduling and its gates test the accessible experience itself (field gate: *"if it reads markdown symbols aloud, it fails"*).
+38: 
+...
+42: 
+43: ## 5. Definition of Done — delta only
+44: 
+45: Every newly authored module includes a complete, module-specific `QAM/` prepared by the Architect from `03_BUILD_METHODOLOGY/_templates/QAM/`. QA Lead owns the reusable playbook and standing requirements. Engineer fills factual engineering records and handoff; QA Executor performs independent Q1 recon and test planning; QA Lead approves the plan; Director releases execution; QA Executor performs Q2 and authorized retest; QA Lead adjudicates and certifies. `QAM_PLAYBOOK.md` owns this packaging and sequence. Existing modules already in flight retain their recorded sequence until an attributable amendment.
+46: 
+47: BIM_PLAYBOOK §12 applies, plus: the v2 seed recorded in the retrospective; any deferred garnish named in the acceptance spec's known-follow-up section so QA doesn't file it as a defect.
+48: 
+49: ## 6. Version History
+50: 
+51: | Version | Date | Change |

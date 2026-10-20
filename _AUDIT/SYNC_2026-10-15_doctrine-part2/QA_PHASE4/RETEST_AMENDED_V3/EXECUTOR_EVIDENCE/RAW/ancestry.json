@@ -1,0 +1,22 @@
+[
+  {
+    "ancestor": "9c179392f79b70da099121fc357d3107ad3bb86e",
+    "descendant": "ef35d26d82f1904da6ed33663ad647e4ee16fe98",
+    "exit": 0
+  },
+  {
+    "ancestor": "ef35d26d82f1904da6ed33663ad647e4ee16fe98",
+    "descendant": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "exit": 0
+  },
+  {
+    "ancestor": "20f71ee932ed21c0878cb3a0f39c6fbe90d0a793",
+    "descendant": "8dff354937bc7baf739370a9886497d9d5359186",
+    "exit": 0
+  },
+  {
+    "ancestor": "8dff354937bc7baf739370a9886497d9d5359186",
+    "descendant": "26b050fe70de66e74ec8d65bcf9287d4369a91f7",
+    "exit": 0
+  }
+]

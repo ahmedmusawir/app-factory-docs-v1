@@ -1,0 +1,40 @@
+{
+  "label": "ENGINEER-PROPOSED exact conditional closeout edits; part of map review, not current completion claims",
+  "transitions": [
+    {
+      "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+      "old": "**Status:** DRAFT FOR EXECUTABLE-MAP REVIEW \u2014 NOT INSTALLED",
+      "new": "**Status:** Active",
+      "occurrences": 1,
+      "trigger": "Only after approved exact map/spec, actual canonical landing and required verification; record evidence in RUN_SUMMARY. Not authorized or executed in Phase 2."
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "old": "**Status:** DRAFT FOR EXECUTABLE-MAP REVIEW \u2014 NOT INSTALLED",
+      "new": "**Status:** Active",
+      "occurrences": 1,
+      "trigger": "Only after approved exact map/spec, actual canonical landing and required verification; record evidence in RUN_SUMMARY. Not authorized or executed in Phase 2."
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "old": "**Status:** DRAFT FOR EXECUTABLE-MAP REVIEW \u2014 NOT INSTALLED",
+      "new": "**Status:** Active",
+      "occurrences": 1,
+      "trigger": "Only after approved exact map/spec, actual canonical landing and required verification; record evidence in RUN_SUMMARY. Not authorized or executed in Phase 2."
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "old": "The following proposed wording expresses that guidance for map review; pilot source records remain unchanged.",
+      "new": "The reviewer guidance below governs review; pilot source records remain unchanged.",
+      "occurrences": 1,
+      "trigger": "After exact wording approval and actual verified landing, together with Active transition."
+    },
+    {
+      "path": "03_BUILD_METHODOLOGY/_templates/QAM/README.md",
+      "old": "This proposed set differs only by the status/provenance translations enumerated in this run\u2019s `PHASE_2_TEMPLATE_TRANSLATIONS.json`; installation and translation approval remain pending;",
+      "new": "This installed set uses the approved status/provenance translations enumerated in this run\u2019s `PHASE_2_TEMPLATE_TRANSLATIONS.json`; installation evidence is recorded in the run\u2019s `TEMPLATE_INSTALL_VERIFICATION.md`;",
+      "occurrences": 1,
+      "trigger": "Only after Gate 2 approves translations and actual installed-file comparison passes for all 25 files; record source, approved translation and final installed hashes including this declared status transition."
+    }
+  ]
+}

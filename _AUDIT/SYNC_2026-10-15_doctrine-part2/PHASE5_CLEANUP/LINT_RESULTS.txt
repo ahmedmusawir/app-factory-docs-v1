@@ -1,0 +1,21 @@
+{
+  "command": [
+    "python3",
+    "lints/run_all.py"
+  ],
+  "cwd": "/tmp/phase5-closeout-av750xcs",
+  "exit": 0,
+  "stdout": "[ENCODING] PASS \u2014 0 hits across 36 live docs\n[RETIRED-TERMS] PASS \u2014 0 hits across 36 live docs\n[VERSIONED-REFS] PASS \u2014 0 hits across 36 live docs (34 canonical names loaded)\n[HEADER-PRESENCE] PASS \u2014 all 36 live docs carry the standard header\n=== DOCTRINE LINTS ===\n\n--- encoding_lint.py ---\n\n--- retired_terms_lint.py ---\n\n--- versioned_refs_lint.py ---\n\n--- header_lint.py ---\n\n=== RESULT: PASS ===\n",
+  "stderr": ""
+}
+
+{
+  "command": [
+    "python3",
+    "lints/run_all.py"
+  ],
+  "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+  "exit": 0,
+  "stdout": "[ENCODING] PASS \u2014 0 hits across 36 live docs\n[RETIRED-TERMS] PASS \u2014 0 hits across 36 live docs\n[VERSIONED-REFS] PASS \u2014 0 hits across 36 live docs (34 canonical names loaded)\n[HEADER-PRESENCE] PASS \u2014 all 36 live docs carry the standard header\n=== DOCTRINE LINTS ===\n\n--- encoding_lint.py ---\n\n--- retired_terms_lint.py ---\n\n--- versioned_refs_lint.py ---\n\n--- header_lint.py ---\n\n=== RESULT: PASS ===\n",
+  "stderr": ""
+}

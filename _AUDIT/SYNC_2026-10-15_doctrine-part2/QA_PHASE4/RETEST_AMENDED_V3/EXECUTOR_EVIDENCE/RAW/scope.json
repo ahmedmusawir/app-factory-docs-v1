@@ -1,0 +1,630 @@
+[
+  {
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "change": "modified",
+    "lane": "canonical",
+    "parent": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "d661a82006e700ae4c408009de785263a9a8e7c8"
+    },
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "d66de1cc3540068ec9b0531f016167d2102f36e8"
+    }
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "change": "modified",
+    "lane": "canonical",
+    "parent": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "cac8f71f66e5997e4558a12acf305674052e83df"
+    },
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "25f081906196e98c6937d5788d75a1c7e688c82e"
+    }
+  },
+  {
+    "path": "CHANGELOG.md",
+    "change": "modified",
+    "lane": "canonical",
+    "parent": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "81d8e4a1db06396e14fc6fdf62e70afd6c379fda"
+    },
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "1690c1f3af70254792e62b703be3d2ea887b52d3"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/AMENDMENT_IDENTITIES.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "3ff3a8540ec5baf17f3400c288ad44e515f92097"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/AMENDMENT_V3.md",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "894700481be6d083bcbeb5dcfdb5657cbc4140ed"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/AMENDMENT_V3_EDITS.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "e7457d345a278b19c6332ea0260746a1e6f45811"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/BOUND_EXECUTION_INDEX.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "c4dfd4302d415cdbc5eb144a48865f745d8d2e8a"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/CLOSEOUT_TRANSITIONS.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "e44c97faf45a09ed5e8e5a6ede0fa1c705086a86"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/CODE_PRESERVATION.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "25c7474a4b0ae5adbf652b23ed733c62c2550e0d"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/COMMANDS.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "ec77fdcfe656d5ed5214badc0a0130fca8ea8ca6"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/DELIVERY_RECEIPT.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "f12deb317f8f43ff8c944b9d027db5ba58ee5bc9"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/DIRECTOR_DECISIONS_V3.md",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "99396f089bf44e790b01b89d9189a20e589e8c6b"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/EXECUTION_PROPOSAL.patch",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "0cea7964108e4d790b47b57bd8930136501a2cb0"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/EXECUTION_PROPOSAL_INDEX.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "c4dfd4302d415cdbc5eb144a48865f745d8d2e8a"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/HANDOFF.md",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "10c66c435efa468c102927d967bb1e456d23d8d8"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/HUMAN_SUMMARY.md",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "2558512a37cc9007492320e4aafda9cbe4ceb487"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/INPUTS/FACTORY_QA_AMENDED_V2_VERDICT_HANDBACK_2026-10-19_193051.zip",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "323eecbfcd718e1a5a9b81c824135ec46c770a18"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/INPUTS/JARVIS_REPAIR_RECOMMENDATION.md",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "fcfeb4cdc1e2398dfc9ef7886f6902f51600be70"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/INPUTS/QA_LEAD_VERDICT_V2.md",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "756f4ecdd51a3398b2f35e7f13c3b4eb81c767e8"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/INPUTS/candidate_run/AMENDED_V2/BOUND_EXECUTION_INDEX.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "0d0d0b3547ce55230cba362458f5e72ca125a319"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/INPUTS/candidate_run/AMENDED_V2/SELECTED_EXACT_EDITS.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "fb15edb2a19cd31f66da66b9f1422bce5fad5ec3"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/INPUTS/candidate_run/BOUND_STATUS_TRANSITIONS.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "ed0d94ed9f0f39b4ab60f6d806892fd12d437060"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/INPUTS/candidate_run/QA_PHASE4/REPAIR_QA_P4/DIRECTOR_DECISIONS_V2.md",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "d0cb4c99508f435477ae528e3cbbb7e5740e1541"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/INPUTS/candidate_run/QA_RETEST_AF01/DOCSET_SYNC_ACCEPTANCE_SPEC_AMENDED_V1_R1.md",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "9a3370a60bc539917084892f7194d11fc4401076"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/LINT_OUTPUT.txt",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "c61cfee4344a089fc9e4f031dfe15e58bc3c0b1f"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/MANUAL_READS.md",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "a7ef1b5a0b5e5ade97710b9a929330083ed4372a"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/METADATA.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "d106cafebd2c5a10c174d8e5755af1ac76f6babb"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/PATH_VERIFICATION.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "e7b94f9822babfa1614db5f365549456b0b15740"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/PREPARATION_AUTHORITY.md",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "95ff78c38739eb89609128ada87589b2e4648188"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/PRESERVATION_HASHES.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "079df4017e8beadbd7370e707ddf731dfb07b5c1"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/PROPAGATION.tsv",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "e19e5b7b5247d175b82b3d323a3b4fef3e04b1ff"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/PROPOSED_CONTENT/04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "d66de1cc3540068ec9b0531f016167d2102f36e8"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/PROPOSED_CONTENT/04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "25f081906196e98c6937d5788d75a1c7e688c82e"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/PROPOSED_CONTENT/CHANGELOG.md",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "1690c1f3af70254792e62b703be3d2ea887b52d3"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/SELECTED_EXACT_EDITS.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "c3c7ab3bafeb0431259436dfe298fa6881d1c41c"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/VERIFICATION.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "c5cad6c5120dd439e78b7fdca0b86aebd10b13b8"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/generators/prepare.py",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "03a57db8398d4d65fecd793e175ba79eb5f0cdeb"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3/generators/verify.py",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "1f90ba83f398c185f5cd3be188d882897ed9fea8"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3_EXECUTION/APPLICATION_COMMANDS.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "8c9197283eaabe9f545f4859103b55611be6ea22"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3_EXECUTION/APPROVED_RECORD_PATHS.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "3b410d1dbf9e08a68d7e22a42a29b449e7467b6a"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3_EXECUTION/CLOSEOUT_TRANSITIONS.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "e44c97faf45a09ed5e8e5a6ede0fa1c705086a86"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3_EXECUTION/CODE_PRESERVATION.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "25c7474a4b0ae5adbf652b23ed733c62c2550e0d"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3_EXECUTION/COMMANDS.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "fcace4022496c7218018c0ef265a5a2d4cc8ac84"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3_EXECUTION/EXECUTION_PLAN.md",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "01e2b7bf446c1b2d766a171abecb67fca26cc022"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3_EXECUTION/LINT_OUTPUT.txt",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "c61cfee4344a089fc9e4f031dfe15e58bc3c0b1f"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3_EXECUTION/MANUAL_READS.md",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "a7ef1b5a0b5e5ade97710b9a929330083ed4372a"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3_EXECUTION/METADATA.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "d106cafebd2c5a10c174d8e5755af1ac76f6babb"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3_EXECUTION/PACKAGE_INTEGRITY.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "a7d3bd50978309c582ffdd0fa95c9742977712f9"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3_EXECUTION/PATH_VERIFICATION.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "e7b94f9822babfa1614db5f365549456b0b15740"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3_EXECUTION/PRESERVATION_HASHES.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "079df4017e8beadbd7370e707ddf731dfb07b5c1"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3_EXECUTION/PROPAGATION.tsv",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "e19e5b7b5247d175b82b3d323a3b4fef3e04b1ff"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3_EXECUTION/REMOTE_PREFLIGHT.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "1fd5416544736babea1545cf57da6c7132202601"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3_EXECUTION/START_STATE.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "f972ed325157d315386bc8db98d3293997336fef"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3_EXECUTION/STATE_CARRY_FORWARD.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "c913bca82d0e64fd9a32697e609d19222606bac1"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3_EXECUTION/VERIFICATION.json",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "2d2c971c2637e303eab2a22a67535e3dd7db9351"
+    }
+  },
+  {
+    "path": "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3_EXECUTION/verify_installed.py",
+    "change": "added",
+    "lane": "additive_record",
+    "parent": null,
+    "candidate": {
+      "mode": "100644",
+      "kind": "blob",
+      "blob": "af51622a10384a93f0c643296520c2517dc4a52a"
+    }
+  }
+]

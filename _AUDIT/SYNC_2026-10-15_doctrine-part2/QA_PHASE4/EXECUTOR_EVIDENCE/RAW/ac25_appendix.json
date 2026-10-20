@@ -1,0 +1,341 @@
+[
+  {
+    "doc": "APP_FACTORY_BLUEPRINT",
+    "computed": [
+      "DEPLOYMENT_PLAYBOOK",
+      "QA_PLAYBOOK"
+    ],
+    "recorded": [
+      "DEPLOYMENT_PLAYBOOK",
+      "QA_PLAYBOOK"
+    ]
+  },
+  {
+    "doc": "SOFTWARE_FACTORY_PLAYBOOK",
+    "computed": [
+      "API_AND_SERVICES_MANUAL",
+      "APP_ARCHITECTURE_MANUAL",
+      "AUTH_MANUAL",
+      "DATABASE_MANUAL",
+      "ECOMMERCE_AND_PAYMENTS_MANUAL",
+      "FRONTEND_FIRST_PLAYBOOK",
+      "QAM_PLAYBOOK",
+      "RECON_QUESTIONNAIRE",
+      "STARTER_KIT_HANDBOOK",
+      "STATE_MANAGEMENT_MANUAL"
+    ],
+    "recorded": [
+      "API_AND_SERVICES_MANUAL",
+      "APP_ARCHITECTURE_MANUAL",
+      "AUTH_MANUAL",
+      "DATABASE_MANUAL",
+      "ECOMMERCE_AND_PAYMENTS_MANUAL",
+      "FRONTEND_FIRST_PLAYBOOK",
+      "QAM_PLAYBOOK",
+      "RECON_QUESTIONNAIRE",
+      "STARTER_KIT_HANDBOOK",
+      "STATE_MANAGEMENT_MANUAL"
+    ]
+  },
+  {
+    "doc": "STARTER_KIT_HANDBOOK",
+    "computed": [],
+    "recorded": []
+  },
+  {
+    "doc": "ARCHITECT_PLAYBOOK",
+    "computed": [
+      "QAM_PLAYBOOK",
+      "SOFTWARE_FACTORY_PLAYBOOK"
+    ],
+    "recorded": [
+      "QAM_PLAYBOOK",
+      "SOFTWARE_FACTORY_PLAYBOOK"
+    ]
+  },
+  {
+    "doc": "ARCHITECT_QUESTIONNAIRE",
+    "computed": [],
+    "recorded": []
+  },
+  {
+    "doc": "DESIGNER_PLAYBOOK",
+    "computed": [
+      "TOKEN_FILE"
+    ],
+    "recorded": [
+      "TOKEN_FILE"
+    ]
+  },
+  {
+    "doc": "ENGINEER_PLAYBOOK",
+    "computed": [
+      "ARCHITECT_PLAYBOOK",
+      "QAM_PLAYBOOK"
+    ],
+    "recorded": [
+      "ARCHITECT_PLAYBOOK",
+      "QAM_PLAYBOOK"
+    ]
+  },
+  {
+    "doc": "HANDOFF_PACKAGE_PLAYBOOK",
+    "computed": [
+      "ARCHITECT_PLAYBOOK",
+      "COMPONENT_REGISTRY",
+      "FFM_PLAYBOOK",
+      "FRONTEND_BUILD_PHASE_PLAYBOOK",
+      "QAM_PLAYBOOK",
+      "SOFTWARE_FACTORY_PLAYBOOK",
+      "STARTER_KIT_HANDBOOK"
+    ],
+    "recorded": [
+      "ARCHITECT_PLAYBOOK",
+      "COMPONENT_REGISTRY",
+      "FFM_PLAYBOOK",
+      "FRONTEND_BUILD_PHASE_PLAYBOOK",
+      "QAM_PLAYBOOK",
+      "SOFTWARE_FACTORY_PLAYBOOK",
+      "STARTER_KIT_HANDBOOK"
+    ]
+  },
+  {
+    "doc": "RECON_QUESTIONNAIRE",
+    "computed": [
+      "DEPLOYMENT_PLAYBOOK"
+    ],
+    "recorded": [
+      "DEPLOYMENT_PLAYBOOK"
+    ]
+  },
+  {
+    "doc": "APP_FACTORY_SKILLS_PLAYBOOK",
+    "computed": [],
+    "recorded": []
+  },
+  {
+    "doc": "BIM_PLAYBOOK",
+    "computed": [
+      "DEPLOYMENT_PLAYBOOK",
+      "QAM_PLAYBOOK",
+      "RRM_PLAYBOOK",
+      "SOFTWARE_FACTORY_PLAYBOOK"
+    ],
+    "recorded": [
+      "DEPLOYMENT_PLAYBOOK",
+      "QAM_PLAYBOOK",
+      "RRM_PLAYBOOK"
+    ]
+  },
+  {
+    "doc": "BUG_FIX_PLAYBOOK",
+    "computed": [
+      "QAM_PLAYBOOK"
+    ],
+    "recorded": [
+      "QAM_PLAYBOOK"
+    ]
+  },
+  {
+    "doc": "DEPLOYMENT_PLAYBOOK",
+    "computed": [
+      "BUG_FIX_PLAYBOOK"
+    ],
+    "recorded": [
+      "BUG_FIX_PLAYBOOK"
+    ]
+  },
+  {
+    "doc": "FEAT_PLAYBOOK",
+    "computed": [
+      "QAM_PLAYBOOK"
+    ],
+    "recorded": [
+      "QAM_PLAYBOOK"
+    ]
+  },
+  {
+    "doc": "FFM_PLAYBOOK",
+    "computed": [
+      "APP_FACTORY_BLUEPRINT",
+      "ARCHITECT_QUESTIONNAIRE",
+      "DEPLOYMENT_PLAYBOOK",
+      "QAM_PLAYBOOK",
+      "RRM_PLAYBOOK"
+    ],
+    "recorded": [
+      "APP_FACTORY_BLUEPRINT",
+      "ARCHITECT_QUESTIONNAIRE",
+      "DEPLOYMENT_PLAYBOOK",
+      "QAM_PLAYBOOK",
+      "RRM_PLAYBOOK"
+    ]
+  },
+  {
+    "doc": "FRONTEND_BUILD_PHASE_PLAYBOOK",
+    "computed": [
+      "APP_FACTORY_BLUEPRINT",
+      "BUG_FIX_PLAYBOOK",
+      "QA_PLAYBOOK",
+      "SOFTWARE_FACTORY_PLAYBOOK"
+    ],
+    "recorded": [
+      "APP_FACTORY_BLUEPRINT",
+      "BUG_FIX_PLAYBOOK",
+      "QA_PLAYBOOK",
+      "SOFTWARE_FACTORY_PLAYBOOK"
+    ]
+  },
+  {
+    "doc": "FRONTEND_FIRST_PLAYBOOK",
+    "computed": [
+      "RECON_QUESTIONNAIRE"
+    ],
+    "recorded": [
+      "RECON_QUESTIONNAIRE"
+    ]
+  },
+  {
+    "doc": "QAM_PLAYBOOK",
+    "computed": [],
+    "recorded": []
+  },
+  {
+    "doc": "QA_PLAYBOOK",
+    "computed": [
+      "DEPLOYMENT_PLAYBOOK"
+    ],
+    "recorded": [
+      "DEPLOYMENT_PLAYBOOK"
+    ]
+  },
+  {
+    "doc": "RRM_PLAYBOOK",
+    "computed": [
+      "RECON_QUESTIONNAIRE"
+    ],
+    "recorded": [
+      "RECON_QUESTIONNAIRE"
+    ]
+  },
+  {
+    "doc": "TESTING_PLAYBOOK",
+    "computed": [],
+    "recorded": []
+  },
+  {
+    "doc": "API_AND_SERVICES_MANUAL",
+    "computed": [
+      "AUTH_MANUAL",
+      "HANDOFF_PACKAGE_PLAYBOOK"
+    ],
+    "recorded": [
+      "AUTH_MANUAL",
+      "HANDOFF_PACKAGE_PLAYBOOK"
+    ]
+  },
+  {
+    "doc": "APP_ARCHITECTURE_MANUAL",
+    "computed": [
+      "TESTING_PLAYBOOK"
+    ],
+    "recorded": [
+      "TESTING_PLAYBOOK"
+    ]
+  },
+  {
+    "doc": "AUTH_MANUAL",
+    "computed": [
+      "BUG_FIX_PLAYBOOK",
+      "COMPONENT_REGISTRY",
+      "TESTING_PLAYBOOK"
+    ],
+    "recorded": [
+      "BUG_FIX_PLAYBOOK",
+      "COMPONENT_REGISTRY",
+      "TESTING_PLAYBOOK"
+    ]
+  },
+  {
+    "doc": "DATABASE_MANUAL",
+    "computed": [],
+    "recorded": []
+  },
+  {
+    "doc": "ECOMMERCE_AND_PAYMENTS_MANUAL",
+    "computed": [
+      "TESTING_PLAYBOOK"
+    ],
+    "recorded": [
+      "TESTING_PLAYBOOK"
+    ]
+  },
+  {
+    "doc": "STATE_MANAGEMENT_MANUAL",
+    "computed": [
+      "ECOMMERCE_AND_PAYMENTS_MANUAL"
+    ],
+    "recorded": [
+      "ECOMMERCE_AND_PAYMENTS_MANUAL"
+    ]
+  },
+  {
+    "doc": "STRIPE_SUBSCRIPTIONS_PLAYBOOK",
+    "computed": [],
+    "recorded": []
+  },
+  {
+    "doc": "COMPONENT_REGISTRY",
+    "computed": [
+      "TOKEN_FILE"
+    ],
+    "recorded": [
+      "TOKEN_FILE"
+    ]
+  },
+  {
+    "doc": "GLOBAL_DESIGN_SYSTEM_HANDBOOK",
+    "computed": [],
+    "recorded": []
+  },
+  {
+    "doc": "THEME_LIBRARY",
+    "computed": [
+      "STARTER_KIT_HANDBOOK"
+    ],
+    "recorded": [
+      "STARTER_KIT_HANDBOOK"
+    ]
+  },
+  {
+    "doc": "THEMING_MANUAL",
+    "computed": [
+      "COMPONENT_REGISTRY",
+      "HANDOFF_PACKAGE_PLAYBOOK",
+      "STARTER_KIT_HANDBOOK"
+    ],
+    "recorded": [
+      "COMPONENT_REGISTRY",
+      "HANDOFF_PACKAGE_PLAYBOOK",
+      "STARTER_KIT_HANDBOOK"
+    ]
+  },
+  {
+    "doc": "TOKEN_FILE",
+    "computed": [],
+    "recorded": []
+  },
+  {
+    "doc": "UI_UX_BUILDING_MANUAL",
+    "computed": [
+      "APP_ARCHITECTURE_MANUAL",
+      "HANDOFF_PACKAGE_PLAYBOOK",
+      "TOKEN_FILE"
+    ],
+    "recorded": [
+      "APP_ARCHITECTURE_MANUAL",
+      "HANDOFF_PACKAGE_PLAYBOOK",
+      "TOKEN_FILE"
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+Command: ['python3', '-B', '-I', 'lints/run_all.py']
+Working directory: /tmp/cody-qa-amended-v1-6nto20fd/composed
+Exit: 0
+[ENCODING] PASS — 0 hits across 36 live docs
+[RETIRED-TERMS] PASS — 0 hits across 36 live docs
+[VERSIONED-REFS] PASS — 0 hits across 36 live docs (34 canonical names loaded)
+[HEADER-PRESENCE] PASS — all 36 live docs carry the standard header
+=== DOCTRINE LINTS ===
+
+--- encoding_lint.py ---
+
+--- retired_terms_lint.py ---
+
+--- versioned_refs_lint.py ---
+
+--- header_lint.py ---
+
+=== RESULT: PASS ===

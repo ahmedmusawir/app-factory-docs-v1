@@ -1,0 +1,2404 @@
+[
+  {
+    "ac": "AC37",
+    "name": "FFM_CREATION step 1",
+    "ok": false,
+    "detail": {
+      "markdown": "1. **Engineer** — Current recon; declared reporting writes",
+      "svg_position": 122
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_CREATION step 2",
+    "ok": false,
+    "detail": {
+      "markdown": "2. **Architect** — Author APP_BRIEF from current recon",
+      "svg_position": 166
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_CREATION step 3",
+    "ok": false,
+    "detail": {
+      "markdown": "3. **Director** — Approve scope and brief",
+      "svg_position": 205
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_CREATION step 4",
+    "ok": false,
+    "detail": {
+      "markdown": "4. **Architect** — DATA_CONTRACT before Design",
+      "svg_position": 232
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_CREATION step 5",
+    "ok": false,
+    "detail": {
+      "markdown": "5. **Designer** — UI_SPEC, tokens and visual artifacts",
+      "svg_position": 263
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_CREATION step 6",
+    "ok": false,
+    "detail": {
+      "markdown": "6. **Architect** — Reconcile assembly; prepare module QAM",
+      "svg_position": 303
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_CREATION step 7",
+    "ok": false,
+    "detail": {
+      "markdown": "7. **Director** — Approve package and release Engineering",
+      "svg_position": 345
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 1",
+    "ok": false,
+    "detail": {
+      "markdown": "1. **Engineer** — Build and self-check; factual QAM handoff",
+      "svg_position": 159
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 2",
+    "ok": false,
+    "detail": {
+      "markdown": "2. **Director** — Commit/push numbered engineering candidate",
+      "svg_position": 204
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 3",
+    "ok": false,
+    "detail": {
+      "markdown": "3. **Director** — QA branch at exact candidate commit",
+      "svg_position": 250
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 4",
+    "ok": false,
+    "detail": {
+      "markdown": "4. **QA Executor** — Q1 recon and independent test plan",
+      "svg_position": 289
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 5",
+    "ok": false,
+    "detail": {
+      "markdown": "5. **QA Lead** — Approve the specific QA plan",
+      "svg_position": 327
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 6",
+    "ok": false,
+    "detail": {
+      "markdown": "6. **Director** — Release Q2 execution",
+      "svg_position": 359
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 7",
+    "ok": false,
+    "detail": {
+      "markdown": "7. **QA Executor** — Q2 tests and evidence",
+      "svg_position": 383
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 8",
+    "ok": false,
+    "detail": {
+      "markdown": "8. **Engineer** — Conditional authorized repair on same QA branch",
+      "svg_position": 408
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 9",
+    "ok": false,
+    "detail": {
+      "markdown": "9. **Director** — Commit repaired candidate on the continuing QA branch",
+      "svg_position": 459
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 10",
+    "ok": false,
+    "detail": {
+      "markdown": "10. **QA Executor** — Independent retest of repair and regression",
+      "svg_position": 517
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 11",
+    "ok": false,
+    "detail": {
+      "markdown": "11. **QA Lead** — Product certification; approve cleanup retention",
+      "svg_position": 565
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 12",
+    "ok": false,
+    "detail": {
+      "markdown": "12. **QA Executor** — Authorized cleanup; retain durable evidence",
+      "svg_position": 618
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 13",
+    "ok": false,
+    "detail": {
+      "markdown": "13. **QA Lead** — Accept cleanup; preserve product verdict identity",
+      "svg_position": 666
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 14",
+    "ok": false,
+    "detail": {
+      "markdown": "14. **Architect** — Closeout instruction",
+      "svg_position": 720
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 15",
+    "ok": false,
+    "detail": {
+      "markdown": "15. **Engineer** — Bounded closeout",
+      "svg_position": 745
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 16",
+    "ok": false,
+    "detail": {
+      "markdown": "16. **Director** — Final commits, merge and push",
+      "svg_position": 766
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 17",
+    "ok": false,
+    "detail": {
+      "markdown": "17. **Reviewers** — Review checkpoint 1 after FFM build and independent QA",
+      "svg_position": 800
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 18",
+    "ok": false,
+    "detail": {
+      "markdown": "18. **Director** — Disposition review findings; RRM only for approved repairs",
+      "svg_position": 859
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_DEPLOYMENT step 1",
+    "ok": false,
+    "detail": {
+      "markdown": "1. **Architect** — Declare target, permissions, exclusion and recovery",
+      "svg_position": 152
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_DEPLOYMENT step 2",
+    "ok": false,
+    "detail": {
+      "markdown": "2. **QA Lead** — Required product QA verdict remains distinct",
+      "svg_position": 207
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_DEPLOYMENT step 3",
+    "ok": false,
+    "detail": {
+      "markdown": "3. **Director** — Release the verified candidate for deployment",
+      "svg_position": 255
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_DEPLOYMENT step 4",
+    "ok": false,
+    "detail": {
+      "markdown": "4. **Authorized operator** — Deploy within existing context-specific permissions",
+      "svg_position": 304
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_DEPLOYMENT step 5",
+    "ok": false,
+    "detail": {
+      "markdown": "5. **QA Executor** — Verify deployed identity, exclusions and behavior at Gate D",
+      "svg_position": 359
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_DEPLOYMENT step 6",
+    "ok": false,
+    "detail": {
+      "markdown": "6. **QA Lead** — Issue deployed-environment verdict",
+      "svg_position": 422
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_DEPLOYMENT step 7",
+    "ok": false,
+    "detail": {
+      "markdown": "7. **Director** — Release decision or authorized recovery",
+      "svg_position": 460
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_DEPLOYMENT step 8",
+    "ok": false,
+    "detail": {
+      "markdown": "8. **Architect** — Record follow-ups; release is separate from review",
+      "svg_position": 503
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 1",
+    "ok": false,
+    "detail": {
+      "markdown": "1. **Engineer** — Fresh recon after preceding module closeout",
+      "svg_position": 168
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 2",
+    "ok": false,
+    "detail": {
+      "markdown": "2. **Architect** — Author BIM just in time; prepare contract and QAM",
+      "svg_position": 215
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 3",
+    "ok": false,
+    "detail": {
+      "markdown": "3. **Director** — Approve scope and release Engineering",
+      "svg_position": 268
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 4",
+    "ok": false,
+    "detail": {
+      "markdown": "4. **Engineer** — Implement, verify and complete factual handoff",
+      "svg_position": 309
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 5",
+    "ok": false,
+    "detail": {
+      "markdown": "5. **Director** — Commit/push candidate; QA branch at that exact commit",
+      "svg_position": 359
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 6",
+    "ok": false,
+    "detail": {
+      "markdown": "6. **QA Executor** — Q1 recon and independent plan",
+      "svg_position": 416
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 7",
+    "ok": false,
+    "detail": {
+      "markdown": "7. **QA Lead** — Approve plan",
+      "svg_position": 449
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 8",
+    "ok": false,
+    "detail": {
+      "markdown": "8. **Director** — Release Q2",
+      "svg_position": 465
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 9",
+    "ok": false,
+    "detail": {
+      "markdown": "9. **QA Executor** — Q2 tests and findings",
+      "svg_position": 479
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 10",
+    "ok": false,
+    "detail": {
+      "markdown": "10. **Engineer** — Conditional authorized repairs on continuing QA branch",
+      "svg_position": 505
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 11",
+    "ok": false,
+    "detail": {
+      "markdown": "11. **Director** — Commit repaired candidate on the continuing QA branch",
+      "svg_position": 564
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 12",
+    "ok": false,
+    "detail": {
+      "markdown": "12. **QA Executor** — Independent retest of repairs and required regression",
+      "svg_position": 622
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 13",
+    "ok": false,
+    "detail": {
+      "markdown": "13. **QA Lead** — Product certification; approve cleanup retention",
+      "svg_position": 680
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 14",
+    "ok": false,
+    "detail": {
+      "markdown": "14. **QA Executor** — Perform authorized required cleanup; retain evidence",
+      "svg_position": 733
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 15",
+    "ok": false,
+    "detail": {
+      "markdown": "15. **QA Lead** — Accept cleanup separately from product verdict",
+      "svg_position": 790
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 16",
+    "ok": false,
+    "detail": {
+      "markdown": "16. **Architect** — Closeout instructions",
+      "svg_position": 841
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 17",
+    "ok": false,
+    "detail": {
+      "markdown": "17. **Engineer** — Bounded closeout",
+      "svg_position": 867
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 18",
+    "ok": false,
+    "detail": {
+      "markdown": "18. **Director** — Final commits, merge and push",
+      "svg_position": 888
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 19",
+    "ok": false,
+    "detail": {
+      "markdown": "19. **Authorized operator** — If deployment in scope: deploy within existing permissions",
+      "svg_position": 922
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 20",
+    "ok": false,
+    "detail": {
+      "markdown": "20. **QA Executor** — If deployed: independently verify the exact revision at Gate D",
+      "svg_position": 985
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 21",
+    "ok": false,
+    "detail": {
+      "markdown": "21. **QA Lead** — If deployed: Gate D verdict; otherwise documented N/A",
+      "svg_position": 1052
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 22",
+    "ok": false,
+    "detail": {
+      "markdown": "22. **Architect** — Complete all Engine 1 phases/modules and their QA",
+      "svg_position": 1110
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 23",
+    "ok": false,
+    "detail": {
+      "markdown": "23. **Reviewers** — Review checkpoint 2: Engine 2 independent system review",
+      "svg_position": 1164
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 24",
+    "ok": false,
+    "detail": {
+      "markdown": "24. **Director** — Disposition findings; RRM only for approved repairs",
+      "svg_position": 1224
+    }
+  },
+  {
+    "ac": "AC22",
+    "name": "standing exact 03_BUILD_METHODOLOGY/_templates/QAM/QAM_RISK_REQUIREMENTS.md",
+    "ok": true,
+    "detail": "> | Scope | SR-1 through SR-11 adopted, with amendment AM-3 (SR-3 wording) applied |"
+  },
+  {
+    "ac": "AC25",
+    "name": "header APP_FACTORY_BLUEPRINT",
+    "ok": true,
+    "detail": {
+      "header": [
+        "2.2",
+        "2026-10-18",
+        "Active"
+      ],
+      "cells": [
+        "2.2",
+        "2026-10-18",
+        "Active"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header SOFTWARE_FACTORY_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "header": [
+        "1.4",
+        "2026-10-18",
+        "Active"
+      ],
+      "cells": [
+        "1.4",
+        "2026-10-18",
+        "Active"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header STARTER_KIT_HANDBOOK",
+    "ok": true,
+    "detail": {
+      "header": [
+        "1.2",
+        "2026-10-18",
+        "Active"
+      ],
+      "cells": [
+        "1.2",
+        "2026-10-18",
+        "Active"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header ARCHITECT_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "header": [
+        "2.3",
+        "2026-10-18",
+        "Active"
+      ],
+      "cells": [
+        "2.3",
+        "2026-10-18",
+        "Active"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header ARCHITECT_QUESTIONNAIRE",
+    "ok": true,
+    "detail": {
+      "header": [
+        "2.3",
+        "2026-10-18",
+        "Active"
+      ],
+      "cells": [
+        "2.3",
+        "2026-10-18",
+        "Active"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header DESIGNER_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "header": [
+        "2.2",
+        "2026-10-18",
+        "Active"
+      ],
+      "cells": [
+        "2.2",
+        "2026-10-18",
+        "Active"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header ENGINEER_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "header": [
+        "1.3",
+        "2026-10-18",
+        "Active"
+      ],
+      "cells": [
+        "1.3",
+        "2026-10-18",
+        "Active"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header HANDOFF_PACKAGE_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "header": [
+        "1.2",
+        "2026-10-18",
+        "Active"
+      ],
+      "cells": [
+        "1.2",
+        "2026-10-18",
+        "Active"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header RECON_QUESTIONNAIRE",
+    "ok": true,
+    "detail": {
+      "header": [
+        "0.6",
+        "2026-10-18",
+        "Active (living document — grows with every FFM run's lessons)"
+      ],
+      "cells": [
+        "0.6",
+        "2026-10-18",
+        "Active (living document — grows with every FFM run's lessons)"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header APP_FACTORY_SKILLS_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "header": [
+        "1.2",
+        "2026-10-18",
+        "Active"
+      ],
+      "cells": [
+        "1.2",
+        "2026-10-18",
+        "Active"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header BIM_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "header": [
+        "1.1",
+        "2026-10-18",
+        "Active"
+      ],
+      "cells": [
+        "1.1",
+        "2026-10-18",
+        "Active"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header BUG_FIX_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "header": [
+        "1.1",
+        "2026-10-18",
+        "Active — field-validated (FIX-001/002/003, ADK Harness)"
+      ],
+      "cells": [
+        "1.1",
+        "2026-10-18",
+        "Active — field-validated (FIX-001/002/003, ADK Harness)"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header DEPLOYMENT_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "header": [
+        "1.0",
+        "2026-10-18",
+        "DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED (sections marked OPEN are not doctrine until ruled)"
+      ],
+      "cells": [
+        "1.0",
+        "2026-10-18",
+        "DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED (sections marked OPEN are not doctrine until ruled)"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header FEAT_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "header": [
+        "1.1",
+        "2026-10-18",
+        "Active"
+      ],
+      "cells": [
+        "1.1",
+        "2026-10-18",
+        "Active"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header FFM_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "header": [
+        "1.3",
+        "2026-10-18",
+        "Active"
+      ],
+      "cells": [
+        "1.3",
+        "2026-10-18",
+        "Active"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header FRONTEND_BUILD_PHASE_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "header": [
+        "1.3.0",
+        "2026-10-18",
+        "Active"
+      ],
+      "cells": [
+        "1.3.0",
+        "2026-10-18",
+        "Active"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header FRONTEND_FIRST_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "header": [
+        "1.2.0",
+        "2026-10-18",
+        "Active"
+      ],
+      "cells": [
+        "1.2.0",
+        "2026-10-18",
+        "Active"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header QAM_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "header": [
+        "1.0",
+        "2026-10-18",
+        "DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED"
+      ],
+      "cells": [
+        "1.0",
+        "2026-10-18",
+        "DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header QA_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "header": [
+        "1.2",
+        "2026-10-18",
+        "Active — field-tested (ADK Harness BIM/FIX verification)"
+      ],
+      "cells": [
+        "1.2",
+        "2026-10-18",
+        "Active — field-tested (ADK Harness BIM/FIX verification)"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header RRM_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "header": [
+        "1.0",
+        "2026-10-18",
+        "DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED"
+      ],
+      "cells": [
+        "1.0",
+        "2026-10-18",
+        "DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header TESTING_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "header": [
+        "2.2",
+        "2026-10-18",
+        "Active"
+      ],
+      "cells": [
+        "2.2",
+        "2026-10-18",
+        "Active"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header API_AND_SERVICES_MANUAL",
+    "ok": true,
+    "detail": {
+      "header": [
+        "1.2",
+        "2026-10-18",
+        "Active"
+      ],
+      "cells": [
+        "1.2",
+        "2026-10-18",
+        "Active"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header APP_ARCHITECTURE_MANUAL",
+    "ok": true,
+    "detail": {
+      "header": [
+        "1.4",
+        "2026-10-18",
+        "Active"
+      ],
+      "cells": [
+        "1.4",
+        "2026-10-18",
+        "Active"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header AUTH_MANUAL",
+    "ok": true,
+    "detail": {
+      "header": [
+        "1.5",
+        "2026-10-18",
+        "Active"
+      ],
+      "cells": [
+        "1.5",
+        "2026-10-18",
+        "Active"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header DATABASE_MANUAL",
+    "ok": true,
+    "detail": {
+      "header": [
+        "1.2",
+        "2026-10-18",
+        "Active"
+      ],
+      "cells": [
+        "1.2",
+        "2026-10-18",
+        "Active"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header ECOMMERCE_AND_PAYMENTS_MANUAL",
+    "ok": true,
+    "detail": {
+      "header": [
+        "1.2",
+        "2026-10-18",
+        "Active"
+      ],
+      "cells": [
+        "1.2",
+        "2026-10-18",
+        "Active"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header STATE_MANAGEMENT_MANUAL",
+    "ok": true,
+    "detail": {
+      "header": [
+        "1.3",
+        "2026-10-18",
+        "Active"
+      ],
+      "cells": [
+        "1.3",
+        "2026-10-18",
+        "Active"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header STRIPE_SUBSCRIPTIONS_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "header": [
+        "1.2",
+        "2026-10-18",
+        "Active"
+      ],
+      "cells": [
+        "1.2",
+        "2026-10-18",
+        "Active"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header COMPONENT_REGISTRY",
+    "ok": true,
+    "detail": {
+      "header": [
+        "1.2",
+        "2026-10-18",
+        "Active"
+      ],
+      "cells": [
+        "1.2",
+        "2026-10-18",
+        "Active"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header GLOBAL_DESIGN_SYSTEM_HANDBOOK",
+    "ok": true,
+    "detail": {
+      "header": [
+        "1.2",
+        "2026-10-18",
+        "Active"
+      ],
+      "cells": [
+        "1.2",
+        "2026-10-18",
+        "Active"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header THEME_LIBRARY",
+    "ok": true,
+    "detail": {
+      "header": [
+        "1.3",
+        "2026-10-18",
+        "Active"
+      ],
+      "cells": [
+        "1.3",
+        "2026-10-18",
+        "Active"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header THEMING_MANUAL",
+    "ok": true,
+    "detail": {
+      "header": [
+        "1.3",
+        "2026-10-18",
+        "Active"
+      ],
+      "cells": [
+        "1.3",
+        "2026-10-18",
+        "Active"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header TOKEN_FILE",
+    "ok": true,
+    "detail": {
+      "header": [
+        "1.3",
+        "2026-10-18",
+        "Active"
+      ],
+      "cells": [
+        "1.3",
+        "2026-10-18",
+        "Active"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "header UI_UX_BUILDING_MANUAL",
+    "ok": true,
+    "detail": {
+      "header": [
+        "1.5",
+        "2026-10-18",
+        "Active"
+      ],
+      "cells": [
+        "1.5",
+        "2026-10-18",
+        "Active"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse QAM_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "DEPLOYMENT_PLAYBOOK",
+        "RRM_PLAYBOOK"
+      ],
+      "row": "| QAM_PLAYBOOK | DEPLOYMENT_PLAYBOOK, RRM_PLAYBOOK | 2 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse DATABASE_MANUAL",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "API_AND_SERVICES_MANUAL",
+        "AUTH_MANUAL",
+        "STARTER_KIT_HANDBOOK"
+      ],
+      "row": "| DATABASE_MANUAL | API_AND_SERVICES_MANUAL, AUTH_MANUAL, STARTER_KIT_HANDBOOK | 3 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse ARCHITECT_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "APP_FACTORY_BLUEPRINT",
+        "ARCHITECT_QUESTIONNAIRE",
+        "BIM_PLAYBOOK",
+        "DESIGNER_PLAYBOOK",
+        "FFM_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "RECON_QUESTIONNAIRE",
+        "RRM_PLAYBOOK"
+      ],
+      "row": "| ARCHITECT_PLAYBOOK | APP_FACTORY_BLUEPRINT, ARCHITECT_QUESTIONNAIRE, BIM_PLAYBOOK, DESIGNER_PLAYBOOK, FFM_PLAYBOOK, QAM_PLAYBOOK, RECON_QUESTIONNAIRE, RRM_PLAYBOOK | 8 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse STATE_MANAGEMENT_MANUAL",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "APP_ARCHITECTURE_MANUAL",
+        "AUTH_MANUAL",
+        "ECOMMERCE_AND_PAYMENTS_MANUAL",
+        "STARTER_KIT_HANDBOOK"
+      ],
+      "row": "| STATE_MANAGEMENT_MANUAL | APP_ARCHITECTURE_MANUAL, AUTH_MANUAL, ECOMMERCE_AND_PAYMENTS_MANUAL, STARTER_KIT_HANDBOOK | 4 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse APP_FACTORY_BLUEPRINT",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "ARCHITECT_PLAYBOOK",
+        "ARCHITECT_QUESTIONNAIRE",
+        "ENGINEER_PLAYBOOK",
+        "HANDOFF_PACKAGE_PLAYBOOK",
+        "RECON_QUESTIONNAIRE",
+        "SOFTWARE_FACTORY_PLAYBOOK"
+      ],
+      "row": "| APP_FACTORY_BLUEPRINT | ARCHITECT_PLAYBOOK, ARCHITECT_QUESTIONNAIRE, ENGINEER_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, RECON_QUESTIONNAIRE, SOFTWARE_FACTORY_PLAYBOOK | 6 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse GLOBAL_DESIGN_SYSTEM_HANDBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "COMPONENT_REGISTRY",
+        "DESIGNER_PLAYBOOK",
+        "THEME_LIBRARY",
+        "THEMING_MANUAL",
+        "TOKEN_FILE",
+        "UI_UX_BUILDING_MANUAL"
+      ],
+      "row": "| GLOBAL_DESIGN_SYSTEM_HANDBOOK | COMPONENT_REGISTRY, DESIGNER_PLAYBOOK, THEME_LIBRARY, THEMING_MANUAL, TOKEN_FILE, UI_UX_BUILDING_MANUAL | 6 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse AUTH_MANUAL",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "APP_ARCHITECTURE_MANUAL",
+        "DATABASE_MANUAL",
+        "STARTER_KIT_HANDBOOK",
+        "STATE_MANAGEMENT_MANUAL",
+        "STRIPE_SUBSCRIPTIONS_PLAYBOOK"
+      ],
+      "row": "| AUTH_MANUAL | APP_ARCHITECTURE_MANUAL, DATABASE_MANUAL, STARTER_KIT_HANDBOOK, STATE_MANAGEMENT_MANUAL, STRIPE_SUBSCRIPTIONS_PLAYBOOK | 5 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse TOKEN_FILE",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "GLOBAL_DESIGN_SYSTEM_HANDBOOK",
+        "THEME_LIBRARY",
+        "THEMING_MANUAL"
+      ],
+      "row": "| TOKEN_FILE | GLOBAL_DESIGN_SYSTEM_HANDBOOK, THEME_LIBRARY, THEMING_MANUAL | 3 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse THEMING_MANUAL",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "DESIGNER_PLAYBOOK",
+        "GLOBAL_DESIGN_SYSTEM_HANDBOOK",
+        "THEME_LIBRARY",
+        "TOKEN_FILE",
+        "UI_UX_BUILDING_MANUAL"
+      ],
+      "row": "| THEMING_MANUAL | DESIGNER_PLAYBOOK, GLOBAL_DESIGN_SYSTEM_HANDBOOK, THEME_LIBRARY, TOKEN_FILE, UI_UX_BUILDING_MANUAL | 5 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse ENGINEER_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "APP_FACTORY_BLUEPRINT",
+        "BIM_PLAYBOOK",
+        "BUG_FIX_PLAYBOOK",
+        "DESIGNER_PLAYBOOK",
+        "FFM_PLAYBOOK",
+        "HANDOFF_PACKAGE_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "QA_PLAYBOOK",
+        "RRM_PLAYBOOK"
+      ],
+      "row": "| ENGINEER_PLAYBOOK | APP_FACTORY_BLUEPRINT, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DESIGNER_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, RRM_PLAYBOOK | 9 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse COMPONENT_REGISTRY",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "DESIGNER_PLAYBOOK",
+        "FRONTEND_BUILD_PHASE_PLAYBOOK",
+        "FRONTEND_FIRST_PLAYBOOK",
+        "GLOBAL_DESIGN_SYSTEM_HANDBOOK",
+        "STARTER_KIT_HANDBOOK",
+        "UI_UX_BUILDING_MANUAL"
+      ],
+      "row": "| COMPONENT_REGISTRY | DESIGNER_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, FRONTEND_FIRST_PLAYBOOK, GLOBAL_DESIGN_SYSTEM_HANDBOOK, STARTER_KIT_HANDBOOK, UI_UX_BUILDING_MANUAL | 6 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse HANDOFF_PACKAGE_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "APP_FACTORY_BLUEPRINT",
+        "ENGINEER_PLAYBOOK",
+        "FFM_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "RRM_PLAYBOOK",
+        "SOFTWARE_FACTORY_PLAYBOOK"
+      ],
+      "row": "| HANDOFF_PACKAGE_PLAYBOOK | APP_FACTORY_BLUEPRINT, ENGINEER_PLAYBOOK, FFM_PLAYBOOK, QAM_PLAYBOOK, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK | 6 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse RECON_QUESTIONNAIRE",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "APP_ARCHITECTURE_MANUAL",
+        "APP_FACTORY_BLUEPRINT",
+        "APP_FACTORY_SKILLS_PLAYBOOK",
+        "ARCHITECT_PLAYBOOK",
+        "ARCHITECT_QUESTIONNAIRE",
+        "AUTH_MANUAL",
+        "BIM_PLAYBOOK",
+        "BUG_FIX_PLAYBOOK",
+        "DEPLOYMENT_PLAYBOOK",
+        "ENGINEER_PLAYBOOK",
+        "FFM_PLAYBOOK",
+        "HANDOFF_PACKAGE_PLAYBOOK",
+        "QA_PLAYBOOK",
+        "TESTING_PLAYBOOK"
+      ],
+      "row": "| RECON_QUESTIONNAIRE | APP_ARCHITECTURE_MANUAL, APP_FACTORY_BLUEPRINT, APP_FACTORY_SKILLS_PLAYBOOK, ARCHITECT_PLAYBOOK, ARCHITECT_QUESTIONNAIRE, AUTH_MANUAL, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QA_PLAYBOOK, TESTING_PLAYBOOK | 14 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse RRM_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "DEPLOYMENT_PLAYBOOK",
+        "QAM_PLAYBOOK"
+      ],
+      "row": "| RRM_PLAYBOOK | DEPLOYMENT_PLAYBOOK, QAM_PLAYBOOK | 2 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse APP_FACTORY_SKILLS_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "DEPLOYMENT_PLAYBOOK",
+        "FFM_PLAYBOOK"
+      ],
+      "row": "| APP_FACTORY_SKILLS_PLAYBOOK | DEPLOYMENT_PLAYBOOK, FFM_PLAYBOOK | 2 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse STARTER_KIT_HANDBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "API_AND_SERVICES_MANUAL",
+        "APP_ARCHITECTURE_MANUAL",
+        "AUTH_MANUAL",
+        "COMPONENT_REGISTRY",
+        "DATABASE_MANUAL",
+        "ENGINEER_PLAYBOOK",
+        "FRONTEND_BUILD_PHASE_PLAYBOOK",
+        "FRONTEND_FIRST_PLAYBOOK",
+        "RECON_QUESTIONNAIRE",
+        "STATE_MANAGEMENT_MANUAL",
+        "TESTING_PLAYBOOK",
+        "UI_UX_BUILDING_MANUAL"
+      ],
+      "row": "| STARTER_KIT_HANDBOOK | API_AND_SERVICES_MANUAL, APP_ARCHITECTURE_MANUAL, AUTH_MANUAL, COMPONENT_REGISTRY, DATABASE_MANUAL, ENGINEER_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, FRONTEND_FIRST_PLAYBOOK, RECON_QUESTIONNAIRE, STATE_MANAGEMENT_MANUAL, TESTING_PLAYBOOK, UI_UX_BUILDING_MANUAL | 12 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse FRONTEND_FIRST_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "API_AND_SERVICES_MANUAL",
+        "AUTH_MANUAL",
+        "DATABASE_MANUAL",
+        "ENGINEER_PLAYBOOK",
+        "FRONTEND_BUILD_PHASE_PLAYBOOK",
+        "HANDOFF_PACKAGE_PLAYBOOK",
+        "STATE_MANAGEMENT_MANUAL"
+      ],
+      "row": "| FRONTEND_FIRST_PLAYBOOK | API_AND_SERVICES_MANUAL, AUTH_MANUAL, DATABASE_MANUAL, ENGINEER_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, STATE_MANAGEMENT_MANUAL | 7 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse THEME_LIBRARY",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "DESIGNER_PLAYBOOK",
+        "GLOBAL_DESIGN_SYSTEM_HANDBOOK",
+        "THEMING_MANUAL",
+        "TOKEN_FILE"
+      ],
+      "row": "| THEME_LIBRARY | DESIGNER_PLAYBOOK, GLOBAL_DESIGN_SYSTEM_HANDBOOK, THEMING_MANUAL, TOKEN_FILE | 4 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse BIM_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "DEPLOYMENT_PLAYBOOK",
+        "FEAT_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "RRM_PLAYBOOK"
+      ],
+      "row": "| BIM_PLAYBOOK | DEPLOYMENT_PLAYBOOK, FEAT_PLAYBOOK, QAM_PLAYBOOK, RRM_PLAYBOOK | 4 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse APP_ARCHITECTURE_MANUAL",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "ECOMMERCE_AND_PAYMENTS_MANUAL",
+        "STATE_MANAGEMENT_MANUAL",
+        "THEMING_MANUAL"
+      ],
+      "row": "| APP_ARCHITECTURE_MANUAL | ECOMMERCE_AND_PAYMENTS_MANUAL, STATE_MANAGEMENT_MANUAL, THEMING_MANUAL | 3 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse QA_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "BIM_PLAYBOOK",
+        "BUG_FIX_PLAYBOOK",
+        "DEPLOYMENT_PLAYBOOK",
+        "FEAT_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "RRM_PLAYBOOK"
+      ],
+      "row": "| QA_PLAYBOOK | BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, FEAT_PLAYBOOK, QAM_PLAYBOOK, RRM_PLAYBOOK | 6 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse TESTING_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "API_AND_SERVICES_MANUAL",
+        "BIM_PLAYBOOK",
+        "BUG_FIX_PLAYBOOK",
+        "DATABASE_MANUAL",
+        "ENGINEER_PLAYBOOK",
+        "FEAT_PLAYBOOK",
+        "FRONTEND_BUILD_PHASE_PLAYBOOK",
+        "FRONTEND_FIRST_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "QA_PLAYBOOK",
+        "RRM_PLAYBOOK",
+        "SOFTWARE_FACTORY_PLAYBOOK",
+        "STRIPE_SUBSCRIPTIONS_PLAYBOOK"
+      ],
+      "row": "| TESTING_PLAYBOOK | API_AND_SERVICES_MANUAL, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DATABASE_MANUAL, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, FRONTEND_FIRST_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, STRIPE_SUBSCRIPTIONS_PLAYBOOK | 13 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse ECOMMERCE_AND_PAYMENTS_MANUAL",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "API_AND_SERVICES_MANUAL",
+        "APP_ARCHITECTURE_MANUAL",
+        "STRIPE_SUBSCRIPTIONS_PLAYBOOK"
+      ],
+      "row": "| ECOMMERCE_AND_PAYMENTS_MANUAL | API_AND_SERVICES_MANUAL, APP_ARCHITECTURE_MANUAL, STRIPE_SUBSCRIPTIONS_PLAYBOOK | 3 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse DEPLOYMENT_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "QAM_PLAYBOOK",
+        "RRM_PLAYBOOK"
+      ],
+      "row": "| DEPLOYMENT_PLAYBOOK | QAM_PLAYBOOK, RRM_PLAYBOOK | 2 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse ARCHITECT_QUESTIONNAIRE",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "ARCHITECT_PLAYBOOK"
+      ],
+      "row": "| ARCHITECT_QUESTIONNAIRE | ARCHITECT_PLAYBOOK | 1 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse API_AND_SERVICES_MANUAL",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "APP_ARCHITECTURE_MANUAL",
+        "AUTH_MANUAL",
+        "DATABASE_MANUAL",
+        "ECOMMERCE_AND_PAYMENTS_MANUAL",
+        "STRIPE_SUBSCRIPTIONS_PLAYBOOK"
+      ],
+      "row": "| API_AND_SERVICES_MANUAL | APP_ARCHITECTURE_MANUAL, AUTH_MANUAL, DATABASE_MANUAL, ECOMMERCE_AND_PAYMENTS_MANUAL, STRIPE_SUBSCRIPTIONS_PLAYBOOK | 5 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse SOFTWARE_FACTORY_PLAYBOOK",
+    "ok": false,
+    "detail": {
+      "expected": [
+        "APP_FACTORY_BLUEPRINT",
+        "BUG_FIX_PLAYBOOK",
+        "DEPLOYMENT_PLAYBOOK",
+        "FEAT_PLAYBOOK",
+        "FFM_PLAYBOOK",
+        "FRONTEND_FIRST_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "QA_PLAYBOOK",
+        "RRM_PLAYBOOK",
+        "TESTING_PLAYBOOK"
+      ],
+      "row": "| SOFTWARE_FACTORY_PLAYBOOK | APP_FACTORY_BLUEPRINT, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, FRONTEND_FIRST_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, RRM_PLAYBOOK, TESTING_PLAYBOOK | 11 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse FFM_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "APP_FACTORY_BLUEPRINT",
+        "APP_FACTORY_SKILLS_PLAYBOOK",
+        "BIM_PLAYBOOK",
+        "BUG_FIX_PLAYBOOK",
+        "DEPLOYMENT_PLAYBOOK",
+        "ENGINEER_PLAYBOOK",
+        "FRONTEND_BUILD_PHASE_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "QA_PLAYBOOK",
+        "RECON_QUESTIONNAIRE",
+        "RRM_PLAYBOOK",
+        "TESTING_PLAYBOOK"
+      ],
+      "row": "| FFM_PLAYBOOK | APP_FACTORY_BLUEPRINT, APP_FACTORY_SKILLS_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, RECON_QUESTIONNAIRE, RRM_PLAYBOOK, TESTING_PLAYBOOK | 12 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse UI_UX_BUILDING_MANUAL",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "COMPONENT_REGISTRY",
+        "GLOBAL_DESIGN_SYSTEM_HANDBOOK",
+        "STARTER_KIT_HANDBOOK",
+        "THEMING_MANUAL"
+      ],
+      "row": "| UI_UX_BUILDING_MANUAL | COMPONENT_REGISTRY, GLOBAL_DESIGN_SYSTEM_HANDBOOK, STARTER_KIT_HANDBOOK, THEMING_MANUAL | 4 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse STRIPE_SUBSCRIPTIONS_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "ECOMMERCE_AND_PAYMENTS_MANUAL"
+      ],
+      "row": "| STRIPE_SUBSCRIPTIONS_PLAYBOOK | ECOMMERCE_AND_PAYMENTS_MANUAL | 1 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse DESIGNER_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "APP_FACTORY_BLUEPRINT",
+        "APP_FACTORY_SKILLS_PLAYBOOK",
+        "ARCHITECT_PLAYBOOK",
+        "ENGINEER_PLAYBOOK",
+        "FFM_PLAYBOOK",
+        "GLOBAL_DESIGN_SYSTEM_HANDBOOK",
+        "HANDOFF_PACKAGE_PLAYBOOK",
+        "SOFTWARE_FACTORY_PLAYBOOK",
+        "THEME_LIBRARY",
+        "TOKEN_FILE"
+      ],
+      "row": "| DESIGNER_PLAYBOOK | APP_FACTORY_BLUEPRINT, APP_FACTORY_SKILLS_PLAYBOOK, ARCHITECT_PLAYBOOK, ENGINEER_PLAYBOOK, FFM_PLAYBOOK, GLOBAL_DESIGN_SYSTEM_HANDBOOK, HANDOFF_PACKAGE_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, THEME_LIBRARY, TOKEN_FILE | 10 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse FEAT_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "BIM_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "RRM_PLAYBOOK"
+      ],
+      "row": "| FEAT_PLAYBOOK | BIM_PLAYBOOK, QAM_PLAYBOOK, RRM_PLAYBOOK | 3 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse FRONTEND_BUILD_PHASE_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "ENGINEER_PLAYBOOK",
+        "FRONTEND_FIRST_PLAYBOOK",
+        "TESTING_PLAYBOOK",
+        "UI_UX_BUILDING_MANUAL"
+      ],
+      "row": "| FRONTEND_BUILD_PHASE_PLAYBOOK | ENGINEER_PLAYBOOK, FRONTEND_FIRST_PLAYBOOK, TESTING_PLAYBOOK, UI_UX_BUILDING_MANUAL | 4 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "reverse BUG_FIX_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "BIM_PLAYBOOK",
+        "FEAT_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "QA_PLAYBOOK",
+        "RRM_PLAYBOOK"
+      ],
+      "row": "| BUG_FIX_PLAYBOOK | BIM_PLAYBOOK, FEAT_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, RRM_PLAYBOOK | 5 |"
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix APP_FACTORY_BLUEPRINT",
+    "ok": true,
+    "detail": {
+      "doc": "APP_FACTORY_BLUEPRINT",
+      "computed": [
+        "DEPLOYMENT_PLAYBOOK",
+        "QA_PLAYBOOK"
+      ],
+      "recorded": [
+        "DEPLOYMENT_PLAYBOOK",
+        "QA_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix SOFTWARE_FACTORY_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "doc": "SOFTWARE_FACTORY_PLAYBOOK",
+      "computed": [
+        "API_AND_SERVICES_MANUAL",
+        "APP_ARCHITECTURE_MANUAL",
+        "AUTH_MANUAL",
+        "DATABASE_MANUAL",
+        "ECOMMERCE_AND_PAYMENTS_MANUAL",
+        "FRONTEND_FIRST_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "RECON_QUESTIONNAIRE",
+        "STARTER_KIT_HANDBOOK",
+        "STATE_MANAGEMENT_MANUAL"
+      ],
+      "recorded": [
+        "API_AND_SERVICES_MANUAL",
+        "APP_ARCHITECTURE_MANUAL",
+        "AUTH_MANUAL",
+        "DATABASE_MANUAL",
+        "ECOMMERCE_AND_PAYMENTS_MANUAL",
+        "FRONTEND_FIRST_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "RECON_QUESTIONNAIRE",
+        "STARTER_KIT_HANDBOOK",
+        "STATE_MANAGEMENT_MANUAL"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix STARTER_KIT_HANDBOOK",
+    "ok": true,
+    "detail": {
+      "doc": "STARTER_KIT_HANDBOOK",
+      "computed": [],
+      "recorded": []
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix ARCHITECT_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "doc": "ARCHITECT_PLAYBOOK",
+      "computed": [
+        "QAM_PLAYBOOK",
+        "SOFTWARE_FACTORY_PLAYBOOK"
+      ],
+      "recorded": [
+        "QAM_PLAYBOOK",
+        "SOFTWARE_FACTORY_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix ARCHITECT_QUESTIONNAIRE",
+    "ok": true,
+    "detail": {
+      "doc": "ARCHITECT_QUESTIONNAIRE",
+      "computed": [],
+      "recorded": []
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix DESIGNER_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "doc": "DESIGNER_PLAYBOOK",
+      "computed": [
+        "TOKEN_FILE"
+      ],
+      "recorded": [
+        "TOKEN_FILE"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix ENGINEER_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "doc": "ENGINEER_PLAYBOOK",
+      "computed": [
+        "ARCHITECT_PLAYBOOK",
+        "QAM_PLAYBOOK"
+      ],
+      "recorded": [
+        "ARCHITECT_PLAYBOOK",
+        "QAM_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix HANDOFF_PACKAGE_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "doc": "HANDOFF_PACKAGE_PLAYBOOK",
+      "computed": [
+        "ARCHITECT_PLAYBOOK",
+        "COMPONENT_REGISTRY",
+        "FFM_PLAYBOOK",
+        "FRONTEND_BUILD_PHASE_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "SOFTWARE_FACTORY_PLAYBOOK",
+        "STARTER_KIT_HANDBOOK"
+      ],
+      "recorded": [
+        "ARCHITECT_PLAYBOOK",
+        "COMPONENT_REGISTRY",
+        "FFM_PLAYBOOK",
+        "FRONTEND_BUILD_PHASE_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "SOFTWARE_FACTORY_PLAYBOOK",
+        "STARTER_KIT_HANDBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix RECON_QUESTIONNAIRE",
+    "ok": true,
+    "detail": {
+      "doc": "RECON_QUESTIONNAIRE",
+      "computed": [
+        "DEPLOYMENT_PLAYBOOK"
+      ],
+      "recorded": [
+        "DEPLOYMENT_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix APP_FACTORY_SKILLS_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "doc": "APP_FACTORY_SKILLS_PLAYBOOK",
+      "computed": [],
+      "recorded": []
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix BIM_PLAYBOOK",
+    "ok": false,
+    "detail": {
+      "doc": "BIM_PLAYBOOK",
+      "computed": [
+        "DEPLOYMENT_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "RRM_PLAYBOOK",
+        "SOFTWARE_FACTORY_PLAYBOOK"
+      ],
+      "recorded": [
+        "DEPLOYMENT_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "RRM_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix BUG_FIX_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "doc": "BUG_FIX_PLAYBOOK",
+      "computed": [
+        "QAM_PLAYBOOK"
+      ],
+      "recorded": [
+        "QAM_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix DEPLOYMENT_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "doc": "DEPLOYMENT_PLAYBOOK",
+      "computed": [
+        "BUG_FIX_PLAYBOOK"
+      ],
+      "recorded": [
+        "BUG_FIX_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix FEAT_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "doc": "FEAT_PLAYBOOK",
+      "computed": [
+        "QAM_PLAYBOOK"
+      ],
+      "recorded": [
+        "QAM_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix FFM_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "doc": "FFM_PLAYBOOK",
+      "computed": [
+        "APP_FACTORY_BLUEPRINT",
+        "ARCHITECT_QUESTIONNAIRE",
+        "DEPLOYMENT_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "RRM_PLAYBOOK"
+      ],
+      "recorded": [
+        "APP_FACTORY_BLUEPRINT",
+        "ARCHITECT_QUESTIONNAIRE",
+        "DEPLOYMENT_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "RRM_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix FRONTEND_BUILD_PHASE_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "doc": "FRONTEND_BUILD_PHASE_PLAYBOOK",
+      "computed": [
+        "APP_FACTORY_BLUEPRINT",
+        "BUG_FIX_PLAYBOOK",
+        "QA_PLAYBOOK",
+        "SOFTWARE_FACTORY_PLAYBOOK"
+      ],
+      "recorded": [
+        "APP_FACTORY_BLUEPRINT",
+        "BUG_FIX_PLAYBOOK",
+        "QA_PLAYBOOK",
+        "SOFTWARE_FACTORY_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix FRONTEND_FIRST_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "doc": "FRONTEND_FIRST_PLAYBOOK",
+      "computed": [
+        "RECON_QUESTIONNAIRE"
+      ],
+      "recorded": [
+        "RECON_QUESTIONNAIRE"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix QAM_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "doc": "QAM_PLAYBOOK",
+      "computed": [],
+      "recorded": []
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix QA_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "doc": "QA_PLAYBOOK",
+      "computed": [
+        "DEPLOYMENT_PLAYBOOK"
+      ],
+      "recorded": [
+        "DEPLOYMENT_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix RRM_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "doc": "RRM_PLAYBOOK",
+      "computed": [
+        "RECON_QUESTIONNAIRE"
+      ],
+      "recorded": [
+        "RECON_QUESTIONNAIRE"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix TESTING_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "doc": "TESTING_PLAYBOOK",
+      "computed": [],
+      "recorded": []
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix API_AND_SERVICES_MANUAL",
+    "ok": true,
+    "detail": {
+      "doc": "API_AND_SERVICES_MANUAL",
+      "computed": [
+        "AUTH_MANUAL",
+        "HANDOFF_PACKAGE_PLAYBOOK"
+      ],
+      "recorded": [
+        "AUTH_MANUAL",
+        "HANDOFF_PACKAGE_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix APP_ARCHITECTURE_MANUAL",
+    "ok": true,
+    "detail": {
+      "doc": "APP_ARCHITECTURE_MANUAL",
+      "computed": [
+        "TESTING_PLAYBOOK"
+      ],
+      "recorded": [
+        "TESTING_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix AUTH_MANUAL",
+    "ok": true,
+    "detail": {
+      "doc": "AUTH_MANUAL",
+      "computed": [
+        "BUG_FIX_PLAYBOOK",
+        "COMPONENT_REGISTRY",
+        "TESTING_PLAYBOOK"
+      ],
+      "recorded": [
+        "BUG_FIX_PLAYBOOK",
+        "COMPONENT_REGISTRY",
+        "TESTING_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix DATABASE_MANUAL",
+    "ok": true,
+    "detail": {
+      "doc": "DATABASE_MANUAL",
+      "computed": [],
+      "recorded": []
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix ECOMMERCE_AND_PAYMENTS_MANUAL",
+    "ok": true,
+    "detail": {
+      "doc": "ECOMMERCE_AND_PAYMENTS_MANUAL",
+      "computed": [
+        "TESTING_PLAYBOOK"
+      ],
+      "recorded": [
+        "TESTING_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix STATE_MANAGEMENT_MANUAL",
+    "ok": true,
+    "detail": {
+      "doc": "STATE_MANAGEMENT_MANUAL",
+      "computed": [
+        "ECOMMERCE_AND_PAYMENTS_MANUAL"
+      ],
+      "recorded": [
+        "ECOMMERCE_AND_PAYMENTS_MANUAL"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix STRIPE_SUBSCRIPTIONS_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "doc": "STRIPE_SUBSCRIPTIONS_PLAYBOOK",
+      "computed": [],
+      "recorded": []
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix COMPONENT_REGISTRY",
+    "ok": true,
+    "detail": {
+      "doc": "COMPONENT_REGISTRY",
+      "computed": [
+        "TOKEN_FILE"
+      ],
+      "recorded": [
+        "TOKEN_FILE"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix GLOBAL_DESIGN_SYSTEM_HANDBOOK",
+    "ok": true,
+    "detail": {
+      "doc": "GLOBAL_DESIGN_SYSTEM_HANDBOOK",
+      "computed": [],
+      "recorded": []
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix THEME_LIBRARY",
+    "ok": true,
+    "detail": {
+      "doc": "THEME_LIBRARY",
+      "computed": [
+        "STARTER_KIT_HANDBOOK"
+      ],
+      "recorded": [
+        "STARTER_KIT_HANDBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix THEMING_MANUAL",
+    "ok": true,
+    "detail": {
+      "doc": "THEMING_MANUAL",
+      "computed": [
+        "COMPONENT_REGISTRY",
+        "HANDOFF_PACKAGE_PLAYBOOK",
+        "STARTER_KIT_HANDBOOK"
+      ],
+      "recorded": [
+        "COMPONENT_REGISTRY",
+        "HANDOFF_PACKAGE_PLAYBOOK",
+        "STARTER_KIT_HANDBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix TOKEN_FILE",
+    "ok": true,
+    "detail": {
+      "doc": "TOKEN_FILE",
+      "computed": [],
+      "recorded": []
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "body appendix UI_UX_BUILDING_MANUAL",
+    "ok": true,
+    "detail": {
+      "doc": "UI_UX_BUILDING_MANUAL",
+      "computed": [
+        "APP_ARCHITECTURE_MANUAL",
+        "HANDOFF_PACKAGE_PLAYBOOK",
+        "TOKEN_FILE"
+      ],
+      "recorded": [
+        "APP_ARCHITECTURE_MANUAL",
+        "HANDOFF_PACKAGE_PLAYBOOK",
+        "TOKEN_FILE"
+      ]
+    }
+  },
+  {
+    "ac": "AC6",
+    "name": "amendment 373",
+    "ok": true,
+    "detail": {
+      "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+      "line": 140,
+      "new": "## 📋 ENGINEERING PACKAGE: APPROVED CONTRACT ARTIFACTS\n\nThe Architect assembles the approved contract artifacts below for the Engineer to implement. DATA_CONTRACT is authored before Design; FILE_TREE is optional when implementation structure and boundaries are otherwise explicit.\n"
+    }
+  },
+  {
+    "ac": "AC6",
+    "name": "amendment 374",
+    "ok": true,
+    "detail": {
+      "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "line": 746,
+      "new": "> **Author:** Architect"
+    }
+  },
+  {
+    "ac": "AC6",
+    "name": "amendment 375",
+    "ok": true,
+    "detail": {
+      "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+      "line": 63,
+      "new": "| Implement approved data schemas as migrations and models | Engineer Agent |"
+    }
+  },
+  {
+    "ac": "AC6",
+    "name": "amendment 376",
+    "ok": true,
+    "detail": {
+      "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+      "line": 67,
+      "new": "| Implement approved API contracts | Engineer Agent |"
+    }
+  },
+  {
+    "ac": "AC6",
+    "name": "amendment 377",
+    "ok": true,
+    "detail": {
+      "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+      "line": 87,
+      "new": "| `DB_SCHEMA.md` | Database tables, relationships, indexes | Architect |"
+    }
+  },
+  {
+    "ac": "AC6",
+    "name": "amendment 378",
+    "ok": true,
+    "detail": {
+      "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+      "line": 88,
+      "new": "| `API_SPEC.md` | Endpoints, methods, auth, error codes | Architect |"
+    }
+  },
+  {
+    "ac": "AC6",
+    "name": "amendment 379",
+    "ok": true,
+    "detail": {
+      "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "line": 86,
+      "new": "| **Data Contracts** | Implement the approved schemas, APIs and file formats; contract changes return to the Architect |"
+    }
+  },
+  {
+    "ac": "AC6",
+    "name": "amendment 380",
+    "ok": true,
+    "detail": {
+      "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "line": 998,
+      "new": "- Implement approved database schemas as migrations and models (Supabase/Firebase)\n"
+    }
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 05_DESIGN_SYSTEM/THEME_LIBRARY.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 05_DESIGN_SYSTEM/TOKEN_FILE.md",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "ac": "AC2",
+    "name": "content plus metadata 05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "ok": true,
+    "detail": ""
+  }
+]

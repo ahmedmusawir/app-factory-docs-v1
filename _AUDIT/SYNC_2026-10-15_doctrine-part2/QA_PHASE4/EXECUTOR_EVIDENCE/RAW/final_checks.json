@@ -1,0 +1,4092 @@
+[
+  {
+    "ac": "AC37",
+    "name": "FFM_CREATION step 1",
+    "ok": true,
+    "detail": {
+      "md": "1. **Engineer:** Current recon; declared reporting writes.",
+      "position": 122
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_CREATION step 2",
+    "ok": true,
+    "detail": {
+      "md": "2. **Architect:** Author APP_BRIEF from current recon.",
+      "position": 166
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_CREATION step 3",
+    "ok": true,
+    "detail": {
+      "md": "3. **Director:** Approve scope and brief.",
+      "position": 205
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_CREATION step 4",
+    "ok": true,
+    "detail": {
+      "md": "4. **Architect:** DATA_CONTRACT before Design.",
+      "position": 232
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_CREATION step 5",
+    "ok": true,
+    "detail": {
+      "md": "5. **Designer:** UI_SPEC, tokens and visual artifacts.",
+      "position": 263
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_CREATION step 6",
+    "ok": true,
+    "detail": {
+      "md": "6. **Architect:** Reconcile assembly; prepare module QAM.",
+      "position": 303
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_CREATION step 7",
+    "ok": true,
+    "detail": {
+      "md": "7. **Director:** Approve package and release Engineering.",
+      "position": 345
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "actors FFM_CREATION",
+    "ok": true,
+    "detail": []
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 1",
+    "ok": true,
+    "detail": {
+      "md": "1. **Engineer:** Build and self-check; factual QAM handoff.",
+      "position": 159
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 2",
+    "ok": true,
+    "detail": {
+      "md": "2. **Director:** Commit/push numbered engineering candidate.",
+      "position": 204
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 3",
+    "ok": true,
+    "detail": {
+      "md": "3. **Director:** QA branch at exact candidate commit.",
+      "position": 250
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 4",
+    "ok": true,
+    "detail": {
+      "md": "4. **QA Executor:** Q1 recon and independent test plan.",
+      "position": 289
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 5",
+    "ok": true,
+    "detail": {
+      "md": "5. **QA Lead:** Approve the specific QA plan.",
+      "position": 327
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 6",
+    "ok": true,
+    "detail": {
+      "md": "6. **Director:** Release Q2 execution.",
+      "position": 359
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 7",
+    "ok": true,
+    "detail": {
+      "md": "7. **QA Executor:** Q2 tests and evidence.",
+      "position": 383
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 8",
+    "ok": true,
+    "detail": {
+      "md": "8. **Engineer:** Conditional authorized repair on same QA branch.",
+      "position": 408
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 9",
+    "ok": true,
+    "detail": {
+      "md": "9. **Director:** Commit repaired candidate on the continuing QA branch.",
+      "position": 459
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 10",
+    "ok": true,
+    "detail": {
+      "md": "10. **QA Executor:** Independent retest of repair and regression.",
+      "position": 517
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 11",
+    "ok": true,
+    "detail": {
+      "md": "11. **QA Lead:** Product certification; approve cleanup retention.",
+      "position": 565
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 12",
+    "ok": true,
+    "detail": {
+      "md": "12. **QA Executor:** Authorized cleanup; retain durable evidence.",
+      "position": 618
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 13",
+    "ok": true,
+    "detail": {
+      "md": "13. **QA Lead:** Accept cleanup; preserve product verdict identity.",
+      "position": 666
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 14",
+    "ok": true,
+    "detail": {
+      "md": "14. **Architect:** Closeout instruction.",
+      "position": 720
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 15",
+    "ok": true,
+    "detail": {
+      "md": "15. **Engineer:** Bounded closeout.",
+      "position": 745
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 16",
+    "ok": true,
+    "detail": {
+      "md": "16. **Director:** Final commits, merge and push.",
+      "position": 766
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 17",
+    "ok": true,
+    "detail": {
+      "md": "17. **Reviewers:** Review checkpoint 1 after FFM build and independent QA.",
+      "position": 800
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_EXECUTION step 18",
+    "ok": true,
+    "detail": {
+      "md": "18. **Director:** Disposition review findings; RRM only for approved repairs.",
+      "position": 859
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "actors FFM_EXECUTION",
+    "ok": true,
+    "detail": []
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_DEPLOYMENT step 1",
+    "ok": true,
+    "detail": {
+      "md": "1. **Architect:** Declare target, permissions, exclusion and recovery.",
+      "position": 152
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_DEPLOYMENT step 2",
+    "ok": true,
+    "detail": {
+      "md": "2. **QA Lead:** Required product QA verdict remains distinct.",
+      "position": 207
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_DEPLOYMENT step 3",
+    "ok": true,
+    "detail": {
+      "md": "3. **Director:** Release the verified candidate for deployment.",
+      "position": 255
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_DEPLOYMENT step 4",
+    "ok": true,
+    "detail": {
+      "md": "4. **Authorized operator:** Deploy within existing context-specific permissions.",
+      "position": 304
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_DEPLOYMENT step 5",
+    "ok": true,
+    "detail": {
+      "md": "5. **QA Executor:** Verify deployed identity, exclusions and behavior at Gate D.",
+      "position": 359
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_DEPLOYMENT step 6",
+    "ok": true,
+    "detail": {
+      "md": "6. **QA Lead:** Issue deployed-environment verdict.",
+      "position": 422
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_DEPLOYMENT step 7",
+    "ok": true,
+    "detail": {
+      "md": "7. **Director:** Release decision or authorized recovery.",
+      "position": 460
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "FFM_DEPLOYMENT step 8",
+    "ok": true,
+    "detail": {
+      "md": "8. **Architect:** Record follow-ups; release is separate from review.",
+      "position": 503
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "actors FFM_DEPLOYMENT",
+    "ok": true,
+    "detail": []
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 1",
+    "ok": true,
+    "detail": {
+      "md": "1. **Engineer:** Fresh recon after preceding module closeout.",
+      "position": 168
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 2",
+    "ok": true,
+    "detail": {
+      "md": "2. **Architect:** Author BIM just in time; prepare contract and QAM.",
+      "position": 215
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 3",
+    "ok": true,
+    "detail": {
+      "md": "3. **Director:** Approve scope and release Engineering.",
+      "position": 268
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 4",
+    "ok": true,
+    "detail": {
+      "md": "4. **Engineer:** Implement, verify and complete factual handoff.",
+      "position": 309
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 5",
+    "ok": true,
+    "detail": {
+      "md": "5. **Director:** Commit/push candidate; QA branch at that exact commit.",
+      "position": 359
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 6",
+    "ok": true,
+    "detail": {
+      "md": "6. **QA Executor:** Q1 recon and independent plan.",
+      "position": 416
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 7",
+    "ok": true,
+    "detail": {
+      "md": "7. **QA Lead:** Approve plan.",
+      "position": 449
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 8",
+    "ok": true,
+    "detail": {
+      "md": "8. **Director:** Release Q2.",
+      "position": 465
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 9",
+    "ok": true,
+    "detail": {
+      "md": "9. **QA Executor:** Q2 tests and findings.",
+      "position": 479
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 10",
+    "ok": true,
+    "detail": {
+      "md": "10. **Engineer:** Conditional authorized repairs on continuing QA branch.",
+      "position": 505
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 11",
+    "ok": true,
+    "detail": {
+      "md": "11. **Director:** Commit repaired candidate on the continuing QA branch.",
+      "position": 564
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 12",
+    "ok": true,
+    "detail": {
+      "md": "12. **QA Executor:** Independent retest of repairs and required regression.",
+      "position": 622
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 13",
+    "ok": true,
+    "detail": {
+      "md": "13. **QA Lead:** Product certification; approve cleanup retention.",
+      "position": 680
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 14",
+    "ok": true,
+    "detail": {
+      "md": "14. **QA Executor:** Perform authorized required cleanup; retain evidence.",
+      "position": 733
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 15",
+    "ok": true,
+    "detail": {
+      "md": "15. **QA Lead:** Accept cleanup separately from product verdict.",
+      "position": 790
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 16",
+    "ok": true,
+    "detail": {
+      "md": "16. **Architect:** Closeout instructions.",
+      "position": 841
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 17",
+    "ok": true,
+    "detail": {
+      "md": "17. **Engineer:** Bounded closeout.",
+      "position": 867
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 18",
+    "ok": true,
+    "detail": {
+      "md": "18. **Director:** Final commits, merge and push.",
+      "position": 888
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 19",
+    "ok": true,
+    "detail": {
+      "md": "19. **Authorized operator:** If deployment in scope: deploy within existing permissions.",
+      "position": 922
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 20",
+    "ok": true,
+    "detail": {
+      "md": "20. **QA Executor:** If deployed: independently verify the exact revision at Gate D.",
+      "position": 985
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 21",
+    "ok": true,
+    "detail": {
+      "md": "21. **QA Lead:** If deployed: Gate D verdict; otherwise documented N/A.",
+      "position": 1052
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 22",
+    "ok": true,
+    "detail": {
+      "md": "22. **Architect:** Complete all Engine 1 phases/modules and their QA.",
+      "position": 1110
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 23",
+    "ok": true,
+    "detail": {
+      "md": "23. **Reviewers:** Review checkpoint 2: Engine 2 independent system review.",
+      "position": 1164
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "BIM_WORKFLOW step 24",
+    "ok": true,
+    "detail": {
+      "md": "24. **Director:** Disposition findings; RRM only for approved repairs.",
+      "position": 1224
+    }
+  },
+  {
+    "ac": "AC37",
+    "name": "actors BIM_WORKFLOW",
+    "ok": true,
+    "detail": []
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse SOFTWARE_FACTORY_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "APP_FACTORY_BLUEPRINT",
+        "BIM_PLAYBOOK",
+        "BUG_FIX_PLAYBOOK",
+        "DEPLOYMENT_PLAYBOOK",
+        "FEAT_PLAYBOOK",
+        "FFM_PLAYBOOK",
+        "FRONTEND_FIRST_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "QA_PLAYBOOK",
+        "RRM_PLAYBOOK",
+        "TESTING_PLAYBOOK"
+      ],
+      "actual": [
+        "APP_FACTORY_BLUEPRINT",
+        "BIM_PLAYBOOK",
+        "BUG_FIX_PLAYBOOK",
+        "DEPLOYMENT_PLAYBOOK",
+        "FEAT_PLAYBOOK",
+        "FFM_PLAYBOOK",
+        "FRONTEND_FIRST_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "QA_PLAYBOOK",
+        "RRM_PLAYBOOK",
+        "TESTING_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse ECOMMERCE_AND_PAYMENTS_MANUAL",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "API_AND_SERVICES_MANUAL",
+        "APP_ARCHITECTURE_MANUAL",
+        "STRIPE_SUBSCRIPTIONS_PLAYBOOK"
+      ],
+      "actual": [
+        "API_AND_SERVICES_MANUAL",
+        "APP_ARCHITECTURE_MANUAL",
+        "STRIPE_SUBSCRIPTIONS_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse DATABASE_MANUAL",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "API_AND_SERVICES_MANUAL",
+        "AUTH_MANUAL",
+        "STARTER_KIT_HANDBOOK"
+      ],
+      "actual": [
+        "API_AND_SERVICES_MANUAL",
+        "AUTH_MANUAL",
+        "STARTER_KIT_HANDBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse STARTER_KIT_HANDBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "API_AND_SERVICES_MANUAL",
+        "APP_ARCHITECTURE_MANUAL",
+        "AUTH_MANUAL",
+        "COMPONENT_REGISTRY",
+        "DATABASE_MANUAL",
+        "ENGINEER_PLAYBOOK",
+        "FRONTEND_BUILD_PHASE_PLAYBOOK",
+        "FRONTEND_FIRST_PLAYBOOK",
+        "RECON_QUESTIONNAIRE",
+        "STATE_MANAGEMENT_MANUAL",
+        "TESTING_PLAYBOOK",
+        "UI_UX_BUILDING_MANUAL"
+      ],
+      "actual": [
+        "API_AND_SERVICES_MANUAL",
+        "APP_ARCHITECTURE_MANUAL",
+        "AUTH_MANUAL",
+        "COMPONENT_REGISTRY",
+        "DATABASE_MANUAL",
+        "ENGINEER_PLAYBOOK",
+        "FRONTEND_BUILD_PHASE_PLAYBOOK",
+        "FRONTEND_FIRST_PLAYBOOK",
+        "RECON_QUESTIONNAIRE",
+        "STATE_MANAGEMENT_MANUAL",
+        "TESTING_PLAYBOOK",
+        "UI_UX_BUILDING_MANUAL"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse RRM_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "DEPLOYMENT_PLAYBOOK",
+        "QAM_PLAYBOOK"
+      ],
+      "actual": [
+        "DEPLOYMENT_PLAYBOOK",
+        "QAM_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse TOKEN_FILE",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "GLOBAL_DESIGN_SYSTEM_HANDBOOK",
+        "THEME_LIBRARY",
+        "THEMING_MANUAL"
+      ],
+      "actual": [
+        "GLOBAL_DESIGN_SYSTEM_HANDBOOK",
+        "THEME_LIBRARY",
+        "THEMING_MANUAL"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse TESTING_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "API_AND_SERVICES_MANUAL",
+        "BIM_PLAYBOOK",
+        "BUG_FIX_PLAYBOOK",
+        "DATABASE_MANUAL",
+        "ENGINEER_PLAYBOOK",
+        "FEAT_PLAYBOOK",
+        "FRONTEND_BUILD_PHASE_PLAYBOOK",
+        "FRONTEND_FIRST_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "QA_PLAYBOOK",
+        "RRM_PLAYBOOK",
+        "SOFTWARE_FACTORY_PLAYBOOK",
+        "STRIPE_SUBSCRIPTIONS_PLAYBOOK"
+      ],
+      "actual": [
+        "API_AND_SERVICES_MANUAL",
+        "BIM_PLAYBOOK",
+        "BUG_FIX_PLAYBOOK",
+        "DATABASE_MANUAL",
+        "ENGINEER_PLAYBOOK",
+        "FEAT_PLAYBOOK",
+        "FRONTEND_BUILD_PHASE_PLAYBOOK",
+        "FRONTEND_FIRST_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "QA_PLAYBOOK",
+        "RRM_PLAYBOOK",
+        "SOFTWARE_FACTORY_PLAYBOOK",
+        "STRIPE_SUBSCRIPTIONS_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse ARCHITECT_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "APP_FACTORY_BLUEPRINT",
+        "ARCHITECT_QUESTIONNAIRE",
+        "BIM_PLAYBOOK",
+        "DESIGNER_PLAYBOOK",
+        "FFM_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "RECON_QUESTIONNAIRE",
+        "RRM_PLAYBOOK"
+      ],
+      "actual": [
+        "APP_FACTORY_BLUEPRINT",
+        "ARCHITECT_QUESTIONNAIRE",
+        "BIM_PLAYBOOK",
+        "DESIGNER_PLAYBOOK",
+        "FFM_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "RECON_QUESTIONNAIRE",
+        "RRM_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse ARCHITECT_QUESTIONNAIRE",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "ARCHITECT_PLAYBOOK"
+      ],
+      "actual": [
+        "ARCHITECT_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse ENGINEER_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "APP_FACTORY_BLUEPRINT",
+        "BIM_PLAYBOOK",
+        "BUG_FIX_PLAYBOOK",
+        "DESIGNER_PLAYBOOK",
+        "FFM_PLAYBOOK",
+        "HANDOFF_PACKAGE_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "QA_PLAYBOOK",
+        "RRM_PLAYBOOK"
+      ],
+      "actual": [
+        "APP_FACTORY_BLUEPRINT",
+        "BIM_PLAYBOOK",
+        "BUG_FIX_PLAYBOOK",
+        "DESIGNER_PLAYBOOK",
+        "FFM_PLAYBOOK",
+        "HANDOFF_PACKAGE_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "QA_PLAYBOOK",
+        "RRM_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse DEPLOYMENT_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "QAM_PLAYBOOK",
+        "RRM_PLAYBOOK"
+      ],
+      "actual": [
+        "QAM_PLAYBOOK",
+        "RRM_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse QAM_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "DEPLOYMENT_PLAYBOOK",
+        "RRM_PLAYBOOK"
+      ],
+      "actual": [
+        "DEPLOYMENT_PLAYBOOK",
+        "RRM_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse API_AND_SERVICES_MANUAL",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "APP_ARCHITECTURE_MANUAL",
+        "AUTH_MANUAL",
+        "DATABASE_MANUAL",
+        "ECOMMERCE_AND_PAYMENTS_MANUAL",
+        "STRIPE_SUBSCRIPTIONS_PLAYBOOK"
+      ],
+      "actual": [
+        "APP_ARCHITECTURE_MANUAL",
+        "AUTH_MANUAL",
+        "DATABASE_MANUAL",
+        "ECOMMERCE_AND_PAYMENTS_MANUAL",
+        "STRIPE_SUBSCRIPTIONS_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse GLOBAL_DESIGN_SYSTEM_HANDBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "COMPONENT_REGISTRY",
+        "DESIGNER_PLAYBOOK",
+        "THEME_LIBRARY",
+        "THEMING_MANUAL",
+        "TOKEN_FILE",
+        "UI_UX_BUILDING_MANUAL"
+      ],
+      "actual": [
+        "COMPONENT_REGISTRY",
+        "DESIGNER_PLAYBOOK",
+        "THEME_LIBRARY",
+        "THEMING_MANUAL",
+        "TOKEN_FILE",
+        "UI_UX_BUILDING_MANUAL"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse STRIPE_SUBSCRIPTIONS_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "ECOMMERCE_AND_PAYMENTS_MANUAL"
+      ],
+      "actual": [
+        "ECOMMERCE_AND_PAYMENTS_MANUAL"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse DESIGNER_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "APP_FACTORY_BLUEPRINT",
+        "APP_FACTORY_SKILLS_PLAYBOOK",
+        "ARCHITECT_PLAYBOOK",
+        "ENGINEER_PLAYBOOK",
+        "FFM_PLAYBOOK",
+        "GLOBAL_DESIGN_SYSTEM_HANDBOOK",
+        "HANDOFF_PACKAGE_PLAYBOOK",
+        "SOFTWARE_FACTORY_PLAYBOOK",
+        "THEME_LIBRARY",
+        "TOKEN_FILE"
+      ],
+      "actual": [
+        "APP_FACTORY_BLUEPRINT",
+        "APP_FACTORY_SKILLS_PLAYBOOK",
+        "ARCHITECT_PLAYBOOK",
+        "ENGINEER_PLAYBOOK",
+        "FFM_PLAYBOOK",
+        "GLOBAL_DESIGN_SYSTEM_HANDBOOK",
+        "HANDOFF_PACKAGE_PLAYBOOK",
+        "SOFTWARE_FACTORY_PLAYBOOK",
+        "THEME_LIBRARY",
+        "TOKEN_FILE"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse RECON_QUESTIONNAIRE",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "APP_ARCHITECTURE_MANUAL",
+        "APP_FACTORY_BLUEPRINT",
+        "APP_FACTORY_SKILLS_PLAYBOOK",
+        "ARCHITECT_PLAYBOOK",
+        "ARCHITECT_QUESTIONNAIRE",
+        "AUTH_MANUAL",
+        "BIM_PLAYBOOK",
+        "BUG_FIX_PLAYBOOK",
+        "DEPLOYMENT_PLAYBOOK",
+        "ENGINEER_PLAYBOOK",
+        "FFM_PLAYBOOK",
+        "HANDOFF_PACKAGE_PLAYBOOK",
+        "QA_PLAYBOOK",
+        "TESTING_PLAYBOOK"
+      ],
+      "actual": [
+        "APP_ARCHITECTURE_MANUAL",
+        "APP_FACTORY_BLUEPRINT",
+        "APP_FACTORY_SKILLS_PLAYBOOK",
+        "ARCHITECT_PLAYBOOK",
+        "ARCHITECT_QUESTIONNAIRE",
+        "AUTH_MANUAL",
+        "BIM_PLAYBOOK",
+        "BUG_FIX_PLAYBOOK",
+        "DEPLOYMENT_PLAYBOOK",
+        "ENGINEER_PLAYBOOK",
+        "FFM_PLAYBOOK",
+        "HANDOFF_PACKAGE_PLAYBOOK",
+        "QA_PLAYBOOK",
+        "TESTING_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse FEAT_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "BIM_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "RRM_PLAYBOOK"
+      ],
+      "actual": [
+        "BIM_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "RRM_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse UI_UX_BUILDING_MANUAL",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "COMPONENT_REGISTRY",
+        "GLOBAL_DESIGN_SYSTEM_HANDBOOK",
+        "STARTER_KIT_HANDBOOK",
+        "THEMING_MANUAL"
+      ],
+      "actual": [
+        "COMPONENT_REGISTRY",
+        "GLOBAL_DESIGN_SYSTEM_HANDBOOK",
+        "STARTER_KIT_HANDBOOK",
+        "THEMING_MANUAL"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse HANDOFF_PACKAGE_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "APP_FACTORY_BLUEPRINT",
+        "ENGINEER_PLAYBOOK",
+        "FFM_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "RRM_PLAYBOOK",
+        "SOFTWARE_FACTORY_PLAYBOOK"
+      ],
+      "actual": [
+        "APP_FACTORY_BLUEPRINT",
+        "ENGINEER_PLAYBOOK",
+        "FFM_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "RRM_PLAYBOOK",
+        "SOFTWARE_FACTORY_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse QA_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "BIM_PLAYBOOK",
+        "BUG_FIX_PLAYBOOK",
+        "DEPLOYMENT_PLAYBOOK",
+        "FEAT_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "RRM_PLAYBOOK"
+      ],
+      "actual": [
+        "BIM_PLAYBOOK",
+        "BUG_FIX_PLAYBOOK",
+        "DEPLOYMENT_PLAYBOOK",
+        "FEAT_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "RRM_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse BUG_FIX_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "BIM_PLAYBOOK",
+        "FEAT_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "QA_PLAYBOOK",
+        "RRM_PLAYBOOK"
+      ],
+      "actual": [
+        "BIM_PLAYBOOK",
+        "FEAT_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "QA_PLAYBOOK",
+        "RRM_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse APP_ARCHITECTURE_MANUAL",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "ECOMMERCE_AND_PAYMENTS_MANUAL",
+        "STATE_MANAGEMENT_MANUAL",
+        "THEMING_MANUAL"
+      ],
+      "actual": [
+        "ECOMMERCE_AND_PAYMENTS_MANUAL",
+        "STATE_MANAGEMENT_MANUAL",
+        "THEMING_MANUAL"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse APP_FACTORY_BLUEPRINT",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "ARCHITECT_PLAYBOOK",
+        "ARCHITECT_QUESTIONNAIRE",
+        "ENGINEER_PLAYBOOK",
+        "HANDOFF_PACKAGE_PLAYBOOK",
+        "RECON_QUESTIONNAIRE",
+        "SOFTWARE_FACTORY_PLAYBOOK"
+      ],
+      "actual": [
+        "ARCHITECT_PLAYBOOK",
+        "ARCHITECT_QUESTIONNAIRE",
+        "ENGINEER_PLAYBOOK",
+        "HANDOFF_PACKAGE_PLAYBOOK",
+        "RECON_QUESTIONNAIRE",
+        "SOFTWARE_FACTORY_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse AUTH_MANUAL",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "APP_ARCHITECTURE_MANUAL",
+        "DATABASE_MANUAL",
+        "STARTER_KIT_HANDBOOK",
+        "STATE_MANAGEMENT_MANUAL",
+        "STRIPE_SUBSCRIPTIONS_PLAYBOOK"
+      ],
+      "actual": [
+        "APP_ARCHITECTURE_MANUAL",
+        "DATABASE_MANUAL",
+        "STARTER_KIT_HANDBOOK",
+        "STATE_MANAGEMENT_MANUAL",
+        "STRIPE_SUBSCRIPTIONS_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse FFM_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "APP_FACTORY_BLUEPRINT",
+        "APP_FACTORY_SKILLS_PLAYBOOK",
+        "BIM_PLAYBOOK",
+        "BUG_FIX_PLAYBOOK",
+        "DEPLOYMENT_PLAYBOOK",
+        "ENGINEER_PLAYBOOK",
+        "FRONTEND_BUILD_PHASE_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "QA_PLAYBOOK",
+        "RECON_QUESTIONNAIRE",
+        "RRM_PLAYBOOK",
+        "TESTING_PLAYBOOK"
+      ],
+      "actual": [
+        "APP_FACTORY_BLUEPRINT",
+        "APP_FACTORY_SKILLS_PLAYBOOK",
+        "BIM_PLAYBOOK",
+        "BUG_FIX_PLAYBOOK",
+        "DEPLOYMENT_PLAYBOOK",
+        "ENGINEER_PLAYBOOK",
+        "FRONTEND_BUILD_PHASE_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "QA_PLAYBOOK",
+        "RECON_QUESTIONNAIRE",
+        "RRM_PLAYBOOK",
+        "TESTING_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse APP_FACTORY_SKILLS_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "DEPLOYMENT_PLAYBOOK",
+        "FFM_PLAYBOOK"
+      ],
+      "actual": [
+        "DEPLOYMENT_PLAYBOOK",
+        "FFM_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse COMPONENT_REGISTRY",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "DESIGNER_PLAYBOOK",
+        "FRONTEND_BUILD_PHASE_PLAYBOOK",
+        "FRONTEND_FIRST_PLAYBOOK",
+        "GLOBAL_DESIGN_SYSTEM_HANDBOOK",
+        "STARTER_KIT_HANDBOOK",
+        "UI_UX_BUILDING_MANUAL"
+      ],
+      "actual": [
+        "DESIGNER_PLAYBOOK",
+        "FRONTEND_BUILD_PHASE_PLAYBOOK",
+        "FRONTEND_FIRST_PLAYBOOK",
+        "GLOBAL_DESIGN_SYSTEM_HANDBOOK",
+        "STARTER_KIT_HANDBOOK",
+        "UI_UX_BUILDING_MANUAL"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse FRONTEND_BUILD_PHASE_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "ENGINEER_PLAYBOOK",
+        "FRONTEND_FIRST_PLAYBOOK",
+        "TESTING_PLAYBOOK",
+        "UI_UX_BUILDING_MANUAL"
+      ],
+      "actual": [
+        "ENGINEER_PLAYBOOK",
+        "FRONTEND_FIRST_PLAYBOOK",
+        "TESTING_PLAYBOOK",
+        "UI_UX_BUILDING_MANUAL"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse STATE_MANAGEMENT_MANUAL",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "APP_ARCHITECTURE_MANUAL",
+        "AUTH_MANUAL",
+        "ECOMMERCE_AND_PAYMENTS_MANUAL",
+        "STARTER_KIT_HANDBOOK"
+      ],
+      "actual": [
+        "APP_ARCHITECTURE_MANUAL",
+        "AUTH_MANUAL",
+        "ECOMMERCE_AND_PAYMENTS_MANUAL",
+        "STARTER_KIT_HANDBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse BIM_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "DEPLOYMENT_PLAYBOOK",
+        "FEAT_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "RRM_PLAYBOOK"
+      ],
+      "actual": [
+        "DEPLOYMENT_PLAYBOOK",
+        "FEAT_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "RRM_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse FRONTEND_FIRST_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "API_AND_SERVICES_MANUAL",
+        "AUTH_MANUAL",
+        "DATABASE_MANUAL",
+        "ENGINEER_PLAYBOOK",
+        "FRONTEND_BUILD_PHASE_PLAYBOOK",
+        "HANDOFF_PACKAGE_PLAYBOOK",
+        "STATE_MANAGEMENT_MANUAL"
+      ],
+      "actual": [
+        "API_AND_SERVICES_MANUAL",
+        "AUTH_MANUAL",
+        "DATABASE_MANUAL",
+        "ENGINEER_PLAYBOOK",
+        "FRONTEND_BUILD_PHASE_PLAYBOOK",
+        "HANDOFF_PACKAGE_PLAYBOOK",
+        "STATE_MANAGEMENT_MANUAL"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse THEME_LIBRARY",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "DESIGNER_PLAYBOOK",
+        "GLOBAL_DESIGN_SYSTEM_HANDBOOK",
+        "THEMING_MANUAL",
+        "TOKEN_FILE"
+      ],
+      "actual": [
+        "DESIGNER_PLAYBOOK",
+        "GLOBAL_DESIGN_SYSTEM_HANDBOOK",
+        "THEMING_MANUAL",
+        "TOKEN_FILE"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived reverse THEMING_MANUAL",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "DESIGNER_PLAYBOOK",
+        "GLOBAL_DESIGN_SYSTEM_HANDBOOK",
+        "THEME_LIBRARY",
+        "TOKEN_FILE",
+        "UI_UX_BUILDING_MANUAL"
+      ],
+      "actual": [
+        "DESIGNER_PLAYBOOK",
+        "GLOBAL_DESIGN_SYSTEM_HANDBOOK",
+        "THEME_LIBRARY",
+        "TOKEN_FILE",
+        "UI_UX_BUILDING_MANUAL"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix APP_FACTORY_BLUEPRINT",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "DEPLOYMENT_PLAYBOOK",
+        "QA_PLAYBOOK"
+      ],
+      "actual": [
+        "DEPLOYMENT_PLAYBOOK",
+        "QA_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix SOFTWARE_FACTORY_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "API_AND_SERVICES_MANUAL",
+        "APP_ARCHITECTURE_MANUAL",
+        "AUTH_MANUAL",
+        "DATABASE_MANUAL",
+        "ECOMMERCE_AND_PAYMENTS_MANUAL",
+        "FRONTEND_FIRST_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "RECON_QUESTIONNAIRE",
+        "STARTER_KIT_HANDBOOK",
+        "STATE_MANAGEMENT_MANUAL"
+      ],
+      "actual": [
+        "API_AND_SERVICES_MANUAL",
+        "APP_ARCHITECTURE_MANUAL",
+        "AUTH_MANUAL",
+        "DATABASE_MANUAL",
+        "ECOMMERCE_AND_PAYMENTS_MANUAL",
+        "FRONTEND_FIRST_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "RECON_QUESTIONNAIRE",
+        "STARTER_KIT_HANDBOOK",
+        "STATE_MANAGEMENT_MANUAL"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix STARTER_KIT_HANDBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [],
+      "actual": []
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix ARCHITECT_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "QAM_PLAYBOOK",
+        "SOFTWARE_FACTORY_PLAYBOOK"
+      ],
+      "actual": [
+        "QAM_PLAYBOOK",
+        "SOFTWARE_FACTORY_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix ARCHITECT_QUESTIONNAIRE",
+    "ok": true,
+    "detail": {
+      "expected": [],
+      "actual": []
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix DESIGNER_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "TOKEN_FILE"
+      ],
+      "actual": [
+        "TOKEN_FILE"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix ENGINEER_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "ARCHITECT_PLAYBOOK",
+        "QAM_PLAYBOOK"
+      ],
+      "actual": [
+        "ARCHITECT_PLAYBOOK",
+        "QAM_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix HANDOFF_PACKAGE_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "ARCHITECT_PLAYBOOK",
+        "COMPONENT_REGISTRY",
+        "FFM_PLAYBOOK",
+        "FRONTEND_BUILD_PHASE_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "SOFTWARE_FACTORY_PLAYBOOK",
+        "STARTER_KIT_HANDBOOK"
+      ],
+      "actual": [
+        "ARCHITECT_PLAYBOOK",
+        "COMPONENT_REGISTRY",
+        "FFM_PLAYBOOK",
+        "FRONTEND_BUILD_PHASE_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "SOFTWARE_FACTORY_PLAYBOOK",
+        "STARTER_KIT_HANDBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix RECON_QUESTIONNAIRE",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "DEPLOYMENT_PLAYBOOK"
+      ],
+      "actual": [
+        "DEPLOYMENT_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix APP_FACTORY_SKILLS_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [],
+      "actual": []
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix BIM_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "DEPLOYMENT_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "RRM_PLAYBOOK"
+      ],
+      "actual": [
+        "DEPLOYMENT_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "RRM_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix BUG_FIX_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "QAM_PLAYBOOK"
+      ],
+      "actual": [
+        "QAM_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix DEPLOYMENT_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "BUG_FIX_PLAYBOOK"
+      ],
+      "actual": [
+        "BUG_FIX_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix FEAT_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "QAM_PLAYBOOK"
+      ],
+      "actual": [
+        "QAM_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix FFM_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "APP_FACTORY_BLUEPRINT",
+        "ARCHITECT_QUESTIONNAIRE",
+        "DEPLOYMENT_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "RRM_PLAYBOOK"
+      ],
+      "actual": [
+        "APP_FACTORY_BLUEPRINT",
+        "ARCHITECT_QUESTIONNAIRE",
+        "DEPLOYMENT_PLAYBOOK",
+        "QAM_PLAYBOOK",
+        "RRM_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix FRONTEND_BUILD_PHASE_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "APP_FACTORY_BLUEPRINT",
+        "BUG_FIX_PLAYBOOK",
+        "QA_PLAYBOOK",
+        "SOFTWARE_FACTORY_PLAYBOOK"
+      ],
+      "actual": [
+        "APP_FACTORY_BLUEPRINT",
+        "BUG_FIX_PLAYBOOK",
+        "QA_PLAYBOOK",
+        "SOFTWARE_FACTORY_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix FRONTEND_FIRST_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "RECON_QUESTIONNAIRE"
+      ],
+      "actual": [
+        "RECON_QUESTIONNAIRE"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix QAM_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [],
+      "actual": []
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix QA_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "DEPLOYMENT_PLAYBOOK"
+      ],
+      "actual": [
+        "DEPLOYMENT_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix RRM_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "RECON_QUESTIONNAIRE"
+      ],
+      "actual": [
+        "RECON_QUESTIONNAIRE"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix TESTING_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [],
+      "actual": []
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix API_AND_SERVICES_MANUAL",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "AUTH_MANUAL",
+        "HANDOFF_PACKAGE_PLAYBOOK"
+      ],
+      "actual": [
+        "AUTH_MANUAL",
+        "HANDOFF_PACKAGE_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix APP_ARCHITECTURE_MANUAL",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "TESTING_PLAYBOOK"
+      ],
+      "actual": [
+        "TESTING_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix AUTH_MANUAL",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "BUG_FIX_PLAYBOOK",
+        "COMPONENT_REGISTRY",
+        "TESTING_PLAYBOOK"
+      ],
+      "actual": [
+        "BUG_FIX_PLAYBOOK",
+        "COMPONENT_REGISTRY",
+        "TESTING_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix DATABASE_MANUAL",
+    "ok": true,
+    "detail": {
+      "expected": [],
+      "actual": []
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix ECOMMERCE_AND_PAYMENTS_MANUAL",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "TESTING_PLAYBOOK"
+      ],
+      "actual": [
+        "TESTING_PLAYBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix STATE_MANAGEMENT_MANUAL",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "ECOMMERCE_AND_PAYMENTS_MANUAL"
+      ],
+      "actual": [
+        "ECOMMERCE_AND_PAYMENTS_MANUAL"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix STRIPE_SUBSCRIPTIONS_PLAYBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [],
+      "actual": []
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix COMPONENT_REGISTRY",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "TOKEN_FILE"
+      ],
+      "actual": [
+        "TOKEN_FILE"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix GLOBAL_DESIGN_SYSTEM_HANDBOOK",
+    "ok": true,
+    "detail": {
+      "expected": [],
+      "actual": []
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix THEME_LIBRARY",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "STARTER_KIT_HANDBOOK"
+      ],
+      "actual": [
+        "STARTER_KIT_HANDBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix THEMING_MANUAL",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "COMPONENT_REGISTRY",
+        "HANDOFF_PACKAGE_PLAYBOOK",
+        "STARTER_KIT_HANDBOOK"
+      ],
+      "actual": [
+        "COMPONENT_REGISTRY",
+        "HANDOFF_PACKAGE_PLAYBOOK",
+        "STARTER_KIT_HANDBOOK"
+      ]
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix TOKEN_FILE",
+    "ok": true,
+    "detail": {
+      "expected": [],
+      "actual": []
+    }
+  },
+  {
+    "ac": "AC25",
+    "name": "derived appendix UI_UX_BUILDING_MANUAL",
+    "ok": true,
+    "detail": {
+      "expected": [
+        "APP_ARCHITECTURE_MANUAL",
+        "HANDOFF_PACKAGE_PLAYBOOK",
+        "TOKEN_FILE"
+      ],
+      "actual": [
+        "APP_ARCHITECTURE_MANUAL",
+        "HANDOFF_PACKAGE_PLAYBOOK",
+        "TOKEN_FILE"
+      ]
+    }
+  },
+  {
+    "ac": "AC20",
+    "name": "historical label 01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md:62",
+    "ok": true,
+    "detail": [
+      {
+        "type": "table_open",
+        "map": [
+          59,
+          67
+        ],
+        "content": ""
+      },
+      {
+        "type": "tr_open",
+        "map": [
+          61,
+          62
+        ],
+        "content": ""
+      },
+      {
+        "type": "inline",
+        "map": [
+          61,
+          62
+        ],
+        "content": "`HANDOFF_PACKAGE_PLAYBOOK.md`"
+      },
+      {
+        "type": "inline",
+        "map": [
+          61,
+          62
+        ],
+        "content": "Historical external example (availability unverified): `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/`. Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+      }
+    ]
+  },
+  {
+    "ac": "AC20",
+    "name": "historical label 01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md:118",
+    "ok": true,
+    "detail": [
+      {
+        "type": "list_item_open",
+        "map": [
+          117,
+          119
+        ],
+        "content": ""
+      },
+      {
+        "type": "paragraph_open",
+        "map": [
+          117,
+          118
+        ],
+        "content": ""
+      },
+      {
+        "type": "inline",
+        "map": [
+          117,
+          118
+        ],
+        "content": "Historical external example (availability unverified): **`CURRENT_APP/app-factory-frontend-first-module/_project/`** — the inaugural historical worked example Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+      }
+    ]
+  },
+  {
+    "ac": "AC20",
+    "name": "historical label 02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md:7",
+    "ok": true,
+    "detail": [
+      {
+        "type": "blockquote_open",
+        "map": [
+          5,
+          9
+        ],
+        "content": ""
+      },
+      {
+        "type": "paragraph_open",
+        "map": [
+          5,
+          9
+        ],
+        "content": ""
+      },
+      {
+        "type": "inline",
+        "map": [
+          5,
+          9
+        ],
+        "content": "**The instruction set for authoring project handoff packages.**\nHistorical external example (availability unverified): Paired with the Cyberize Agentic Automation handoff as the historical worked example. Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.\n**Born from:** Cyberize Agentic Automation Run 001 (May 2026) — first successful Factory frontend conversion\nHistorical external example (availability unverified): **Worked example:** `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/` Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+      }
+    ]
+  },
+  {
+    "ac": "AC20",
+    "name": "historical label 02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md:9",
+    "ok": true,
+    "detail": [
+      {
+        "type": "blockquote_open",
+        "map": [
+          5,
+          9
+        ],
+        "content": ""
+      },
+      {
+        "type": "paragraph_open",
+        "map": [
+          5,
+          9
+        ],
+        "content": ""
+      },
+      {
+        "type": "inline",
+        "map": [
+          5,
+          9
+        ],
+        "content": "**The instruction set for authoring project handoff packages.**\nHistorical external example (availability unverified): Paired with the Cyberize Agentic Automation handoff as the historical worked example. Obtain the source repository, immutable revision and path before use; do not assume this path exists locally.\n**Born from:** Cyberize Agentic Automation Run 001 (May 2026) — first successful Factory frontend conversion\nHistorical external example (availability unverified): **Worked example:** `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/` Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+      }
+    ]
+  },
+  {
+    "ac": "AC20",
+    "name": "historical label 02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md:131",
+    "ok": true,
+    "detail": [
+      {
+        "type": "paragraph_open",
+        "map": [
+          130,
+          131
+        ],
+        "content": ""
+      },
+      {
+        "type": "inline",
+        "map": [
+          130,
+          131
+        ],
+        "content": "Historical external example (availability unverified): **Canonical example:** `_project/DATA_CONTRACT.md` in the Cyberize module. Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+      }
+    ]
+  },
+  {
+    "ac": "AC20",
+    "name": "historical label 02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md:169",
+    "ok": true,
+    "detail": [
+      {
+        "type": "paragraph_open",
+        "map": [
+          168,
+          169
+        ],
+        "content": ""
+      },
+      {
+        "type": "inline",
+        "map": [
+          168,
+          169
+        ],
+        "content": "Historical external example (availability unverified): **Canonical example:** `_project/UI_SPEC.md` in the Cyberize module. Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+      }
+    ]
+  },
+  {
+    "ac": "AC20",
+    "name": "historical label 02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md:346",
+    "ok": true,
+    "detail": [
+      {
+        "type": "paragraph_open",
+        "map": [
+          345,
+          346
+        ],
+        "content": ""
+      },
+      {
+        "type": "inline",
+        "map": [
+          345,
+          346
+        ],
+        "content": "Historical external example (availability unverified): The historical worked example is `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/`. Read all four files there to see what \"good\" looks like: Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+      }
+    ]
+  },
+  {
+    "ac": "AC20",
+    "name": "historical label 02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md:381",
+    "ok": true,
+    "detail": [
+      {
+        "type": "list_item_open",
+        "map": [
+          380,
+          381
+        ],
+        "content": ""
+      },
+      {
+        "type": "paragraph_open",
+        "map": [
+          380,
+          381
+        ],
+        "content": ""
+      },
+      {
+        "type": "inline",
+        "map": [
+          380,
+          381
+        ],
+        "content": "Historical external example (availability unverified): **Worked example:** `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/` Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+      }
+    ]
+  },
+  {
+    "ac": "AC20",
+    "name": "historical label 03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md:373",
+    "ok": true,
+    "detail": [
+      {
+        "type": "paragraph_open",
+        "map": [
+          372,
+          373
+        ],
+        "content": ""
+      },
+      {
+        "type": "inline",
+        "map": [
+          372,
+          373
+        ],
+        "content": "Historical external example (availability unverified): The historical worked example of this pattern is at: Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+      }
+    ]
+  },
+  {
+    "ac": "AC20",
+    "name": "historical label 04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:1206",
+    "ok": true,
+    "detail": [
+      {
+        "type": "paragraph_open",
+        "map": [
+          1205,
+          1206
+        ],
+        "content": ""
+      },
+      {
+        "type": "inline",
+        "map": [
+          1205,
+          1206
+        ],
+        "content": "Historical external example (availability unverified): The historical worked example of this pattern is at: Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+      }
+    ]
+  },
+  {
+    "ac": "AC20",
+    "name": "historical label 05_DESIGN_SYSTEM/THEMING_MANUAL.md:268",
+    "ok": true,
+    "detail": [
+      {
+        "type": "list_item_open",
+        "map": [
+          267,
+          269
+        ],
+        "content": ""
+      },
+      {
+        "type": "paragraph_open",
+        "map": [
+          267,
+          268
+        ],
+        "content": ""
+      },
+      {
+        "type": "inline",
+        "map": [
+          267,
+          268
+        ],
+        "content": "Historical external example (availability unverified): **Cyberize Run 001 `_project/CLAUDE.md`** — the historical worked example of a Locked Palette table Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+      }
+    ]
+  },
+  {
+    "ac": "AC20",
+    "name": "historical label 05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md:128",
+    "ok": true,
+    "detail": [
+      {
+        "type": "list_item_open",
+        "map": [
+          127,
+          129
+        ],
+        "content": ""
+      },
+      {
+        "type": "paragraph_open",
+        "map": [
+          127,
+          128
+        ],
+        "content": ""
+      },
+      {
+        "type": "inline",
+        "map": [
+          127,
+          128
+        ],
+        "content": "Historical external example (availability unverified): **Cyberize Run 001 `_project/CLAUDE.md`** — the historical worked example of a Locked Palette table Obtain the source repository, immutable revision and path before use; do not assume this path exists locally."
+      }
+    ]
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token SOFTWARE_FACTORY_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+      "text": "Engine and review vocabulary: `SOFTWARE_FACTORY_PLAYBOOK.md` §2, “Phase Vocabulary — One Canonical Map”. Deployment requirements: `DEPLOYMENT_PLAYBOOK.md`; Gate D: `QA_PLAYBOOK.md` §13."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token DEPLOYMENT_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+      "text": "Engine and review vocabulary: `SOFTWARE_FACTORY_PLAYBOOK.md` §2, “Phase Vocabulary — One Canonical Map”. Deployment requirements: `DEPLOYMENT_PLAYBOOK.md`; Gate D: `QA_PLAYBOOK.md` §13."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QA_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+      "text": "Engine and review vocabulary: `SOFTWARE_FACTORY_PLAYBOOK.md` §2, “Phase Vocabulary — One Canonical Map”. Deployment requirements: `DEPLOYMENT_PLAYBOOK.md`; Gate D: `QA_PLAYBOOK.md` §13."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token SOFTWARE_FACTORY_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+      "text": "Engine and review vocabulary: `SOFTWARE_FACTORY_PLAYBOOK.md` §2, “Phase Vocabulary — One Canonical Map”. Deployment requirements: `DEPLOYMENT_PLAYBOOK.md`; Gate D: `QA_PLAYBOOK.md` §13."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token DEPLOYMENT_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+      "text": "Engine and review vocabulary: `SOFTWARE_FACTORY_PLAYBOOK.md` §2, “Phase Vocabulary — One Canonical Map”. Deployment requirements: `DEPLOYMENT_PLAYBOOK.md`; Gate D: `QA_PLAYBOOK.md` §13."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QA_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+      "text": "Engine and review vocabulary: `SOFTWARE_FACTORY_PLAYBOOK.md` §2, “Phase Vocabulary — One Canonical Map”. Deployment requirements: `DEPLOYMENT_PLAYBOOK.md`; Gate D: `QA_PLAYBOOK.md` §13."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token HANDOFF_PACKAGE_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+      "text": "| `HANDOFF_PACKAGE_PLAYBOOK.md` | Historical external example (availability unverified): `agent_docs/CURRENT_APP/app-factory-frontend-first-module/_project/`. Obtain the source repository, immutable revision and path before use; do not assume this path exists locally. |"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QAM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+      "text": "Every newly authored module includes a complete, module-specific `QAM/` prepared by the Architect from `03_BUILD_METHODOLOGY/_templates/QAM/`. QA Lead owns the reusable playbook and standing requirements. Engineer fills factual engineering records and handoff; QA Executor performs independent Q1 recon and test planning; QA Lead approves the plan; Director releases execution; QA Executor performs Q2 and authorized retest; QA Lead adjudicates and certifies. `QAM_PLAYBOOK.md` owns this packaging and sequence. Existing modules already in flight retain their recorded sequence until an attributable amendment."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token COMPONENT_REGISTRY.md",
+    "ok": true,
+    "detail": {
+      "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+      "text": "1. Check `COMPONENT_REGISTRY.md` (sibling file) — does a primitive exist?"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token UI_UX_BUILDING_MANUAL.md",
+    "ok": true,
+    "detail": {
+      "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+      "text": "4. Check `UI_UX_BUILDING_MANUAL.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token AUTH_MANUAL.md",
+    "ok": true,
+    "detail": {
+      "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+      "text": "- **`AUTH_MANUAL.md`** — full auth implementation details (deep dive)"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token DATABASE_MANUAL.md",
+    "ok": true,
+    "detail": {
+      "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+      "text": "- **`DATABASE_MANUAL.md`** — full DB setup, RLS policy templates"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token UI_UX_BUILDING_MANUAL.md",
+    "ok": true,
+    "detail": {
+      "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+      "text": "- **`UI_UX_BUILDING_MANUAL.md`** — full UI patterns, Rule Zero (mobile-first)"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token STATE_MANAGEMENT_MANUAL.md",
+    "ok": true,
+    "detail": {
+      "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+      "text": "- **`STATE_MANAGEMENT_MANUAL.md`** — Zustand patterns deeper"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token agent_docs/STARTER_KIT/COMPONENT_REGISTRY.md",
+    "ok": true,
+    "detail": {
+      "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+      "text": "- **`agent_docs/STARTER_KIT/COMPONENT_REGISTRY.md`** — scannable component lookup (sibling file)"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QAM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+      "text": "Every newly authored module includes a complete, module-specific `QAM/` prepared by the Architect from `03_BUILD_METHODOLOGY/_templates/QAM/`. QA Lead owns the reusable playbook and standing requirements. Engineer fills factual engineering records and handoff; QA Executor performs independent Q1 recon and test planning; QA Lead approves the plan; Director releases execution; QA Executor performs Q2 and authorized retest; QA Lead adjudicates and certifies. `QAM_PLAYBOOK.md` owns this packaging and sequence. Existing modules already in flight retain their recorded sequence until an attributable amendment."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QAM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+      "text": "Every newly authored module includes a complete, module-specific `QAM/` prepared by the Architect from `03_BUILD_METHODOLOGY/_templates/QAM/`. QA Lead owns the reusable playbook and standing requirements. Engineer fills factual engineering records and handoff; QA Executor performs independent Q1 recon and test planning; QA Lead approves the plan; Director releases execution; QA Executor performs Q2 and authorized retest; QA Lead adjudicates and certifies. `QAM_PLAYBOOK.md` owns this packaging and sequence. Existing modules already in flight retain their recorded sequence until an attributable amendment."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QAM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+      "text": "Every newly authored module includes a complete, module-specific `QAM/` prepared by the Architect from `03_BUILD_METHODOLOGY/_templates/QAM/`. QA Lead owns the reusable playbook and standing requirements. Engineer fills factual engineering records and handoff; QA Executor performs independent Q1 recon and test planning; QA Lead approves the plan; Director releases execution; QA Executor performs Q2 and authorized retest; QA Lead adjudicates and certifies. `QAM_PLAYBOOK.md` owns this packaging and sequence. Existing modules already in flight retain their recorded sequence until an attributable amendment."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token DEPLOYMENT_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+      "text": "**Q9.4 — Build/deployment exclusion.** Identify the applicable build/deploy input exclusion mechanisms for `agent_docs/**` (for example `.dockerignore`, `.gcloudignore`, `.vercelignore` or the platform equivalent). Verify the actual built image/bundle or deployed artifact excludes it. Record command, working directory, exit code and unfiltered safe output. Compile/test exclusion alone does not prove production exclusion. Follow `DEPLOYMENT_PLAYBOOK.md` §4; do not infer cloud authorization from this question."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QA_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+      "text": "| **QA Lead (independent seat)** | Owns standing QA requirements, approves the independent plan, adjudicates findings and certifies the governed candidate per `QA_PLAYBOOK.md` and `QAM_PLAYBOOK.md` |"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QAM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+      "text": "| **QA Lead (independent seat)** | Owns standing QA requirements, approves the independent plan, adjudicates findings and certifies the governed candidate per `QA_PLAYBOOK.md` and `QAM_PLAYBOOK.md` |"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token RRM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+      "text": "The distinct post-FFM checkpoint is review after FFM build and its independent QA finish. Both review checkpoints follow `RRM_PLAYBOOK.md` §2 and the vocabulary in `SOFTWARE_FACTORY_PLAYBOOK.md` §2. Review completion, module QA, cleanup acceptance, Gate D and release remain distinct."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token SOFTWARE_FACTORY_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+      "text": "The distinct post-FFM checkpoint is review after FFM build and its independent QA finish. Both review checkpoints follow `RRM_PLAYBOOK.md` §2 and the vocabulary in `SOFTWARE_FACTORY_PLAYBOOK.md` §2. Review completion, module QA, cleanup acceptance, Gate D and release remain distinct."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QAM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+      "text": "Every newly authored module includes a complete, module-specific `QAM/` prepared by the Architect from `03_BUILD_METHODOLOGY/_templates/QAM/`. QA Lead owns the reusable playbook and standing requirements. Engineer fills factual engineering records and handoff; QA Executor performs independent Q1 recon and test planning; QA Lead approves the plan; Director releases execution; QA Executor performs Q2 and authorized retest; QA Lead adjudicates and certifies. `QAM_PLAYBOOK.md` owns this packaging and sequence. Existing modules already in flight retain their recorded sequence until an attributable amendment."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token DEPLOYMENT_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+      "text": "Required cleanup removes only authorized disposable execution debris, temporary credentials/authentication state, and owned QA processes or browser contexts. Retain durable evidence, required failed attempts and justified helpers. QA Lead governs retention and cleanup acceptance; certification, Architect closeout and Director release remain separate responsibilities. Record command, working directory, exit code and unfiltered safe output, with sensitive data excluded at collection. Prove product, tests, configuration and contract identity unchanged by cleanup. Module QA records live under `agent_docs/` in their module `QAM/`; verify production exclusion under `DEPLOYMENT_PLAYBOOK.md`."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QAM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+      "text": "Every newly authored module includes a complete, module-specific `QAM/` prepared by the Architect from `03_BUILD_METHODOLOGY/_templates/QAM/`. QA Lead owns the reusable playbook and standing requirements. Engineer fills factual engineering records and handoff; QA Executor performs independent Q1 recon and test planning; QA Lead approves the plan; Director releases execution; QA Executor performs Q2 and authorized retest; QA Lead adjudicates and certifies. `QAM_PLAYBOOK.md` owns this packaging and sequence. Existing modules already in flight retain their recorded sequence until an attributable amendment."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QA_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `QA_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `BIM_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `QAM_PLAYBOOK.md`, `RRM_PLAYBOOK.md`, `RECON_QUESTIONNAIRE.md`, `APP_FACTORY_SKILLS_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token SOFTWARE_FACTORY_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `QA_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `BIM_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `QAM_PLAYBOOK.md`, `RRM_PLAYBOOK.md`, `RECON_QUESTIONNAIRE.md`, `APP_FACTORY_SKILLS_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token BIM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `QA_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `BIM_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `QAM_PLAYBOOK.md`, `RRM_PLAYBOOK.md`, `RECON_QUESTIONNAIRE.md`, `APP_FACTORY_SKILLS_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token FFM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `QA_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `BIM_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `QAM_PLAYBOOK.md`, `RRM_PLAYBOOK.md`, `RECON_QUESTIONNAIRE.md`, `APP_FACTORY_SKILLS_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QAM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `QA_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `BIM_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `QAM_PLAYBOOK.md`, `RRM_PLAYBOOK.md`, `RECON_QUESTIONNAIRE.md`, `APP_FACTORY_SKILLS_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token RRM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `QA_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `BIM_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `QAM_PLAYBOOK.md`, `RRM_PLAYBOOK.md`, `RECON_QUESTIONNAIRE.md`, `APP_FACTORY_SKILLS_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token RECON_QUESTIONNAIRE.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `QA_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `BIM_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `QAM_PLAYBOOK.md`, `RRM_PLAYBOOK.md`, `RECON_QUESTIONNAIRE.md`, `APP_FACTORY_SKILLS_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token APP_FACTORY_SKILLS_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `QA_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `BIM_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `QAM_PLAYBOOK.md`, `RRM_PLAYBOOK.md`, `RECON_QUESTIONNAIRE.md`, `APP_FACTORY_SKILLS_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QA_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "text": "This document owns deployment, staging-to-production promotion, rollback and the Git / cloud authority rules of the Factory. Before it existed, deployment gates and checklists were scattered across `QA_PLAYBOOK.md` (Gate D), `BUG_FIX_PLAYBOOK.md` §12–§13, `BIM_PLAYBOOK.md` §6–§7 and the Blueprint's Phase 5 with no owning doctrine (FC-011)."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token BUG_FIX_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "text": "This document owns deployment, staging-to-production promotion, rollback and the Git / cloud authority rules of the Factory. Before it existed, deployment gates and checklists were scattered across `QA_PLAYBOOK.md` (Gate D), `BUG_FIX_PLAYBOOK.md` §12–§13, `BIM_PLAYBOOK.md` §6–§7 and the Blueprint's Phase 5 with no owning doctrine (FC-011)."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token BIM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "text": "This document owns deployment, staging-to-production promotion, rollback and the Git / cloud authority rules of the Factory. Before it existed, deployment gates and checklists were scattered across `QA_PLAYBOOK.md` (Gate D), `BUG_FIX_PLAYBOOK.md` §12–§13, `BIM_PLAYBOOK.md` §6–§7 and the Blueprint's Phase 5 with no owning doctrine (FC-011)."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QA_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "text": "- **DevOps / Deployment Operator** is the responsibility named in `QA_PLAYBOOK.md` §4: deploys the approved revision, records deployment identity, maintains rollback capability, supports environment diagnostics. One person may hold this seat together with the Director seat; the responsibilities remain distinct."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QA_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "text": "- **QA owns the verification verdict; the Director owns the release decision** (`QA_PLAYBOOK.md` §4). Gate Q (pre-deployment) and Gate D (deployed-environment) are QA verdicts with their own evidence; neither is replaced by a successful deploy command, a healthy container or a green build (`QA_PLAYBOOK.md` §13)."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QA_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "text": "- **QA owns the verification verdict; the Director owns the release decision** (`QA_PLAYBOOK.md` §4). Gate Q (pre-deployment) and Gate D (deployed-environment) are QA verdicts with their own evidence; neither is replaced by a successful deploy command, a healthy container or a green build (`QA_PLAYBOOK.md` §13)."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token BIM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "text": "| Project module engineering (FFM, BIM, FIX, FEAT, RRM) | Build, test, self-verify; hand the Director file lists and suggested commit messages | Engineer (read-only Git inspection allowed; Git mutations Director-only; existing context-specific cloud permissions retained) | RULED (`BIM_PLAYBOOK.md` §7) |"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token BIM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "text": "| Project module engineering | Commit per concern to the module branch; push | Director | RULED (`BIM_PLAYBOOK.md` §6) |"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QAM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "text": "| Project module QA | Independent testing on `qa/<module-branch>`; no Git mutation | QA Executor | RULED (RUL-02; `QAM_PLAYBOOK.md` §3) |"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token RRM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "text": "Project `--no-ff` merge examples in pilot records are project policy, not Hub policy. After a merge on the remote, the Director refreshes local `main` before starting a new branch; a GitHub merge is not local synchronization (`RRM_PLAYBOOK.md` §10)."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token RECON_QUESTIONNAIRE.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "text": "1. **Compile and test scope** — `tsconfig` `exclude` and the test runner's scope exclude `agent_docs/**` (`RECON_QUESTIONNAIRE.md` Q9.1–Q9.2)."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token RECON_QUESTIONNAIRE.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "text": "2. **Build and deploy inputs** — the platform's ignore rules exclude `agent_docs/**` from the build context and the deployed bundle: `.dockerignore` for container builds, `.gcloudignore` for Cloud Build, `.vercelignore` or the platform's equivalent for Vercel-style deploys (`RECON_QUESTIONNAIRE.md` Q9.4)."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QA_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "text": "Gate D is defined in `QA_PLAYBOOK.md` §13 and is not restated here. Step D1 identifies the deployment (repository, branch, commit SHA, build ID, image digest, revision, environment, URL, time); Gate D verifies the actual deployed revision; Gate Q never certifies a deployed revision (`QAM_PLAYBOOK.md` §14)."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QAM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "text": "Gate D is defined in `QA_PLAYBOOK.md` §13 and is not restated here. Step D1 identifies the deployment (repository, branch, commit SHA, build ID, image digest, revision, environment, URL, time); Gate D verifies the actual deployed revision; Gate Q never certifies a deployed revision (`QAM_PLAYBOOK.md` §14)."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token APP_FACTORY_SKILLS_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "text": "No platform procedure is Factory doctrine yet. The August DevOps operating model (SRC-W07) proposes a Cloud Run profile (`init-app.sh`, `cloudbuild.yaml`, `Dockerfile`, `deploy.sh`, a checklist) and two platform postures; `APP_FACTORY_SKILLS_PLAYBOOK.md` §14 names the deployment skill family. These are source claims and existing tools, not adopted rules: version-sensitive commands must be verified at implementation time, and profile-specific filenames are not imposed on Vercel or Python deployments. Adoption of any profile is the Director's decision (DEC-18 remainder)."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token BIM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md",
+      "text": "**Module identity and the QA-handoff contract are Factory-wide doctrine** (SOFTWARE_FACTORY_PLAYBOOK › Module Identity & QA Handoff): `<TYPE>-<NNN>-<APP-SLUG>` IDs, the mandatory `ACCEPTANCE_SPEC.md` with `AC*` requirements, the Engineering/QA separation, and QA verdict ownership (QA verdict → Operator final authority → Architect advisory). FEAT inherits these from the Factory level — never from BIM. Module *mechanics* shared with BIM (one-folder package, one CLAUDE.md manager, stage-gate lifecycle, freeze rule, Plan Mode, verify-first, read-only Git inspection with Director-only mutations and the existing BIM cloud restrictions, baseline-first regression, per-module failure policy, anti-patterns, Definition of Done) are documented in `BIM_PLAYBOOK.md` §4–§12 and apply to FEATs by reference. Below are the FEAT-specific deltas."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QAM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md",
+      "text": "Every newly authored module includes a complete, module-specific `QAM/` prepared by the Architect from `03_BUILD_METHODOLOGY/_templates/QAM/`. QA Lead owns the reusable playbook and standing requirements. Engineer fills factual engineering records and handoff; QA Executor performs independent Q1 recon and test planning; QA Lead approves the plan; Director releases execution; QA Executor performs Q2 and authorized retest; QA Lead adjudicates and certifies. `QAM_PLAYBOOK.md` owns this packaging and sequence. Existing modules already in flight retain their recorded sequence until an attributable amendment."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token RRM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+      "text": "Review checkpoints and repair routing: `RRM_PLAYBOOK.md` §2; Engine vocabulary: `SOFTWARE_FACTORY_PLAYBOOK.md` §2. The FFM completion checklist must retain the post-FFM review and any approved RRM follow-up before downstream progression."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token SOFTWARE_FACTORY_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+      "text": "Review checkpoints and repair routing: `RRM_PLAYBOOK.md` §2; Engine vocabulary: `SOFTWARE_FACTORY_PLAYBOOK.md` §2. The FFM completion checklist must retain the post-FFM review and any approved RRM follow-up before downstream progression."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QAM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+      "text": "Every newly authored module includes a complete, module-specific `QAM/` prepared by the Architect from `03_BUILD_METHODOLOGY/_templates/QAM/`. QA Lead owns the reusable playbook and standing requirements. Engineer fills factual engineering records and handoff; QA Executor performs independent Q1 recon and test planning; QA Lead approves the plan; Director releases execution; QA Executor performs Q2 and authorized retest; QA Lead adjudicates and certifies. `QAM_PLAYBOOK.md` owns this packaging and sequence. Existing modules already in flight retain their recorded sequence until an attributable amendment."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token DEPLOYMENT_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+      "text": "The FFM lives under the project’s `agent_docs/` module convention. Its `QAM/` records and support material are excluded from production inputs and artifacts, with verification under `DEPLOYMENT_PLAYBOOK.md`."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QA_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+      "text": "- [ ] **Gate Q — Pre-Deployment Quality Gate** passed per `QA_PLAYBOOK.md` §12 (includes production-mode verify: `npm run build && npm start` walk — dev mode hides latency-class and build-class bugs)."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QA_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+      "text": "- [ ] **Gate D — Deployed-Environment Verification** passed per `QA_PLAYBOOK.md` §13: the smoke walk runs ON the deployed URL against the RECORDED deployed revision. A deploy without a passed Gate D is not done."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QA_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `QA_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `RRM_PLAYBOOK.md`, `BIM_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token SOFTWARE_FACTORY_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `QA_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `RRM_PLAYBOOK.md`, `BIM_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token RRM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `QA_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `RRM_PLAYBOOK.md`, `BIM_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token BIM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `QA_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `RRM_PLAYBOOK.md`, `BIM_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token FFM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `QA_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `RRM_PLAYBOOK.md`, `BIM_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token BUG_FIX_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `QA_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `RRM_PLAYBOOK.md`, `BIM_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token FEAT_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `QA_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `RRM_PLAYBOOK.md`, `BIM_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token HANDOFF_PACKAGE_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `QA_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `RRM_PLAYBOOK.md`, `BIM_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token ARCHITECT_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `QA_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `RRM_PLAYBOOK.md`, `BIM_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token ENGINEER_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `QA_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `RRM_PLAYBOOK.md`, `BIM_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token DEPLOYMENT_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `QA_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `RRM_PLAYBOOK.md`, `BIM_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token TESTING_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `QA_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `RRM_PLAYBOOK.md`, `BIM_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QA_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+      "text": "`QA_PLAYBOOK.md` remains the source for evidence discipline, finding severity, gate verdicts and independence. QA-branch ownership (`RRM_PLAYBOOK.md` §7; §9 and §14 below), bounded repair/retest (§11), errata (§4), evidence retention and cleanup rules (§14) are stated in the Factory DocSet itself; the intake attributes earlier pilot guidance to Doctrine Journal v0.3, which was not supplied for this sync. That historical attribution is unverified; current requirements derive from the recorded Director rulings and approved Hub integration, not the unavailable journal. This QAM playbook specifies packaging and execution around those responsibilities."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token RRM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+      "text": "`QA_PLAYBOOK.md` remains the source for evidence discipline, finding severity, gate verdicts and independence. QA-branch ownership (`RRM_PLAYBOOK.md` §7; §9 and §14 below), bounded repair/retest (§11), errata (§4), evidence retention and cleanup rules (§14) are stated in the Factory DocSet itself; the intake attributes earlier pilot guidance to Doctrine Journal v0.3, which was not supplied for this sync. That historical attribution is unverified; current requirements derive from the recorded Director rulings and approved Hub integration, not the unavailable journal. This QAM playbook specifies packaging and execution around those responsibilities."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QA_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+      "text": "Two-shot QA preserves the distinction between product evidence, cleanup readiness and release. Routine safe hygiene—closing owned browsers, stopping owned QA servers, removing declared transient auth state—belongs in the phase's preauthorized exit steps. The final Q5 retention/cleanup decision remains governed by the QA Lead and the applicable cleanup policy: this section, `QA_PLAYBOOK.md` §14 (The Final Environment Reset Rule) and `RRM_PLAYBOOK.md` §10. It is a closure operation, not another full planning/testing campaign. This kit does not silently replace a required post-Gate-Q cleanup checkpoint."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token RRM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+      "text": "Two-shot QA preserves the distinction between product evidence, cleanup readiness and release. Routine safe hygiene—closing owned browsers, stopping owned QA servers, removing declared transient auth state—belongs in the phase's preauthorized exit steps. The final Q5 retention/cleanup decision remains governed by the QA Lead and the applicable cleanup policy: this section, `QA_PLAYBOOK.md` §14 (The Final Environment Reset Rule) and `RRM_PLAYBOOK.md` §10. It is a closure operation, not another full planning/testing campaign. This kit does not silently replace a required post-Gate-Q cleanup checkpoint."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QA_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+      "text": "| 1.0 | 2026-10-18 | New doc entering Hub: the Director-approved QAM playbook v1.0 (ruling RUL-01, 2026-10-14; source SHA-256 `97e111e2…5c897`) proposed with integration substitutions S1 (Hub header, provenance, Pairs-with), S2 (retroactivity: newly authored modules), S3 (canonical `QA_PLAYBOOK.md` name; journal citations replaced by Hub rules), S4 (template set home `03_BUILD_METHODOLOGY/_templates/QAM/`), S5 (cleanup policy citations), S6 (TRM placeholder; ABM/APBM one line; parent-module sentence generalized), S7 (synchronization statement), S8 (snapshot identity, DEC-17). Template set installation is proposed; verify the installed translations separately before recording completion. [IN-2026-10-15-23 … IN-2026-10-15-36 (QAM-01…14); WF-05; WF-07; RRM-05; RUL-01…RUL-07; AD-01]; current correction pass: MC-01…14; RUL-01, RUL-04, RUL-06 |"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token DEPLOYMENT_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+      "text": "Required cleanup removes only authorized disposable execution debris, temporary credentials/authentication state, and owned QA processes or browser contexts. Retain durable evidence, required failed attempts and justified helpers. QA Lead governs retention and cleanup acceptance; certification, Architect closeout and Director release remain separate responsibilities. Record command, working directory, exit code and unfiltered safe output, with sensitive data excluded at collection. Prove product, tests, configuration and contract identity unchanged by cleanup. Module QA records live under `agent_docs/` in their module `QAM/`; verify production exclusion under `DEPLOYMENT_PLAYBOOK.md`."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token SOFTWARE_FACTORY_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `SOFTWARE_FACTORY_PLAYBOOK.md` › Module Identity & QA Handoff (Factory-level shared doctrine), `QAM_PLAYBOOK.md`, `QA_PLAYBOOK.md`, `BIM_PLAYBOOK.md` (module mechanics reference), `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QAM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `SOFTWARE_FACTORY_PLAYBOOK.md` › Module Identity & QA Handoff (Factory-level shared doctrine), `QAM_PLAYBOOK.md`, `QA_PLAYBOOK.md`, `BIM_PLAYBOOK.md` (module mechanics reference), `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QA_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `SOFTWARE_FACTORY_PLAYBOOK.md` › Module Identity & QA Handoff (Factory-level shared doctrine), `QAM_PLAYBOOK.md`, `QA_PLAYBOOK.md`, `BIM_PLAYBOOK.md` (module mechanics reference), `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token BIM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `SOFTWARE_FACTORY_PLAYBOOK.md` › Module Identity & QA Handoff (Factory-level shared doctrine), `QAM_PLAYBOOK.md`, `QA_PLAYBOOK.md`, `BIM_PLAYBOOK.md` (module mechanics reference), `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token BUG_FIX_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `SOFTWARE_FACTORY_PLAYBOOK.md` › Module Identity & QA Handoff (Factory-level shared doctrine), `QAM_PLAYBOOK.md`, `QA_PLAYBOOK.md`, `BIM_PLAYBOOK.md` (module mechanics reference), `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token FEAT_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `SOFTWARE_FACTORY_PLAYBOOK.md` › Module Identity & QA Handoff (Factory-level shared doctrine), `QAM_PLAYBOOK.md`, `QA_PLAYBOOK.md`, `BIM_PLAYBOOK.md` (module mechanics reference), `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token FFM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `SOFTWARE_FACTORY_PLAYBOOK.md` › Module Identity & QA Handoff (Factory-level shared doctrine), `QAM_PLAYBOOK.md`, `QA_PLAYBOOK.md`, `BIM_PLAYBOOK.md` (module mechanics reference), `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token ARCHITECT_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `SOFTWARE_FACTORY_PLAYBOOK.md` › Module Identity & QA Handoff (Factory-level shared doctrine), `QAM_PLAYBOOK.md`, `QA_PLAYBOOK.md`, `BIM_PLAYBOOK.md` (module mechanics reference), `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token ENGINEER_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `SOFTWARE_FACTORY_PLAYBOOK.md` › Module Identity & QA Handoff (Factory-level shared doctrine), `QAM_PLAYBOOK.md`, `QA_PLAYBOOK.md`, `BIM_PLAYBOOK.md` (module mechanics reference), `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token HANDOFF_PACKAGE_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `SOFTWARE_FACTORY_PLAYBOOK.md` › Module Identity & QA Handoff (Factory-level shared doctrine), `QAM_PLAYBOOK.md`, `QA_PLAYBOOK.md`, `BIM_PLAYBOOK.md` (module mechanics reference), `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token TESTING_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `SOFTWARE_FACTORY_PLAYBOOK.md` › Module Identity & QA Handoff (Factory-level shared doctrine), `QAM_PLAYBOOK.md`, `QA_PLAYBOOK.md`, `BIM_PLAYBOOK.md` (module mechanics reference), `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token DEPLOYMENT_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "> **Tier:** 3 — Build Methodology · **Pairs with:** `SOFTWARE_FACTORY_PLAYBOOK.md` › Module Identity & QA Handoff (Factory-level shared doctrine), `QAM_PLAYBOOK.md`, `QA_PLAYBOOK.md`, `BIM_PLAYBOOK.md` (module mechanics reference), `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token SOFTWARE_FACTORY_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "**Module identity** follows the Factory-level rule (`SOFTWARE_FACTORY_PLAYBOOK.md` › Module Identity & QA Handoff): `RRM-<NNN>-<APP-SLUG>`, uppercase canonical ID, lowercase-kebab branch. Mechanics shared with every module type — one folder, one manager file, Plan Mode, verify-first, Engineer read-only Git inspection, Director-only Git mutations, and existing context-specific cloud restrictions, baseline-first regression, per-module failure policy, Definition of Done — are documented in `BIM_PLAYBOOK.md` §4–§12 and apply by reference. **Every RRM includes a module-specific `QAM/`** (`QAM_PLAYBOOK.md`; Director ruling RUL-01 and RUL-05)."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token BIM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "**Module identity** follows the Factory-level rule (`SOFTWARE_FACTORY_PLAYBOOK.md` › Module Identity & QA Handoff): `RRM-<NNN>-<APP-SLUG>`, uppercase canonical ID, lowercase-kebab branch. Mechanics shared with every module type — one folder, one manager file, Plan Mode, verify-first, Engineer read-only Git inspection, Director-only Git mutations, and existing context-specific cloud restrictions, baseline-first regression, per-module failure policy, Definition of Done — are documented in `BIM_PLAYBOOK.md` §4–§12 and apply by reference. **Every RRM includes a module-specific `QAM/`** (`QAM_PLAYBOOK.md`; Director ruling RUL-01 and RUL-05)."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QAM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "**Module identity** follows the Factory-level rule (`SOFTWARE_FACTORY_PLAYBOOK.md` › Module Identity & QA Handoff): `RRM-<NNN>-<APP-SLUG>`, uppercase canonical ID, lowercase-kebab branch. Mechanics shared with every module type — one folder, one manager file, Plan Mode, verify-first, Engineer read-only Git inspection, Director-only Git mutations, and existing context-specific cloud restrictions, baseline-first regression, per-module failure policy, Definition of Done — are documented in `BIM_PLAYBOOK.md` §4–§12 and apply by reference. **Every RRM includes a module-specific `QAM/`** (`QAM_PLAYBOOK.md`; Director ruling RUL-01 and RUL-05)."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token SOFTWARE_FACTORY_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "2. **Engine 2 review after all Engine 1 implementation phases and their QA are closed**, followed by approved RRM work. (Definitions and lifecycle vocabulary: `SOFTWARE_FACTORY_PLAYBOOK.md` §2, “Phase Vocabulary — One Canonical Map”.)"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QA_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "- this playbook, the reviewer guidance (§11) and the governing QA doctrine (`QA_PLAYBOOK.md`, `QAM_PLAYBOOK.md`)."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QAM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "- this playbook, the reviewer guidance (§11) and the governing QA doctrine (`QA_PLAYBOOK.md`, `QAM_PLAYBOOK.md`)."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token RECON_QUESTIONNAIRE.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "**Current-source recon is mandatory before writing the executable packet** (`RECON_QUESTIONNAIRE.md`). A report about old code cannot establish a defect in today's candidate by itself. For a review that was performed without Git access, compare the pertinent source bytes or excerpts with current source and record unresolved equivalence. Missing equivalence does not invalidate all findings, but it prevents pretending that reviewer disagreement is a controlled comparison."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QAM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "| Cleanup | QA Lead decides retention; authorized executor performs the required cleanup checkpoint (`QAM_PLAYBOOK.md` §14) | Cleanup report; durable records retained; debris handled |"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QAM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "The QA Lead and QA Executor enter at the QA handoff; they are not routine approvers of the Architect's engineering packet. One person may hold several seats; the responsibilities never merge (`QAM_PLAYBOOK.md` §3)."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token BIM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "The Architect's packet contains a front door (the module manager, `BIM_PLAYBOOK.md` §5), the brief, the disposition ledger, the acceptance specification (`ACCEPTANCE_SPEC.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2.5), the engineering prompts and the instantiated `QAM/`. Requirements are settled before the build. The Engineer delivers the acceptance artifact with the completion handoff but may not redefine success after implementation. Separate required behavior from engineering claims and from QA verdicts."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token SOFTWARE_FACTORY_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "The Architect's packet contains a front door (the module manager, `BIM_PLAYBOOK.md` §5), the brief, the disposition ledger, the acceptance specification (`ACCEPTANCE_SPEC.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2.5), the engineering prompts and the instantiated `QAM/`. Requirements are settled before the build. The Engineer delivers the acceptance artifact with the completion handoff but may not redefine success after implementation. Separate required behavior from engineering claims and from QA verdicts."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token DEPLOYMENT_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "Review-only exports are separate input artifacts; their lack of `.git` does not change engineering's Git discipline. This is project-module policy; the Doctrine Hub's own synchronization Git rules are separate (`DEPLOYMENT_PLAYBOOK.md` §3)."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QAM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "Every RRM includes QAM: the Architect instantiates `QAM/` from the Hub template set at packaging; the Engineer completes the factual manifest and engineering handoff as part of the engineering assignment; the QA Executor performs Q1 (independent recon and test plan) and, after QA Lead approval and Director release, Q2 (continuous execution); the QA Lead adjudicates findings and certifies (`QAM_PLAYBOOK.md` §§5–14). The handoff supplies the approved spec and execution log plus references to the brief, the disposition ledger, the exact candidate commit, the repair diff, engineering results, fixtures/environment setup, limitations and the governing QA instructions (carried in `QAM/GOVERNING/` with version and hash provenance)."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QA_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "The QA Executor records PASS, FAIL, BLOCKED, NOT RUN or ADJUDICATE with evidence; its recommendation is not the QA Lead's certificate. Verdict vocabulary is the Factory set in `QA_PLAYBOOK.md` §11; outstanding mandatory checks cannot be relabeled passed."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QAM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "QA Executor reports → QA Lead classifies → Architect/Director resolve scope or contract questions and issue a bounded repair instruction → Engineer executes the approved repair on the QA branch → Director commits → QA Executor re-pins and retests (Q4) → QA Lead re-adjudicates (`QAM_PLAYBOOK.md` §11)."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QAM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "**Sequence for every module with a `QAM/` (Director ruling RUL-03; `QAM_PLAYBOOK.md` §14):** accepted product verdict (QA Lead) → required cleanup under QA Lead authority, with records (credential and temporary auth-state hygiene; closing owned QA processes and browser contexts; authorized removal of disposable execution debris; retention of durable evidence, required attempts and useful helpers) → durable records committed (Director) → Architect closeout instruction → bounded Engineer closeout → Director merge of `qa/<module-branch>` into `main`. Product Gate Q, cleanup acceptance and Gate D remain separate claims. Verify that cleanup changed no product, test, configuration or contract bytes; a product change found at cleanup returns through QA, never buried in cleanup or closeout."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token DEPLOYMENT_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "The closeout record distinguishes implementation, evidence, closeout and merge SHAs where they differ. Do not loop adding a commit's own hash to itself. After merge, the Director refreshes local `main` before any new branch starts. Required deployment and Gate D remain separate (`DEPLOYMENT_PLAYBOOK.md`; `QA_PLAYBOOK.md` §13)."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QA_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "The closeout record distinguishes implementation, evidence, closeout and merge SHAs where they differ. Do not loop adding a commit's own hash to itself. After merge, the Director refreshes local `main` before any new branch starts. Required deployment and Gate D remain separate (`DEPLOYMENT_PLAYBOOK.md`; `QA_PLAYBOOK.md` §13)."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QA_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "text": "- **Evidence levels.** Label every claim EVIDENCE / INFERENCE / CLAIM / GAP / QUESTION (`QA_PLAYBOOK.md` §8); state the conditions under which a finding holds and what would falsify it."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token BIM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+      "text": "> **Governed by:** `BIM_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token SOFTWARE_FACTORY_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+      "text": "> **Governed by:** `BIM_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token RRM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+      "text": "> **Governed by:** `BIM_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QAM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+      "text": "> **Governed by:** `BIM_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token DEPLOYMENT_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+      "text": "> **Governed by:** `BIM_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token FFM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+      "text": "> **Governed by:** `FFM_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token SOFTWARE_FACTORY_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+      "text": "> **Governed by:** `FFM_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token RRM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+      "text": "> **Governed by:** `FFM_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QAM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+      "text": "> **Governed by:** `FFM_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token DEPLOYMENT_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+      "text": "> **Governed by:** `FFM_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token DEPLOYMENT_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+      "text": "> **Governed by:** `DEPLOYMENT_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token SOFTWARE_FACTORY_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+      "text": "> **Governed by:** `DEPLOYMENT_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token RRM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+      "text": "> **Governed by:** `DEPLOYMENT_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QAM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+      "text": "> **Governed by:** `DEPLOYMENT_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token DEPLOYMENT_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+      "text": "> **Governed by:** `DEPLOYMENT_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token FFM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+      "text": "> **Governed by:** `FFM_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token SOFTWARE_FACTORY_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+      "text": "> **Governed by:** `FFM_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token RRM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+      "text": "> **Governed by:** `FFM_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token QAM_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+      "text": "> **Governed by:** `FFM_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token DEPLOYMENT_PLAYBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+      "text": "> **Governed by:** `FFM_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token UI_UX_BUILDING_MANUAL.md",
+    "ok": true,
+    "detail": {
+      "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+      "text": "- **`UI_UX_BUILDING_MANUAL.md`** — full UI patterns deep-dive"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "05_DESIGN_SYSTEM/THEME_LIBRARY.md",
+      "text": "- **`GLOBAL_DESIGN_SYSTEM_HANDBOOK.md`** — the token contract this library satisfies."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token STARTER_KIT_HANDBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "05_DESIGN_SYSTEM/THEME_LIBRARY.md",
+      "text": "- **`STARTER_KIT_HANDBOOK.md`** — kit primitives; its §8 Theme Conventions and §2 Role Colors defer to these tokens."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token TOKEN_FILE.md",
+    "ok": true,
+    "detail": {
+      "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+      "text": "- **`TOKEN_FILE.md`** §1 Entry stylesheet — where the token files live in the repo"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+    "ok": true,
+    "detail": {
+      "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+      "text": "- **`GLOBAL_DESIGN_SYSTEM_HANDBOOK.md`** §8 The Designer’s deliverables — the designer engagement spec"
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token THEMING_MANUAL.md",
+    "ok": true,
+    "detail": {
+      "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+      "text": "**Fix applied to this manual:** Added Rule Zero-B as the companion posture to Rule Zero. Authored `THEMING_MANUAL.md` as the standalone deep dive. Updated `APP_ARCHITECTURE_MANUAL` and `HANDOFF_PACKAGE_PLAYBOOK` with cross-references. Bumped this manual to v1.2."
+    }
+  },
+  {
+    "ac": "AC28",
+    "name": "hub token THEMING_MANUAL.md",
+    "ok": true,
+    "detail": {
+      "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+      "text": "| 1.2 | 2026-06-02 | Added Rule Zero-B (theming as the second foundational posture). Added TOC entries for Rule Zero and Rule Zero-B. Authored companion `THEMING_MANUAL.md`. Added Lesson 9 appendix. Born from Cyber Pharma Run 002. |"
+    }
+  },
+  {
+    "ac": "AC12",
+    "name": "Q9.1",
+    "ok": true,
+    "detail": {
+      "base": "| FFM templates break `tsc --noEmit` | FFM's `.ts` template stubs caught in compile scope | Q9.1 (tsconfig scope) — NEW in v0.2 |",
+      "candidate": "| FFM templates break `tsc --noEmit` | FFM's `.ts` template stubs caught in compile scope | Q9.1 (tsconfig scope) — NEW in v0.2 |"
+    }
+  },
+  {
+    "ac": "AC12",
+    "name": "Q9.2",
+    "ok": true,
+    "detail": {
+      "base": "# Q9.2 — Does the test runner scope exclude agent_docs?",
+      "candidate": "# Q9.2 — Does the test runner scope exclude agent_docs?"
+    }
+  },
+  {
+    "ac": "AC12",
+    "name": "Q9.3",
+    "ok": true,
+    "detail": {
+      "base": "# Q9.3 — What .ts/.tsx files live under agent_docs (would-be compile targets)?",
+      "candidate": "# Q9.3 — What .ts/.tsx files live under agent_docs (would-be compile targets)?"
+    }
+  },
+  {
+    "ac": "AC12",
+    "name": "Q9.4 added",
+    "ok": true,
+    "detail": "candidate questionnaire"
+  },
+  {
+    "ac": "AC35",
+    "name": "all skills unchanged",
+    "ok": true,
+    "detail": 16
+  },
+  {
+    "ac": "AC21",
+    "name": "QAM initial header/history",
+    "ok": true,
+    "detail": "> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED"
+  },
+  {
+    "ac": "AC21",
+    "name": "RRM initial header/history",
+    "ok": true,
+    "detail": "> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED"
+  },
+  {
+    "ac": "AC21",
+    "name": "DEPLOYMENT initial header/history",
+    "ok": true,
+    "detail": "> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED (sections marked OPEN are not doctrine until ruled)"
+  },
+  {
+    "ac": "AC38",
+    "name": "engineer recorded hash 03_BUILD_METHODOLOGY/_templates/QAM/AC_EVIDENCE_MATRIX.md",
+    "ok": true,
+    "detail": {
+      "actual": "bf9685c13d650a109ea0f40d44ed0f813fea31e7fdcb67e0aa8b518ee194cb3a",
+      "record": {
+        "source": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/AC_EVIDENCE_MATRIX.md",
+        "destination": "03_BUILD_METHODOLOGY/_templates/QAM/AC_EVIDENCE_MATRIX.md",
+        "source_sha256": "ce619971ec58604e09f768de64337367cafec29ca30367b019e475c7ebf70883",
+        "proposed_destination_sha256": "bf9685c13d650a109ea0f40d44ed0f813fea31e7fdcb67e0aa8b518ee194cb3a",
+        "translations": [
+          {
+            "old": "DRAFT v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS APPLIED AND ENGINEER-VERIFIED; ARCHITECT AMENDMENT VERIFICATION PENDING.",
+            "new": "TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.",
+            "occurrences": 2,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          }
+        ],
+        "status": "PROPOSED TRANSLATION; not installed; source acceptance unchanged",
+        "installed_sha256": "bf9685c13d650a109ea0f40d44ed0f813fea31e7fdcb67e0aa8b518ee194cb3a",
+        "source_verified": true
+      }
+    }
+  },
+  {
+    "ac": "AC38",
+    "name": "engineer recorded hash 03_BUILD_METHODOLOGY/_templates/QAM/AGENTS.md",
+    "ok": true,
+    "detail": {
+      "actual": "b3415998cf417ea79551d8b4d31b92ff83df1becaf644ad1be499ce9ff0ef03f",
+      "record": {
+        "source": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/AGENTS.md",
+        "destination": "03_BUILD_METHODOLOGY/_templates/QAM/AGENTS.md",
+        "source_sha256": "13c5be461a00bd6239da3b5a247bd91130c85dcf519da59b231fcc421e62eced",
+        "proposed_destination_sha256": "b3415998cf417ea79551d8b4d31b92ff83df1becaf644ad1be499ce9ff0ef03f",
+        "translations": [
+          {
+            "old": "DRAFT v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS APPLIED AND ENGINEER-VERIFIED; ARCHITECT AMENDMENT VERIFICATION PENDING.",
+            "new": "TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.",
+            "occurrences": 1,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          }
+        ],
+        "status": "PROPOSED TRANSLATION; not installed; source acceptance unchanged",
+        "installed_sha256": "b3415998cf417ea79551d8b4d31b92ff83df1becaf644ad1be499ce9ff0ef03f",
+        "source_verified": true
+      }
+    }
+  },
+  {
+    "ac": "AC38",
+    "name": "engineer recorded hash 03_BUILD_METHODOLOGY/_templates/QAM/AUTOMATION/README.md",
+    "ok": true,
+    "detail": {
+      "actual": "c9a4f3a0a8d45077cc5cfbee8a93590cd4c9b08c33e8c6757419d537610bbfcb",
+      "record": {
+        "source": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/AUTOMATION/README.md",
+        "destination": "03_BUILD_METHODOLOGY/_templates/QAM/AUTOMATION/README.md",
+        "source_sha256": "76d5fb29a0f2ee90e7281f091894e1f04c394a3cacea9606a5aa51438d5fcc45",
+        "proposed_destination_sha256": "c9a4f3a0a8d45077cc5cfbee8a93590cd4c9b08c33e8c6757419d537610bbfcb",
+        "translations": [
+          {
+            "old": "DRAFT v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS APPLIED AND ENGINEER-VERIFIED; ARCHITECT AMENDMENT VERIFICATION PENDING.",
+            "new": "TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.",
+            "occurrences": 2,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          }
+        ],
+        "status": "PROPOSED TRANSLATION; not installed; source acceptance unchanged",
+        "installed_sha256": "c9a4f3a0a8d45077cc5cfbee8a93590cd4c9b08c33e8c6757419d537610bbfcb",
+        "source_verified": true
+      }
+    }
+  },
+  {
+    "ac": "AC38",
+    "name": "engineer recorded hash 03_BUILD_METHODOLOGY/_templates/QAM/CLAUDE.md",
+    "ok": true,
+    "detail": {
+      "actual": "79a674620466b01d0a5f2b82f85658177e05f91d689072f1f5a1d1f101e43d2a",
+      "record": {
+        "source": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/CLAUDE.md",
+        "destination": "03_BUILD_METHODOLOGY/_templates/QAM/CLAUDE.md",
+        "source_sha256": "bf7d4ff22b5d8c14d8f370cc128bc23553a1d95ddb41545700e64a9d080ad535",
+        "proposed_destination_sha256": "79a674620466b01d0a5f2b82f85658177e05f91d689072f1f5a1d1f101e43d2a",
+        "translations": [
+          {
+            "old": "DRAFT v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS APPLIED AND ENGINEER-VERIFIED; ARCHITECT AMENDMENT VERIFICATION PENDING.",
+            "new": "TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.",
+            "occurrences": 1,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          }
+        ],
+        "status": "PROPOSED TRANSLATION; not installed; source acceptance unchanged",
+        "installed_sha256": "79a674620466b01d0a5f2b82f85658177e05f91d689072f1f5a1d1f101e43d2a",
+        "source_verified": true
+      }
+    }
+  },
+  {
+    "ac": "AC38",
+    "name": "engineer recorded hash 03_BUILD_METHODOLOGY/_templates/QAM/FINDINGS.md",
+    "ok": true,
+    "detail": {
+      "actual": "e0b10749d2b05183253af6a486b01f92146c58ca3a8c618a73beec584ba46f75",
+      "record": {
+        "source": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/FINDINGS.md",
+        "destination": "03_BUILD_METHODOLOGY/_templates/QAM/FINDINGS.md",
+        "source_sha256": "c17a149be9a6bea8aaac720c3de47ea9e7b5402bb86792b466c8e5a6f2156385",
+        "proposed_destination_sha256": "e0b10749d2b05183253af6a486b01f92146c58ca3a8c618a73beec584ba46f75",
+        "translations": [
+          {
+            "old": "DRAFT v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS APPLIED AND ENGINEER-VERIFIED; ARCHITECT AMENDMENT VERIFICATION PENDING.",
+            "new": "TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.",
+            "occurrences": 2,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          }
+        ],
+        "status": "PROPOSED TRANSLATION; not installed; source acceptance unchanged",
+        "installed_sha256": "e0b10749d2b05183253af6a486b01f92146c58ca3a8c618a73beec584ba46f75",
+        "source_verified": true
+      }
+    }
+  },
+  {
+    "ac": "AC38",
+    "name": "engineer recorded hash 03_BUILD_METHODOLOGY/_templates/QAM/GOVERNING/README.md",
+    "ok": true,
+    "detail": {
+      "actual": "b9fc64518dda952a7d4a834a2b4cc9fe3ad82148ade00f4381085968e2dd11f6",
+      "record": {
+        "source": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/GOVERNING/README.md",
+        "destination": "03_BUILD_METHODOLOGY/_templates/QAM/GOVERNING/README.md",
+        "source_sha256": "b11da26e2793bd9bf816b51840f007922b3e4028a6298be7494e834ce28aee20",
+        "proposed_destination_sha256": "b9fc64518dda952a7d4a834a2b4cc9fe3ad82148ade00f4381085968e2dd11f6",
+        "translations": [
+          {
+            "old": "DRAFT v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS APPLIED AND ENGINEER-VERIFIED; ARCHITECT AMENDMENT VERIFICATION PENDING.",
+            "new": "TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.",
+            "occurrences": 2,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          }
+        ],
+        "status": "PROPOSED TRANSLATION; not installed; source acceptance unchanged",
+        "installed_sha256": "b9fc64518dda952a7d4a834a2b4cc9fe3ad82148ade00f4381085968e2dd11f6",
+        "source_verified": true
+      }
+    }
+  },
+  {
+    "ac": "AC38",
+    "name": "engineer recorded hash 03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/ENGINEERING_HANDOFF.md",
+    "ok": true,
+    "detail": {
+      "actual": "5bd7766647aad374634061ca31caa3e2f2facef1b5a516f8f8a18d2720f00677",
+      "record": {
+        "source": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/HANDOFFS/ENGINEERING_HANDOFF.md",
+        "destination": "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/ENGINEERING_HANDOFF.md",
+        "source_sha256": "ccb15192ecccfd1dceae95fa2e7f0b2fa6bd9e19f4956e1295964a89eaa7391f",
+        "proposed_destination_sha256": "5bd7766647aad374634061ca31caa3e2f2facef1b5a516f8f8a18d2720f00677",
+        "translations": [
+          {
+            "old": "DRAFT v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS APPLIED AND ENGINEER-VERIFIED; ARCHITECT AMENDMENT VERIFICATION PENDING.",
+            "new": "TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.",
+            "occurrences": 2,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          }
+        ],
+        "status": "PROPOSED TRANSLATION; not installed; source acceptance unchanged",
+        "installed_sha256": "5bd7766647aad374634061ca31caa3e2f2facef1b5a516f8f8a18d2720f00677",
+        "source_verified": true
+      }
+    }
+  },
+  {
+    "ac": "AC38",
+    "name": "engineer recorded hash 03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/FILE_INDEX.template.json",
+    "ok": true,
+    "detail": {
+      "actual": "2620fd114b8d58a7f022631e3dba1d2d8caa2c1b457d596dde15e190460305b8",
+      "record": {
+        "source": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/HANDOFFS/FILE_INDEX.template.json",
+        "destination": "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/FILE_INDEX.template.json",
+        "source_sha256": "fa5705561225dc1b108c2e2173121f6949f0d9141d6b5010b577cb5d15e5e2fb",
+        "proposed_destination_sha256": "2620fd114b8d58a7f022631e3dba1d2d8caa2c1b457d596dde15e190460305b8",
+        "translations": [
+          {
+            "old": "DRAFT v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS APPLIED AND ENGINEER-VERIFIED; ARCHITECT AMENDMENT VERIFICATION PENDING.",
+            "new": "TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.",
+            "occurrences": 1,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          }
+        ],
+        "status": "PROPOSED TRANSLATION; not installed; source acceptance unchanged",
+        "installed_sha256": "2620fd114b8d58a7f022631e3dba1d2d8caa2c1b457d596dde15e190460305b8",
+        "source_verified": true
+      }
+    }
+  },
+  {
+    "ac": "AC38",
+    "name": "engineer recorded hash 03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/README.md",
+    "ok": true,
+    "detail": {
+      "actual": "4d0eb7a53bba7d94a032353b9fc0316538058475fb2fc40b6d545a6982b9b0aa",
+      "record": {
+        "source": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/HANDOFFS/README.md",
+        "destination": "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/README.md",
+        "source_sha256": "82876906ba38d2d57506e934e645c38675768d5d76a66089b343d31273ecaba0",
+        "proposed_destination_sha256": "4d0eb7a53bba7d94a032353b9fc0316538058475fb2fc40b6d545a6982b9b0aa",
+        "translations": [
+          {
+            "old": "DRAFT v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS APPLIED AND ENGINEER-VERIFIED; ARCHITECT AMENDMENT VERIFICATION PENDING.",
+            "new": "TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.",
+            "occurrences": 2,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          }
+        ],
+        "status": "PROPOSED TRANSLATION; not installed; source acceptance unchanged",
+        "installed_sha256": "4d0eb7a53bba7d94a032353b9fc0316538058475fb2fc40b6d545a6982b9b0aa",
+        "source_verified": true
+      }
+    }
+  },
+  {
+    "ac": "AC38",
+    "name": "engineer recorded hash 03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/REVIEW_START_HERE.md",
+    "ok": true,
+    "detail": {
+      "actual": "0ffc1c60f9f4de3bdf10a30af6ecb9b95d036190c79056db1cbd3145a732cac1",
+      "record": {
+        "source": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/HANDOFFS/REVIEW_START_HERE.md",
+        "destination": "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/REVIEW_START_HERE.md",
+        "source_sha256": "a7dc1fcac42b30ce6dd270078f5e9202d22aa011e2e531871acb0f5086d37633",
+        "proposed_destination_sha256": "0ffc1c60f9f4de3bdf10a30af6ecb9b95d036190c79056db1cbd3145a732cac1",
+        "translations": [
+          {
+            "old": "DRAFT v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS APPLIED AND ENGINEER-VERIFIED; ARCHITECT AMENDMENT VERIFICATION PENDING.",
+            "new": "TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.",
+            "occurrences": 2,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          }
+        ],
+        "status": "PROPOSED TRANSLATION; not installed; source acceptance unchanged",
+        "installed_sha256": "0ffc1c60f9f4de3bdf10a30af6ecb9b95d036190c79056db1cbd3145a732cac1",
+        "source_verified": true
+      }
+    }
+  },
+  {
+    "ac": "AC38",
+    "name": "engineer recorded hash 03_BUILD_METHODOLOGY/_templates/QAM/PARENT_ENTRY_ROUTING.md",
+    "ok": true,
+    "detail": {
+      "actual": "d557319761782cf617ae828a4df81243a9908aa7c033b563d814d2d2fccf3ebe",
+      "record": {
+        "source": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/PARENT_ENTRY_ROUTING.md",
+        "destination": "03_BUILD_METHODOLOGY/_templates/QAM/PARENT_ENTRY_ROUTING.md",
+        "source_sha256": "769345f5dc96fd52a654b65f663d51cacfa2ac65dd5b4f275afba01be9c38eb1",
+        "proposed_destination_sha256": "d557319761782cf617ae828a4df81243a9908aa7c033b563d814d2d2fccf3ebe",
+        "translations": [
+          {
+            "old": "DRAFT v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS APPLIED AND ENGINEER-VERIFIED; ARCHITECT AMENDMENT VERIFICATION PENDING.",
+            "new": "TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.",
+            "occurrences": 2,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          }
+        ],
+        "status": "PROPOSED TRANSLATION; not installed; source acceptance unchanged",
+        "installed_sha256": "d557319761782cf617ae828a4df81243a9908aa7c033b563d814d2d2fccf3ebe",
+        "source_verified": true
+      }
+    }
+  },
+  {
+    "ac": "AC38",
+    "name": "engineer recorded hash 03_BUILD_METHODOLOGY/_templates/QAM/QAM_APPROVAL.md",
+    "ok": true,
+    "detail": {
+      "actual": "de505b50c3ed901d77bfc0373ff329901447f2044bc2c3524a0164841628674d",
+      "record": {
+        "source": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_APPROVAL.md",
+        "destination": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_APPROVAL.md",
+        "source_sha256": "caa2c0f8080bfdecdd48a5c11830ad3ea162c1dd309d87738045a63b58fa6538",
+        "proposed_destination_sha256": "de505b50c3ed901d77bfc0373ff329901447f2044bc2c3524a0164841628674d",
+        "translations": [
+          {
+            "old": "DRAFT v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS APPLIED AND ENGINEER-VERIFIED; ARCHITECT AMENDMENT VERIFICATION PENDING.",
+            "new": "TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.",
+            "occurrences": 2,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          }
+        ],
+        "status": "PROPOSED TRANSLATION; not installed; source acceptance unchanged",
+        "installed_sha256": "de505b50c3ed901d77bfc0373ff329901447f2044bc2c3524a0164841628674d",
+        "source_verified": true
+      }
+    }
+  },
+  {
+    "ac": "AC38",
+    "name": "engineer recorded hash 03_BUILD_METHODOLOGY/_templates/QAM/QAM_CERTIFICATION.md",
+    "ok": true,
+    "detail": {
+      "actual": "7781cf756893b883d58f75c8242e257130fb909625246e9a7b3500c9e83465c6",
+      "record": {
+        "source": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_CERTIFICATION.md",
+        "destination": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_CERTIFICATION.md",
+        "source_sha256": "b2e7db8d3b27c064914bb30f269bd7ab46276eaef92ed3cfeb973c0abe144d19",
+        "proposed_destination_sha256": "7781cf756893b883d58f75c8242e257130fb909625246e9a7b3500c9e83465c6",
+        "translations": [
+          {
+            "old": "DRAFT v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS APPLIED AND ENGINEER-VERIFIED; ARCHITECT AMENDMENT VERIFICATION PENDING.",
+            "new": "TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.",
+            "occurrences": 2,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          }
+        ],
+        "status": "PROPOSED TRANSLATION; not installed; source acceptance unchanged",
+        "installed_sha256": "7781cf756893b883d58f75c8242e257130fb909625246e9a7b3500c9e83465c6",
+        "source_verified": true
+      }
+    }
+  },
+  {
+    "ac": "AC38",
+    "name": "engineer recorded hash 03_BUILD_METHODOLOGY/_templates/QAM/QAM_CLEANUP_REPORT.md",
+    "ok": true,
+    "detail": {
+      "actual": "2e5ac571423d245f48563090662679df82d78fcbc415be90ee71f3a33fc1b830",
+      "record": {
+        "source": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_CLEANUP_REPORT.md",
+        "destination": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_CLEANUP_REPORT.md",
+        "source_sha256": "0a2eb83607a81870031d96190263531afed26745fffc8218a3a004293c92a4c1",
+        "proposed_destination_sha256": "2e5ac571423d245f48563090662679df82d78fcbc415be90ee71f3a33fc1b830",
+        "translations": [
+          {
+            "old": "DRAFT v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS APPLIED AND ENGINEER-VERIFIED; ARCHITECT AMENDMENT VERIFICATION PENDING.",
+            "new": "TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.",
+            "occurrences": 2,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          }
+        ],
+        "status": "PROPOSED TRANSLATION; not installed; source acceptance unchanged",
+        "installed_sha256": "2e5ac571423d245f48563090662679df82d78fcbc415be90ee71f3a33fc1b830",
+        "source_verified": true
+      }
+    }
+  },
+  {
+    "ac": "AC38",
+    "name": "engineer recorded hash 03_BUILD_METHODOLOGY/_templates/QAM/QAM_ENTRY.md",
+    "ok": true,
+    "detail": {
+      "actual": "a6b9c6f160d9811bf9d273bb03ea32f63256019b4add8cbdc23f032261fababe",
+      "record": {
+        "source": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_ENTRY.md",
+        "destination": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_ENTRY.md",
+        "source_sha256": "bc15f3c613a144be5a50c811752f00905a9585c6c4eb87300b7ee105da2c01fa",
+        "proposed_destination_sha256": "a6b9c6f160d9811bf9d273bb03ea32f63256019b4add8cbdc23f032261fababe",
+        "translations": [
+          {
+            "old": "DRAFT v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS APPLIED AND ENGINEER-VERIFIED; ARCHITECT AMENDMENT VERIFICATION PENDING.",
+            "new": "TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.",
+            "occurrences": 2,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          }
+        ],
+        "status": "PROPOSED TRANSLATION; not installed; source acceptance unchanged",
+        "installed_sha256": "a6b9c6f160d9811bf9d273bb03ea32f63256019b4add8cbdc23f032261fababe",
+        "source_verified": true
+      }
+    }
+  },
+  {
+    "ac": "AC38",
+    "name": "engineer recorded hash 03_BUILD_METHODOLOGY/_templates/QAM/QAM_EXECUTION_REPORT.md",
+    "ok": true,
+    "detail": {
+      "actual": "24ef00dd53190179498b07e8326e3c87216c9a4e5d70da2aa163f76bb7df076b",
+      "record": {
+        "source": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_EXECUTION_REPORT.md",
+        "destination": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_EXECUTION_REPORT.md",
+        "source_sha256": "723afabf776deddae595dfda5f1bca70dfc2c5616da32fe63de9dcf45e5b7177",
+        "proposed_destination_sha256": "24ef00dd53190179498b07e8326e3c87216c9a4e5d70da2aa163f76bb7df076b",
+        "translations": [
+          {
+            "old": "DRAFT v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS APPLIED AND ENGINEER-VERIFIED; ARCHITECT AMENDMENT VERIFICATION PENDING.",
+            "new": "TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.",
+            "occurrences": 2,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          }
+        ],
+        "status": "PROPOSED TRANSLATION; not installed; source acceptance unchanged",
+        "installed_sha256": "24ef00dd53190179498b07e8326e3c87216c9a4e5d70da2aa163f76bb7df076b",
+        "source_verified": true
+      }
+    }
+  },
+  {
+    "ac": "AC38",
+    "name": "engineer recorded hash 03_BUILD_METHODOLOGY/_templates/QAM/QAM_MANIFEST.md",
+    "ok": true,
+    "detail": {
+      "actual": "9d68426ef53d852b46285ab8f15a5f978811e4fb606e239ccaab97ba21ce6b43",
+      "record": {
+        "source": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_MANIFEST.md",
+        "destination": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_MANIFEST.md",
+        "source_sha256": "2dc5ebb4dd8d257047b4f72b53122ad67953372106ddb7f2662a6858c5948c62",
+        "proposed_destination_sha256": "9d68426ef53d852b46285ab8f15a5f978811e4fb606e239ccaab97ba21ce6b43",
+        "translations": [
+          {
+            "old": "DRAFT v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS APPLIED AND ENGINEER-VERIFIED; ARCHITECT AMENDMENT VERIFICATION PENDING.",
+            "new": "TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.",
+            "occurrences": 2,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          }
+        ],
+        "status": "PROPOSED TRANSLATION; not installed; source acceptance unchanged",
+        "installed_sha256": "9d68426ef53d852b46285ab8f15a5f978811e4fb606e239ccaab97ba21ce6b43",
+        "source_verified": true
+      }
+    }
+  },
+  {
+    "ac": "AC38",
+    "name": "engineer recorded hash 03_BUILD_METHODOLOGY/_templates/QAM/QAM_PACKAGING.md",
+    "ok": true,
+    "detail": {
+      "actual": "be3508938dcc3ea0e2833c5a7f97d7915e2e409204adde9ff69c4941ddd43755",
+      "record": {
+        "source": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_PACKAGING.md",
+        "destination": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_PACKAGING.md",
+        "source_sha256": "1a9a61ae19b2ee98cc481368d46ec0403895225f51afaec293e440d3ccc84ea7",
+        "proposed_destination_sha256": "be3508938dcc3ea0e2833c5a7f97d7915e2e409204adde9ff69c4941ddd43755",
+        "translations": [
+          {
+            "old": "DRAFT v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS APPLIED AND ENGINEER-VERIFIED; ARCHITECT AMENDMENT VERIFICATION PENDING.",
+            "new": "TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.",
+            "occurrences": 2,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          }
+        ],
+        "status": "PROPOSED TRANSLATION; not installed; source acceptance unchanged",
+        "installed_sha256": "be3508938dcc3ea0e2833c5a7f97d7915e2e409204adde9ff69c4941ddd43755",
+        "source_verified": true
+      }
+    }
+  },
+  {
+    "ac": "AC38",
+    "name": "engineer recorded hash 03_BUILD_METHODOLOGY/_templates/QAM/QAM_PREFLIGHT.md",
+    "ok": true,
+    "detail": {
+      "actual": "073a4381f08d0280d83a991e72d3ffd82926fee8c76e2b1fbffe1b0690f6a1b7",
+      "record": {
+        "source": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_PREFLIGHT.md",
+        "destination": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_PREFLIGHT.md",
+        "source_sha256": "a887e728a817b51944583c30d89a285820fb680c80c2568459ba32ea374f97c6",
+        "proposed_destination_sha256": "073a4381f08d0280d83a991e72d3ffd82926fee8c76e2b1fbffe1b0690f6a1b7",
+        "translations": [
+          {
+            "old": "DRAFT v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS APPLIED AND ENGINEER-VERIFIED; ARCHITECT AMENDMENT VERIFICATION PENDING.",
+            "new": "TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.",
+            "occurrences": 2,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          }
+        ],
+        "status": "PROPOSED TRANSLATION; not installed; source acceptance unchanged",
+        "installed_sha256": "073a4381f08d0280d83a991e72d3ffd82926fee8c76e2b1fbffe1b0690f6a1b7",
+        "source_verified": true
+      }
+    }
+  },
+  {
+    "ac": "AC38",
+    "name": "engineer recorded hash 03_BUILD_METHODOLOGY/_templates/QAM/QAM_RECON_REPORT.md",
+    "ok": true,
+    "detail": {
+      "actual": "42b313b6a0e811293319f9ae390674e88a957ee87d619554d53323358c167c67",
+      "record": {
+        "source": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_RECON_REPORT.md",
+        "destination": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_RECON_REPORT.md",
+        "source_sha256": "977fb2630ac38727936abc0770e748a705d377b31850a875beb841563eb9b764",
+        "proposed_destination_sha256": "42b313b6a0e811293319f9ae390674e88a957ee87d619554d53323358c167c67",
+        "translations": [
+          {
+            "old": "DRAFT v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS APPLIED AND ENGINEER-VERIFIED; ARCHITECT AMENDMENT VERIFICATION PENDING.",
+            "new": "TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.",
+            "occurrences": 2,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          }
+        ],
+        "status": "PROPOSED TRANSLATION; not installed; source acceptance unchanged",
+        "installed_sha256": "42b313b6a0e811293319f9ae390674e88a957ee87d619554d53323358c167c67",
+        "source_verified": true
+      }
+    }
+  },
+  {
+    "ac": "AC38",
+    "name": "engineer recorded hash 03_BUILD_METHODOLOGY/_templates/QAM/QAM_RISK_REQUIREMENTS.md",
+    "ok": true,
+    "detail": {
+      "actual": "cc910d528ee2ef9398f06f0259896669544e9ad02ee4623d620b98667e1131f0",
+      "record": {
+        "source": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_RISK_REQUIREMENTS.md",
+        "destination": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_RISK_REQUIREMENTS.md",
+        "source_sha256": "6e8cfb4e2df064b5eb8c2402654b66dec774b10c173a76134c04c65e854a4d76",
+        "proposed_destination_sha256": "cc910d528ee2ef9398f06f0259896669544e9ad02ee4623d620b98667e1131f0",
+        "translations": [
+          {
+            "old": "DRAFT v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS APPLIED AND ENGINEER-VERIFIED; ARCHITECT AMENDMENT VERIFICATION PENDING.",
+            "new": "TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.",
+            "occurrences": 2,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          }
+        ],
+        "status": "PROPOSED TRANSLATION; not installed; source acceptance unchanged",
+        "installed_sha256": "cc910d528ee2ef9398f06f0259896669544e9ad02ee4623d620b98667e1131f0",
+        "source_verified": true
+      }
+    }
+  },
+  {
+    "ac": "AC38",
+    "name": "engineer recorded hash 03_BUILD_METHODOLOGY/_templates/QAM/QAM_STATE.md",
+    "ok": true,
+    "detail": {
+      "actual": "afc4af6ad54123506bd0b6861ba7a71c9d5dad15e51db1f5bb3704d26a75f62f",
+      "record": {
+        "source": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_STATE.md",
+        "destination": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_STATE.md",
+        "source_sha256": "487b60e8bb7c45f1f246fa9d22e276a6498b1fdd2ddb90fd99d847e8a6d78a1e",
+        "proposed_destination_sha256": "afc4af6ad54123506bd0b6861ba7a71c9d5dad15e51db1f5bb3704d26a75f62f",
+        "translations": [
+          {
+            "old": "DRAFT v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS APPLIED AND ENGINEER-VERIFIED; ARCHITECT AMENDMENT VERIFICATION PENDING.",
+            "new": "TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.",
+            "occurrences": 2,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          }
+        ],
+        "status": "PROPOSED TRANSLATION; not installed; source acceptance unchanged",
+        "installed_sha256": "afc4af6ad54123506bd0b6861ba7a71c9d5dad15e51db1f5bb3704d26a75f62f",
+        "source_verified": true
+      }
+    }
+  },
+  {
+    "ac": "AC38",
+    "name": "engineer recorded hash 03_BUILD_METHODOLOGY/_templates/QAM/QAM_TEST_PLAN.md",
+    "ok": true,
+    "detail": {
+      "actual": "8d3d245926946e99a8cd2cdecc8dda79f47a436c5b3f35ba7ba48886bc23e0e9",
+      "record": {
+        "source": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/QAM_TEST_PLAN.md",
+        "destination": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_TEST_PLAN.md",
+        "source_sha256": "2df20cbd259a76d4bb58759478c30ce21e2774cfff64e8a796b142c1e7020dc7",
+        "proposed_destination_sha256": "8d3d245926946e99a8cd2cdecc8dda79f47a436c5b3f35ba7ba48886bc23e0e9",
+        "translations": [
+          {
+            "old": "DRAFT v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS APPLIED AND ENGINEER-VERIFIED; ARCHITECT AMENDMENT VERIFICATION PENDING.",
+            "new": "TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.",
+            "occurrences": 2,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          }
+        ],
+        "status": "PROPOSED TRANSLATION; not installed; source acceptance unchanged",
+        "installed_sha256": "8d3d245926946e99a8cd2cdecc8dda79f47a436c5b3f35ba7ba48886bc23e0e9",
+        "source_verified": true
+      }
+    }
+  },
+  {
+    "ac": "AC38",
+    "name": "engineer recorded hash 03_BUILD_METHODOLOGY/_templates/QAM/README.md",
+    "ok": true,
+    "detail": {
+      "actual": "b7462fc84fb6557d08010623a465588b27ee62edbffa2702ea71f2ba4d5a3d91",
+      "record": {
+        "source": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/README.md",
+        "destination": "03_BUILD_METHODOLOGY/_templates/QAM/README.md",
+        "source_sha256": "8ccc80f3f2f89549bd4a29260f236a33fe4eee5b3f08933ca62fb08e5bcbd0c3",
+        "proposed_destination_sha256": "b7462fc84fb6557d08010623a465588b27ee62edbffa2702ea71f2ba4d5a3d91",
+        "translations": [
+          {
+            "old": "DRAFT v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS APPLIED AND ENGINEER-VERIFIED; ARCHITECT AMENDMENT VERIFICATION PENDING.",
+            "new": "TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.",
+            "occurrences": 2,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          },
+          {
+            "old": "Not canonical; not installed; staging only.",
+            "new": "Installed reusable template; instantiate and resolve module-specific fields before launch.",
+            "occurrences": 1,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          },
+          {
+            "old": "# TEMPLATES/QAM/ — reusable QA Module template set (draft)",
+            "new": "# QAM — reusable QA Module template set",
+            "occurrences": 1,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          },
+          {
+            "old": "> Template set **v0.3-draft**, 2026-10-14 (v0.1-draft 2026-10-14 → v0.2-draft 2026-10-14, corrected per the Architect review, `../../TEMPLATE_CORRECTION_RECORD_001.md` → v0.3-draft 2026-10-14, the QA Lead's exact amendments AM-1/AM-2/AM-3 and the QAM-SR v1.0 adoption applied, `../../TEMPLATE_CORRECTION_RECORD_002.md`). Drafted by Claudy (documentation Engineer seat) from the Director-approved `QAM_PLAYBOOK_v1_0.md` (SHA-256 `97e111e2a495f9a3fe65f50213e6f2ba68c8e5e963f3d23493b1ee99ad35c897`), §§5–15 and §18. **Governing playbook version: QAM_PLAYBOOK v1.0.** **Status:** the QA Lead (Fable) accepted the v0.2-draft set's QA behavior with exact amendments on 2026-10-14 (`../../QA_LEAD_DECISION_2026-10-14.md`); the amendments are applied in this v0.3-draft and Engineer-verified; the Architect's amendment verification and the sync run are pending. There is no separate QA Lead decision on v0.3; the Engineer seat does not relabel the set beyond the Lead's recorded decision. These are not the pilot's originals (harvest GAP-03): the RRM-004 pack's `QA/` files (SRC-R02) were read as evidence of vocabulary only and nothing was copied from them as \"the originals\".",
+            "new": "> Template set **v0.3**. Governing playbook: **QAM_PLAYBOOK v1.0**. QA behavior was accepted by Fable on 2026-10-14 with three exact amendments; Jarvis verified their application. Source set v0.3-draft is preserved byte-for-byte in this run’s intake snapshot. This installed set differs only by the approved status/provenance translations enumerated in `PHASE_2_TEMPLATE_TRANSLATIONS.json`; it is newly authored from the approved playbook, not the pilot’s missing original templates. Source playbook SHA-256: `97e111e2a495f9a3fe65f50213e6f2ba68c8e5e963f3d23493b1ee99ad35c897`.",
+            "occurrences": 1,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          },
+          {
+            "old": "**Not installed yet**: this copy is intake staging until the DocSet Sync run lands it.",
+            "new": "**Installation provenance:** see the sync run’s template-install plan and retained acceptance records; source acceptance alone is not installation verification.",
+            "occurrences": 1,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          },
+          {
+            "old": "## 1. What this set is",
+            "new": "Acceptance and provenance: [QA Lead decision](../../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/QA_LEAD_DECISION_2026-10-14.md), [Architect verification](../../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/ARCHITECT_VERIFICATION_2026-10-14.md), [installation translations](../../../_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE_2_TEMPLATE_TRANSLATIONS.json).\n\n## 1. What this set is",
+            "occurrences": 1,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          },
+          {
+            "old": "This installed set differs only by the approved status/provenance translations enumerated in `PHASE_2_TEMPLATE_TRANSLATIONS.json`;",
+            "new": "This proposed set differs only by the status/provenance translations enumerated in this run’s `PHASE_2_TEMPLATE_TRANSLATIONS.json`; installation and translation approval remain pending;",
+            "occurrences": 1,
+            "label": "ENGINEER-PROPOSED status correction after prior translations"
+          }
+        ],
+        "status": "PROPOSED TRANSLATION; not installed; source acceptance unchanged",
+        "installed_sha256": "b7462fc84fb6557d08010623a465588b27ee62edbffa2702ea71f2ba4d5a3d91",
+        "source_verified": true
+      }
+    }
+  },
+  {
+    "ac": "AC38",
+    "name": "engineer recorded hash 03_BUILD_METHODOLOGY/_templates/QAM/evidence/README.md",
+    "ok": true,
+    "detail": {
+      "actual": "3c033254f64258d116bbbe069d585fa4df653c5ac84b68e03998bdbc675e9aab",
+      "record": {
+        "source": "factory-intake/INTAKE_ADDENDUM_001_v0_3/TEMPLATES/QAM/evidence/README.md",
+        "destination": "03_BUILD_METHODOLOGY/_templates/QAM/evidence/README.md",
+        "source_sha256": "385ad08e235c77b50a62ab78c5976e00df4f2167fc40f814f0300646a532d6df",
+        "proposed_destination_sha256": "3c033254f64258d116bbbe069d585fa4df653c5ac84b68e03998bdbc675e9aab",
+        "translations": [
+          {
+            "old": "DRAFT v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS APPLIED AND ENGINEER-VERIFIED; ARCHITECT AMENDMENT VERIFICATION PENDING.",
+            "new": "TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.",
+            "occurrences": 2,
+            "label": "ENGINEER-PROPOSED mechanics only"
+          }
+        ],
+        "status": "PROPOSED TRANSLATION; not installed; source acceptance unchanged",
+        "installed_sha256": "3c033254f64258d116bbbe069d585fa4df653c5ac84b68e03998bdbc675e9aab",
+        "source_verified": true
+      }
+    }
+  },
+  {
+    "ac": "AC22",
+    "name": "AM/SR home QAM_CLEANUP_REPORT.md",
+    "ok": true,
+    "detail": "full body exact after declared provenance only"
+  },
+  {
+    "ac": "AC22",
+    "name": "AM/SR home QAM_ENTRY.md",
+    "ok": true,
+    "detail": "full body exact after declared provenance only"
+  },
+  {
+    "ac": "AC22",
+    "name": "AM/SR home QAM_EXECUTION_REPORT.md",
+    "ok": true,
+    "detail": "full body exact after declared provenance only"
+  },
+  {
+    "ac": "AC22",
+    "name": "AM/SR home QAM_RISK_REQUIREMENTS.md",
+    "ok": true,
+    "detail": "full body exact after declared provenance only"
+  },
+  {
+    "ac": "AC14",
+    "name": "entry routing",
+    "ok": false,
+    "detail": "<!-- ROUTING TEXT — keep byte-identical with AGENTS.md from here to the end marker -->\n\nYou are the **QA Executor** for module `<<MODULE_ID>>` (`<<MODULE_TYPE>>`), repository `<<REPO_NAME>>`.\n\nRead `QAM_ENTRY.md` in this folder first. It is the canonical entry: module identity, role routing, read order and phase dispatch. Do not act before reading the persisted state in `QAM_STATE.md`.\n\nBeing pointed at this folder authorizes **Q1 only** (independent recon and test planning) within the declared scope. A folder path never authorizes Q2, product repair, certification, Git mutation or deployment. Those require the recorded approval and release in `QAM_APPROVAL.md`.\n\nIf a runtime does not auto-load this file, the fallback is one stable instruction: **\"Read `QAM/QAM_ENTRY.md` and act on the recorded state.\"** There is no long kickoff prompt.\n\n<!-- END ROUTING TEXT -->\n"
+  },
+  {
+    "ac": "AC16",
+    "name": "31 withdrawal rows",
+    "ok": true,
+    "detail": [
+      "FC-001",
+      "FC-022",
+      "FC-030",
+      "FC-033",
+      "FC-034",
+      "FC-035",
+      "FC-038",
+      "FC-039",
+      "FC-041",
+      "FC-042",
+      "FC-045",
+      "FC-047",
+      "FC-050",
+      "FC-051",
+      "FC-052",
+      "FC-053",
+      "FC-054",
+      "FC-055",
+      "FC-056",
+      "FC-057",
+      "FC-058",
+      "FC-059",
+      "FC-060",
+      "FC-062",
+      "FC-064",
+      "FC-066",
+      "FC-067",
+      "FC-068",
+      "FC-071",
+      "FC-072",
+      "FC-076"
+    ]
+  }
+]

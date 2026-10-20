@@ -1,0 +1,47 @@
+[
+  {
+    "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+    "pre": "75bc73865f714fe5935762ae445fd1d4d54807efb31d4f0e98e1caa4772e78fb",
+    "post": "456246341096459742400af061b6605fcf1d56e9de1a09b27621a6680489c9f6"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+    "pre": "e9c7bc1e58286187f58df06d3f0718bf8c299a4eeb4b057427396bc3411ea85f",
+    "post": "14b53af70e26456c6e610fb3782039df7ce1d5d372f943a4a23038e26bf81416"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+    "pre": "955b3c02dd0012616bc8b7a60f99af2a74c651d5a4db5393570ef49f4ee88e97",
+    "post": "68285b2a1c6c759e17518f66c9e69f7338afb48e043f6e317cb607f374346e75"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_templates/QAM/README.md",
+    "pre": "b7462fc84fb6557d08010623a465588b27ee62edbffa2702ea71f2ba4d5a3d91",
+    "post": "15fdc40e56000666cca7e02290168e2aed52fc22a73c4a2edefba586011535a2"
+  },
+  {
+    "path": "MANIFEST.md",
+    "pre": "13759dcc55df8747a86ddaa053f89d24c4e280474cde91d9e44bca3211e1b942",
+    "post": "2538dc3b3bd0772b65964de2ef217690b30d779cc976ef45b44520218259ebc8"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+    "pre": "3d2b8b1fd9289b02e87b15d26dc5bb61dcb6efd19a6bec621faeddc3ca85d89b",
+    "post": "9d5e760494fe71adaa5e72fee7b82fc6e85e5c250192cc2613dc0bd6fc107441"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+    "pre": "aa968075698fb4cd791c5b02cc026dd41470089f2a44c4e4270ec4584cfd061a",
+    "post": "06bf1d4bb94f9bd6b17f41e0161c42984712a3739274582ddbfe8c4b32f3d018"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+    "pre": "2b61c38203909ffb95449d779a4c13f91d4f134aac6e397a17ad4fbdd247068b",
+    "post": "7427ec11728c186f8fe33a483d1ed9e712e988e39a2e50e45720b8eec916d57e"
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+    "pre": "8f585a4a866355683904924c1a4f2ad406ffb42d95e5e5c139baaf85d9aada96",
+    "post": "58e76e3ec55a1f4bc2f3eaf0e05783fee51c7c7fa52eca1f9347af42a557c8d7"
+  }
+]

@@ -1,0 +1,17 @@
+01_CONSTITUTION/STARTER_KIT_HANDBOOK.md:73: **Session/cookie architecture:** verify the pinned server and browser clients, cookie adapters, attributes and refresh behavior together. Neither blanket `httpOnly: true` nor blanket `httpOnly: false` is approved here. Do not change attributes without a compatible verified session contract and tests.
+01_CONSTITUTION/STARTER_KIT_HANDBOOK.md:381: ### proxy.ts vs middleware.ts (Next.js 16)
+01_CONSTITUTION/STARTER_KIT_HANDBOOK.md:383: - The kit ships `src/proxy.ts` — **correct for Next.js 16+** (the renamed middleware convention)
+01_CONSTITUTION/STARTER_KIT_HANDBOOK.md:384: - Older docs may say `middleware.ts` — **on-disk code is the source of truth**
+01_CONSTITUTION/STARTER_KIT_HANDBOOK.md:385: - DO NOT propose renaming `proxy.ts` → `middleware.ts` (Run 001 Lesson 1 trap)
+01_CONSTITUTION/STARTER_KIT_HANDBOOK.md:608: | Custom session refresh | `src/proxy.ts` + middleware utils | 🛑 DO NOT BUILD |
+02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md:178: # Q2.5 — Middleware vs proxy (Next 16 ships src/proxy.ts, not middleware.ts)
+02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md:179: ls -la src/middleware.ts src/proxy.ts 2>/dev/null
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:1058: Session-cookie attributes must follow the verified pinned kit’s session architecture. HTTPS and Secure transport remain required in production; do not impose an unverified HttpOnly architecture on a browser-client session model. Record the verification gap rather than guessing compatible options.
+04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md:1288: | 1.3 | 2026-07-08 | **Wave 4 (audit sync).** Framework version de-pinned (F-038 — this manual was the exact offender RECON §1 was written about): subtitle + stack table + §3 intro now say "Next.js App Router"; version-sensitive facts labeled ("Next.js 15+" for params-as-Promise); header carries the version rule — `package.json` is the only truth (recon Q1.1). §10 Route Protection gains the `src/middleware.ts` vs `src/proxy.ts` (Next 16 kit convention) note with a verify-on-disk pointer (recon Q2.5). Encoding repaired: 21 mojibake sequences (▼/►/✅) + 17 invisible U+0090 C1 controls — a Gate-10 doc whose v1.1 changelog claimed the UTF-8 fix; F-012 systemic diagnosis reconfirmed a third time (the editing pipeline re-corrupts on save). Handbook cross-ref canonical (F-032). Standard header (F-018). |
+04_REFERENCE_MANUALS/AUTH_MANUAL.md:25: | Middleware session refresh | `src/utils/supabase/middleware.ts` | Already wired in `src/proxy.ts` |
+04_REFERENCE_MANUALS/AUTH_MANUAL.md:161: | Middleware | `src/utils/supabase/middleware.ts` | Session refresh | ✅ Yes |
+04_REFERENCE_MANUALS/AUTH_MANUAL.md:268: **File:** `src/utils/supabase/middleware.ts`
+04_REFERENCE_MANUALS/AUTH_MANUAL.md:710: updateSession() (src/utils/supabase/middleware.ts)
+04_REFERENCE_MANUALS/AUTH_MANUAL.md:751: - HttpOnly attributes — verify against the approved kit session architecture; no blanket value is prescribed here
+04_REFERENCE_MANUALS/AUTH_MANUAL.md:1105:    - HttpOnly only where compatible with the verified session architecture
+04_REFERENCE_MANUALS/AUTH_MANUAL.md:1297: │       ├── middleware.ts           # Session refresh

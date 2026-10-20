@@ -1,0 +1,4 @@
+01_CONSTITUTION/STARTER_KIT_HANDBOOK.md:226: Service role bypasses RLS — used in admin API routes / server actions.
+01_CONSTITUTION/STARTER_KIT_HANDBOOK.md:562: ### Gotcha 5: Service Role Bypasses RLS
+04_REFERENCE_MANUALS/DATABASE_MANUAL.md:418: ### Service Role Bypass
+04_REFERENCE_MANUALS/DATABASE_MANUAL.md:426: // Server-side: Service role bypasses RLS
