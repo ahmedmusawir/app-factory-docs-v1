@@ -1,0 +1,131 @@
+diff --git a/03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md b/03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md
+index e14c45c..97d776f 100644
+--- a/03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md
++++ b/03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md
+@@ -1,7 +1,7 @@
+ # DEPLOYMENT PLAYBOOK
+ ## Deployment, Promotion, Rollback and Git / Cloud Authority — the Owning Document
+ 
+-> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED (sections marked OPEN are not doctrine until ruled)
++> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Active (sections marked OPEN are not doctrine until ruled)
+ > **Tier:** 3 — Build Methodology · **Pairs with:** `QA_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `BIM_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `QAM_PLAYBOOK.md`, `RRM_PLAYBOOK.md`, `RECON_QUESTIONNAIRE.md`, `APP_FACTORY_SKILLS_PLAYBOOK.md`
+ > **Owner:** Stark Industries App Factory
+ > **Provenance:** Created by the Director's placement ruling of 2026-10-14 (RUL-06) as the owning document that the Factory lacked (certified finding FC-011). Ruled content: the module Git flow (RUL-02) and the deployment-exclusion rule (RUL-03). Source material for the sections still marked OPEN: the DevOps operating model of 2026-08-24 (harvest source SRC-W07, status REVIEW; preserved in this run's intake snapshot); its claims are not adopted here.
+diff --git a/03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md b/03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md
+index 7cf2be5..a000e74 100644
+--- a/03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md
++++ b/03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md
+@@ -1,7 +1,7 @@
+ # QAM PLAYBOOK
+ ## Mandatory module packaging and two-shot independent QA
+ 
+-> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED
++> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Active
+ > **Tier:** 3 — Build Methodology · **Pairs with:** `QA_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `RRM_PLAYBOOK.md`, `BIM_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`
+ > **Owner:** QA Lead authors and maintains this playbook (Director ruling RUL-01, 2026-10-14) · Stark Industries App Factory
+ > **Provenance:** Director-approved source, the intake file `QAM_PLAYBOOK_v1_0` (authoring seat QA Lead / JARVIS, 2026-10-14; SHA-256 `97e111e2a495f9a3fe65f50213e6f2ba68c8e5e963f3d23493b1ee99ad35c897`; preserved as received in INTAKE_SNAPSHOT/factory-intake/). Audience: module-writing Architects, Engineers, QA Leads and QA Executors. The source text is preserved verbatim except the integration substitutions listed in the Version History; the paired Factory documents must be reconciled and verified in this sync before a completion claim.
+diff --git a/03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md b/03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md
+index 8af7331..905d749 100644
+--- a/03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md
++++ b/03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md
+@@ -1,7 +1,7 @@
+ # RRM PLAYBOOK
+ ## Review Rework Modules — Adjudicated Review Findings into Bounded Repair and Independent Verification
+ 
+-> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED
++> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Active
+ > **Tier:** 3 — Build Methodology · **Pairs with:** `SOFTWARE_FACTORY_PLAYBOOK.md` › Module Identity & QA Handoff (Factory-level shared doctrine), `QAM_PLAYBOOK.md`, `QA_PLAYBOOK.md`, `BIM_PLAYBOOK.md` (module mechanics reference), `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`
+ > **Owner:** Stark Industries App Factory
+ > **Provenance:** Authored for the Factory DocSet from the RRM pilot playbook v0.1 (17 September 2026; harvest source SRC-R01, preserved as received in INTAKE_SNAPSHOT/factory-intake/) and the RRM-001…004 field results (SRC-R03), reconciled to the Director rulings of 2026-10-14 (RUL-01 mandatory QAM, RUL-02 continuing QA branch, RUL-03 required cleanup, RUL-04 frozen contract with writable lanes, RUL-05 two review checkpoints, RUL-06 placement). The pilot playbook's persona names were replaced by seats; every departure from the pilot text is listed in the Version History. The pilot records themselves are unchanged.
+@@ -116,7 +116,7 @@ The closeout record distinguishes implementation, evidence, closeout and merge S
+ 
+ ## 11. Reviewer Guidance
+ 
+-Reviewer guidance belongs here under RUL-14 (2026-10-16). The following proposed wording expresses that guidance for map review; pilot source records remain unchanged.
++Reviewer guidance belongs here under RUL-14 (2026-10-16). The reviewer guidance below governs review; pilot source records remain unchanged.
+ 
+ - **Freeze the specimen.** Name the exact revision, export or byte set reviewed; distinguish ordinary change review from broad or retrospective investigation.
+ - **Evidence levels.** Label every claim EVIDENCE / INFERENCE / CLAIM / GAP / QUESTION (`QA_PLAYBOOK.md` §8); state the conditions under which a finding holds and what would falsify it.
+diff --git a/03_BUILD_METHODOLOGY/_templates/QAM/README.md b/03_BUILD_METHODOLOGY/_templates/QAM/README.md
+index 26fdfd5..7c01b10 100644
+--- a/03_BUILD_METHODOLOGY/_templates/QAM/README.md
++++ b/03_BUILD_METHODOLOGY/_templates/QAM/README.md
+@@ -1,7 +1,7 @@
+ # QAM — reusable QA Module template set
+ 
+ > **TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.**
+-> Template set **v0.3**. Governing playbook: **QAM_PLAYBOOK v1.0**. QA behavior was accepted by Fable on 2026-10-14 with three exact amendments; Jarvis verified their application. Source set v0.3-draft is preserved byte-for-byte in this run’s intake snapshot. This proposed set differs only by the status/provenance translations enumerated in this run’s `PHASE_2_TEMPLATE_TRANSLATIONS.json`; installation and translation approval remain pending; it is newly authored from the approved playbook, not the pilot’s missing original templates. Source playbook SHA-256: `97e111e2a495f9a3fe65f50213e6f2ba68c8e5e963f3d23493b1ee99ad35c897`.
++> Template set **v0.3**. Governing playbook: **QAM_PLAYBOOK v1.0**. QA behavior was accepted by Fable on 2026-10-14 with three exact amendments; Jarvis verified their application. Source set v0.3-draft is preserved byte-for-byte in this run’s intake snapshot. This installed set uses the approved status/provenance translations enumerated in this run’s `PHASE_2_TEMPLATE_TRANSLATIONS.json`; installation evidence is recorded in the run’s `TEMPLATE_INSTALL_VERIFICATION.md`; it is newly authored from the approved playbook, not the pilot’s missing original templates. Source playbook SHA-256: `97e111e2a495f9a3fe65f50213e6f2ba68c8e5e963f3d23493b1ee99ad35c897`.
+ > **Canonical home (Architect decision AD-01 under the Director's C.1 delegation, 2026-10-14): `03_BUILD_METHODOLOGY/_templates/QAM/`** — stable filenames; set version and governing playbook version recorded here; superseded sets archived under `_ARCHIVE/QAM_TEMPLATES_v<version>/`; changes tracked through the QAM_PLAYBOOK MANIFEST row and CHANGELOG; explicit template verification in the sync acceptance scope. **Installation provenance:** see the sync run’s template-install plan and retained acceptance records; source acceptance alone is not installation verification.
+ 
+ Acceptance and provenance: [QA Lead decision](../../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/QA_LEAD_DECISION_2026-10-14.md), [Architect verification](../../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/ARCHITECT_VERIFICATION_2026-10-14.md), [installation translations](../../../_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE_2_TEMPLATE_TRANSLATIONS.json).
+diff --git a/03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md b/03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md
+index 62266bc..3c4361e 100644
+--- a/03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md
++++ b/03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md
+@@ -1,6 +1,6 @@
+ # BIM lifecycle and Engine 2 system review
+ 
+-> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Proposed — pending verified publication
++> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Active reference
+ > **Governed by:** `BIM_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`.
+ 
+ This revised workflow supersedes the August diagram `SRC-W04_BIM_WORKFLOW.png` for current instructions when this proposed sync is approved, landed and verified. The [unaltered original](../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W04_BIM_WORKFLOW.png) remains historical evidence; it grants no current role, Git or cloud permission. This derivative follows RUL-01…15 and Tony’s explicit workflow/diagram correction assignment of 2026-10-16.
+diff --git a/03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md b/03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md
+index 1af6295..1b017d1 100644
+--- a/03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md
++++ b/03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md
+@@ -1,6 +1,6 @@
+ # FFM creation and Architect assembly
+ 
+-> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Proposed — pending verified publication
++> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Active reference
+ > **Governed by:** `FFM_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`.
+ 
+ This revised workflow supersedes the August diagram `SRC-W01_FFM_CREATION.png` for current instructions when this proposed sync is approved, landed and verified. The [unaltered original](../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W01_FFM_CREATION.png) remains historical evidence; it grants no current role, Git or cloud permission. This derivative follows RUL-01…15 and Tony’s explicit workflow/diagram correction assignment of 2026-10-16.
+diff --git a/03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md b/03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md
+index 3cef781..e69635a 100644
+--- a/03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md
++++ b/03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md
+@@ -1,6 +1,6 @@
+ # Deployment, identity and independent Gate D
+ 
+-> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Proposed — pending verified publication
++> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Active reference
+ > **Governed by:** `DEPLOYMENT_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`.
+ 
+ This revised workflow supersedes the August diagram `SRC-W03_FFM_DEPLOYMENT.png` for current instructions when this proposed sync is approved, landed and verified. The [unaltered original](../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W03_FFM_DEPLOYMENT.png) remains historical evidence; it grants no current role, Git or cloud permission. This derivative follows RUL-01…15 and Tony’s explicit workflow/diagram correction assignment of 2026-10-16.
+diff --git a/03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md b/03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md
+index d57a003..bdea834 100644
+--- a/03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md
++++ b/03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md
+@@ -1,6 +1,6 @@
+ # FFM engineering, independent QA and post-FFM review
+ 
+-> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Proposed — pending verified publication
++> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Active reference
+ > **Governed by:** `FFM_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`.
+ 
+ This revised workflow supersedes the August diagram `SRC-W02_FFM_EXECUTION.png` for current instructions when this proposed sync is approved, landed and verified. The [unaltered original](../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W02_FFM_EXECUTION.png) remains historical evidence; it grants no current role, Git or cloud permission. This derivative follows RUL-01…15 and Tony’s explicit workflow/diagram correction assignment of 2026-10-16.
+diff --git a/MANIFEST.md b/MANIFEST.md
+index bab9f49..6c9edcb 100644
+--- a/MANIFEST.md
++++ b/MANIFEST.md
+@@ -39,14 +39,14 @@ Identify governing snapshots by canonical document name, header version and Hub
+ | APP_FACTORY_SKILLS_PLAYBOOK | 1.2 | 2026-10-18 | Active | Skill-authoring constitution: Stark vs Agent skills, two-file contract, activation flow, CWD rule | DESIGNER_PLAYBOOK, FFM_PLAYBOOK, RECON_QUESTIONNAIRE |
+ | BIM_PLAYBOOK | 1.1 | 2026-10-18 | Active | Backend Integration Module doctrine: module identity, one-folder package + manager grammar, stage-gate lifecycle, ACCEPTANCE_SPEC handoff, QA engagement, contracts & seams | ARCHITECT_PLAYBOOK, BUG_FIX_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, QA_PLAYBOOK, RECON_QUESTIONNAIRE, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |
+ | BUG_FIX_PLAYBOOK | 1.1 | 2026-10-18 | Active — field-validated (FIX-001/002/003, ADK Harness) | Bug-fix doctrine (field-validated): evidence-first lifecycle, root-cause mechanism rule, regression protection, Gate Q/D, scope control, environment parity, FIX module anatomy, module identity, ACCEPTANCE_SPEC artifact, field case studies | ENGINEER_PLAYBOOK, FFM_PLAYBOOK, QA_PLAYBOOK, RECON_QUESTIONNAIRE, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |
+-| DEPLOYMENT_PLAYBOOK | 1.0 | 2026-10-18 | DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED (sections marked OPEN are not doctrine until ruled) | Common identity, exclusion, verification and recovery; context-specific permissions retained | APP_FACTORY_SKILLS_PLAYBOOK, BIM_PLAYBOOK, FFM_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, RECON_QUESTIONNAIRE, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK |
++| DEPLOYMENT_PLAYBOOK | 1.0 | 2026-10-18 | Active (sections marked OPEN are not doctrine until ruled) | Common identity, exclusion, verification and recovery; context-specific permissions retained | APP_FACTORY_SKILLS_PLAYBOOK, BIM_PLAYBOOK, FFM_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, RECON_QUESTIONNAIRE, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK |
+ | FEAT_PLAYBOOK | 1.1 | 2026-10-18 | Active | Feature Module doctrine: adding capability to working systems — launch conditions, v1-now/v2-seeded versioning, scope discipline vs feature gravity, mode parity, accessibility-first gates (deltas over BIM mechanics) | BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, QA_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |
+ | FFM_PLAYBOOK | 1.3 | 2026-10-18 | Active | Module preparation, artifact ownership, prepared QAM, engineering and post-FFM review; revised workflow references | APP_FACTORY_SKILLS_PLAYBOOK, ARCHITECT_PLAYBOOK, DESIGNER_PLAYBOOK, ENGINEER_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, RECON_QUESTIONNAIRE, SOFTWARE_FACTORY_PLAYBOOK |
+ | FRONTEND_BUILD_PHASE_PLAYBOOK | 1.3.0 | 2026-10-18 | Active | Frontend build execution: six stages, doctrine refresh, pre-write checks, KIP loop | COMPONENT_REGISTRY, FFM_PLAYBOOK, FRONTEND_FIRST_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK |
+ | FRONTEND_FIRST_PLAYBOOK | 1.2.0 | 2026-10-18 | Active | When/why to build UI before backend: Kit Audit, gates, service-layer law, mock strategy | COMPONENT_REGISTRY, FRONTEND_BUILD_PHASE_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK |
+-| QAM_PLAYBOOK | 1.0 | 2026-10-18 | DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED | Mandatory module QAM and accepted _templates/QAM set | ARCHITECT_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QA_PLAYBOOK, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |
++| QAM_PLAYBOOK | 1.0 | 2026-10-18 | Active | Mandatory module QAM and accepted _templates/QAM set | ARCHITECT_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QA_PLAYBOOK, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |
+ | QA_PLAYBOOK | 1.2 | 2026-10-18 | Active — field-tested (ADK Harness BIM/FIX verification) | QA doctrine (field-tested): independent verification seat — claim-package handoff, acceptance-spec contract extraction, evidence discipline, Gate Q/Gate D, one-test-at-a-time manual protocol, exploratory seam testing, verdict model, scope protection | BUG_FIX_PLAYBOOK, ENGINEER_PLAYBOOK, FFM_PLAYBOOK, RECON_QUESTIONNAIRE, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |
+-| RRM_PLAYBOOK | 1.0 | 2026-10-18 | DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED | Approved review repairs with QAM; post-FFM and Engine 2 checkpoints | ARCHITECT_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |
++| RRM_PLAYBOOK | 1.0 | 2026-10-18 | Active | Approved review repairs with QAM; post-FFM and Engine 2 checkpoints | ARCHITECT_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |
+ | TESTING_PLAYBOOK | 2.2 | 2026-10-18 | Active | The testing bible: four layers, diagnostic principles, backend appendices, run-verification rituals | FFM_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, RECON_QUESTIONNAIRE, SOFTWARE_FACTORY_PLAYBOOK, STARTER_KIT_HANDBOOK |
+ 
+ ### 04_REFERENCE_MANUALS

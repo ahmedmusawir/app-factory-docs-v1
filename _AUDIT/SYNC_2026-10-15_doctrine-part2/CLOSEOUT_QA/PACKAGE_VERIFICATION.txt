@@ -1,0 +1,5 @@
+Handoff package: /home/moose/Downloads/FACTORY_CLOSEOUT_EXECUTION_HANDOFF_2026-10-20_202706.zip
+SHA-256 (measured): f6753a2e9cd958844a3c3d051d6bc7c4842b53f5cc73e947874f2c798e2510b1
+SHA-256 (stated by Cody): f6753a2e9cd958844a3c3d051d6bc7c4842b53f5cc73e947874f2c798e2510b1
+PACKAGE_SHA256SUMS.txt rows: 1862; mismatches: 0 (sha256sum -c in fresh scratch extraction)
+Lint run on fresh export: cwd=<git archive 4c54292>, command=python3 -B -I lints/run_all.py, exit=0, RESULT: PASS (full stdout in CLOSEOUT_QA_EVIDENCE.json check AC31)
