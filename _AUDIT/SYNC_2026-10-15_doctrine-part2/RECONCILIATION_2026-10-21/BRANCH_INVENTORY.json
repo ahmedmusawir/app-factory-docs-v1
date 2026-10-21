@@ -1,0 +1,28 @@
+[
+  {
+    "ref": "refs/heads/astra-factory-doc-review",
+    "local_sha": "677e0e448576941571e619cd30c59cdd534cac3a",
+    "remote_same_name": "677e0e448576941571e619cd30c59cdd534cac3a",
+    "commits_absent_from_all_remote_branches": []
+  },
+  {
+    "ref": "refs/heads/docs/sync-doctrine-part2-2026-10-15",
+    "local_sha": "c69be638aca3bf3ec7610788e867c8428b3ec874",
+    "remote_same_name": "c69be638aca3bf3ec7610788e867c8428b3ec874",
+    "commits_absent_from_all_remote_branches": []
+  },
+  {
+    "ref": "refs/heads/factory-docs-review-astra-w-chunks",
+    "local_sha": "e7b4a6f33e1ae2442f71d82f7f3a9d694f50da36",
+    "remote_same_name": "626da8d70f4db22987dc7fcc86765492072360cd",
+    "commits_absent_from_all_remote_branches": [
+      "e7b4a6f33e1ae2442f71d82f7f3a9d694f50da36"
+    ]
+  },
+  {
+    "ref": "refs/heads/main",
+    "local_sha": "9c179392f79b70da099121fc357d3107ad3bb86e",
+    "remote_same_name": "9c179392f79b70da099121fc357d3107ad3bb86e",
+    "commits_absent_from_all_remote_branches": []
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/FACTORY_AMENDED_V1_QA_SPEC_REVIEW_2026-10-17_160835.zip",
+    "sha256": "86da25006261a33ab4f0edae89520cbd20682d1cc6d918415aa3b4ceb5cf98c4",
+    "reason": "Local delivery ZIP; durable constituent records are retained separately; no new ZIP publication"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/FACTORY_AMENDED_V2_EXECUTION_HANDOFF_2026-10-19_150618.zip",
+    "sha256": "a2b4c4cf57b2c93e25686d4c45c28c7302da1ed97c55f3bd219c57bef9f8a422",
+    "reason": "Local delivery ZIP; durable constituent records are retained separately; no new ZIP publication"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/FACTORY_AMENDED_V2_REVIEW_2026-10-19_135012.zip",
+    "sha256": "182016aa2bd9ad6119ea1e63583f7155db6e3c86af4b2456f1294c073d695ba7",
+    "reason": "Local delivery ZIP; durable constituent records are retained separately; no new ZIP publication"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/FACTORY_AMENDED_V3_EXECUTION_HANDOFF_2026-10-20_104051.zip",
+    "sha256": "5efa6fee26d94598fc6687e22b9cd50bec0b282bb4cf2196ba1b06283cd60485",
+    "reason": "Local delivery ZIP; durable constituent records are retained separately; no new ZIP publication"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/FACTORY_AMENDED_V3_REVIEW_2026-10-19_203340.zip",
+    "sha256": "fc6775c1a28275c925983558cfbc7e109398d351f0ea147e57c38a4a3f75290d",
+    "reason": "Local delivery ZIP; durable constituent records are retained separately; no new ZIP publication"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/FACTORY_QA_AF01_REPAIR_2026-10-17_173649.zip",
+    "sha256": "9782260ccbd12fd6b76a844c0439e69796d8e6904e6912c9c78631215fdcf4ed",
+    "reason": "Local delivery ZIP; durable constituent records are retained separately; no new ZIP publication"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/SETUP_RECEIPT.json",
+    "sha256": "dd417d8b6faf283f5b7b10ba05f28d012b0414127a760d0bf5bade87b57ade23",
+    "accepted_sha256": "0724ba94c25b5c783f51d2604951f3dc7c954cd3f2c398df218394c9947c120f",
+    "reason": "Obsolete/conflicting review-branch setup or operator-state variant; preserve locally, do not overwrite accepted run"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/EXECUTION_SETUP/SETUP_STATUS.md",
+    "sha256": "2df1206861b6d2d9c5812ca0e90e7067987a8c3906b0ea5dea1311307d2363a1",
+    "accepted_sha256": "d407957a036bee06de64e03bc8071cc45977e8b973a961b65b339a31612599d9",
+    "reason": "Obsolete/conflicting review-branch setup or operator-state variant; preserve locally, do not overwrite accepted run"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/OPERATOR_NEXT_STEPS.md",
+    "sha256": "47ae48273df0d6f3e919d1a79328ea24ed52f6b70b339b936162d3d6731cae98",
+    "accepted_sha256": "6f9f1a2337bdf2a0f5225af87ebf497bbc61a6b295b7d398e2a55c06fa5dfa5c",
+    "reason": "Obsolete/conflicting review-branch setup or operator-state variant; preserve locally, do not overwrite accepted run"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/RECOVERY.md",
+    "sha256": "573f9ae0ed7e8ef787c0957896a7d42d49c2926ac544cae547e5fc9ef3b74bb7",
+    "reason": "Unrelated pre-sync session or mixed active recovery history; preserve locally on review branch"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/SESSIONS/session_2026-09-27.md",
+    "sha256": "6bae34c8b615b870f5a8764fdc403d1e36282a7a3328d3f0e57285580171e533",
+    "reason": "Unrelated pre-sync session or mixed active recovery history; preserve locally on review branch"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/SESSIONS/session_2026-10-10.md",
+    "sha256": "76e786996a767260e17970ef404dbb5e5e1dc84fc449edccb7f022c9a41bac39",
+    "reason": "Unrelated pre-sync session or mixed active recovery history; preserve locally on review branch"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/SESSIONS/session_2026-10-11.md",
+    "sha256": "090a3cf934d07ba94773faf3e6fbb75de6089c1faa25fa4df3c60c54f5a790d4",
+    "reason": "Unrelated pre-sync session or mixed active recovery history; preserve locally on review branch"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/lints/__pycache__/header_lint.cpython-312.pyc",
+    "sha256": "9818c8d595cef853e57c2b0be3b3f1155224381484df8bd17dd0d52dd62e8c31",
+    "reason": "Ignored regenerable lint cache from local checks; keep local"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/lints/__pycache__/lint_common.cpython-312.pyc",
+    "sha256": "5fcc5fd07edeaaa59fa4daa9d06bc5a825539430406e21f3e48f00b1cae3ebf9",
+    "reason": "Ignored regenerable lint cache from local checks; keep local"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/lints/__pycache__/versioned_refs_lint.cpython-312.pyc",
+    "sha256": "f5d028adf1c6f2aa06ff721b559f0a07a5df00e158696221e1c3ec539b1b70b7",
+    "reason": "Ignored regenerable lint cache from local checks; keep local"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-sync-execution/lints/__pycache__/lint_common.cpython-312.pyc",
+    "sha256": "8509f6d4fcf0e8ec9d4760b197f6480b76baf747f697fe0cff46ce0113c795de",
+    "reason": "Ignored regenerable lint cache from local checks; keep local"
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "prepared_at": "2026-10-19T20:33:40.692776+06:00",
+  "candidate": "8dff354937bc7baf739370a9886497d9d5359186",
+  "destination": "/home/moose/Downloads/FACTORY_AMENDED_V3_REVIEW_2026-10-19_203340.zip",
+  "status": "PREPARATION COMPLETE;exact-patch Gate2 PENDING;not applied",
+  "index_sha256": "55537c6411724ab78837d0191d61375654839202acbf15b13a76d98aa8d483e6",
+  "patch_sha256": "afd8f9249854d4e99c385b1e21c459fa297fa5ed5ddcac782d1509747c43faed",
+  "changed_paths": 3,
+  "unchanged_paths": 98,
+  "checks_passed": 14,
+  "closeout_transitions_pending": 12,
+  "zip_hash_note": "External delivery receipt pins enclosing ZIP after sealing.",
+  "local_zip": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/FACTORY_AMENDED_V3_REVIEW_2026-10-19_203340.zip",
+  "zip_sha256": "fc6775c1a28275c925983558cfbc7e109398d351f0ea147e57c38a4a3f75290d",
+  "zip_bytes": 3406747,
+  "members": 36,
+  "inventory_hashes": 35,
+  "delivery": "DELIVERED AND VERIFIED",
+  "verified_at": "2026-10-19T20:34:04.211199+06:00"
+}

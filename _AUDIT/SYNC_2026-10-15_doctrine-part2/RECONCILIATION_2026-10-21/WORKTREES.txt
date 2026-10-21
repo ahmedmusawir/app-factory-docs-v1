@@ -1,0 +1,8 @@
+worktree /home/moose/Documents/app-factory-docs-v1
+HEAD e7b4a6f33e1ae2442f71d82f7f3a9d694f50da36
+branch refs/heads/factory-docs-review-astra-w-chunks
+
+worktree /home/moose/Documents/app-factory-docs-sync-execution
+HEAD c69be638aca3bf3ec7610788e867c8428b3ec874
+branch refs/heads/docs/sync-doctrine-part2-2026-10-15
+

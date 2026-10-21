@@ -1,0 +1,530 @@
+[
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/COMMIT_COMMANDS.json",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/COMMIT_COMMANDS.json",
+    "sha256": "4b9f6ddcdda94d4cf6a631099626ce15406646324c0ce1aa14e44f0ded613025",
+    "reason": "Missing durable completed-sync post-commit or delivery receipt"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/COMMIT_RECEIPT.json",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/COMMIT_RECEIPT.json",
+    "sha256": "db5b579aac348729d853bc732e71374c82019cb70f1e65cb878f1be0dc2910b4",
+    "reason": "Missing durable completed-sync post-commit or delivery receipt"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/DELIVERY_NOTES.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/DELIVERY_NOTES.md",
+    "sha256": "e24ac1c5410c171a756092430e0aa6bff72845dfea7fb16d77fb33b6358b6c60",
+    "reason": "Missing durable completed-sync post-commit or delivery receipt"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/FABLE_HANDOFF.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/FABLE_HANDOFF.md",
+    "sha256": "c9866769634d15940149eea5d0cb2890c77294f6e6c8570344518f1cfa95c7a4",
+    "reason": "Missing durable completed-sync post-commit or delivery receipt"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/FINAL_VERIFICATION.json",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/FINAL_VERIFICATION.json",
+    "sha256": "fa9a8fc3e5a12325080b2e72dc71b86c5f1f42d328b40b8fa5ec974485fb555a",
+    "reason": "Missing durable completed-sync post-commit or delivery receipt"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/POST_COMMIT_RECEIPT.json",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/POST_COMMIT_RECEIPT.json",
+    "sha256": "bf8c9dc1d7e5efd0862fc932be4a39cd9fdc59a2fa228947c88960253c411158",
+    "reason": "Missing durable completed-sync post-commit or delivery receipt"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/PUSH_COMMANDS.json",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/PUSH_COMMANDS.json",
+    "sha256": "a9eba4fa716579a2e233a5ebfd4bb7ce4e94b4b54ab1fad43e06c3e85950102f",
+    "reason": "Missing durable completed-sync post-commit or delivery receipt"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/AMENDED_V2_DELIVERY_RECEIPT.json",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/AMENDED_V2_DELIVERY_RECEIPT.json",
+    "sha256": "b965155e706d9ae5bfa5d421c71686a052e8f0bade2e9870c0ee58f7bff683f5",
+    "reason": "Missing durable completed-sync post-commit or delivery receipt"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/AMENDED_V2_EXECUTION_DELIVERY_RECEIPT.json",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/AMENDED_V2_EXECUTION_DELIVERY_RECEIPT.json",
+    "sha256": "8eb0f30001ebc55b004d71a154d593a0d4cfcc756e173ead7340123c2593e770",
+    "reason": "Missing durable completed-sync post-commit or delivery receipt"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/AMENDED_V3_DELIVERY_RECEIPT.json",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/AMENDED_V3_DELIVERY_RECEIPT.json",
+    "sha256": "1437f3b89aab92fb085562723cf5543aa9620a8ee6dc04a3c4f78e39ca995cfb",
+    "reason": "Missing durable completed-sync post-commit or delivery receipt"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/AMENDED_V3_EXECUTION_DELIVERY_RECEIPT.json",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/AMENDED_V3_EXECUTION_DELIVERY_RECEIPT.json",
+    "sha256": "bd6ae13a27c66e9b10a298abc5f703d7d63c6cf7f23c01404c92854d8415efe2",
+    "reason": "Missing durable completed-sync post-commit or delivery receipt"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/CLOSEOUT_EXECUTION_DELIVERY_RECEIPT_20261020_202806.json",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/CLOSEOUT_EXECUTION_DELIVERY_RECEIPT_20261020_202806.json",
+    "sha256": "6bcf1691eefefbe853168c63e21a942de2a916234fd306b6ff61f65091036337",
+    "reason": "Missing durable completed-sync post-commit or delivery receipt"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/PHASE3_DELIVERY_RECEIPT.json",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/PHASE3_DELIVERY_RECEIPT.json",
+    "sha256": "2bc1459ec64e9deade2da1e45b21e0c14a3d7ba4fb9c61ee762794561bd22147",
+    "reason": "Missing durable completed-sync post-commit or delivery receipt"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/PHASE5_CLEANUP_DELIVERY_RECEIPT_20261020_182227.json",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/PHASE5_CLEANUP_DELIVERY_RECEIPT_20261020_182227.json",
+    "sha256": "1e9c38224a394dd7d1103d131db80ffef38e578a667d7b1beca3eceee6b3f607",
+    "reason": "Missing durable completed-sync post-commit or delivery receipt"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE5_CLEANUP/COMMIT_COMMANDS.json",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE5_CLEANUP/COMMIT_COMMANDS.json",
+    "sha256": "e84adb281e1f5137270774041f40389d12fd9d17b53130b29debf708dd14bea8",
+    "reason": "Missing durable completed-sync post-commit or delivery receipt"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE5_CLEANUP/COMMIT_RECEIPT.json",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE5_CLEANUP/COMMIT_RECEIPT.json",
+    "sha256": "d82a9cf641d861ff31499b002973da4a5314199bdcc7a8bf85207aee07515ef9",
+    "reason": "Missing durable completed-sync post-commit or delivery receipt"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE5_CLEANUP/FINAL_VERIFICATION.json",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE5_CLEANUP/FINAL_VERIFICATION.json",
+    "sha256": "8271baeefddeb26b2a2244653609bea7cf5c1383868f18d41c7e7047dc73d6e8",
+    "reason": "Missing durable completed-sync post-commit or delivery receipt"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE5_CLEANUP/GENERATED_SCRATCH_DISPOSAL.json",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE5_CLEANUP/GENERATED_SCRATCH_DISPOSAL.json",
+    "sha256": "dd18d59ee8919103950c233238a41c8c2c407fa6a0e620dd55aac50e05306b6e",
+    "reason": "Missing durable completed-sync post-commit or delivery receipt"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE5_CLEANUP/POST_COMMIT_RECEIPT.json",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE5_CLEANUP/POST_COMMIT_RECEIPT.json",
+    "sha256": "19deb702bc66812283a75806886431d19f6ae859f4312118dbeeda4a03ca0f51",
+    "reason": "Missing durable completed-sync post-commit or delivery receipt"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE5_CLEANUP/PUBLICATION_NOTES.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE5_CLEANUP/PUBLICATION_NOTES.md",
+    "sha256": "7af9cf92dfce61e62c6d6898c2e6a8cb834ddc91f1e57e2cc60611412e95d853",
+    "reason": "Missing durable completed-sync post-commit or delivery receipt"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE5_CLEANUP/PUSH_COMMANDS.json",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE5_CLEANUP/PUSH_COMMANDS.json",
+    "sha256": "77d742e583684542aec44e897fdb2d1da6310b613e7bf0fd798862554435c0ab",
+    "reason": "Missing durable completed-sync post-commit or delivery receipt"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/SESSION_HANDOFF_2026-10-17_155346.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/SESSION_HANDOFF_2026-10-17_155346.md",
+    "sha256": "233d62b6d83c6b635d14e49432586da68721597b3646ae83d744f0663d0f63bd",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-12_201815_part2-architect-review-export.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-12_201815_part2-architect-review-export.md",
+    "sha256": "0d7b7ebdef9561d54bc1ed0a64678bc3fe6b42c3b4a0a6f3958265b17ac31a35",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-12_204137_part2-revision-plan.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-12_204137_part2-revision-plan.md",
+    "sha256": "3956c3a97d458cd73308f7df189008abe8af2452266a45a8310e666976eda4a2",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-12_204759_part2-bounded-revision.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-12_204759_part2-bounded-revision.md",
+    "sha256": "a296880b535ea843f408140453b3171cc90ea364e807c083a67ab791ba61c82d",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-12_204942_part2-r1-zip-delivery.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-12_204942_part2-r1-zip-delivery.md",
+    "sha256": "a2ad29cf88042555617304979386cf177f0a7b275810f8a92b455de5fe4ebc69",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-13_170824_part2-intake-drop-prepared.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-13_170824_part2-intake-drop-prepared.md",
+    "sha256": "c138a9d9785634e49e71d389c41118492d34eca006a887c89925c8001a9bc729",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-13_174838_harvest-intake-review.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-13_174838_harvest-intake-review.md",
+    "sha256": "8ec139e069b3c7ad4072be360d3e0287dc901b23db922619d40902c271439a7c",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-13_215914_combined-planning-001.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-13_215914_combined-planning-001.md",
+    "sha256": "e31dfa194351a4a9bbb32df798a775771e266f7c780b15218d96de81699681a7",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-14_145435_rulings-reconciliation-001.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-14_145435_rulings-reconciliation-001.md",
+    "sha256": "7f028609f8478e26512c02fb91ef9c2cf57d13294d3a402757f5539e15fc7f0d",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-14_184845_consolidated-intake-001.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-14_184845_consolidated-intake-001.md",
+    "sha256": "6ae50e30da6403f1ff110ceec9449dfd0ad3fe839562f11392c757f928dce424",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-14_192151_qam-draft-corrected-qa-lead-review.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-14_192151_qam-draft-corrected-qa-lead-review.md",
+    "sha256": "316ffb9ba59fe783828abc46f6b407ede53eec8b30b2be5b0b9528823a756d29",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-14_205037_qam-v0-3-amendments-applied.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-14_205037_qam-v0-3-amendments-applied.md",
+    "sha256": "5efca920982ae54af456a64b115780365deeab8fd393b2615d0f933b42b22626",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-15_120917_architect-verification-intake-brief.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-15_120917_architect-verification-intake-brief.md",
+    "sha256": "f774b3951e65a6c6142b814d837fb3ed0bfc02330fb519e923bdd989b8983cc8",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-15_182550_crash-recovery-findings.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-15_182550_crash-recovery-findings.md",
+    "sha256": "03ce07a8b8d18bfaaf8dd35acf8d4c5f93b3cb8bf51a74f19b7bbc270e006cd4",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-15_192804_opencode-handoff.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-15_192804_opencode-handoff.md",
+    "sha256": "9e1fc800dfacb3c192e64eed92ae11acc118481c06b0d9ddde959a157f6b731d",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-15_200046_reporting-convention.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-15_200046_reporting-convention.md",
+    "sha256": "45d225a463e3ca656550987f64d9325c9960d82b88e51032937dfb3a6757b5d1",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-15_202954_cody-recovery.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-15_202954_cody-recovery.md",
+    "sha256": "d60670bb6c3ebfdc6e8b858ac5b40c334a89d5c1152cb3ae96cfd74fb1b449c0",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-15_205803_cody-update-map-review.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-15_205803_cody-update-map-review.md",
+    "sha256": "d34282a86f24e9a111ac6de6265dadae50103876650ce3c118e0b74456775da9",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-15_214007_update-map-review-zip.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-15_214007_update-map-review-zip.md",
+    "sha256": "f75d40d4bcc579c5648e7778425e2dffaa3ce88f9e731d505c74deceb7c613c3",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-16_143449_phase-1-scope-decisions.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-16_143449_phase-1-scope-decisions.md",
+    "sha256": "14b2cee1bd7ba85027f86961385c7b9a57c04ae35ffc5f9fb39412eee5991ad1",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-16_164752_phase-2-fable-handoff.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-16_164752_phase-2-fable-handoff.md",
+    "sha256": "2acb439f72da574f7829ae6e4dede873c18eead71e2bbd01bbb6ad4c27ed89eb",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-16_175556_phase2-acceptance-spec.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-16_175556_phase2-acceptance-spec.md",
+    "sha256": "e9248ff16058423d7751e555d6ba49a41302636173bdc009defd65484b6395a8",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-16_184920_phase-2-mc-corrections.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-16_184920_phase-2-mc-corrections.md",
+    "sha256": "e29397a18cd6b0c580e9fd004fb1dbaf25999254a20a2d8220de8868a3fc75a9",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-17_103622_session-bounce-checkpoint.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-17_103622_session-bounce-checkpoint.md",
+    "sha256": "651d0516c05e20eeae2db1c2629dc8bd64bef2577783e9dc587043b875385ec5",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-17_112715_gate3-spec-finalized.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-17_112715_gate3-spec-finalized.md",
+    "sha256": "90f255d42bb8743c4ef1479b1fe939630e991f4c92e539ba3f2f537f6ae803dc",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-17_135049_amended-v1-prepared.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-17_135049_amended-v1-prepared.md",
+    "sha256": "ee5772ee7643fb3f28222be266fa533679d5516e44753b9693f35b2dc82a810a",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-17_145858_amended-v1-complete.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-17_145858_amended-v1-complete.md",
+    "sha256": "bf205dbcc867e5e70fa036d007b94f8742df090ca9a4083b518e08009454ae75",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-17_155346_session-handoff.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-17_155346_session-handoff.md",
+    "sha256": "1fb7f23e30c54194924da227e0220581f1e80d1764d0fb526b73527766bb6d07",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-17_160302_qa-amendment-plan.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-17_160302_qa-amendment-plan.md",
+    "sha256": "98609b0a40cc774a8f51ef30581286b0054885d91528fa9ee0d432c85f7d0c95",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-17_160835_consolidated-amendment-qa.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-17_160835_consolidated-amendment-qa.md",
+    "sha256": "3055d99caa237c0d04e0e2f1bbe598b7ff8915ebb77c3f64eadfc272d823cb76",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-17_173649_qa-af01-engineer-repair.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-17_173649_qa-af01-engineer-repair.md",
+    "sha256": "fa8364f35dcad7d533281ccf21ffa4586a4b9dbe7ce7b034c2199a159c272978",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-17_190959_qa-final-handoff.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-17_190959_qa-final-handoff.md",
+    "sha256": "3344907915869a146a5c4eba34df0cdfb0ccb477af25722fdba84e09af075e16",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-18_193414_execution-setup-receipt.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-18_193414_execution-setup-receipt.md",
+    "sha256": "b7eebdd419c193cadfee2d7c63360ed42ebf66b471b710eecac1510366409592",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-18_212938_phase3-complete-pushed.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-18_212938_phase3-complete-pushed.md",
+    "sha256": "40e83d1679cbe6acfbdbadf1579221480faed5d34b080a63a1470e5e626afbd1",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-19_110245_phase4-qa-readiness-executor-assignment.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-19_110245_phase4-qa-readiness-executor-assignment.md",
+    "sha256": "b70fddeee7e6bac362f4bbc3f2d7764c6f41a0d270a3db7b5202ecbd0bbccc41",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-19_113859_qa-fresh-session-blocker.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-19_113859_qa-fresh-session-blocker.md",
+    "sha256": "d3d16a8b3d08d5ee390e09e848f775eadfa1f9cd2cae17ab5d455f53470ca88c",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-19_122452_phase4-qa-lead-verdict.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-19_122452_phase4-qa-lead-verdict.md",
+    "sha256": "ad4489b0a7cb76fd2f77bdc5147bb94047339ba605edb6aa6b9f1d6d64854474",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-19_130846_qa-amended-v2-executor.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-19_130846_qa-amended-v2-executor.md",
+    "sha256": "3f7f5264527b7e5066339ed3dc2237a0c41356c4e92981cfd761e426885c8868",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-19_134549_amended-v2-plan.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-19_134549_amended-v2-plan.md",
+    "sha256": "aa96c0b32ac8b441e2ad32a5745334e4fb021ca0b72e76b221b933afbde5a250",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-19_135037_amended-v2-review-ready.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-19_135037_amended-v2-review-ready.md",
+    "sha256": "c16a1a98691245fbaf104b441a5c77154528dc86bbe753bc0ffd4d051e41ca61",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-19_150638_amended-v2-pushed.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-19_150638_amended-v2-pushed.md",
+    "sha256": "8ad5804d7cc692cf9e9d280cdbb21f401c442cd18581b1a7837261c8362df04b",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-19_180604_amended-v2-executor-ready.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-19_180604_amended-v2-executor-ready.md",
+    "sha256": "3ca1d09071edc5c5da259e56cc13abe6be15f74acf588d39a6b020ee7ea6a7e9",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-19_193051_amended-v2-retest-adjudication.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-19_193051_amended-v2-retest-adjudication.md",
+    "sha256": "dec30971ba5a2d99efe9970908642590aba38dc732132a08bf54a1fcde412b2c",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-19_203404_amended-v3-ready.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-19_203404_amended-v3-ready.md",
+    "sha256": "b90b97ee654d893d0e7c7ba03a7c11562770fdff22f07911a0942c3ab4d3c0dd",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-20_095328_amended-v3-executor-plan.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-20_095328_amended-v3-executor-plan.md",
+    "sha256": "b97b1566a1a47af629598c9ac9389c761e42e7d199ea101a83ad020a41d82b53",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-20_100005_amended-v3-qa-progress.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-20_100005_amended-v3-qa-progress.md",
+    "sha256": "fda0e6da82f4b2746def6066aa3e95ad9c9015a0ac1b251e0dadf0a8fc5ee006",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-20_100533_amended-v3-executor-handback.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-20_100533_amended-v3-executor-handback.md",
+    "sha256": "aab2610fa807aeb511765b575923196355052a537aaa5175a9279075185b3d2c",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-20_104110_amended-v3-pushed.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-20_104110_amended-v3-pushed.md",
+    "sha256": "39acd9b350a13d1dc01b4e64efea3adb889480046ad9e8e3c22adb7f5ea940b2",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-20_142831_amended-v3-executor-assignment.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-20_142831_amended-v3-executor-assignment.md",
+    "sha256": "572a4b28a62946934dc144fe16f4d4da2a453856a2f12ccdb0ec104ad105dc12",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-20_150034_amended-v3-executor-seat-blocker.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-20_150034_amended-v3-executor-seat-blocker.md",
+    "sha256": "13e93cb19de949c0bc8c807f23e018229c0c88421af200db86378bed1894d0c4",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-20_165031_phase4-qa-gate-closed-verdict-v3.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-20_165031_phase4-qa-gate-closed-verdict-v3.md",
+    "sha256": "4fe9deb928ebb482c349d72a3cb52aaea521baa4873b9424fb92b8423e0971d3",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-20_182227_phase5-cleanup-closeout-ready.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-20_182227_phase5-cleanup-closeout-ready.md",
+    "sha256": "3663572f9a013a696da8581c91fe521f92a33f87aa3f8c92c0f47bbb02859324",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-20_202806_closeout-applied-pushed.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-20_202806_closeout-applied-pushed.md",
+    "sha256": "b029b71f2c3f5d05d945a7617d2989359f75f49aedd211b299b6a9eca1ea7d67",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-20_205102_closeout-qa-accepted-merge-ready.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-20_205102_closeout-qa-accepted-merge-ready.md",
+    "sha256": "5ba4b3de39210af7868cad74a68d82b04e47ab5f1a8aaba9c34509bb1a2fcd53",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-21_020711_qa-record-publication-plan.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-21_020711_qa-record-publication-plan.md",
+    "sha256": "ac7c2ba25026448e71b1727c7185d4efdde8220151c4b38ee7e967dd2d6a4aca",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-21_080740_final-qa-publication-receipt.json",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-21_080740_final-qa-publication-receipt.json",
+    "sha256": "14c7ac62fb9eca102d6a128016396f067ca381026d242ff16c87e72102f19cea",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/RESPONSES/response_2026-10-21_080756_final-qa-records-published.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/RESPONSES/response_2026-10-21_080756_final-qa-records-published.md",
+    "sha256": "5771d639a5588682bb8eb94ad35aaf6fc1890e4a2984882a3902ee8a61dc909f",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/SESSIONS/session_2026-10-12.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/SESSIONS/session_2026-10-12.md",
+    "sha256": "7105e9a7d50c4f68f1e964a7d12bb5e58e727be9592bf274fb7867683e0be596",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/SESSIONS/session_2026-10-13.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/SESSIONS/session_2026-10-13.md",
+    "sha256": "aedc124e63c701aa565a5b0c686ae00e89bae9277c27174b13e0b11fa4710765",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/SESSIONS/session_2026-10-14.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/SESSIONS/session_2026-10-14.md",
+    "sha256": "51b5d03c251a4a36548a2e73a18f05d351985f6ef17dfeb6d38807161367b84a",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/SESSIONS/session_2026-10-15.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/SESSIONS/session_2026-10-15.md",
+    "sha256": "56e33bfe2109f1e5786651adbcadda0702566cd2ac0e3a0889a93f86f4ff7fde",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/SESSIONS/session_2026-10-16.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/SESSIONS/session_2026-10-16.md",
+    "sha256": "4bbf5f90fc46e76c6475085be4e7c3af36bda883c89d942317f3b87a9034d6c0",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/SESSIONS/session_2026-10-17.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/SESSIONS/session_2026-10-17.md",
+    "sha256": "4a6d754e21729aeaae8d61ca32ac8e698bef5debaab049e85b49979dc6437b08",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/SESSIONS/session_2026-10-18.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/SESSIONS/session_2026-10-18.md",
+    "sha256": "64f06b96b8534fc43597d5c1c8749462d90dc26c0ef215a83a78765957cd4347",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/SESSIONS/session_2026-10-19.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/SESSIONS/session_2026-10-19.md",
+    "sha256": "cedfe3e6effdbe747a0a9df3b418c8d57b6bffd23fd8d1485afebd5bfb5da243",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/SESSIONS/session_2026-10-20.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/SESSIONS/session_2026-10-20.md",
+    "sha256": "b8d478cad7774bdc0c4d97436f816064dcfdc651bd59d7712968a55306edff3b",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  },
+  {
+    "source": "/home/moose/Documents/app-factory-docs-v1/agent_docs/SESSIONS/session_2026-10-21.md",
+    "destination": "_AUDIT/SYNC_2026-10-15_doctrine-part2/RECONCILIATION_2026-10-21/OPERATOR_RECORDS/agent_docs/SESSIONS/session_2026-10-21.md",
+    "sha256": "b085aa9a9aeb4d075dd7ff4850c8a39575e866136219e69f1923338516bec05a",
+    "reason": "Exact historical completed-sync operator/session record; archived separately, not active instructions"
+  }
+]

@@ -1,0 +1,1 @@
+Publish only CLOSEOUT_VERIFICATION.md and CLOSEOUT_QA/ under the specified run. Verify the supplied manifest from the run directory, preserve all existing tracked bytes including every canonical document, commit and push the existing branch, verify remote HEAD and clean tree. Tony explicitly authorizes this batch; no QA rerun, ZIP or merge.
