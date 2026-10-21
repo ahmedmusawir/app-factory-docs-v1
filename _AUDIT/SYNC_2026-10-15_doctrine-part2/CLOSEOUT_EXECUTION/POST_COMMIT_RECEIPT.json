@@ -1,0 +1,17 @@
+{
+  "time": "2026-10-20T14:25:56.790715+00:00",
+  "closeout_commit": "4c542922d57ca3b2acf4391082a37383744ea192",
+  "remote_sha": "4c542922d57ca3b2acf4391082a37383744ea192",
+  "branch": "docs/sync-doctrine-part2-2026-10-15",
+  "parent": "dc3b288246ea931962e889e9a88718c0daaf9c37",
+  "clean_working_tree": true,
+  "main_unchanged": "9c179392f79b70da099121fc357d3107ad3bb86e",
+  "push": "PASS ordinary fast-forward",
+  "applied_transitions": 12,
+  "canonical_paths": 9,
+  "committed_paths": 43,
+  "cleanup_acceptance": "ACCEPTED Jarvis per Tony instruction; separate pre-application record",
+  "activation_authority": "AUTHORIZED exact identities; separate pre-application record",
+  "independent_closeout_check": "PENDING Fable",
+  "PR_and_merge": "Tony only; not performed"
+}

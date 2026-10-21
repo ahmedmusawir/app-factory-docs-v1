@@ -1,0 +1,197 @@
+[
+  {
+    "path": "/home/moose/Downloads/FACTORY_CLOSEOUT_EXECUTION_HANDOFF_2026-10-20_202706.zip",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/home/moose/Downloads/FACTORY_CLOSEOUT_QA_ACCEPTED_MERGE_READY_2026-10-20_205102.zip",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/FACTORY_CLOSEOUT_EXECUTION_HANDOFF_2026-10-20_202706.zip",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/FACTORY_EXECUTION_SETUP_2026-10-18_193414.zip",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/FACTORY_PHASE2_MC_CORRECTED_REVIEW_2026-10-16_184920.zip",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/FACTORY_PHASE3_ENGINEERING_HANDOFF_2026-10-18_212938.zip",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/FACTORY_PHASE5_CLEANUP_CLOSEOUT_REVIEW_2026-10-20_182141.zip",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/FACTORY_UPDATE_MAP_DRAFT_REVIEW_2026-10-15_213929.zip",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/closeout-evidence-chain.json",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/closeout-lane.txt",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/closeout-report.txt",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/closeout-source52.json",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/closeout_apply.py",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/closeout_commit.py",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/closeout_commit_scope.json",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/closeout_delivery.json",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/closeout_package.py",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/closeout_pathspec",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/cody-qa-af01-delivery.json",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/cody-qa-amended-v1-4_gpctkd",
+    "type": "directory",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/cody-qa-amended-v1-6nto20fd",
+    "type": "directory",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/cody-qa-amended-v1-jlxw_cgv",
+    "type": "directory",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/cody-qa-amended-v1-uui89hla",
+    "type": "directory",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/cody-qa-frozen-patch-wujll2ov",
+    "type": "directory",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/final_qa_publication_result.json",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/phase5_commit.py",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/phase5_commit_scope.json",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/phase5_delivery.json",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/phase5_integrate.py",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/phase5_package.py",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/phase5_pathspec",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/phase5_prepare.py",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/phase5_transfer.json",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/publish_final_closeout_qa.py",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/qa-amended-v2-i1gnt5qm",
+    "type": "directory",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/qa-amended-v3-krds1x3r",
+    "type": "directory",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/qa-phase4-20261019-054106",
+    "type": "directory",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/reconcile_classify.py",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  },
+  {
+    "path": "/tmp/reconcile_inventory.py",
+    "type": "file",
+    "reason": "Local delivery copy or reproducible task scratch; untouched; outside repository publication scope"
+  }
+]

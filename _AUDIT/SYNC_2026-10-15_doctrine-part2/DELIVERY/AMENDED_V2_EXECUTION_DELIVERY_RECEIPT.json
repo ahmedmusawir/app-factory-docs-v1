@@ -1,0 +1,16 @@
+{
+  "created_at": "2026-10-19T15:06:18.232491+06:00",
+  "local_zip": "/home/moose/Documents/app-factory-docs-v1/_AUDIT/SYNC_2026-10-15_doctrine-part2/DELIVERY/FACTORY_AMENDED_V2_EXECUTION_HANDOFF_2026-10-19_150618.zip",
+  "destination": "/home/moose/Downloads/FACTORY_AMENDED_V2_EXECUTION_HANDOFF_2026-10-19_150618.zip",
+  "zip_sha256": "a2b4c4cf57b2c93e25686d4c45c28c7302da1ed97c55f3bd219c57bef9f8a422",
+  "bytes": 2788940,
+  "members": 33,
+  "inventory_hashes": 32,
+  "commit": "8dff354937bc7baf739370a9886497d9d5359186",
+  "remote_sha": "8dff354937bc7baf739370a9886497d9d5359186",
+  "clean_tree": true,
+  "independent_qa": "PENDING",
+  "closeout_transitions": "12 PENDING",
+  "delivery": "DELIVERED \u2014 ZIP and all 32 inventory hashes verified",
+  "verified_at": "2026-10-19T15:06:38.551549+06:00"
+}

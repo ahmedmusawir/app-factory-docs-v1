@@ -1,0 +1,14 @@
+{
+  "name": "FACTORY_CLOSEOUT_EXECUTION_HANDOFF_2026-10-20_202706.zip",
+  "staged_path": "/tmp/FACTORY_CLOSEOUT_EXECUTION_HANDOFF_2026-10-20_202706.zip",
+  "destination": "/home/moose/Downloads/FACTORY_CLOSEOUT_EXECUTION_HANDOFF_2026-10-20_202706.zip",
+  "sha256": "f6753a2e9cd958844a3c3d051d6bc7c4842b53f5cc73e947874f2c798e2510b1",
+  "bytes": 35903697,
+  "members": 1863,
+  "verified_inventory_entries": 1862,
+  "closeout_commit": "4c542922d57ca3b2acf4391082a37383744ea192",
+  "remote_sha": "4c542922d57ca3b2acf4391082a37383744ea192",
+  "independent_closeout_check": "PENDING",
+  "delivered_sha256_verified": true,
+  "final_clean_execution_worktree": true
+}

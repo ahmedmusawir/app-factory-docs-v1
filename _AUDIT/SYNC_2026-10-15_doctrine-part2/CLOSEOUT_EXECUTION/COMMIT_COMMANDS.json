@@ -1,0 +1,196 @@
+[
+  {
+    "time": "2026-10-20T14:25:29.286009+00:00",
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "dc3b288246ea931962e889e9a88718c0daaf9c37\n",
+    "stderr": ""
+  },
+  {
+    "time": "2026-10-20T14:25:29.289484+00:00",
+    "command": [
+      "git",
+      "branch",
+      "--show-current"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "docs/sync-doctrine-part2-2026-10-15\n",
+    "stderr": ""
+  },
+  {
+    "time": "2026-10-20T14:25:29.294492+00:00",
+    "command": [
+      "git",
+      "diff",
+      "--cached",
+      "--name-only"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "time": "2026-10-20T14:25:29.304673+00:00",
+    "command": [
+      "git",
+      "diff",
+      "--name-only"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md\n03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md\n03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md\n03_BUILD_METHODOLOGY/_templates/QAM/README.md\n03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md\n03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md\n03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md\n03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md\nMANIFEST.md\n_AUDIT/SYNC_2026-10-15_doctrine-part2/RUN_SUMMARY.md\n_AUDIT/SYNC_2026-10-15_doctrine-part2/TEMPLATE_INSTALL_VERIFICATION.md\n",
+    "stderr": ""
+  },
+  {
+    "time": "2026-10-20T14:25:29.344185+00:00",
+    "command": [
+      "git",
+      "add",
+      "-f",
+      "--pathspec-from-file=/tmp/closeout_pathspec",
+      "--pathspec-file-nul"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "time": "2026-10-20T14:25:29.350585+00:00",
+    "command": [
+      "git",
+      "diff",
+      "--cached",
+      "--name-only"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md\n03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md\n03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md\n03_BUILD_METHODOLOGY/_templates/QAM/README.md\n03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md\n03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md\n03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md\n03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md\nMANIFEST.md\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/ACTUAL_CANONICAL.diff\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/APPLIED_TRANSITIONS.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/APPLY_COMMANDS.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/ARCHITECT_ACTIVATION_INSTRUCTION.md\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/ARCHITECT_CLEANUP_ACCEPTANCE.md\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/BASELINE_101.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/BASELINE_TRACKED.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/ENGINEERING_CLOSEOUT_REPORT.md\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/ENGINEERING_VERIFICATION.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/EXECUTION_PLAN.md\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/INPUTS/RUN_SUMMARY.md\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/INPUTS/TEMPLATE_INSTALL_VERIFICATION.md\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/LINT_RESULTS.txt\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/METADATA_HISTORY.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/PREFLIGHT.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/PREFLIGHT_COMMANDS.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/PRE_APPLICATION_DECISION_RECEIPT.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/PROTECTED_BASELINE_PATHS.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/PUBLICATION_SCOPE.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/REMOTE_PREFLIGHT.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/RUN_REPORT_ADDENDA.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/SUCCESSOR_101.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/TEMPLATE_BEFORE_AFTER.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/UNCHANGED_92.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/VERIFICATION_COMMANDS.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/VERIFY_COMMAND.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/VERIFY_COMMAND_INITIAL.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/VERIFY_COMMAND_SVG_DISCOVERY.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/WORKFLOW_PRESERVATION.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/apply_closeout.py\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/preflight.py\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/verify_closeout.py\n_AUDIT/SYNC_2026-10-15_doctrine-part2/RUN_SUMMARY.md\n_AUDIT/SYNC_2026-10-15_doctrine-part2/TEMPLATE_INSTALL_VERIFICATION.md\n",
+    "stderr": ""
+  },
+  {
+    "time": "2026-10-20T14:25:29.369256+00:00",
+    "command": [
+      "git",
+      "diff",
+      "--cached",
+      "--check",
+      "--",
+      "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "03_BUILD_METHODOLOGY/_templates/QAM/README.md",
+      "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+      "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+      "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+      "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+      "MANIFEST.md",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/APPLIED_TRANSITIONS.json",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/APPLY_COMMANDS.json",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/ARCHITECT_ACTIVATION_INSTRUCTION.md",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/ARCHITECT_CLEANUP_ACCEPTANCE.md",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/BASELINE_101.json",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/BASELINE_TRACKED.json",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/ENGINEERING_CLOSEOUT_REPORT.md",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/ENGINEERING_VERIFICATION.json",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/EXECUTION_PLAN.md",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/LINT_RESULTS.txt",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/METADATA_HISTORY.json",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/PREFLIGHT.json",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/PREFLIGHT_COMMANDS.json",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/PRE_APPLICATION_DECISION_RECEIPT.json",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/PROTECTED_BASELINE_PATHS.json",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/REMOTE_PREFLIGHT.json",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/RUN_REPORT_ADDENDA.json",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/SUCCESSOR_101.json",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/TEMPLATE_BEFORE_AFTER.json",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/UNCHANGED_92.json",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/VERIFICATION_COMMANDS.json",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/VERIFY_COMMAND.json",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/VERIFY_COMMAND_INITIAL.json",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/VERIFY_COMMAND_SVG_DISCOVERY.json",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/WORKFLOW_PRESERVATION.json",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/apply_closeout.py",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/preflight.py",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/verify_closeout.py",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/RUN_SUMMARY.md",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/TEMPLATE_INSTALL_VERIFICATION.md",
+      "_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/PUBLICATION_SCOPE.json"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "time": "2026-10-20T14:25:29.621465+00:00",
+    "command": [
+      "git",
+      "commit",
+      "-m",
+      "docs(sync): activate 12 approved closeout transitions on nine paths"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "[docs/sync-doctrine-part2-2026-10-15 4c54292] docs(sync): activate 12 approved closeout transitions on nine paths\n 43 files changed, 18787 insertions(+), 12 deletions(-)\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/ACTUAL_CANONICAL.diff\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/APPLIED_TRANSITIONS.json\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/APPLY_COMMANDS.json\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/ARCHITECT_ACTIVATION_INSTRUCTION.md\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/ARCHITECT_CLEANUP_ACCEPTANCE.md\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/BASELINE_101.json\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/BASELINE_TRACKED.json\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/ENGINEERING_CLOSEOUT_REPORT.md\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/ENGINEERING_VERIFICATION.json\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/EXECUTION_PLAN.md\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/INPUTS/RUN_SUMMARY.md\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/INPUTS/TEMPLATE_INSTALL_VERIFICATION.md\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/LINT_RESULTS.txt\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/METADATA_HISTORY.json\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/PREFLIGHT.json\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/PREFLIGHT_COMMANDS.json\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/PRE_APPLICATION_DECISION_RECEIPT.json\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/PROTECTED_BASELINE_PATHS.json\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/PUBLICATION_SCOPE.json\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/REMOTE_PREFLIGHT.json\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/RUN_REPORT_ADDENDA.json\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/SUCCESSOR_101.json\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/TEMPLATE_BEFORE_AFTER.json\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/UNCHANGED_92.json\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/VERIFICATION_COMMANDS.json\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/VERIFY_COMMAND.json\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/VERIFY_COMMAND_INITIAL.json\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/VERIFY_COMMAND_SVG_DISCOVERY.json\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/WORKFLOW_PRESERVATION.json\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/apply_closeout.py\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/preflight.py\n create mode 100644 _AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/verify_closeout.py\n",
+    "stderr": ""
+  },
+  {
+    "time": "2026-10-20T14:25:29.625012+00:00",
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "4c542922d57ca3b2acf4391082a37383744ea192\n",
+    "stderr": ""
+  },
+  {
+    "time": "2026-10-20T14:25:29.628841+00:00",
+    "command": [
+      "git",
+      "rev-parse",
+      "HEAD^"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "dc3b288246ea931962e889e9a88718c0daaf9c37\n",
+    "stderr": ""
+  },
+  {
+    "time": "2026-10-20T14:25:29.633749+00:00",
+    "command": [
+      "git",
+      "diff-tree",
+      "--no-commit-id",
+      "--name-only",
+      "-r",
+      "HEAD"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md\n03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md\n03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md\n03_BUILD_METHODOLOGY/_templates/QAM/README.md\n03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md\n03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md\n03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md\n03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md\nMANIFEST.md\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/ACTUAL_CANONICAL.diff\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/APPLIED_TRANSITIONS.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/APPLY_COMMANDS.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/ARCHITECT_ACTIVATION_INSTRUCTION.md\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/ARCHITECT_CLEANUP_ACCEPTANCE.md\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/BASELINE_101.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/BASELINE_TRACKED.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/ENGINEERING_CLOSEOUT_REPORT.md\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/ENGINEERING_VERIFICATION.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/EXECUTION_PLAN.md\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/INPUTS/RUN_SUMMARY.md\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/INPUTS/TEMPLATE_INSTALL_VERIFICATION.md\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/LINT_RESULTS.txt\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/METADATA_HISTORY.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/PREFLIGHT.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/PREFLIGHT_COMMANDS.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/PRE_APPLICATION_DECISION_RECEIPT.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/PROTECTED_BASELINE_PATHS.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/PUBLICATION_SCOPE.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/REMOTE_PREFLIGHT.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/RUN_REPORT_ADDENDA.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/SUCCESSOR_101.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/TEMPLATE_BEFORE_AFTER.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/UNCHANGED_92.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/VERIFICATION_COMMANDS.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/VERIFY_COMMAND.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/VERIFY_COMMAND_INITIAL.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/VERIFY_COMMAND_SVG_DISCOVERY.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/WORKFLOW_PRESERVATION.json\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/apply_closeout.py\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/preflight.py\n_AUDIT/SYNC_2026-10-15_doctrine-part2/CLOSEOUT_EXECUTION/verify_closeout.py\n_AUDIT/SYNC_2026-10-15_doctrine-part2/RUN_SUMMARY.md\n_AUDIT/SYNC_2026-10-15_doctrine-part2/TEMPLATE_INSTALL_VERIFICATION.md\n",
+    "stderr": ""
+  },
+  {
+    "time": "2026-10-20T14:25:29.649972+00:00",
+    "command": [
+      "git",
+      "status",
+      "--porcelain"
+    ],
+    "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

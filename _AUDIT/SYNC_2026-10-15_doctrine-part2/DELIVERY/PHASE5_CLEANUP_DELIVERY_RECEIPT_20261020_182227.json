@@ -1,0 +1,14 @@
+{
+  "zip_name": "FACTORY_PHASE5_CLEANUP_CLOSEOUT_REVIEW_2026-10-20_182141.zip",
+  "staged_path": "/tmp/FACTORY_PHASE5_CLEANUP_CLOSEOUT_REVIEW_2026-10-20_182141.zip",
+  "destination": "/home/moose/Downloads/FACTORY_PHASE5_CLEANUP_CLOSEOUT_REVIEW_2026-10-20_182141.zip",
+  "sha256": "dc9544c097af7fb990153e664e95f9659c48f635bb17bc2c6db6f06aaa0fd7bd",
+  "bytes": 35761604,
+  "members": 1830,
+  "verified_inventory_members": 1829,
+  "branch_head": "dc3b288246ea931962e889e9a88718c0daaf9c37",
+  "patch_sha256": "127230024105899fb67b8172212d96a574dc0d9fefedf82a9f26f365f3d4fa3e",
+  "index_sha256": "d46ed5ae0f70c7ad1ea1b55a4df9fae67c2e97a53dbf8c559593e9635f651e0c",
+  "delivered_and_sha256_verified": true,
+  "final_execution_worktree_clean": true
+}

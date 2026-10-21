@@ -1,0 +1,13 @@
+{
+  "time": "2026-10-21T02:11:52.475589+00:00",
+  "command": [
+    "git",
+    "ls-remote",
+    "--heads",
+    "origin"
+  ],
+  "cwd": "/home/moose/Documents/app-factory-docs-sync-execution",
+  "exit": 0,
+  "stdout": "677e0e448576941571e619cd30c59cdd534cac3a\trefs/heads/astra-factory-doc-review\nc69be638aca3bf3ec7610788e867c8428b3ec874\trefs/heads/docs/sync-doctrine-part2-2026-10-15\n626da8d70f4db22987dc7fcc86765492072360cd\trefs/heads/factory-docs-review-astra-w-chunks\n39a1c6114d72b22d3550d7ff65234ec0f01418f6\trefs/heads/factory-docs-review-fable-001\nbd4a8aa8d14af4049f4ad7dc93ae1d872a60607e\trefs/heads/factory-docs-sync-process-001\n9c179392f79b70da099121fc357d3107ad3bb86e\trefs/heads/main\n99bea67fd66854decbc2a1e51256793b5d9e6042\trefs/heads/test/docset-sync-v06-tiny-001\n588079dd61cc1c4d0fc153e165d4e23025f2a595\trefs/heads/test/docset-sync-v07-large-001\nefe36c8d468fdd7ee1a46970c3026bb6938bac64\trefs/heads/test/docset-sync-v07-recovery-001\n",
+  "stderr": ""
+}

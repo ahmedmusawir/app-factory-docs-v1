@@ -1,0 +1,16 @@
+{
+  "publish_durable_files": 88,
+  "missing_run_receipts": 21,
+  "operator_records": 67,
+  "already_retained_review_files": 1729,
+  "kept_local_unique_files": 17,
+  "local_status_dispositions": {
+    "KEEP_LOCAL": 10,
+    "PUBLISH": 50,
+    "ALREADY_PUBLISHED": 1095
+  },
+  "local_only_commits": 1,
+  "staged_before": 0,
+  "review_canonical_old_differences": 33,
+  "new_unpublished_canonical_changes": 0
+}

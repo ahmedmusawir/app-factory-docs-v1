@@ -1,0 +1,233 @@
+[
+  {
+    "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+    "review_sha256": "9b732116c6030aee4d6ae0b792272bc372dd647ef95dea522c2bf7949934af93",
+    "accepted_sha256": "c54a379e52318081c9ce89c2a253c65e16d8838079d7d2bcfef90939d42df54b",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+    "review_sha256": "dd9b355bed9b263756a9622205cc30b4b06dad2a08397b7fb55d7e5bb2a7260e",
+    "accepted_sha256": "e9b2b24cbd734b846ccf5215e235474f1aa097bd8be01d7f2d360094a59ee6d9",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+    "review_sha256": "396e325b4ac28b02c145fcad6181a99abb4f8345b87278d96f1aef2bbefb7efb",
+    "accepted_sha256": "e1613573a8d56073033a96ee803968feff1ab5f18e82ab3c329e64dd920c6bb1",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+    "review_sha256": "b0754979e3b24cb79234265fe146f39f03718e608a60153a702a518f34979af4",
+    "accepted_sha256": "7e2ceb6f882e1eafaa60759b163c541eaafa932fb28e0fcab08345f985c18d45",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md",
+    "review_sha256": "aa487360f420c1a2e0a48b097eaa2ebc905ebb659bcdc67ae72ce8d6a80f2bfd",
+    "accepted_sha256": "0baaaf1d3b4a32cc2d2b3977608974be7918c4142d2b707d00c66289bd838bcb",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+    "review_sha256": "426eb0e7a3da1b31de8efe4ca68550d4b351d6f378b061f0c0de1ab6fbd632ae",
+    "accepted_sha256": "c5fc80000e293fbfba59a559c81a24fcfcfb42e935b06c438bee561ae6f28d4e",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+    "review_sha256": "8d73c37a42624fa2c60729d8d2648fc96f72305a732fd5e74460cf0a614f861c",
+    "accepted_sha256": "dcf2c4fa69c9b173c64e4b6c4113cfbe10e0c02e3dba44da2198ea0310714b64",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+    "review_sha256": "6a2f4706542395360248dd42e17cbf9fc49f0886c844aa1e0e5315a047892c4f",
+    "accepted_sha256": "20fa7ca7125510570a3508c0e74b21966e41f717fe65f5070a883e1d97def08f",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+    "review_sha256": "974f09e3118e94288beeb3dce919bea32a1571f294a59da6fd0041ee615968db",
+    "accepted_sha256": "3fab83a09b26afd82038676c15654b758243b107023310dc2f3a5317f0d87b4c",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md",
+    "review_sha256": "d93f3d5d81d5add6638fee9c71eecc370fd86f07ad1ac47f7021d6415a446113",
+    "accepted_sha256": "1b7b7438738eaefbf201f8662c323e13b51208e965f565456e17c8f1653343c4",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+    "review_sha256": "363619932b39fd7c8b4bafa9f270f814aa1af4aa98159dbfecb28c7f920e4f3b",
+    "accepted_sha256": "18590bd643bd8e4b5b7c54de2ba1fb680faac217b9bea136e576576207496639",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+    "review_sha256": "3ca537dec3958cabb0159a5243b7fe3f76c10e46ebcaa4ba04d258dcd5d1a871",
+    "accepted_sha256": "c7ddc8427e9469bae4a0c3476fc4ecad512ef2a45db09eec7ce2c17e84567a5d",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md",
+    "review_sha256": "5d70fa061bde72d49507f64b0113daab2646952867c63b8a499ea2feab3ed66f",
+    "accepted_sha256": "68876ff845a6ead4977444426ab53cf0862c411469b8489fefc4c2a716a4312a",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+    "review_sha256": "7be561380ea1568d7df61734b6f1a5b12263194cca3ce469a5731e3bd32eafa0",
+    "accepted_sha256": "37bac1c70b0afcee66e6f298c518f08566a292435617da28291040016ca89312",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+    "review_sha256": "362609b6551bd585c5f3c57ce5b751285871335d154ad2a8c97ca62b28a20702",
+    "accepted_sha256": "0e492b78185ecc152bf50e4cc603329d8328efc565aaa92fc0accbc2fb8f16f2",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+    "review_sha256": "2516dcbd50f525328db955592c6c14eafa971c02d4dec722130a87505248a422",
+    "accepted_sha256": "6f423ba687dae1e6de472d3840ccda4226f175ef8398d4e47451934c964af202",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+    "review_sha256": "b6c70f14af18bb187ca7980954317af486e43b682821245d9911f2160d5198a5",
+    "accepted_sha256": "4c460b040b09782497069b69409381523fbf3bea56897febecb6c51f9458d458",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+    "review_sha256": "5dfc2d198d51eebd4c0b136eeafc50cc2f64dafe44b7bbd153b801f4849692ad",
+    "accepted_sha256": "5b736786a6f6cdced703281cfada79af6c5b1c4f959f4b75615ca3a0c93971f7",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+    "review_sha256": "64794a5d33dbd7fdd473975d5ff7c02f49fe433c8f63c780b059d77ead55a4b3",
+    "accepted_sha256": "0070295f53b3e924d58b473e885072f902f45373530fa91def6667ca220ef80c",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+    "review_sha256": "ca1dc1f0a8ce578523a46a3262f2f1d09a63cb6e8f2517157d940c0febfb3134",
+    "accepted_sha256": "f178d51346c252baf75a3e0d6c558da411986e74b634ac64b4fa9fe6b2d50291",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+    "review_sha256": "6b81073fe81727d4a4a48d1a0e4c43098f3ce70fafbcc3a7a6c660e661276850",
+    "accepted_sha256": "3e028ece38102a7d3d9bf375afb1acb3766a1a28743626aea0b54ba9ce2503f3",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+    "review_sha256": "326802ad938bb6b5b9f1b73c74ebee811789185789ef003e907101a0db4a0cf8",
+    "accepted_sha256": "1eee0154b965948156b8ef169beb10985e668819ddbce833f6c4d3f432a84771",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+    "review_sha256": "d72816173e6a188282718174cbcd8cc4693f9f944858d96fe0bb092edb728f38",
+    "accepted_sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+    "review_sha256": "2a281857fe0a03d9066ac171e725ca50e42944df204b4eceaebba152b61af196",
+    "accepted_sha256": "4dc5566589696045c1ae835bf315cfa68db5d30bca78ff9db137efb064cb666b",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+    "review_sha256": "ec5a467ffd31ca8a1200f230b5a4ca4e104148bedaa83d3a4780f8e23f9a3e03",
+    "accepted_sha256": "01633da70da2d4cb863a2c883c1c2e7194abd602cf422fbb1bb52ae2b2ac43ab",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+    "review_sha256": "4b7d5b7c39fa50838ea536d07a9f4086d3802613a8ee86dd986f09553b28767b",
+    "accepted_sha256": "b5688cb6f8a6b0aae9dbe3db24aa8457571e2f0d6099801ccc9e3f11f49c59c9",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+    "review_sha256": "f2dc74390a16836c3213f77652451085680046786d5499b43b1e8a6a6774c8ac",
+    "accepted_sha256": "2b5da310aa196164cb0d07654d6df73c15f3ac23c67c416da3036ea148f1d491",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/THEME_LIBRARY.md",
+    "review_sha256": "480c7bdbc648e2fb7b97a6b120bfa36de35246cbdf3fd163e43aa0a2968ff73e",
+    "accepted_sha256": "4063fe5f3dacfb7df9bf433b7073e2a5b608ced12a7944eabecc9087bcf261ce",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+    "review_sha256": "3c71a3a959df8393b4f6810a8122a94895fced02d658d3b512ee5f30784091b1",
+    "accepted_sha256": "8d36ff89202b0a1d692252c7d46c8da709cf317438d007b2564340bf47fe62ab",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/TOKEN_FILE.md",
+    "review_sha256": "066e0e60a49714adb062bc2983b1d5a82bc69f0c73794bac44292f6851dc88b5",
+    "accepted_sha256": "2fc5eff41dd6320550c21bfda7cc6e33f7b5be7339fe9e5a280b67dc0475922a",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+    "review_sha256": "8b9a6f647a8999ce35db4dd20df3db058ec7c64a47c4b3ab8051195f97d9d544",
+    "accepted_sha256": "2b7f9f8d5b89a43bb63edbb54950bf6dcbee7e67549d6019b1dada5c51d493b4",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "CHANGELOG.md",
+    "review_sha256": "e5626e8cd956b135b7cb853088b4d9238dd84b4f106cf99737f7d72679fbc06d",
+    "accepted_sha256": "4c655c1dd23b4f64cdc7d33f93b67c500a2f144ab46f8f013821a7c444f7b006",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  },
+  {
+    "path": "MANIFEST.md",
+    "review_sha256": "58275efb3d1e1a7999ca4d511f523f985cfec3db53e498103069582b2b632ff6",
+    "accepted_sha256": "2538dc3b3bd0772b65964de2ef217690b30d779cc976ef45b44520218259ebc8",
+    "local_dirty": false,
+    "in_unpublished_commit": false
+  }
+]
