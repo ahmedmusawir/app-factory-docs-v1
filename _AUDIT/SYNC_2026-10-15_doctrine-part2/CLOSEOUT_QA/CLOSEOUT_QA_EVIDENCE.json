@@ -1,0 +1,1504 @@
+{
+ "candidate": "4c542922d57ca3b2acf4391082a37383744ea192",
+ "parent": "dc3b288246ea931962e889e9a88718c0daaf9c37",
+ "generated": "2026-10-20T14:48:26.180500+00:00",
+ "checks": [
+  {
+   "id": "G1",
+   "title": "Local HEAD and remote branch both equal candidate; one non-merge parent dc3b288",
+   "result": "PASS",
+   "detail": {
+    "head": "4c542922d57ca3b2acf4391082a37383744ea192",
+    "branch": "docs/sync-doctrine-part2-2026-10-15",
+    "remote_branch": "4c542922d57ca3b2acf4391082a37383744ea192",
+    "parents": [
+     "dc3b288246ea931962e889e9a88718c0daaf9c37"
+    ]
+   }
+  },
+  {
+   "id": "G2",
+   "title": "Execution tree clean (before QA records are added); main unchanged locally and on remote",
+   "result": "PASS",
+   "detail": {
+    "status_porcelain_lines": 0,
+    "remote_main": "9c179392f79b70da099121fc357d3107ad3bb86e",
+    "local_main": "9c179392f79b70da099121fc357d3107ad3bb86e"
+   }
+  },
+  {
+   "id": "G3",
+   "title": "Certified product commit 26b050f is an ancestor of parent dc3b288",
+   "result": "PASS",
+   "detail": {
+    "ancestor": true,
+    "commit_time_utc": "2026-10-20T14:25:29+00:00",
+    "subject": "docs(sync): activate 12 approved closeout transitions on nine paths"
+   }
+  },
+  {
+   "id": "A1",
+   "title": "Approved patch/index and both Architect decision records: package == candidate commit == recorded hashes; patch/index already present in parent",
+   "result": "PASS",
+   "detail": {
+    "package": {
+     "CLOSEOUT.patch": "127230024105899fb67b8172212d96a574dc0d9fefedf82a9f26f365f3d4fa3e",
+     "CLOSEOUT_SUCCESSOR_INDEX.json": "d46ed5ae0f70c7ad1ea1b55a4df9fae67c2e97a53dbf8c559593e9635f651e0c",
+     "ARCHITECT_CLEANUP_ACCEPTANCE.md": "e2a772f7e37eef19ca3f9521d27ba0b85babeec4f96991357cc87973644bce68",
+     "ARCHITECT_ACTIVATION_INSTRUCTION.md": "3d19b1d439ea460dbec1795aa124207a9d2dfd3bfe79159390199008075de567"
+    },
+    "candidate": {
+     "CLOSEOUT.patch": "127230024105899fb67b8172212d96a574dc0d9fefedf82a9f26f365f3d4fa3e",
+     "CLOSEOUT_SUCCESSOR_INDEX.json": "d46ed5ae0f70c7ad1ea1b55a4df9fae67c2e97a53dbf8c559593e9635f651e0c",
+     "ARCHITECT_CLEANUP_ACCEPTANCE.md": "e2a772f7e37eef19ca3f9521d27ba0b85babeec4f96991357cc87973644bce68",
+     "ARCHITECT_ACTIVATION_INSTRUCTION.md": "3d19b1d439ea460dbec1795aa124207a9d2dfd3bfe79159390199008075de567"
+    },
+    "parent_patch": "127230024105899fb67b8172212d96a574dc0d9fefedf82a9f26f365f3d4fa3e",
+    "parent_index": "d46ed5ae0f70c7ad1ea1b55a4df9fae67c2e97a53dbf8c559593e9635f651e0c"
+   }
+  },
+  {
+   "id": "A2",
+   "title": "Chronology: decision records → pre-application receipt → git apply → commit; activation instruction names exactly the nine paths and both approved identities",
+   "result": "PASS",
+   "detail": {
+    "decisions_recorded": "2026-10-20T14:22:37.937545+00:00",
+    "pre_application_receipt": "2026-10-20T14:22:58.121415+00:00",
+    "git_apply": "2026-10-20T14:22:58.133700+00:00",
+    "commit_utc": "2026-10-20T14:25:29+00:00",
+    "activation_paths": [
+     "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+     "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+     "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+     "03_BUILD_METHODOLOGY/_templates/QAM/README.md",
+     "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+     "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+     "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+     "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+     "MANIFEST.md"
+    ]
+   }
+  },
+  {
+   "id": "A3",
+   "title": "Product verdict (QA_LEAD_VERDICT_V3.md) present in parent and candidate, byte-identical; predates closeout commit by ancestry",
+   "result": "PASS",
+   "detail": {
+    "verdict_sha256": "1d6793da6666bb7b41cf6a6eba1c3d07e2f47bef0b9e274234e34897e564f2a3"
+   }
+  },
+  {
+   "id": "AC32a",
+   "title": "Diff parent→candidate: exactly nine canonical paths (M), 32 additive CLOSEOUT_EXECUTION records (A), two append-only run reports (M), nothing else, no deletions",
+   "result": "PASS",
+   "detail": {
+    "total": 43,
+    "canonical": [
+     "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+     "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+     "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+     "03_BUILD_METHODOLOGY/_templates/QAM/README.md",
+     "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+     "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+     "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+     "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+     "MANIFEST.md"
+    ],
+    "records_added": 32,
+    "reports_append_only": true,
+    "unexpected": []
+   }
+  },
+  {
+   "id": "AC32b",
+   "title": "All 101 candidate blobs match the approved successor index (and the installed worktree); 92 unchanged vs parent; the 9 changed are exactly the canonical nine",
+   "result": "PASS",
+   "detail": {
+    "total": 101,
+    "unchanged": 92,
+    "changed": [
+     "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+     "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+     "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+     "03_BUILD_METHODOLOGY/_templates/QAM/README.md",
+     "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+     "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+     "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+     "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+     "MANIFEST.md"
+    ],
+    "mismatches": []
+   }
+  },
+  {
+   "id": "AC32c",
+   "title": "Protected trees identical parent↔candidate: all QA evidence, frozen spec R1, certified review, AMENDED_V3, PHASE5_CLEANUP, _ARCHIVE, 10x Lab, lints, .github, SVG assets, intake workflow originals",
+   "result": "PASS",
+   "detail": {
+    "trees": {
+     "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_PHASE4": {
+      "files": 870,
+      "identical": true
+     },
+     "_AUDIT/SYNC_2026-10-15_doctrine-part2/QA_RETEST_AF01": {
+      "files": 17,
+      "identical": true
+     },
+     "_AUDIT/SYNC_2026-10-15_doctrine-part2/CERTIFIED_REVIEW": {
+      "files": 2,
+      "identical": true
+     },
+     "_AUDIT/SYNC_2026-10-15_doctrine-part2/AMENDED_V3": {
+      "files": 35,
+      "identical": true
+     },
+     "_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE5_CLEANUP": {
+      "files": 46,
+      "identical": true
+     },
+     "_ARCHIVE": {
+      "files": 40,
+      "identical": true
+     },
+     "10x Lab": {
+      "files": 2,
+      "identical": true
+     },
+     "lints": {
+      "files": 8,
+      "identical": true
+     },
+     ".github": {
+      "files": 1,
+      "identical": true
+     },
+     "03_BUILD_METHODOLOGY/_assets": {
+      "files": 4,
+      "identical": true
+     },
+     "_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow": {
+      "files": 11,
+      "identical": true
+     }
+    },
+    "spec_r1_sha256": "2a3867cacef11c6bb0419a4c71229479efe703cee9fbcc1e4f71c0ac8e63f0fc"
+   }
+  },
+  {
+   "id": "AC33",
+   "title": "Replay of all 12 exact old→new spans (BOUND_STATUS_TRANSITIONS.json) on parent bytes reproduces candidate bytes for all nine paths; old absent / new present in candidate",
+   "result": "PASS",
+   "detail": {
+    "transitions": 12,
+    "paths": 9,
+    "per_path": {
+     "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md": 1,
+     "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md": 2,
+     "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md": 1,
+     "03_BUILD_METHODOLOGY/_templates/QAM/README.md": 1,
+     "MANIFEST.md": 3,
+     "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md": 1,
+     "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md": 1,
+     "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md": 1,
+     "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md": 1
+    }
+   }
+  },
+  {
+   "id": "AC33b",
+   "title": "Actual canonical diff (+/- lines) equals the approved CLOSEOUT.patch (+/- lines)",
+   "result": "PASS",
+   "detail": {
+    "diff_lines": 24,
+    "patch_lines": 24
+   }
+  },
+  {
+   "id": "AC25",
+   "title": "Three activated playbook headers read 'Active' and the matching MANIFEST rows say so; MANIFEST differs from parent in exactly three rows, same line count (count/reverse map/appendix untouched)",
+   "result": "PASS",
+   "detail": {
+    "headers": {
+     "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md": "Active",
+     "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md": "Active",
+     "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md": "Active"
+    },
+    "manifest_changed_rows": [
+     {
+      "line": 42,
+      "old": "| DEPLOYMENT_PLAYBOOK | 1.0 | 2026-10-18 | DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED (sections marked OPEN are not doctrine until ruled) | Common identity, exclusion, verification and recovery; context-specific permissions retained | APP_FACTORY_SKILLS_PLAYBOOK, BIM_PLAYBOOK, FFM_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, RECON_QUESTIONNAIRE, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK |",
+      "new": "| DEPLOYMENT_PLAYBOOK | 1.0 | 2026-10-18 | Active (sections marked OPEN are not doctrine until ruled) | Common identity, exclusion, verification and recovery; context-specific permissions retained | APP_FACTORY_SKILLS_PLAYBOOK, BIM_PLAYBOOK, FFM_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, RECON_QUESTIONNAIRE, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK |"
+     },
+     {
+      "line": 47,
+      "old": "| QAM_PLAYBOOK | 1.0 | 2026-10-18 | DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED | Mandatory module QAM and accepted _templates/QAM set | ARCHITECT_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QA_PLAYBOOK, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |",
+      "new": "| QAM_PLAYBOOK | 1.0 | 2026-10-18 | Active | Mandatory module QAM and accepted _templates/QAM set | ARCHITECT_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QA_PLAYBOOK, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |"
+     },
+     {
+      "line": 49,
+      "old": "| RRM_PLAYBOOK | 1.0 | 2026-10-18 | DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED | Approved review repairs with QAM; post-FFM and Engine 2 checkpoints | ARCHITECT_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |",
+      "new": "| RRM_PLAYBOOK | 1.0 | 2026-10-18 | Active | Approved review repairs with QAM; post-FFM and Engine 2 checkpoints | ARCHITECT_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |"
+     }
+    ],
+    "manifest_lines": 146
+   }
+  },
+  {
+   "id": "AC27",
+   "title": "Versions, landing date 2026-10-18 and Version History sections identical parent↔candidate for all nine paths; canonical CHANGELOG.md byte-identical (no blanket row added)",
+   "result": "PASS",
+   "detail": {
+    "rows": [
+     {
+      "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+      "version_date": [
+       "**Version:** 1.0 ",
+       "**Date:** 2026-10-18 "
+      ],
+      "history_sha256": "e1748733521f33cc9cdc93c9b69796f120cbff1255e38fe4b0557123d6b9e5e1",
+      "ok": true
+     },
+     {
+      "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+      "version_date": [
+       "**Version:** 1.0 ",
+       "**Date:** 2026-10-18 "
+      ],
+      "history_sha256": "3fa9d225d44b52b2d7263ecc26be03fca88b2d5c304b640c4d5389fb11ec4ce2",
+      "ok": true
+     },
+     {
+      "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+      "version_date": [
+       "**Version:** 1.0 ",
+       "**Date:** 2026-10-18 "
+      ],
+      "history_sha256": "03148ef04be709ee6c30e0340e4eebb2df42001ffa1d233001c937e3d33648af",
+      "ok": true
+     },
+     {
+      "path": "03_BUILD_METHODOLOGY/_templates/QAM/README.md",
+      "version_date": [],
+      "history_sha256": null,
+      "ok": true
+     },
+     {
+      "path": "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+      "version_date": [
+       "**Version:** 1.0 ",
+       "**Date:** 2026-10-18 "
+      ],
+      "history_sha256": "af8dfd9a7e4616a111630c8be202604560c5259c20bd6b18da34001616657b00",
+      "ok": true
+     },
+     {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+      "version_date": [
+       "**Version:** 1.0 ",
+       "**Date:** 2026-10-18 "
+      ],
+      "history_sha256": "af8dfd9a7e4616a111630c8be202604560c5259c20bd6b18da34001616657b00",
+      "ok": true
+     },
+     {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+      "version_date": [
+       "**Version:** 1.0 ",
+       "**Date:** 2026-10-18 "
+      ],
+      "history_sha256": "af8dfd9a7e4616a111630c8be202604560c5259c20bd6b18da34001616657b00",
+      "ok": true
+     },
+     {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+      "version_date": [
+       "**Version:** 1.0 ",
+       "**Date:** 2026-10-18 "
+      ],
+      "history_sha256": "af8dfd9a7e4616a111630c8be202604560c5259c20bd6b18da34001616657b00",
+      "ok": true
+     },
+     {
+      "path": "MANIFEST.md",
+      "version_date": [
+       "**Version:** 1.0 ",
+       "**Date:** 2026-10-18 "
+      ],
+      "history_sha256": null,
+      "ok": true
+     }
+    ],
+    "changelog_sha256": "4c655c1dd23b4f64cdc7d33f93b67c500a2f144ab46f8f013821a7c444f7b006"
+   }
+  },
+  {
+   "id": "AC31",
+   "title": "Unchanged four-lint suite passes on fresh candidate export (exit 0, RESULT: PASS); lints/ and .github/ byte-identical to parent",
+   "result": "PASS",
+   "detail": {
+    "command": "python3 -B -I lints/run_all.py",
+    "cwd": "<fresh git archive of 4c54292>",
+    "exit": 0,
+    "stdout": "[ENCODING] PASS — 0 hits across 36 live docs\n[RETIRED-TERMS] PASS — 0 hits across 36 live docs\n[VERSIONED-REFS] PASS — 0 hits across 36 live docs (34 canonical names loaded)\n[HEADER-PRESENCE] PASS — all 36 live docs carry the standard header\n=== DOCTRINE LINTS ===\n\n--- encoding_lint.py ---\n\n--- retired_terms_lint.py ---\n\n--- versioned_refs_lint.py ---\n\n--- header_lint.py ---\n\n=== RESULT: PASS ===\n",
+    "stderr": ""
+   }
+  },
+  {
+   "id": "T1",
+   "title": "All 25 templates: pinned intake source hash matches; source+approved translation replays to parent-installed bytes; candidate bytes identical except README, which equals parent + its bound provenance span only",
+   "result": "PASS",
+   "detail": {
+    "count": 25,
+    "rows": [
+     {
+      "destination": "03_BUILD_METHODOLOGY/_templates/QAM/AC_EVIDENCE_MATRIX.md",
+      "source_ok": true,
+      "translation_replay_sha256": "bf9685c13d650a109ea0f40d44ed0f813fea31e7fdcb67e0aa8b518ee194cb3a",
+      "parent_installed": "bf9685c13d650a109ea0f40d44ed0f813fea31e7fdcb67e0aa8b518ee194cb3a",
+      "candidate_installed": "bf9685c13d650a109ea0f40d44ed0f813fea31e7fdcb67e0aa8b518ee194cb3a",
+      "readme_allowance": false,
+      "ok": true
+     },
+     {
+      "destination": "03_BUILD_METHODOLOGY/_templates/QAM/AGENTS.md",
+      "source_ok": true,
+      "translation_replay_sha256": "b3415998cf417ea79551d8b4d31b92ff83df1becaf644ad1be499ce9ff0ef03f",
+      "parent_installed": "b3415998cf417ea79551d8b4d31b92ff83df1becaf644ad1be499ce9ff0ef03f",
+      "candidate_installed": "b3415998cf417ea79551d8b4d31b92ff83df1becaf644ad1be499ce9ff0ef03f",
+      "readme_allowance": false,
+      "ok": true
+     },
+     {
+      "destination": "03_BUILD_METHODOLOGY/_templates/QAM/AUTOMATION/README.md",
+      "source_ok": true,
+      "translation_replay_sha256": "c9a4f3a0a8d45077cc5cfbee8a93590cd4c9b08c33e8c6757419d537610bbfcb",
+      "parent_installed": "c9a4f3a0a8d45077cc5cfbee8a93590cd4c9b08c33e8c6757419d537610bbfcb",
+      "candidate_installed": "c9a4f3a0a8d45077cc5cfbee8a93590cd4c9b08c33e8c6757419d537610bbfcb",
+      "readme_allowance": false,
+      "ok": true
+     },
+     {
+      "destination": "03_BUILD_METHODOLOGY/_templates/QAM/CLAUDE.md",
+      "source_ok": true,
+      "translation_replay_sha256": "79a674620466b01d0a5f2b82f85658177e05f91d689072f1f5a1d1f101e43d2a",
+      "parent_installed": "79a674620466b01d0a5f2b82f85658177e05f91d689072f1f5a1d1f101e43d2a",
+      "candidate_installed": "79a674620466b01d0a5f2b82f85658177e05f91d689072f1f5a1d1f101e43d2a",
+      "readme_allowance": false,
+      "ok": true
+     },
+     {
+      "destination": "03_BUILD_METHODOLOGY/_templates/QAM/FINDINGS.md",
+      "source_ok": true,
+      "translation_replay_sha256": "e0b10749d2b05183253af6a486b01f92146c58ca3a8c618a73beec584ba46f75",
+      "parent_installed": "e0b10749d2b05183253af6a486b01f92146c58ca3a8c618a73beec584ba46f75",
+      "candidate_installed": "e0b10749d2b05183253af6a486b01f92146c58ca3a8c618a73beec584ba46f75",
+      "readme_allowance": false,
+      "ok": true
+     },
+     {
+      "destination": "03_BUILD_METHODOLOGY/_templates/QAM/GOVERNING/README.md",
+      "source_ok": true,
+      "translation_replay_sha256": "b9fc64518dda952a7d4a834a2b4cc9fe3ad82148ade00f4381085968e2dd11f6",
+      "parent_installed": "b9fc64518dda952a7d4a834a2b4cc9fe3ad82148ade00f4381085968e2dd11f6",
+      "candidate_installed": "b9fc64518dda952a7d4a834a2b4cc9fe3ad82148ade00f4381085968e2dd11f6",
+      "readme_allowance": false,
+      "ok": true
+     },
+     {
+      "destination": "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/ENGINEERING_HANDOFF.md",
+      "source_ok": true,
+      "translation_replay_sha256": "5bd7766647aad374634061ca31caa3e2f2facef1b5a516f8f8a18d2720f00677",
+      "parent_installed": "5bd7766647aad374634061ca31caa3e2f2facef1b5a516f8f8a18d2720f00677",
+      "candidate_installed": "5bd7766647aad374634061ca31caa3e2f2facef1b5a516f8f8a18d2720f00677",
+      "readme_allowance": false,
+      "ok": true
+     },
+     {
+      "destination": "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/FILE_INDEX.template.json",
+      "source_ok": true,
+      "translation_replay_sha256": "2620fd114b8d58a7f022631e3dba1d2d8caa2c1b457d596dde15e190460305b8",
+      "parent_installed": "2620fd114b8d58a7f022631e3dba1d2d8caa2c1b457d596dde15e190460305b8",
+      "candidate_installed": "2620fd114b8d58a7f022631e3dba1d2d8caa2c1b457d596dde15e190460305b8",
+      "readme_allowance": false,
+      "ok": true
+     },
+     {
+      "destination": "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/README.md",
+      "source_ok": true,
+      "translation_replay_sha256": "4d0eb7a53bba7d94a032353b9fc0316538058475fb2fc40b6d545a6982b9b0aa",
+      "parent_installed": "4d0eb7a53bba7d94a032353b9fc0316538058475fb2fc40b6d545a6982b9b0aa",
+      "candidate_installed": "4d0eb7a53bba7d94a032353b9fc0316538058475fb2fc40b6d545a6982b9b0aa",
+      "readme_allowance": false,
+      "ok": true
+     },
+     {
+      "destination": "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/REVIEW_START_HERE.md",
+      "source_ok": true,
+      "translation_replay_sha256": "0ffc1c60f9f4de3bdf10a30af6ecb9b95d036190c79056db1cbd3145a732cac1",
+      "parent_installed": "0ffc1c60f9f4de3bdf10a30af6ecb9b95d036190c79056db1cbd3145a732cac1",
+      "candidate_installed": "0ffc1c60f9f4de3bdf10a30af6ecb9b95d036190c79056db1cbd3145a732cac1",
+      "readme_allowance": false,
+      "ok": true
+     },
+     {
+      "destination": "03_BUILD_METHODOLOGY/_templates/QAM/PARENT_ENTRY_ROUTING.md",
+      "source_ok": true,
+      "translation_replay_sha256": "d557319761782cf617ae828a4df81243a9908aa7c033b563d814d2d2fccf3ebe",
+      "parent_installed": "d557319761782cf617ae828a4df81243a9908aa7c033b563d814d2d2fccf3ebe",
+      "candidate_installed": "d557319761782cf617ae828a4df81243a9908aa7c033b563d814d2d2fccf3ebe",
+      "readme_allowance": false,
+      "ok": true
+     },
+     {
+      "destination": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_APPROVAL.md",
+      "source_ok": true,
+      "translation_replay_sha256": "de505b50c3ed901d77bfc0373ff329901447f2044bc2c3524a0164841628674d",
+      "parent_installed": "de505b50c3ed901d77bfc0373ff329901447f2044bc2c3524a0164841628674d",
+      "candidate_installed": "de505b50c3ed901d77bfc0373ff329901447f2044bc2c3524a0164841628674d",
+      "readme_allowance": false,
+      "ok": true
+     },
+     {
+      "destination": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_CERTIFICATION.md",
+      "source_ok": true,
+      "translation_replay_sha256": "7781cf756893b883d58f75c8242e257130fb909625246e9a7b3500c9e83465c6",
+      "parent_installed": "7781cf756893b883d58f75c8242e257130fb909625246e9a7b3500c9e83465c6",
+      "candidate_installed": "7781cf756893b883d58f75c8242e257130fb909625246e9a7b3500c9e83465c6",
+      "readme_allowance": false,
+      "ok": true
+     },
+     {
+      "destination": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_CLEANUP_REPORT.md",
+      "source_ok": true,
+      "translation_replay_sha256": "2e5ac571423d245f48563090662679df82d78fcbc415be90ee71f3a33fc1b830",
+      "parent_installed": "2e5ac571423d245f48563090662679df82d78fcbc415be90ee71f3a33fc1b830",
+      "candidate_installed": "2e5ac571423d245f48563090662679df82d78fcbc415be90ee71f3a33fc1b830",
+      "readme_allowance": false,
+      "ok": true
+     },
+     {
+      "destination": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_ENTRY.md",
+      "source_ok": true,
+      "translation_replay_sha256": "a6b9c6f160d9811bf9d273bb03ea32f63256019b4add8cbdc23f032261fababe",
+      "parent_installed": "a6b9c6f160d9811bf9d273bb03ea32f63256019b4add8cbdc23f032261fababe",
+      "candidate_installed": "a6b9c6f160d9811bf9d273bb03ea32f63256019b4add8cbdc23f032261fababe",
+      "readme_allowance": false,
+      "ok": true
+     },
+     {
+      "destination": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_EXECUTION_REPORT.md",
+      "source_ok": true,
+      "translation_replay_sha256": "24ef00dd53190179498b07e8326e3c87216c9a4e5d70da2aa163f76bb7df076b",
+      "parent_installed": "24ef00dd53190179498b07e8326e3c87216c9a4e5d70da2aa163f76bb7df076b",
+      "candidate_installed": "24ef00dd53190179498b07e8326e3c87216c9a4e5d70da2aa163f76bb7df076b",
+      "readme_allowance": false,
+      "ok": true
+     },
+     {
+      "destination": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_MANIFEST.md",
+      "source_ok": true,
+      "translation_replay_sha256": "9d68426ef53d852b46285ab8f15a5f978811e4fb606e239ccaab97ba21ce6b43",
+      "parent_installed": "9d68426ef53d852b46285ab8f15a5f978811e4fb606e239ccaab97ba21ce6b43",
+      "candidate_installed": "9d68426ef53d852b46285ab8f15a5f978811e4fb606e239ccaab97ba21ce6b43",
+      "readme_allowance": false,
+      "ok": true
+     },
+     {
+      "destination": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_PACKAGING.md",
+      "source_ok": true,
+      "translation_replay_sha256": "be3508938dcc3ea0e2833c5a7f97d7915e2e409204adde9ff69c4941ddd43755",
+      "parent_installed": "be3508938dcc3ea0e2833c5a7f97d7915e2e409204adde9ff69c4941ddd43755",
+      "candidate_installed": "be3508938dcc3ea0e2833c5a7f97d7915e2e409204adde9ff69c4941ddd43755",
+      "readme_allowance": false,
+      "ok": true
+     },
+     {
+      "destination": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_PREFLIGHT.md",
+      "source_ok": true,
+      "translation_replay_sha256": "073a4381f08d0280d83a991e72d3ffd82926fee8c76e2b1fbffe1b0690f6a1b7",
+      "parent_installed": "073a4381f08d0280d83a991e72d3ffd82926fee8c76e2b1fbffe1b0690f6a1b7",
+      "candidate_installed": "073a4381f08d0280d83a991e72d3ffd82926fee8c76e2b1fbffe1b0690f6a1b7",
+      "readme_allowance": false,
+      "ok": true
+     },
+     {
+      "destination": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_RECON_REPORT.md",
+      "source_ok": true,
+      "translation_replay_sha256": "42b313b6a0e811293319f9ae390674e88a957ee87d619554d53323358c167c67",
+      "parent_installed": "42b313b6a0e811293319f9ae390674e88a957ee87d619554d53323358c167c67",
+      "candidate_installed": "42b313b6a0e811293319f9ae390674e88a957ee87d619554d53323358c167c67",
+      "readme_allowance": false,
+      "ok": true
+     },
+     {
+      "destination": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_RISK_REQUIREMENTS.md",
+      "source_ok": true,
+      "translation_replay_sha256": "cc910d528ee2ef9398f06f0259896669544e9ad02ee4623d620b98667e1131f0",
+      "parent_installed": "cc910d528ee2ef9398f06f0259896669544e9ad02ee4623d620b98667e1131f0",
+      "candidate_installed": "cc910d528ee2ef9398f06f0259896669544e9ad02ee4623d620b98667e1131f0",
+      "readme_allowance": false,
+      "ok": true
+     },
+     {
+      "destination": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_STATE.md",
+      "source_ok": true,
+      "translation_replay_sha256": "afc4af6ad54123506bd0b6861ba7a71c9d5dad15e51db1f5bb3704d26a75f62f",
+      "parent_installed": "afc4af6ad54123506bd0b6861ba7a71c9d5dad15e51db1f5bb3704d26a75f62f",
+      "candidate_installed": "afc4af6ad54123506bd0b6861ba7a71c9d5dad15e51db1f5bb3704d26a75f62f",
+      "readme_allowance": false,
+      "ok": true
+     },
+     {
+      "destination": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_TEST_PLAN.md",
+      "source_ok": true,
+      "translation_replay_sha256": "8d3d245926946e99a8cd2cdecc8dda79f47a436c5b3f35ba7ba48886bc23e0e9",
+      "parent_installed": "8d3d245926946e99a8cd2cdecc8dda79f47a436c5b3f35ba7ba48886bc23e0e9",
+      "candidate_installed": "8d3d245926946e99a8cd2cdecc8dda79f47a436c5b3f35ba7ba48886bc23e0e9",
+      "readme_allowance": false,
+      "ok": true
+     },
+     {
+      "destination": "03_BUILD_METHODOLOGY/_templates/QAM/README.md",
+      "source_ok": true,
+      "translation_replay_sha256": "b7462fc84fb6557d08010623a465588b27ee62edbffa2702ea71f2ba4d5a3d91",
+      "parent_installed": "b7462fc84fb6557d08010623a465588b27ee62edbffa2702ea71f2ba4d5a3d91",
+      "candidate_installed": "15fdc40e56000666cca7e02290168e2aed52fc22a73c4a2edefba586011535a2",
+      "readme_allowance": true,
+      "ok": true
+     },
+     {
+      "destination": "03_BUILD_METHODOLOGY/_templates/QAM/evidence/README.md",
+      "source_ok": true,
+      "translation_replay_sha256": "3c033254f64258d116bbbe069d585fa4df653c5ac84b68e03998bdbc675e9aab",
+      "parent_installed": "3c033254f64258d116bbbe069d585fa4df653c5ac84b68e03998bdbc675e9aab",
+      "candidate_installed": "3c033254f64258d116bbbe069d585fa4df653c5ac84b68e03998bdbc675e9aab",
+      "readme_allowance": false,
+      "ok": true
+     }
+    ]
+   }
+  },
+  {
+   "id": "W1",
+   "title": "Four workflow documents differ from parent only in their Status line; bodies, links, checkpoints and routing text identical; SVG and PNG links resolve; four SVGs byte-identical to parent",
+   "result": "PASS",
+   "detail": {
+    "workflows": [
+     {
+      "path": "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+      "changed_lines": [
+       {
+        "line": 3,
+        "old": "> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Proposed — pending verified publication",
+        "new": "> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Active reference"
+       }
+      ],
+      "links": [
+       "../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W04_BIM_WORKFLOW.png",
+       "../_assets/workflows/BIM_WORKFLOW.svg"
+      ],
+      "links_resolve": true,
+      "ok": true
+     },
+     {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+      "changed_lines": [
+       {
+        "line": 3,
+        "old": "> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Proposed — pending verified publication",
+        "new": "> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Active reference"
+       }
+      ],
+      "links": [
+       "../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W01_FFM_CREATION.png",
+       "../_assets/workflows/FFM_CREATION.svg"
+      ],
+      "links_resolve": true,
+      "ok": true
+     },
+     {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+      "changed_lines": [
+       {
+        "line": 3,
+        "old": "> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Proposed — pending verified publication",
+        "new": "> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Active reference"
+       }
+      ],
+      "links": [
+       "../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W03_FFM_DEPLOYMENT.png",
+       "../_assets/workflows/FFM_DEPLOYMENT.svg"
+      ],
+      "links_resolve": true,
+      "ok": true
+     },
+     {
+      "path": "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+      "changed_lines": [
+       {
+        "line": 3,
+        "old": "> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Proposed — pending verified publication",
+        "new": "> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Active reference"
+       }
+      ],
+      "links": [
+       "../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W02_FFM_EXECUTION.png",
+       "../_assets/workflows/FFM_EXECUTION.svg"
+      ],
+      "links_resolve": true,
+      "ok": true
+     }
+    ],
+    "svgs": {
+     "03_BUILD_METHODOLOGY/_assets/workflows/BIM_WORKFLOW.svg": {
+      "candidate": "7cba33aa1a396e4467a09eb80ef912b6e06d2dc06f839c569ffcdf5f87b67ec9",
+      "same_as_parent": true
+     },
+     "03_BUILD_METHODOLOGY/_assets/workflows/FFM_CREATION.svg": {
+      "candidate": "0d7640fc0460f98aaf6a0b0d1acc8bc7866fc94e0ed61099d9d0e59931d3a1f0",
+      "same_as_parent": true
+     },
+     "03_BUILD_METHODOLOGY/_assets/workflows/FFM_DEPLOYMENT.svg": {
+      "candidate": "ce17e51c9e72e24cd4fd961f9812d13242914f9e03fcb238a749b49361cb028e",
+      "same_as_parent": true
+     },
+     "03_BUILD_METHODOLOGY/_assets/workflows/FFM_EXECUTION.svg": {
+      "candidate": "d0ac268ef03f2ab6f4cb80970b2be3d242442af8eeaa3f3518526354df2a915c",
+      "same_as_parent": true
+     }
+    }
+   }
+  }
+ ],
+ "index_101": [
+  {
+   "path": "01_CONSTITUTION/APP_FACTORY_BLUEPRINT.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "c54a379e52318081c9ce89c2a253c65e16d8838079d7d2bcfef90939d42df54b",
+   "parent_sha256": "c54a379e52318081c9ce89c2a253c65e16d8838079d7d2bcfef90939d42df54b",
+   "ok": true
+  },
+  {
+   "path": "01_CONSTITUTION/SOFTWARE_FACTORY_PLAYBOOK.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "e9b2b24cbd734b846ccf5215e235474f1aa097bd8be01d7f2d360094a59ee6d9",
+   "parent_sha256": "e9b2b24cbd734b846ccf5215e235474f1aa097bd8be01d7f2d360094a59ee6d9",
+   "ok": true
+  },
+  {
+   "path": "01_CONSTITUTION/STARTER_KIT_HANDBOOK.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "e1613573a8d56073033a96ee803968feff1ab5f18e82ab3c329e64dd920c6bb1",
+   "parent_sha256": "e1613573a8d56073033a96ee803968feff1ab5f18e82ab3c329e64dd920c6bb1",
+   "ok": true
+  },
+  {
+   "path": "02_PIPELINE_AGENTS/ARCHITECT_PLAYBOOK.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "7e2ceb6f882e1eafaa60759b163c541eaafa932fb28e0fcab08345f985c18d45",
+   "parent_sha256": "7e2ceb6f882e1eafaa60759b163c541eaafa932fb28e0fcab08345f985c18d45",
+   "ok": true
+  },
+  {
+   "path": "02_PIPELINE_AGENTS/ARCHITECT_QUESTIONNAIRE.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "0baaaf1d3b4a32cc2d2b3977608974be7918c4142d2b707d00c66289bd838bcb",
+   "parent_sha256": "0baaaf1d3b4a32cc2d2b3977608974be7918c4142d2b707d00c66289bd838bcb",
+   "ok": true
+  },
+  {
+   "path": "02_PIPELINE_AGENTS/DESIGNER_PLAYBOOK.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "c5fc80000e293fbfba59a559c81a24fcfcfb42e935b06c438bee561ae6f28d4e",
+   "parent_sha256": "c5fc80000e293fbfba59a559c81a24fcfcfb42e935b06c438bee561ae6f28d4e",
+   "ok": true
+  },
+  {
+   "path": "02_PIPELINE_AGENTS/ENGINEER_PLAYBOOK.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "dcf2c4fa69c9b173c64e4b6c4113cfbe10e0c02e3dba44da2198ea0310714b64",
+   "parent_sha256": "dcf2c4fa69c9b173c64e4b6c4113cfbe10e0c02e3dba44da2198ea0310714b64",
+   "ok": true
+  },
+  {
+   "path": "02_PIPELINE_AGENTS/HANDOFF_PACKAGE_PLAYBOOK.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "20fa7ca7125510570a3508c0e74b21966e41f717fe65f5070a883e1d97def08f",
+   "parent_sha256": "20fa7ca7125510570a3508c0e74b21966e41f717fe65f5070a883e1d97def08f",
+   "ok": true
+  },
+  {
+   "path": "02_PIPELINE_AGENTS/RECON_QUESTIONNAIRE.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "3fab83a09b26afd82038676c15654b758243b107023310dc2f3a5317f0d87b4c",
+   "parent_sha256": "3fab83a09b26afd82038676c15654b758243b107023310dc2f3a5317f0d87b4c",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/APP_FACTORY_SKILLS_PLAYBOOK.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "1b7b7438738eaefbf201f8662c323e13b51208e965f565456e17c8f1653343c4",
+   "parent_sha256": "1b7b7438738eaefbf201f8662c323e13b51208e965f565456e17c8f1653343c4",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/BIM_PLAYBOOK.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "18590bd643bd8e4b5b7c54de2ba1fb680faac217b9bea136e576576207496639",
+   "parent_sha256": "18590bd643bd8e4b5b7c54de2ba1fb680faac217b9bea136e576576207496639",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/BUG_FIX_PLAYBOOK.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "c7ddc8427e9469bae4a0c3476fc4ecad512ef2a45db09eec7ce2c17e84567a5d",
+   "parent_sha256": "c7ddc8427e9469bae4a0c3476fc4ecad512ef2a45db09eec7ce2c17e84567a5d",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+   "status": "PROPOSED ONLY",
+   "candidate_sha256": "68285b2a1c6c759e17518f66c9e69f7338afb48e043f6e317cb607f374346e75",
+   "parent_sha256": "955b3c02dd0012616bc8b7a60f99af2a74c651d5a4db5393570ef49f4ee88e97",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/FEAT_PLAYBOOK.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "68876ff845a6ead4977444426ab53cf0862c411469b8489fefc4c2a716a4312a",
+   "parent_sha256": "68876ff845a6ead4977444426ab53cf0862c411469b8489fefc4c2a716a4312a",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/FFM_PLAYBOOK.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "37bac1c70b0afcee66e6f298c518f08566a292435617da28291040016ca89312",
+   "parent_sha256": "37bac1c70b0afcee66e6f298c518f08566a292435617da28291040016ca89312",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/FRONTEND_BUILD_PHASE_PLAYBOOK.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "0e492b78185ecc152bf50e4cc603329d8328efc565aaa92fc0accbc2fb8f16f2",
+   "parent_sha256": "0e492b78185ecc152bf50e4cc603329d8328efc565aaa92fc0accbc2fb8f16f2",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/FRONTEND_FIRST_PLAYBOOK.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "6f423ba687dae1e6de472d3840ccda4226f175ef8398d4e47451934c964af202",
+   "parent_sha256": "6f423ba687dae1e6de472d3840ccda4226f175ef8398d4e47451934c964af202",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+   "status": "PROPOSED ONLY",
+   "candidate_sha256": "456246341096459742400af061b6605fcf1d56e9de1a09b27621a6680489c9f6",
+   "parent_sha256": "75bc73865f714fe5935762ae445fd1d4d54807efb31d4f0e98e1caa4772e78fb",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/QA_PLAYBOOK.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "4c460b040b09782497069b69409381523fbf3bea56897febecb6c51f9458d458",
+   "parent_sha256": "4c460b040b09782497069b69409381523fbf3bea56897febecb6c51f9458d458",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+   "status": "PROPOSED ONLY",
+   "candidate_sha256": "14b53af70e26456c6e610fb3782039df7ce1d5d372f943a4a23038e26bf81416",
+   "parent_sha256": "e9c7bc1e58286187f58df06d3f0718bf8c299a4eeb4b057427396bc3411ea85f",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/TESTING_PLAYBOOK.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "5b736786a6f6cdced703281cfada79af6c5b1c4f959f4b75615ca3a0c93971f7",
+   "parent_sha256": "5b736786a6f6cdced703281cfada79af6c5b1c4f959f4b75615ca3a0c93971f7",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_assets/workflows/BIM_WORKFLOW.svg",
+   "status": "UNCHANGED",
+   "candidate_sha256": "7cba33aa1a396e4467a09eb80ef912b6e06d2dc06f839c569ffcdf5f87b67ec9",
+   "parent_sha256": "7cba33aa1a396e4467a09eb80ef912b6e06d2dc06f839c569ffcdf5f87b67ec9",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_assets/workflows/FFM_CREATION.svg",
+   "status": "UNCHANGED",
+   "candidate_sha256": "0d7640fc0460f98aaf6a0b0d1acc8bc7866fc94e0ed61099d9d0e59931d3a1f0",
+   "parent_sha256": "0d7640fc0460f98aaf6a0b0d1acc8bc7866fc94e0ed61099d9d0e59931d3a1f0",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_assets/workflows/FFM_DEPLOYMENT.svg",
+   "status": "UNCHANGED",
+   "candidate_sha256": "ce17e51c9e72e24cd4fd961f9812d13242914f9e03fcb238a749b49361cb028e",
+   "parent_sha256": "ce17e51c9e72e24cd4fd961f9812d13242914f9e03fcb238a749b49361cb028e",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_assets/workflows/FFM_EXECUTION.svg",
+   "status": "UNCHANGED",
+   "candidate_sha256": "d0ac268ef03f2ab6f4cb80970b2be3d242442af8eeaa3f3518526354df2a915c",
+   "parent_sha256": "d0ac268ef03f2ab6f4cb80970b2be3d242442af8eeaa3f3518526354df2a915c",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_templates/QAM/AC_EVIDENCE_MATRIX.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "bf9685c13d650a109ea0f40d44ed0f813fea31e7fdcb67e0aa8b518ee194cb3a",
+   "parent_sha256": "bf9685c13d650a109ea0f40d44ed0f813fea31e7fdcb67e0aa8b518ee194cb3a",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_templates/QAM/AGENTS.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "b3415998cf417ea79551d8b4d31b92ff83df1becaf644ad1be499ce9ff0ef03f",
+   "parent_sha256": "b3415998cf417ea79551d8b4d31b92ff83df1becaf644ad1be499ce9ff0ef03f",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_templates/QAM/AUTOMATION/README.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "c9a4f3a0a8d45077cc5cfbee8a93590cd4c9b08c33e8c6757419d537610bbfcb",
+   "parent_sha256": "c9a4f3a0a8d45077cc5cfbee8a93590cd4c9b08c33e8c6757419d537610bbfcb",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_templates/QAM/CLAUDE.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "79a674620466b01d0a5f2b82f85658177e05f91d689072f1f5a1d1f101e43d2a",
+   "parent_sha256": "79a674620466b01d0a5f2b82f85658177e05f91d689072f1f5a1d1f101e43d2a",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_templates/QAM/FINDINGS.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "e0b10749d2b05183253af6a486b01f92146c58ca3a8c618a73beec584ba46f75",
+   "parent_sha256": "e0b10749d2b05183253af6a486b01f92146c58ca3a8c618a73beec584ba46f75",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_templates/QAM/GOVERNING/README.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "b9fc64518dda952a7d4a834a2b4cc9fe3ad82148ade00f4381085968e2dd11f6",
+   "parent_sha256": "b9fc64518dda952a7d4a834a2b4cc9fe3ad82148ade00f4381085968e2dd11f6",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/ENGINEERING_HANDOFF.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "5bd7766647aad374634061ca31caa3e2f2facef1b5a516f8f8a18d2720f00677",
+   "parent_sha256": "5bd7766647aad374634061ca31caa3e2f2facef1b5a516f8f8a18d2720f00677",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/FILE_INDEX.template.json",
+   "status": "UNCHANGED",
+   "candidate_sha256": "2620fd114b8d58a7f022631e3dba1d2d8caa2c1b457d596dde15e190460305b8",
+   "parent_sha256": "2620fd114b8d58a7f022631e3dba1d2d8caa2c1b457d596dde15e190460305b8",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/README.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "4d0eb7a53bba7d94a032353b9fc0316538058475fb2fc40b6d545a6982b9b0aa",
+   "parent_sha256": "4d0eb7a53bba7d94a032353b9fc0316538058475fb2fc40b6d545a6982b9b0aa",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_templates/QAM/HANDOFFS/REVIEW_START_HERE.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "0ffc1c60f9f4de3bdf10a30af6ecb9b95d036190c79056db1cbd3145a732cac1",
+   "parent_sha256": "0ffc1c60f9f4de3bdf10a30af6ecb9b95d036190c79056db1cbd3145a732cac1",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_templates/QAM/PARENT_ENTRY_ROUTING.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "d557319761782cf617ae828a4df81243a9908aa7c033b563d814d2d2fccf3ebe",
+   "parent_sha256": "d557319761782cf617ae828a4df81243a9908aa7c033b563d814d2d2fccf3ebe",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_APPROVAL.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "de505b50c3ed901d77bfc0373ff329901447f2044bc2c3524a0164841628674d",
+   "parent_sha256": "de505b50c3ed901d77bfc0373ff329901447f2044bc2c3524a0164841628674d",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_CERTIFICATION.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "7781cf756893b883d58f75c8242e257130fb909625246e9a7b3500c9e83465c6",
+   "parent_sha256": "7781cf756893b883d58f75c8242e257130fb909625246e9a7b3500c9e83465c6",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_CLEANUP_REPORT.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "2e5ac571423d245f48563090662679df82d78fcbc415be90ee71f3a33fc1b830",
+   "parent_sha256": "2e5ac571423d245f48563090662679df82d78fcbc415be90ee71f3a33fc1b830",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_ENTRY.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "a6b9c6f160d9811bf9d273bb03ea32f63256019b4add8cbdc23f032261fababe",
+   "parent_sha256": "a6b9c6f160d9811bf9d273bb03ea32f63256019b4add8cbdc23f032261fababe",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_EXECUTION_REPORT.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "24ef00dd53190179498b07e8326e3c87216c9a4e5d70da2aa163f76bb7df076b",
+   "parent_sha256": "24ef00dd53190179498b07e8326e3c87216c9a4e5d70da2aa163f76bb7df076b",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_MANIFEST.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "9d68426ef53d852b46285ab8f15a5f978811e4fb606e239ccaab97ba21ce6b43",
+   "parent_sha256": "9d68426ef53d852b46285ab8f15a5f978811e4fb606e239ccaab97ba21ce6b43",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_PACKAGING.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "be3508938dcc3ea0e2833c5a7f97d7915e2e409204adde9ff69c4941ddd43755",
+   "parent_sha256": "be3508938dcc3ea0e2833c5a7f97d7915e2e409204adde9ff69c4941ddd43755",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_PREFLIGHT.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "073a4381f08d0280d83a991e72d3ffd82926fee8c76e2b1fbffe1b0690f6a1b7",
+   "parent_sha256": "073a4381f08d0280d83a991e72d3ffd82926fee8c76e2b1fbffe1b0690f6a1b7",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_RECON_REPORT.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "42b313b6a0e811293319f9ae390674e88a957ee87d619554d53323358c167c67",
+   "parent_sha256": "42b313b6a0e811293319f9ae390674e88a957ee87d619554d53323358c167c67",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_RISK_REQUIREMENTS.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "cc910d528ee2ef9398f06f0259896669544e9ad02ee4623d620b98667e1131f0",
+   "parent_sha256": "cc910d528ee2ef9398f06f0259896669544e9ad02ee4623d620b98667e1131f0",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_STATE.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "afc4af6ad54123506bd0b6861ba7a71c9d5dad15e51db1f5bb3704d26a75f62f",
+   "parent_sha256": "afc4af6ad54123506bd0b6861ba7a71c9d5dad15e51db1f5bb3704d26a75f62f",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_templates/QAM/QAM_TEST_PLAN.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "8d3d245926946e99a8cd2cdecc8dda79f47a436c5b3f35ba7ba48886bc23e0e9",
+   "parent_sha256": "8d3d245926946e99a8cd2cdecc8dda79f47a436c5b3f35ba7ba48886bc23e0e9",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_templates/QAM/README.md",
+   "status": "PROPOSED ONLY",
+   "candidate_sha256": "15fdc40e56000666cca7e02290168e2aed52fc22a73c4a2edefba586011535a2",
+   "parent_sha256": "b7462fc84fb6557d08010623a465588b27ee62edbffa2702ea71f2ba4d5a3d91",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_templates/QAM/evidence/README.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "3c033254f64258d116bbbe069d585fa4df653c5ac84b68e03998bdbc675e9aab",
+   "parent_sha256": "3c033254f64258d116bbbe069d585fa4df653c5ac84b68e03998bdbc675e9aab",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+   "status": "PROPOSED ONLY",
+   "candidate_sha256": "9d5e760494fe71adaa5e72fee7b82fc6e85e5c250192cc2613dc0bd6fc107441",
+   "parent_sha256": "3d2b8b1fd9289b02e87b15d26dc5bb61dcb6efd19a6bec621faeddc3ca85d89b",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+   "status": "PROPOSED ONLY",
+   "candidate_sha256": "06bf1d4bb94f9bd6b17f41e0161c42984712a3739274582ddbfe8c4b32f3d018",
+   "parent_sha256": "aa968075698fb4cd791c5b02cc026dd41470089f2a44c4e4270ec4584cfd061a",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+   "status": "PROPOSED ONLY",
+   "candidate_sha256": "7427ec11728c186f8fe33a483d1ed9e712e988e39a2e50e45720b8eec916d57e",
+   "parent_sha256": "2b61c38203909ffb95449d779a4c13f91d4f134aac6e397a17ad4fbdd247068b",
+   "ok": true
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+   "status": "PROPOSED ONLY",
+   "candidate_sha256": "58e76e3ec55a1f4bc2f3eaf0e05783fee51c7c7fa52eca1f9347af42a557c8d7",
+   "parent_sha256": "8f585a4a866355683904924c1a4f2ad406ffb42d95e5e5c139baaf85d9aada96",
+   "ok": true
+  },
+  {
+   "path": "04_REFERENCE_MANUALS/API_AND_SERVICES_MANUAL.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "0070295f53b3e924d58b473e885072f902f45373530fa91def6667ca220ef80c",
+   "parent_sha256": "0070295f53b3e924d58b473e885072f902f45373530fa91def6667ca220ef80c",
+   "ok": true
+  },
+  {
+   "path": "04_REFERENCE_MANUALS/APP_ARCHITECTURE_MANUAL.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "f178d51346c252baf75a3e0d6c558da411986e74b634ac64b4fa9fe6b2d50291",
+   "parent_sha256": "f178d51346c252baf75a3e0d6c558da411986e74b634ac64b4fa9fe6b2d50291",
+   "ok": true
+  },
+  {
+   "path": "04_REFERENCE_MANUALS/AUTH_MANUAL.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "3e028ece38102a7d3d9bf375afb1acb3766a1a28743626aea0b54ba9ce2503f3",
+   "parent_sha256": "3e028ece38102a7d3d9bf375afb1acb3766a1a28743626aea0b54ba9ce2503f3",
+   "ok": true
+  },
+  {
+   "path": "04_REFERENCE_MANUALS/DATABASE_MANUAL.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "1eee0154b965948156b8ef169beb10985e668819ddbce833f6c4d3f432a84771",
+   "parent_sha256": "1eee0154b965948156b8ef169beb10985e668819ddbce833f6c4d3f432a84771",
+   "ok": true
+  },
+  {
+   "path": "04_REFERENCE_MANUALS/ECOMMERCE_AND_PAYMENTS_MANUAL.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7",
+   "parent_sha256": "08114503ffce2eb1b9c7390ddd21516b76376a17efe2b9288c1c208e49a946e7",
+   "ok": true
+  },
+  {
+   "path": "04_REFERENCE_MANUALS/STATE_MANAGEMENT_MANUAL.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "4dc5566589696045c1ae835bf315cfa68db5d30bca78ff9db137efb064cb666b",
+   "parent_sha256": "4dc5566589696045c1ae835bf315cfa68db5d30bca78ff9db137efb064cb666b",
+   "ok": true
+  },
+  {
+   "path": "04_REFERENCE_MANUALS/STRIPE_SUBSCRIPTIONS_PLAYBOOK.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "01633da70da2d4cb863a2c883c1c2e7194abd602cf422fbb1bb52ae2b2ac43ab",
+   "parent_sha256": "01633da70da2d4cb863a2c883c1c2e7194abd602cf422fbb1bb52ae2b2ac43ab",
+   "ok": true
+  },
+  {
+   "path": "05_DESIGN_SYSTEM/COMPONENT_REGISTRY.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "b5688cb6f8a6b0aae9dbe3db24aa8457571e2f0d6099801ccc9e3f11f49c59c9",
+   "parent_sha256": "b5688cb6f8a6b0aae9dbe3db24aa8457571e2f0d6099801ccc9e3f11f49c59c9",
+   "ok": true
+  },
+  {
+   "path": "05_DESIGN_SYSTEM/GLOBAL_DESIGN_SYSTEM_HANDBOOK.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "2b5da310aa196164cb0d07654d6df73c15f3ac23c67c416da3036ea148f1d491",
+   "parent_sha256": "2b5da310aa196164cb0d07654d6df73c15f3ac23c67c416da3036ea148f1d491",
+   "ok": true
+  },
+  {
+   "path": "05_DESIGN_SYSTEM/THEME_LIBRARY.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "4063fe5f3dacfb7df9bf433b7073e2a5b608ced12a7944eabecc9087bcf261ce",
+   "parent_sha256": "4063fe5f3dacfb7df9bf433b7073e2a5b608ced12a7944eabecc9087bcf261ce",
+   "ok": true
+  },
+  {
+   "path": "05_DESIGN_SYSTEM/THEMING_MANUAL.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "8d36ff89202b0a1d692252c7d46c8da709cf317438d007b2564340bf47fe62ab",
+   "parent_sha256": "8d36ff89202b0a1d692252c7d46c8da709cf317438d007b2564340bf47fe62ab",
+   "ok": true
+  },
+  {
+   "path": "05_DESIGN_SYSTEM/TOKEN_FILE.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "2fc5eff41dd6320550c21bfda7cc6e33f7b5be7339fe9e5a280b67dc0475922a",
+   "parent_sha256": "2fc5eff41dd6320550c21bfda7cc6e33f7b5be7339fe9e5a280b67dc0475922a",
+   "ok": true
+  },
+  {
+   "path": "05_DESIGN_SYSTEM/UI_UX_BUILDING_MANUAL.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "2b7f9f8d5b89a43bb63edbb54950bf6dcbee7e67549d6019b1dada5c51d493b4",
+   "parent_sha256": "2b7f9f8d5b89a43bb63edbb54950bf6dcbee7e67549d6019b1dada5c51d493b4",
+   "ok": true
+  },
+  {
+   "path": "CHANGELOG.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "4c655c1dd23b4f64cdc7d33f93b67c500a2f144ab46f8f013821a7c444f7b006",
+   "parent_sha256": "4c655c1dd23b4f64cdc7d33f93b67c500a2f144ab46f8f013821a7c444f7b006",
+   "ok": true
+  },
+  {
+   "path": "MANIFEST.md",
+   "status": "PROPOSED ONLY",
+   "candidate_sha256": "2538dc3b3bd0772b65964de2ef217690b30d779cc976ef45b44520218259ebc8",
+   "parent_sha256": "13759dcc55df8747a86ddaa053f89d24c4e280474cde91d9e44bca3211e1b942",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/API_AND_SERVICES_MANUAL_v1_1.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "64794a5d33dbd7fdd473975d5ff7c02f49fe433c8f63c780b059d77ead55a4b3",
+   "parent_sha256": "64794a5d33dbd7fdd473975d5ff7c02f49fe433c8f63c780b059d77ead55a4b3",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/APP_ARCHITECTURE_MANUAL_v1_3.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "ca1dc1f0a8ce578523a46a3262f2f1d09a63cb6e8f2517157d940c0febfb3134",
+   "parent_sha256": "ca1dc1f0a8ce578523a46a3262f2f1d09a63cb6e8f2517157d940c0febfb3134",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/APP_FACTORY_BLUEPRINT_v2_1.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "9b732116c6030aee4d6ae0b792272bc372dd647ef95dea522c2bf7949934af93",
+   "parent_sha256": "9b732116c6030aee4d6ae0b792272bc372dd647ef95dea522c2bf7949934af93",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/APP_FACTORY_SKILLS_PLAYBOOK_v1_1.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "d93f3d5d81d5add6638fee9c71eecc370fd86f07ad1ac47f7021d6415a446113",
+   "parent_sha256": "d93f3d5d81d5add6638fee9c71eecc370fd86f07ad1ac47f7021d6415a446113",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/ARCHITECT_PLAYBOOK_v2_2.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "b0754979e3b24cb79234265fe146f39f03718e608a60153a702a518f34979af4",
+   "parent_sha256": "b0754979e3b24cb79234265fe146f39f03718e608a60153a702a518f34979af4",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/ARCHITECT_QUESTIONNAIRE_v2_2.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "aa487360f420c1a2e0a48b097eaa2ebc905ebb659bcdc67ae72ce8d6a80f2bfd",
+   "parent_sha256": "aa487360f420c1a2e0a48b097eaa2ebc905ebb659bcdc67ae72ce8d6a80f2bfd",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/AUTH_MANUAL_v1_4.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "6b81073fe81727d4a4a48d1a0e4c43098f3ce70fafbcc3a7a6c660e661276850",
+   "parent_sha256": "6b81073fe81727d4a4a48d1a0e4c43098f3ce70fafbcc3a7a6c660e661276850",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/BIM_PLAYBOOK_v1_0.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "363619932b39fd7c8b4bafa9f270f814aa1af4aa98159dbfecb28c7f920e4f3b",
+   "parent_sha256": "363619932b39fd7c8b4bafa9f270f814aa1af4aa98159dbfecb28c7f920e4f3b",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/BUG_FIX_PLAYBOOK_v1_0.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "3ca537dec3958cabb0159a5243b7fe3f76c10e46ebcaa4ba04d258dcd5d1a871",
+   "parent_sha256": "3ca537dec3958cabb0159a5243b7fe3f76c10e46ebcaa4ba04d258dcd5d1a871",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/COMPONENT_REGISTRY_v1_1.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "4b7d5b7c39fa50838ea536d07a9f4086d3802613a8ee86dd986f09553b28767b",
+   "parent_sha256": "4b7d5b7c39fa50838ea536d07a9f4086d3802613a8ee86dd986f09553b28767b",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/DATABASE_MANUAL_v1_1.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "326802ad938bb6b5b9f1b73c74ebee811789185789ef003e907101a0db4a0cf8",
+   "parent_sha256": "326802ad938bb6b5b9f1b73c74ebee811789185789ef003e907101a0db4a0cf8",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/DESIGNER_PLAYBOOK_v2_1.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "426eb0e7a3da1b31de8efe4ca68550d4b351d6f378b061f0c0de1ab6fbd632ae",
+   "parent_sha256": "426eb0e7a3da1b31de8efe4ca68550d4b351d6f378b061f0c0de1ab6fbd632ae",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/ECOMMERCE_AND_PAYMENTS_MANUAL_v1_1.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "d72816173e6a188282718174cbcd8cc4693f9f944858d96fe0bb092edb728f38",
+   "parent_sha256": "d72816173e6a188282718174cbcd8cc4693f9f944858d96fe0bb092edb728f38",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/ENGINEER_PLAYBOOK_v1_2.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "8d73c37a42624fa2c60729d8d2648fc96f72305a732fd5e74460cf0a614f861c",
+   "parent_sha256": "8d73c37a42624fa2c60729d8d2648fc96f72305a732fd5e74460cf0a614f861c",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/FEAT_PLAYBOOK_v1_0.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "5d70fa061bde72d49507f64b0113daab2646952867c63b8a499ea2feab3ed66f",
+   "parent_sha256": "5d70fa061bde72d49507f64b0113daab2646952867c63b8a499ea2feab3ed66f",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/FFM_PLAYBOOK_v1_2.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "7be561380ea1568d7df61734b6f1a5b12263194cca3ce469a5731e3bd32eafa0",
+   "parent_sha256": "7be561380ea1568d7df61734b6f1a5b12263194cca3ce469a5731e3bd32eafa0",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/FRONTEND_BUILD_PHASE_PLAYBOOK_v1_2_2.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "362609b6551bd585c5f3c57ce5b751285871335d154ad2a8c97ca62b28a20702",
+   "parent_sha256": "362609b6551bd585c5f3c57ce5b751285871335d154ad2a8c97ca62b28a20702",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/FRONTEND_FIRST_PLAYBOOK_v1_1_3.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "2516dcbd50f525328db955592c6c14eafa971c02d4dec722130a87505248a422",
+   "parent_sha256": "2516dcbd50f525328db955592c6c14eafa971c02d4dec722130a87505248a422",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/GLOBAL_DESIGN_SYSTEM_HANDBOOK_v1_1.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "f2dc74390a16836c3213f77652451085680046786d5499b43b1e8a6a6774c8ac",
+   "parent_sha256": "f2dc74390a16836c3213f77652451085680046786d5499b43b1e8a6a6774c8ac",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/HANDOFF_PACKAGE_PLAYBOOK_v1_1.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "6a2f4706542395360248dd42e17cbf9fc49f0886c844aa1e0e5315a047892c4f",
+   "parent_sha256": "6a2f4706542395360248dd42e17cbf9fc49f0886c844aa1e0e5315a047892c4f",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/QA_PLAYBOOK_v1_0.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "32d17ef5ca2eb32dfec6d120a71d280daa2973cba90e8f1735b85e07a3098e99",
+   "parent_sha256": "32d17ef5ca2eb32dfec6d120a71d280daa2973cba90e8f1735b85e07a3098e99",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/QA_PLAYBOOK_v1_1.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "b6c70f14af18bb187ca7980954317af486e43b682821245d9911f2160d5198a5",
+   "parent_sha256": "b6c70f14af18bb187ca7980954317af486e43b682821245d9911f2160d5198a5",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/RECON_QUESTIONNAIRE_v0_5.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "974f09e3118e94288beeb3dce919bea32a1571f294a59da6fd0041ee615968db",
+   "parent_sha256": "974f09e3118e94288beeb3dce919bea32a1571f294a59da6fd0041ee615968db",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/SOFTWARE_FACTORY_PLAYBOOK_v1_3.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "dd9b355bed9b263756a9622205cc30b4b06dad2a08397b7fb55d7e5bb2a7260e",
+   "parent_sha256": "dd9b355bed9b263756a9622205cc30b4b06dad2a08397b7fb55d7e5bb2a7260e",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/STARTER_KIT_HANDBOOK_v1_1.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "396e325b4ac28b02c145fcad6181a99abb4f8345b87278d96f1aef2bbefb7efb",
+   "parent_sha256": "396e325b4ac28b02c145fcad6181a99abb4f8345b87278d96f1aef2bbefb7efb",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/STATE_MANAGEMENT_MANUAL_v1_2.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "2a281857fe0a03d9066ac171e725ca50e42944df204b4eceaebba152b61af196",
+   "parent_sha256": "2a281857fe0a03d9066ac171e725ca50e42944df204b4eceaebba152b61af196",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/STRIPE_SUBSCRIPTIONS_PLAYBOOK_v1_1.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "ec5a467ffd31ca8a1200f230b5a4ca4e104148bedaa83d3a4780f8e23f9a3e03",
+   "parent_sha256": "ec5a467ffd31ca8a1200f230b5a4ca4e104148bedaa83d3a4780f8e23f9a3e03",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/TESTING_PLAYBOOK_v2_1.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "5dfc2d198d51eebd4c0b136eeafc50cc2f64dafe44b7bbd153b801f4849692ad",
+   "parent_sha256": "5dfc2d198d51eebd4c0b136eeafc50cc2f64dafe44b7bbd153b801f4849692ad",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/THEME_LIBRARY_v1_2.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "480c7bdbc648e2fb7b97a6b120bfa36de35246cbdf3fd163e43aa0a2968ff73e",
+   "parent_sha256": "480c7bdbc648e2fb7b97a6b120bfa36de35246cbdf3fd163e43aa0a2968ff73e",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/THEMING_MANUAL_v1_2.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "3c71a3a959df8393b4f6810a8122a94895fced02d658d3b512ee5f30784091b1",
+   "parent_sha256": "3c71a3a959df8393b4f6810a8122a94895fced02d658d3b512ee5f30784091b1",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/TOKEN_FILE_v1_2.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "066e0e60a49714adb062bc2983b1d5a82bc69f0c73794bac44292f6851dc88b5",
+   "parent_sha256": "066e0e60a49714adb062bc2983b1d5a82bc69f0c73794bac44292f6851dc88b5",
+   "ok": true
+  },
+  {
+   "path": "_ARCHIVE/UI_UX_BUILDING_MANUAL_v1_4.md",
+   "status": "UNCHANGED",
+   "candidate_sha256": "8b9a6f647a8999ce35db4dd20df3db058ec7c64a47c4b3ab8051195f97d9d544",
+   "parent_sha256": "8b9a6f647a8999ce35db4dd20df3db058ec7c64a47c4b3ab8051195f97d9d544",
+   "ok": true
+  }
+ ],
+ "replay": [
+  {
+   "path": "03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md",
+   "old": "**Status:** DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED",
+   "new": "**Status:** Active",
+   "expected_occurrences": 1,
+   "parent_occurrences": 1,
+   "candidate_has_old": 0,
+   "candidate_has_new": 1
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md",
+   "old": "**Status:** DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED",
+   "new": "**Status:** Active",
+   "expected_occurrences": 1,
+   "parent_occurrences": 1,
+   "candidate_has_old": 0,
+   "candidate_has_new": 1
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+   "old": "**Status:** DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED",
+   "new": "**Status:** Active",
+   "expected_occurrences": 1,
+   "parent_occurrences": 1,
+   "candidate_has_old": 0,
+   "candidate_has_new": 1
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md",
+   "old": "The following proposed wording expresses that guidance for map review; pilot source records remain unchanged.",
+   "new": "The reviewer guidance below governs review; pilot source records remain unchanged.",
+   "expected_occurrences": 1,
+   "parent_occurrences": 1,
+   "candidate_has_old": 0,
+   "candidate_has_new": 1
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_templates/QAM/README.md",
+   "old": "This proposed set differs only by the status/provenance translations enumerated in this run’s `PHASE_2_TEMPLATE_TRANSLATIONS.json`; installation and translation approval remain pending;",
+   "new": "This installed set uses the approved status/provenance translations enumerated in this run’s `PHASE_2_TEMPLATE_TRANSLATIONS.json`; installation evidence is recorded in the run’s `TEMPLATE_INSTALL_VERIFICATION.md`;",
+   "expected_occurrences": 1,
+   "parent_occurrences": 1,
+   "candidate_has_old": 0,
+   "candidate_has_new": 1
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md",
+   "old": "**Status:** Proposed — pending verified publication",
+   "new": "**Status:** Active reference",
+   "expected_occurrences": 1,
+   "parent_occurrences": 1,
+   "candidate_has_old": 0,
+   "candidate_has_new": 1
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md",
+   "old": "**Status:** Proposed — pending verified publication",
+   "new": "**Status:** Active reference",
+   "expected_occurrences": 1,
+   "parent_occurrences": 1,
+   "candidate_has_old": 0,
+   "candidate_has_new": 1
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md",
+   "old": "**Status:** Proposed — pending verified publication",
+   "new": "**Status:** Active reference",
+   "expected_occurrences": 1,
+   "parent_occurrences": 1,
+   "candidate_has_old": 0,
+   "candidate_has_new": 1
+  },
+  {
+   "path": "03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md",
+   "old": "**Status:** Proposed — pending verified publication",
+   "new": "**Status:** Active reference",
+   "expected_occurrences": 1,
+   "parent_occurrences": 1,
+   "candidate_has_old": 0,
+   "candidate_has_new": 1
+  },
+  {
+   "path": "MANIFEST.md",
+   "old": "| QAM_PLAYBOOK | 1.0 | 2026-10-18 | DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED | Mandatory module QAM and accepted _templates/QAM set | ARCHITECT_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QA_PLAYBOOK, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |",
+   "new": "| QAM_PLAYBOOK | 1.0 | 2026-10-18 | Active | Mandatory module QAM and accepted _templates/QAM set | ARCHITECT_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QA_PLAYBOOK, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |",
+   "expected_occurrences": 1,
+   "parent_occurrences": 1,
+   "candidate_has_old": 0,
+   "candidate_has_new": 1
+  },
+  {
+   "path": "MANIFEST.md",
+   "old": "| RRM_PLAYBOOK | 1.0 | 2026-10-18 | DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED | Approved review repairs with QAM; post-FFM and Engine 2 checkpoints | ARCHITECT_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |",
+   "new": "| RRM_PLAYBOOK | 1.0 | 2026-10-18 | Active | Approved review repairs with QAM; post-FFM and Engine 2 checkpoints | ARCHITECT_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |",
+   "expected_occurrences": 1,
+   "parent_occurrences": 1,
+   "candidate_has_old": 0,
+   "candidate_has_new": 1
+  },
+  {
+   "path": "MANIFEST.md",
+   "old": "| DEPLOYMENT_PLAYBOOK | 1.0 | 2026-10-18 | DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED (sections marked OPEN are not doctrine until ruled) | Common identity, exclusion, verification and recovery; context-specific permissions retained | APP_FACTORY_SKILLS_PLAYBOOK, BIM_PLAYBOOK, FFM_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, RECON_QUESTIONNAIRE, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK |",
+   "new": "| DEPLOYMENT_PLAYBOOK | 1.0 | 2026-10-18 | Active (sections marked OPEN are not doctrine until ruled) | Common identity, exclusion, verification and recovery; context-specific permissions retained | APP_FACTORY_SKILLS_PLAYBOOK, BIM_PLAYBOOK, FFM_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, RECON_QUESTIONNAIRE, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK |",
+   "expected_occurrences": 1,
+   "parent_occurrences": 1,
+   "candidate_has_old": 0,
+   "candidate_has_new": 1
+  }
+ ],
+ "canonical_diff": "diff --git a/03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md b/03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md\nindex e14c45c..97d776f 100644\n--- a/03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md\n+++ b/03_BUILD_METHODOLOGY/DEPLOYMENT_PLAYBOOK.md\n@@ -1,7 +1,7 @@\n # DEPLOYMENT PLAYBOOK\n ## Deployment, Promotion, Rollback and Git / Cloud Authority — the Owning Document\n \n-> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED (sections marked OPEN are not doctrine until ruled)\n+> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Active (sections marked OPEN are not doctrine until ruled)\n > **Tier:** 3 — Build Methodology · **Pairs with:** `QA_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `BIM_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `QAM_PLAYBOOK.md`, `RRM_PLAYBOOK.md`, `RECON_QUESTIONNAIRE.md`, `APP_FACTORY_SKILLS_PLAYBOOK.md`\n > **Owner:** Stark Industries App Factory\n > **Provenance:** Created by the Director's placement ruling of 2026-10-14 (RUL-06) as the owning document that the Factory lacked (certified finding FC-011). Ruled content: the module Git flow (RUL-02) and the deployment-exclusion rule (RUL-03). Source material for the sections still marked OPEN: the DevOps operating model of 2026-08-24 (harvest source SRC-W07, status REVIEW; preserved in this run's intake snapshot); its claims are not adopted here.\ndiff --git a/03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md b/03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md\nindex 7cf2be5..a000e74 100644\n--- a/03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md\n+++ b/03_BUILD_METHODOLOGY/QAM_PLAYBOOK.md\n@@ -1,7 +1,7 @@\n # QAM PLAYBOOK\n ## Mandatory module packaging and two-shot independent QA\n \n-> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED\n+> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Active\n > **Tier:** 3 — Build Methodology · **Pairs with:** `QA_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md`, `RRM_PLAYBOOK.md`, `BIM_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`\n > **Owner:** QA Lead authors and maintains this playbook (Director ruling RUL-01, 2026-10-14) · Stark Industries App Factory\n > **Provenance:** Director-approved source, the intake file `QAM_PLAYBOOK_v1_0` (authoring seat QA Lead / JARVIS, 2026-10-14; SHA-256 `97e111e2a495f9a3fe65f50213e6f2ba68c8e5e963f3d23493b1ee99ad35c897`; preserved as received in INTAKE_SNAPSHOT/factory-intake/). Audience: module-writing Architects, Engineers, QA Leads and QA Executors. The source text is preserved verbatim except the integration substitutions listed in the Version History; the paired Factory documents must be reconciled and verified in this sync before a completion claim.\ndiff --git a/03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md b/03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md\nindex 8af7331..905d749 100644\n--- a/03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md\n+++ b/03_BUILD_METHODOLOGY/RRM_PLAYBOOK.md\n@@ -1,7 +1,7 @@\n # RRM PLAYBOOK\n ## Review Rework Modules — Adjudicated Review Findings into Bounded Repair and Independent Verification\n \n-> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED\n+> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Active\n > **Tier:** 3 — Build Methodology · **Pairs with:** `SOFTWARE_FACTORY_PLAYBOOK.md` › Module Identity & QA Handoff (Factory-level shared doctrine), `QAM_PLAYBOOK.md`, `QA_PLAYBOOK.md`, `BIM_PLAYBOOK.md` (module mechanics reference), `BUG_FIX_PLAYBOOK.md`, `FEAT_PLAYBOOK.md`, `FFM_PLAYBOOK.md`, `ARCHITECT_PLAYBOOK.md`, `ENGINEER_PLAYBOOK.md`, `HANDOFF_PACKAGE_PLAYBOOK.md`, `TESTING_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`\n > **Owner:** Stark Industries App Factory\n > **Provenance:** Authored for the Factory DocSet from the RRM pilot playbook v0.1 (17 September 2026; harvest source SRC-R01, preserved as received in INTAKE_SNAPSHOT/factory-intake/) and the RRM-001…004 field results (SRC-R03), reconciled to the Director rulings of 2026-10-14 (RUL-01 mandatory QAM, RUL-02 continuing QA branch, RUL-03 required cleanup, RUL-04 frozen contract with writable lanes, RUL-05 two review checkpoints, RUL-06 placement). The pilot playbook's persona names were replaced by seats; every departure from the pilot text is listed in the Version History. The pilot records themselves are unchanged.\n@@ -116,7 +116,7 @@ The closeout record distinguishes implementation, evidence, closeout and merge S\n \n ## 11. Reviewer Guidance\n \n-Reviewer guidance belongs here under RUL-14 (2026-10-16). The following proposed wording expresses that guidance for map review; pilot source records remain unchanged.\n+Reviewer guidance belongs here under RUL-14 (2026-10-16). The reviewer guidance below governs review; pilot source records remain unchanged.\n \n - **Freeze the specimen.** Name the exact revision, export or byte set reviewed; distinguish ordinary change review from broad or retrospective investigation.\n - **Evidence levels.** Label every claim EVIDENCE / INFERENCE / CLAIM / GAP / QUESTION (`QA_PLAYBOOK.md` §8); state the conditions under which a finding holds and what would falsify it.\ndiff --git a/03_BUILD_METHODOLOGY/_templates/QAM/README.md b/03_BUILD_METHODOLOGY/_templates/QAM/README.md\nindex 26fdfd5..7c01b10 100644\n--- a/03_BUILD_METHODOLOGY/_templates/QAM/README.md\n+++ b/03_BUILD_METHODOLOGY/_templates/QAM/README.md\n@@ -1,7 +1,7 @@\n # QAM — reusable QA Module template set\n \n > **TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.**\n-> Template set **v0.3**. Governing playbook: **QAM_PLAYBOOK v1.0**. QA behavior was accepted by Fable on 2026-10-14 with three exact amendments; Jarvis verified their application. Source set v0.3-draft is preserved byte-for-byte in this run’s intake snapshot. This proposed set differs only by the status/provenance translations enumerated in this run’s `PHASE_2_TEMPLATE_TRANSLATIONS.json`; installation and translation approval remain pending; it is newly authored from the approved playbook, not the pilot’s missing original templates. Source playbook SHA-256: `97e111e2a495f9a3fe65f50213e6f2ba68c8e5e963f3d23493b1ee99ad35c897`.\n+> Template set **v0.3**. Governing playbook: **QAM_PLAYBOOK v1.0**. QA behavior was accepted by Fable on 2026-10-14 with three exact amendments; Jarvis verified their application. Source set v0.3-draft is preserved byte-for-byte in this run’s intake snapshot. This installed set uses the approved status/provenance translations enumerated in this run’s `PHASE_2_TEMPLATE_TRANSLATIONS.json`; installation evidence is recorded in the run’s `TEMPLATE_INSTALL_VERIFICATION.md`; it is newly authored from the approved playbook, not the pilot’s missing original templates. Source playbook SHA-256: `97e111e2a495f9a3fe65f50213e6f2ba68c8e5e963f3d23493b1ee99ad35c897`.\n > **Canonical home (Architect decision AD-01 under the Director's C.1 delegation, 2026-10-14): `03_BUILD_METHODOLOGY/_templates/QAM/`** — stable filenames; set version and governing playbook version recorded here; superseded sets archived under `_ARCHIVE/QAM_TEMPLATES_v<version>/`; changes tracked through the QAM_PLAYBOOK MANIFEST row and CHANGELOG; explicit template verification in the sync acceptance scope. **Installation provenance:** see the sync run’s template-install plan and retained acceptance records; source acceptance alone is not installation verification.\n \n Acceptance and provenance: [QA Lead decision](../../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/QA_LEAD_DECISION_2026-10-14.md), [Architect verification](../../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/ARCHITECT_VERIFICATION_2026-10-14.md), [installation translations](../../../_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE_2_TEMPLATE_TRANSLATIONS.json).\ndiff --git a/03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md b/03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md\nindex 62266bc..3c4361e 100644\n--- a/03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md\n+++ b/03_BUILD_METHODOLOGY/_workflows/BIM_WORKFLOW.md\n@@ -1,6 +1,6 @@\n # BIM lifecycle and Engine 2 system review\n \n-> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Proposed — pending verified publication\n+> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Active reference\n > **Governed by:** `BIM_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`.\n \n This revised workflow supersedes the August diagram `SRC-W04_BIM_WORKFLOW.png` for current instructions when this proposed sync is approved, landed and verified. The [unaltered original](../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W04_BIM_WORKFLOW.png) remains historical evidence; it grants no current role, Git or cloud permission. This derivative follows RUL-01…15 and Tony’s explicit workflow/diagram correction assignment of 2026-10-16.\ndiff --git a/03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md b/03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md\nindex 1af6295..1b017d1 100644\n--- a/03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md\n+++ b/03_BUILD_METHODOLOGY/_workflows/FFM_CREATION.md\n@@ -1,6 +1,6 @@\n # FFM creation and Architect assembly\n \n-> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Proposed — pending verified publication\n+> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Active reference\n > **Governed by:** `FFM_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`.\n \n This revised workflow supersedes the August diagram `SRC-W01_FFM_CREATION.png` for current instructions when this proposed sync is approved, landed and verified. The [unaltered original](../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W01_FFM_CREATION.png) remains historical evidence; it grants no current role, Git or cloud permission. This derivative follows RUL-01…15 and Tony’s explicit workflow/diagram correction assignment of 2026-10-16.\ndiff --git a/03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md b/03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md\nindex 3cef781..e69635a 100644\n--- a/03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md\n+++ b/03_BUILD_METHODOLOGY/_workflows/FFM_DEPLOYMENT.md\n@@ -1,6 +1,6 @@\n # Deployment, identity and independent Gate D\n \n-> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Proposed — pending verified publication\n+> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Active reference\n > **Governed by:** `DEPLOYMENT_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`.\n \n This revised workflow supersedes the August diagram `SRC-W03_FFM_DEPLOYMENT.png` for current instructions when this proposed sync is approved, landed and verified. The [unaltered original](../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W03_FFM_DEPLOYMENT.png) remains historical evidence; it grants no current role, Git or cloud permission. This derivative follows RUL-01…15 and Tony’s explicit workflow/diagram correction assignment of 2026-10-16.\ndiff --git a/03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md b/03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md\nindex d57a003..bdea834 100644\n--- a/03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md\n+++ b/03_BUILD_METHODOLOGY/_workflows/FFM_EXECUTION.md\n@@ -1,6 +1,6 @@\n # FFM engineering, independent QA and post-FFM review\n \n-> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Proposed — pending verified publication\n+> **Version:** 1.0 · **Date:** 2026-10-18 · **Status:** Active reference\n > **Governed by:** `FFM_PLAYBOOK.md`, `SOFTWARE_FACTORY_PLAYBOOK.md` §2, `RRM_PLAYBOOK.md` §2, `QAM_PLAYBOOK.md`, `DEPLOYMENT_PLAYBOOK.md`.\n \n This revised workflow supersedes the August diagram `SRC-W02_FFM_EXECUTION.png` for current instructions when this proposed sync is approved, landed and verified. The [unaltered original](../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/SOURCES/Workflow/SRC-W02_FFM_EXECUTION.png) remains historical evidence; it grants no current role, Git or cloud permission. This derivative follows RUL-01…15 and Tony’s explicit workflow/diagram correction assignment of 2026-10-16.\ndiff --git a/MANIFEST.md b/MANIFEST.md\nindex bab9f49..6c9edcb 100644\n--- a/MANIFEST.md\n+++ b/MANIFEST.md\n@@ -39,14 +39,14 @@ Identify governing snapshots by canonical document name, header version and Hub\n | APP_FACTORY_SKILLS_PLAYBOOK | 1.2 | 2026-10-18 | Active | Skill-authoring constitution: Stark vs Agent skills, two-file contract, activation flow, CWD rule | DESIGNER_PLAYBOOK, FFM_PLAYBOOK, RECON_QUESTIONNAIRE |\n | BIM_PLAYBOOK | 1.1 | 2026-10-18 | Active | Backend Integration Module doctrine: module identity, one-folder package + manager grammar, stage-gate lifecycle, ACCEPTANCE_SPEC handoff, QA engagement, contracts & seams | ARCHITECT_PLAYBOOK, BUG_FIX_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, QA_PLAYBOOK, RECON_QUESTIONNAIRE, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |\n | BUG_FIX_PLAYBOOK | 1.1 | 2026-10-18 | Active — field-validated (FIX-001/002/003, ADK Harness) | Bug-fix doctrine (field-validated): evidence-first lifecycle, root-cause mechanism rule, regression protection, Gate Q/D, scope control, environment parity, FIX module anatomy, module identity, ACCEPTANCE_SPEC artifact, field case studies | ENGINEER_PLAYBOOK, FFM_PLAYBOOK, QA_PLAYBOOK, RECON_QUESTIONNAIRE, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |\n-| DEPLOYMENT_PLAYBOOK | 1.0 | 2026-10-18 | DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED (sections marked OPEN are not doctrine until ruled) | Common identity, exclusion, verification and recovery; context-specific permissions retained | APP_FACTORY_SKILLS_PLAYBOOK, BIM_PLAYBOOK, FFM_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, RECON_QUESTIONNAIRE, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK |\n+| DEPLOYMENT_PLAYBOOK | 1.0 | 2026-10-18 | Active (sections marked OPEN are not doctrine until ruled) | Common identity, exclusion, verification and recovery; context-specific permissions retained | APP_FACTORY_SKILLS_PLAYBOOK, BIM_PLAYBOOK, FFM_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, RECON_QUESTIONNAIRE, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK |\n | FEAT_PLAYBOOK | 1.1 | 2026-10-18 | Active | Feature Module doctrine: adding capability to working systems — launch conditions, v1-now/v2-seeded versioning, scope discipline vs feature gravity, mode parity, accessibility-first gates (deltas over BIM mechanics) | BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, QA_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |\n | FFM_PLAYBOOK | 1.3 | 2026-10-18 | Active | Module preparation, artifact ownership, prepared QAM, engineering and post-FFM review; revised workflow references | APP_FACTORY_SKILLS_PLAYBOOK, ARCHITECT_PLAYBOOK, DESIGNER_PLAYBOOK, ENGINEER_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, RECON_QUESTIONNAIRE, SOFTWARE_FACTORY_PLAYBOOK |\n | FRONTEND_BUILD_PHASE_PLAYBOOK | 1.3.0 | 2026-10-18 | Active | Frontend build execution: six stages, doctrine refresh, pre-write checks, KIP loop | COMPONENT_REGISTRY, FFM_PLAYBOOK, FRONTEND_FIRST_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK |\n | FRONTEND_FIRST_PLAYBOOK | 1.2.0 | 2026-10-18 | Active | When/why to build UI before backend: Kit Audit, gates, service-layer law, mock strategy | COMPONENT_REGISTRY, FRONTEND_BUILD_PHASE_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, STARTER_KIT_HANDBOOK, TESTING_PLAYBOOK |\n-| QAM_PLAYBOOK | 1.0 | 2026-10-18 | DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED | Mandatory module QAM and accepted _templates/QAM set | ARCHITECT_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QA_PLAYBOOK, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |\n+| QAM_PLAYBOOK | 1.0 | 2026-10-18 | Active | Mandatory module QAM and accepted _templates/QAM set | ARCHITECT_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QA_PLAYBOOK, RRM_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |\n | QA_PLAYBOOK | 1.2 | 2026-10-18 | Active — field-tested (ADK Harness BIM/FIX verification) | QA doctrine (field-tested): independent verification seat — claim-package handoff, acceptance-spec contract extraction, evidence discipline, Gate Q/Gate D, one-test-at-a-time manual protocol, exploratory seam testing, verdict model, scope protection | BUG_FIX_PLAYBOOK, ENGINEER_PLAYBOOK, FFM_PLAYBOOK, RECON_QUESTIONNAIRE, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |\n-| RRM_PLAYBOOK | 1.0 | 2026-10-18 | DRAFT FOR EXECUTABLE-MAP REVIEW — NOT INSTALLED | Approved review repairs with QAM; post-FFM and Engine 2 checkpoints | ARCHITECT_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |\n+| RRM_PLAYBOOK | 1.0 | 2026-10-18 | Active | Approved review repairs with QAM; post-FFM and Engine 2 checkpoints | ARCHITECT_PLAYBOOK, BIM_PLAYBOOK, BUG_FIX_PLAYBOOK, DEPLOYMENT_PLAYBOOK, ENGINEER_PLAYBOOK, FEAT_PLAYBOOK, FFM_PLAYBOOK, HANDOFF_PACKAGE_PLAYBOOK, QAM_PLAYBOOK, QA_PLAYBOOK, SOFTWARE_FACTORY_PLAYBOOK, TESTING_PLAYBOOK |\n | TESTING_PLAYBOOK | 2.2 | 2026-10-18 | Active | The testing bible: four layers, diagnostic principles, backend appendices, run-verification rituals | FFM_PLAYBOOK, FRONTEND_BUILD_PHASE_PLAYBOOK, RECON_QUESTIONNAIRE, SOFTWARE_FACTORY_PLAYBOOK, STARTER_KIT_HANDBOOK |\n \n ### 04_REFERENCE_MANUALS\n",
+ "readme_diff": "diff --git a/03_BUILD_METHODOLOGY/_templates/QAM/README.md b/03_BUILD_METHODOLOGY/_templates/QAM/README.md\nindex 26fdfd5..7c01b10 100644\n--- a/03_BUILD_METHODOLOGY/_templates/QAM/README.md\n+++ b/03_BUILD_METHODOLOGY/_templates/QAM/README.md\n@@ -1,7 +1,7 @@\n # QAM — reusable QA Module template set\n \n > **TEMPLATE SET v0.3 — QA LEAD ACCEPTED WITH EXACT AMENDMENTS (Fable, 2026-10-14); AMENDMENTS ARCHITECT-VERIFIED; INSTALLATION REQUIRES THE APPROVED DOCSET SYNC.**\n-> Template set **v0.3**. Governing playbook: **QAM_PLAYBOOK v1.0**. QA behavior was accepted by Fable on 2026-10-14 with three exact amendments; Jarvis verified their application. Source set v0.3-draft is preserved byte-for-byte in this run’s intake snapshot. This proposed set differs only by the status/provenance translations enumerated in this run’s `PHASE_2_TEMPLATE_TRANSLATIONS.json`; installation and translation approval remain pending; it is newly authored from the approved playbook, not the pilot’s missing original templates. Source playbook SHA-256: `97e111e2a495f9a3fe65f50213e6f2ba68c8e5e963f3d23493b1ee99ad35c897`.\n+> Template set **v0.3**. Governing playbook: **QAM_PLAYBOOK v1.0**. QA behavior was accepted by Fable on 2026-10-14 with three exact amendments; Jarvis verified their application. Source set v0.3-draft is preserved byte-for-byte in this run’s intake snapshot. This installed set uses the approved status/provenance translations enumerated in this run’s `PHASE_2_TEMPLATE_TRANSLATIONS.json`; installation evidence is recorded in the run’s `TEMPLATE_INSTALL_VERIFICATION.md`; it is newly authored from the approved playbook, not the pilot’s missing original templates. Source playbook SHA-256: `97e111e2a495f9a3fe65f50213e6f2ba68c8e5e963f3d23493b1ee99ad35c897`.\n > **Canonical home (Architect decision AD-01 under the Director's C.1 delegation, 2026-10-14): `03_BUILD_METHODOLOGY/_templates/QAM/`** — stable filenames; set version and governing playbook version recorded here; superseded sets archived under `_ARCHIVE/QAM_TEMPLATES_v<version>/`; changes tracked through the QAM_PLAYBOOK MANIFEST row and CHANGELOG; explicit template verification in the sync acceptance scope. **Installation provenance:** see the sync run’s template-install plan and retained acceptance records; source acceptance alone is not installation verification.\n \n Acceptance and provenance: [QA Lead decision](../../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/QA_LEAD_DECISION_2026-10-14.md), [Architect verification](../../../_AUDIT/SYNC_2026-10-15_doctrine-part2/INTAKE_SNAPSHOT/factory-intake/INTAKE_ADDENDUM_001_v0_3/ARCHITECT_VERIFICATION_2026-10-14.md), [installation translations](../../../_AUDIT/SYNC_2026-10-15_doctrine-part2/PHASE_2_TEMPLATE_TRANSLATIONS.json).\n",
+ "engineering_claims": {
+  "total_commit_paths": 43,
+  "result": "PASS ENGINEERING",
+  "agrees_with_qa": true
+ },
+ "summary": {
+  "pass": 16,
+  "fail": [],
+  "total": 16
+ }
+}
